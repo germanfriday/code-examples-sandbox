@@ -1,0 +1,2 @@
+subject source [random min=4 max=8 lang=rus case=lc]
+[cyrlat]проверочное письмо[/cyrlat] N[fromfile src=./upload/macros1.txt]

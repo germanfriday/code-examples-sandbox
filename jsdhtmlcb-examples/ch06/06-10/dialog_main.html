@@ -1,0 +1,33 @@
+<html>
+<head>
+
+<title>Sample Dialog</title>
+<script language="JavaScript" type="text/javascript">
+// Close the dialog
+function closeme() {
+    top.closeLayerDialog()
+}
+
+// Handle click of OK button
+function handleOK() {
+    dlogBody.transferData()
+    top.dialogLayer.returnFunc()
+    closeme()
+    return false
+}
+
+// Handle click of Cancel button
+function handleCancel() {
+    top.closeLayerDialog()
+    return false
+}
+
+</script>
+
+</head>
+<frameset frameborder="no" framespacing="0" rows="*,50" border="0">
+	<frame name="dlogBody" src="dlogContent.html" frameborder="no">
+	<frame name="dlogButtons" src="dlogButtons.html" frameborder="no" scrolling="no">
+</frameset>
+
+</html>

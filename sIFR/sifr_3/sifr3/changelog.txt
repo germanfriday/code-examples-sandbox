@@ -1,0 +1,193 @@
+
+[2007-07-03: REVISION 278]
+
+[CHANGED] Prevents variable injection using GET variables.
+
+[2007-07-03: REVISION 277]
+
+[CHANGED] Removed `sIFR.debugMode`. sIFR will automatically enter debug mode if the debug file is loaded, which is indicated by the presence of `sIFR.debug`.
+
+[2007-07-03: REVISION 276]
+
+[FIXED] CallbackInfo methods would not verify wether the Flash movie was still available.
+
+[2007-07-03: REVISION 275]
+
+[NEW] Added a "sIFR.redraw()" method which will reset all sIFR movies on the page.
+
+[2007-06-06: REVISION 274]
+
+[FIXED] With the previous revision I broke the escaping of "special" characters such as % and +. This should now be fixed.
+
+[2007-05-27: REVISION 273]
+
+[CHANGED] Removed `fromLocal` property from the ActionScript code. Don't know how to detect wether the Flash movie is being requested from the filesystem.
+
+[2007-05-27: REVISION 272]
+
+[CHANGED] Now disabled sIFR for Gecko-based browsers from 4th August 2004 or older. This blocks Netscape 7.2 builds that apparently crashed when sIFR was running.
+
+[2007-05-27: REVISION 271]
+
+[CHANGED] Re-architectured debug mode. When `sifr-debug.js` is loaded, debug mode is automatically enabled. You should not enable it manually. The compressed `sifr.js` file does not contain the error messages, these are loaded by `sifr-debug.js`.
+
+[2007-05-27: REVISION 270]
+
+[CHANGED] sIFR will no longer activate when it's being loaded from the filesystem (the location starts with "file:").  If `sIFR.debugMode` is `true`, a JavaScript error will be thrown explaining why sIFR did not activate. To override this you can set `sIFR.fromLocal = true`. The meaning of this property has changed in this revision, by default it used to add "localhost" to the allowed domains. This is no longer the case.
+
+[2007-05-27: REVISION 269]
+
+[CHANGED] Added an option to prevent the wrapping of text. Use `preventWrap: true` in the keyword arguments for `sIFR.replace()`.
+
+[2007-05-27: REVISION 268]
+
+[CHANGED] The anti-alias type can now be configured by the JavaScript code. Use `antiAliasType` in the keyword arguments, see the Flash documentation for allowed values.
+
+[2007-05-27: REVISION 267]
+
+[CHANGED] Improved encoding of Flash variables.
+
+[2007-05-27: REVISION 266]
+
+[2007-05-27: REVISION 265]
+
+[FIXED] Problem in IE when using DomContentLoaded.
+
+[2007-05-27: REVISION 264]
+
+[2007-05-27: REVISION 263]
+
+[2007-05-27: REVISION 262]
+
+Cleaning up the SVN repository. No changes in sIFR code.
+
+[2007-05-20: REVISION 261]
+
+[CHANGED] Added a two second delay to showing the default text in case there is no content. If the resetmovie workaround is applied in IE, this stops the default text from being displayed before the movie is reset. When the movie is opened directly there will also be a two second delay..
+
+[2007-05-20: REVISION 260]
+
+[FIXED] Content was escaped before being passed to the modifyContentString() method. It is now escaped after this method.
+
+[FIXED] Links stopped working after the hover fix. When the hover fix is enabled sIFR only supports one link per text movie, and clicking *anywhere* in the movie triggers the link. This is comparable to how sIFR 2 worked.
+
+[2007-05-20: REVISION 259]
+
+[FIXED] Escaping and unescaping of Unicode characters when sending content to the Flash movie. Content is now explicitly escaped in the JavaScript code, and unescaped in the Flash code. I'm no longer relying on the browser and Flash plugin to handle this properly when sending text through the FlashVars. It had to be implemented manually anyway for CallbackInfo#replaceText().
+
+[2007-05-19: REVISION 258]
+
+[FIXED] Improved the fix for sticky hovers. Now using MovieClip#onRollOut to detect when the mouse leaves the Flash movie. A side effect is that there will always be a hand cursor when fixHover is enabled, therefore the fix is only applied if the replaced text contains a link. The fix can be disabled by setting `sIFR.fixHover = false;`.
+
+[FIXED] When replacing text, the Flash movie wouldn't unescape the content.
+
+[2007-05-11: REVISION 257]
+
+[FIXED] There were a few bugs and inefficiencies in the ratio calculations. The new code results in smaller ratios which perform better.
+
+[2007-05-11: REVISION 256]
+
+Adding new Options.as file, hopefully all is well now.
+
+[2007-05-11: REVISION 255]
+
+Removing incorrectly named Options.as file
+
+[2007-05-07: REVISION 254]
+
+[FIXED] Now properly handling tuneHeight values that are of type string.
+
+[2007-05-05: REVISION 253]
+
+[CHANGED] If sIFR.prefetch() is called *after* activating sIFR through sIFR.activate(), the Flash movies passed to the prefetch() call will be pre-fetched for all browsers, not just Safari and IE. This can be useful when you're not using sIFR right away. To pre-fetch for Safari and IE pass the movies to the activate() call.
+
+[2007-05-05: REVISION 252]
+
+[CHANGED] Removed default ratios. They were incorrect anyway, and not very useful.
+
+[2007-05-05: REVISION 251]
+
+[CHANGED] Now catching exceptions thrown when trying to call ActionScript code. CallbackInfo#replaceText() and CallbackInfo#fixHover() now return a boolean value indicating whether the call succeeded.
+
+[2007-04-30: REVISION 250]
+
+[FIXED] Added the tuneHeight value to the *correct* height approximation this time.
+
+[2007-04-28: REVISION 249]
+
+[FIXED] Forgot to add the tuneHeight value to the height approximation.
+
+[2007-04-26: REVISION 248]
+
+[NEW] First stab at background styling, but this has not been exposed yet.
+
+[FIXED] Ratio calculation would not take any tuneHeight settings into account.
+
+[2007-04-25: REVISION 247]
+
+[NEW] Now generating a changelog when running the export script.
+
+[2007-04-24: REVISION 246]
+
+Fixed stylesheet to show .sIFR-ignore elements.
+
+[2007-04-19: REVISION 245]
+
+Changed escaping of replaceText()
+
+[2007-04-19: REVISION 244]
+
+Renamed CallbackInfo#write() to CallbackInfo#replaceText().
+
+[2007-04-18: REVISION 243]
+
+* Moved some constants into their singleton
+* Added automatic filtering of units for some CSS properties.
+
+[2007-04-18: REVISION 242]
+
+Added transparency and opaqueness options.
+
+[2007-04-15: REVISION 241]
+
+Fixed handleContent() function, test for last child was incorrect.
+
+[2007-04-13: REVISION 240]
+
+Fix for onReplacement() callback: height and width resizes are now done simultanously.
+
+[2007-04-05: REVISION 239]
+
+First stap at a replace() syntax and value validation script.
+
+[2007-03-30: REVISION 238]
+
+* Renamed CallbackInfo#getFlashNode() to CallbackInfo#getFlashElement().
+* Fixed hoverFix after writing different content.
+
+[2007-03-29: REVISION 237]
+
+* Changed framerate of Flash movies.
+* Forgotten checkin of the export script.
+
+[2007-03-29: REVISION 236]
+
+* Improved delayCss handling for Opera.
+* Removed support for replacing non-visible elements. This doesn't play well with callbacks and Opera, and consistency is better.
+
+[2007-03-29: REVISION 235]
+
+Improved callback "API".
+
+[2007-03-29: REVISION 234]
+
+Added better way of getting references to callback objects.
+
+[2007-03-29: REVISION 233]
+
+Removed resize stuff.
+Removed background color from <head> element, which is used to test for CSS support.
+
+[2007-03-29: REVISION 232]
+
+Checking in first stab at resizing. This is just for record keeping, have to fix other bugs first.

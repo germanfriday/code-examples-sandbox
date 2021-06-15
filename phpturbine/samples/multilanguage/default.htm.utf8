@@ -1,0 +1,110 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+<title>Multi-Language Sample</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+</head>
+
+<BODY topmargin="0" leftmargin="0" rightmargin="0" marginwidth="0" marginheight="0" TEXT="#000000" BGCOLOR="#FFFFFF" LINK="#003366" VLINK="#FF9900" ALINK="#FF6600">
+<center>
+  <table width="100%" border="0" cellspacing="0" cellpadding="0" align="center">
+    <tr bgcolor="#000033"> 
+      <td background="../common/bar_left.gif" width="50%">&nbsp;</td>
+      <td> <table width="560" border="0" cellspacing="0" cellpadding="0">
+          <tr> 
+            <td width="334"><img src="../common/bar_left.gif" width="334" height="28"></td>
+            <td><img src="../common/bar_central.gif" width="110" height="28"></td>
+            <td><img src="../common/bar_logo.gif" width="116" height="28"></td>
+          </tr>
+        </table></td>
+      <td background="../common/1x1_azul_esc.gif" width="50%">&nbsp;</td>
+    </tr>
+    <tr bgcolor="#FFFFFF" height="4"> 
+      <td colspan="3"></td>
+    </tr>
+  </table>
+  <table width="560" border="0" cellspacing="0" cellpadding="0">
+    <tr valign="top"> 
+      <td height="39"> <table width="560" border="0" cellspacing="0" cellpadding="0">
+          <tr> 
+            <td width="435" height="25"><font face="Verdana, Arial, Helvetica, sans-serif" size="3"><a href="../default.htm">Samples 
+              Menu</a></font></td>
+            <td width="125" height="25"> <div align="center"><font face="Verdana, Arial, Helvetica, sans-serif" size="3"><a href="../default.htm">Next 
+                Sample</a>&nbsp; </font></div></td>
+          </tr>
+        </table></td>
+    </tr>
+    <tr valign="top"> 
+      <td height="487"> <p align="center"><font face="Arial" size="6">Multi-Language 
+          Sample<font size="1"><b><br>
+          (Flash MX/5; PDF)<br>
+          &nbsp; </b></font></font></p>
+        <div align="center"> 
+          <p align="left"><font size="1" face="Verdana, Arial, Helvetica, sans-serif"><strong>Note: 
+            You must have &quot;MS Mincho&quot; font installed on the web server 
+            machine where Turbine is running for this sample to work correctly.</strong></font> 
+          <p align="left"><font face="Times New Roman,Times"><font size="2" face="Verdana, Arial, Helvetica, sans-serif">Turbine 
+            supports multi-language characters since it represents all text internally 
+            as Unicode. This sample generates a Flash movie or a PDF document 
+            containing a variety of Unicode characters</font><font color="#000000" face="Verdana, Arial, Helvetica, sans-serif" size="2">.</font></font>
+          <p align="left"><font size="2" face="Verdana, Arial, Helvetica, sans-serif">Below 
+            you can find a random sample of some multi-byte characters that can 
+            be copy &amp; pasted directly into the text box below.<br>
+            &nbsp; </font>
+          <table width="100%" cellpadding="10">
+            <tr> 
+              <td width="70%" bgcolor="#FFFFCC">定 文 自 局 以 關 用 題 代 我 廣 位 出 國 量 市</td>
+              <td width="30%"><font size="2" face="Verdana, Arial, Helvetica, sans-serif">Chinese 
+                (Traditional)</font></td>
+            </tr>
+            <tr> 
+              <td bgcolor="#FFFFCC">α β γ δ ε ζ η θ ι κ λ μ ν ξ ο π ρ σ ς τ υ 
+                φ χ ψ ω</td>
+              <td><font size="2" face="Verdana, Arial, Helvetica, sans-serif">Greek</font></td>
+            </tr>
+            <tr> 
+              <td bgcolor="#FFFFCC">す 語 強 み ま う 者 で ジ 興 方 ち ぞ 番 願 す 日 時</td>
+              <td><font size="2" face="Verdana, Arial, Helvetica, sans-serif">Japanese</font></td>
+            </tr>
+            <tr> 
+              <td bgcolor="#FFFFCC">Ж э Б э В э Я Д э Ё И Ц Ч Щ Э ф</td>
+              <td><font size="2" face="Verdana, Arial, Helvetica, sans-serif">Russian</font></td>
+            </tr>
+          </table>
+          <form action="multi.php" method="get" name="form1" target="_blank">
+            <table>
+              <tr> 
+                <td valign="top"><font face="Times New Roman,Times"><font size="2" face="Verdana, Arial, Helvetica, sans-serif">Paste 
+                  the text to this area:</font></font></td>
+                <td> <textarea name="txt" cols="50" rows="5" id="textarea2"></textarea></td>
+              </tr>
+            </table>
+            <p> 
+              <input name="flash" type="submit" id="flash" value="Generate Flash">
+              &nbsp; 
+              <input name="pdf" type="submit" id="pdf" value="Generate PDF">
+            </p>
+          </form>
+          <p>&nbsp;</p>
+        </div></td>
+    </tr>
+    <tr valign="bottom"> 
+      <td height="64"> <hr width="100%" size="1" noshade> <table width="560" border="0" cellspacing="0" cellpadding="0">
+          <tr> 
+            <td width="443" height="25"><font face="Verdana, Arial, Helvetica, sans-serif" size="3"><a href="../default.htm">Samples 
+              Menu</a></font></td>
+            <td width="117" height="25"> <div align="right"><font face="Verdana, Arial, Helvetica, sans-serif" size="3"><a href="../default.htm">Next 
+                Sample</a> </font></div></td>
+          </tr>
+        </table>
+        <div align="center"><font face="Arial, Helvetica, sans-serif" size="1"><i>&nbsp;<br>
+          Flash is a trademark of Macromedia, Inc.</i></font> </div></td>
+    </tr>
+  </table>
+</center>
+
+
+
+
+</body>
+</html>

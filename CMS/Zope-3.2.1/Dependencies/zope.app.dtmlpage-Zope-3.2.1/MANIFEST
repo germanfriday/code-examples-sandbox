@@ -1,0 +1,17 @@
+MANIFEST
+zope.app.dtmlpage/__init__.py
+zope.app.dtmlpage/browser.py
+zope.app.dtmlpage/configure.zcml
+zope.app.dtmlpage/DEPENDENCIES.cfg
+zope.app.dtmlpage/dtml.gif
+zope.app.dtmlpage/dtmlpage.py
+zope.app.dtmlpage/ftests.py
+zope.app.dtmlpage/interfaces.py
+zope.app.dtmlpage/SETUP.cfg
+zope.app.dtmlpage/url.txt
+zope.app.dtmlpage/zope.app.dtmlpage-configure.zcml
+zope.app.dtmlpage/tests/__init__.py
+zope.app.dtmlpage/tests/test_dtmlpage.py
+zope.app.dtmlpage/tests/test_dtmlpageeval.py
+setup.py
+setup.cfg

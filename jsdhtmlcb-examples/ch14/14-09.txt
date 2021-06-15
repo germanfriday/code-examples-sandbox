@@ -1,0 +1,6 @@
+var elem = document.createElement("img");
+elem.setAttribute("src", "images/logo.jpg");
+elem.setAttribute("height", "40");
+elem.setAttribute("width", "120");
+elem.setAttribute("alt", "GiantCo Logo");
+document.body.appendChild(elem);

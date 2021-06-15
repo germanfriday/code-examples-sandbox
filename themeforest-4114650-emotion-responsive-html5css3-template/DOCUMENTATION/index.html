@@ -1,0 +1,628 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<head lang="en">
+	<meta http-equiv="content-type" content="text/html;charset=utf-8">
+	<title>Emotion Responsive HTML5/CSS3 Template Documentation</title>
+	<!-- Framework CSS -->
+	<link rel="stylesheet" href="assets/blueprint-css/screen.css" type="text/css" media="screen, projection">
+	<link rel="stylesheet" href="assets/blueprint-css/print.css" type="text/css" media="print">
+	
+	<link rel="shortcut icon" href="assets/images/favicon.ico">
+	
+	<!--[if lt IE 8]><link rel="stylesheet" href="assets/blueprint-css/ie.css" type="text/css" media="screen, projection"><![endif]-->
+	<link rel="stylesheet" href="assets/blueprint-css/plugins/fancy-type/screen.css" type="text/css" media="screen, projection">
+	<style type="text/css" media="screen">
+		p, table, hr, .box { margin-bottom:25px; }
+		.box p { margin-bottom:10px; }
+	</style>
+	
+	<!-- Syntax Highlighter -->
+	<link rel="stylesheet" type="text/css" href="syntax-highlighter/styles/shCore.css" media="all">
+	<link rel="stylesheet" type="text/css" href="syntax-highlighter/styles/shThemeDefault.css" media="all">
+</head>
+
+
+<body>
+	<div class="container">
+	
+		<h3 class="center alt">&ldquo;Emotion Responsive HTML5/CSS3 Template&rdquo; Documentation by &ldquo;Dan Fisher&rdquo; v1.0.2</h3>
+		
+		<hr>
+		
+		<h1 class="center">&ldquo;Emotion Responsive HTML5/CSS3 Template&rdquo;</h1>
+		
+		<div class="borderTop">
+			<div class="span-6 colborder info prepend-1">
+				<p class="prepend-top">
+					<strong>
+					Created: 2/22/2013<br>
+					Updated: 6/12/2013<br>
+					By: Dan Fisher<br>
+					Email: <a href="mailto:dan.fisher85@yahoo.com">dan.fisher85@yahoo.com</a>
+					</strong>
+				</p>
+			</div><!-- end div .span-6 -->		
+	
+			<div class="span-12 last">
+				<p class="prepend-top append-0">Thank you for purchasing my theme. If you have any questions that are beyond the scope of this help file, please feel free to email via my user page contact form <a href="http://themeforest.net/user/dan_fisher">here</a>. Thanks so much!</p>
+			</div>
+		</div><!-- end div .borderTop -->
+		
+		<hr>
+		
+		<h2 id="toc" class="alt">Table of Contents</h2>
+		<ol class="alpha">
+			<li><a href="#introduction">Introduction</a></li>
+			<li><a href="#htmlStructure">HTML Structure</a></li>
+			<li><a href="#cssFiles">CSS Files and Structure</a></li>
+			<li><a href="#javascript">JavaScripts</a></li>
+			<li><a href="#navlogo">Navigation and Logos</a></li>
+			<li><a href="#psdFiles">PSD Files</a></li>
+			<li><a href="#fontssused">Fonts used</a></li>
+			<li><a href="#faqs">FAQs</a></li>
+			<li><a href="#credits">Sources and Credits</a></li>
+		</ol>
+		
+		<hr>
+		
+		<h3 id="introduction"><strong>A) Introduction</strong> - <a href="#toc">top</a></h3>
+		
+		<p>Thank you so much for purchasing this template called <strong>Emotion Responsive HTML5/CSS3 Template</strong>. Please feel free to contact us if you have question or problem about this template. No guarantees, but we will do our best to provide you with the best possible assistance.</p>
+		
+		<h4>Template Features</h4>
+		<ul>
+			<li>HTML5 and CSS3 Validated</li>
+			<li>Responsive Template</li>
+			<li>Slider Revolution (12$ value)</li>
+			<li>Flexslider</li>
+			<li>15 page templates</li>
+			<li>Built on Skeleton grid system (12 cols)</li>
+			<li>Multilevel Dropdown Menu</li>
+			<li>249 icons (based on FontAwesome)</li>
+			<li>Portfolio (2, 3 and 4 columns layout)</li>
+			<li>Pricing Tables (3 and 4 columns layout)</li>
+			<li>Post Formats</li>
+			<li>Prettyphoto integration</li>
+			<li>Twitter widget</li>
+			<li>Flickr widget</li>
+			<li>Google Maps integration</li>
+			<li>Working Ajax Contact Form</li>
+			<li>Google Web Fonts (Oswald)</li>
+			<li>Layered PSD's are included (10$ value) for easy modification and customization</li>
+		</ul>
+		
+		<hr>
+		
+		<h3 id="htmlStructure"><strong>B) HTML Structure</strong> - <a href="#toc">top</a></h3>
+		
+		<h4>HTML Files</h4>
+		<ul>
+			<li><em>index.html</em> - Home Page (Slider Revolution slider)</li>
+			<li><em>index-flex-fade.html</em> - Home Page (Fade effect for Flexslider2)</li>
+			<li><em>index-flex-slide.html</em> - Home Page (Slide effect for Flexslider2)</li>
+			<li><em>about.html</em> - About Us Page</li>
+			<li><em>columns.html</em> - Columns Page (you can see different layouts)</li>
+			<li><em>services.html</em> - Services Page</li>
+			<li><em>elements.html</em> - Page Elements Page (bricks for building your site)</li>
+			<li><em>pricing-tables.html</em> - Pricing Tables</li>
+			<li><em>portfolio-2cols.html</em> - Portfolio 2 columns Page</li>
+			<li><em>portfolio-3cols.html</em> - Portfolio 3 columns Page</li>
+			<li><em>portfolio-4cols.html</em> - Portfolio 4 columns Page</li>
+			<li><em>portfolio-details.html</em> - Portfolio Single Project with details</li>
+			<li><em>blog.html</em> - Blog Page with Post Formats</li>
+			<li><em>post.html</em> - Single Post Page</li>
+			<li><em>contacts.html</em> - Contacts Page</li>
+		</ul>
+		
+		<h4>General HTML structure</h4>
+		<p>This template is a fixed layout. All of the information within the main content area is nested within a div with an id of "<strong>content-wrapper</strong>". The general template structure is the same throughout the template. Here is the general structure.</p>
+		
+<pre class="brush: html">
+<!-- Primary Page Layout
+================================================== -->
+
+<!-- BEGIN WRAPPER -->
+<div id="wrapper">
+		
+	<div class="wrapp-holder">
+		<div class="wrap-frame">
+			<!-- BEGIN HEADER -->
+			<header id="header" class="header">
+			
+				
+			</header>
+			<!-- END HEADER -->
+			
+			
+			<!-- BEGIN SLIDER -->
+			<div id="slider" class="slider loading">
+				
+			</div>
+			<!-- END SLIDER -->
+			
+			
+			<!-- BEGIN CONTENT WRAPPER -->
+			<div id="content-wrapper" class="content-wrapper">
+				
+				
+				
+			</div>
+			<!-- END CONTENT WRAPPER -->
+		</div>
+	</div>
+	
+	<!-- BEGIN FOOTER -->
+	<footer id="footer" class="footer">
+		
+	</footer>
+	<!-- END FOOTER -->
+	
+</div>
+<!-- END WRAPPER -->
+</pre>
+
+		<hr>
+
+		<h3 id="cssFiles"><strong>C) CSS Files and Structure</strong> - <a href="#toc">top</a></h3>
+		
+		<h4>Styles</h4>
+		
+<pre class="brush: html">
+<!-- CSS
+================================================== -->
+
+<!-- Normalize default styles -->
+<link rel="stylesheet" href="css/normalize.css" media="screen" />
+<!-- Skeleton grid system -->
+<link rel="stylesheet" href="css/skeleton.css" media="screen" />
+<!-- Base Template Styles-->
+<link rel="stylesheet" href="css/base.css" media="screen" />
+<!-- Template Styles-->
+<link rel="stylesheet" href="css/style.css" media="screen" />
+<!-- Superfish -->
+<link rel="stylesheet" href="css/superfish.css" media="screen" />
+<!-- Prettyphoto -->
+<link rel="stylesheet" href="css/prettyPhoto.css" media="screen" />
+<!-- FontAwesome -->
+<link rel="stylesheet" href="css/font-awesome.min.css" media="screen" />
+<!-- REVOLUTION BANNER CSS SETTINGS -->
+<link rel="stylesheet" href="css/settings.css" media="screen" />
+<!-- Flexslider -->
+<link rel="stylesheet" href="css/flexslider.css" media="screen" />
+<!-- Layout and Media queries-->
+<link rel="stylesheet" href="css/media-queries.css" media="screen" />
+
+<!--[if lt IE 9]>
+<link rel="stylesheet" href="css/ie/ie8.css" media="screen" />
+<![endif]-->
+</pre>
+
+		<p>I'm using 10 CSS files in this theme. I've separated styles for improving convenience to edit this template. If you're going to use this template in production I'd recommend you merge all stylesheets in one file (for decreasing http queries).</p>
+
+		<p>Lets take a look closely at our stylesheet files.</p>
+		
+		<h5>normalize.css</h5>
+		<p>Many browser interpret the default behavior of html elements differently. By using a general reset CSS file, we can work round this. This file also contains some general styling, such as anchor tag colors, font-sizes, etc. Keep in mind, that these values might be overridden somewhere else in the file.</p>
+		
+		<h5>skeleton.css</h5>
+		<p>This stylesheet contains 12-columns responsive grid system based on <a href="http://www.getskeleton.com/">skeleton</a>.</p>
+		
+		<h5>base.css</h5>
+		<p>It contains elements for template such as accordion, button and pills, forms and so on.</p>
+		
+		<h5>style.css</h5>
+		<p>Common css styles for this template.</p>
+		
+		<h5>superfish.css</h5>
+		<p>Styles for Multilevel dropdown menu.</p>
+		
+		<h5>prettyPhoto.css</h5>
+		<p>It contains styles for prettyphoto plugin (lightbox-like plugin)</p>
+		
+		<h5>font-awesome.min.css</h5>
+		<p>Base styles for FontAwesome icon fonts.</p>
+		
+		<h5>settings.css</h5>
+		<p>Styles for Revolution slider (used on Home Page).</p>
+		
+		<h5>flexslider.css</h5>
+		<p>Styles for Home Page slider (flexslider2).</p>
+		
+		<h5>media-queries.css</h5>
+		<p>Stylesheet that makes template responsive.</p>
+		
+		<p>Some of stylesheets contain <em>Table of content</em> for easy navigation, for instance <strong>style.css</strong>:</p>
+		
+<pre class="brush: css">
+
+/* Table of Content
+==================================================
+#Header
+#Slider
+#Paget Title
+#Content
+#Portfolio
+#Widgets
+#Footer 
+#Misc */
+
+</pre>
+
+		<hr>
+		
+		<h3 id="javascript"><strong>D) JavaScript</strong> - <a href="#toc">top</a></h3>
+		
+		<p>This theme imports 11 Javascript files.</p>
+		
+<pre class="brush: html">
+<!-- Javascript Files
+================================================== -->
+	
+<!-- initialize jQuery Library -->
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+<script>window.jQuery || document.write('<script src="js/jquery-1.9.1.min.js"><\/script>')</script>
+<script src="js/jquery-migrate-1.1.1.min.js"></script>
+<!-- Modernizr -->
+<script src="js/modernizr.custom.17475.js"></script>
+<!-- easing plugin -->
+<script src="js/jquery.easing.min.js"></script>
+<!-- Prettyphoto -->
+<script src="js/jquery.prettyPhoto.js"></script>
+<!-- Superfish -->
+<script src="js/jquery.mobilemenu.js"></script>
+<!-- superfish -->
+<script src="js/jquery.superfish-1.5.0.js"></script>
+<!-- Twitter -->
+<script src="js/jquery.twitter.js"></script>
+<!-- Flickr -->
+<script src="js/jflickrfeed.js"></script>
+<!-- ElastiSlide Carousel -->
+<script src="js/jquery.elastislide.js"></script>
+<!-- jQuery REVOLUTION Slider  -->
+<script src="js/jquery.themepunch.plugins.min.js"></script>
+<script src="js/jquery.themepunch.revolution.min.js"></script>
+<!-- Isotope -->
+<script src="js/jquery.isotope.min.js"></script>
+<script src="js/jquery.imagesloaded.min.js"></script>
+<!-- Flexslider -->
+<script src="js/jquery.flexslider.js"></script>
+
+<!-- Custom -->
+<script src="js/custom.js"></script>
+</pre>
+
+		<p>Lets take a look closely at our javascript files.</p>
+		
+		<h5>jquery-1.9.1.min.js</h5>
+		<p><a href="http://jquery.com/">jQuery</a> is a multi-browser JavaScript library designed to simplify the client-side scripting of HTML.</p>
+		
+		<h5>jquery-migrate-1.1.1.min.js</h5>
+		<p>jQuery Migration Plugin. Adding some deprecated properties.</p>
+		
+		<h5>modernizr.custom.17475.js</h5>
+		<p><a href="http://modernizr.com/">Modernizr</a> is a JavaScript library that detects HTML5 and CSS3 features in the user's browser.</p>
+		
+		<h5>jquery.easing.min.js</h5>
+		<p>Easing plugin for creating effects.</p>
+		
+		<h5>jquery.prettyPhoto.js</h5>
+		<p>Prettyphoto plugin for viewing media content in modal window.</p>
+		
+		<h5>jquery.mobilemenu.js</h5>
+		<p>For creating select menu on mobile devices.</p>
+		
+		<h5>superfish-1.5.0.js</h5>
+		<p>Script for creating multivele dropdown menu.</p>
+		
+		<h5>jquery.twitter.js</h5>
+		<p>Plugin displays latest tweets from account.</p>
+		
+		<h5>jflickrfeed.js</h5>
+		<p>Plugin displays latest images from your flickr account.</p>
+		
+		<h5>jquery.elastislide.js</h5>
+		<p>Plugin for creating responsive carousel.</p>
+		
+		<h5>jquery.themepunch.plugins.min.js, jquery.themepunch.revolution.min.js</h5>
+		<p>Revolution Slider script.</p>
+		
+		<h5>jquery.isotope.min.js</h5>
+		<p>Plugin for Portfolio filterable layout.</p>
+		
+		<h5>jquery.flexslider.js</h5>
+		<p>Plugin for dispaying simple slider.</p>
+		
+		<h5>custom.js</h5>
+		<p>We put initialisation of many plugins here.</p>
+		
+		
+		<hr>
+		
+		<h3 id="navlogo"><strong>E) Navigation and Logos</strong> - <a href="#toc">top</a></h3>
+		
+		<h4>Header Logo</h4>
+		<p>The Logo is nested within a div with id of <strong>logo</strong>. As you can see there are two kind of logos: <em>Image based</em> (by default) and <em>Text based</em>. You can choose prefered variant by removing html comments. Don't forget to comment or delete another variant. </p>
+		
+<pre class="brush: html">
+<!-- BEGIN LOGO -->
+<div id="logo">
+	<!-- Image based Logo -->
+	<a href="index.html"><img src="images/logo.png" alt="Emotion" width="145" height="67" /></a>
+	
+	<!-- Text based Logo
+	<h1><a href="index.html">Emotion</a></h1>
+	<p class="tagline">Responsive HTML Template</p>
+	-->
+	
+</div>
+<!-- END LOGO -->
+</pre>
+		
+		<h4>Navigation Menu</h4>
+		<p>The page navigation links such as Home, Blog, Contacts etc are included within a nav-tag with class <strong>primary</strong>.</p>
+		
+<pre class="brush: html">
+<!-- BEGIN NAVIGATION -->
+<nav class="primary">
+	<ul class="sf-menu">
+		<li class="current-menu-item">
+			<a href="index.html">Home <span><i>|</i> Get Started</span></a>
+			<ul>
+				<li class="current-menu-item"><a href="index.html">Revolution Slider</a></li>
+				<li><a href="index-flex-fade.html">Flexslider Fade</a></li>
+				<li><a href="index-flex-slide.html">Flexslider Slide</a></li>
+			</ul>
+		</li>
+		<li>
+			<a href="elements.html">Features <span><i>|</i> Why Choose Us</span></a>
+			<!-- Sub Navigation -->
+			<ul>
+				<li><a href="about.html">About Us</a></li>
+				<li><a href="columns.html">Columns</a></li>
+				<li><a href="services.html">Services</a></li>
+				<li><a href="pricing-tables.html">Pricing Tables</a></li>
+				<li><a href="elements.html">Page Elements</a></li>
+				<li><a href="#">Second Level Item</a>
+					<ul>
+						<li><a href="#">Third Level Item</a></li>
+						<li><a href="#">And another one</a></li>
+					</ul>
+				</li>
+			</ul>
+			<!-- /Sub Navigation -->
+		</li>
+		<li>
+			<a href="portfolio-3cols.html">Portfolio <span><i>|</i> Our Works</span></a>
+			<!-- Sub Navigation -->
+			<ul>
+				<li><a href="portfolio-2cols.html">Portfolio 2 cols</a></li>
+				<li><a href="portfolio-3cols.html">Portfolio 3 cols</a></li>
+				<li><a href="portfolio-4cols.html">Portfolio 4 cols</a></li>
+				<li><a href="portfolio-details.html">Single Project</a></li>
+			</ul>
+			<!-- /Sub Navigation -->
+		</li>
+		<li>
+			<a href="blog.html">Blog <span><i>|</i> Our Updates</span></a>
+			<!-- Sub Navigation -->
+			<ul>
+				<li><a href="post.html">Single Post</a></li>
+			</ul>
+			<!-- /Sub Navigation -->
+		</li>
+		<li>
+			<a href="contacts.html">Contacts <span><i>|</i> Get in Touch</span></a>
+		</li>
+	</ul>
+</nav>
+<!-- END NAVIGATION -->
+</pre>
+		<br>
+		<p>As you can see for creating subtitle for menu item you need to insert following code into link tag:</p>
+		
+<pre class="brush: html">
+	<span><i>|</i> Get Started</span>
+</pre>
+
+		<p>Your structure should be:</p>
+<pre class="brush: html">
+	<li><a href="index.html">Home <span><i>|</i> Get Started</span></a></li>
+</pre>
+		
+		<hr>
+		
+		
+		
+		<h3 id="psdFiles"><strong>F) PSD Files</strong> - <a href="#toc">top</a></h3>
+		
+		<p>I've included 14 psds with this theme:</p>
+		
+		<ol>
+			<li><em>01_home.psd</em> - Home page</li>
+			<li><em>01_home_hover.psd</em> - Home page (hover state)</li>
+			<li><em>02_01_about.psd</em> - About Us Page</li>
+			<li><em>02_02_columns.psd</em> - Columns Page</li>
+			<li><em>02_03_services.psd</em> - Services Page</li>
+			<li><em>02_04_pricing.psd</em> - Pricing Tables Page</li>
+			<li><em>02_05_elements.psd</em> - Page Elements Page</li>
+			<li><em>03_01_gallery-2cols.psd</em> - Portfolio 2 columns</li>
+			<li><em>03_02_gallery-3cols.psd</em> - Portfolio 3 columns</li>
+			<li><em>03_03_gallery-4cols.psd</em> - Portfolio 4 columns</li>
+			<li><em>04_01_blog.psd</em> - Blog Page</li>
+			<li><em>04_02_blog_post.psd</em> - Post Page</li>
+			<li><em>05_contact.psd</em> - Contacts Page</li>
+		</ol>
+		
+		<p>I've made this template based on CSS3 properties as much as I can. That's why for customizing and styling template you don't need to slice PSDs. Maybe just for couple things such as logo etc.</p>
+		 
+		<hr>
+		
+		<h3 id="fontssused"><strong>G) Fonts Used</strong> - <a href="#toc">top</a></h3>
+		<p>I have used three types of fonts in this template.</p>
+		
+		<ol>
+			<li><em>Arial (Helvetica for Mac)</em> - System Font</li>
+			<li><em><a href="http://www.google.com/webfonts#UsePlace:use/Collection:Oswald">Oswald</a></em> - Google Web Font</li>
+		</ol><br/>
+		
+		
+		<hr>
+		
+		<h3 id="faqs"><strong>H) FAQs</strong> - <a href="#toc">top</a></h3>
+		
+		<h4><strong>How to setting up Twitter widget?</strong></h4>
+		<p style="margin-bottom:0.5em;">There are two steps to setup the Twitter Widget.</p>
+
+		<ol>
+			<li>Setup an application at Twitter dev center and get keys.</li>
+			<li>Put your keys into Twitter files.</li>
+		</ol>
+		<h5>Setup Twitter application</h5>
+		<div class="clearfix">
+			<div class="span-10"><img src="assets/images/twitter-settings.jpg" height="auto" width="100%" alt=""></div>
+			<div class="span-10 last">
+				<ol>
+						<li>Visit <a href="https://dev.twitter.com/apps/">https://dev.twitter.com/apps/</a> and sign in using your Twitter username and password. This doesn't have to be the username or password of the stream you need access to, just a Twitter account you control.</li>
+					<li>Select '<strong>Create new application</strong>' and enter the application details.
+					
+						<ol>
+							<li>The name and description can be anything you like really, but you can't use 'Twitter' in the name.</li>
+							<li>The website field can be your main website and doesn't have to be the site where your Twitter feed or feeds are located.</li>
+							<li>Callback URL can be left blank</li>
+						</ol>
+						
+					</li>
+					<li>Enter the CAPTCHA info and click create</li>
+					<li>On the next details screen, click '<strong>create my access token</strong>'. You may need to refresh the page after a few seconds if it doesn't appear automatically.</li>
+					<li>Make a note of the <em>Consumer key</em>, <em>Consumer secret</em>, <em>Access token</em> and <em>Access token secret</em> as highlighted below.</li>
+				</ol>
+			</div>
+		</div>
+		<h5>Setup Twitter application</h5>
+		<ol>
+			<li>Open <strong>get-tweets.php</strong> file with help of your editor.</li>
+			<li>Enter your twitter user name for <strong>$twitteruser = "";</strong></li>
+			<li>Enter your consumer key for <strong>$consumerkey = "";</strong></li>
+			<li>Enter your consumer secret key for <strong>$consumersecret = "";</strong></li>
+			<li>Enter your access token for <strong>$accesstoken = "";</strong></li>
+			<li>Enter your access token secret for <strong>$accesstokensecret = "";</strong></li>
+			<li>Open <strong>js/jquery.twitter.js</strong> file with help of your editor.</li>
+			<li>Enter your twitter user name for <strong>$screenname = "";</strong> (row 6)</li>
+			<li>Save your changes.</li>
+		</ol>
+		
+		<h4><strong>How to change Google map location?</strong></h4>
+		<ol>
+			<li>Please, open page <em>contacts.html</em></li>
+			<li>Find line 382 in code of this page.<br>
+				<code>$('#map_canvas').gmap('addMarker', {'position':
+				'57.7973433,12.0502107', 'bounds': true});</code>
+			</li>
+			<li>You should change '57.7973433,12.0502107' on your own. You can find appropriate value here maps.google.com</li>
+			<li>More details about google maps customization are <a href="http://code.google.com/p/jquery-ui-map/">here</a></li>
+		</ol>
+		
+		<h4><strong>How to work with contact form?</strong></h4>
+		<p>This template contains fully working contact form. All you need is replace you actual e-mail address. Open the <strong>sendEmail.php</strong> file that is located in the root with any text editor and replace all instances of "<strong>YOUR_MAIL</strong>" with your email address and YOUR_NAME with your name in the entire file using the <strong>Find and Replace</strong> tool (usually the Ctrl+H hot key).</p>
+		<p>If you don't use gmail account you need to open <em>sendEmail.php</em> and delete this code
+<pre class="brush: php">
+// GMAIL STUFF
+
+$mail->Mailer = "smtp";
+$mail->Host = "smtp.gmail.com";
+$mail->Port = 587;
+$mail->SMTPSecure = "tls"; 
+
+$mail->SMTPAuth = true; // turn on SMTP authentication
+$mail->Username = "YOUR_MAIL"; // SMTP username
+$mail->Password = "YOUR_PASSWORD"; // SMTP password
+</pre>
+		</p>
+		<p>Also if you have gmail account you need to replace YOUR_PASSWORD with your actual password.</p>
+		
+		
+		<h4><strong>How to add additional field in Contact form?</strong></h4>
+		<p>If you need to add additional field (phone field for example) to your Contact form you need to make next steps:</p>
+		<ol>
+			
+			<li><p>Open <em>contacts.html</em> and find form markup (line 213) then add markup for additional input after some existing field.</p>
+<pre class="brush: html">
+<div class="field">
+	<label for="email">Email:</label>
+	<input type="email" name="email" id="email">
+</div>
+</pre>
+			</li>
+			<li>Then you need to open <em>sendMail.php</em> and define new variable called <em>$phone</em> after existing variables (line 7)
+<pre class="brush: php">
+	$phone = $_POST['phone'];
+</pre>
+			</li>
+			<li>
+				Then replace this code on line 34
+<pre class="brush: php">
+	$mail->Body = $comments;
+</pre>
+				to this one
+<pre class="brush: php">
+	$mail->Body = "Phone ".$phone."\r\n"; 
+	$mail->Body .= $comments."\r\n";
+</pre>
+<p>As you can see you just <a href="http://www.php.net/manual/en/language.operators.string.php">concatenate</a> new field (Phone) with existing Comments.</p>
+			</li>
+			<li><p>And the last thing you need to open js/<em>jquery.form.js</em> and define variable by inserting code after 15 line</p>
+<pre class="brush: javascript">
+	var phone = $('input#phone').val();
+</pre>	
+		
+<p>and add this variable in ajax result. You should see next code:</p>
+<pre class="brush: javascript">
+	data: 'name=' + name + '&email=' + email + '&subject=' + subject + '&phone=' + phone + '&comments=' + comments,
+</pre>
+			</li>
+		</ol>
+		
+		
+		<h4><strong>How to work with Revolution slider?</strong></h4>
+		<p>We provide full documentation about Revolution slider and I can find it in <strong>Documentation/Docs-revolution-slider/documentation.html</strong></p>
+
+		
+		<hr>
+		
+		<h3 id="credits"><strong>I) Sources and Credits</strong> - <a href="#toc">top</a></h3>
+		
+		<ul>
+			<li><a href="http://codecanyon.net/item/slider-revolution-responsive-jquery-plugin/2580848">Revolution Slider</a></li>
+			<li><a href="http://users.tpg.com.au/j_birch/plugins/superfish/">Superfish menu</a></li>
+			<li><a href="http://necolas.github.com/normalize.css/">normalize.css</a></li>
+			<li><a href="http://www.getskeleton.com/">skeleton grid system</a></li>
+			<li><a href="http://www.no-margin-for-errors.com/projects/prettyphoto-jquery-lightbox-clone/">prettyphoto</a></li>
+			<li><a href="http://modernizr.com/">modernizr</a></li>
+			<li><a href="http://coda.co.za/blog/2008/10/26/jquery-plugin-for-twitter">twitter plugin</a></li>
+			<li><a href="http://gsgd.co.uk/sandbox/jquery/easing/">easing plugin</a></li>
+			<li><a href="http://tympanus.net/codrops/2011/09/12/elastislide-responsive-carousel/">elastslide</a></li>
+			<li><a href="http://www.woothemes.com/flexslider/">flexslider2</a></li>
+			<li><a href="http://fortawesome.github.com/Font-Awesome/">FontAwesome</a></li>
+			<li><a href="http://subtlepatterns.com">Subtle Patterns</a></li>
+		</ul>
+		
+		<hr>
+		
+		<p>Once again, thank you so much for purchasing this theme. As I said at the beginning, I'd be glad to help you if you have any questions relating to this theme. No guarantees, but I'll do my best to assist. If you have a more general question relating to the themes on ThemeForest, you might consider visiting the forums and asking your question in the "Item Discussion" section.</p> 
+		
+		<p class="append-bottom alt large"><strong>Dan Fisher</strong></p>
+		<p><a href="#toc">Go To Table of Contents</a></p>
+		
+		<hr class="space">
+	</div><!-- end div .container -->
+	
+	
+	<script type="text/javascript" src="syntax-highlighter/scripts/shCore.js"></script> 
+	<script type="text/javascript" src="syntax-highlighter/scripts/shBrushXml.js"></script> 
+	<script type="text/javascript" src="syntax-highlighter/scripts/shBrushCss.js"></script> 
+	<script type="text/javascript" src="syntax-highlighter/scripts/shBrushJScript.js"></script> 
+	<script type="text/javascript" src="syntax-highlighter/scripts/shBrushPhp.js"></script> 
+	<script type="text/javascript">
+    SyntaxHighlighter.all()
+	</script>
+</body>
+</html>

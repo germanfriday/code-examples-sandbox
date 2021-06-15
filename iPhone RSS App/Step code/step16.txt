@@ -1,0 +1,1 @@
+// in RSSXMLParser.m //#import "RSSXMLParser.h"#import "NewsItem.h"@implementation RSSXMLParser@synthesize newsArray;-(id) init {	if (self = [super init]) {		newsArray = [[NSMutableArray alloc] init];	}	return self;}-(void) dealloc {	[super dealloc];	[newsArray release];}@end

@@ -1,0 +1,37 @@
+function blockEvents(evt) {
+    evt = (evt) ? evt : event;
+    var blockit = false;
+    var elem = (evt.target) ? evt.target : ((evt.srcElement) ? evt.srcElement : null);
+    if (elem && elem.tagName && elem.tagName.toLowerCase() == "img") {
+        if (evt.cancelBubble) {
+            evt.cancelBubble = true;
+        }
+        alert("Sorry, feature not available.");
+        return false;
+    }
+}
+document.oncontextmenu = blockEvents;
+
+----------
+
+function blockEvents() {
+    var blockit = false;
+    var elem = event.srcElement;
+    if (elem && elem.tagName && elem.tagName.toLowerCase() == "img") {
+        event.cancelBubble = true;
+        event.returnValue = false;
+        alert("Sorry, feature not available.");
+    }
+}
+
+----------
+
+function blockEvents(evt) {
+    var blockit = false;
+    var elem = (evt.target) ;
+    if (elem && elem.tagName && elem.tagName.toLowerCase() == "img") {
+        evt.preventDefault();
+        evt.stopPropagation();
+        alert("Sorry, feature not available.");
+    }
+}

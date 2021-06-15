@@ -1,0 +1,19 @@
+function animatePolygon(elemID) {
+    // prepare anime object for next leg
+    initAnime();
+    // create array of coordinate points
+    var coords = new Array()
+    coords[0] = [200, 200, 100, 400];
+    coords[1] = [100, 400, 300, 400];
+    coords[2] = [300, 400, 200, 200];
+    // pass next coordinate group in sequence based on anime.next value
+    if (anime.next < coords.length) {
+        initSLAnime(elemID, coords[anime.next][0], coords[anime.next][1], 
+        coords[anime.next][2], coords[anime.next][3], 10);
+        // increment for next leg
+        anime.next++;
+    } else {
+        // reset 'next' counter after all legs complete
+        anime.next = 0;
+    }
+}

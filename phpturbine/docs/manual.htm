@@ -1,0 +1,356 @@
+<HTML>
+<HEAD>
+<META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=iso-8859-1">
+<META NAME="GENERATOR" CONTENT="Mozilla/4.04 [en] (Win95; I) [Netscape]">
+<TITLE>PHP Turbine 7 Manual</TITLE>
+</HEAD>
+<BODY topmargin="0" leftmargin="0" rightmargin="0" marginwidth="0" marginheight="0" TEXT="#000000" BGCOLOR="#FFFFFF" LINK="#003366" VLINK="#FF9900" ALINK="#FF6600">
+<CENTER>
+  <table width="100%" border="0" cellspacing="0" cellpadding="0" align="center">
+    <tr bgcolor="#000033"> 
+      <td background="images/bar_left.gif" width="50%">&nbsp;</td>
+      <td> 
+        <table width="560" border="0" cellspacing="0" cellpadding="0">
+          <tr> 
+            <td width="334"><img src="images/bar_left.gif" width="334" height="28"></td>
+            <td><img src="images/bar_central.gif" width="110" height="28"></td>
+            <td><img src="images/bar_logo.gif" width="116" height="28"></td>
+          </tr>
+        </table>
+      </td>
+      <td background="images/1x1_azul_esc.gif" width="50%">&nbsp;</td>
+    </tr>
+    <tr bgcolor="#FFFFFF" height="4"> 
+      <td colspan="3"></td>
+    </tr>
+  </table>
+  <TABLE BORDER=0 COLS=2 WIDTH="560" >
+    <TR valign="top"> 
+      <TD COLSPAN="2" height="2"> 
+        <table border=0 cols=2 width="560" align="center" cellpadding="0" cellspacing="0" >
+          <tr valign=TOP> 
+            <td colspan="2"> 
+              <table width="560" border="0" cellspacing="0" cellpadding="0">
+                <tr> 
+                  <td height="170" align="left"><img src="images/man_splash.gif" width="400" height="150"></td>
+                  <td valign="bottom" align="left">
+                    <p align="left"><font face="Verdana, Arial, Helvetica, sans-serif" size="1" color="#003366">Revision 
+                      7.0.8</font></p>
+                    <p>&nbsp;&nbsp;<br>
+                      &nbsp; </p>
+                    <p><a href="http://www.blue-pac.com/"><img src="images/blogo_small.gif" width="82" height="37" border="0"></a><br>
+                      <font face="Verdana, Arial, Helvetica, sans-serif" size="1" color="#003366">©2004 
+                      Blue*Pacific. <br>
+                      All rights reserved.</font></p>
+                    </td>
+                </tr>
+              </table>
+            </td>
+          </tr>
+          <tr valign=TOP> 
+            <td colspan="2" height="39"> 
+              <hr noshade width="100%" size="1">
+            </td>
+          </tr>
+          <tr> 
+            <td colspan="2" height="2"> 
+              <table border=0 cellspacing=0 cellpadding=0 cols=2 width="560" >
+                <tr valign=BOTTOM bgcolor="#003366"> 
+                  <td height="20" valign=middle> 
+                    <div align="center"><font color="#FFFFFF" face="Verdana, Arial, Helvetica, sans-serif" size="2"><b>TABLE 
+                      OF CONTENTS</b></font></div>
+                  </td>
+                </tr>
+                <tr valign=TOP> 
+                  <td valign=TOP width="50%" height="2"> <br>
+                    <table 0 cellpadding=0 cols=1 width="525" cellspacing="0" align="center" >
+                      <tr valign="top" bgcolor="#FFFFFF"> 
+                        <td width="259" bgcolor="#FFFFFF"><font face="Verdana, Arial, Helvetica, sans-serif" size="2"><b>1. 
+                          <a href="intro.htm"> Introducing PHP Turbine 7</a></b></font></td>
+                        <td width="264"> <p><font face="Verdana, Arial, Helvetica, sans-serif" size="2">&nbsp;<br>
+                            · </font><font size="2" face="Verdana, Arial, Helvetica, sans-serif" align="left"><a href="intro.htm#whatis">What 
+                            is PHP Turbine?</a><br>
+                            </font><font face="Verdana, Arial, Helvetica, sans-serif" size="2">· 
+                            </font><font size="2" face="Verdana, Arial, Helvetica, sans-serif" align="left"><a href="intro.htm#how">How 
+                            does PHP Turbine Work?</a><br>
+                            </font><font face="Verdana, Arial, Helvetica, sans-serif" size="2">· 
+                            </font><font size="2" face="Verdana, Arial, Helvetica, sans-serif" align="left"><a href="intro.htm#simpleexample">A 
+                            Simple Example</a></font><font size="2" face="Verdana, Arial, Helvetica, sans-serif"><br>
+                            · </font><font size="2" face="Verdana, Arial, Helvetica, sans-serif" align="left"><a href="intro.htm#outputformats">Output 
+                            Formats </a></font><font size="2" face="Verdana, Arial, Helvetica, sans-serif"> 
+                            </font><font size="2" face="Verdana, Arial, Helvetica, sans-serif"> 
+                            <br>
+                            · </font><font size="2" face="Verdana, Arial, Helvetica, sans-serif" align="left"><a href="intro.htm#templates">Templates</a></font><font size="2" face="Verdana, Arial, Helvetica, sans-serif"><br>
+                            · </font><font size="2" face="Verdana, Arial, Helvetica, sans-serif" align="left"><a href="intro.htm#dataintegration">Data 
+                            and Media Integration</a></font><font size="2" face="Verdana, Arial, Helvetica, sans-serif"><br>
+                            · <a href="intro.htm#components">Building User Interfaces 
+                            with Flash </a><br>
+                            · <a href="intro.htm#components">Components</a><br>
+                            · <a href="intro.htm#turbinewindow">Turbine Window</a></font></p>
+                          <p><font size="2" face="Verdana, Arial, Helvetica, sans-serif">&nbsp;</font></p></td>
+                      </tr>
+                      <tr valign="top" bgcolor="#FFFFFF"> 
+                        <td height="20" colspan="2"> <hr width="100%" size="1" noshade> 
+                        </td>
+                      </tr>
+                      <tr valign="top" bgcolor="#FFFFFF"> 
+                        <td width="259"><font face="Verdana, Arial, Helvetica, sans-serif" size="2"><b>2. 
+                          <a href="vardataset.htm"> Turbine Variables and DataSets</a></b></font></td>
+                        <td width="264"> <p><font face="Verdana, Arial, Helvetica, sans-serif" size="2"><br>
+                            · </font><font size="2" face="Verdana, Arial, Helvetica, sans-serif" align="left"><a href="vardataset.htm#variables">Variables: 
+                            What, Where and When</a></font><font face="Verdana, Arial, Helvetica, sans-serif" size="2"><br>
+                            · </font><font size="2" face="Verdana, Arial, Helvetica, sans-serif" align="left"><a href="vardataset.htm#usingvariables">Using 
+                            Variables</a><br>
+                            </font><font face="Verdana, Arial, Helvetica, sans-serif" size="2">· 
+                            </font><font size="2" face="Verdana, Arial, Helvetica, sans-serif" align="left"><a href="vardataset.htm#definingvariables">Defining 
+                            Variables</a></font><font size="2" face="Verdana, Arial, Helvetica, sans-serif"><br>
+                            · </font><font size="2" face="Verdana, Arial, Helvetica, sans-serif" align="left"><a href="vardataset.htm#publishingas">Publishing 
+                            to Action Script</a></font><font size="2" face="Verdana, Arial, Helvetica, sans-serif"><br>
+                            · </font><font size="2" face="Verdana, Arial, Helvetica, sans-serif" align="left"><a href="vardataset.htm#specialvariables">Special 
+                            Variables</a></font><font size="2" face="Verdana, Arial, Helvetica, sans-serif"><br>
+                            · </font><font size="2" face="Verdana, Arial, Helvetica, sans-serif" align="left"><a href="vardataset.htm#mediasystemvariables">Media 
+                            and System Global Variables</a><br>
+                            </font><font face="Verdana, Arial, Helvetica, sans-serif" size="2">· 
+                            </font><font size="2" face="Verdana, Arial, Helvetica, sans-serif" align="left"><a href="vardataset.htm#expressionvariables">Expression 
+                            Variables</a></font><font size="2" face="Verdana, Arial, Helvetica, sans-serif"><br>
+                            · </font><font size="2" face="Verdana, Arial, Helvetica, sans-serif" align="left"><a href="vardataset.htm#datasets">DataSets</a></font><font size="2" face="Verdana, Arial, Helvetica, sans-serif"><br>
+                            · </font><font size="2" face="Verdana, Arial, Helvetica, sans-serif" align="left"><a href="vardataset.htm#usingdatasets">Using 
+                            DataSets</a></font><font size="2" face="Verdana, Arial, Helvetica, sans-serif"><br>
+                            · <a href="vardataset.htm#loadingdatasetfile">Loading 
+                            a DataSet from a File</a></font><font size="2" face="Verdana, Arial, Helvetica, sans-serif" align="left"><br>
+                            </font><font face="Verdana, Arial, Helvetica, sans-serif" size="2">· 
+                            <a href="vardataset.htm#manualdataset">Manually Creating 
+                            a DataSet</a><br>
+                            · <a href="vardataset.htm#loadingdatasetxml">Loading 
+                            a DataSet from XML</a><br>
+                            · <a href="vardataset.htm#databasedatasets">Defining 
+                            DataSets from Database Queries</a></font> <font size="2" face="Verdana, Arial, Helvetica, sans-serif"><br>
+                            · <a href="vardataset.htm#publishingdatasetas">Publishing 
+                            DataSets to Action Script</a></font></p>
+                          <p>&nbsp;</p></td>
+                      </tr>
+                      <tr valign="top" bgcolor="#FFFFFF"> 
+                        <td height="20" colspan="2"> <hr noshade width="100%" size="1"> 
+                        </td>
+                      </tr>
+                      <tr valign="top" bgcolor="#FFFFFF"> 
+                        <td width="259" height="58"><font face="Verdana, Arial, Helvetica, sans-serif" size="2"><b>3. 
+                          <a href="mml.htm">Turbine Media Markup Language</a></b></font></td>
+                        <td width="264"> <p><font face="Verdana, Arial, Helvetica, sans-serif" size="2">&nbsp;<br>
+                            </font><font face="Verdana, Arial, Helvetica, sans-serif" size="2">· 
+                            </font><font size="2" face="Verdana, Arial, Helvetica, sans-serif" align="left"><a href="mml.htm#turbinemml">Turbine 
+                            MML</a><br>
+                            </font><font face="Verdana, Arial, Helvetica, sans-serif" size="2">· 
+                            </font><font size="2" face="Verdana, Arial, Helvetica, sans-serif" align="left"> 
+                            </font><font size="2" face="Verdana, Arial, Helvetica, sans-serif" align="left"><a href="mml.htm#placingscreen">Placing 
+                            Elements on the Screen<br>
+                            </a></font><font face="Verdana, Arial, Helvetica, sans-serif" size="2">· 
+                            </font><font size="2" face="Verdana, Arial, Helvetica, sans-serif" align="left"><a href="mml.htm#placingscreen"> 
+                            </a></font><font size="2" face="Verdana, Arial, Helvetica, sans-serif" align="left"><a href="mml.htm#placingframes">Placing 
+                            Elements Across Frames<br>
+                            </a></font><font face="Verdana, Arial, Helvetica, sans-serif" size="2">· 
+                            </font><font size="2" face="Verdana, Arial, Helvetica, sans-serif" align="left"><a href="mml.htm#placingframes"> 
+                            </a></font><font size="2" face="Verdana, Arial, Helvetica, sans-serif" align="left"><a href="mml.htm#moveremove">Moving 
+                            and Removing Elements<br>
+                            </a></font><font face="Verdana, Arial, Helvetica, sans-serif" size="2">· 
+                            </font><font size="2" face="Verdana, Arial, Helvetica, sans-serif" align="left"><a href="mml.htm#moveremove"> 
+                            </a></font><font size="2" face="Verdana, Arial, Helvetica, sans-serif" align="left"><a href="mml.htm#placecommon">The 
+                            &lt;Place&gt; Common Attributes<br>
+                            </a></font><font face="Verdana, Arial, Helvetica, sans-serif" size="2">· 
+                            </font><font size="2" face="Verdana, Arial, Helvetica, sans-serif" align="left"><a href="mml.htm#placecommon"> 
+                            </a></font><font size="2" face="Verdana, Arial, Helvetica, sans-serif" align="left"><a href="mml.htm#media">The 
+                            &lt;Media&gt; Tag<br>
+                            </a></font><font face="Verdana, Arial, Helvetica, sans-serif" size="2">· 
+                            </font><font size="2" face="Verdana, Arial, Helvetica, sans-serif" align="left"><a href="mml.htm#media"> 
+                            </a></font><font size="2" face="Verdana, Arial, Helvetica, sans-serif" align="left"><a href="mml.htm#text">Using 
+                            Text<br>
+                            </a></font><font face="Verdana, Arial, Helvetica, sans-serif" size="2">· 
+                            </font><font size="2" face="Verdana, Arial, Helvetica, sans-serif" align="left"><a href="mml.htm#text"> 
+                            </a></font><font size="2" face="Verdana, Arial, Helvetica, sans-serif" align="left"><a href="mml.htm#shape">Shapes<br>
+                            </a></font><font face="Verdana, Arial, Helvetica, sans-serif" size="2">· 
+                            </font><font size="2" face="Verdana, Arial, Helvetica, sans-serif" align="left"><a href="mml.htm#shape"> 
+                            </a></font><font size="2" face="Verdana, Arial, Helvetica, sans-serif" align="left"><a href="mml.htm#image">The 
+                            &lt;Image&gt; Tag<br>
+                            </a></font><font face="Verdana, Arial, Helvetica, sans-serif" size="2">· 
+                            </font><font size="2" face="Verdana, Arial, Helvetica, sans-serif" align="left"><a href="mml.htm#image"> 
+                            </a></font><font size="2" face="Verdana, Arial, Helvetica, sans-serif" align="left"><a href="mml.htm#movieclip">Movie 
+                            Clips<br>
+                            </a></font><font face="Verdana, Arial, Helvetica, sans-serif" size="2">· 
+                            </font><font size="2" face="Verdana, Arial, Helvetica, sans-serif" align="left"><a href="mml.htm#movieclip"> 
+                            </a></font><font size="2" face="Verdana, Arial, Helvetica, sans-serif" align="left"><a href="mml.htm#button">Buttons<br>
+                            </a></font><font face="Verdana, Arial, Helvetica, sans-serif" size="2">· 
+                            </font><font size="2" face="Verdana, Arial, Helvetica, sans-serif" align="left"><a href="mml.htm#button"> 
+                            </a></font><font size="2" face="Verdana, Arial, Helvetica, sans-serif" align="left"><a href="mml.htm#video">Video<br>
+                            </a></font><font face="Verdana, Arial, Helvetica, sans-serif" size="2">· 
+                            </font><font size="2" face="Verdana, Arial, Helvetica, sans-serif" align="left"><a href="mml.htm#video"> 
+                            </a></font><font size="2" face="Verdana, Arial, Helvetica, sans-serif" align="left"><a href="mml.htm#audio">Audio<br>
+                            </a></font><font face="Verdana, Arial, Helvetica, sans-serif" size="2">· 
+                            </font><font size="2" face="Verdana, Arial, Helvetica, sans-serif" align="left"><a href="mml.htm#audio"> 
+                            </a></font><font size="2" face="Verdana, Arial, Helvetica, sans-serif" align="left"><a href="mml.htm#script">The 
+                            &lt;Script&gt; Tag<br>
+                            </a></font><font face="Verdana, Arial, Helvetica, sans-serif" size="2">· 
+                            </font><font size="2" face="Verdana, Arial, Helvetica, sans-serif" align="left"><a href="mml.htm#audio"> 
+                            </a></font><font size="2" face="Verdana, Arial, Helvetica, sans-serif" align="left"><a href="mml.htm#turbinedebug">The 
+                            turbineDebug Function</a></font><font face="Verdana, Arial, Helvetica, sans-serif" size="2"></font><font face="Verdana, Arial, Helvetica, sans-serif" size="2"><br>
+                            · </font><font size="2" face="Verdana, Arial, Helvetica, sans-serif" align="left"><a href="mml.htm#script"> 
+                            </a></font><font size="2" face="Verdana, Arial, Helvetica, sans-serif" align="left"><a href="mml.htm#autolayout">AutoLayout</a></font></p>
+                          <p>&nbsp;</p>
+                          </td>
+                      </tr>
+                      <tr valign="top" bgcolor="#FFFFFF"> 
+                        <td height="20" colspan="2"> <hr noshade width="100%" size="1"> 
+                        </td>
+                      </tr>
+                      <tr valign="top" bgcolor="#FFFFFF"> 
+                        <td height="58"><font face="Verdana, Arial, Helvetica, sans-serif" size="2"><b>4. 
+                          <a href="mmlcommands.htm">MML Command Tags</a></b></font></td>
+                        <td> <p><font face="Verdana, Arial, Helvetica, sans-serif" size="2">&nbsp;<br>
+                            · </font><font size="2" face="Verdana, Arial, Helvetica, sans-serif" align="left"><a href="mmlcommands.htm#loadingvars">Loading 
+                            Turbine Variables<br>
+                            </a></font><font face="Verdana, Arial, Helvetica, sans-serif" size="2">· 
+                            </font><font size="2" face="Verdana, Arial, Helvetica, sans-serif" align="left"><a href="mmlcommands.htm#loadingvars"></a></font><font size="2" face="Verdana, Arial, Helvetica, sans-serif" align="left"><a href="mmlcommands.htm#loadingdatasets">Loading 
+                            Turbine DataSets<br>
+                            </a></font><font face="Verdana, Arial, Helvetica, sans-serif" size="2">· 
+                            </font><font size="2" face="Verdana, Arial, Helvetica, sans-serif" align="left"><a href="mmlcommands.htm#loadingvars"></a></font><font size="2" face="Verdana, Arial, Helvetica, sans-serif" align="left"><a href="mmlcommands.htm#automovieclip">AutoMovieClip<br>
+                            </a></font><font face="Verdana, Arial, Helvetica, sans-serif" size="2">· 
+                            </font><font size="2" face="Verdana, Arial, Helvetica, sans-serif" align="left"><a href="mmlcommands.htm#loadingvars"></a></font><font size="2" face="Verdana, Arial, Helvetica, sans-serif" align="left"><a href="mmlcommands.htm#autoimage">AutoImage<br>
+                            </a></font><font face="Verdana, Arial, Helvetica, sans-serif" size="2">· 
+                            </font><font size="2" face="Verdana, Arial, Helvetica, sans-serif" align="left"><a href="mmlcommands.htm#loadingvars"></a></font><font size="2" face="Verdana, Arial, Helvetica, sans-serif" align="left"><a href="mmlcommands.htm#automedia">AutoMedia<br>
+                            </a></font><font face="Verdana, Arial, Helvetica, sans-serif" size="2">· 
+                            </font><font size="2" face="Verdana, Arial, Helvetica, sans-serif" align="left"><a href="mmlcommands.htm#loadingvars"></a></font><font size="2" face="Verdana, Arial, Helvetica, sans-serif" align="left"><a href="mmlcommands.htm#chart">Chart</a></font><font size="2" face="Verdana, Arial, Helvetica, sans-serif" align="left"><a href="mmlcommands.htm#automedia"><br>
+                            </a></font><font face="Verdana, Arial, Helvetica, sans-serif" size="2">· 
+                            </font><font size="2" face="Verdana, Arial, Helvetica, sans-serif" align="left"><a href="mmlcommands.htm#loadingvars"></a></font><font size="2" face="Verdana, Arial, Helvetica, sans-serif" align="left"><a href="mmlcommands.htm#publishing">Publishing 
+                            Variables and DataSets<br>
+                            </a></font><font face="Verdana, Arial, Helvetica, sans-serif" size="2">· 
+                            </font><font size="2" face="Verdana, Arial, Helvetica, sans-serif" align="left"><a href="mmlcommands.htm#loadingvars"></a></font><font size="2" face="Verdana, Arial, Helvetica, sans-serif" align="left"><a href="mmlcommands.htm#components">Using 
+                            Flash Components</a></font></p>
+                          <p>&nbsp;</p>
+                          </td>
+                      </tr>
+                      <tr valign="top" bgcolor="#FFFFFF"> 
+                        <td height="20" colspan="2"> <hr noshade width="100%" size="1"> 
+                        </td>
+                      </tr>
+                      <tr valign="top" bgcolor="#FFFFFF"> 
+                        <td height="58"><font face="Verdana, Arial, Helvetica, sans-serif" size="2"><b>5. 
+                          <a href="interface.htm">PHP Interface</a></b></font></td>
+                        <td> <p><font face="Verdana, Arial, Helvetica, sans-serif" size="2">&nbsp;<br>
+                            · </font><font size="2" face="Verdana, Arial, Helvetica, sans-serif" align="left"><a href="interface.htm#start">Getting 
+                            Started</a><br>
+                            </font><font face="Verdana, Arial, Helvetica, sans-serif" size="2">· 
+                            </font><font size="2" face="Verdana, Arial, Helvetica, sans-serif" align="left"><a href="interface.htm#turbinecomponent">The 
+                            Turbine PHP Component</a><br>
+                            </font><font face="Verdana, Arial, Helvetica, sans-serif" size="2">· 
+                            </font><font size="2" face="Verdana, Arial, Helvetica, sans-serif" align="left"><a href="interface.htm#properties">Turbine 
+                            Properties</a><br>
+                            </font><font face="Verdana, Arial, Helvetica, sans-serif" size="2">· 
+                            </font><font size="2" face="Verdana, Arial, Helvetica, sans-serif" align="left"><a href="interface.htm#variables">Working 
+                            with Variables</a><br>
+                            </font><font face="Verdana, Arial, Helvetica, sans-serif" size="2">· 
+                            </font><font size="2" face="Verdana, Arial, Helvetica, sans-serif" align="left"><a href="interface.htm#datasets">Working 
+                            with DataSets</a><br>
+                            </font><font face="Verdana, Arial, Helvetica, sans-serif" size="2">· 
+                            </font><font size="2" face="Verdana, Arial, Helvetica, sans-serif" align="left"><a href="interface.htm#media">Working 
+                            with Media Templates</a><br>
+                            </font><font face="Verdana, Arial, Helvetica, sans-serif" size="2">· 
+                            </font><font size="2" face="Verdana, Arial, Helvetica, sans-serif" align="left"><a href="interface.htm#mml">Creating 
+                            MML</a><br>
+                            </font><font face="Verdana, Arial, Helvetica, sans-serif" size="2">· 
+                            </font><font size="2" face="Verdana, Arial, Helvetica, sans-serif" align="left"><a href="interface.htm#components">Working 
+                            with Flash Components</a><br>
+                            </font><font face="Verdana, Arial, Helvetica, sans-serif" size="2">· 
+                            </font><font size="2" face="Verdana, Arial, Helvetica, sans-serif" align="left"><a href="interface.htm#javascript">Creating 
+                            Scripting</a><br>
+                            </font><font face="Verdana, Arial, Helvetica, sans-serif" size="2">· 
+                            </font><font size="2" face="Verdana, Arial, Helvetica, sans-serif" align="left"><a href="interface.htm#publish">Publishing 
+                            to Client Side</a><br>
+                            </font><font face="Verdana, Arial, Helvetica, sans-serif" size="2">· 
+                            </font><font size="2" face="Verdana, Arial, Helvetica, sans-serif" align="left"><a href="interface.htm#http">Fetching 
+                            HTTP Content</a><br>
+                            </font><font face="Verdana, Arial, Helvetica, sans-serif" size="2">· 
+                            </font><font size="2" face="Verdana, Arial, Helvetica, sans-serif" align="left"><a href="interface.htm#http"></a></font><font size="2" face="Verdana, Arial, Helvetica, sans-serif" align="left"><a href="interface.htm#generate">Generating 
+                            into the Browser<br>
+                            </a></font><font face="Verdana, Arial, Helvetica, sans-serif" size="2">· 
+                            </font><font size="2" face="Verdana, Arial, Helvetica, sans-serif" align="left"><a href="interface.htm#http"></a></font><font size="2" face="Verdana, Arial, Helvetica, sans-serif" align="left"><a href="interface.htm#generatetofile">Generating 
+                            to a File<br>
+                            </a></font><font face="Verdana, Arial, Helvetica, sans-serif" size="2">· 
+                            </font><font size="2" face="Verdana, Arial, Helvetica, sans-serif" align="left"><a href="interface.htm#http"></a></font><font size="2" face="Verdana, Arial, Helvetica, sans-serif" align="left"><a href="#generatetofile"> 
+                            </a></font><font size="2" face="Verdana, Arial, Helvetica, sans-serif" align="left"><a href="interface.htm#generatehtmlfirst">Generating 
+                            HTML Plug-in Page<br>
+                            </a></font><font face="Verdana, Arial, Helvetica, sans-serif" size="2">· 
+                            </font><font size="2" face="Verdana, Arial, Helvetica, sans-serif" align="left"><a href="interface.htm#cache">Media 
+                            Caching<br>
+                            </a></font><font face="Verdana, Arial, Helvetica, sans-serif" size="2">· 
+                            </font><font size="2" face="Verdana, Arial, Helvetica, sans-serif" align="left"><a href="interface.htm#ie">Special 
+                            Case Internet Explorer Optimization</a></font></p>
+                          <p>&nbsp;</p></td>
+                      </tr>
+                      <tr valign="top" bgcolor="#FFFFFF"> 
+                        <td height="20" colspan="2"> <hr noshade width="100%" size="1"> 
+                        </td>
+                      </tr>
+                      <tr valign="top" bgcolor="#FFFFFF"> 
+                        <td height="58"><font face="Verdana, Arial, Helvetica, sans-serif" size="2"><b>6. 
+                          <a href="devdeploy.htm">Development and Deployment</a></b></font></td>
+                        <td> <p><font face="Verdana, Arial, Helvetica, sans-serif" size="2">&nbsp;<br>
+                            · </font><font size="2" face="Verdana, Arial, Helvetica, sans-serif" align="left"><a href="devdeploy.htm#install">Installation</a><br>
+                            </font><font face="Verdana, Arial, Helvetica, sans-serif" size="2">· 
+                            </font><font size="2" face="Verdana, Arial, Helvetica, sans-serif" align="left"><a href="devdeploy.htm#develop">Development</a><br>
+                            </font><font face="Verdana, Arial, Helvetica, sans-serif" size="2">· 
+                            <a href="devdeploy.htm#deploy">Deployment Guide</a><br>
+                            · <a href="devdeploy.htm#upgrade">Notes for Turbine 
+                            5.0 Users</a><br>
+                            · <a href="devdeploy.htm#tips">Useful Tips</a></font></p>
+                          <p>&nbsp;</p>
+                          </td>
+                      </tr>
+                      <tr valign="top" bgcolor="#FFFFFF"> 
+                        <td height="20" colspan="2"> <hr noshade width="100%" size="1"> 
+                        </td>
+                      </tr>
+                      <tr valign="top" bgcolor="#FFFFFF"> 
+                        <td height="58"><font face="Verdana, Arial, Helvetica, sans-serif" size="2"><b>7. 
+                          <a href="mmlreference.htm">Reference</a></b></font></td>
+                        <td> <p><font face="Verdana, Arial, Helvetica, sans-serif" size="2">&nbsp;<br>
+                            · <a href="mmlreference.htm">MML Reference</a><br>
+                            · <a href="interfacereference.htm">PHP Interface Reference</a><br>
+                            · <a href="varreference.htm">Media and System Global 
+                            Variables</a><br>
+                            · <a href="varreference.htm#specialvariables">Special 
+                            Variables</a></font></p>
+                          <p>&nbsp;</p></td>
+                      </tr>
+                    </table>
+                  </td>
+                </tr>
+                <tr valign="middle" bgcolor="#FFFFFF"> 
+                  <td height="2"> 
+                    <div align="center"><font size="-7" color="#F8F8F8" face="Verdana, Arial, Helvetica, sans-serif">this 
+                      space intentionally left blank </font></div>
+                  </td>
+                </tr>
+              </table>
+            </td>
+          </tr>
+        </table>
+      </TD>
+    </TR>
+    <TR valign="top"> 
+      <TD COLSPAN="2" height="2"> 
+        <hr noshade width="100%" size="1">
+      </TD>
+    </TR>
+  </TABLE>
+</CENTER>
+<TR> 
+  <TD COLSPAN="2">&nbsp; </TD>
+</TR>
+<CENTER>
+  <font face="Verdana, Arial, Helvetica, sans-serif" size="+1"><A HREF="../readme.htm"><font size="3">Read 
+  Me</font></A><font size="3">&nbsp; <A HREF="install.htm">Install</A>&nbsp; <A HREF="../samples/default.htm">Samples</A></font></font>
+<p> 
+  <p> <font face="Verdana, Arial, Helvetica, sans-serif" size="1"><i>Flash and 
+    Macromedia Flash are trademarks of Macromedia, Inc.</i></font>
+</CENTER>
+</BODY>
+</HTML>

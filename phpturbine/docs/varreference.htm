@@ -1,0 +1,608 @@
+<HTML>
+<HEAD>
+<META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=iso-8859-1">
+<META NAME="GENERATOR" CONTENT="Mozilla/4.04 [en] (Win95; I) [Netscape]">
+<TITLE>Global Variables</TITLE>
+</HEAD>
+<BODY topmargin="0" leftmargin="0" rightmargin="0" marginwidth="0" marginheight="0" TEXT="#000000" BGCOLOR="#FFFFFF" LINK="#003366" VLINK="#FF9900" ALINK="#FF6600">
+<CENTER>
+  <table width="100%" border="0" cellspacing="0" cellpadding="0" align="center">
+    <tr bgcolor="#000033"> 
+      <td background="images/bar_left.gif" width="50%">&nbsp;</td>
+      <td> 
+        <table width="560" border="0" cellspacing="0" cellpadding="0">
+          <tr> 
+            <td width="334"><img src="images/bar_left.gif" width="334" height="28"></td>
+            <td><img src="images/bar_central.gif" width="110" height="28"></td>
+            <td><img src="images/bar_logo.gif" width="116" height="28"></td>
+          </tr>
+        </table>
+      </td>
+      <td background="images/1x1_azul_esc.gif" width="50%">&nbsp;</td>
+    </tr>
+    <tr bgcolor="#FFFFFF" height="4"> 
+      <td colspan="3"></td>
+    </tr>
+  </table>
+  <TABLE BORDER=0 COLS=2 WIDTH="560" cellpadding="0" cellspacing="0" >
+    <TR valign="top">
+      <TD COLSPAN="2" height="12"> 
+        <table border=0 cols=2 width="560" cellpadding="0" cellspacing="0" >
+          <tr> 
+            <td width="443" height="25"><font face="Verdana, Arial, Helvetica, sans-serif" size="3"><a href="manual.htm">Table 
+              of Contents</a></font></td>
+            <td width="117" height="25"> 
+              <div align="center"><font face="Verdana, Arial, Helvetica, sans-serif" size="3"> 
+                </font></div>
+            </td>
+          </tr>
+        </table>
+      </TD>
+    </TR>
+    <TR valign="top"> 
+      <TD COLSPAN="2" height="2"> <p align="left">&nbsp;</p>
+        <p align="left"><font face="Arial, Helvetica, sans-serif" size="6">7.3 
+          Global Variables</font></p>
+        <p align="left"><font size="2" face="Verdana, Arial, Helvetica, sans-serif">This 
+          chapter describes the Turbine Variables that have a special meaning 
+          inside the Turbine engine.</font></p>
+        <ul>
+          <li><font size="2" face="Verdana, Arial, Helvetica, sans-serif" align="left"><a href="#mediasystemvariables"><font size="3">Media 
+            and System Global Variables</font></a></font></li>
+          <li><font size="2" face="Verdana, Arial, Helvetica, sans-serif" align="left"><a href="#specialvariables"><font size="3">Special 
+            Variables</font></a></font></li>
+        </ul>
+        <p>&nbsp;</p>
+        <p>&nbsp;</p>
+        <p>&nbsp;</p>
+        <p> <font size="5" face="Arial, Helvetica, sans-serif"><a name="mediasystemvariables"></a>Media 
+          and System Global Variables</font></p>
+        <p><font size="2" face="Verdana, Arial, Helvetica, sans-serif"> Turbine 
+          includes two automatically defined families of variables that contain 
+          contextual information about the media being generated, as well as a 
+          number of system settings and defaults - the Media and System variable 
+          families:</font></p>
+        <p><font size="3" face="Verdana, Arial, Helvetica, sans-serif"><strong>Media:</strong></font></p>
+        <table BORDER cellspacing=0 cellpadding=4 cols=3 width="97%" >
+          <tr valign="top" bgcolor="#000000"> 
+            <td width="29%"><font color="#FFFFFF" size="2" face="Verdana, Arial, Helvetica, sans-serif"><b>Variable</b></font></td>
+            <td width="48%"><font color="#FFFFFF" size="2" face="Verdana, Arial, Helvetica, sans-serif"><b>Description</b></font></td>
+            <td width="23%"><font color="#FFFFFF" size="2" face="Verdana, Arial, Helvetica, sans-serif"><b>Example</b></font></td>
+          </tr>
+          <tr valign="top"> 
+            <td><font face="Verdana, Arial, Helvetica, sans-serif" size="2">{Media.Width}</font></td>
+            <td><font face="Verdana, Arial, Helvetica, sans-serif" size="2">The 
+              output native Width in pixels</font></td>
+            <td><font face="Verdana, Arial, Helvetica, sans-serif" size="2">550</font></td>
+          </tr>
+          <tr valign="top"> 
+            <td><font face="Verdana, Arial, Helvetica, sans-serif" size="2">{Media.Height}</font></td>
+            <td><font face="Verdana, Arial, Helvetica, sans-serif" size="2">The 
+              output native Height in pixels</font></td>
+            <td><font face="Verdana, Arial, Helvetica, sans-serif" size="2">400</font></td>
+          </tr>
+          <tr valign="top"> 
+            <td><font face="Verdana, Arial, Helvetica, sans-serif" size="2">{Media.FrameRate}</font></td>
+            <td><font face="Verdana, Arial, Helvetica, sans-serif" size="2">The 
+              number of frames per second</font></td>
+            <td><font size="2" face="Verdana, Arial, Helvetica, sans-serif">12</font></td>
+          </tr>
+          <tr valign="top"> 
+            <td><font face="Verdana, Arial, Helvetica, sans-serif" size="2">{Media.Color}</font></td>
+            <td><font face="Verdana, Arial, Helvetica, sans-serif" size="2">The 
+              native background color to be output</font></td>
+            <td><font face="Verdana, Arial, Helvetica, sans-serif" size="2">#FFFFFF</font></td>
+          </tr>
+          <tr valign="top"> 
+            <td><font face="Verdana, Arial, Helvetica, sans-serif" size="2">{Media.NumFrames}</font></td>
+            <td><font face="Verdana, Arial, Helvetica, sans-serif" size="2">Total 
+              number of frames</font></td>
+            <td><font face="Verdana, Arial, Helvetica, sans-serif" size="2">20</font></td>
+          </tr>
+          <tr valign="top"> 
+            <td><font face="Verdana, Arial, Helvetica, sans-serif" size="2">{Media.Flash.Version}</font></td>
+            <td><font face="Verdana, Arial, Helvetica, sans-serif" size="2">The 
+              numeric version to use when generating Flash</font></td>
+            <td><font face="Verdana, Arial, Helvetica, sans-serif" size="2">6</font></td>
+          </tr>
+          <tr valign="top"> 
+            <td><font face="Verdana, Arial, Helvetica, sans-serif" size="2">{Media.Debug}</font></td>
+            <td><font face="Verdana, Arial, Helvetica, sans-serif" size="2">A 
+              boolean value that specifies whether the Turbine Window will be 
+              included on the generated media. On Flash, also defines if a native 
+              debug tag will be emitted, allowing the movie to be debugged on 
+              the browser/Flash editor</font></td>
+            <td><font size="2" face="Verdana, Arial, Helvetica, sans-serif">Yes</font></td>
+          </tr>
+          <tr valign="top"> 
+            <td><font face="Verdana, Arial, Helvetica, sans-serif" size="2">{Media.Protect}</font></td>
+            <td><font face="Verdana, Arial, Helvetica, sans-serif" size="2">Whether 
+              the output media will be protected - for example when generating 
+              Flash this means the &quot;protect from import&quot; flag</font></td>
+            <td><font face="Verdana, Arial, Helvetica, sans-serif" size="2">No</font></td>
+          </tr>
+          <tr valign="top"> 
+            <td><font face="Verdana, Arial, Helvetica, sans-serif" size="2">{Media.Compress}</font></td>
+            <td><font face="Verdana, Arial, Helvetica, sans-serif" size="2">If 
+              non-zero, specifies the level of output compression, from 1 to 9, 
+              with 9 being the best compression. If 0 or &quot;No&quot;, no compression 
+              is applied. On Flash, applies Flash 6+ compression to the generated 
+              movie</font></td>
+            <td><font face="Verdana, Arial, Helvetica, sans-serif" size="2">9</font></td>
+          </tr>
+          <tr valign="top"> 
+            <td><font size="2" face="Verdana, Arial, Helvetica, sans-serif">{Media.Script}</font></td>
+            <td><font size="2" face="Verdana, Arial, Helvetica, sans-serif"> The 
+              complete URL path to the executed PHP script </font></td>
+            <td><font size="2" face="Verdana, Arial, Helvetica, sans-serif">/turbine/script.php</font></td>
+          </tr>
+          <tr valign="top"> 
+            <td><font size="2" face="Verdana, Arial, Helvetica, sans-serif">{Media.Query}</font></td>
+            <td><font size="2" face="Verdana, Arial, Helvetica, sans-serif">The 
+              QUERY_STRING used to call the script</font></td>
+            <td><font size="2" face="Verdana, Arial, Helvetica, sans-serif">person=Mathilda</font></td>
+          </tr>
+          <tr valign="top"> 
+            <td><font size="2" face="Verdana, Arial, Helvetica, sans-serif">{Media.Location}</font></td>
+            <td><font size="2" face="Verdana, Arial, Helvetica, sans-serif">The 
+              path and query string used to request this script - very useful 
+              for self-referencing</font></td>
+            <td><font size="2" face="Verdana, Arial, Helvetica, sans-serif">/turbine/script.php?<br>
+              person=Mathilda </font></td>
+          </tr>
+          <tr valign="top"> 
+            <td><font size="2" face="Verdana, Arial, Helvetica, sans-serif">{Movie.Self}</font></td>
+            <td><font size="2" face="Verdana, Arial, Helvetica, sans-serif">The 
+              path and query string used to request this script, for use with 
+              the GenerateHTMLFirst command, for self-referencing</font></td>
+            <td><font size="2" face="Verdana, Arial, Helvetica, sans-serif">/turbine/script.php?<br>
+              person=Mathilda&amp;<br>
+              _media</font></td>
+          </tr>
+        </table>
+        <p><font size="3" face="Verdana, Arial, Helvetica, sans-serif"><strong><br>
+          Media.PDF:</strong></font></p>
+        <p><font size="2" face="Verdana, Arial, Helvetica, sans-serif">When generating 
+          Adobe PDF documents, Turbine also uses these variables:</font></p>
+        <table BORDER cellspacing=0 cellpadding=4 cols=3 width="97%" >
+          <tr valign="top" bgcolor="#000000"> 
+            <td><font color="#FFFFFF" size="2" face="Verdana, Arial, Helvetica, sans-serif"><b>Variable</b></font></td>
+            <td><font color="#FFFFFF" size="2" face="Verdana, Arial, Helvetica, sans-serif"><b>Description</b></font></td>
+            <td><font color="#FFFFFF" size="2" face="Verdana, Arial, Helvetica, sans-serif"><b>Example</b></font></td>
+          </tr>
+          <tr valign="top"> 
+            <td><font face="Verdana, Arial, Helvetica, sans-serif" size="2">{Media.PDF.Version}</font></td>
+            <td><font face="Verdana, Arial, Helvetica, sans-serif" size="2">The 
+              numeric PDF version to use when generating PDF. <br>
+              For Acrobat PDF viewer 6, use 5, for Acrobat PDF viewer 5 use 4 
+              and so on. Default is version 2, requiring Acrobat PDF viewer 3.</font></td>
+            <td><font face="Verdana, Arial, Helvetica, sans-serif" size="2">2</font></td>
+          </tr>
+          <tr valign="top"> 
+            <td><font face="Verdana, Arial, Helvetica, sans-serif" size="2">{Media.PDF.Title}</font></td>
+            <td><font face="Verdana, Arial, Helvetica, sans-serif" size="2">The 
+              title of the PDF document. Visible in the document properties</font></td>
+            <td><font face="Verdana, Arial, Helvetica, sans-serif" size="2">My 
+              Title </font></td>
+          </tr>
+          <tr valign="top"> 
+            <td><font face="Verdana, Arial, Helvetica, sans-serif" size="2">{Media.PDF.Subject}</font></td>
+            <td><font face="Verdana, Arial, Helvetica, sans-serif" size="2">The 
+              subject of the PDF document. Visible in the document properties</font></td>
+            <td><font face="Verdana, Arial, Helvetica, sans-serif" size="2">My 
+              Subject</font></td>
+          </tr>
+          <tr valign="top"> 
+            <td><font face="Verdana, Arial, Helvetica, sans-serif" size="2">{Media.PDF.Author}</font></td>
+            <td><font face="Verdana, Arial, Helvetica, sans-serif" size="2">The 
+              author of the PDF document. Visible in the document properties</font></td>
+            <td><font face="Verdana, Arial, Helvetica, sans-serif" size="2">My 
+              Name</font></td>
+          </tr>
+          <tr valign="top"> 
+            <td><font face="Verdana, Arial, Helvetica, sans-serif" size="2">{Media.PDF.UserPassword}</font></td>
+            <td><font face="Verdana, Arial, Helvetica, sans-serif" size="2">When 
+              defined causes the PDF document to be encrypted. The user must provide 
+              this password in order to open it</font></td>
+            <td><font face="Verdana, Arial, Helvetica, sans-serif" size="2">MyPassword</font></td>
+          </tr>
+          <tr valign="top"> 
+            <td><font face="Verdana, Arial, Helvetica, sans-serif" size="2">{Media.PDF.OwnerPassword}</font></td>
+            <td><font face="Verdana, Arial, Helvetica, sans-serif" size="2">When 
+              defined causes the PDF document contents to be encrypted</font></td>
+            <td><font face="Verdana, Arial, Helvetica, sans-serif" size="2">MyPassword</font></td>
+          </tr>
+          <tr valign="top"> 
+            <td><font face="Verdana, Arial, Helvetica, sans-serif" size="2">{Media.PDF.Permissions}</font></td>
+            <td><p><font size="2" face="Verdana, Arial, Helvetica, sans-serif">PDF 
+                document permissions, a combination of:<br>
+                noPrinting - the PDF user can't print the document<br>
+                noChanging - the PDF user can't change the document<br>
+                noContentCopying - the user can't copy the document contents<br>
+                noCommenting - the user can't comment the document.</font></p>
+              <p><font face="Verdana, Arial, Helvetica, sans-serif" size="2">This 
+                variable only has any effect if the PDF document is encrypted. 
+                To encrypt a PDF document set {Media.PDF.UserPassword} or {Media.PDF.OwnerPassword}</font></p></td>
+            <td><font face="Verdana, Arial, Helvetica, sans-serif" size="2">noPrinting</font></td>
+          </tr>
+        </table>
+        <p><font size="2" face="Verdana, Arial, Helvetica, sans-serif"><br>
+          </font><font size="3" face="Verdana, Arial, Helvetica, sans-serif"><strong>System:</strong></font></p>
+        <p><font size="2" face="Verdana, Arial, Helvetica, sans-serif">Default 
+          values for System variables are read from the system.settings file on 
+          the Turbine installation directory - this file is read during application 
+          load time.<br>
+          The following System variables are defined:</font></p>
+        <table BORDER cellspacing=0 cellpadding=4 cols=3 width="100%" >
+          <tr valign="top" bgcolor="#000000"> 
+            <td width="33%"><font color="#FFFFFF" size="2" face="Verdana, Arial, Helvetica, sans-serif"><b>Variable</b></font></td>
+            <td width="54%"><font color="#FFFFFF" size="2" face="Verdana, Arial, Helvetica, sans-serif"><b>Description</b></font></td>
+            <td width="13%"><font color="#FFFFFF" size="2" face="Verdana, Arial, Helvetica, sans-serif"><b>Example</b></font></td>
+          </tr>
+          <tr valign="top"> 
+            <td><font size="2" face="Verdana, Arial, Helvetica, sans-serif">{System.Log}</font></td>
+            <td><font size="2" face="Verdana, Arial, Helvetica, sans-serif">The 
+              log level, a combination of:<br>
+              errors - log errors<br>
+              warnings - log warnings<br>
+              info - log information messages</font></td>
+            <td><font size="2" face="Verdana, Arial, Helvetica, sans-serif">errors, 
+              warnings</font></td>
+          </tr>
+          <tr valign="top"> 
+            <td><font size="2" face="Verdana, Arial, Helvetica, sans-serif">{System.LogTo}</font></td>
+            <td><font size="2" face="Verdana, Arial, Helvetica, sans-serif">Where 
+              to log into, a combination of:<br>
+              media - log into the Turbine Window<br>
+              file - log to the turbine.log file</font></td>
+            <td><font size="2" face="Verdana, Arial, Helvetica, sans-serif">media</font></td>
+          </tr>
+          <tr valign="top"> 
+            <td><font size="2" face="Verdana, Arial, Helvetica, sans-serif">{System.Debug}</font></td>
+            <td><font size="2" face="Verdana, Arial, Helvetica, sans-serif">The 
+              default value to use in the {Media.Debug}, if not specified by user</font></td>
+            <td><font size="2" face="Verdana, Arial, Helvetica, sans-serif">No</font></td>
+          </tr>
+          <tr valign="top"> 
+            <td><font size="2" face="Verdana, Arial, Helvetica, sans-serif">{System.Protect}</font></td>
+            <td><font size="2" face="Verdana, Arial, Helvetica, sans-serif">The 
+              default value to use in the {Media.Protect} variable, if not specified</font></td>
+            <td><font size="2" face="Verdana, Arial, Helvetica, sans-serif">No</font></td>
+          </tr>
+          <tr valign="top"> 
+            <td><font size="2" face="Verdana, Arial, Helvetica, sans-serif">{System.Compress}</font></td>
+            <td><font size="2" face="Verdana, Arial, Helvetica, sans-serif">The 
+              default value to use in the {Media.Compress} variable, if not specified</font></td>
+            <td><font size="2" face="Verdana, Arial, Helvetica, sans-serif">No</font></td>
+          </tr>
+          <tr valign="top"> 
+            <td><font size="2" face="Verdana, Arial, Helvetica, sans-serif">{System.FontName}</font></td>
+            <td><font size="2" face="Verdana, Arial, Helvetica, sans-serif">The 
+              default font name to use when not specified in a &lt;Text&gt; tag</font></td>
+            <td><font size="2" face="Verdana, Arial, Helvetica, sans-serif">Arial</font></td>
+          </tr>
+          <tr valign="top"> 
+            <td><font size="2" face="Verdana, Arial, Helvetica, sans-serif">{System.FontStyle}</font></td>
+            <td><font size="2" face="Verdana, Arial, Helvetica, sans-serif">The 
+              default font style to use when not specified in a &lt;Text&gt; tag</font></td>
+            <td><font size="2" face="Verdana, Arial, Helvetica, sans-serif">bold, 
+              italic</font></td>
+          </tr>
+          <tr valign="top"> 
+            <td><font size="2" face="Verdana, Arial, Helvetica, sans-serif"> {System.FontSize}</font></td>
+            <td><font size="2" face="Verdana, Arial, Helvetica, sans-serif">The 
+              default font size to use when not specified in a &lt;Text&gt; tag. 
+              Must be expressed in a value where the size in pixels is multiplied 
+              by 20 - for example a 20 pixel font size should be specified here 
+              as <br>
+              20 * 20 = 400</font></td>
+            <td><font size="2" face="Verdana, Arial, Helvetica, sans-serif">400</font></td>
+          </tr>
+          <tr valign="top"> 
+            <td><font size="2" face="Verdana, Arial, Helvetica, sans-serif"> {System.FontColor}</font></td>
+            <td><font size="2" face="Verdana, Arial, Helvetica, sans-serif">The 
+              default text color to use when not specified in a &lt;Text&gt; tag</font></td>
+            <td><font size="2" face="Verdana, Arial, Helvetica, sans-serif">#000000</font></td>
+          </tr>
+          <tr valign="top"> 
+            <td><font size="2" face="Verdana, Arial, Helvetica, sans-serif">{System.FontMapSans}<br>
+              {System.FontMapSerif}<br>
+              {System.FontMapTypewriter}</font></td>
+            <td><p><font size="2" face="Verdana, Arial, Helvetica, sans-serif">The 
+                font names to be used (mapped) when a font is not available and 
+                needs to be mapped.<br>
+                Far East users might prefer to use other font faces - for example 
+                MS Gothic or MS Mincho or Arial Unicode MS</font></p></td>
+            <td><font face="Verdana, Arial, Helvetica, sans-serif" size="2">Arial</font></td>
+          </tr>
+          <tr valign="top"> 
+            <td><font size="2" face="Verdana, Arial, Helvetica, sans-serif">{System.ImageEncodeFlags}</font></td>
+            <td><font size="2" face="Verdana, Arial, Helvetica, sans-serif"> Default 
+              encoding for images, when not specified in the&lt;image&gt; tag. 
+              Can be 0, to use the image's native encoding or one of:<br>
+              1 - JPEG encoding<br>
+              2 - ZLIB encoding, <br>
+              3 - use one of JPEG or ZLIB that produces better compression</font></td>
+            <td><font size="2" face="Verdana, Arial, Helvetica, sans-serif">3</font></td>
+          </tr>
+          <tr valign="top"> 
+            <td><font face="Verdana, Arial, Helvetica, sans-serif" size="2">{System.ImageEncodeQuality}</font></td>
+            <td><font face="Verdana, Arial, Helvetica, sans-serif" size="2">Default 
+              encoding quality, in percentage, to use when not specified on the 
+              &lt;Image&gt; tag. Similar to common JPEG quality /compression settings</font></td>
+            <td><font face="Verdana, Arial, Helvetica, sans-serif" size="2">85</font></td>
+          </tr>
+          <tr valign="top"> 
+            <td><font size="2" face="Verdana, Arial, Helvetica, sans-serif"> {System.ImageSmooth}</font></td>
+            <td><font face="Verdana, Arial, Helvetica, sans-serif" size="2">Default 
+              smoothening to use if not specified on the &lt;Image&gt; tag. Use 
+              0 for no smoothening</font></td>
+            <td><font face="Verdana, Arial, Helvetica, sans-serif" size="2">0</font></td>
+          </tr>
+          <tr valign="top"> 
+            <td><font face="Verdana, Arial, Helvetica, sans-serif" size="2">{System.ImageResampleMethod}</font></td>
+            <td><font face="Verdana, Arial, Helvetica, sans-serif" size="2">The 
+              image resizing method to use if not specified on an &lt;Image&gt; 
+              tag. One of:<br>
+              0 - raw pixel resize<br>
+              1 - average pixel resize<br>
+              2 - bilinear resize<br>
+              3 - bicubic resize<br>
+              </font></td>
+            <td><font face="Verdana, Arial, Helvetica, sans-serif" size="2">2</font></td>
+          </tr>
+          <tr valign="top"> 
+            <td><font face="Verdana, Arial, Helvetica, sans-serif" size="2">{System.MMLTagRequired}</font></td>
+            <td><font face="Verdana, Arial, Helvetica, sans-serif" size="2">A 
+              boolean value that specifies whether MML tags used in Flash .swf 
+              templates must have be enclosed in &lt;mml&gt; ... &lt;/mml&gt; 
+              tags. <br>
+              Should be used if there's the danger of unintended MML tags used 
+              in Flash templates being parsed by Turbine.</font></td>
+            <td><font size="2" face="Verdana, Arial, Helvetica, sans-serif">No</font></td>
+          </tr>
+          <tr valign="top"> 
+            <td><font face="Verdana, Arial, Helvetica, sans-serif" size="2">{System.MMLWarnUnknownTags}</font></td>
+            <td><font face="Verdana, Arial, Helvetica, sans-serif" size="2">Boolean 
+              value that specifies whether unknown MML tags raise warnings. Good 
+              during development to find locate misspellings in MML tags</font></td>
+            <td><font face="Verdana, Arial, Helvetica, sans-serif" size="2">Yes</font></td>
+          </tr>
+          <tr valign="top"> 
+            <td><font face="Verdana, Arial, Helvetica, sans-serif" size="2">{System.AutoLayout}</font></td>
+            <td><font size="2" face="Verdana, Arial, Helvetica, sans-serif">The 
+              default mode used on the AutoLayout funcionality - one of horizontal, 
+              vertical or off</font></td>
+            <td><font face="Verdana, Arial, Helvetica, sans-serif" size="2">vertical</font></td>
+          </tr>
+        </table>
+        <p>&nbsp;<br>
+          &nbsp; </p>
+        <p><font size="5" face="Arial, Helvetica, sans-serif"><a name="specialvariables"></a>Special 
+          Variables</font></p>
+        <p><font size="2" face="Verdana, Arial, Helvetica, sans-serif">Turbine 
+          automatically defines a number of special, utility variables for information 
+          like random numbers, current time and date. The following special variables 
+          can be used:</font></p>
+        <p><font size="3" face="Verdana, Arial, Helvetica, sans-serif"><strong>Time:</strong></font></p>
+        <table BORDER cellspacing=0 cellpadding=4 cols=3 width="94%" >
+          <tr bgcolor="#000000"> 
+            <td width="32%"><font color="#FFFFFF" size="2" face="Verdana, Arial, Helvetica, sans-serif"><b>Variable</b></font></td>
+            <td width="42%"><font color="#FFFFFF" size="2" face="Verdana, Arial, Helvetica, sans-serif"><b>Description</b></font></td>
+            <td width="26%"><font color="#FFFFFF" size="2" face="Verdana, Arial, Helvetica, sans-serif"><b>Formatting</b></font></td>
+          </tr>
+          <tr valign="top"> 
+            <td><font face="Verdana, Arial, Helvetica, sans-serif" size="2">{Time.Year}</font></td>
+            <td><font face="Verdana, Arial, Helvetica, sans-serif" size="2">The 
+              current year</font></td>
+            <td><font face="Verdana, Arial, Helvetica, sans-serif" size="2">yyyy 
+              (ex. 1999)</font></td>
+          </tr>
+          <tr valign="top"> 
+            <td><font face="Verdana, Arial, Helvetica, sans-serif" size="2">{Time.Year2}</font></td>
+            <td><font face="Verdana, Arial, Helvetica, sans-serif" size="2">The 
+              current year</font></td>
+            <td><font face="Verdana, Arial, Helvetica, sans-serif" size="2">yy 
+              (ex. 99)</font></td>
+          </tr>
+          <tr valign="top"> 
+            <td><font face="Verdana, Arial, Helvetica, sans-serif" size="2">{TimeMonth}</font></td>
+            <td><font face="Verdana, Arial, Helvetica, sans-serif" size="2">Current 
+              month 1 - 12</font></td>
+            <td><font face="Verdana, Arial, Helvetica, sans-serif" size="2">m 
+              or mm (ex. 2)</font></td>
+          </tr>
+          <tr valign="top"> 
+            <td><font face="Verdana, Arial, Helvetica, sans-serif" size="2">{Time.Month0}</font></td>
+            <td><font face="Verdana, Arial, Helvetica, sans-serif" size="2">Current 
+              month 01 - 12</font></td>
+            <td><font face="Verdana, Arial, Helvetica, sans-serif" size="2">always 
+              mm, left-pads with 0 (ex. 02)</font></td>
+          </tr>
+          <tr valign="top"> 
+            <td><font face="Verdana, Arial, Helvetica, sans-serif" size="2">{Time.MonthName}</font></td>
+            <td><font face="Verdana, Arial, Helvetica, sans-serif" size="2">January, 
+              February ...</font></td>
+            <td><font face="Verdana, Arial, Helvetica, sans-serif" size="2">-</font></td>
+          </tr>
+          <tr valign="top"> 
+            <td><font face="Verdana, Arial, Helvetica, sans-serif" size="2">{Time.WeekDay}</font></td>
+            <td><font face="Verdana, Arial, Helvetica, sans-serif" size="2">Day 
+              of the week, between 1 and 7</font></td>
+            <td><font face="Verdana, Arial, Helvetica, sans-serif" size="2">d</font></td>
+          </tr>
+          <tr valign="top"> 
+            <td><font face="Verdana, Arial, Helvetica, sans-serif" size="2">{Time.WeekDayName}</font></td>
+            <td><font face="Verdana, Arial, Helvetica, sans-serif" size="2">Sunday, 
+              Monday...</font></td>
+            <td><font face="Verdana, Arial, Helvetica, sans-serif" size="2">-</font></td>
+          </tr>
+          <tr valign="top"> 
+            <td><font face="Verdana, Arial, Helvetica, sans-serif" size="2">{Time.Day}</font></td>
+            <td><font face="Verdana, Arial, Helvetica, sans-serif" size="2">Day 
+              of the month 1 - 31</font></td>
+            <td><font face="Verdana, Arial, Helvetica, sans-serif" size="2">d 
+              or dd (ex. 4)</font></td>
+          </tr>
+          <tr valign="top"> 
+            <td><font face="Verdana, Arial, Helvetica, sans-serif" size="2">{Time.Day0}</font></td>
+            <td><font face="Verdana, Arial, Helvetica, sans-serif" size="2">Day 
+              of the month 01 - 31</font></td>
+            <td><font face="Verdana, Arial, Helvetica, sans-serif" size="2">DD 
+              left-pads with 0 (ex. 04)</font></td>
+          </tr>
+          <tr valign="top"> 
+            <td><font face="Verdana, Arial, Helvetica, sans-serif" size="2">{Time.Hour}</font></td>
+            <td><font face="Verdana, Arial, Helvetica, sans-serif" size="2">Hour 
+              0 - 23</font></td>
+            <td><font face="Verdana, Arial, Helvetica, sans-serif" size="2">h 
+              or hh (ex. 8)</font></td>
+          </tr>
+          <tr valign="top"> 
+            <td><font face="Verdana, Arial, Helvetica, sans-serif" size="2">{Time.Hour0}</font></td>
+            <td><font face="Verdana, Arial, Helvetica, sans-serif" size="2">Hour 
+              00-23</font></td>
+            <td><font face="Verdana, Arial, Helvetica, sans-serif" size="2">hh 
+              left-pads with 0 (ex. 08)</font></td>
+          </tr>
+          <tr valign="top"> 
+            <td><font face="Verdana, Arial, Helvetica, sans-serif" size="2">{Time.HourAmPm}</font></td>
+            <td><font face="Verdana, Arial, Helvetica, sans-serif" size="2">Hour 
+              00 - 11</font></td>
+            <td><font face="Verdana, Arial, Helvetica, sans-serif" size="2">hh 
+              left-pads with 0 (ex. 08)</font></td>
+          </tr>
+          <tr valign="top"> 
+            <td><font face="Verdana, Arial, Helvetica, sans-serif" size="2">{Time.AmPm}</font></td>
+            <td><font face="Verdana, Arial, Helvetica, sans-serif" size="2">Am 
+              or Pm, depending on actual time</font></td>
+            <td><font face="Verdana, Arial, Helvetica, sans-serif" size="2">tt 
+              (ex. Am)</font></td>
+          </tr>
+          <tr valign="top"> 
+            <td><font face="Verdana, Arial, Helvetica, sans-serif" size="2">{Time.Minute}</font></td>
+            <td><font face="Verdana, Arial, Helvetica, sans-serif" size="2">Current 
+              minute 0 - 59</font></td>
+            <td><font face="Verdana, Arial, Helvetica, sans-serif" size="2">m 
+              or mm (ex. 7)</font></td>
+          </tr>
+          <tr valign="top"> 
+            <td><font face="Verdana, Arial, Helvetica, sans-serif" size="2">{Time.Minute0}</font></td>
+            <td><font face="Verdana, Arial, Helvetica, sans-serif" size="2">Current 
+              minute 00 - 59</font></td>
+            <td><font face="Verdana, Arial, Helvetica, sans-serif" size="2">always 
+              mm left-pads with 0 (ex. 07)</font></td>
+          </tr>
+          <tr valign="top"> 
+            <td><font face="Verdana, Arial, Helvetica, sans-serif" size="2">{Time.Second}</font></td>
+            <td><font face="Verdana, Arial, Helvetica, sans-serif" size="2">Current 
+              second 0 - 59</font></td>
+            <td><font face="Verdana, Arial, Helvetica, sans-serif" size="2">s 
+              or ss (ex. 57)</font></td>
+          </tr>
+          <tr valign="top"> 
+            <td><font face="Verdana, Arial, Helvetica, sans-serif" size="2">{Time.Second0}</font></td>
+            <td><font face="Verdana, Arial, Helvetica, sans-serif" size="2">Current 
+              second 00 - 59</font></td>
+            <td><font face="Verdana, Arial, Helvetica, sans-serif" size="2">Ss 
+              left-pads with 0 (ex. 57)</font></td>
+          </tr>
+          <tr valign="top"> 
+            <td><font face="Verdana, Arial, Helvetica, sans-serif" size="2">{Time.Canonic}</font></td>
+            <td><font face="Verdana, Arial, Helvetica, sans-serif" size="2">A 
+              date in the format:<br>
+              YYYYMMDDHHMMSS </font></td>
+            <td> <div align="left"><font face="Verdana, Arial, Helvetica, sans-serif" size="2">-</font></div></td>
+          </tr>
+        </table>
+        <p>&nbsp;<br>
+          <font face="Verdana, Arial, Helvetica, sans-serif" size="3">&nbsp;<br>
+          <strong>Random Values:</strong></font></p>
+        <table BORDER cellspacing=0 cellpadding=4 cols=3 width="94%" >
+          <tr valign="top" bgcolor="#000000"> 
+            <td width="39%"><font color="#FFFFFF" size="2" face="Verdana, Arial, Helvetica, sans-serif"><b>Variable</b></font></td>
+            <td width="44%"><font color="#FFFFFF" size="2" face="Verdana, Arial, Helvetica, sans-serif"><b>Description</b></font></td>
+            <td width="17%"><font color="#FFFFFF" size="2" face="Verdana, Arial, Helvetica, sans-serif"><b>Formatting</b></font></td>
+          </tr>
+          <tr valign="top"> 
+            <td><font face="Verdana, Arial, Helvetica, sans-serif" size="2">{Random.New<i><font color="#0000CC">N</font></i>}</font></td>
+            <td><font face="Verdana, Arial, Helvetica, sans-serif" size="2">Generates 
+              a new random number each time it's used. The number has <i><font color="#0000CC">N</font></i> 
+              digits up to a maximum of 6 digits.&nbsp;</font></td>
+            <td><font face="Verdana, Arial, Helvetica, sans-serif" size="2"><i><font color="#0000CC">N</font></i> 
+              digits</font></td>
+          </tr>
+          <tr valign="top"> 
+            <td><font face="Verdana, Arial, Helvetica, sans-serif" size="2">{Random.Same<i><font color="#0000CC">N</font></i>}</font></td>
+            <td><font face="Verdana, Arial, Helvetica, sans-serif" size="2">Generates 
+              a random number that's unique across the whole movie (but different 
+              for each movie). The number has <i><font color="#0000CC">N</font></i> 
+              digits up to a maximum of 6 digits.</font></td>
+            <td><font face="Verdana, Arial, Helvetica, sans-serif" size="2"><i><font color="#0000CC">N</font></i> 
+              digits</font></td>
+          </tr>
+          <tr valign="top"> 
+            <td><font face="Verdana, Arial, Helvetica, sans-serif" size="2">{Random.New<i><font color="#0000CC">N<font color="#CC0000">[min..max]</font></font></i>}</font></td>
+            <td><font face="Verdana, Arial, Helvetica, sans-serif" size="2">Generates 
+              a new random number, between <font color="#CC0000">min</font> and 
+              <font color="#CC0000">max</font>. The number is formatted to <i><font color="#0000CC">N</font></i> 
+              digits (up to a maximum of 6 digits).&nbsp;</font></td>
+            <td><font face="Verdana, Arial, Helvetica, sans-serif" size="2"><i><font color="#0000CC">N</font></i> 
+              digits</font></td>
+          </tr>
+          <tr valign="top"> 
+            <td><font face="Verdana, Arial, Helvetica, sans-serif" size="2">{Random.Same<i><font color="#0000CC">N</font><font color="#CC0000">[min..max]</font></i>}</font></td>
+            <td><font face="Verdana, Arial, Helvetica, sans-serif" size="2">Generates 
+              a random number that's unique across the whole movie (but different 
+              for each movie), between <font color="#CC0000">min</font> and <font color="#CC0000">max</font>. 
+              The number is formatted to <i><font color="#0000CC">N</font></i> 
+              digits (up to a maximum of 6 digits).&nbsp;</font></td>
+            <td><font face="Verdana, Arial, Helvetica, sans-serif" size="2"><i><font color="#0000CC">N</font></i> 
+              digits</font></td>
+          </tr>
+          <tr valign="top"> 
+            <td><font face="Verdana, Arial, Helvetica, sans-serif" size="2">{Random.NewColor} 
+              and<br>
+              {Random.NewColorAlpha} </font></td>
+            <td><font face="Verdana, Arial, Helvetica, sans-serif" size="2">Generates 
+              a new random color in HTML style with the format RRGGBB or AARRGGBB</font></td>
+            <td> <div align="center"><font face="Verdana, Arial, Helvetica, sans-serif" size="2"><i>-</i></font></div></td>
+          </tr>
+          <tr valign="top"> 
+            <td><font face="Verdana, Arial, Helvetica, sans-serif" size="2">{Random.SameColor} 
+              and<br>
+              {Random.SameColorAlpha} </font></td>
+            <td> <p><font face="Verdana, Arial, Helvetica, sans-serif" size="2">Generates 
+                a random color in HTML style with the format RRGGBB or AARRGGBB<br>
+                This color is unique across the whole movie (but different for 
+                each movie).</font></p></td>
+            <td> <div align="center"><font face="Verdana, Arial, Helvetica, sans-serif" size="2">-</font></div></td>
+          </tr>
+        </table>
+        <p>&nbsp;<br>
+        </p>
+        </TD>
+    </TR>
+    <TR valign="top"> 
+      <TD COLSPAN="2" height="6"> 
+        <table border=0 cols=2 width="560" cellpadding="0" cellspacing="0" >
+          <tr> 
+            <td width="443" height="25"><font face="Verdana, Arial, Helvetica, sans-serif" size="3"><a href="manual.htm">Table 
+              of Contents</a></font></td>
+            <td width="117" height="25"> 
+              <div align="center"><font face="Verdana, Arial, Helvetica, sans-serif" size="3"> 
+                </font></div>
+            </td>
+          </tr>
+        </table>
+      </TD>
+    </TR>
+  </TABLE>
+</CENTER>
+<CENTER>
+  <p> <font face="Verdana, Arial, Helvetica, sans-serif" size="1"><i>&nbsp;<br>
+    </i></font><font face="Verdana, Arial, Helvetica, sans-serif" size="1"><i>Flash 
+    and Macromedia Flash are trademarks of Macromedia, Inc.</i></font>
+</CENTER>
+</BODY>
+</HTML>

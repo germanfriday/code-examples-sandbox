@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<images>
+    <pic>
+        <image>http://www.kirupa.com/developer/mx2004/pg/kresge.jpg</image>
+        <caption>Kresge</caption>
+    </pic>
+    <pic>
+        <image>http://www.kirupa.com/developer/mx2004/pg/medialab.jpg</image>
+        <caption>Media Lab</caption>
+    </pic>
+    <pic>
+        <image>http://www.kirupa.com/developer/mx2004/pg/stata.jpg</image>
+        <caption>Stata Center</caption>
+    </pic>
+    <pic>
+        <image>http://www.kirupa.com/developer/mx2004/pg/stata_lobby.jpg</image>
+        <caption>Stata Lobby</caption>
+    </pic>
+    <pic>
+        <image>http://www.kirupa.com/developer/mx2004/pg/construction.jpg</image>
+        <caption>Construction</caption>
+    </pic>
+    <pic>
+        <image>http://www.kirupa.com/developer/mx2004/pg/dome.jpg</image>
+        <caption>The Dome</caption>
+    </pic>
+    <pic>
+        <image>http://www.kirupa.com/developer/mx2004/pg/structure.jpg</image>
+        <caption>Structure</caption>
+    </pic>
+</images>

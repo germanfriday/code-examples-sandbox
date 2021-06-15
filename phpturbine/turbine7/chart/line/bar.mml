@@ -1,0 +1,90 @@
+<BaseDepth depth="1000"/>
+<Shape pos="0,0">
+  <LineStyle width="3" color="{_barcolor}"/>
+  <moveTo pos="{_barX},{=_barY-_barheight0}"/>
+  <lineTo path="{=_barX+_barWidth},{=_barY-_barheight1}"/>
+</shape>
+
+
+<BaseDepth depth="3000"/>
+<button pos="{_barX},{_barY}">
+  <State type="hit">
+    <BaseDepth depth="0"/>
+    <Shape pos="0,0">
+      <FillColor side="right" color="#ffaaaa"/>
+      <LineClear/>
+      <lineTo path="0,{=-_barheight0}"/>
+      <lineTo path="{_barWidth},{=-_barheight1}"/>
+      <LineClear/>
+      <lineTo path="{_barWidth},0"/>
+    </shape>
+  </State>
+
+  <State type="over, down">
+    <BaseDepth depth="0"/>
+    <Shape alpha="40" pos="0,0">
+      <LineStyle width="7" color="#ffffff"/>
+      <moveTo pos="0,{=-_barheight0}"/>
+      <lineTo path="{_barWidth},{=-_barheight1}"/>
+    </shape>
+
+    <Text
+      size="{_defaultFontHeight}"
+      flags="base"
+      color="#222222"
+      _align="left"
+      _width="{=_barwidth-10}"
+      pos="0,{=-_barheight0}">{_barValue}</Text>
+
+    <basedepth depth="2000">
+    <if test="{=_barheight0 > _barheight1}">
+      
+      <Text
+        background="color(#aaffff), border(#000000,1),space(3)"
+        flags="base"
+        size="{=_defaultFontHeight*0.75}"
+        color="#000000" 
+        Pos="4,{=-_barheight0-4-_defaultFontHeight}">{_barTooltip}</Text>
+    <else/>
+      
+      <Text
+        background="color(#aaffff), border(#000000,1),space(3)"
+        flags="base"
+        size="{=_defaultFontHeight*0.75}"
+        color="#000000" 
+        Pos="4,{=-_barheight1-4-_defaultFontHeight}">{_barTooltip}</Text>
+    </if>
+    
+  </State>
+
+
+  <if notEmpty="{_barURL}">
+    <Script event="press" type="source">
+    getUrl("{_barURL}");
+    </Script>
+  </if>
+
+  <Audio
+          src="~/chart/bip.mp3"
+          event="RollOver"/>
+
+</button>
+
+
+
+<BaseDepth depth="2000"/>
+<Text
+  size="{_defaultFontHeight}"
+  flags="base"
+  color="#222222"
+  _align="left"
+  _width="{=_barwidth-10}"
+  pos="{=_barX},{=_barY-_barheight0}">{_barValue}</Text>
+
+<Text
+  size="{_defaultFontHeight}"
+  flags="base"
+  color="#000000"
+  _align="center"
+  _width="{=_barwidth-10}"
+  pos="{=_barX},{=_barY+_defaultFontHeight}">{_barLabel}</Text>

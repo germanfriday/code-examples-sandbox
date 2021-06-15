@@ -1,0 +1,46 @@
+Description
+--------------------------------------
+Show directory path with user definable: "Homepage Naming", "Symbol Separators", "Case Formatting", "Show Filename", "Hide File Extension", "Special Formatting", "Use Images", "Directory Aliasing", "Filename Aliasing", "Link If Index", "Use CSS Styles", "Replace Directory Underscores", "Hide Directory from Breadcrumb", "Link Filename", "Frameset Target", "Remove current directory link", Works with personal sites that use ~ in the URL
+
+
+ChangeLog
+--------------------------------------
+2.4.1
+  Add "unlinkCurrentDir" variable that removes the current directory link
+  Now works with personal websites that have the username in the URL. 
+    http://www.domain.com/~username/
+  Bug fixed if you set homepage to '' and were at root it would show the spacer
+    symbol, now it just outputs the filename.<br />
+  Bug fixed where when removing a directory, it also removed the directory from 
+    other directory links.
+--------------------------------------
+2.4
+  Add "linkFile" variable that links the filename to itself.
+  Add "target" variable targets a frameset
+  Change the changeFileName() function so that it takes the full server path to
+    the file instead of just the filename.  This allows you to rename specific
+    files, instead of all files with the same name.
+  Fix bug when hideFileExt and changeFileName were used together, it would break
+    changeFileName
+--------------------------------------
+2.3.7
+  Add removeDirs() function that allows you to remove a directory (keep it from
+    showing) from the breadcrumb.
+  Add "hideFileExt" variable that hides the files extension
+  Add changeFileName() that aliases filenames to a name the user specifies
+  When using dirformat() of type 'ucwords' or 'titlecase', it will automatically
+    set '_toSpace' to true.
+  When using hideFileExt it will automatically set 'showfile' to true.
+  Fix bug that css was not showing up on the filename.
+--------------------------------------
+2.3
+  Example of how to use images as the crumb separator.
+  Use a css class to control the look of your breadcrumbs.
+  Convert underscores in your directory name to spaces.
+  A new Title Case formatting for those that are familiar with Title Case
+    (use with underscore conversion)
+  Uppercase Words formatting
+    (use with underscore conversion)
+  Update a couple variables for use with php 4.3.3
+--------------------------------------
+

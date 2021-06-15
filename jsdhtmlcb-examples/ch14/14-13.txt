@@ -1,0 +1,34 @@
+// Seek nested NN4 layer from string name
+function seekLayer(doc, name) {
+    var theObj;
+    for (var i = 0; i < doc.layers.length; i++) {
+        if (doc.layers[i].name == name) {
+            theObj = doc.layers[i];
+            break;
+        }
+        // dive into nested layers if necessary
+        if (doc.layers[i].document.layers.length > 0) {
+            theObj = seekLayer(document.layers[i].document, name);
+        }
+    }
+    return theObj;
+}
+
+// Convert object name string or object reference
+// into a valid element object reference
+function getRawObject(obj) {
+    var theObj;
+    if (typeof obj == "string") {
+        if (isW3C) {
+            theObj = document.getElementById(obj);
+        } else if (isIE4) {
+            theObj = document.all(obj);
+        } else if (isNN4) {
+            theObj = seekLayer(document, obj);
+        }
+    } else {
+        // pass through object reference
+        theObj = obj;
+    }
+    return theObj;
+}

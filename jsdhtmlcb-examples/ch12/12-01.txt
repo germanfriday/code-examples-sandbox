@@ -1,0 +1,14 @@
+if (document.images) {
+    var imagesNormal = new Object();
+    imagesNormal["home"] = new Image(20, 50);
+    imagesNormal["home"].src = "img/homeNormal.jpg";
+    imagesNormal["products"] = new Image(20, 50);
+    imagesNormal["products"].src  = "img/prodNormal.jpg";
+    ...
+    var imagesHilite = new Object();
+    imagesHilite["home"] = new Image(20, 50);
+    imagesHilite["home"].src = "img/homeHilite.jpg";
+    imagesHilite["products"] = new Image(20, 50);
+    imagesHilite["products"].src  = "img/prodHilite.jpg";
+    ...
+}

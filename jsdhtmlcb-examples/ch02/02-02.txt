@@ -1,0 +1,12 @@
+if (typeof someVal == "number") {
+    // OK, operate on the value numerically
+}
+
+----------
+
+var myVal = parseInt(document.myForm.myAge.value);
+if (isNaN(myVal)) {
+    alert("Please check the Age text box entry.");
+} else {
+    // OK, operate on the value numerically
+}

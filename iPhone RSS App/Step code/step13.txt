@@ -1,0 +1,1 @@
+// in NewsItem.h //@interface NewsItem : NSObject {	NSString * title;	NSString * description;	NSURL * link;}@property (retain) NSString * title;@property (retain) NSString * description;@property (retain) NSURL * link;@end

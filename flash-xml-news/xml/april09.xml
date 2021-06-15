@@ -1,0 +1,264 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<newsList>
+
+<newsItem id = "9">
+		<type>FULL</type>
+		<day>27</day>
+		<month>April</month>
+		<title><![CDATA[<i><font color="#EA3A44">HTML</font> Formatted</i> Title goes here.]]></title>
+		<image>images/1.jpg</image>
+		<author><![CDATA[AUTHOR: FlashJunkie (<i>HTML Text</i>)]]></author>
+		<link>http://flashden.net/user/flashjunkie</link>
+		<preview><![CDATA[This is the <b>HTML</b> <i>Formatted</i> preview text for the post, its defined seperatly from the main post. The read more button for this post opens the full post.]]></preview>
+		<body><![CDATA[This field is driven by <b>XML</b> and is <i>HTML</i> formatted, allowing you to use flash compatible <i>html tags</i> to format your text.
+
+Change <font size="22">font size</font> and you can also change <font color="#EA3A44"> font colour</font> or make text <b>bold</b> <i>italic</i> or <u>underlined</u>.
+
+You can also make any combination of the above like so... 
+
+<font size="22" color="#EA3A44"><b>Bold</b>, <i>Italic</i> and <u>underlined</u> larger text in a red colour</font>
+
+<a target="_blank" href="http://www.flashden.net/user/flashjunkie"><u>This text links to flashden.</u></a>
+
+<img src="images/fj.png" ></img><br><br><li>Embed images using img tags.</li><li>Align the image.</li><img align="right" src="images/fj.png"></img></a><p align="right"><br><br><br><br><li>This image is aligned to the right.</li></p><br>
+
+<font size="22"><u>Here is a larger passage of text, just to show you how the scroller works...</u></font>
+
+Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer adipiscing felis sed metus. Vivamus pretium venenatis libero. Ut sit amet ligula at dolor congue ullamcorper. Sed sodales, urna sit amet eleifend auctor, arcu est lobortis lorem, quis cursus odio nibh vitae quam. Duis orci ligula, volutpat id, rutrum et, fringilla et, dui. Praesent nibh ante, consequat ac, molestie non, fermentum quis, dui. Cras erat. Nam vestibulum pretium ipsum. Sed sollicitudin congue massa. Sed eleifend velit at tortor. Aenean libero.
+
+Aenean blandit suscipit metus. Suspendisse non ipsum non massa congue vehicula. Curabitur sed ipsum vel ligula scelerisque posuere. Aenean eros velit, dictum non, ultricies nec, interdum quis, risus. Phasellus ac est. Quisque bibendum. In facilisis. Vestibulum tincidunt. Morbi sapien. Nulla nunc velit, auctor in, faucibus non, condimentum quis, risus. Nullam tempus eleifend augue. Sed metus mauris, tincidunt eu, auctor quis, congue ac, purus. In nisi lorem, fermentum at, auctor sed, placerat vitae, libero. Proin felis urna, tempor at, tincidunt aliquam, euismod id, felis. Fusce tellus felis, faucibus et, bibendum sed, luctus nec, ligula. Nulla pretium, sapien ac iaculis condimentum, tortor elit consectetur erat, ac ullamcorper orci enim non nisi. Curabitur ac felis. Pellentesque dignissim, arcu id malesuada suscipit, orci est semper odio, id semper lacus nunc non felis.]]></body>
+		<linkBtnName>FlashDen.net</linkBtnName>
+</newsItem>
+
+<newsItem id = "8">
+		<type>FULL</type>
+		<day>25</day>
+		<month>April</month>
+		<title><![CDATA[<i><font color="#EA3A44">HTML</font> Formatted</i> Title goes here.]]></title>
+		<image>images/2.jpg</image>
+		<author><![CDATA[AUTHOR: FlashJunkie (<i>HTML Text</i>)]]></author>
+		<link>http://flashden.net/user/flashjunkie</link>
+		<preview><![CDATA[This is the <b>HTML</b> <i>Formatted</i> preview text for the post, its defined seperatly from the main post. The read more button for this post opens the full post.]]></preview>
+		<body><![CDATA[This field is driven by <b>XML</b> and is <i>HTML</i> formatted, allowing you to use flash compatible <i>html tags</i> to format your text.
+
+Change <font size="22">font size</font> and you can also change <font color="#EA3A44"> font colour</font> or make text <b>bold</b> <i>italic</i> or <u>underlined</u>.
+
+You can also make any combination of the above like so... 
+
+<font size="22" color="#EA3A44"><b>Bold</b>, <i>Italic</i> and <u>underlined</u> larger text in a red colour</font>
+
+<a target="_blank" href="http://www.flashden.net/user/flashjunkie"><u>This text links to flashden.</u></a>
+
+<img src="images/fj.png" ></img><br><br><li>Embed images using img tags.</li><li>Align the image.</li><img align="right" src="images/fj.png"></img></a><p align="right"><br><br><br><br><li>This image is aligned to the right.</li></p><br>
+
+<font size="22"><u>Here is a larger passage of text, just to show you how the scroller works...</u></font>
+
+Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer adipiscing felis sed metus. Vivamus pretium venenatis libero. Ut sit amet ligula at dolor congue ullamcorper. Sed sodales, urna sit amet eleifend auctor, arcu est lobortis lorem, quis cursus odio nibh vitae quam. Duis orci ligula, volutpat id, rutrum et, fringilla et, dui. Praesent nibh ante, consequat ac, molestie non, fermentum quis, dui. Cras erat. Nam vestibulum pretium ipsum. Sed sollicitudin congue massa. Sed eleifend velit at tortor. Aenean libero.
+
+Aenean blandit suscipit metus. Suspendisse non ipsum non massa congue vehicula. Curabitur sed ipsum vel ligula scelerisque posuere. Aenean eros velit, dictum non, ultricies nec, interdum quis, risus. Phasellus ac est. Quisque bibendum. In facilisis. Vestibulum tincidunt. Morbi sapien. Nulla nunc velit, auctor in, faucibus non, condimentum quis, risus. Nullam tempus eleifend augue. Sed metus mauris, tincidunt eu, auctor quis, congue ac, purus. In nisi lorem, fermentum at, auctor sed, placerat vitae, libero. Proin felis urna, tempor at, tincidunt aliquam, euismod id, felis. Fusce tellus felis, faucibus et, bibendum sed, luctus nec, ligula. Nulla pretium, sapien ac iaculis condimentum, tortor elit consectetur erat, ac ullamcorper orci enim non nisi. Curabitur ac felis. Pellentesque dignissim, arcu id malesuada suscipit, orci est semper odio, id semper lacus nunc non felis.]]></body>
+		<linkBtnName>FlashDen.net</linkBtnName>
+</newsItem>
+
+<newsItem id = "7">
+		<type>FULL</type>
+		<day>25</day>
+		<month>April</month>
+		<title><![CDATA[<i><font color="#EA3A44">HTML</font> Formatted</i> Title goes here.]]></title>
+		<image>images/3.jpg</image>
+		<author><![CDATA[AUTHOR: FlashJunkie (<i>HTML Text</i>)]]></author>
+		<link>http://flashden.net/user/flashjunkie</link>
+		<preview><![CDATA[This is the <b>HTML</b> <i>Formatted</i> preview text for the post, its defined seperatly from the main post. The read more button for this post opens the full post.]]></preview>
+		<body><![CDATA[This field is driven by <b>XML</b> and is <i>HTML</i> formatted, allowing you to use flash compatible <i>html tags</i> to format your text.
+
+Change <font size="22">font size</font> and you can also change <font color="#EA3A44"> font colour</font> or make text <b>bold</b> <i>italic</i> or <u>underlined</u>.
+
+You can also make any combination of the above like so... 
+
+<font size="22" color="#EA3A44"><b>Bold</b>, <i>Italic</i> and <u>underlined</u> larger text in a red colour</font>
+
+<a target="_blank" href="http://www.flashden.net/user/flashjunkie"><u>This text links to flashden.</u></a>
+
+<img src="images/fj.png" ></img><br><br><li>Embed images using img tags.</li><li>Align the image.</li><img align="right" src="images/fj.png"></img></a><p align="right"><br><br><br><br><li>This image is aligned to the right.</li></p><br>
+
+<font size="22"><u>Here is a larger passage of text, just to show you how the scroller works...</u></font>
+
+Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer adipiscing felis sed metus. Vivamus pretium venenatis libero. Ut sit amet ligula at dolor congue ullamcorper. Sed sodales, urna sit amet eleifend auctor, arcu est lobortis lorem, quis cursus odio nibh vitae quam. Duis orci ligula, volutpat id, rutrum et, fringilla et, dui. Praesent nibh ante, consequat ac, molestie non, fermentum quis, dui. Cras erat. Nam vestibulum pretium ipsum. Sed sollicitudin congue massa. Sed eleifend velit at tortor. Aenean libero.
+
+Aenean blandit suscipit metus. Suspendisse non ipsum non massa congue vehicula. Curabitur sed ipsum vel ligula scelerisque posuere. Aenean eros velit, dictum non, ultricies nec, interdum quis, risus. Phasellus ac est. Quisque bibendum. In facilisis. Vestibulum tincidunt. Morbi sapien. Nulla nunc velit, auctor in, faucibus non, condimentum quis, risus. Nullam tempus eleifend augue. Sed metus mauris, tincidunt eu, auctor quis, congue ac, purus. In nisi lorem, fermentum at, auctor sed, placerat vitae, libero. Proin felis urna, tempor at, tincidunt aliquam, euismod id, felis. Fusce tellus felis, faucibus et, bibendum sed, luctus nec, ligula. Nulla pretium, sapien ac iaculis condimentum, tortor elit consectetur erat, ac ullamcorper orci enim non nisi. Curabitur ac felis. Pellentesque dignissim, arcu id malesuada suscipit, orci est semper odio, id semper lacus nunc non felis.]]></body>
+		<linkBtnName>FlashDen.net</linkBtnName>
+</newsItem>
+
+<newsItem id = "6">
+		<type>FULL</type>
+		<day>23</day>
+		<month>April</month>
+		<title><![CDATA[<i><font color="#EA3A44">HTML</font> Formatted</i> Title goes here.]]></title>
+		<image>images/4.jpg</image>
+		<author><![CDATA[AUTHOR: FlashJunkie (<i>HTML Text</i>)]]></author>
+		<link>http://flashden.net/user/flashjunkie</link>
+		<preview><![CDATA[This is the <b>HTML</b> <i>Formatted</i> preview text for the post, its defined seperatly from the main post. The read more button for this post opens the full post.]]></preview>
+		<body><![CDATA[This field is driven by <b>XML</b> and is <i>HTML</i> formatted, allowing you to use flash compatible <i>html tags</i> to format your text.
+
+Change <font size="22">font size</font> and you can also change <font color="#EA3A44"> font colour</font> or make text <b>bold</b> <i>italic</i> or <u>underlined</u>.
+
+You can also make any combination of the above like so... 
+
+<font size="22" color="#EA3A44"><b>Bold</b>, <i>Italic</i> and <u>underlined</u> larger text in a red colour</font>
+
+<a target="_blank" href="http://www.flashden.net/user/flashjunkie"><u>This text links to flashden.</u></a>
+
+<img src="images/fj.png" ></img><br><br><li>Embed images using img tags.</li><li>Align the image.</li><img align="right" src="images/fj.png"></img></a><p align="right"><br><br><br><br><li>This image is aligned to the right.</li></p><br>
+
+<font size="22"><u>Here is a larger passage of text, just to show you how the scroller works...</u></font>
+
+Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer adipiscing felis sed metus. Vivamus pretium venenatis libero. Ut sit amet ligula at dolor congue ullamcorper. Sed sodales, urna sit amet eleifend auctor, arcu est lobortis lorem, quis cursus odio nibh vitae quam. Duis orci ligula, volutpat id, rutrum et, fringilla et, dui. Praesent nibh ante, consequat ac, molestie non, fermentum quis, dui. Cras erat. Nam vestibulum pretium ipsum. Sed sollicitudin congue massa. Sed eleifend velit at tortor. Aenean libero.
+
+Aenean blandit suscipit metus. Suspendisse non ipsum non massa congue vehicula. Curabitur sed ipsum vel ligula scelerisque posuere. Aenean eros velit, dictum non, ultricies nec, interdum quis, risus. Phasellus ac est. Quisque bibendum. In facilisis. Vestibulum tincidunt. Morbi sapien. Nulla nunc velit, auctor in, faucibus non, condimentum quis, risus. Nullam tempus eleifend augue. Sed metus mauris, tincidunt eu, auctor quis, congue ac, purus. In nisi lorem, fermentum at, auctor sed, placerat vitae, libero. Proin felis urna, tempor at, tincidunt aliquam, euismod id, felis. Fusce tellus felis, faucibus et, bibendum sed, luctus nec, ligula. Nulla pretium, sapien ac iaculis condimentum, tortor elit consectetur erat, ac ullamcorper orci enim non nisi. Curabitur ac felis. Pellentesque dignissim, arcu id malesuada suscipit, orci est semper odio, id semper lacus nunc non felis.]]></body>
+		<linkBtnName>FlashDen.net</linkBtnName>
+</newsItem>
+
+<newsItem id = "5">
+		<type>FULL</type>
+		<day>21</day>
+		<month>April</month>
+		<title><![CDATA[<i><font color="#EA3A44">HTML</font> Formatted</i> Title goes here.]]></title>
+		<image>images/5.jpg</image>
+		<author><![CDATA[AUTHOR: FlashJunkie (<i>HTML Text</i>)]]></author>
+		<link>http://flashden.net/user/flashjunkie</link>
+		<preview><![CDATA[This is the <b>HTML</b> <i>Formatted</i> preview text for the post, its defined seperatly from the main post. The read more button for this post opens the full post.]]></preview>
+		<body><![CDATA[This field is driven by <b>XML</b> and is <i>HTML</i> formatted, allowing you to use flash compatible <i>html tags</i> to format your text.
+
+Change <font size="22">font size</font> and you can also change <font color="#EA3A44"> font colour</font> or make text <b>bold</b> <i>italic</i> or <u>underlined</u>.
+
+You can also make any combination of the above like so... 
+
+<font size="22" color="#EA3A44"><b>Bold</b>, <i>Italic</i> and <u>underlined</u> larger text in a red colour</font>
+
+<a target="_blank" href="http://www.flashden.net/user/flashjunkie"><u>This text links to flashden.</u></a>
+
+<img src="images/fj.png" ></img><br><br><li>Embed images using img tags.</li><li>Align the image.</li><img align="right" src="images/fj.png"></img></a><p align="right"><br><br><br><br><li>This image is aligned to the right.</li></p><br>
+
+<font size="22"><u>Here is a larger passage of text, just to show you how the scroller works...</u></font>
+
+Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer adipiscing felis sed metus. Vivamus pretium venenatis libero. Ut sit amet ligula at dolor congue ullamcorper. Sed sodales, urna sit amet eleifend auctor, arcu est lobortis lorem, quis cursus odio nibh vitae quam. Duis orci ligula, volutpat id, rutrum et, fringilla et, dui. Praesent nibh ante, consequat ac, molestie non, fermentum quis, dui. Cras erat. Nam vestibulum pretium ipsum. Sed sollicitudin congue massa. Sed eleifend velit at tortor. Aenean libero.
+
+Aenean blandit suscipit metus. Suspendisse non ipsum non massa congue vehicula. Curabitur sed ipsum vel ligula scelerisque posuere. Aenean eros velit, dictum non, ultricies nec, interdum quis, risus. Phasellus ac est. Quisque bibendum. In facilisis. Vestibulum tincidunt. Morbi sapien. Nulla nunc velit, auctor in, faucibus non, condimentum quis, risus. Nullam tempus eleifend augue. Sed metus mauris, tincidunt eu, auctor quis, congue ac, purus. In nisi lorem, fermentum at, auctor sed, placerat vitae, libero. Proin felis urna, tempor at, tincidunt aliquam, euismod id, felis. Fusce tellus felis, faucibus et, bibendum sed, luctus nec, ligula. Nulla pretium, sapien ac iaculis condimentum, tortor elit consectetur erat, ac ullamcorper orci enim non nisi. Curabitur ac felis. Pellentesque dignissim, arcu id malesuada suscipit, orci est semper odio, id semper lacus nunc non felis.]]></body>
+		<linkBtnName>FlashDen.net</linkBtnName>
+</newsItem>
+
+<newsItem id = "4">
+		<type>FULL</type>
+		<day>17</day>
+		<month>April</month>
+		<title><![CDATA[<i><font color="#EA3A44">HTML</font> Formatted</i> Title goes here.]]></title>
+		<image>images/6.jpg</image>
+		<author><![CDATA[AUTHOR: FlashJunkie (<i>HTML Text</i>)]]></author>
+		<link>http://flashden.net/user/flashjunkie</link>
+		<preview><![CDATA[This is the <b>HTML</b> <i>Formatted</i> preview text for the post, its defined seperatly from the main post. The read more button for this post opens the full post.]]></preview>
+		<body><![CDATA[This field is driven by <b>XML</b> and is <i>HTML</i> formatted, allowing you to use flash compatible <i>html tags</i> to format your text.
+
+Change <font size="22">font size</font> and you can also change <font color="#EA3A44"> font colour</font> or make text <b>bold</b> <i>italic</i> or <u>underlined</u>.
+
+You can also make any combination of the above like so... 
+
+<font size="22" color="#EA3A44"><b>Bold</b>, <i>Italic</i> and <u>underlined</u> larger text in a red colour</font>
+
+<a target="_blank" href="http://www.flashden.net/user/flashjunkie"><u>This text links to flashden.</u></a>
+
+<img src="images/fj.png" ></img><br><br><li>Embed images using img tags.</li><li>Align the image.</li><img align="right" src="images/fj.png"></img></a><p align="right"><br><br><br><br><li>This image is aligned to the right.</li></p><br>
+
+<font size="22"><u>Here is a larger passage of text, just to show you how the scroller works...</u></font>
+
+Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer adipiscing felis sed metus. Vivamus pretium venenatis libero. Ut sit amet ligula at dolor congue ullamcorper. Sed sodales, urna sit amet eleifend auctor, arcu est lobortis lorem, quis cursus odio nibh vitae quam. Duis orci ligula, volutpat id, rutrum et, fringilla et, dui. Praesent nibh ante, consequat ac, molestie non, fermentum quis, dui. Cras erat. Nam vestibulum pretium ipsum. Sed sollicitudin congue massa. Sed eleifend velit at tortor. Aenean libero.
+
+Aenean blandit suscipit metus. Suspendisse non ipsum non massa congue vehicula. Curabitur sed ipsum vel ligula scelerisque posuere. Aenean eros velit, dictum non, ultricies nec, interdum quis, risus. Phasellus ac est. Quisque bibendum. In facilisis. Vestibulum tincidunt. Morbi sapien. Nulla nunc velit, auctor in, faucibus non, condimentum quis, risus. Nullam tempus eleifend augue. Sed metus mauris, tincidunt eu, auctor quis, congue ac, purus. In nisi lorem, fermentum at, auctor sed, placerat vitae, libero. Proin felis urna, tempor at, tincidunt aliquam, euismod id, felis. Fusce tellus felis, faucibus et, bibendum sed, luctus nec, ligula. Nulla pretium, sapien ac iaculis condimentum, tortor elit consectetur erat, ac ullamcorper orci enim non nisi. Curabitur ac felis. Pellentesque dignissim, arcu id malesuada suscipit, orci est semper odio, id semper lacus nunc non felis.]]></body>
+		<linkBtnName>FlashDen.net</linkBtnName>
+</newsItem>
+
+<newsItem id = "3">
+		<type>FULL</type>
+		<day>15</day>
+		<month>April</month>
+		<title><![CDATA[<i><font color="#EA3A44">HTML</font> Formatted</i> Title goes here.]]></title>
+		<image>images/7.jpg</image>
+		<author><![CDATA[AUTHOR: FlashJunkie (<i>HTML Text</i>)]]></author>
+		<link>http://flashden.net/user/flashjunkie</link>
+		<preview><![CDATA[This is the <b>HTML</b> <i>Formatted</i> preview text for the post, its defined seperatly from the main post. The read more button for this post opens the full post.]]></preview>
+		<body><![CDATA[This field is driven by <b>XML</b> and is <i>HTML</i> formatted, allowing you to use flash compatible <i>html tags</i> to format your text.
+
+Change <font size="22">font size</font> and you can also change <font color="#EA3A44"> font colour</font> or make text <b>bold</b> <i>italic</i> or <u>underlined</u>.
+
+You can also make any combination of the above like so... 
+
+<font size="22" color="#EA3A44"><b>Bold</b>, <i>Italic</i> and <u>underlined</u> larger text in a red colour</font>
+
+<a target="_blank" href="http://www.flashden.net/user/flashjunkie"><u>This text links to flashden.</u></a>
+
+<img src="images/fj.png" ></img><br><br><li>Embed images using img tags.</li><li>Align the image.</li><img align="right" src="images/fj.png"></img></a><p align="right"><br><br><br><br><li>This image is aligned to the right.</li></p><br>
+
+<font size="22"><u>Here is a larger passage of text, just to show you how the scroller works...</u></font>
+
+Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer adipiscing felis sed metus. Vivamus pretium venenatis libero. Ut sit amet ligula at dolor congue ullamcorper. Sed sodales, urna sit amet eleifend auctor, arcu est lobortis lorem, quis cursus odio nibh vitae quam. Duis orci ligula, volutpat id, rutrum et, fringilla et, dui. Praesent nibh ante, consequat ac, molestie non, fermentum quis, dui. Cras erat. Nam vestibulum pretium ipsum. Sed sollicitudin congue massa. Sed eleifend velit at tortor. Aenean libero.
+
+Aenean blandit suscipit metus. Suspendisse non ipsum non massa congue vehicula. Curabitur sed ipsum vel ligula scelerisque posuere. Aenean eros velit, dictum non, ultricies nec, interdum quis, risus. Phasellus ac est. Quisque bibendum. In facilisis. Vestibulum tincidunt. Morbi sapien. Nulla nunc velit, auctor in, faucibus non, condimentum quis, risus. Nullam tempus eleifend augue. Sed metus mauris, tincidunt eu, auctor quis, congue ac, purus. In nisi lorem, fermentum at, auctor sed, placerat vitae, libero. Proin felis urna, tempor at, tincidunt aliquam, euismod id, felis. Fusce tellus felis, faucibus et, bibendum sed, luctus nec, ligula. Nulla pretium, sapien ac iaculis condimentum, tortor elit consectetur erat, ac ullamcorper orci enim non nisi. Curabitur ac felis. Pellentesque dignissim, arcu id malesuada suscipit, orci est semper odio, id semper lacus nunc non felis.]]></body>
+		<linkBtnName>FlashDen.net</linkBtnName>
+</newsItem>
+
+<newsItem id = "2">
+		<type>FULL</type>
+		<day>12</day>
+		<month>April</month>
+		<title><![CDATA[<i><font color="#EA3A44">HTML</font> Formatted</i> Title goes here.]]></title>
+		<image>images/8.jpg</image>
+		<author><![CDATA[AUTHOR: FlashJunkie (<i>HTML Text</i>)]]></author>
+		<link>http://flashden.net/user/flashjunkie</link>
+		<preview><![CDATA[This is the <b>HTML</b> <i>Formatted</i> preview text for the post, its defined seperatly from the main post. The read more button for this post opens the full post.]]></preview>
+		<body><![CDATA[This field is driven by <b>XML</b> and is <i>HTML</i> formatted, allowing you to use flash compatible <i>html tags</i> to format your text.
+
+Change <font size="22">font size</font> and you can also change <font color="#EA3A44"> font colour</font> or make text <b>bold</b> <i>italic</i> or <u>underlined</u>.
+
+You can also make any combination of the above like so... 
+
+<font size="22" color="#EA3A44"><b>Bold</b>, <i>Italic</i> and <u>underlined</u> larger text in a red colour</font>
+
+<a target="_blank" href="http://www.flashden.net/user/flashjunkie"><u>This text links to flashden.</u></a>
+
+<img src="images/fj.png" ></img><br><br><li>Embed images using img tags.</li><li>Align the image.</li><img align="right" src="images/fj.png"></img></a><p align="right"><br><br><br><br><li>This image is aligned to the right.</li></p><br>
+
+<font size="22"><u>Here is a larger passage of text, just to show you how the scroller works...</u></font>
+
+Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer adipiscing felis sed metus. Vivamus pretium venenatis libero. Ut sit amet ligula at dolor congue ullamcorper. Sed sodales, urna sit amet eleifend auctor, arcu est lobortis lorem, quis cursus odio nibh vitae quam. Duis orci ligula, volutpat id, rutrum et, fringilla et, dui. Praesent nibh ante, consequat ac, molestie non, fermentum quis, dui. Cras erat. Nam vestibulum pretium ipsum. Sed sollicitudin congue massa. Sed eleifend velit at tortor. Aenean libero.
+
+Aenean blandit suscipit metus. Suspendisse non ipsum non massa congue vehicula. Curabitur sed ipsum vel ligula scelerisque posuere. Aenean eros velit, dictum non, ultricies nec, interdum quis, risus. Phasellus ac est. Quisque bibendum. In facilisis. Vestibulum tincidunt. Morbi sapien. Nulla nunc velit, auctor in, faucibus non, condimentum quis, risus. Nullam tempus eleifend augue. Sed metus mauris, tincidunt eu, auctor quis, congue ac, purus. In nisi lorem, fermentum at, auctor sed, placerat vitae, libero. Proin felis urna, tempor at, tincidunt aliquam, euismod id, felis. Fusce tellus felis, faucibus et, bibendum sed, luctus nec, ligula. Nulla pretium, sapien ac iaculis condimentum, tortor elit consectetur erat, ac ullamcorper orci enim non nisi. Curabitur ac felis. Pellentesque dignissim, arcu id malesuada suscipit, orci est semper odio, id semper lacus nunc non felis.]]></body>
+		<linkBtnName>FlashDen.net</linkBtnName>
+</newsItem>
+
+<newsItem id = "1">
+		<type>FULL</type>
+		<day>3</day>
+		<month>April</month>
+		<title><![CDATA[<i><font color="#EA3A44">HTML</font> Formatted</i> Title goes here.]]></title>
+		<image>images/9.jpg</image>
+		<author><![CDATA[AUTHOR: FlashJunkie (<i>HTML Text</i>)]]></author>
+		<link>http://flashden.net/user/flashjunkie</link>
+		<preview><![CDATA[This is the <b>HTML</b> <i>Formatted</i> preview text for the post, its defined seperatly from the main post. The read more button for this post opens the full post.]]></preview>
+		<body><![CDATA[This field is driven by <b>XML</b> and is <i>HTML</i> formatted, allowing you to use flash compatible <i>html tags</i> to format your text.
+
+Change <font size="22">font size</font> and you can also change <font color="#EA3A44"> font colour</font> or make text <b>bold</b> <i>italic</i> or <u>underlined</u>.
+
+You can also make any combination of the above like so... 
+
+<font size="22" color="#EA3A44"><b>Bold</b>, <i>Italic</i> and <u>underlined</u> larger text in a red colour</font>
+
+<a target="_blank" href="http://www.flashden.net/user/flashjunkie"><u>This text links to flashden.</u></a>
+
+<img src="images/fj.png" ></img><br><br><li>Embed images using img tags.</li><li>Align the image.</li><img align="right" src="images/fj.png"></img></a><p align="right"><br><br><br><br><li>This image is aligned to the right.</li></p><br>
+
+<font size="22"><u>Here is a larger passage of text, just to show you how the scroller works...</u></font>
+
+Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer adipiscing felis sed metus. Vivamus pretium venenatis libero. Ut sit amet ligula at dolor congue ullamcorper. Sed sodales, urna sit amet eleifend auctor, arcu est lobortis lorem, quis cursus odio nibh vitae quam. Duis orci ligula, volutpat id, rutrum et, fringilla et, dui. Praesent nibh ante, consequat ac, molestie non, fermentum quis, dui. Cras erat. Nam vestibulum pretium ipsum. Sed sollicitudin congue massa. Sed eleifend velit at tortor. Aenean libero.
+
+Aenean blandit suscipit metus. Suspendisse non ipsum non massa congue vehicula. Curabitur sed ipsum vel ligula scelerisque posuere. Aenean eros velit, dictum non, ultricies nec, interdum quis, risus. Phasellus ac est. Quisque bibendum. In facilisis. Vestibulum tincidunt. Morbi sapien. Nulla nunc velit, auctor in, faucibus non, condimentum quis, risus. Nullam tempus eleifend augue. Sed metus mauris, tincidunt eu, auctor quis, congue ac, purus. In nisi lorem, fermentum at, auctor sed, placerat vitae, libero. Proin felis urna, tempor at, tincidunt aliquam, euismod id, felis. Fusce tellus felis, faucibus et, bibendum sed, luctus nec, ligula. Nulla pretium, sapien ac iaculis condimentum, tortor elit consectetur erat, ac ullamcorper orci enim non nisi. Curabitur ac felis. Pellentesque dignissim, arcu id malesuada suscipit, orci est semper odio, id semper lacus nunc non felis.]]></body>
+		<linkBtnName>FlashDen.net</linkBtnName>
+</newsItem>
+</newsList>

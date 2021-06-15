@@ -1,0 +1,16 @@
+MANIFEST
+zope.app.intid/__init__.py
+zope.app.intid/configure.zcml
+zope.app.intid/DEPENDENCIES.cfg
+zope.app.intid/ftests.py
+zope.app.intid/interfaces.py
+zope.app.intid/SETUP.cfg
+zope.app.intid/tests.py
+zope.app.intid/zope.app.intid-configure.zcml
+zope.app.intid/browser/__init__.py
+zope.app.intid/browser/configure.zcml
+zope.app.intid/browser/ftests.py
+zope.app.intid/browser/registrations.pt
+zope.app.intid/browser/tracking.txt
+setup.py
+setup.cfg

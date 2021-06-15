@@ -1,0 +1,41 @@
+function rollover(imgName, imgSrc) {
+    if (document.images) {
+        document.images[imgName].src = imgSrc;
+    }
+}
+
+
+<a href="product.html" 
+    onmouseover="rollover('products', 'images/products_on.gif'); return false" 
+    onmouseout="rollover('products', 'images/products_off.gif'); return false">
+<img src="images/products_off.gif" border=0 alt="Products Page"></a>
+
+----------
+
+function getImgAreas() {
+    var result;
+    // make sure browser supports img element objects
+    if (document.images) {
+        // initialize return value so we can add to it
+        result = 0;
+        // loop through all img objects on the page
+        for (var i = 0; i < document.images.length; i++) {
+            // accumulate image areas
+            result += (document.images[i].width * document.images[i].height);
+        }
+    }
+    // returned value is either a number or null
+    return result;
+}
+function reportImageArea() {
+    // grab result so we can verify it
+    var imgArea = getImgAreas();
+    var output;
+    if (imgArea == null) {
+        // message for browsers not supporting img object
+        output = "Unknown";
+    } else {
+        output = imgArea;
+    }
+    document.reportForm.imgData.value = output;
+}

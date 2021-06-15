@@ -1,0 +1,21 @@
+HTML {
+	FONT-SIZE: 13px; FONT-FAMILY: "Lucida Grande", Verdana, Arial, sans-serif
+}
+#heading {
+	DISPLAY: block; MARGIN-BOTTOM: 1em; TEXT-ALIGN: center
+}
+#heading * {
+	PADDING-RIGHT: 4px; DISPLAY: inline; PADDING-LEFT: 4px; PADDING-BOTTOM: 4px; VERTICAL-ALIGN: middle; CURSOR: pointer; PADDING-TOP: 4px; user-select: none
+}
+#heading LI.active {
+	BACKGROUND-COLOR: #66ccff; border-radius: 3px; -webkit-border-radius: 3px; -opera-border-radius: 3px; -moz-border-radius: 3px
+}
+#panes {
+	MARGIN: 0px auto; WIDTH: 245px; BORDER-TOP-STYLE: none; BORDER-RIGHT-STYLE: none; BORDER-LEFT-STYLE: none; TEXT-ALIGN: justify; BORDER-BOTTOM-STYLE: none
+}
+#previous {
+	FLOAT: none; CURSOR: pointer
+}
+#next {
+	FLOAT: none; CURSOR: pointer
+}

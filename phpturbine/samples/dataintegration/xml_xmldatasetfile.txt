@@ -1,0 +1,29 @@
+<book>
+
+ <name>Gone with the rain</name>
+ <author>Arabian Bruce Lawrence</author>
+ <price>$39</price>
+
+ <chapter>
+   <title id="1">First Launch</title>
+   <pages>45</pages>
+   <interesting>90%</interesting>
+   <topics>Love, hate & video</topics>
+ </chapter>
+
+ <chapter_not_valid>
+   <title id="1">what?</title>
+   <pages>45</pages>
+   <interesting>90%</interesting>
+   <topics>Love, hate & adventure</topics>
+ </chapter_not_valid>
+
+ <chapter>
+   <title id="2">Second Launch</title>
+   <pages>71</pages>
+   <interesting>30%</interesting>
+   <topics>Sex, Love & Hate</topics>
+ </chapter>
+
+</book>
+

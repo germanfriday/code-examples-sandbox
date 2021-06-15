@@ -1,0 +1,134 @@
+<!doctype html public "-//w3c//dtd html 4.0 transitional//en">
+<html>
+<head>
+   <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+   <meta name="GENERATOR" content="Mozilla/4.51 [en] (Win95; I) [Netscape]">
+   <title>Caching Media</title>
+</head>
+<BODY topmargin="0" leftmargin="0" rightmargin="0" marginwidth="0" marginheight="0" TEXT="#000000" BGCOLOR="#FFFFFF" LINK="#003366" VLINK="#FF9900" ALINK="#FF6600">
+<center>
+  <table width="100%" border="0" cellspacing="0" cellpadding="0" align="center">
+    <tr bgcolor="#000033"> 
+      <td background="../common/bar_left.gif" width="50%">&nbsp;</td>
+      <td> 
+        <table width="560" border="0" cellspacing="0" cellpadding="0">
+          <tr> 
+            <td width="334"><img src="../common/bar_left.gif" width="334" height="28"></td>
+            <td><img src="../common/bar_central.gif" width="110" height="28"></td>
+            <td><img src="../common/bar_logo.gif" width="116" height="28"></td>
+          </tr>
+        </table>
+      </td>
+      <td background="../common/1x1_azul_esc.gif" width="50%">&nbsp;</td>
+    </tr>
+    <tr bgcolor="#FFFFFF" height="4"> 
+      <td colspan="3"></td>
+    </tr>
+  </table>
+  <table width="560" border="0" cellspacing="0" cellpadding="0">
+    <tr valign="top"> 
+      <td height="39"> 
+        <table width="560" border="0" cellspacing="0" cellpadding="0">
+          <tr> 
+            <td width="443" height="25"><font face="Verdana, Arial, Helvetica, sans-serif" size="3"><a href="../default.htm">Samples 
+              Menu</a></font></td>
+            <td width="117" height="25"> 
+              <div align="center"><font face="Verdana, Arial, Helvetica, sans-serif" size="3"><a href="../dataintegration/default.htm">Next 
+                Sample</a> </font></div>
+            </td>
+          </tr>
+        </table>
+      </td>
+    </tr>
+    <tr valign="top" align="center"> 
+      <td height="715"> <p align="center"><font face="Arial" size="6">Media Caching<font size="1"><b><br>
+          (Flash MX/5)</b></font></font> 
+        <p align="center">&nbsp;
+        <p align="left"><font face="Verdana, Arial, Helvetica, sans-serif" size="2">Sometimes 
+          the operations involved in generating a Flash movie can impose heavy 
+          loads on the web server, database servers or other back-office servers. 
+          <br>
+          In most situations the integrated data does not change frequently - 
+          obvious examples are in the news industry (for example a daily news 
+          site generated from a database only needs to access it once a day, as 
+          all the requests for the same day will be equal), weather maps, distribution 
+          maps (with update periods of 3 hours for example), product descriptions 
+          (say for example, updated only weekly at most) and many others. On other 
+          scenarios, movie generation might not even be possible in real-time 
+          - for example when doing video encoding of larger videos. </font>
+        <p align="left"><font size="2" face="Verdana, Arial, Helvetica, sans-serif">Turbine 
+          allows for the caching of heavy movies during a certain period of time 
+          - during this period requested movies will be served straight out of 
+          the cache, without any other data-access or movie generation effort.<br>
+          The movie below will take a few seconds to appear when first requested 
+          - but will display very quick within 1 minute thereafter (from the cache):</font> 
+        <p align="left">
+          <object classid="clsid:D27CDB6E-AE6D-11cf-96B8-444553540000" codebase="http://download.macromedia.com/pub/shockwave/cabs/flash/swflash.cab#version=6,0,29,0" width="550" height="450">
+            <param name="movie" value="cache.php">
+            <param name="quality" value="high">
+            <embed src="cache.php" quality="high" pluginspage="http://www.macromedia.com/go/getflashplayer" type="application/x-shockwave-flash" width="550" height="450"></embed></object>
+        <p align="left"><font size="2" face="Verdana, Arial, Helvetica, sans-serif">To 
+          handle the above described scenarios, Turbine includes powerful caching 
+          capabilities - during the period specified, movies will be served straight 
+          out of a server cache, requiring zero generation or data access effort.</font>
+        <p align="left"><font size="2" face="Verdana, Arial, Helvetica, sans-serif">The 
+          script used for the above movie is:</font> 
+        <table width="100%" border="0" cellspacing="12" cellpadding="0" bgcolor="#FFFFCC">
+          <tr> 
+            <td valign="top"> 
+              <p><font size="2" face="Courier New, Courier, mono">&lt;?<br>
+                <font color="#009900"># create the turbine object:</font><br>
+                $turbine = new Turbine7();</font></p>
+              <p><font color="#009900" size="2" face="Courier New, Courier, mono"># 
+                browsers should not cache this request:</font><font size="2" face="Courier New, Courier, mono"><br>
+                header (&quot;Expires: Sat, 01 Jan 2000 01:01:01 GMT&quot;);</font></p>
+              <p><font color="#009900" size="2" face="Courier New, Courier, mono"># 
+                cache for 1 minute from now, if there was one at the cache serve 
+                and exit:<br>
+                </font><font color="#0000CC" size="2" face="Courier New, Courier, mono">$turbine-&gt;cache(&quot;++100&quot;, 
+                &quot;flash&quot;);</font></p>
+              <p><font color="#009900" size="2" face="Courier New, Courier, mono"># 
+                sleep for a while, just to take some time, in case it was not 
+                served from the cache:<br>
+                </font><font size="2" face="Courier New, Courier, mono">sleep(4);</font></p>
+              <p><font color="#009900" size="2" face="Courier New, Courier, mono"># 
+                load cache.swf to serve as template:</font><font size="2" face="Courier New, Courier, mono"><br>
+                $turbine-&gt;load(&quot;cache.swf&quot;);</font></p>
+              <p><font color="#009900" size="2" face="Courier New, Courier, mono"># 
+                now generate the movie to the web browser:</font><font size="2" face="Courier New, Courier, mono"><br>
+                $turbine-&gt;generate(&quot;flash&quot;);</font></p>
+              <p><font size="2" face="Courier New, Courier, mono">?&gt;</font></p>
+              </td>
+          </tr>
+        </table>
+        <p align="left"><font size="2" face="Verdana, Arial, Helvetica, sans-serif">The 
+          only difference on this script, in respecto to a normal script is the 
+          <font color="#0000CC"><br>
+          $turbine-&gt;cache</font> call, which requests that the generated movie 
+          be cached for 1:00 minute after the initial request.</font> 
+        <p align="left">&nbsp;<br>
+          &nbsp; <br>
+        
+        </td>
+    </tr>
+    <tr valign="bottom"> 
+      <td height="64"> 
+        <hr width="100%" size="1" noshade>
+        <table width="560" border="0" cellspacing="0" cellpadding="0">
+          <tr> 
+            <td width="443" height="25"><font face="Verdana, Arial, Helvetica, sans-serif" size="3"><a href="../default.htm">Samples 
+              Menu</a></font></td>
+            <td width="117" height="25"> 
+              <div align="center"><font face="Verdana, Arial, Helvetica, sans-serif" size="3"><a href="../dataintegration/default.htm">Next 
+                Sample</a> </font></div>
+            </td>
+          </tr>
+        </table>
+        <div align="center"><font face="Arial, Helvetica, sans-serif" size="1"><i>&nbsp;<br>
+          Flash is a registered trademark of Macromedia, Inc.</i></font> </div>
+      </td>
+    </tr>
+  </table>
+        </center>
+</body>
+</html>

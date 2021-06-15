@@ -1,0 +1,19 @@
+function getNNVersionNumber() {
+    if (navigator.appName == "Netscape") {
+        var appVer = parseFloat(navigator.appVersion);
+        if (appVer < 5) {
+            return appVer;
+        } else {
+            if (typeof navigator.vendorSub != "undefined") {
+                return parseFloat(navigator.vendorSub);
+            }
+        }
+    }
+    return 0;
+}
+
+var isNN6Min = getNNVersionNumber() >= 6;
+
+if (isNN6Min) {
+    // perform statements for NN 6 or later
+}

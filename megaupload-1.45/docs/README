@@ -1,0 +1,36 @@
+MEGAUPLOAD
+----------
+
+As with many open source projects the documentation hasn't kept pace
+with the development. You will find that the docs on the projects' 
+website at http://www.raditha.com/megaupload/ will be usually more 
+upto date than what is included in the download.
+
+You are encouraged to read through the message board if you find any
+trouble installing or configuring megaupload. Chances are you will find
+that someone else has already encountered the same problem and posted 
+a fix.
+
+If you are having trouble with large file uploads you might find the 
+following article useful: http://www.radinks.com/upload/config.php 
+You might also want to read through these posts as well
+
+https://sourceforge.net/forum/forum.php?thread_id=1005072&forum_id=300744
+https://sourceforge.net/forum/forum.php?thread_id=964091&forum_id=300743
+
+
+If you are having trouble with your sessions you might find the post at
+https://sourceforge.net/forum/forum.php?thread_id=994196&forum_id=300744
+interesting.
+
+You will also find that the contrib folder contains a variation that 
+passes cookie data between the perl and php scripts.
+
+And don't forget to look at the webserver error log file before you post
+your question.
+
+Finally something that I should have said long ago:
+The author of megaupload assumes that you are familiar with the PHP 
+language and it's configuration settings. Please refer to the manual
+at http://www.php.net/
+

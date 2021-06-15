@@ -1,0 +1,113 @@
+PHP Turbine 7 for Linux Installation
+==============================================================================
+This is the manual installation of PHP Turbine 7, to install in
+a more "automatic" way, please run install.sh or open docs/install.htm.
+
+To install manually please follow these steps:
+
+1) Locate your php.ini file and the PHP extensions directory (normally inside 
+your PHP installation directory). This information is needed because we'll add 
+a php_turbine entry to php.ini and then copy the turbine runtime into inside 
+the PHP extensions directory. It's also necessary that you learn which PHP 
+engine version is running on your machine.
+
+
+2) Copy the turbine runtime (inside the turbine7/ directory) into the 
+extensions directory - assuming php_root/ is the path to your PHP 
+installation, in PHP 4 you'll simply need to do:
+cp -r turbine7/ php_root/extensions/
+
+While in PHP 5, you should copy to inside the PHP installation directory itself:
+cp -r turbine7/ php_root/
+
+
+3) Next we'll add the PHP Turbine 7 extension entry to the php.ini file. 
+Depending on your PHP engine version, you'll need to add a specific 
+PHP Turbine module from this list:
+===========================================
+PHP Engine Version   -> PHP Turbine Module:
+===========================================
+5.0.0 to 5.0.2       -> php_turbine7_5.0.0.so
+5.0.0zts to 5.0.2zts -> php_turbine7_5.0.0zts.so
+4.3.0 to 4.3.9       -> php_turbine7_4.3.0.so
+4.3.0zts to 4.3.9zts -> php_turbine7_4.3.0zts.so
+4.2.3                -> php_turbine7_4.2.1.so
+4.2.3zts             -> php_turbine7_4.2.3zts.so
+4.2.1                -> php_turbine7_4.2.1.so
+4.2.2                -> php_turbine7_4.2.1.so
+4.1.0 to 4.2.0       -> php_turbine7_4.1.0.so
+4.0.6 and 4.0.5      -> php_turbine7_4.0.5.so
+4.0.4                -> php_turbine7_4.0.4.so
+
+Choose a PHP engine version entry with the "zts" suffix if your PHP engine is 
+compiled with thread safety enabled. For example PHP compiled as an Apache 2.0
+module usually has thread safety enabled, but PHP for Apache 1.3.* does not.
+The PHP engine running as a CGI-Bin does not have thread safety enabled.
+
+If your PHP engine version is not in this list, try using the last available 
+PHP Turbine module, the topmost entry in the above list. If the module doesn't 
+work, please contact support@blue-pacific.com .
+
+After choosing the right PHP Turbine module, add the following lines to php.ini:
+; PHP Turbine 7 settings
+extension=turbine7/*module*
+; PHP Turbine 7 end of settings
+
+Where *module* should be substituted by the appropriate module from the 
+above list. For example if we were adding Turbine to PHP 5.0.0, the following 
+lines would be used (the table says PHP Version 5.0.0 -> php_turbine7_5.0.0.so):
+; PHP Turbine 7 settings
+extension=turbine7/php_turbine7_5.0.0.so
+; PHP Turbine 7 end of settings
+
+Please make sure your extension_dir entry is set to the absolute path of the 
+PHP extensions directory - in PHP 4 it should be pointing to (php_root is 
+the PHP installation dir):
+extension_dir = php_root/extensions
+
+However in PHP 5 the extension_dir should be pointing to the PHP installation 
+directory itself:
+extension_dir = php_root
+
+
+4) Since the web server user is usually 'nobody', we need to give permissions
+for Turbine logging, caching and charting - in PHP 4 please do the following:
+chmod o+rx  php_root/extensions/turbine7/*
+chmod o+rw  php_root/extensions/turbine7/turbine.log
+chmod o+rwx  php_root/extensions/turbine7/cache
+chmod -R o+rx  php_root/extensions/turbine7/chart
+chmod -R o+rx  php_root/extensions/turbine7/font
+
+While in PHP 5 do the following instead:
+chmod o+rx  php_root/turbine7/*
+chmod o+rw  php_root/turbine7/turbine.log
+chmod o+rwx  php_root/turbine7/cache
+chmod -R o+rx  php_root/turbine7/chart
+chmod -R o+rx  php_root/turbine7/font
+
+
+5) You now need to restart the web server. On Apache for example:
+apachectl restart
+
+
+6) To install the samples you need to make web-available the directory to
+where you've previously untared the installation file.
+So, suppose the directory was /that_path/phpturbine you could add the following 
+to the access.conf Apache configuration file:
+
+Alias /phpturbine /that_path/phpturbine
+<Directory /that_path/phpturbine>
+Options Indexes FollowSymLinks
+</Directory>
+
+
+7) To test if everything is fine, open up a web browser with the Flash plugin
+installed and request:
+ http://web_server_address/phpturbine/samples/helloworlds/default.htm
+
+Now type in some text and click submit - if a Flash movie containing your text
+appears everything should be working fine.
+You can check more info on Turbine plug-in by looking at the output
+of the phpinfo() command.
+
+Enjoy!

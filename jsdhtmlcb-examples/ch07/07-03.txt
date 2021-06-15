@@ -1,0 +1,15 @@
+function loadFrames(url1, url2) {
+    parent.otherFrameName.location.href = url1;
+    location.href = url2;
+    return false;
+}
+
+
+
+<a href="content12.html" target="content" onclick="return 
+loadFrames('content12.html', 'navbar12.html')">É</a>
+
+----------
+
+<a href="frameset12.html" target="_top" onclick="return 
+loadFrames('content12.html', 'navbar12.html')">É</a>

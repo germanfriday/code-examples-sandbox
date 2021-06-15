@@ -1,0 +1,5 @@
+<date, url, color, y>
+10-2, http://www.blue-pac.com, #ff00ff, 10
+11-2, http://www.flashkit.com, #ff0000, 30
+12-2, http://slashdot.org, #000000, 50
+13-2, http://www.e-sheep.com, #11ff00, 70

@@ -1,0 +1,6 @@
+<BaseDepth depth="4000"/>
+<Shape pos="0,0">
+  <LineStyle width="2" color="#000000"/>
+  <line path="0,{_frameHeight};0,0"/>
+  <line path="0,{_frameHeight};{_frameWidth},{_frameHeight}"/>
+</shape>

@@ -1,0 +1,424 @@
+<!doctype html public "-//w3c//dtd html 4.0 transitional//en">
+<html>
+<head>
+   <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+   <meta name="GENERATOR" content="Mozilla/4.51 [en] (Win95; I) [Netscape]">
+   <title>Components Sample</title>
+</head>
+<BODY topmargin="0" leftmargin="0" rightmargin="0" marginwidth="0" marginheight="0" TEXT="#000000" BGCOLOR="#FFFFFF" LINK="#003366" VLINK="#FF9900" ALINK="#FF6600">
+<center>
+  <table width="100%" border="0" cellspacing="0" cellpadding="0" align="center">
+    <tr bgcolor="#000033"> 
+      <td background="../common/bar_left.gif" width="50%">&nbsp;</td>
+      <td> 
+        <table width="560" border="0" cellspacing="0" cellpadding="0">
+          <tr> 
+            <td width="334"><img src="../common/bar_left.gif" width="334" height="28"></td>
+            <td><img src="../common/bar_central.gif" width="110" height="28"></td>
+            <td><img src="../common/bar_logo.gif" width="116" height="28"></td>
+          </tr>
+        </table>
+      </td>
+      <td background="../common/1x1_azul_esc.gif" width="50%">&nbsp;</td>
+    </tr>
+    <tr bgcolor="#FFFFFF" height="4"> 
+      <td colspan="3"></td>
+    </tr>
+  </table>
+  <table width="560" border="0" cellspacing="0" cellpadding="0">
+    <tr valign="top"> 
+      <td height="39"> 
+        <table width="600" border="0" cellspacing="0" cellpadding="0">
+          <tr> 
+            <td width="443" height="25"><font face="Verdana, Arial, Helvetica, sans-serif" size="3"><a href="../default.htm">Samples 
+              Menu</a></font></td>
+            <td width="157" height="25"> 
+              <div align="center"><font face="Verdana, Arial, Helvetica, sans-serif" size="3"><a href="../automovieclip/default.htm">Next 
+                Sample</a> </font></div>
+            </td>
+          </tr>
+        </table>
+      </td>
+    </tr>
+    <tr valign="top"> 
+      <td> 
+        <p align="center"><font face="Arial" size="6">Components 
+          Sample<font size="1"><b><br>
+          (Flash MX)<br>
+          &nbsp; </b></font></font></p>
+        <div> 
+          <p>&nbsp; 
+          <p><font face="Verdana, Arial, Helvetica, sans-serif" size="2"> With 
+            PHP Turbine 7 you can include components from other Flash movies and 
+            you can customize them at your own will. These examples demonstrate 
+            the basic concepts about placing components and how easy it is to 
+            inject external data to them.</font></p>
+          <p><font size="2" face="Verdana, Arial, Helvetica, sans-serif">These 
+            demos use standard components included with the Flash MX editor.</font></p>
+          <hr size="1" noshade>
+          <p><font size="5"><font face="Verdana, Arial, Helvetica, sans-serif">Placing 
+            a Component</font></font></p>
+          <p><font face="Verdana, Arial, Helvetica, sans-serif" size="2"> This 
+            example shows how to include a component located in a swf file.</font></p>
+          <table width="90%" border="1" cellpadding="0" cellspacing="0" bordercolor="#999999">
+            <tr> 
+              <td><table width="100%" border="0" cellpadding="16" cellspacing="0" bgcolor="#eeeef4">
+                  <tr> 
+                    <td valign="top"> <div align="left"> 
+                        <p> <font size="2" face="Courier New, Courier, mono">&lt;Include 
+                          src=&quot;flistboxsymbol.swf&quot;/&gt;</font></p>
+                        <p><font size="2" face="Courier New, Courier, mono">&lt;Place 
+                          component=&quot;ListBox&quot; pos=&quot;10,10&quot; 
+                          instance=&quot;lst&quot;/&gt;<br>
+                          &nbsp; </font></p>
+                      </div></td>
+                  </tr>
+                </table></td>
+            </tr>
+          </table>
+          <p><font face="Verdana, Arial, Helvetica, sans-serif" size="2">To accomplish 
+            the same results directly from the scripting interface, we could write 
+            (component1.php):</font></p>
+          <table width="100%" border="1" cellpadding="0" cellspacing="0" bordercolor="#CCCCCC">
+            <tr> 
+              <td><table width="100%" border="0" align="left" cellpadding="16" cellspacing="0" bgcolor="#FFFFCC">
+                  <tr> 
+                    <td valign="top"> <div align="left"> <font color="#009900" size="2" face="Courier New, Courier, mono"># 
+                        include the component definition file:</font><font size="2" face="Courier New, Courier, mono"><br>
+                        $turbine-&gt;include(&quot;flistboxsymbol.swf&quot;);<font face="Courier New, Courier, mono"><font face="Courier New, Courier, mono"> 
+                        <p> <font color="#009900"># place the component:</font><br>
+                          $turbine-&gt;create(&quot;&lt;Place component='ListBox' 
+                          pos='10,10' instance='lst'/&gt;&quot;);</p>
+                        </font></font></font>
+                        <p><font size="2" face="Courier New, Courier, mono"> <font color="#009900"># now 
+                          generate the movie to the web browser:</font><br>
+                          $turbine-&gt;generateFlash();<br>
+                          &nbsp; </font> </p>
+                      </div></td>
+                  </tr>
+                </table></td>
+            </tr>
+          </table>
+          <p><font face="Verdana, Arial, Helvetica, sans-serif" size="2">And the 
+            final result is:<br>
+            </font><font face="Verdana, Arial, Helvetica, sans-serif" size="2">&nbsp;<br>
+            <OBJECT classid="clsid:D27CDB6E-AE6D-11cf-96B8-444553540000" 
+        codebase="http://active.macromedia.com/flash2/cabs/swflash.cab#version=5,0,0,0"
+        ID="sw" WIDTH="600" HEIGHT="200">
+              <PARAM NAME="movie" VALUE="component1.php">
+              <PARAM NAME="quality" VALUE="best">
+              <PARAM NAME="bgcolor" VALUE="#ffffff">
+              <EMBED src="component1.php" 
+         quality="best" bgcolor="#ffffff" 
+         WIDTH="600" HEIGHT="200"	swLiveConnect="false"
+         TYPE="application/x-shockwave-flash" 
+         PLUGINSPAGE="http://www.macromedia.com/shockwave/download/index.cgi?P1_Prod_Version=ShockwaveFlash"> 
+              </EMBED> </OBJECT>
+        </div>
+        <div>
+<hr size="1" noshade>
+          <p><font size="5"><font face="Verdana, Arial, Helvetica, sans-serif">Passing 
+            Parameters to Components</font></font></p>
+          <p><font face="Verdana, Arial, Helvetica, sans-serif" size="2"> This 
+            example shows how to pass parameters to a component. Turbine automatically 
+            assumes defaults for any parameters that you don't define. On this 
+            particular example, we are going to pass some values to the component 
+            in the <em>labels</em> argument:</font></p>
+          <table width="90%" border="1" cellpadding="0" cellspacing="0" bordercolor="#999999">
+            <tr> 
+              <td><table width="100%" border="0" cellpadding="16" cellspacing="0" bgcolor="#eeeef4">
+                  <tr> 
+                    <td valign="top"> <div align="left"> 
+                        <p> <font size="2" face="Courier New, Courier, mono">&lt;Include 
+                          src=&quot;flistboxsymbol.swf&quot;/&gt;</font></p>
+                        <p><font size="2" face="Courier New, Courier, mono">&lt;Place 
+                          component=&quot;ListBox&quot; pos=&quot;10,10&quot; 
+                          instance=&quot;lst&quot;&gt;<br>
+                          &nbsp;&nbsp;&lt;Param name=&quot;labels&quot; value=&quot;['first', 
+                          'second', 'one more']&quot;/&gt;<br>
+                          &lt;/Place&gt;<br>
+                          &nbsp; </font></p>
+                      </div></td>
+                  </tr>
+                </table></td>
+            </tr>
+          </table>
+          <p><font face="Verdana, Arial, Helvetica, sans-serif" size="2">To accomplish 
+            the same results directly from the scripting interface, one could 
+            write (component2.php):</font></p>
+          <table width="100%" border="1" cellpadding="0" cellspacing="0" bordercolor="#CCCCCC">
+            <tr> 
+              <td><table width="100%" border="0" align="left" cellpadding="16" cellspacing="0" bgcolor="#FFFFCC">
+                  <tr> 
+                    <td valign="top"> <div align="left"> <font color="#009900" size="2" face="Courier New, Courier, mono"># 
+                        include the component definition file:</font><font size="2" face="Courier New, Courier, mono"><br>
+                        $turbine-&gt;include(&quot;flistboxsymbol.swf&quot;); 
+                        <font face="Courier New, Courier, mono"><font face="Courier New, Courier, mono">
+                        <p><font color="#009900"># place the component and pass 
+                          a value to the labels argument:</font><br>
+                          $turbine-&gt;create(&quot;&lt;Place component='ListBox' 
+                          pos='10,10' instance='lst'&gt;&lt;Param name='labels' 
+                          value=\&quot;['first', 'second', 'one more']\&quot;/&gt;&lt;/Place&gt;&quot;);</p>
+                        </font></font></font>
+                        <p><font size="2" face="Courier New, Courier, mono"> <font color="#009900"># 
+                          now generate the movie to the web browser:</font><br>
+                          $turbine-&gt;generateFlash();<br>
+                          &nbsp; </font> </p>
+                      </div></td>
+                  </tr>
+                </table></td>
+            </tr>
+          </table>
+          <p><font face="Verdana, Arial, Helvetica, sans-serif" size="2">And the 
+            final result is:</font></p>
+          <font face="Verdana, Arial, Helvetica, sans-serif" size="2"></font> 
+          <p><font face="Verdana, Arial, Helvetica, sans-serif" size="2">
+            <OBJECT classid="clsid:D27CDB6E-AE6D-11cf-96B8-444553540000" 
+        codebase="http://active.macromedia.com/flash2/cabs/swflash.cab#version=5,0,0,0" WIDTH="600" HEIGHT="200">
+              <PARAM NAME="movie" VALUE="component2.php">
+              <PARAM NAME="quality" VALUE="best">
+              <PARAM NAME="bgcolor" VALUE="#ffffff">
+              <EMBED src="component2.php" 
+         quality="best" bgcolor="#ffffff" 
+         WIDTH="600" HEIGHT="200"	swLiveConnect="false"
+         TYPE="application/x-shockwave-flash" 
+         PLUGINSPAGE="http://www.macromedia.com/shockwave/download/index.cgi?P1_Prod_Version=ShockwaveFlash"> 
+              </EMBED> </OBJECT>
+            </font></p>
+          <hr size="1" noshade>
+          <p><font size="5"><font face="Verdana, Arial, Helvetica, sans-serif">Injecting 
+            Data to Components</font></font></p>
+          <p><font size="2" face="Verdana, Arial, Helvetica, sans-serif">There 
+            are components that can accept data sources, for example DataProvider 
+            sources. For these components, Turbine supports a mechanism called 
+            data injection which makes it very easy to pass data to them, without 
+            any scripting effort. <br>
+            This particular example shows how to inject data to a common ListBox 
+            component:</font></p>
+          <table width="90%" border="1" cellpadding="0" cellspacing="0" bordercolor="#999999">
+            <tr> 
+              <td><table width="100%" border="0" cellpadding="16" cellspacing="0" bgcolor="#eeeef4">
+                  <tr> 
+                    <td valign="top"> <div align="left"> 
+                        <p> <font size="2" face="Courier New, Courier, mono">&lt;Include 
+                          src=&quot;flistboxsymbol.swf&quot;/&gt;</font></p>
+                        <p><font size="2" face="Courier New, Courier, mono">&lt;Place 
+                          component=&quot;ListBox&quot; pos=&quot;10,10&quot; 
+                          instance=&quot;lst&quot;/&gt;</font></p>
+                        <p><font size="2" face="Courier New, Courier, mono">&lt;DataSet 
+                          src=&quot;dataset.txt&quot; dataset=&quot;data&quot;, 
+                          rowTag=&quot;row&quot;, ColumnTags=&quot;value&quot;/&gt;</font></p>
+                        <p><font size="2" face="Courier New, Courier, mono">&lt;InjectData 
+                          dataset=&quot;data&quot; instance=&quot;lst&quot;/&gt;<br>
+                          &nbsp; </font></p>
+                      </div></td>
+                  </tr>
+                </table></td>
+            </tr>
+          </table>
+          <p><font face="Verdana, Arial, Helvetica, sans-serif" size="2">To accomplish 
+            the same results directly from the scripting interface, one could 
+            write (component3.php):</font></p>
+          <table width="95%" border="1" cellpadding="0" cellspacing="0" bordercolor="#CCCCCC">
+            <tr> 
+              <td><table width="100%" border="0" align="left" cellpadding="16" cellspacing="0" bgcolor="#FFFFCC">
+                  <tr> 
+                    <td valign="top"> <div align="left"> <font color="#009900" size="2" face="Courier New, Courier, mono"># 
+                        include the component definition file:</font><font size="2" face="Courier New, Courier, mono"><br>
+                        $turbine-&gt;include(&quot;flistboxsymbol.swf&quot;); 
+                        </font>
+                        <p><font color="#009900" size="2" face="Courier New, Courier, mono"># 
+                          place the component and pass a value to the labels argument:</font><font size="2" face="Courier New, Courier, mono"><br>
+                          $turbine-&gt;create(&quot;&lt;Place component='ListBox' 
+                          pos='10,10' instance='lst'/&gt;&quot;);</font></p>
+                        <p><font color="#009900" size="2" face="Courier New, Courier, mono"># 
+                          read a DataSet:</font><font size="2" face="Courier New, Courier, mono"><br>
+                          $turbine-&gt;loadDataSet(&quot;dataset.txt&quot;, &quot;data&quot;, 
+                          &quot;row&quot;, &quot;value&quot;);</font></p>
+                        <p><font color="#009900" size="2" face="Courier New, Courier, mono"># 
+                          pass the data to the component:</font><font size="2" face="Courier New, Courier, mono"><br>
+                          $turbine-&gt;injectData(&quot;data&quot;, &quot;lst&quot;);</font></p>
+                        <p><font color="#009900" size="2" face="Courier New, Courier, mono"># 
+                          now generate the movie to the web browser:</font><font size="2" face="Courier New, Courier, mono"><br>
+                          $turbine-&gt;generateFlash();<br>
+                          &nbsp;&nbsp;</font></p>
+                        </div></td>
+                  </tr>
+                </table></td>
+            </tr>
+          </table>
+          <p><font face="Verdana, Arial, Helvetica, sans-serif" size="2">The contents 
+            of the integrated XML file dataset.txt are:</font></p>
+          <table width="90%" border="1" cellpadding="0" cellspacing="0" bordercolor="#999999">
+            <tr> 
+              <td><table width="100%" border="0" cellpadding="16" cellspacing="0" bgcolor="#eeeef4">
+                  <tr> 
+                    <td valign="top"> <div align="left"> 
+                        <p> <font size="2" face="Courier New, Courier, mono">&lt;row&gt;<br>
+                          &nbsp;&nbsp;&lt;value&gt;orange&lt;/value&gt;<br>
+                          &lt;/row&gt;<br>
+                          &lt;row&gt;<br>
+                          &nbsp;&nbsp;&lt;value&gt;apple&lt;/value&gt;<br>
+                          &lt;/row&gt;<br>
+                          &lt;row&gt;<br>
+                          &nbsp;&nbsp;&lt;value&gt;banana&lt;/value&gt;<br>
+                          &lt;/row&gt;<br>
+                          &lt;row&gt;<br>
+                          &nbsp;&nbsp;&lt;value&gt;mango&lt;/value&gt;<br>
+                          &lt;/row&gt;<br>
+                          &lt;row&gt;<br>
+                          &nbsp;&nbsp;&lt;value&gt;strawberry&lt;/value&gt;<br>
+                          &lt;/row&gt;<br>
+                          &nbsp;&nbsp;&lt;row&gt;<br>
+                          &lt;value&gt;grape&lt;/value&gt;<br>
+                          &nbsp;&nbsp;&lt;/row&gt;<br>
+                          &lt;row&gt;<br>
+                          &nbsp;&nbsp;&lt;value&gt;pear&lt;/value&gt;<br>
+                          &lt;/row&gt;<br>
+                          &lt;row&gt;<br>
+                          &nbsp;&nbsp;&lt;value&gt;blueberry&lt;/value&gt;<br>
+                          &lt;/row&gt; <br>
+                          &nbsp; </font></p>
+                      </div></td>
+                  </tr>
+                </table></td>
+            </tr>
+          </table>
+          <p><font face="Verdana, Arial, Helvetica, sans-serif" size="2">And the 
+            final result is:</font></p>
+          <font face="Verdana, Arial, Helvetica, sans-serif" size="2"></font> 
+          <p><font face="Verdana, Arial, Helvetica, sans-serif" size="2"> 
+            <OBJECT classid="clsid:D27CDB6E-AE6D-11cf-96B8-444553540000" 
+        codebase="http://active.macromedia.com/flash2/cabs/swflash.cab#version=5,0,0,0"
+        ID="sw" WIDTH="600" HEIGHT="200">
+              <PARAM NAME="movie" VALUE="component3.php">
+              <PARAM NAME="quality" VALUE="best">
+              <PARAM NAME="bgcolor" VALUE="#ffffff">
+              <EMBED src="component3.php" 
+         quality="best" bgcolor="#ffffff" 
+         WIDTH="600" HEIGHT="200"	swLiveConnect="false"
+         TYPE="application/x-shockwave-flash" 
+         PLUGINSPAGE="http://www.macromedia.com/shockwave/download/index.cgi?P1_Prod_Version=ShockwaveFlash"> 
+              </EMBED> </OBJECT>
+            </font></p>
+          <hr size="1" noshade>
+          <p><font size="5"><font face="Verdana, Arial, Helvetica, sans-serif">Several 
+            Components Living Together</font></font></p>
+          <p><font face="Verdana, Arial, Helvetica, sans-serif" size="2"> This 
+            final example shows how to include several components in one single 
+            movie, coming from different locations.</font></p>
+          <p><font face="Verdana, Arial, Helvetica, sans-serif" size="2">The script 
+            (component4.php) that loads the components and populates them with 
+            data is:</font></p>
+          <table width="100%" border="1" cellpadding="0" cellspacing="0" bordercolor="#CCCCCC">
+            <tr> 
+              <td><table width="100%" border="0" align="left" cellpadding="16" cellspacing="0" bgcolor="#FFFFCC">
+                  <tr> 
+                    <td valign="top"> <div align="left"><font size="2" face="Courier New, Courier, mono">&lt;?<br>
+                        <font color="#009900"># create the turbine object:</font><br>
+                        $turbine = new Turbine7(); </font><font face="Courier New, Courier, mono">
+                        <p><font color="#009900" size="2" face="Courier New, Courier, mono"># 
+                          include the component definition files:</font><font size="2" face="Courier New, Courier, mono"><br>
+                          $turbine-&gt;include(&quot;flistboxsymbol.swf&quot;);<br>
+                          $turbine-&gt;include(&quot;checkbox.swf&quot;);<br>
+                          $turbine-&gt;include(&quot;combobox.swf&quot;);<br>
+                          $turbine-&gt;include(&quot;draggablepane.swf&quot;);<br>
+                          $turbine-&gt;include(&quot;ticker.swf&quot;);</font></p>
+                        <p><font color="#009900" size="2" face="Courier New, Courier, mono"># 
+                          read some data:</font><font size="2" face="Courier New, Courier, mono"><br>
+                          $turbine-&gt;loadDataSet(&quot;dataset.txt&quot;, &quot;data&quot;, 
+                          &quot;row&quot;, &quot;value&quot;);</font></p>
+                        <p><font color="#009900" size="2" face="Courier New, Courier, mono"># 
+                          place a Listbox:</font><font size="2" face="Courier New, Courier, mono"><br>
+                          $turbine-&gt;create(&quot;&lt;Text pos='10,30' size='10'&gt;First 
+                          instance of ListBox&lt;/Text&gt;&quot;);<br>
+                          $turbine-&gt;create(&quot;&lt;Place component='ListBox' 
+                          pos='10,50' instance='lst'/&gt;&quot;);</font></p>
+                        <p><font color="#009900" size="2" face="Courier New, Courier, mono"># 
+                          place another Listbox:</font><font size="2" face="Courier New, Courier, mono"><br>
+                          $turbine-&gt;create(&quot;&lt;Text pos='150,30' size='10'&gt;Second 
+                          instance of ListBox&lt;/Text&gt;&quot;);<br>
+                          $turbine-&gt;create(&quot;&lt;Place component='ListBox' 
+                          pos='150,50' instance='lst_veg'/&gt;&quot;);</font></p>
+                        <p><font color="#009900" size="2" face="Courier New, Courier, mono"># 
+                          fill it with data:</font><font size="2" face="Courier New, Courier, mono"><br>
+                          $turbine-&gt;injectData(&quot;data&quot;, &quot;lst_veg&quot;);</font></p>
+                        <p><font color="#009900" size="2" face="Courier New, Courier, mono"># 
+                          place a CheckBox:</font><font size="2" face="Courier New, Courier, mono"><br>
+                          $turbine-&gt;create(&quot;&lt;text pos='100,180' size='10'&gt;Instance 
+                          of CheckBox&lt;/Text&gt;&quot;);<br>
+                          $turbine-&gt;create(&quot;&lt;place component='CheckBox' 
+                          pos='10,180'/&gt;&quot;);</font></p>
+                        <p><font color="#009900" size="2" face="Courier New, Courier, mono"># 
+                          place a ComboBox and inject some data:</font><font size="2" face="Courier New, Courier, mono"><br>
+                          $turbine-&gt;create(&quot;&lt;Text pos='130,210' size='10'&gt;Instance 
+                          of ComboBox&lt;/Text&gt;&quot;);<br>
+                          $turbine-&gt;create(&quot;&lt;Place component='ComboBox' 
+                          pos='10,210' instance='combo'/&gt;&quot;);<br>
+                          $turbine-&gt;injectData(&quot;data&quot;, &quot;combo&quot;);</font></p>
+                        <p><font color="#009900" size="2" face="Courier New, Courier, mono"># 
+                          place a Ticker:</font><font size="2" face="Courier New, Courier, mono"><br>
+                          $turbine-&gt;create(&quot;&lt;Text pos='365,180' size='10'&gt;Instance 
+                          of Ticker&lt;/Text&gt;&quot;);<br>
+                          $turbine-&gt;create(&quot;&lt;Place component='Ticker' 
+                          pos='250,180' instance='tck'/&gt;&quot;);<br>
+                          $turbine-&gt;loadDataSet(&quot;dataset_ticker.txt&quot;, 
+                          &quot;data_ticker&quot;, &quot;row&quot;, &quot;text, 
+                          textColor, border, underline, bullet&quot;);<br>
+                          $turbine-&gt;injectData(&quot;data_ticker&quot;, &quot;tck&quot;);</font></p>
+                        <p><font color="#009900" size="2" face="Courier New, Courier, mono"># 
+                          place a DraggablePane:</font><font size="2" face="Courier New, Courier, mono"><br>
+                          $turbine-&gt;create(&quot;&lt;Place component='DraggablePane' 
+                          pos='290,30' size='240,118' alpha='70'&gt;&lt;Param 
+                          name='Pane Title' value='A Custom Title'/&gt;&lt;/Place&gt;&quot;);</font></p>
+                        <p><font color="#009900" size="2" face="Courier New, Courier, mono"># 
+                          now generate the movie to the web browser:</font><font size="2" face="Courier New, Courier, mono"><br>
+                          $turbine-&gt;generateFlash();</font></p>
+                        <p><font size="2" face="Courier New, Courier, mono">?&gt;</font></p>
+                      </font></div></td>
+                  </tr>
+                </table></td>
+            </tr>
+          </table>
+          <p><font face="Verdana, Arial, Helvetica, sans-serif" size="2">And the 
+            final result is:</font> </p>
+          <p><font face="Verdana, Arial, Helvetica, sans-serif" size="2"> 
+            <OBJECT classid="clsid:D27CDB6E-AE6D-11cf-96B8-444553540000" 
+        codebase="http://active.macromedia.com/flash2/cabs/swflash.cab#version=5,0,0,0"
+        ID="sw" WIDTH="600" HEIGHT="400">
+              <PARAM NAME="movie" VALUE="component4.php">
+              <PARAM NAME="quality" VALUE="best">
+              <PARAM NAME="bgcolor" VALUE="#ffffff">
+              <EMBED src="component4.php" 
+         quality="best" bgcolor="#ffffff" 
+         WIDTH="600" HEIGHT="400"	swLiveConnect="false"
+         TYPE="application/x-shockwave-flash" 
+         PLUGINSPAGE="http://www.macromedia.com/shockwave/download/index.cgi?P1_Prod_Version=ShockwaveFlash"> 
+              </EMBED> </OBJECT>
+            &nbsp;<br>
+            </font> </p>
+        </div>
+        
+      </td>
+    </tr>
+    <tr valign="bottom"> 
+      <td height="64"> 
+        <hr width="100%" size="1" noshade>
+        <table width="600" border="0" cellspacing="0" cellpadding="0">
+          <tr> 
+            <td width="443" height="25"><font face="Verdana, Arial, Helvetica, sans-serif" size="3"><a href="../default.htm">Samples 
+              Menu</a></font></td>
+            <td width="157" height="25"> 
+              <div align="center"><font face="Verdana, Arial, Helvetica, sans-serif" size="3"><a href="../automovieclip/default.htm">Next 
+                Sample</a> </font></div>
+            </td>
+          </tr>
+        </table>
+        <div align="center"><font face="Arial, Helvetica, sans-serif" size="1"><i>&nbsp;<br>
+          Flash is a trademark of Macromedia, Inc.</i></font> </div>
+      </td>
+    </tr>
+  </table>
+          </center>
+</body>
+</html>

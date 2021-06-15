@@ -1,0 +1,18 @@
+/* ---------- Reset Tags ----------- */
+@import url("css/reset.css");
+/* ---------- Reset Tags ----------- */
+@import url("css/prettyPhoto.css");
+/* ---------- Shortcodes ----------- */
+@import url("css/shortcodes.css");
+/* ---------- Site Styles ---------- */
+@import url("css/style.css");
+
+
+/* ---------- Skin Styles ---------- 
+@import url("css/skins/gray.css");
+@import url("css/skins/green.css");
+@import url("css/skins/pink.css");
+@import url("css/skins/red.css");
+*/
+
+@import url("css/skins/deep_ocean.css");

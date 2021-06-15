@@ -1,0 +1,43 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<!-- <?php echo date("n/d/y h:i" ,time()); ?> -->
+<html>
+<head>
+	<title>LevelTen Formmail Sample Form</title>
+	<script language="JavaScript" type="text/javascript">
+
+	function submitForm() {
+		if(document.theForm.realname.value.length < 1) {
+			alert("Please enter your name.");
+			document.theForm.realname.focus();
+			return;
+		} else if(document.theForm.email.value.length < 4) {
+			alert("Please enter a valid e-mail address.");
+			document.theForm.email.focus();
+			return;
+		}
+		document.theForm.submit();
+	}
+	</script>
+
+	<style>
+		td {font-family: arial,helvetica,sans-serif;}
+	</style>
+
+</head>
+<body>
+	<form name="theForm" action="L10FmX.php" METHOD="POST">
+		<input type="hidden" name="required" value="email,realname">
+
+		<table cellpadding="0" cellspacing="0" border="0" align=center>
+			<tr><td colspan=2 align=center><p><b>LevelTen Formmail Sample Form</b><p></td></tr>
+			<tr><td>Sender's E-Mail:*</td><td><input type="Text" name="email" size=30></td></tr>
+			<tr><td>Sender's Name:*</td><td><input type="Text" name="realname" size=30></td></tr>
+			<tr><td colspan=2>
+			Message:<br>
+			<textarea name=message cols=40 rows=10></textarea><p>
+			</td></tr>
+			<tr><td colspan=2 align=center><input type="Button" name="submitBtn" value="Test LevelTen Formmail" onClick="submitForm();"></td></tr>
+		</table>
+	</form>
+</body>
+</html>

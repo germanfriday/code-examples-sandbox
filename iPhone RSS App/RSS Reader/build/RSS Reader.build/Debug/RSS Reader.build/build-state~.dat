@@ -1,0 +1,92 @@
+TRSS Reader
+v7
+r1
+cCheck dependencies
+
+N/Users/chris/Sites/code_examples/iPhone RSS App/RSS Reader/Classes/WebVC.xib
+c000000004A8C783A0000000000001DED
+t1250719802
+s7661
+
+N/Users/chris/Sites/code_examples/iPhone RSS App/RSS Reader/Default.png
+c000000004A8B3A530000000000004DF8
+t1250638419
+s19960
+
+N/Users/chris/Sites/code_examples/iPhone RSS App/RSS Reader/MainWindow.xib
+c000000004A899A460000000000002C34
+t1250531910
+s11316
+
+N/Users/chris/Sites/code_examples/iPhone RSS App/RSS Reader/RootViewController.xib
+c000000004A8B3F780000000000001F96
+t1250639736
+s8086
+
+N/Users/chris/Sites/code_examples/iPhone RSS App/RSS Reader/build/Debug/RSS Reader.app
+t2
+s0
+
+N/Users/chris/Sites/code_examples/iPhone RSS App/RSS Reader/build/Debug/RSS Reader.app/Contents/Info.plist
+t2
+s0
+
+N/Users/chris/Sites/code_examples/iPhone RSS App/RSS Reader/build/Debug/RSS Reader.app/Contents/PkgInfo
+t2
+s0
+
+N/Users/chris/Sites/code_examples/iPhone RSS App/RSS Reader/build/Debug/RSS Reader.app/Contents/Resources/Default.png
+t2
+s0
+
+N/Users/chris/Sites/code_examples/iPhone RSS App/RSS Reader/build/Debug/RSS Reader.app/Contents/Resources/MainWindow.nib
+t2
+s0
+
+N/Users/chris/Sites/code_examples/iPhone RSS App/RSS Reader/build/Debug/RSS Reader.app/Contents/Resources/RootViewController.nib
+t2
+s0
+
+N/Users/chris/Sites/code_examples/iPhone RSS App/RSS Reader/build/Debug/RSS Reader.app/Contents/Resources/WebVC.nib
+t2
+s0
+
+N/Users/chris/Sites/code_examples/iPhone RSS App/RSS Reader/build/Debug/RSS Reader.app/Contents/Resources/rss.png
+t2
+s0
+
+N/Users/chris/Sites/code_examples/iPhone RSS App/RSS Reader/rss.png
+c000000004A8B3A220000000000000A25
+t1250638370
+s2597
+
+NRSS_Reader-Info.plist
+c000000004A89C67E0000000000000394
+t1250543230
+s916
+
+CCheck dependencies
+r0
+lSLF07#2@18"Check dependencies288559433#288559433#0(66"[BEROR]error: There is no SDK with the name or path 'iphoneos3.0'1(4@58"error: There is no SDK with the name or path 'iphoneos3.0'288559433#18446744073709551615#0#0(1@0"0(0#1#0"7947009927035180032#0"0#
+
+CCompileXIB "/Users/chris/Sites/code_examples/iPhone RSS App/RSS Reader/Classes/WebVC.xib"
+r0
+
+CCompileXIB "/Users/chris/Sites/code_examples/iPhone RSS App/RSS Reader/MainWindow.xib"
+r0
+
+CCompileXIB "/Users/chris/Sites/code_examples/iPhone RSS App/RSS Reader/RootViewController.xib"
+r0
+
+CCpResource "build/Debug/RSS Reader.app/Contents/Resources/Default.png" Default.png
+r0
+
+CCpResource "build/Debug/RSS Reader.app/Contents/Resources/rss.png" rss.png
+r0
+
+CProcessInfoPlistFile "/Users/chris/Sites/code_examples/iPhone RSS App/RSS Reader/build/Debug/RSS Reader.app/Contents/Info.plist" RSS_Reader-Info.plist
+r0
+
+CTouch "/Users/chris/Sites/code_examples/iPhone RSS App/RSS Reader/build/Debug/RSS Reader.app"
+r0
+

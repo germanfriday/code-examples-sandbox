@@ -1,0 +1,32 @@
+var backColor = (temperature > 100) ? "red" : "blue";
+
+var backColor = (temperature > 100) ? "red" : ((temperature < 80) ? "blue" : "yellow");
+
+var backColor ;
+if (temperature > 100) {
+    backColor = "red";
+} else if (temperature < 80) {
+    backColor = "blue";
+} else {
+    backColor = "yellow";
+}
+
+----------
+
+function setPrice(form) {
+    var sizeList = form.sizePicker;
+    var chosenItem = sizeList.options[sizeList.selectedIndex].value;
+    switch (chosenItem) {
+        case "small" :
+            form.price.value = "44.95";
+            break;
+        case "medium" :
+            form.price.value = "54.95";
+            break;
+        case "large" :
+            form.price.value = "64.95";
+            break;
+        default:
+             form.price.value = "Select size";
+    }
+}

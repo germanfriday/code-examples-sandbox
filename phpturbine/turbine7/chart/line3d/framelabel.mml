@@ -1,0 +1,16 @@
+<BaseDepth depth="0"/>
+<Shape pos="{_threeDDepthX},{=-_threeDDepthY}>
+  <LineStyle width="1" color="#000000"/>
+  <line path="{=-_threeDDepthX},{=_threeDDepthY+_frameLabelY};0,{_frameLabelY}"/>
+  <line path="0,{_frameLabelY};{_frameWidth},{_frameLabelY}"/>
+</shape>
+
+
+
+<text
+  size="{_defaultFontHeight}"
+  flags="base"
+  color="#000000"
+  align="right"
+  placepoint="bottom-right"
+  Pos="-10,{_frameLabelY}">{_frameLabelValue}</text>

@@ -1,0 +1,11 @@
+MANIFEST
+zope.i18nmessageid/__init__.py
+zope.i18nmessageid/_zope_i18nmessageid_message.c
+zope.i18nmessageid/DEPENDENCIES.cfg
+zope.i18nmessageid/message.py
+zope.i18nmessageid/messageid.py
+zope.i18nmessageid/messages.txt
+zope.i18nmessageid/SETUP.cfg
+zope.i18nmessageid/tests.py
+setup.py
+setup.cfg

@@ -1,0 +1,31 @@
+elementReference.style.color = "00ff00";
+elementReference.style.font = "bolder small-caps 16px 'Andale Mono', Arial, sans-serif";
+elementReference.style.fontFamily = "'Century Schoolbook', Times, serif";
+elementReference.style.fontSize = "22px";
+elementReference.style.fontStretch = "narrower";
+elementReference.style.fontStyle = "italic";
+elementReference.style.fontVariant = "small-caps";
+elementReference.style.fontWeight = "bolder";
+elementReference.style.textDecoration = "line-through";
+elementReference.style.textTransform = "uppercase";
+
+----------
+
+function flashBkgnd(elem, count) {
+    // if counter is null, initialize at zero
+    count = (count) ? count : 0;
+    // grab value once for multiple comparisons
+    var currColor = document.getElementById(elem).style.backgroundColor;
+    if (currColor == "rgb(255,255,0)" || currColor ==  "#ffff00") {
+        document.getElementById(elem).style.backgroundColor = "#ff0000";
+    } else {
+        document.getElementById(elem).style.backgroundColor = "#ffff00";
+    }
+    if (count < 10) {
+        // call this function again in 1/10 sec., with incremented counter value
+        setTimeout("flashBkgnd('" + elem +"'," + ++count + ")", 100);
+    } else {
+        // assumes a white body background
+        document.getElementById(elem).style.backgroundColor = "#ffffff";
+    }
+}

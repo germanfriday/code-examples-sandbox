@@ -1,0 +1,9 @@
+MANIFEST
+zope.hookable/__init__.py
+zope.hookable/_zope_hookable.c
+zope.hookable/DEPENDENCIES.cfg
+zope.hookable/SETUP.cfg
+zope.hookable/tests/__init__.py
+zope.hookable/tests/test_hookable.py
+setup.py
+setup.cfg

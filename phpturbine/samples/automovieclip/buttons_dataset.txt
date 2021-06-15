@@ -1,0 +1,13 @@
+<button_label,button_url>
+"Dingo Industries", "http://www.example.com/?dingo"
+"Lagoon Supermarket", "http://www.example.com/?lagoon"
+"Martinica Bar", "http://www.example.com/?martinica"
+"Dragon Lounge", "http://www.example.com/?dragon"
+"Blue Pasteur, inc", "http://www.example.com/?pasteur"
+"Sri Lanka Bar", "http://www.example.com/?sri"
+"Sunday Road inc.", "http://www.example.com/?sunday"
+"Bay Records", "http://www.example.com/?bay"
+"Friday Bank", "http://www.example.com/?friday"
+"Global Cloud Ltd.", "http://www.example.com/?cloud"
+"Beethoven Sings, inc", "http://www.example.com/?beethoven"
+"Fill Max inc.", "http://www.example.com/?fill"

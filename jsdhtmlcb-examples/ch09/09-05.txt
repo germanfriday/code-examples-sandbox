@@ -1,0 +1,12 @@
+function submitForm( ) {
+    document.forms["myForm"].submit( );
+    submitForm = blockIt;
+    return false;
+}
+function blockIt( ) {
+    return false;
+}
+
+
+<a href="#" onclick="return submitForm( )">Submit</a>
+

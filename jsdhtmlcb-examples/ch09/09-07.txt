@@ -1,0 +1,31 @@
+ function myFunction(evt) {
+    evt = (evt) ? evt : ((window.event) ? event : null);
+    if (evt) {
+        if (evt.button) {
+            if (evt.button == 2) {
+                // process right-click here
+                return false;
+            } else {
+                // process all other clicks here
+            }
+        }
+    }
+}
+
+----------
+
+ function myFunction(evt) {
+    evt = (evt) ? evt : ((window.event) ? event : null);
+    if (evt) {
+        var rightButton = false;
+        if ((evt.button && evt.button == 2) || (evt.which && evt.which == 3)) {
+            rightButton = true;
+        }
+        if (rightButton) {
+            // process right-click here
+            return false;
+        } else {
+            // process all other clicks here
+        }
+    }
+}

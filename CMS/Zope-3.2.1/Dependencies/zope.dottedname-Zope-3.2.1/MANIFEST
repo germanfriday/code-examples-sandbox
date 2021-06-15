@@ -1,0 +1,7 @@
+MANIFEST
+zope.dottedname/__init__.py
+zope.dottedname/resolve.py
+zope.dottedname/resolve.txt
+zope.dottedname/tests.py
+setup.py
+setup.cfg

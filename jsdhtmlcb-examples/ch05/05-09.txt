@@ -1,0 +1,16 @@
+if (navigator.cookieEnabled) {
+    // invoke cookie statements here
+}
+
+----------
+
+var cookieEnabled = false;
+if (typeof document.cookie == "string") {
+    if (document.cookie.length == 0) {
+        document.cookie = "test";
+        cookieEnabled = (document.cookie == "test");
+        document.cookie = "";
+    } else {
+        cookieEnabled = true;
+    }
+}

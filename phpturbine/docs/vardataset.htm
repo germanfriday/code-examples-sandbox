@@ -1,0 +1,1266 @@
+<HTML>
+<HEAD>
+<META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=iso-8859-1">
+<META NAME="GENERATOR" CONTENT="Mozilla/4.04 [en] (Win95; I) [Netscape]">
+<TITLE>Turbine Variables and DataSets</TITLE>
+</HEAD>
+<BODY topmargin="0" leftmargin="0" rightmargin="0" marginwidth="0" marginheight="0" TEXT="#000000" BGCOLOR="#FFFFFF" LINK="#003366" VLINK="#FF9900" ALINK="#FF6600">
+<CENTER>
+  <table width="100%" border="0" cellspacing="0" cellpadding="0" align="center">
+    <tr bgcolor="#000033"> 
+      <td background="images/bar_left.gif" width="50%">&nbsp;</td>
+      <td> 
+        <table width="560" border="0" cellspacing="0" cellpadding="0">
+          <tr> 
+            <td width="334"><img src="images/bar_left.gif" width="334" height="28"></td>
+            <td><img src="images/bar_central.gif" width="110" height="28"></td>
+            <td><img src="images/bar_logo.gif" width="116" height="28"></td>
+          </tr>
+        </table>
+      </td>
+      <td background="images/1x1_azul_esc.gif" width="50%">&nbsp;</td>
+    </tr>
+    <tr bgcolor="#FFFFFF" height="4"> 
+      <td colspan="3"></td>
+    </tr>
+  </table>
+  <TABLE BORDER=0 COLS=2 WIDTH="560" cellpadding="0" cellspacing="0" >
+    <TR valign="top">
+      <TD COLSPAN="2" height="12"> 
+        <table border=0 cols=2 width="560" cellpadding="0" cellspacing="0" >
+          <tr> 
+            <td width="443" height="25"><font face="Verdana, Arial, Helvetica, sans-serif" size="3"><a href="manual.htm">Table 
+              of Contents</a></font></td>
+            <td width="117" height="25"> 
+              <div align="center"><font face="Verdana, Arial, Helvetica, sans-serif" size="3"><a href="mml.htm">Next 
+                Chapter </a> </font></div>
+            </td>
+          </tr>
+        </table>
+      </TD>
+    </TR>
+    <TR valign="top"> 
+      <TD COLSPAN="2"> 
+        <p align="left">&nbsp;</p>
+        <p align="left"><font face="Arial, Helvetica, sans-serif" size="6">2. 
+          Turbine Variables and DataSets</font></p>
+        <p align="left"><font size="2" face="Verdana, Arial, Helvetica, sans-serif">This 
+          chapter introduces Turbine Variables and DataSets, which are the two 
+          ways of integrating data from the PHP Interface into the media templates 
+          - for example to specify an image to be loaded or to provide values 
+          into a Flash component.</font></p>
+        <ul>
+          <li><font size="3" face="Arial, Helvetica, sans-serif" align="left"><a href="#variables">Variables: 
+            What, Where and When</a></font></li>
+          <li><font size="3" face="Arial, Helvetica, sans-serif" align="left"><a href="#usingvariables">Using 
+            Variables</a></font></li>
+          <li><font size="3" face="Arial, Helvetica, sans-serif" align="left"><a href="#definingvariables">Defining 
+            Variables</a></font></li>
+          <li><font size="3" face="Arial, Helvetica, sans-serif" align="left"><a href="#publishingas">Publishing 
+            to Flash Action Script</a></font></li>
+          <li><font size="3" face="Arial, Helvetica, sans-serif" align="left"><a href="#specialvariables">Special 
+            Variables</a></font></li>
+          <li><font size="3" face="Arial, Helvetica, sans-serif" align="left"><a href="#mediasystemvariables">Media 
+            and System Global Variables</a></font></li>
+          <li><font size="3" face="Arial, Helvetica, sans-serif" align="left"><a href="#expressionvariables">Expression 
+            Variables</a></font></li>
+          <li><font size="3" face="Arial, Helvetica, sans-serif" align="left"><a href="#datasets">DataSets</a></font></li>
+          <li><font size="3" face="Arial, Helvetica, sans-serif" align="left"><a href="#usingdatasets">Using 
+            DataSets</a></font></li>
+          <li><font size="3" face="Arial, Helvetica, sans-serif"><a href="#loadingdatasetfile">Loading 
+            a DataSet from a File</a></font></li>
+          <li><font size="3" face="Arial, Helvetica, sans-serif"><a href="#manualdataset">Manually 
+            Creating a DataSet</a></font></li>
+          <li><font size="3" face="Arial, Helvetica, sans-serif"><a href="#loadingdatasetxml">Loading 
+            a DataSet from XML</a></font></li>
+          <li><font size="3" face="Arial, Helvetica, sans-serif"><a href="#databasedatasets">Defining 
+            DataSets from Database Queries</a></font> </li>
+          <li><font size="3" face="Arial, Helvetica, sans-serif"><a href="#publishingdatasetas">Publishing 
+            DataSets to Flash Action Script</a></font></li>
+        </ul>
+        <p>&nbsp;</p>
+        <p>&nbsp;</p>
+        <p>&nbsp;<br>
+          <font size="5" face="Arial, Helvetica, sans-serif"><a name="variables"></a>Variables: 
+          What, Where and When</font></p>
+        <p><font size="2" face="Verdana, Arial, Helvetica, sans-serif">A Turbine 
+          variable allows you to define a value once and then use it multiple 
+          times on distinct places of loaded templates. Variables can be directly 
+          defined on the PHP script, loaded from database queries or they can 
+          be loaded from local or remote HTTP locations in a simple name=value 
+          pair format. After being defined, Turbine variables can be used on Flash 
+          and MML templates, and can be published into Flash Action Script variables, 
+          arrays or associative arrays.<br>
+          </font><font size="2" face="Verdana, Arial, Helvetica, sans-serif">Turbine 
+          variables are server-side - they are defined and used at server time, 
+          and are different from Flash Action Script variables (although they can be 
+          easily published into Action Script).<br>
+          So, variables are basically a name-value pair - please have the following 
+          in mind when working with Turbine variables:</font></p>
+        <ul>
+          <li><font size="2" face="Verdana, Arial, Helvetica, sans-serif">Variable 
+            names must be in the form {variable}, with the name enclosed between 
+            two curly brackets - for example {name}, {address}, {job}.</font></li>
+          <li><font face="Verdana, Arial, Helvetica, sans-serif" size="2">Variable 
+            names are <strong>case-insensitive</strong> - the variables {name} 
+            and {Name} and {NAME} can be used and refer to the one and same variable 
+            and value.</font></li>
+          <li><font size="2" face="Verdana, Arial, Helvetica, sans-serif">Naturally, 
+            variables can only be used after being defined, otherwise they will 
+            not be expanded.</font></li>
+          <li><font face="Verdana, Arial, Helvetica, sans-serif" size="2">The 
+            variable names must have a maximum of 52 characters. The allowed characters 
+            for a variable name are: all letters and numbers, plus the _ . , and 
+            $ characters.</font></li>
+          <li><font face="Verdana, Arial, Helvetica, sans-serif" size="2">Turbine 
+            variable values can have any size (machine memory permitting).</font></li>
+        </ul>
+        <p>&nbsp;</p>
+        <p><font size="5" face="Verdana, Arial, Helvetica, sans-serif"><a name="usingvariables"></a>Using 
+          Variables</font></p>
+        <p><font size="2" face="Verdana, Arial, Helvetica, sans-serif"><br>
+          Variables can be used in most places of Flash or MML templates -&nbsp; 
+          each instance of a variable will be replaced by the respective value<i>. 
+          </i><br>
+          For example suppose you have a Flash .swf template and define a variable 
+          named <font color="#0000CC" face="Courier New, Courier, mono">{Person}</font> 
+          to have the value <font color="#0000CC" face="Courier New, Courier, mono">Mathilda</font> 
+          - if you have a static or dynamic text block with this text:&nbsp; </font> 
+        </p>
+        <blockquote> 
+          <p><font color="#0000CC" size="2" face="Courier New, Courier, mono">{Person}</font><font face="Courier New, Courier, mono" size="2"> 
+            is nice. I once saw <font color="#0000CC">{Person}</font> on the market.</font> 
+          </p>
+        </blockquote>
+        <font face="Verdana, Arial, Helvetica, sans-serif" size="2">when the Flash 
+        .swf template is loaded, the text block that includes this variable will 
+        be expanded into:&nbsp; </font> <blockquote> 
+          <p><font color="#0000CC" size="2" face="Courier New, Courier, mono">Mathilda</font><font face="Courier New, Courier, mono" size="2"> 
+            is nice. I once saw <font color="#0000CC">Mathilda</font> on the market.</font> 
+          </p>
+        </blockquote>
+        <p><font size="2" face="Verdana, Arial, Helvetica, sans-serif">&nbsp;<br>
+          You can also use variables on MML templates, inside MML commands:&nbsp; 
+          </font> </p>
+        <blockquote> 
+          <p><font face="Courier New, Courier, mono" size="2">&lt;Image src=&quot;<font color="#0000CC">{Person}</font>.jpg&quot;&gt;</font> 
+          </p>
+        </blockquote>
+        <font face="Verdana, Arial, Helvetica, sans-serif" size="2">At generation-time 
+        this will expand into: </font> <blockquote> 
+          <p><font face="Courier New, Courier, mono" size="2">&lt;Image src=&quot;<font color="#0000CC">Mathilda</font>.jpg&quot;&gt;</font> 
+          </p>
+        </blockquote>
+        <p><font face="Verdana, Arial, Helvetica, sans-serif" size="2">producing 
+          the desired behavior. Another example: </font> </p>
+        <blockquote> 
+          <p><font face="Courier New, Courier, mono" size="2">&lt;Text&gt;<font color="#0000CC">{Person}</font>&lt;/Text&gt;</font> 
+          </p>
+        </blockquote>
+        <font face="Verdana, Arial, Helvetica, sans-serif" size="2">will expand 
+        to:&nbsp; </font> <blockquote> 
+          <p><font face="Courier New, Courier, mono" size="2">&lt;Text&gt;<font color="#0000CC">Mathilda</font>&lt;/Text&gt;</font></p>
+        </blockquote>
+        <p>&nbsp;<br>
+          <font size="2" face="Verdana, Arial, Helvetica, sans-serif"> In JavaScript, 
+          for example a getURL: </font> </p>
+        <blockquote> 
+          <p><font face="Courier New, Courier, mono" size="2">getUrl(&quot;<font color="#0000CC">{Person}</font>.htm&quot;);&nbsp; 
+            </font> </p>
+        </blockquote>
+        <font face="Verdana, Arial, Helvetica, sans-serif" size="2">will turn 
+        into:&nbsp; </font> <blockquote> 
+          <p><font face="Courier New, Courier, mono" size="2">getUrl(&quot;<font color="#0000CC">Mathilda</font>.htm&quot;);</font></p>
+        </blockquote>
+        <p><font size="2" face="Verdana, Arial, Helvetica, sans-serif">&nbsp;<br>
+          What if you're using variables in an MML template and the variable's 
+          value contains forbidden XML characters, like the &lt; or &gt; characters? 
+          On this case you can have Turbine automatically XML-escape the variable 
+          values by using the syntax {&amp;variable} - for example:</font></p>
+        <blockquote> 
+          <p><font face="Courier New, Courier, mono" size="2">&lt;Text&gt;<font color="#0000CC">{&amp;Person}</font>&lt;/Text&gt;</font> 
+          </p>
+        </blockquote>
+        <p><font size="2" face="Verdana, Arial, Helvetica, sans-serif">On this 
+          case, any special XML characters contained in the value of the {Person} 
+          variable would be conveniently escaped into XML entities - for example 
+          a <font face="Courier New, Courier, mono">&lt;</font> character would 
+          be expanded into <font face="Courier New, Courier, mono">a &amp;lt;</font> 
+          escape. Use this syntax if you expect the variable value to contain 
+          any of these forbidden XML characters. Note that this is only an issue 
+          on MML templates - Flash templates do not have any problem with special 
+          XML characters.</font></p>
+        <p>&nbsp;</p>
+        <p><font size="5" face="Arial, Helvetica, sans-serif"><a name="definingvariables" id="definingvariables"></a>Defining 
+          variables</font></p>
+        <p><font size="2" face="Verdana, Arial, Helvetica, sans-serif">Before 
+          being used, Turbine variables need to be defined - they can be directly 
+          defined through the PHP Interface, for example:</font></p>
+        <blockquote> 
+          <p><font size="2" face="Courier New, Courier, mono">$turbine-&gt;setVar(&quot;Person&quot;, 
+            &quot;Mathilda&quot;);</font></p>
+        </blockquote>
+        <p><font size="2" face="Verdana, Arial, Helvetica, sans-serif">Variables 
+          can also be defined by loading from a text file with the name=value 
+          format, with one definition per line:</font></p>
+        <blockquote> 
+          <p><font face="Courier New, Courier, mono" size="2">Variable = value<br>
+            Variable = value<br>
+            ... </font></p>
+        </blockquote>
+        <p><font size="2" face="Verdana, Arial, Helvetica, sans-serif">Besides 
+          one variable=value pair per line, this file can also include comment 
+          lines (which will be ignored), that start by the hash (#) character, 
+          for convenience purposes. </font></p>
+        <p><font size="2" face="Verdana, Arial, Helvetica, sans-serif">Loading 
+          a such a file with variable definitions can be done on the PHP Interface 
+          like this:</font></p>
+        <blockquote> 
+          <p><font size="2" face="Courier New, Courier, mono">$turbine-&gt;loadVar(&quot;varfile.txt&quot;);</font></p>
+        </blockquote>
+        <p><font size="2" face="Verdana, Arial, Helvetica, sans-serif">Since they 
+          can be loaded from remote HTTP locations, you can also do:</font></p>
+        <blockquote> 
+          <p><font size="2" face="Courier New, Courier, mono">$turbine-&gt;loadVar(&quot;http://example.com/getvars.php?id=2004&quot;);</font></p>
+        </blockquote>
+        <p><font size="2" face="Verdana, Arial, Helvetica, sans-serif">Turbine 
+          Variables can also be defined or loaded inline in Flash or MML templates, 
+          by using the &lt;Var&gt; MML tag - for example to directly define variables 
+          inside MML:</font></p>
+        <blockquote> 
+          <p><font size="2" face="Courier New, Courier, mono">&lt;Var&gt;<br>
+            &nbsp;&nbsp;Variable = value<br>
+            &nbsp;&nbsp;Variable = value<br>
+            &nbsp;&nbsp;Variable = value <br>
+            &lt;/Var&gt;</font></p>
+        </blockquote>
+        <p><font size="2" face="Verdana, Arial, Helvetica, sans-serif">Or to load 
+          from an external variables file, right from MML templates:</font></p>
+        <blockquote> 
+          <p><font size="2" face="Courier New, Courier, mono">&lt;Var src=&quot;varfile.txt&quot;/&gt;<br>
+            &lt;Var src=&quot;http://example.com/getvars.php?id=2004&quot;/&gt; 
+            </font> </p>
+        </blockquote>
+        <p>&nbsp;</p>
+        <p><font size="5" face="Arial, Helvetica, sans-serif"><a name="publishingas"></a>Publishing 
+          to Flash Action Script</font></p>
+        <p><font size="2" face="Verdana, Arial, Helvetica, sans-serif"> If you 
+          intend to use Turbine solely to generate Adobe PDF documents then you 
+          can skip this subsection because scripting is not exported to PDF.</font></p>
+        <p><font size="2" face="Verdana, Arial, Helvetica, sans-serif">Turbine 
+          variables, which live at the server-side, can be published into the 
+          client-side as Flash Action Script variables in a multitude of useful 
+          ways - to simple Flash Action Script variables, arrays and associative 
+          (named) arrays. As with other features, this functionality is both available 
+          on the PHP Interface and as an MML tag. On the PHP Interface we can 
+          do:</font></p>
+        <blockquote> 
+          <p><font size="2" face="Courier New, Courier, mono"> $turbine-&gt;publishVar(&quot;person,address&quot;);</font></p>
+        </blockquote>
+        <p><font size="2" face="Verdana, Arial, Helvetica, sans-serif">The above 
+          would use the values of the {person} and {address} Turbine variables, 
+          to create two Flash Action Script variables named person and address. These 
+          Flash Action Script variables would then be available, after movie generation, 
+          when the movie is played on the client. The same can be accomplished 
+          with this MML tag:</font></p>
+        <blockquote> 
+          <p><font size="2" face="Courier New, Courier, mono">&lt;PublishVar name=&quot;person,address&quot;/&gt;</font></p>
+        </blockquote>
+        <p>&nbsp;</p>
+        <p><font size="5" face="Arial, Helvetica, sans-serif"><a name="specialvariables"></a>Special 
+          Variables</font></p>
+        <p><font size="2" face="Verdana, Arial, Helvetica, sans-serif">Turbine 
+          automatically defines a number of special, utility variables for information 
+          like random numbers, current time and date. The following special variables 
+          can be used:</font></p>
+        <p><font size="3" face="Verdana, Arial, Helvetica, sans-serif"><strong>Time:</strong></font></p>
+        <table BORDER cellspacing=0 cellpadding=4 cols=3 width="94%" >
+          <tr bgcolor="#000000"> 
+            <td width="32%"><font color="#FFFFFF" size="2" face="Verdana, Arial, Helvetica, sans-serif"><b>Variable</b></font></td>
+            <td width="42%"><font color="#FFFFFF" size="2" face="Verdana, Arial, Helvetica, sans-serif"><b>Description</b></font></td>
+            <td width="26%"><font color="#FFFFFF" size="2" face="Verdana, Arial, Helvetica, sans-serif"><b>Formatting</b></font></td>
+          </tr>
+          <tr valign="top"> 
+            <td><font face="Verdana, Arial, Helvetica, sans-serif" size="2">{Time.Year}</font></td>
+            <td><font face="Verdana, Arial, Helvetica, sans-serif" size="2">The 
+              current year</font></td>
+            <td><font face="Verdana, Arial, Helvetica, sans-serif" size="2">yyyy 
+              (ex. 1999)</font></td>
+          </tr>
+          <tr valign="top"> 
+            <td><font face="Verdana, Arial, Helvetica, sans-serif" size="2">{Time.Year2}</font></td>
+            <td><font face="Verdana, Arial, Helvetica, sans-serif" size="2">The 
+              current year</font></td>
+            <td><font face="Verdana, Arial, Helvetica, sans-serif" size="2">yy 
+              (ex. 99)</font></td>
+          </tr>
+          <tr valign="top"> 
+            <td><font face="Verdana, Arial, Helvetica, sans-serif" size="2">{TimeMonth}</font></td>
+            <td><font face="Verdana, Arial, Helvetica, sans-serif" size="2">Current 
+              month 1 - 12</font></td>
+            <td><font face="Verdana, Arial, Helvetica, sans-serif" size="2">m 
+              or mm (ex. 2)</font></td>
+          </tr>
+          <tr valign="top"> 
+            <td><font face="Verdana, Arial, Helvetica, sans-serif" size="2">{Time.Month0}</font></td>
+            <td><font face="Verdana, Arial, Helvetica, sans-serif" size="2">Current 
+              month 01 - 12</font></td>
+            <td><font face="Verdana, Arial, Helvetica, sans-serif" size="2">always 
+              mm, left-pads with 0 (ex. 02)</font></td>
+          </tr>
+          <tr valign="top"> 
+            <td><font face="Verdana, Arial, Helvetica, sans-serif" size="2">{Time.MonthName}</font></td>
+            <td><font face="Verdana, Arial, Helvetica, sans-serif" size="2">January, 
+              February ...</font></td>
+            <td><font face="Verdana, Arial, Helvetica, sans-serif" size="2">-</font></td>
+          </tr>
+          <tr valign="top"> 
+            <td><font face="Verdana, Arial, Helvetica, sans-serif" size="2">{Time.WeekDay}</font></td>
+            <td><font face="Verdana, Arial, Helvetica, sans-serif" size="2">Day 
+              of the week, between 1 and 7</font></td>
+            <td><font face="Verdana, Arial, Helvetica, sans-serif" size="2">d</font></td>
+          </tr>
+          <tr valign="top"> 
+            <td><font face="Verdana, Arial, Helvetica, sans-serif" size="2">{Time.WeekDayName}</font></td>
+            <td><font face="Verdana, Arial, Helvetica, sans-serif" size="2">Sunday, 
+              Monday...</font></td>
+            <td><font face="Verdana, Arial, Helvetica, sans-serif" size="2">-</font></td>
+          </tr>
+          <tr valign="top"> 
+            <td><font face="Verdana, Arial, Helvetica, sans-serif" size="2">{Time.Day}</font></td>
+            <td><font face="Verdana, Arial, Helvetica, sans-serif" size="2">Day 
+              of the month 1 - 31</font></td>
+            <td><font face="Verdana, Arial, Helvetica, sans-serif" size="2">d 
+              or dd (ex. 4)</font></td>
+          </tr>
+          <tr valign="top"> 
+            <td><font face="Verdana, Arial, Helvetica, sans-serif" size="2">{Time.Day0}</font></td>
+            <td><font face="Verdana, Arial, Helvetica, sans-serif" size="2">Day 
+              of the month 01 - 31</font></td>
+            <td><font face="Verdana, Arial, Helvetica, sans-serif" size="2">DD 
+              left-pads with 0 (ex. 04)</font></td>
+          </tr>
+          <tr valign="top"> 
+            <td><font face="Verdana, Arial, Helvetica, sans-serif" size="2">{Time.Hour}</font></td>
+            <td><font face="Verdana, Arial, Helvetica, sans-serif" size="2">Hour 
+              0 - 23</font></td>
+            <td><font face="Verdana, Arial, Helvetica, sans-serif" size="2">h 
+              or hh (ex. 8)</font></td>
+          </tr>
+          <tr valign="top"> 
+            <td><font face="Verdana, Arial, Helvetica, sans-serif" size="2">{Time.Hour0}</font></td>
+            <td><font face="Verdana, Arial, Helvetica, sans-serif" size="2">Hour 
+              00-23</font></td>
+            <td><font face="Verdana, Arial, Helvetica, sans-serif" size="2">hh 
+              left-pads with 0 (ex. 08)</font></td>
+          </tr>
+          <tr valign="top"> 
+            <td><font face="Verdana, Arial, Helvetica, sans-serif" size="2">{Time.HourAmPm}</font></td>
+            <td><font face="Verdana, Arial, Helvetica, sans-serif" size="2">Hour 
+              00 - 11</font></td>
+            <td><font face="Verdana, Arial, Helvetica, sans-serif" size="2">hh 
+              left-pads with 0 (ex. 08)</font></td>
+          </tr>
+          <tr valign="top"> 
+            <td><font face="Verdana, Arial, Helvetica, sans-serif" size="2">{Time.AmPm}</font></td>
+            <td><font face="Verdana, Arial, Helvetica, sans-serif" size="2">Am 
+              or Pm, depending on actual time</font></td>
+            <td><font face="Verdana, Arial, Helvetica, sans-serif" size="2">tt 
+              (ex. Am)</font></td>
+          </tr>
+          <tr valign="top"> 
+            <td><font face="Verdana, Arial, Helvetica, sans-serif" size="2">{Time.Minute}</font></td>
+            <td><font face="Verdana, Arial, Helvetica, sans-serif" size="2">Current 
+              minute 0 - 59</font></td>
+            <td><font face="Verdana, Arial, Helvetica, sans-serif" size="2">m 
+              or mm (ex. 7)</font></td>
+          </tr>
+          <tr valign="top"> 
+            <td><font face="Verdana, Arial, Helvetica, sans-serif" size="2">{Time.Minute0}</font></td>
+            <td><font face="Verdana, Arial, Helvetica, sans-serif" size="2">Current 
+              minute 00 - 59</font></td>
+            <td><font face="Verdana, Arial, Helvetica, sans-serif" size="2">always 
+              mm left-pads with 0 (ex. 07)</font></td>
+          </tr>
+          <tr valign="top"> 
+            <td><font face="Verdana, Arial, Helvetica, sans-serif" size="2">{Time.Second}</font></td>
+            <td><font face="Verdana, Arial, Helvetica, sans-serif" size="2">Current 
+              second 0 - 59</font></td>
+            <td><font face="Verdana, Arial, Helvetica, sans-serif" size="2">s 
+              or ss (ex. 57)</font></td>
+          </tr>
+          <tr valign="top"> 
+            <td><font face="Verdana, Arial, Helvetica, sans-serif" size="2">{Time.Second0}</font></td>
+            <td><font face="Verdana, Arial, Helvetica, sans-serif" size="2">Current 
+              second 00 - 59</font></td>
+            <td><font face="Verdana, Arial, Helvetica, sans-serif" size="2">Ss 
+              left-pads with 0 (ex. 57)</font></td>
+          </tr>
+          <tr valign="top"> 
+            <td><font face="Verdana, Arial, Helvetica, sans-serif" size="2">{Time.Canonic}</font></td>
+            <td><font face="Verdana, Arial, Helvetica, sans-serif" size="2">A 
+              date in the format:<br>
+              YYYYMMDDHHMMSS </font></td>
+            <td> <div align="left"><font face="Verdana, Arial, Helvetica, sans-serif" size="2">-</font></div></td>
+          </tr>
+        </table>
+        <p><font size="2" face="Verdana, Arial, Helvetica, sans-serif">An example 
+          of usage of the Time variables:&nbsp; </font> </p>
+        <ul>
+          <font face="Courier New, Courier, mono" size="2">Today is {Time.Day} 
+          / {Time.Month} / {Time.Year}</font> 
+        </ul>
+        <font face="Verdana, Arial, Helvetica, sans-serif" size="2">that would 
+        display (for example):&nbsp; </font> <ul>
+          <font face="Courier New, Courier, mono" size="2">Today is 1/1/2004</font> 
+        </ul>
+        <p><font face="Verdana, Arial, Helvetica, sans-serif" size="3">&nbsp;<br>
+          <strong>Random Values:</strong></font></p>
+        <table BORDER cellspacing=0 cellpadding=4 cols=3 width="94%" >
+          <tr valign="top" bgcolor="#000000"> 
+            <td width="39%"><font color="#FFFFFF" size="2" face="Verdana, Arial, Helvetica, sans-serif"><b>Variable</b></font></td>
+            <td width="44%"><font color="#FFFFFF" size="2" face="Verdana, Arial, Helvetica, sans-serif"><b>Description</b></font></td>
+            <td width="17%"><font color="#FFFFFF" size="2" face="Verdana, Arial, Helvetica, sans-serif"><b>Formatting</b></font></td>
+          </tr>
+          <tr valign="top"> 
+            <td><font face="Verdana, Arial, Helvetica, sans-serif" size="2">{Random.New<i><font color="#0000CC">N</font></i>}</font></td>
+            <td><font face="Verdana, Arial, Helvetica, sans-serif" size="2">Generates 
+              a new random number each time it's used. The number has <i><font color="#0000CC">N</font></i> 
+              digits up to a maximum of 6 digits.&nbsp;</font></td>
+            <td><font face="Verdana, Arial, Helvetica, sans-serif" size="2"><i><font color="#0000CC">N</font></i> 
+              digits</font></td>
+          </tr>
+          <tr valign="top"> 
+            <td><font face="Verdana, Arial, Helvetica, sans-serif" size="2">{Random.Same<i><font color="#0000CC">N</font></i>}</font></td>
+            <td><font face="Verdana, Arial, Helvetica, sans-serif" size="2">Generates 
+              a random number that's unique across the whole movie (but different 
+              for each movie). The number has <i><font color="#0000CC">N</font></i> 
+              digits up to a maximum of 6 digits.</font></td>
+            <td><font face="Verdana, Arial, Helvetica, sans-serif" size="2"><i><font color="#0000CC">N</font></i> 
+              digits</font></td>
+          </tr>
+          <tr valign="top"> 
+            <td><font face="Verdana, Arial, Helvetica, sans-serif" size="2">{Random.New<i><font color="#0000CC">N<font color="#CC0000">[min..max]</font></font></i>}</font></td>
+            <td><font face="Verdana, Arial, Helvetica, sans-serif" size="2">Generates 
+              a new random number, between <font color="#CC0000">min</font> and 
+              <font color="#CC0000">max</font>. The number is formatted to <i><font color="#0000CC">N</font></i> 
+              digits (up to a maximum of 6 digits).&nbsp;</font></td>
+            <td><font face="Verdana, Arial, Helvetica, sans-serif" size="2"><i><font color="#0000CC">N</font></i> 
+              digits</font></td>
+          </tr>
+          <tr valign="top"> 
+            <td><font face="Verdana, Arial, Helvetica, sans-serif" size="2">{Random.Same<i><font color="#0000CC">N</font><font color="#CC0000">[min..max]</font></i>}</font></td>
+            <td><font face="Verdana, Arial, Helvetica, sans-serif" size="2">Generates 
+              a random number that's unique across the whole movie (but different 
+              for each movie), between <font color="#CC0000">min</font> and <font color="#CC0000">max</font>. 
+              The number is formatted to <i><font color="#0000CC">N</font></i> 
+              digits (up to a maximum of 6 digits).&nbsp;</font></td>
+            <td><font face="Verdana, Arial, Helvetica, sans-serif" size="2"><i><font color="#0000CC">N</font></i> 
+              digits</font></td>
+          </tr>
+          <tr valign="top"> 
+            <td><font face="Verdana, Arial, Helvetica, sans-serif" size="2">{Random.NewColor} 
+              and<br>
+              {Random.NewColorAlpha} </font></td>
+            <td><font face="Verdana, Arial, Helvetica, sans-serif" size="2">Generates 
+              a new random color in HTML style with the format RRGGBB or AARRGGBB</font></td>
+            <td> <div align="center"><font face="Verdana, Arial, Helvetica, sans-serif" size="2"><i>-</i></font></div></td>
+          </tr>
+          <tr valign="top"> 
+            <td><font face="Verdana, Arial, Helvetica, sans-serif" size="2">{Random.SameColor} 
+              and<br>
+              {Random.SameColorAlpha} </font></td>
+            <td> <p><font face="Verdana, Arial, Helvetica, sans-serif" size="2">Generates 
+                a random color in HTML style with the format RRGGBB or AARRGGBB<br>
+                This color is unique across the whole movie (but different for 
+                each movie).</font></p></td>
+            <td> <div align="center"><font face="Verdana, Arial, Helvetica, sans-serif" size="2">-</font></div></td>
+          </tr>
+        </table>
+        <p><font face="Verdana, Arial, Helvetica, sans-serif" size="2">An example 
+          of usage of the Random variables would be this MML tag:&nbsp; </font> 
+        </p>
+        <ul>
+          <font face="Courier New, Courier, mono" size="2">&lt;Image src=&quot;ad{Random.Same1}.gif&quot;/&gt;</font> 
+        </ul>
+        <font face="Verdana, Arial, Helvetica, sans-serif" size="2">This command 
+        would include a random image, supposing you have images named ad0.gif, 
+        ad1.gif, ..., ad9.gif on the same directory as the PHP script.</font> 
+        <p>&nbsp;</p>
+        <p><font size="2" face="Verdana, Arial, Helvetica, sans-serif"> </font><font size="5" face="Arial, Helvetica, sans-serif"><a name="mediasystemvariables"></a>Media 
+          and System Global Variables</font></p>
+        <p><font size="2" face="Verdana, Arial, Helvetica, sans-serif"> Besides 
+          the Special variables above, Turbine includes two automatically defined 
+          families of variables that contain contextual information about the 
+          media being generated, as well as a number of system settings and defaults 
+          - the Media and System variable families:</font></p>
+        <p><font size="3" face="Verdana, Arial, Helvetica, sans-serif"><strong>Media:</strong></font></p>
+        <table BORDER cellspacing=0 cellpadding=4 cols=3 width="97%" >
+          <tr valign="top" bgcolor="#000000"> 
+            <td width="29%"><font color="#FFFFFF" size="2" face="Verdana, Arial, Helvetica, sans-serif"><b>Variable</b></font></td>
+            <td width="48%"><font color="#FFFFFF" size="2" face="Verdana, Arial, Helvetica, sans-serif"><b>Description</b></font></td>
+            <td width="23%"><font color="#FFFFFF" size="2" face="Verdana, Arial, Helvetica, sans-serif"><b>Example</b></font></td>
+          </tr>
+          <tr valign="top"> 
+            <td><font face="Verdana, Arial, Helvetica, sans-serif" size="2">{Media.Width}</font></td>
+            <td><font face="Verdana, Arial, Helvetica, sans-serif" size="2">The 
+              output native Width in pixels</font></td>
+            <td><font face="Verdana, Arial, Helvetica, sans-serif" size="2">550</font></td>
+          </tr>
+          <tr valign="top"> 
+            <td><font face="Verdana, Arial, Helvetica, sans-serif" size="2">{Media.Height}</font></td>
+            <td><font face="Verdana, Arial, Helvetica, sans-serif" size="2">The 
+              output native Height in pixels</font></td>
+            <td><font face="Verdana, Arial, Helvetica, sans-serif" size="2">400</font></td>
+          </tr>
+          <tr valign="top"> 
+            <td><font face="Verdana, Arial, Helvetica, sans-serif" size="2">{Media.FrameRate}</font></td>
+            <td><font face="Verdana, Arial, Helvetica, sans-serif" size="2">The 
+              number of frames per second</font></td>
+            <td><font size="2" face="Verdana, Arial, Helvetica, sans-serif">12</font></td>
+          </tr>
+          <tr valign="top"> 
+            <td><font face="Verdana, Arial, Helvetica, sans-serif" size="2">{Media.Color}</font></td>
+            <td><font face="Verdana, Arial, Helvetica, sans-serif" size="2">The 
+              native background color to be output</font></td>
+            <td><font face="Verdana, Arial, Helvetica, sans-serif" size="2">#FFFFFF</font></td>
+          </tr>
+          <tr valign="top"> 
+            <td><font face="Verdana, Arial, Helvetica, sans-serif" size="2">{Media.NumFrames}</font></td>
+            <td><font face="Verdana, Arial, Helvetica, sans-serif" size="2">Total 
+              number of frames</font></td>
+            <td><font face="Verdana, Arial, Helvetica, sans-serif" size="2">20</font></td>
+          </tr>
+          <tr valign="top"> 
+            <td><font face="Verdana, Arial, Helvetica, sans-serif" size="2">{Media.Flash.Version}</font></td>
+            <td><font face="Verdana, Arial, Helvetica, sans-serif" size="2">The 
+              numeric version to use when generating Flash</font></td>
+            <td><font face="Verdana, Arial, Helvetica, sans-serif" size="2">6</font></td>
+          </tr>
+          <tr valign="top"> 
+            <td><font face="Verdana, Arial, Helvetica, sans-serif" size="2">{Media.Debug}</font></td>
+            <td><font face="Verdana, Arial, Helvetica, sans-serif" size="2">A 
+              boolean value that specifies whether the Turbine Window will be 
+              included on the generated media. On Flash, also defines if a native 
+              debug tag will be emitted, allowing the movie to be debugged on 
+              the browser/Flash editor</font></td>
+            <td><font size="2" face="Verdana, Arial, Helvetica, sans-serif">Yes</font></td>
+          </tr>
+          <tr valign="top"> 
+            <td><font face="Verdana, Arial, Helvetica, sans-serif" size="2">{Media.Protect}</font></td>
+            <td><font face="Verdana, Arial, Helvetica, sans-serif" size="2">Whether 
+              the output media will be protected - for example when generating 
+              Flash this means the &quot;protect from import&quot; flag</font></td>
+            <td><font face="Verdana, Arial, Helvetica, sans-serif" size="2">No</font></td>
+          </tr>
+          <tr valign="top"> 
+            <td><font face="Verdana, Arial, Helvetica, sans-serif" size="2">{Media.Compress}</font></td>
+            <td><font face="Verdana, Arial, Helvetica, sans-serif" size="2">If 
+              non-zero, specifies the level of output compression, from 1 to 9, 
+              with 9 being the best compression. If 0 or &quot;No&quot;, no compression 
+              is applied. On Flash, applies Flash 6+ compression to the generated 
+              movie</font></td>
+            <td><font face="Verdana, Arial, Helvetica, sans-serif" size="2">9</font></td>
+          </tr>
+          <tr valign="top"> 
+            <td><font size="2" face="Verdana, Arial, Helvetica, sans-serif">{Media.Script}</font></td>
+            <td><font size="2" face="Verdana, Arial, Helvetica, sans-serif"> The 
+              complete URL path to the executed PHP script </font></td>
+            <td><font size="2" face="Verdana, Arial, Helvetica, sans-serif">/turbine/script.php</font></td>
+          </tr>
+          <tr valign="top"> 
+            <td><font size="2" face="Verdana, Arial, Helvetica, sans-serif">{Media.Query}</font></td>
+            <td><font size="2" face="Verdana, Arial, Helvetica, sans-serif">The 
+              QUERY_STRING used to call the script</font></td>
+            <td><font size="2" face="Verdana, Arial, Helvetica, sans-serif">person=Mathilda</font></td>
+          </tr>
+          <tr valign="top"> 
+            <td><font size="2" face="Verdana, Arial, Helvetica, sans-serif">{Media.Location}</font></td>
+            <td><font size="2" face="Verdana, Arial, Helvetica, sans-serif">The 
+              path and query string used to request this script - very useful 
+              for self-referencing</font></td>
+            <td><font size="2" face="Verdana, Arial, Helvetica, sans-serif">/turbine/script.php?<br>
+              person=Mathilda </font></td>
+          </tr>
+          <tr valign="top"> 
+            <td><font size="2" face="Verdana, Arial, Helvetica, sans-serif">{Movie.Self}</font></td>
+            <td><font size="2" face="Verdana, Arial, Helvetica, sans-serif">The 
+              path and query string used to request this script, for use with 
+              the GenerateHTMLFirst command, for self-referencing</font></td>
+            <td><font size="2" face="Verdana, Arial, Helvetica, sans-serif">/turbine/script.php?<br>
+              person=Mathilda&amp;<br>
+              _media</font></td>
+          </tr>
+        </table>
+        <p><font size="3" face="Verdana, Arial, Helvetica, sans-serif"><strong><br>
+          Media.PDF:</strong></font></p>
+        <p><font size="2" face="Verdana, Arial, Helvetica, sans-serif">When generating 
+          Adobe PDF documents, Turbine also uses these variables:</font></p>
+        <table BORDER cellspacing=0 cellpadding=4 cols=3 width="97%" >
+          <tr valign="top" bgcolor="#000000"> 
+            <td width="29%"><font color="#FFFFFF" size="2" face="Verdana, Arial, Helvetica, sans-serif"><b>Variable</b></font></td>
+            <td width="48%"><font color="#FFFFFF" size="2" face="Verdana, Arial, Helvetica, sans-serif"><b>Description</b></font></td>
+            <td width="23%"><font color="#FFFFFF" size="2" face="Verdana, Arial, Helvetica, sans-serif"><b>Example</b></font></td>
+          </tr>
+          <tr valign="top"> 
+            <td><font face="Verdana, Arial, Helvetica, sans-serif" size="2">{Media.PDF.Version}</font></td>
+            <td><font face="Verdana, Arial, Helvetica, sans-serif" size="2">The 
+              numeric PDF version to use when generating PDF. <br>
+              For Acrobat PDF viewer 6, use 5, for Acrobat PDF viewer 5 use 4 
+              and so on. Default is version 2, requiring Acrobat PDF viewer 3.</font></td>
+            <td><font face="Verdana, Arial, Helvetica, sans-serif" size="2">2</font></td>
+          </tr>
+          <tr valign="top"> 
+            <td><font face="Verdana, Arial, Helvetica, sans-serif" size="2">{Media.PDF.Title}</font></td>
+            <td><font face="Verdana, Arial, Helvetica, sans-serif" size="2">The 
+              title of the PDF document. Visible in the document properties</font></td>
+            <td><font face="Verdana, Arial, Helvetica, sans-serif" size="2">My 
+              Title </font></td>
+          </tr>
+          <tr valign="top"> 
+            <td><font face="Verdana, Arial, Helvetica, sans-serif" size="2">{Media.PDF.Subject}</font></td>
+            <td><font face="Verdana, Arial, Helvetica, sans-serif" size="2">The 
+              subject of the PDF document. Visible in the document properties</font></td>
+            <td><font face="Verdana, Arial, Helvetica, sans-serif" size="2">My 
+              Subject</font></td>
+          </tr>
+          <tr valign="top"> 
+            <td><font face="Verdana, Arial, Helvetica, sans-serif" size="2">{Media.PDF.Author}</font></td>
+            <td><font face="Verdana, Arial, Helvetica, sans-serif" size="2">The 
+              author of the PDF document. Visible in the document properties</font></td>
+            <td><font face="Verdana, Arial, Helvetica, sans-serif" size="2">My 
+              Name</font></td>
+          </tr>
+          <tr valign="top"> 
+            <td><font face="Verdana, Arial, Helvetica, sans-serif" size="2">{Media.PDF.UserPassword}</font></td>
+            <td><font face="Verdana, Arial, Helvetica, sans-serif" size="2">When 
+              defined causes the PDF document to be encrypted. The user must provide 
+              this password in order to open it</font></td>
+            <td><font face="Verdana, Arial, Helvetica, sans-serif" size="2">MyPassword</font></td>
+          </tr>
+          <tr valign="top"> 
+            <td><font face="Verdana, Arial, Helvetica, sans-serif" size="2">{Media.PDF.OwnerPassword}</font></td>
+            <td><font face="Verdana, Arial, Helvetica, sans-serif" size="2">When 
+              defined causes the PDF document contents to be encrypted</font></td>
+            <td><font face="Verdana, Arial, Helvetica, sans-serif" size="2">MyPassword</font></td>
+          </tr>
+          <tr valign="top"> 
+            <td><font face="Verdana, Arial, Helvetica, sans-serif" size="2">{Media.PDF.Permissions}</font></td>
+            <td><p><font size="2" face="Verdana, Arial, Helvetica, sans-serif">PDF 
+                document permissions, a combination of:<br>
+                noPrinting - the PDF user can't print the document<br>
+                noChanging - the PDF user can't change the document<br>
+                noContentCopying - the user can't copy the document contents<br>
+                noCommenting - the user can't comment the document.</font></p>
+              <p><font face="Verdana, Arial, Helvetica, sans-serif" size="2">This 
+                variable only has any effect if the PDF document is encrypted. 
+                To encrypt a PDF document set {Media.PDF.UserPassword} or {Media.PDF.OwnerPassword}</font></p></td>
+            <td><font face="Verdana, Arial, Helvetica, sans-serif" size="2">noPrinting</font></td>
+          </tr>
+        </table>
+        <p><font size="2" face="Verdana, Arial, Helvetica, sans-serif"><br>
+          </font><font size="3" face="Verdana, Arial, Helvetica, sans-serif"><strong>System:</strong></font></p>
+        <p><font size="2" face="Verdana, Arial, Helvetica, sans-serif">Default 
+          values for System variables are read from the system.settings file on 
+          the Turbine installation directory - this file is read during webserver 
+          start/restart time.<br>
+          The following System variables are defined:</font></p>
+        <table BORDER cellspacing=0 cellpadding=4 cols=3 width="100%" >
+          <tr valign="top" bgcolor="#000000"> 
+            <td width="42%"><font color="#FFFFFF" size="2" face="Verdana, Arial, Helvetica, sans-serif"><b>Variable</b></font></td>
+            <td width="44%"><font color="#FFFFFF" size="2" face="Verdana, Arial, Helvetica, sans-serif"><b>Description</b></font></td>
+            <td width="14%"><font color="#FFFFFF" size="2" face="Verdana, Arial, Helvetica, sans-serif"><b>Example</b></font></td>
+          </tr>
+          <tr valign="top"> 
+            <td><font size="2" face="Verdana, Arial, Helvetica, sans-serif">{System.Log}</font></td>
+            <td><font size="2" face="Verdana, Arial, Helvetica, sans-serif">The 
+              log level, a combination of:<br>
+              errors - log errors<br>
+              warnings - log warnings<br>
+              info - log information messages</font></td>
+            <td><font size="2" face="Verdana, Arial, Helvetica, sans-serif">errors, 
+              warnings</font></td>
+          </tr>
+          <tr valign="top"> 
+            <td><font size="2" face="Verdana, Arial, Helvetica, sans-serif">{System.LogTo}</font></td>
+            <td><font size="2" face="Verdana, Arial, Helvetica, sans-serif">Where 
+              to log into, a combination of:<br>
+              media - log into the Turbine Window<br>
+              file - log to the turbine.log file</font></td>
+            <td><font size="2" face="Verdana, Arial, Helvetica, sans-serif">media</font></td>
+          </tr>
+          <tr valign="top"> 
+            <td><font size="2" face="Verdana, Arial, Helvetica, sans-serif">{System.Debug}</font></td>
+            <td><font size="2" face="Verdana, Arial, Helvetica, sans-serif">The 
+              default value to use in the {Media.Debug}, if not specified by user</font></td>
+            <td><font size="2" face="Verdana, Arial, Helvetica, sans-serif">No</font></td>
+          </tr>
+          <tr valign="top"> 
+            <td><font size="2" face="Verdana, Arial, Helvetica, sans-serif">{System.Protect}</font></td>
+            <td><font size="2" face="Verdana, Arial, Helvetica, sans-serif">The 
+              default value to use in the {Media.Protect} variable, if not specified</font></td>
+            <td><font size="2" face="Verdana, Arial, Helvetica, sans-serif">No</font></td>
+          </tr>
+          <tr valign="top"> 
+            <td><font size="2" face="Verdana, Arial, Helvetica, sans-serif">{System.Compress}</font></td>
+            <td><font size="2" face="Verdana, Arial, Helvetica, sans-serif">The 
+              default value to use in the {Media.Compress} variable, if not specified</font></td>
+            <td><font size="2" face="Verdana, Arial, Helvetica, sans-serif">No</font></td>
+          </tr>
+          <tr valign="top"> 
+            <td><font size="2" face="Verdana, Arial, Helvetica, sans-serif">{System.FontName}</font></td>
+            <td><font size="2" face="Verdana, Arial, Helvetica, sans-serif">The 
+              default font name to use when not specified in a &lt;Text&gt; tag</font></td>
+            <td><font size="2" face="Verdana, Arial, Helvetica, sans-serif">Arial</font></td>
+          </tr>
+          <tr valign="top"> 
+            <td><font size="2" face="Verdana, Arial, Helvetica, sans-serif">{System.FontStyle}</font></td>
+            <td><font size="2" face="Verdana, Arial, Helvetica, sans-serif">The 
+              default font style to use when not specified in a &lt;Text&gt; tag</font></td>
+            <td><font size="2" face="Verdana, Arial, Helvetica, sans-serif">bold, 
+              italic</font></td>
+          </tr>
+          <tr valign="top"> 
+            <td><font size="2" face="Verdana, Arial, Helvetica, sans-serif"> {System.FontSize}</font></td>
+            <td><font size="2" face="Verdana, Arial, Helvetica, sans-serif">The 
+              default font size to use when not specified in a &lt;Text&gt; tag. 
+              Must be expressed in a value where the size in pixels is multiplied 
+              by 20 - for example a 20 pixel font size should be specified here 
+              as <br>
+              20 * 20 = 400</font></td>
+            <td><font size="2" face="Verdana, Arial, Helvetica, sans-serif">400</font></td>
+          </tr>
+          <tr valign="top"> 
+            <td><font size="2" face="Verdana, Arial, Helvetica, sans-serif"> {System.FontColor}</font></td>
+            <td><font size="2" face="Verdana, Arial, Helvetica, sans-serif">The 
+              default text color to use when not specified in a &lt;Text&gt; tag</font></td>
+            <td><font size="2" face="Verdana, Arial, Helvetica, sans-serif">#000000</font></td>
+          </tr>
+          <tr valign="top"> 
+            <td><font size="2" face="Verdana, Arial, Helvetica, sans-serif">{System.FontMapSans}<br>
+              {System.FontMapSerif}<br>
+              {System.FontMapTypewriter}</font></td>
+            <td><p><font size="2" face="Verdana, Arial, Helvetica, sans-serif">The 
+                font names to be used (mapped) when a font is not available and 
+                needs to be mapped.<br>
+                Far East users might prefer to use other font faces - for example 
+                MS Gothic or MS Mincho or Arial Unicode MS</font></p></td>
+            <td><font face="Verdana, Arial, Helvetica, sans-serif" size="2">Arial</font></td>
+          </tr>
+          <tr valign="top"> 
+            <td><font size="2" face="Verdana, Arial, Helvetica, sans-serif">{System.ImageEncodeFlags}</font></td>
+            <td><font size="2" face="Verdana, Arial, Helvetica, sans-serif"> Default 
+              encoding for images, when not specified in the &lt;image&gt; tag. 
+              Can be 0, to use the image's native encoding or one of:<br>
+              1 - JPEG encoding<br>
+              2 - ZLIB encoding, <br>
+              3 - use one of JPEG or ZLIB that produces better compression</font></td>
+            <td><font size="2" face="Verdana, Arial, Helvetica, sans-serif">3</font></td>
+          </tr>
+          <tr valign="top"> 
+            <td><font face="Verdana, Arial, Helvetica, sans-serif" size="2">{System.ImageEncodeQuality}</font></td>
+            <td><font face="Verdana, Arial, Helvetica, sans-serif" size="2">Default 
+              encoding quality, in percentage, to use when not specified on the 
+              &lt;Image&gt; tag. Similar to common JPEG quality /compression settings</font></td>
+            <td><font face="Verdana, Arial, Helvetica, sans-serif" size="2">85</font></td>
+          </tr>
+          <tr valign="top"> 
+            <td><font size="2" face="Verdana, Arial, Helvetica, sans-serif"> {System.ImageSmooth}</font></td>
+            <td><font face="Verdana, Arial, Helvetica, sans-serif" size="2">Default 
+              smoothening to use if not specified on the &lt;Image&gt; tag. Use 
+              0 for no smoothening</font></td>
+            <td><font face="Verdana, Arial, Helvetica, sans-serif" size="2">0</font></td>
+          </tr>
+          <tr valign="top"> 
+            <td><font face="Verdana, Arial, Helvetica, sans-serif" size="2">{System.ImageResampleMethod}</font></td>
+            <td><font face="Verdana, Arial, Helvetica, sans-serif" size="2">The 
+              image resizing method to use if not specified on an &lt;Image&gt; 
+              tag. One of:<br>
+              0 - raw pixel resize<br>
+              1 - average pixel resize<br>
+              2 - bilinear resize<br>
+              3 - bicubic resize<br>
+              </font></td>
+            <td><font face="Verdana, Arial, Helvetica, sans-serif" size="2">2</font></td>
+          </tr>
+          <tr valign="top"> 
+            <td><font face="Verdana, Arial, Helvetica, sans-serif" size="2">{System.MMLTagRequired}</font></td>
+            <td><font face="Verdana, Arial, Helvetica, sans-serif" size="2">A 
+              boolean value that specifies whether MML tags used in Flash .swf 
+              templates must have be enclosed in &lt;mml&gt; ... &lt;/mml&gt; 
+              tags. <br>
+              Should be used if there's the danger of unintended MML tags used 
+              in Flash templates being parsed by Turbine.</font></td>
+            <td><font size="2" face="Verdana, Arial, Helvetica, sans-serif">No</font></td>
+          </tr>
+          <tr valign="top"> 
+            <td><font face="Verdana, Arial, Helvetica, sans-serif" size="2">{System.MMLWarnUnknownTags}</font></td>
+            <td><font face="Verdana, Arial, Helvetica, sans-serif" size="2">Boolean 
+              value that specifies whether unknown MML tags raise warnings. Good 
+              during development to find locate misspellings in MML tags</font></td>
+            <td><font face="Verdana, Arial, Helvetica, sans-serif" size="2">Yes</font></td>
+          </tr>
+          <tr valign="top"> 
+            <td><font face="Verdana, Arial, Helvetica, sans-serif" size="2">{System.AutoLayout}</font></td>
+            <td><font size="2" face="Verdana, Arial, Helvetica, sans-serif">The 
+              default mode used on the AutoLayout functionality - one of horizontal, 
+              vertical or off</font></td>
+            <td><font face="Verdana, Arial, Helvetica, sans-serif" size="2">vertical</font></td>
+          </tr>
+        </table>
+        <p>&nbsp;</p>
+        <p><font size="5" face="Arial, Helvetica, sans-serif"><a name="expressionvariables"></a>Expression 
+          Variables </font></p>
+        <p><font size="2" face="Verdana, Arial, Helvetica, sans-serif">Turbine 
+          variables with numeric values can be used in expressions by using a 
+          <font face="Courier New, Courier, mono">{=...} </font>syntax. For example 
+          - suppose we have two Turbine variables, {a} and {b}, with values 10 
+          and 20, respectively. To add these two Turbine variables we can use:</font></p>
+        <blockquote> 
+          <p><font size="2" face="Courier New, Courier, mono">{= a + b}</font></p>
+        </blockquote>
+        <p><font size="2" face="Verdana, Arial, Helvetica, sans-serif">Which when 
+          expanded, would be substituted by the sum of their values, the number 
+          30. All the common operations are available on these expressions, including 
+          parenthesis, producing the expected expression results. Some examples 
+          of valid expressions are:</font></p>
+        <blockquote> 
+          <p><font size="2" face="Courier New, Courier, mono">{= a - 1}<br>
+            {= (a + b) / 2}<br>
+            {= a * (b + c) - 1}</font></p>
+        </blockquote>
+        <p><font size="2" face="Verdana, Arial, Helvetica, sans-serif">Expressions 
+          are useful for example on situations where values relative to a certain 
+          variable are needed - this is very frequent for example when drawing 
+          shapes with the <a href="mmlreference.htm#shape">&lt;Shape&gt;</a> MML 
+          tag.</font></p>
+        <p>&nbsp;</p>
+        <p><font size="5" face="Arial, Helvetica, sans-serif"><a name="datasets"></a>DataSets</font></p>
+        <p><font face="Verdana, Arial, Helvetica, sans-serif" size="2">Tabular 
+          information is hard to manage using simple Turbine variables - for example 
+          displaying a text table can be a pain if you need to define and display 
+          all the individual variables, one by one. Turbine includes support for 
+          a structured, table-like type of variables named DataSets. An example 
+          of a Turbine DataSet is:&nbsp;</font> </p>
+        <table width="90%" border="1" cellpadding="4" cellspacing="0">
+          <tr bgcolor="#000000"> 
+            <td width="38%"><strong><font color="#FFFFFF" size="2" face="Verdana, Arial, Helvetica, sans-serif">&lt;name,</font></strong></td>
+            <td width="52%"><strong><font color="#FFFFFF" size="2" face="Verdana, Arial, Helvetica, sans-serif">address,</font></strong></td>
+            <td width="10%"><strong><font color="#FFFFFF" size="2" face="Verdana, Arial, Helvetica, sans-serif">age&gt;</font></strong></td>
+          </tr>
+          <tr> 
+            <td width="38%"><font face="Courier New, Courier, mono" size="2">&quot;John 
+              Doe&quot;,</font></td>
+            <td width="52%"><font face="Courier New, Courier, mono" size="2">&quot;Street 
+              Nine 7&quot;,</font></td>
+            <td width="10%"><font face="Courier New, Courier, mono" size="2">41</font></td>
+          </tr>
+          <tr> 
+            <td width="38%"><font face="Courier New, Courier, mono" size="2">&quot;Carlo 
+              Marini&quot;,</font></td>
+            <td width="52%"><font face="Courier New, Courier, mono" size="2">&quot;Naples 
+              Blvd 15&quot;,</font></td>
+            <td width="10%"><font face="Courier New, Courier, mono" size="2">17</font></td>
+          </tr>
+          <tr> 
+            <td width="38%" height="12"><font face="Courier New, Courier, mono" size="2">&quot;Maria 
+              Caillias&quot;,</font></td>
+            <td width="52%" height="12"><font face="Courier New, Courier, mono" size="2">&quot;Rue 
+              de Progresse 11&quot;,</font></td>
+            <td width="10%" height="12"><font face="Courier New, Courier, mono" size="2">32</font></td>
+          </tr>
+        </table>
+        <p><font face="Verdana, Arial, Helvetica, sans-serif" size="2">So DataSets 
+          are basically tables - but what do you gain with that?<br>
+          By defining a DataSet you will be able to use its data on a variety 
+          of DataSet-driven MML commands where table-like information is needed: 
+          for example commands like the &lt;Chart&gt;, &lt;AutoMedia&gt;, &lt;AutoImage&gt; 
+          or &lt;AutoMovieClip&gt; tags.</font> 
+        <p><font face="Verdana, Arial, Helvetica, sans-serif" size="2">DataSets 
+          can be defined in a number of ways, similar to Turbine variables. And 
+          also l</font><font size="2" face="Verdana, Arial, Helvetica, sans-serif">ike 
+          Turbine Variables, DataSets can also be published into player-time Flash Action Script variables, arrays or named arrays.<br>
+          &nbsp; </font> 
+        <p><font size="3" face="Arial, Helvetica, sans-serif"><strong>DataSet 
+          Cells and Turbine Variables</strong></font></p>
+        <p><font face="Verdana, Arial, Helvetica, sans-serif" size="2">A useful 
+          feature of DataSets is that individual cells can be accessed like normal 
+          Turbine variables by using the Turbine variable <b>{}</b> syntax, with 
+          the following format:</font></p>
+        <blockquote> 
+          <p><font face="Courier New, Courier, mono" size="2">{DataSetName$ColumnName.RowNumber}</font></p>
+        </blockquote>
+        <p><font face="Verdana, Arial, Helvetica, sans-serif" size="2">RowNumber 
+          starts at 0 - the first row is row number 0. For example on the above 
+          DataSet, the age of <i>Carlo Marini</i>, which is located at the 2nd 
+          row in the Age column (that is on row number 1), can be referenced by:</font></p>
+        <blockquote> 
+          <p><font face="Courier New, Courier, mono" size="2">{People$Age.1}</font></p>
+        </blockquote>
+        <p><font face="Verdana, Arial, Helvetica, sans-serif" size="2">this assumes 
+          the above DataSet name was defined as the 'People' DataSet.</font></p>
+        <p>&nbsp;<br>
+          <font face="Arial, Helvetica, sans-serif" size="3"><strong>DataSet Ranges</strong></font></p>
+        <p><font face="Verdana, Arial, Helvetica, sans-serif" size="2">Suppose 
+          you need to reference row sections of the same DataSet - for example 
+          on the first screen of a product list you just want to display the first 
+          5 products (the first 5 rows of the DataSet). Anywhere a DataSet name 
+          can be used, you can have Turbine use just a range of the rows by using 
+          the following syntax:</font></p>
+        <blockquote> 
+          <p><font face="Courier New, Courier, mono" size="2">dataSetName[<font color="#0000CC">first_row</font><b>..</b><font color="#0000CC">last_row</font>]</font></p>
+        </blockquote>
+        <p><font face="Verdana, Arial, Helvetica, sans-serif" size="2">so the 
+          first 5 items of the DataSet would be specified as People[0...4] , the 
+          next 5 items as People[5...9] , and so on.<br>
+          Additionally you can avoid specifying the last_row:</font></p>
+        <blockquote> 
+          <p><font face="Courier New, Courier, mono" size="2">dataSetName[<i><font color="#0000CC">first_row</font><b>..</b></i>]</font></p>
+        </blockquote>
+        <p> <font face="Verdana, Arial, Helvetica, sans-serif" size="2">This refers 
+          to a range of rows starting on row first_row till the last existing 
+          row of the DataSet.</font></p>
+        <p><font size="5" face="Arial, Helvetica, sans-serif">&nbsp;</font></p>
+        <p><font size="5" face="Arial, Helvetica, sans-serif"><a name="usingdatasets"></a>Using 
+          DataSets</font></p>
+        <p><font size="2" face="Verdana, Arial, Helvetica, sans-serif">DataSets 
+          can be used in several MML commands - for example:</font></p>
+        <ul>
+          <li><font face="Verdana, Arial, Helvetica, sans-serif" size="2"><a href="mmlreference.htm#chart">Chart</a> 
+            command: displays charts based on DataSet's numeric columns.</font></li>
+          <li><font size="2" face="Verdana, Arial, Helvetica, sans-serif"><a href="mmlreference.htm#automovieclip">AutoMovieClip</a> 
+            command: display lists or grids of movie clips</font></li>
+          <li><font face="Verdana, Arial, Helvetica, sans-serif" size="2"><a href="mmlreference.htm#autoimage">AutoImage</a> 
+            command: display lists or grids of images</font></li>
+          <li><font face="Verdana, Arial, Helvetica, sans-serif" size="2"><a href="mmlreference.htm#automedia">AutoMedia</a> 
+            command: display lists or grids of any MML elements</font></li>
+        </ul>
+        <p><font size="2" face="Verdana, Arial, Helvetica, sans-serif">As with 
+          Turbine variables, DataSets naturally need to be defined before being 
+          used in any of these commands. Since commands are parsed when an MML 
+          or Flash template is loaded, DataSets should usually be defined before 
+          template loading is performed.</font></p>
+        <p><font size="5" face="Arial, Helvetica, sans-serif">&nbsp;</font></p>
+        <p><font size="5" face="Arial, Helvetica, sans-serif"><a name="loadingdatasetfile" id="loadingdatasetfile"></a>Loading 
+          a DataSet from a File</font></p>
+        <p><font face="Verdana, Arial, Helvetica, sans-serif" size="2">DataSets 
+          can be defined in a number of different ways - for example they can 
+          be loaded from a special text format:</font></p>
+        <blockquote> 
+          <p><font size="2" face="Courier New, Courier, mono">&lt;col1_name, col2_name, 
+            &nbsp;col3_name, &nbsp;...&gt;<br>
+            col1_value, col2_value, col3_value, ...<br>
+            col1_value, col2_value, col3_value, ...<br>
+            col1_value, col2_value, col3_value, ... <br>
+            ...</font></p>
+        </blockquote>
+        <p><font size="2" face="Verdana, Arial, Helvetica, sans-serif">On this 
+          format, the first line defines the names of the involved DataSet columns 
+          and must be specified inside a &lt; &gt; block by coma-separated values. 
+          After this header, each line defines a DataSet row by having the values 
+          separated by commas. The following rules are needed:</font></p>
+        <ul>
+          <li><font size="2" face="Verdana, Arial, Helvetica, sans-serif">Strings 
+            must be delimited by &quot; double-quote characters - no problem if 
+            there are any comas inside the string</font></li>
+          <li><font size="2" face="Verdana, Arial, Helvetica, sans-serif">To use 
+            a double-quote character inside a string, escape it with the backslash 
+            (\) character like this: \&quot;</font></li>
+          <li><font size="2" face="Verdana, Arial, Helvetica, sans-serif">For 
+            convenience, the DataSet file can also include comment lines (which 
+            will be ignored), starting by the hash (#) character.</font></li>
+        </ul>
+        <p><font size="2" face="Verdana, Arial, Helvetica, sans-serif">So the 
+          above DataSet would be formatted in a text file as:</font></p>
+        <blockquote> 
+          <p><font size="2" face="Verdana, Arial, Helvetica, sans-serif"><strong>&lt;name, 
+            address, age&gt;</strong></font><font size="2" face="Courier New, Courier, mono"><br>
+            &quot;John Doe&quot;, &quot;Street Nine 7&quot;, 41<br>
+            &quot;Carlo Marini&quot;, &quot;Naples Blvd 15&quot;, 17<br>
+            &quot;Maria Caillias&quot;, &quot;Rue de Progresse 11&quot;, 32</font></p>
+        </blockquote>
+        <p><font size="2" face="Verdana, Arial, Helvetica, sans-serif">To load 
+          a DataSet from a such a file, in an PHP script we would use the following 
+          command:</font></p>
+        <blockquote> 
+          <p><font size="2" face="Courier New, Courier, mono"> $turbine-&gt;loadDataSet(&quot;datasetfile.txt&quot;, 
+            &quot;dataSetName&quot;);</font></p>
+        </blockquote>
+        <p><font size="2" face="Verdana, Arial, Helvetica, sans-serif">From an 
+          MML script we could use the &lt;DataSet&gt; tag:</font></p>
+        <blockquote> 
+          <p><font size="2" face="Courier New, Courier, mono">&lt;DataSet src=&quot;datasetfile.txt&quot; 
+            dataSet=&quot;dataSetName&quot;/&gt;</font></p>
+        </blockquote>
+        <p><font size="2" face="Verdana, Arial, Helvetica, sans-serif">As in other 
+          commands and tags, both local files and remote HTTP locations can be 
+          accessed.<br>
+          Both this PHP call and the MML tag can also read DataSets from XML files 
+          in the format described <a href="#loadingdatasetxml">below</a>.</font></p>
+        <p>&nbsp;</p>
+        <p><font size="5" face="Arial, Helvetica, sans-serif"><a name="manualdataset" id="manualdataset"></a>Manually 
+          Creating a DataSet</font></p>
+        <p><font face="Verdana, Arial, Helvetica, sans-serif" size="2">DataSets 
+          can also be manually created in a row-by-row basis from inside PHP scripts 
+          - please see the following example:</font></p>
+        <table width="550" border="0" cellspacing="12" cellpadding="0" bgcolor="#FFFFCC">
+          <tr> 
+            <td valign="top"> <p><font color="#009900" size="2" face="Courier New, Courier, mono">...</font></p>
+              <p><font size="2" face="Courier New, Courier, mono"><font color="#009900"># 
+                create a DataSet named People with three columns:<br>
+                </font>$turbine-&gt;makeDataSet(&quot;People&quot;, &quot;name, 
+                address, age&quot;);</font></p>
+              <p><font size="2" face="Courier New, Courier, mono"><font color="#009900"># 
+                add first row:</font><br>
+                $turbine-&gt;addDataSetRow(&quot;</font><font face="Courier New, Courier, mono" size="2">John 
+                Doe, Street Nine 7, 41&quot;);</font></p>
+              <p><font size="2" face="Courier New, Courier, mono"><font color="#009900"># 
+                add second row:</font><br>
+                $turbine-&gt;addDataSetRow(&quot;</font><font face="Courier New, Courier, mono" size="2">Carlo 
+                Marini, Naples Blvd 15, 17&quot;);</font></p>
+              <p><font size="2" face="Courier New, Courier, mono"><font color="#009900">' 
+                add third row:</font><br>
+                $turbine-&gt;addDataSetRow(&quot;</font><font face="Courier New, Courier, mono" size="2">Maria 
+                Caillias, Rue de Progresse 11, 32&quot;);</font></p>
+              <p><font color="#009900" size="2" face="Courier New, Courier, mono">...</font><font size="2" face="Courier New, Courier, mono">&nbsp;<br>
+                </font></p></td>
+          </tr>
+        </table>
+        <p><font size="2" face="Verdana, Arial, Helvetica, sans-serif">Another 
+          possibility is to define a DataSet from a string containing the entire 
+          DataSet, with column name definitions and DataSet rows - on the same 
+          format as when loading from a file:</font></p>
+        <blockquote> 
+          <p><font size="2" face="Verdana, Arial, Helvetica, sans-serif"> <font face="Courier New, Courier, mono">$turbine-&gt;dataSetFromString(<br>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+            &quot;&lt;name, address, age&gt;\nJohn Doe...&quot;, <br>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+            &quot;People&quot;);</font></font></p>
+        </blockquote>
+        <p><font size="2" face="Verdana, Arial, Helvetica, sans-serif">And yet 
+          another way is by loading from an XML string, which also can be accomplished 
+          using the DataSetFromString, with a few extra parameters.</font></p>
+        <p><font size="2" face="Verdana, Arial, Helvetica, sans-serif">&nbsp;</font></p>
+        <p><font size="5" face="Arial, Helvetica, sans-serif"><a name="loadingdatasetxml" id="loadingdatasetxml"></a>Loading 
+          a DataSet from XML</font></p>
+        <p><font face="Verdana, Arial, Helvetica, sans-serif" size="2">DataSets 
+          can also be loaded from XML documents by specifying which tags to use 
+          for the DataSet rows and which tags or attributes to use for the DataSet 
+          column values inside each row. The basic principle is the one outlined 
+          on this example - suppose the following XML document:</font></p>
+        <table width="100%" border="0" cellpadding="16" cellspacing="0" bgcolor="#eeeef4">
+          <tr> 
+            <td width="405"> <p><font face="Courier New, Courier, mono" size="2">&lt;book&gt;</font></p>
+              <p><font face="Courier New, Courier, mono" size="2">&nbsp;&lt;name&gt;Gone 
+                with the rain&lt;/name&gt;<br>
+                &nbsp;&lt;author&gt;Arabian Bruce Lawrence&lt;/author&gt;<br>
+                &nbsp;&lt;price&gt;$39&lt;/price&gt;</font></p>
+              <p><font face="Courier New, Courier, mono" size="2">&nbsp;&lt;chapter&gt; 
+                <br>
+                &nbsp;&nbsp;&nbsp;&lt;title id=&quot;1&quot;&gt;First Launch&lt;/title&gt;<br>
+                &nbsp;&nbsp;&nbsp;&lt;pages&gt;45&lt;/pages&gt;<br>
+                &nbsp;&nbsp;&nbsp;&lt;interesting&gt;90%&lt;/interesting&gt;<br>
+                &nbsp;&nbsp;&nbsp;&lt;topics&gt;Love, hate, adventure&lt;/topics&gt;<br>
+                &nbsp;&lt;/chapter&gt;</font></p>
+              <p> <font face="Courier New, Courier, mono" size="2">&nbsp;&lt;chapter&gt;<br>
+                &nbsp;&nbsp;&nbsp;&lt;title id=&quot;2&quot;&gt;Second Launch&lt;/title&gt;<br>
+                &nbsp;&nbsp;&nbsp;&lt;pages&gt;71&lt;/pages&gt;<br>
+                &nbsp;&nbsp;&nbsp;&lt;interesting&gt;30%&lt;/interesting&gt;<br>
+                &nbsp;&nbsp;&nbsp;&lt;topics&gt;Love&lt;/topics&gt;<br>
+                &nbsp;&lt;/chapter&gt;</font></p>
+              <p><font face="Courier New, Courier, mono" size="2">&lt;/book&gt;<br>
+                &nbsp; </font></p></td>
+          </tr>
+        </table>
+        <p><font face="Verdana, Arial, Helvetica, sans-serif" size="2">From this 
+          XML, we'd like to extract a DataSet with the book chapter information 
+          - it should end up in a DataSet like this: </font></p>
+        <table width="94%" border="1" cellspacing="0" cellpadding="4">
+          <tr bgcolor="#000000"> 
+            <td width="26%"><font color="#FFFFFF" size="2" face="Verdana, Arial, Helvetica, sans-serif"><b>&lt;title,</b></font></td>
+            <td width="13%"><font color="#FFFFFF" size="2" face="Verdana, Arial, Helvetica, sans-serif"><b>pages,</b></font></td>
+            <td width="20%"><font color="#FFFFFF" size="2" face="Verdana, Arial, Helvetica, sans-serif"><b>interesting,</b></font></td>
+            <td width="41%"><font color="#FFFFFF" size="2" face="Verdana, Arial, Helvetica, sans-serif"><b>topics&gt;</b></font></td>
+          </tr>
+          <tr> 
+            <td width="26%"><font face="Courier New, Courier, mono" size="2">&quot;First 
+              Launch&quot;,</font></td>
+            <td width="13%"><font face="Courier New, Courier, mono" size="2">45,</font></td>
+            <td width="20%"><font face="Courier New, Courier, mono" size="2">&quot;90%&quot;,</font></td>
+            <td width="41%"><font face="Courier New, Courier, mono" size="2">&quot;Love, 
+              hate adventure&quot;</font></td>
+          </tr>
+          <tr> 
+            <td width="26%"><font face="Courier New, Courier, mono" size="2">&quot;Second 
+              Launch&quot;,</font></td>
+            <td width="13%"><font face="Courier New, Courier, mono" size="2">71,</font></td>
+            <td width="20%"><font face="Courier New, Courier, mono" size="2">&quot;30%&quot;,</font></td>
+            <td width="41%"><font face="Courier New, Courier, mono" size="2">&quot;Love&quot;</font></td>
+          </tr>
+        </table>
+        <p><font face="Verdana, Arial, Helvetica, sans-serif" size="2">We'd be 
+          interested on the <i>&lt;chapter&gt;</i> tag to be the tag that marks 
+          each DataSet row, and on the <i>title</i>, <i>pages</i>, <i>interesting</i> 
+          and <i>topic</i> tags to be our columns inside each of those DataSet 
+          rows. To load a DataSet from this XML document, we could use the LoadDataSet 
+          command we've seen above, with two extra parameters:</font></p>
+        <blockquote> 
+          <p><font size="2" face="Courier New, Courier, mono">$turbine-&gt;loadDataSet(&quot;book.txt&quot;, 
+            <br>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+            &quot;dataSetName&quot;, <br>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<font color="#333333">&quot;chapter&quot;, 
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&quot;title,pages,interesting,topics&quot;</font>);</font></p>
+        </blockquote>
+        <p><font face="Verdana, Arial, Helvetica, sans-serif" size="2">The first 
+          parameter is the absolute or relative local path, or remote HTTP location 
+          of the file, which should contain a well-formed XML document. The second 
+          parameter is the DataSet name, next is the name of the tag to use for 
+          each row, last is a comma-separated list of tags to fill in as DataSet 
+          columns. The row tag and column tags can be specified in a few different 
+          ways, for example you can specify tag attributes to use as column values.<br>
+          With this information, XML data can be conveniently assimilated into 
+          Turbine DataSets, available for further use on any DataSet-driven command.</font></p>
+        <p>&nbsp;</p>
+        <p><font size="5" face="Arial, Helvetica, sans-serif"><a name="databasedatasets" id="databasedatasets"></a>Defining 
+          DataSets from Database Queries</font> 
+        <p><font face="Verdana, Arial, Helvetica, sans-serif" size="2">By using 
+          the PHP engine you can access information from several types of data 
+          sources, notably from several well-known relational databases. On this 
+          section we will describe how you can integrate PHP Turbine with 
+          content accessed from a database, such as MySQL or ODBC connected Databases. 
+          The idea is that a Turbine DataSet will be created from database query 
+          results.</font> 
+        <p><font face="Verdana, Arial, Helvetica, sans-serif" size="2">Let's see 
+          an example of how to do this accessing a MySQL database - we'll query 
+          the full name and address of some customers. Let's start by connecting 
+          to the database on the regular PHP manner:</font> 
+        <ul>
+          <font face="Verdana, Arial, Helvetica, sans-serif"><tt><font size="2" face="Courier New, Courier, mono">$conn 
+          = mysql_connect(&quot;host&quot;, &quot;user&quot;, &quot;password&quot;);<br>
+          mysql_select_db(&quot;customers&quot;);</font></tt></font> 
+        </ul>
+        <font face="Verdana, Arial, Helvetica, sans-serif" size="2">Next, we do 
+        the actual database query to the Customer table - since we want to retrieve 
+        a list of customer full name and addresses:</font> <blockquote>
+          <p><font size="2" face="Courier New, Courier, mono">$query = &quot;Select 
+            FullName and Address from Customers&quot;;<br>
+            $recordSet = mysql_query($query, $conn); </font></p>
+        </blockquote>
+        <p><font face="Verdana, Arial, Helvetica, sans-serif" size="2">At this 
+          point we have a $recordSet with the query results - we're now interested 
+          on creating a Data Set with the contents of this query. To do so we 
+          can use the functions a PHP script available on the libraries directory 
+          of the PHP Turbine installation, the dataset_import.php script. To require 
+          the script we could simply (depending on the executing script path):</font></p>
+        <ul>
+          <font face="Courier New, Courier, mono" size="2">require_once(&quot;../../libraries/dataset_import.php&quot;);</font> 
+        </ul>
+        <p><font face="Verdana, Arial, Helvetica, sans-serif" size="2">The dataset_import.php 
+          script defines functions that import the query results from specific 
+          databases (for example MySQL or ODBC) into Turbine. Since these functions 
+          are external to Turbine, functions to import query results from any 
+          other database can easily be created in this manner. The dataset_import.php 
+          file originally includes functions to import from MySQL and ODBC:</font></p>
+        <ul>
+          <font face="Courier New, Courier, mono" size="2">loadDataSetMySQL($turbine, 
+          $recordSet, &quot;dataSetName&quot;);<br>
+          <i><font face="Verdana, Arial, Helvetica, sans-serif">-and-</font></i><br>
+          loadDataSetODBC($turbine, $recordSet, &quot;dataSetName&quot;);</font> 
+        </ul>
+        <p><font face="Verdana, Arial, Helvetica, sans-serif" size="2">The preferred 
+          format for the name of these import functions is loadDataSet<b><font color="#0000FF">Database 
+          </font></b>where <font color="#0000FF">Database</font> is the type of 
+          the accessed Database.<br>
+          So to fetch our customers into a Turbine Data Set we would do:</font></p>
+        <ul>
+          <p><font face="Courier New, Courier, mono" size="2">loadDataSetMySQL($turbine, 
+            $recordSet, &quot;Customers&quot;);</font></p>
+        </ul>
+        <p><font face="Verdana, Arial, Helvetica, sans-serif" size="2">This will 
+          define a DataSet named Customers with two columns - &quot;FullName&quot; 
+          and &quot;Address&quot;, and as many lines as the ones returned from 
+          the above query. This DataSet can be used in any commands that require 
+          a DataSEt, to automatically generate movie clips, charts, etc.<br>
+          The complete source for the above is: </font></p>
+        <table border=0 cellspacing=0 cellpadding=0 cols=1 width="100%" bgcolor="#FFFFCC" >
+          <tr valign="top"> 
+            <td> <p><font face="Courier New, Courier, mono" size="2">&lt;?&nbsp; 
+                <br>
+                <i><font color="#009900"># create the turbine object:</font></i><br>
+                $turbine = new FlashTurbine();</font></p>
+              <p><font face="Courier New, Courier, mono" size="2"><i><font color="#009900"># 
+                load the dataset_import.php library</font></i>:<br>
+                require_once(&quot;../../libraries/dataset_import.php&quot;);</font></p>
+              <p><font face="Courier New, Courier, mono" size="2"><i><font color="#009900"># 
+                connect to database:</font></i><br>
+                $conn = mysql_connect(&quot;host&quot;, &quot;user&quot;, &quot;password&quot;);<br>
+                mysql_select_dB(&quot;customers&quot;);</font></p>
+              <p><font face="Courier New, Courier, mono" size="2"><i><font color="#009900"># 
+                query:</font></i><br>
+                $query = "Select FullName and Address from Customers"; <br>
+                $recordSet = mysql_query($query, $conn);</font></p>
+              <p><font face="Courier New, Courier, mono" size="2"><i><font color="#009900"># 
+                import the query results as a Turbine DataSet:</font></i><br>
+                loadDataSetMySQL($turbine, $recordSet, &quot;Customers&quot;);</font></p>
+              <p><font face="Courier New, Courier, mono" size="2"><i><font color="#009900"># 
+                which .swf Flash template to use:</font></i><br>
+                $turbine-&gt;load(&quot;customers.swf&quot;);</font></p>
+              <p><font size="2" face="Courier New, Courier, mono"><i><font color="#009900"># 
+                now generate the movie to the web browse</font>r</i>:<br>
+                $turbine->generateFlash(); </font></p>
+              <p><font size="2" face="Courier New, Courier, mono">?></font></p></td>
+          </tr>
+        </table>
+        <p><font face="Verdana, Arial, Helvetica, sans-serif" size="2">&nbsp;</font></p>
+        <p><font size="5" face="Arial, Helvetica, sans-serif"><a name="publishingdatasetas" id="publishingdatasetas"></a>Publishing 
+          DataSets to Flash Action Script</font></p>
+        <p><font size="2" face="Verdana, Arial, Helvetica, sans-serif">If you 
+          intend to use Turbine solely to generate Adobe PDF documents then you 
+          can skip this subsection because scripting is not exported to PDF.</font></p>
+        <p><font size="2" face="Verdana, Arial, Helvetica, sans-serif">As with 
+          Turbine variables, DataSets live at the server-side, however they can 
+          be published into the client-side as Flash Action Script variables in 
+          a multitude of useful ways - as simple variables, arrays and named arrays. 
+          As with other features, this functionality is both available on the 
+          PHP Interface and as an MML tag. On the PHP Interface we can do:</font></p>
+        <blockquote> 
+          <p><font size="2" face="Courier New, Courier, mono"> $turbine-&gt;publishDataSet(&quot;dataSetName&quot;);</font></p>
+        </blockquote>
+        <p><font size="2" face="Verdana, Arial, Helvetica, sans-serif">The above 
+          would publish the values contained inside the DataSet into Flash Action Script 
+          variables, arrays or name arrays, which are available when the movie 
+          is played on the client. The next MML tag would accomplish the same 
+          effect:</font></p>
+        <blockquote> 
+          <p><font size="2" face="Courier New, Courier, mono">&lt;PublishDataSet 
+            dataset=&quot;dataSetName&quot;/&gt;</font></p>
+        </blockquote>
+        <p><font size="2" face="Verdana, Arial, Helvetica, sans-serif">Variable 
+          and DataSet publishing allows you to easily bridge data from the server 
+          side into the player side, making it available for further processing</font></p>
+        <p>&nbsp;</p>
+        </TD>
+    </TR>
+    <TR valign="top"> 
+      <TD COLSPAN="2" height="6"> 
+        <table border=0 cols=2 width="560" cellpadding="0" cellspacing="0" >
+          <tr> 
+            <td width="443" height="25"><font face="Verdana, Arial, Helvetica, sans-serif" size="3"><a href="manual.htm">Table 
+              of Contents</a></font></td>
+            <td width="117" height="25"> 
+              <div align="center"><font face="Verdana, Arial, Helvetica, sans-serif" size="3"><a href="mml.htm">Next 
+                Chapter </a> </font></div>
+            </td>
+          </tr>
+        </table>
+      </TD>
+    </TR>
+  </TABLE>
+</CENTER>
+<CENTER>
+  <p> <font face="Verdana, Arial, Helvetica, sans-serif" size="1"><i>&nbsp;<br>
+    Flash and Macromedia Flash are trademarks of Macromedia, Inc.</i></font>
+</CENTER>
+</BODY>
+</HTML>

@@ -1,0 +1,21 @@
+#proud_options div.clear {font-size: 1px; line-height:1px; height:1px; clear: left; margin: 5px 0; }
+
+div.tabcontent {padding: 0 15px; background-color: #fff; border: solid 5px #ddd; }
+#proud_options label {float: left; display: inline; font-weight:bold; line-height: 30px; font-size: 11px; width: 250px; text-align: right; padding-right: 5px; }
+#proud_options input, #proud_options select {float: left; display: inline; width: 300px;	padding: 0 0 0 5px; line-height: 30px; height: 30px;	font-size: 12px; margin-bottom: 10px; }
+#proud_options textarea {	width: 550px; height: 100px;	padding: 2px; margin-bottom: 10px;	}
+#proud_options input, #proud_options textarea {border: 1px solid #ccc; color: #333; }
+#proud_options p {clear: left; margin-left: 255px; font-size: 11px; color: #555; background-color:#ffffe0; border: solid 1px #e6db55; line-height: 24px; padding-left: 5px;}
+#proud_options p.note, #proud_options span.note {clear: left; margin-left: 0; font-size: 11px; color: #555; background-color:#ffffe0; border: solid 1px #e6db55; line-height: 24px; padding-left: 5px;}
+#proud_options span.note {padding: 3px 6px;}
+#proud_options p.info {clear: left; margin-left: 0; font-size: 11px; color: #555; background-color:#fff; border: none; line-height: 24px; padding-left: 5px;}
+#proud_options .updated p {margin-left: 0; border: none; background: none; }
+#proud_options h2 {font-style: normal; font-size: 24px; font-weight: normal; font-family: Helvetica, Arial, Tahoma, sans-serif; margin-bottom: 20px; }
+
+ul.navMenu {margin: 10px 0 20px; padding:0; }
+ul.navMenu li, #proud_options input#submit {float: left; display: inline; margin-right: 1px; font-size: 11px; font-weight: normal; text-transform: uppercase; padding: 5px 15px; background: #274966 url(../images/buttonBlueBigA.png) repeat-x top left; color: #fff; }
+ul.navMenu li:hover, ul.navMenu li.tabactive, #proud_options input#submit:hover {background-image: url(../images/buttonGreenBig.png);}
+#proud_options input#submit {border: none; width: auto; font-size: 11px; }
+
+h1.proud {font-weight: normal; font-family: Georgia, serif; font-size: 30px; text-shadow: #fff 1px 1px 1px; }
+div.sep {clear: both; font-size:1px; height: 1px; line-height: 1px; margin: 0 0 15px; border-bottom: dashed 1px #aaa; }

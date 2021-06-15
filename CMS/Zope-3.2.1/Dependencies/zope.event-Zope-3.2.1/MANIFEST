@@ -1,0 +1,6 @@
+MANIFEST
+zope.event/__init__.py
+zope.event/README.txt
+zope.event/tests.py
+setup.py
+setup.cfg

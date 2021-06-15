@@ -1,0 +1,10 @@
+var frag, myEm, txt1, txt2;
+frag = document.createDocumentFragment();
+myEm = document.createElement("em");
+txt1 = document.createTextNode("very");
+myEm .appendChild(txt1);
+txt1 = document.createTextNode("I am ");
+txt2 = document.createTextNode(" happy to see you.");
+frag.appendChild(txt1);
+frag.appendChild(myEm);
+frag.appendChild(txt2);

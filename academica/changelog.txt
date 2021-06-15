@@ -1,0 +1,10 @@
+ARTISTICA THEME (www.proudthemes.com)
+
+CHANGELOG:
+
+August 21st, 2010
+- Fixed some styling bugs in pages and custom templates
+- Changed files: page.php, page-full.php, page-left.php, page-right.php
+
+August 18th, 2010
+- 1.0 version

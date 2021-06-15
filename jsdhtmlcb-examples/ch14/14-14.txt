@@ -1,0 +1,27 @@
+var txt = document.createTextNode("Every good boy does fine.");
+var elem = document.getElementById("someElement");
+var oldTxt = elem.replaceChild(txt, elem.firstChild);
+
+----------
+
+var txt = document.createTextNode("Every good boy does fine.");
+var elem = document.getElementById("someElement");
+while (elem.childNodes.length > 0) {
+    elem.removeChild(elem.firstChild);
+}
+elem.appendChild(txt);
+
+----------
+
+var newElem = document.createElement("span");
+newElem.setAttribute("id", "newSpan");
+var elem = document.getElementById("someElement");
+elem.replaceChild(newElem, elem.firstChild);
+
+----------
+
+var elem = document.getElementById("myP");
+var srchText = /coming/g;
+var replacement = "going";
+var elemText = elem.firstChild.nodeValue.replace(srchText, replacement);
+elem.firstChild.nodeValue = elemText;

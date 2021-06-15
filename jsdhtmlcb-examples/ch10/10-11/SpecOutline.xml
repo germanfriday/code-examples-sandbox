@@ -1,0 +1,78 @@
+<?xml version="1.0"?> 
+<opml version="1.0">
+	<head>
+		<title>HTML Sections Outline</title>
+		<dateCreated>Mon, 10 Sep 2002 03:40:00 GMT</dateCreated>
+		<dateModified>Fri, 22 Sep 2002 19:35:00 GMT</dateModified>
+		<ownerName>Danny Goodman</ownerName>
+		<ownerEmail>dannyg@dannyg.com</ownerEmail>
+		<expansionState></expansionState>
+		<vertScrollState>1</vertScrollState>
+		<windowTop></windowTop>
+		<windowLeft></windowLeft>
+		<windowBottom></windowBottom>
+		<windowRight></windowRight>
+	</head>
+	<body>
+		<outline text="Forms">
+			<outline text="Introduction" uri="http://www.w3.org/TR/html401/interact/forms.html#h-17.1"/>
+			<outline text="Controls" uri="http://www.w3.org/TR/html401/interact/forms.html#h-17.2">
+				<outline text="Control Types" uri="http://www.w3.org/TR/html401/interact/forms.html#h-17.2.1"/>
+			</outline>
+			<outline text="FORM Element" uri="http://www.w3.org/TR/html401/interact/forms.html#h-17.3"/>
+			<outline text="INPUT Element" uri="http://www.w3.org/TR/html401/interact/forms.html#h-17.4">
+				<outline text="INPUT Control Types" uri="http://www.w3.org/TR/html401/interact/forms.html#h-17.4.1"/>
+				<outline text="Examples" uri="http://www.w3.org/TR/html401/interact/forms.html#h-17.4.2"/>
+			</outline>
+			<outline text="BUTTON Elements" uri="http://www.w3.org/TR/html401/interact/forms.html#h-17.5"/>
+			<outline text="SELECT, OPTGROUP, OPTION Elements" uri="http://www.w3.org/TR/html401/interact/forms.html#h-17.6">
+				<outline text="Pre-selected Options" uri="http://www.w3.org/TR/html401/interact/forms.html#h-17.6.1"/>
+			</outline>
+			<outline text="TEXTAREA Elements" uri="http://www.w3.org/TR/html401/interact/forms.html#h-17.7"/>
+			<outline text="ISINDEX Elements" uri="http://www.w3.org/TR/html401/interact/forms.html#h-17.8"/>
+			<outline text="Labels" uri="http://www.w3.org/TR/html401/interact/forms.html#h-17.9http://www.w3.org/TR/html401/interact/forms.html#h-17.8">
+				<outline text="LABEL Element" uri="http://www.w3.org/TR/html401/interact/forms.html#h-17.9.1"/>
+			</outline>
+			<outline text="FIELDSET, LEGEND Elements" uri="http://www.w3.org/TR/html401/interact/forms.html#h-17.10"/>
+			<outline text="Element Focus" uri="http://www.w3.org/TR/html401/interact/forms.html#h-17.11">
+				<outline text="Tabbing Navigation" uri="http://www.w3.org/TR/html401/interact/forms.html#h-17.11.1"/>
+				<outline text="Access Keys" uri="http://www.w3.org/TR/html401/interact/forms.html#h-17.11.2"/>
+			</outline>
+			<outline text="Disabled and Read-Only Controls" uri="http://www.w3.org/TR/html401/interact/forms.html#h-17.12">
+				<outline text="Disabled Controls" uri="http://www.w3.org/TR/html401/interact/forms.html#h-17.12.1"/>
+				<outline text="Read-Only Controls" uri="http://www.w3.org/TR/html401/interact/forms.html#h-17.12.2"/>
+			</outline>
+			<outline text="Form Submissions" uri="http://www.w3.org/TR/html401/interact/forms.html#h-17.13">
+				<outline text="Form Submission Method" uri="http://www.w3.org/TR/html401/interact/forms.html#h-17.13.1"/>
+				<outline text="Successful Controls" uri="http://www.w3.org/TR/html401/interact/forms.html#h-17.13.2"/>
+				<outline text="Processing Form Data" uri="http://www.w3.org/TR/html401/interact/forms.html#h-17.13.3">
+					<outline text="1. Identify Successful Controls" uri="http://www.w3.org/TR/html401/interact/forms.html#h-17.13.3.1"/>
+					<outline text="2. Build Form Data Set" uri="http://www.w3.org/TR/html401/interact/forms.html#h-17.13.3.2"/>
+					<outline text="3. Encode Form Data" uri="http://www.w3.org/TR/html401/interact/forms.html#h-17.13.3.3"/>
+					<outline text="4. Submit Encoded Data" uri="http://www.w3.org/TR/html401/interact/forms.html#h-17.13.3.4"/>
+				</outline>
+				<outline text="Processing Form Data" uri="http://www.w3.org/TR/html401/interact/forms.html#h-17.13.4">
+					<outline text="application/x-www-form-urlencoded" uri="http://www.w3.org/TR/html401/interact/forms.html#h-17.13.4.1"/>
+					<outline text="multipart/form-data" uri="http://www.w3.org/TR/html401/interact/forms.html#h-17.13.4.2"/>
+				</outline>
+			</outline>
+		</outline>
+		<outline text="Scripts">
+			<outline text="Introduction" uri="http://www.w3.org/TR/html401/interact/scripts.html#h-18.1"/>
+			<outline text="Designing Documents for Scripts" uri="http://www.w3.org/TR/html401/interact/scripts.html#h-18.2">
+				<outline text="SCRIPT Element" uri="http://www.w3.org/TR/html401/interact/scripts.html#h-18.2.1"/>
+				<outline text="Specifying the Scripting Language" uri="http://www.w3.org/TR/html401/interact/scripts.html#h-18.2.2">
+					<outline text="Default Language" uri="http://www.w3.org/TR/html401/interact/scripts.html#h-18.2.2.1"/>
+					<outline text="Local Language Declaration" uri="http://www.w3.org/TR/html401/interact/scripts.html#h-18.2.2.2"/>
+					<outline text="References to HTML Elements" uri="http://www.w3.org/TR/html401/interact/scripts.html#h-18.2.2.3"/>
+				</outline>
+				<outline text="Intrinsic Events" uri="http://www.w3.org/TR/html401/interact/scripts.html#h-18.2.3"/>
+				<outline text="Dynamic Document Modification" uri="http://www.w3.org/TR/html401/interact/scripts.html#h-18.2.4"/>
+			</outline>
+			<outline text="Designing for Unscriptable Clients" uri="http://www.w3.org/TR/html401/interact/scripts.html#h-18.3">
+				<outline text="NOSCRIPT Element" uri="http://www.w3.org/TR/html401/interact/scripts.html#h-18.3.1"/>
+				<outline text="Hiding Scripts from Clients" uri="http://www.w3.org/TR/html401/interact/scripts.html#h-18.3.2"/>				
+			</outline>
+		</outline>
+	</body>
+</opml>

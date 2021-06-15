@@ -1,0 +1,8 @@
+var val1 = parseFloat(document.myForm.firstNum.value);
+var val2 = parseFloat(document.myForm.secondNum.value);
+var result = val1 + val2;
+document.myForm.sum.value = result;
+
+----------
+
+var mainVer = parseInt(navigator.appVersion, 10);

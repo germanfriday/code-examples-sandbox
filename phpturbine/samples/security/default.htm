@@ -1,0 +1,238 @@
+ <!doctype html public "-//w3c//dtd html 4.0 transitional//en">
+<html>
+<head>
+   <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+   <title>Encryption and Permissions Sample</title>
+</head>
+<BODY topmargin="0" leftmargin="0" rightmargin="0" marginwidth="0" marginheight="0" TEXT="#000000" BGCOLOR="#FFFFFF" LINK="#003366" VLINK="#FF9900" ALINK="#FF6600">
+ 
+ <center>
+  <table width="100%" border="0" cellspacing="0" cellpadding="0" align="center">
+    <tr bgcolor="#000033"> 
+      <td background="../common/bar_left.gif" width="50%">&nbsp;</td>
+      <td> <table width="560" border="0" cellspacing="0" cellpadding="0">
+          <tr> 
+            <td width="334"><img src="../common/bar_left.gif" width="334" height="28"></td>
+            <td><img src="../common/bar_central.gif" width="110" height="28"></td>
+            <td><img src="../common/bar_logo.gif" width="116" height="28"></td>
+          </tr>
+        </table></td>
+      <td background="../common/1x1_azul_esc.gif" width="50%">&nbsp;</td>
+    </tr>
+    <tr bgcolor="#FFFFFF" height="4"> 
+      <td colspan="3"></td>
+    </tr>
+  </table>
+  <table width="560" border="0" cellspacing="0" cellpadding="0">
+    <tr valign="top"> 
+      <td height="39"> <table width="560" border="0" cellspacing="0" cellpadding="0">
+          <tr> 
+            <td width="435" height="25"><font face="Verdana, Arial, Helvetica, sans-serif" size="3"><a href="../default.htm">Samples 
+              Menu</a></font></td>
+            <td width="125" height="25"> <div align="right"><font face="Verdana, Arial, Helvetica, sans-serif" size="3"><a href="../multilanguage/default.htm.utf8">Next 
+                Sample</a>&nbsp; </font></div></td>
+          </tr>
+        </table></td>
+    </tr>
+    <tr valign="top"> 
+      <td height="487"> <p align="center"><font face="Arial" size="6">PDF Encryption 
+          and Permissions Sample<font size="1"><b><br>
+          (PDF)<br>
+          &nbsp; </b></font></font></p>
+        <div align="center"> 
+          <p align="left"><font size="2" face="Verdana, Arial, Helvetica, sans-serif">Turbine 
+            can make a PDF document secure by encrypting it - permissions can 
+            easily be allowed or denied for the generated document, such as the 
+            capability to: print it, change it, copy its contents and comment 
+            it. These settings are controlled through Turbine variables as shown 
+            below. This sample also shows how to control the compression rate 
+            of a document.</font> 
+          <p align="left"><font size="2" face="Verdana, Arial, Helvetica, sans-serif">The 
+            next ASP.NET C# Script code excerpt shows how this can be accomplished:<br>
+            &nbsp; </font>
+          <table width="100%" border="1" cellpadding="0" cellspacing="0" bordercolor="#CCCCCC">
+            <tr>
+              <td><table width="100%" border="0" cellspacing="16" cellpadding="0" bgcolor="#FFFFCC">
+                  <tr> 
+                    <td height="84"><p><font size="2" face="Courier New, Courier, mono">&lt;?<br>
+                        </font><font size="2" face="Courier New, Courier, mono"><font color="#009900"># 
+                        create the Turbine object:</font><br>
+                        $turbine = new Turbine7();</font></p>
+                      <p><font size="2" face="Courier New, Courier, mono"><font color="#009900"># 
+                        set a medium compression rate</font><br>
+                        $turbine-&gt;setVariable(&quot;Media.Compress&quot;, 6);<br>
+                        <font color="#009900">&nbsp;<br>
+                        # set the document subject</font> <br>
+                        $turbine-&gt;setVariable(&quot;Media.PDF.Subject&quot;, 
+                        &quot;January Invoice&quot;);<br>
+                        <font color="#009900">&nbsp;<br>
+                        # set the document author</font> <br>
+                        $turbine-&gt;setVariable(&quot;Media.PDF.Author&quot;, 
+                        &quot;ACME Company&quot;);<br>
+                        &nbsp; <br>
+                        <font color="#009900"># set the document title</font> 
+                        <br>
+                        $turbine-&gt;setVariable(&quot;Media.PDF.Title&quot;, 
+                        &quot;Invoice&quot;);<br>
+                        &nbsp; <br>
+                        <font color="#009900"># the document user must know this 
+                        password <br>
+                        # <font size="2" face="Courier New, Courier, mono">to 
+                        be able to open</font> it</font> <br>
+                        $turbine-&gt;setVariable(&quot;Media.PDF.UserPassword&quot;, 
+                        &quot;letmein&quot;);<br>
+                        &nbsp; <br>
+                        <font color="#009900"># set the owner password</font> 
+                        <br>
+                        $turbine-&gt;setVariable(&quot;Media.PDF.OwnerPassword&quot;, 
+                        &quot;letmein&quot;);<br>
+                        &nbsp; <br>
+                        <font color="#009900"># set permissions so no one can 
+                        change the document</font> <br>
+                        $turbine-&gt;setVariable(&quot;Media.PDF.Permissions&quot;, 
+                        &quot;noChanging&quot;);</font></p>
+                      <p><font color="#009900" size="2" face="Courier New, Courier, mono"># 
+                        continue with document creation...</font></p>
+                      <p><font size="2" face="Courier New, Courier, mono">?&gt;</font></p></td>
+                  </tr>
+                </table></td>
+            </tr>
+          </table>
+          <p align="left"><font size="2" face="Verdana, Arial, Helvetica, sans-serif">To 
+            see the properties of a PDF document, you must open &quot;Document 
+            Properties&quot; which in Adobe Acrobat Reader can be accessed with 
+            'Ctrl+D'.</font> 
+          <p align="left"><font face="Verdana, Arial, Helvetica, sans-serif" size="2">Some 
+            of the available parameters:</font> 
+          <p align="left"><font size="2" face="Verdana, Arial, Helvetica, sans-serif"></font> 
+          <form action="crypto.php" method="post" name="form1" target="_blank">
+            <div align="center"> 
+              <table width="100%" border="0" cellpadding="0" cellspacing="2" bordercolor="#999999" bgcolor="#CCCCCC">
+                <tr> 
+                  <td><table width="100%" border="0" cellpadding="6" cellspacing="0" bgcolor="#DDDDDD">
+                      <tr valign="middle"> 
+                        <td><font size="2" face="Verdana, Arial, Helvetica, sans-serif">Compression 
+                          Level {<em>Media.Compress</em>}</font></td>
+                        <td><font size="2" face="Verdana, Arial, Helvetica, sans-serif"> 
+                          <select name="media_compress" id="media_compress">
+                            <option value="0" selected>0 - No Compression</option>
+                            <option value="1">1 - Low Compression</option>
+                            <option value="2">2</option>
+                            <option value="3">3</option>
+                            <option value="4">4</option>
+                            <option value="5">5 - Medium Compression</option>
+                            <option value="6">6</option>
+                            <option value="7">7</option>
+                            <option value="8">8</option>
+                            <option value="9">9 - Maximum Compression</option>
+                          </select>
+                          </font></td>
+                      </tr>
+                      <tr valign="middle"> 
+                        <td>&nbsp;</td>
+                        <td>&nbsp;</td>
+                      </tr>
+                      <tr valign="middle"> 
+                        <td><font size="2" face="Verdana, Arial, Helvetica, sans-serif">Document 
+                          Subject {<em>Media.PDF.Subject</em>}<br>
+                          </font></td>
+                        <td><font size="2" face="Verdana, Arial, Helvetica, sans-serif"> 
+                          <input name="media_pdf_subject" type="text" id="media_pdf_subject" value="My Subject">
+                          </font></td>
+                      </tr>
+                      <tr valign="middle"> 
+                        <td><font size="2" face="Verdana, Arial, Helvetica, sans-serif">Document 
+                          Author {<em>Media.PDF.Author</em>}</font></td>
+                        <td><font size="2" face="Verdana, Arial, Helvetica, sans-serif"> 
+                          <input name="media_pdf_author" type="text" id="media_pdf_author" value="My Author">
+                          </font></td>
+                      </tr>
+                      <tr valign="middle"> 
+                        <td><font size="2" face="Verdana, Arial, Helvetica, sans-serif">Document 
+                          Title {<em>Media.PDF.Title</em>}</font></td>
+                        <td><font size="2" face="Verdana, Arial, Helvetica, sans-serif"> 
+                          <input name="media_pdf_title" type="text" id="media_pdf_title" value="My Title">
+                          </font></td>
+                      </tr>
+                      <tr valign="middle"> 
+                        <td>&nbsp;</td>
+                        <td>&nbsp;</td>
+                      </tr>
+                      <tr valign="middle"> 
+                        <td><font size="2" face="Verdana, Arial, Helvetica, sans-serif">Open 
+                          Password {<em>Media.PDF.UserPassword</em>}</font></td>
+                        <td><font size="2" face="Verdana, Arial, Helvetica, sans-serif"> 
+                          <input name="media_pdf_userpassword" type="text" id="media_pdf_userpassword" value="letmein">
+                          </font></td>
+                      </tr>
+                      <tr valign="middle"> 
+                        <td><font size="2" face="Verdana, Arial, Helvetica, sans-serif">Encryption 
+                          Password {<em>Media.PDF.OwnerPassword</em>}</font></td>
+                        <td><font size="2" face="Verdana, Arial, Helvetica, sans-serif"> 
+                          <input name="media_pdf_ownerpassword" type="text" id="media_pdf_ownerpassword" value="letmein">
+                          </font></td>
+                      </tr>
+                      <tr valign="middle"> 
+                        <td colspan="2"><font size="2" face="Verdana, Arial, Helvetica, sans-serif"><strong><font size="1">You 
+                          must provide at least one of the passwords above so 
+                          the permissions below may work</font></strong></font></td>
+                      </tr>
+                      <tr valign="middle"> 
+                        <td>&nbsp;</td>
+                        <td>&nbsp;</td>
+                      </tr>
+                      <tr valign="middle"> 
+                        <td><font size="2" face="Verdana, Arial, Helvetica, sans-serif">Document 
+                          Permissions {<em>Media.PDF.Permissions</em>}<br>
+                          <font size="1"><strong>&nbsp;<br>
+                          To select multiple, please hold down the Ctrl key</strong></font></font></td>
+                        <td><font size="2" face="Verdana, Arial, Helvetica, sans-serif"> 
+                          <select name="media_pdf_permissions[]" size="4" multiple id="media_pdf_permissions[]">
+                            <option value="noprinting" selected>No Printing</option>
+                            <option value="nochanging">No Changing</option>
+                            <option value="nocontentcopying" selected>No Content 
+                            Copying</option>
+                            <option value="nocommenting">No Commenting</option>
+                          </select>
+                          </font></td>
+                      </tr>
+                      <tr valign="middle"> 
+                        <td height="63" colspan="2"> <div align="center"> 
+                            <input type="submit" name="Submit" value="Generate PDF">
+                          </div></td>
+                      </tr>
+                    </table></td>
+                </tr>
+              </table>
+            </div>
+          </form>
+          <div align="left"><font size="2" face="Verdana, Arial, Helvetica, sans-serif">When 
+            the PDF viewer requests an initial password, please supply one of 
+            the above Open or Owner Passwords- the default for both is 'letmein'.</font><br>
+            <br>
+            &nbsp;<br>
+            <em><font size="2" face="Verdana, Arial, Helvetica, sans-serif">Note: 
+            if the generated invoice fields appear empty, it could be caused by 
+            known issues between Internet Explorer, Apache 2.0.43 and the PHP 
+            engine version 4.3.1, if this is the case, upgrading Apache and/or 
+            the PHP engine to more recent builds will fix the problem.</font><font size="2" face="Verdana, Arial, Helvetica, sans-serif"><br>
+            </font></em>&nbsp; &nbsp; &nbsp; </div>
+        </div></td>
+    </tr>
+    <tr valign="bottom"> 
+      <td height="64"> <hr width="100%" size="1" noshade> <table width="560" border="0" cellspacing="0" cellpadding="0">
+          <tr> 
+            <td width="443" height="25"><font face="Verdana, Arial, Helvetica, sans-serif" size="3"><a href="../default.htm">Samples 
+              Menu</a></font></td>
+            <td width="117" height="25"> <div align="right"><font face="Verdana, Arial, Helvetica, sans-serif" size="3"><a href="../multilanguage/default.htm.utf8">Next 
+                Sample</a> </font></div></td>
+          </tr>
+        </table>
+        <div align="center"><font face="Arial, Helvetica, sans-serif" size="1"><i>&nbsp;<br>
+          Flash is a trademark of Macromedia, Inc.</i></font> </div></td>
+    </tr>
+  </table>
+</center>
+
+</body>
+</html>

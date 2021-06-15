@@ -1,0 +1,17 @@
+MANIFEST
+ClientCookie/__init__.py
+ClientCookie/_BSDDBCookieJar.py
+ClientCookie/_ClientCookie.py
+ClientCookie/_ConnCache.py
+ClientCookie/_Debug.py
+ClientCookie/_HeadersUtil.py
+ClientCookie/_LWPCookieJar.py
+ClientCookie/_MozillaCookieJar.py
+ClientCookie/_MSIECookieJar.py
+ClientCookie/_MSIEDBCookieJar.py
+ClientCookie/_Opener.py
+ClientCookie/_Request.py
+ClientCookie/_urllib2_support.py
+ClientCookie/_Util.py
+setup.py
+setup.cfg

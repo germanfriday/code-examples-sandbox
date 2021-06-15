@@ -1,0 +1,11 @@
+MANIFEST
+zope.modulealias/__init__.py
+zope.modulealias/DEPENDENCIES.cfg
+zope.modulealias/meta.zcml
+zope.modulealias/metaconfigure.py
+zope.modulealias/metadirectives.py
+zope.modulealias/tests/__init__.py
+zope.modulealias/tests/dummymodule.py
+zope.modulealias/tests/test_modulealias.py
+setup.py
+setup.cfg

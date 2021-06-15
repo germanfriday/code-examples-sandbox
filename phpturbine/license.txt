@@ -1,0 +1,145 @@
+Software Product: PHP Turbine 7
+Author: Blue*Pacific Software
+Version 7.0 - Evaluation, Unregistered
+Web: http://www.blue-pacific.com
+Email: support@blue-pacific.com
+
+END-USER LICENSE AGREEMENT FOR THIS SOFTWARE
+IMPORTANT - READ CAREFULLY:
+--------------------------------------------
+This End-User License Agreement ("EULA") is a legal agreement
+between you (either an individual or a single entity) and the
+mentioned Author of this Software for the software product
+identified above, which includes computer software and may
+include associated media, printed materials, and "online"
+or electronic documentation ("SOFTWARE PRODUCT" or 
+"UNREGISTERED SOFTWARE PRODUCT").
+By installing, copying, or otherwise using the SOFTWARE PRODUCT,
+you agree to be bound by the terms of this EULA. If you do not
+agree to the terms of this EULA, do not install or use the
+SOFTWARE PRODUCT.
+
+SOFTWARE PRODUCT LICENSE
+The SOFTWARE PRODUCT is protected by copyright laws and international
+copyright treaties, as well as other intellectual property laws and
+treaties. The SOFTWARE PRODUCT is licensed, not sold.
+
+1. GRANT OF LICENSE
+This EULA grants you the following rights:
+Installation and Use. 
+You may install and use an unlimited number of copies of the 
+UNREGISTERED SOFTWARE PRODUCT.
+Subject to the terms below, you are hereby licensed to use this 
+Software for evaluation purposes without charge for a period 
+of 30 days. If you use the SOFTWARE PRODUCT after the 30 day 
+evaluation period, registration is required. Instructions for 
+registration are included with the SOFTWARE PRODUCT documentation.
+
+Reproduction and Distribution.
+You may reproduce and distribute an unlimited number of copies of 
+the UNREGISTERED SOFTWARE PRODUCT; provided that each copy shall be 
+a true and complete copy, including all copyright and trademark notices, 
+and shall be accompanied by a copy of this EULA. 
+Registration keys are NOT to be distributed.
+
+2. DESCRIPTION OF OTHER RIGHTS AND LIMITATIONS
+Software Transfer and Use.
+You may not transfer your rights under this EULA.
+You may not transfer, assign, rent, lease, well, or otherwise dispose of the 
+SOFTWARE PRODUCT in exchange for consideration, or on a temporary basis.
+The Software may only be used on sites legally and commercially belonging
+to you or the legal entity who purchased the SOFTWARE PRODUCT. As 
+consequence the SOFTWARE PRODUCT can not be rent for web hosting or 
+similar purposes. Also as consequence, you may not use the SOFTWARE 
+PRODUCT even if using the same physical machine where a licensed copy 
+already exists, except if you purchased a license. 
+For special hosting conditions, please contact the Software Author.
+
+Limitations on Reverse Engineering, Decompilation, and Disassembly.
+You may not reverse engineer, decompile, or disassemble the SOFTWARE
+PRODUCT, except and only to the extent that such activity is expressly
+permitted by applicable law notwithstanding this limitation.
+
+Separation of Components.
+The SOFTWARE PRODUCT is licensed as a single product. Its component
+parts may not be separated for use on more than one computer.
+
+Termination.
+Without prejudice to any other rights, the Author of this Software
+may terminate this EULA if you fail to comply with the terms and
+conditions of this EULA. In such event, you must destroy all copies
+of the SOFTWARE PRODUCT and all of its component parts.
+
+Distribution.
+The SOFTWARE PRODUCT may not be sold or be included in a product or
+package which intends to receive benefits through the inclusion of
+the SOFTWARE PRODUCT. The SOFTWARE PRODUCT may be included 
+in any free or non-profit packages or products.
+The following may distribute the SOFTWARE PRODUCT, 
+completely unaltered, without further permission:
+- Internet Shareware sites
+- CD ROM Manufactures
+Permission to distribute the SOFTWARE PRODUCT is not 
+transferable, assignable, saleable, or franchisable. Each vendor 
+wishing to distribute the package must independently satisfy the 
+terms of this limited distribution license.
+
+3. COPYRIGHT
+All title and copyrights in and to the SOFTWARE PRODUCT
+(including but not limited to any images, photographs, animations,
+video, audio, music, text, and "applets" incorporated into the
+SOFTWARE PRODUCT), the accompanying printed materials, and any
+copies of the SOFTWARE PRODUCT are owned by the Author of this
+Software. The SOFTWARE PRODUCT is protected by copyright laws
+and international treaty provisions. Therefore, you must treat
+the SOFTWARE PRODUCT like any other copyrighted material except
+that you may install the SOFTWARE PRODUCT on a single computer
+provided you keep the original solely for backup or archival
+purposes.
+
+4. MISCELLANEOUS
+Should you have any questions concerning this EULA, or if you desire
+to contact the Author of this Software for any reason, please contact
+him at the email address mentioned at the top of this EULA.
+See credits.txt for included software disclaimers.
+You may only use the GIF image loading functionality either on 
+countries without software patent legislation, or after the date when 
+the LZW patent expires (June 2003 in the US), or otherwise by 
+acquiring an LZW patent license from the respective patent holders.
+
+5. LIMITED WARRANTY 
+The Author of this Software expressly disclaims any warranty for
+the SOFTWARE PRODUCT. The SOFTWARE PRODUCT and any related
+documentation is provided "as is" without warranty of any kind,
+either express or implied, including, without limitation, the
+implied warranties or merchantability, fitness for a particular
+purpose, or noninfringement. The entire risk arising out of use
+or performance of the SOFTWARE PRODUCT remains with you.
+
+6. NO LIABILITY FOR DAMAGES
+In no event shall the Author of this Software be liable for any
+damages whatsoever (including, without limitation, damages for
+loss of business profits, business interruption, loss of business
+information, or any other pecuniary loss) arising out of the use
+of or inability to use this product, even if the Author of this
+Software has been advised of the possibility of such damages.
+Because some states/jurisdictions do not allow the exclusion
+or limitation of liability for consequential or incidental damages,
+the above limitation may not apply to you.
+Should any other warranties be found to exist, such warranties shall 
+be limited in duration to sixty (60) days following the date of 
+delivery to you. In no event will the Software Author's liability 
+for any damages to you or any other person exceed the amount paid 
+for the license to use the SOFTWARE.
+
+7. HIGH RISK ACTIVITIES
+The Software is not fault-tolerant and is not designed, manufactured 
+or intended for use or resale as on-line control equipment in 
+hazardous environments requiring fail-safe performance, such as in 
+the operation of nuclear facilities, aircraft navigation or 
+communication systems, air traffic control, direct life support 
+machines, or weapons systems, in which the failure of the Software 
+could lead directly to death, personal injury, or severe physical or 
+environmental damage ("High Risk Activities"). 
+The Author of this Software and its suppliers specifically disclaim 
+any express or implied warranty of fitness for High Risk Activities. 

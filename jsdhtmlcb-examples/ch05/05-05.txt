@@ -1,0 +1,11 @@
+var isWin = (navigator.userAgent.indexOf("Win") != -1);
+var isMac = (navigator.userAgent.indexOf("Mac") != -1);
+var isUnix = (navigator.userAgent.indexOf("X11") != -1);
+
+----------
+
+<script language="JavaScript" type="text/javascript">
+document.write("<style type='text/css'>");
+document.write("body {font-size:" + ((isMac) ? "12" : "10") + "pt}");
+document.write("</style>");
+</script>

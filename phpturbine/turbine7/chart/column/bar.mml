@@ -1,0 +1,73 @@
+<BaseDepth depth="1000"/>
+<Shape pos="{_barX},{_barY}">
+  <FillColor side="right" color="{_barcolor}"/>
+  <LineStyle width="1" color="#000000"/>
+  <Rect size="{_barwidth},-{_barheight0}"/>
+</shape>
+
+<BaseDepth depth="3000"/>
+<button pos="{_barX},{_barY}">
+  <State type="hit">
+    <BaseDepth depth="0"/>
+    <Shape id="bar" pos="0,0">
+      <FillColor side="right" color="{_barcolor}"/>
+      <LineStyle width="1" color="#000000"/>
+      <Rect size="{_barwidth},-{_barheight0}"/>
+    </shape>
+  </State>
+
+  <State type="over,down">
+    <BaseDepth depth="0"/>
+    <Shape pos="0,0">
+      <LineStyle width="2" color="#800000ff"/>
+      <Rect size="{_barwidth},-{_barheight0}"/>
+    </shape>
+    
+    <BaseDepth depth="2000"/>
+    <Text
+      background="color(#aaffff), border(#000000,1),space(3)"
+      flags="base"
+      size="{=_defaultFontHeight*0.75}"
+      color="#000000" 
+      style="normal"
+      Pos="2,{=-_barheight0-4}">{_barTooltip}</Text>
+
+    <Text
+      flags="base"
+      size="{=_defaultFontHeight*0.75}"
+      color="#000000"
+      align="center"
+      placepoint="center"
+      Pos="{=_barwidth/2},{=-_barheight0+_defaultFontHeight*0.75}">{_barValue}</Text>
+  
+  </State>
+
+  <if notEmpty="{_barURL}">
+    <Script event="press" type="source">
+    getUrl("{_barURL}");
+    </Script>
+  </if>
+
+  <Audio
+          src="~/chart/bip.mp3"
+          event="RollOver"/>
+
+</button>
+
+
+<BaseDepth depth="2000"/>
+<Text
+      flags="base"
+      size="{=_defaultFontHeight*0.75}"
+      color="#000000"
+      align="center"
+      placepoint="center"
+      Pos="{=_barwidth/2+_barX},{=-_barheight0+_defaultFontHeight*0.75+_barY}">{_barValue}</Text>
+
+<Text
+  size="{_defaultFontHeight}"
+  flags="base"
+  color="#000000"
+  align="center"
+  placepoint="center"
+  Pos="{=_barwidth/2+_barX},{=_barY+_defaultFontHeight}">{_barLabel}</Text>

@@ -1,0 +1,12 @@
+MANIFEST
+zope.app.introspector/__init__.py
+zope.app.introspector/browser.py
+zope.app.introspector/configure.zcml
+zope.app.introspector/interfaces.py
+zope.app.introspector/introspector.pt
+zope.app.introspector/marker.pt
+zope.app.introspector/tests/__init__.py
+zope.app.introspector/tests/test_introspector.py
+zope.app.introspector/tests/test_introspectorview.py
+setup.py
+setup.cfg

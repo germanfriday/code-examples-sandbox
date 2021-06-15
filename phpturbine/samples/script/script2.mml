@@ -1,0 +1,8 @@
+<Image instance="image" src="../common/flower.gif"
+       pos="300,100" size="120,80"/>
+
+<Script>
+  onEnterFrame = function(){
+    image._rotation+=2;
+  }
+</Script>

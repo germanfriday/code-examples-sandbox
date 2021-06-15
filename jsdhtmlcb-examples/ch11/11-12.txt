@@ -1,0 +1,14 @@
+function getElementStyle(elemID, IEStyleProp, CSSStyleProp) {
+    var elem = document.getElementById(elemID);
+    if (elem.currentStyle) {
+        return elem.currentStyle[IEStyleProp];
+    } else if (window.getComputedStyle) {
+        var compStyle = window.getComputedStyle(elem, "");
+        return compStyle.getPropertyValue(CSSStyleProp);
+    }
+    return "";
+}
+
+----------
+
+var divColor = getElementStyle("myDiv", "backgroundColor", "background-color");

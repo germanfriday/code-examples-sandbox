@@ -1,0 +1,34 @@
+<Button pos="10,10">
+
+  <State type="up,hit">
+    <Shape>
+      <LineStyle color="#404080" width="5"/>
+      <FillColor color="#8080ff"/>
+      <Rect size="200,100"/>
+    </Shape>
+    <Text pos="100,50" placepoint="center">This is the UP state</Text>
+  </State>
+
+  <State type="over">
+    <Shape>
+      <LineStyle color="#8080dd" width="5"/>
+      <FillColor color="#ddddff"/>
+      <Rect size="200,100"/>
+    </Shape>
+    <Text pos="100,50" placepoint="center">This is the OVER state</Text>
+  </State>
+
+  <State type="down">
+    <Shape>
+      <LineStyle color="#606060" width="5"/>
+      <FillColor color="#808080"/>
+      <Rect size="200,100"/>
+    </Shape>
+    <Text pos="100,50" placepoint="center" color="#ffffff">This is the DOWN state</Text>
+  </State>
+
+  <Script event="Release">
+    getUrl("http://www.blue-pac.com", "_blank");
+  </Script>
+
+</Button>

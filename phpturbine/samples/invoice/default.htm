@@ -1,0 +1,174 @@
+ <!doctype html public "-//w3c//dtd html 4.0 transitional//en">
+<html>
+<head>
+   <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+   <title>Dynamic Invoice Sample</title>
+</head>
+<BODY topmargin="0" leftmargin="0" rightmargin="0" marginwidth="0" marginheight="0" TEXT="#000000" BGCOLOR="#FFFFFF" LINK="#003366" VLINK="#FF9900" ALINK="#FF6600">
+ 
+ <center>
+  <table width="100%" border="0" cellspacing="0" cellpadding="0" align="center">
+    <tr bgcolor="#000033"> 
+      <td background="../common/bar_left.gif" width="50%">&nbsp;</td>
+      <td> <table width="560" border="0" cellspacing="0" cellpadding="0">
+          <tr> 
+            <td width="334"><img src="../common/bar_left.gif" width="334" height="28"></td>
+            <td><img src="../common/bar_central.gif" width="110" height="28"></td>
+            <td><img src="../common/bar_logo.gif" width="116" height="28"></td>
+          </tr>
+        </table></td>
+      <td background="../common/1x1_azul_esc.gif" width="50%">&nbsp;</td>
+    </tr>
+    <tr bgcolor="#FFFFFF" height="4"> 
+      <td colspan="3"></td>
+    </tr>
+  </table>
+  <table width="560" border="0" cellspacing="0" cellpadding="0">
+    <tr valign="top"> 
+      <td height="39"> <table width="560" border="0" cellspacing="0" cellpadding="0">
+          <tr> 
+            <td width="435" height="25"><font face="Verdana, Arial, Helvetica, sans-serif" size="3"><a href="../default.htm">Samples 
+              Menu</a></font></td>
+            <td width="125" height="25"> <div align="right"><font face="Verdana, Arial, Helvetica, sans-serif" size="3"><a href="../security/default.htm">Next 
+                Sample</a>&nbsp; </font></div></td>
+          </tr>
+        </table></td>
+    </tr>
+    <tr valign="top"> 
+      <td> 
+        <p align="center"><font face="Arial" size="6">Dynamic 
+          Invoice Sample<font size="1"><b><br>
+          (PDF)<br>
+          &nbsp; </b></font></font></p>
+        <div align="center"> 
+          <p align="left"><font face="Times New Roman,Times"><font color="#000000" face="Verdana, Arial, Helvetica, sans-serif" size="2">This 
+            sample shows how Turbine can be used to automate the process of creating 
+            PDF invoices. The invoice is dynamically generated, based on a template 
+            in which dynamic text is filled by using Turbine variables. Dynamic 
+            document generation into PDF format can easily be implemented by using 
+            Turbine 7.</font></font> 
+          <p align="left"><font face="Verdana, Arial, Helvetica, sans-serif" size="2">On 
+            this sample the invoice is generated from the following fields:</font> 
+          <form action="invoice.php" method="post" name="form1" target="_blank">
+            <table width="100%" border="0" cellpadding="0" cellspacing="2" bordercolor="#999999" bgcolor="#CCCCCC">
+              <tr> 
+                <td><table width="100%" border="0" cellpadding="6" cellspacing="0">
+                    <tr> 
+                      <td bgcolor="#DDDDDD"> <table border="0" cellpadding="0" cellspacing="4">
+                          <tr> 
+                            <td valign="top"><font size="2" face="Verdana, Arial, Helvetica, sans-serif">Invoice 
+                              Nr:</font></td>
+                            <td><font size="2" face="Verdana, Arial, Helvetica, sans-serif"> 
+                              <input name="order_number" type="text" id="order_number2" value="200307-2004">
+                              </font></td>
+                          </tr>
+                          <tr> 
+                            <td width="87" valign="top"><font size="2" face="Verdana, Arial, Helvetica, sans-serif">Bill 
+                              To:</font></td>
+                            <td width="445"> <font size="2" face="Verdana, Arial, Helvetica, sans-serif"> 
+                              <textarea name="bill_to" cols="40" id="textarea">Blue Company
+Sky Street</textarea>
+                              </font></td>
+                          </tr>
+                          <tr> 
+                            <td valign="top"><font size="2" face="Verdana, Arial, Helvetica, sans-serif">Ship 
+                              To:</font></td>
+                            <td><font size="2" face="Verdana, Arial, Helvetica, sans-serif"> 
+                              <textarea name="ship_to" cols="40" id="textarea3">Green Company
+Banana Street</textarea>
+                              </font></td>
+                          </tr>
+                        </table></td>
+                    </tr>
+                    <tr> 
+                      <td height="101" bgcolor="#DDDDDD"> <table border="0" bordercolor="#000000">
+                          <tr> 
+                            <td><font size="2" face="Verdana, Arial, Helvetica, sans-serif">Product 
+                              Description:</font></td>
+                            <td><font size="2" face="Verdana, Arial, Helvetica, sans-serif">Qty:</font></td>
+                            <td><font size="2" face="Verdana, Arial, Helvetica, sans-serif">Price:</font></td>
+                            <td><font size="2" face="Verdana, Arial, Helvetica, sans-serif">Amount:</font></td>
+                          </tr>
+                          <tr valign="top"> 
+                            <td><font size="2" face="Verdana, Arial, Helvetica, sans-serif"> 
+                              <input name="desc_01" type="text" id="desc_013" value="Ping-Pong Table" size="27">
+                              </font></td>
+                            <td><font size="2" face="Verdana, Arial, Helvetica, sans-serif"> 
+                              <input name="qty_01" type="text" id="qty_013" value="1" size="15">
+                              </font></td>
+                            <td><font size="2" face="Verdana, Arial, Helvetica, sans-serif"> 
+                              <input name="price_01" type="text" id="price_013" value="$500" size="15">
+                              </font></td>
+                            <td><font size="2" face="Verdana, Arial, Helvetica, sans-serif"> 
+                              <input name="amount_01" type="text" id="amount_013" value="$500" size="15">
+                              </font></td>
+                          </tr>
+                          <tr valign="top"> 
+                            <td><font size="2" face="Verdana, Arial, Helvetica, sans-serif"> 
+                              <input name="desc_02" type="text" id="desc_023" size="27">
+                              </font></td>
+                            <td><font size="2" face="Verdana, Arial, Helvetica, sans-serif"> 
+                              <input name="qty_02" type="text" id="qty_023" size="15">
+                              </font></td>
+                            <td><font size="2" face="Verdana, Arial, Helvetica, sans-serif"> 
+                              <input name="price_02" type="text" id="price_023" size="15">
+                              </font></td>
+                            <td><font size="2" face="Verdana, Arial, Helvetica, sans-serif"> 
+                              <input name="amount_02" type="text" id="amount_023" size="15">
+                              </font></td>
+                          </tr>
+                        </table></td>
+                    </tr>
+                    <tr> 
+                      <td bgcolor="#DDDDDD"> <table width="100%" border="0" cellspacing="4" cellpadding="0">
+                          <tr valign="middle"> 
+                            <td width="87"> <div align="left"><font size="2" face="Verdana, Arial, Helvetica, sans-serif">Total:&nbsp; 
+                                </font></div></td>
+                            <td width="445"> <div align="left"><font size="2" face="Verdana, Arial, Helvetica, sans-serif"> 
+                                <input name="total" type="text" id="total5" value="$500" size="20">
+                                </font></div></td>
+                          </tr>
+                        </table>
+                        <div align="left"></div></td>
+                    </tr>
+                    <tr> 
+                      <td height="55" bgcolor="#DDDDDD"> <div align="center"><font size="2" face="Verdana, Arial, Helvetica, sans-serif"> 
+                          <input type="submit" name="Submit2" value="Generate PDF Invoice">
+                          &nbsp; &nbsp; </font></div></td>
+                    </tr>
+                  </table></td>
+              </tr>
+            </table>
+            <div align="center"> </div>
+          </form>
+          <p align="left"><font face="Times New Roman,Times"><font color="#000000" face="Verdana, Arial, Helvetica, sans-serif" size="2"><br>
+            </font><font face="Verdana, Arial, Helvetica, sans-serif" size="2">The 
+            Flash template used for this example is <a href="invoice.swf" target="_blank">invoice.swf</a>.</font></font><br>
+            <br>
+            &nbsp; &nbsp;<br>
+            <em><font size="2" face="Verdana, Arial, Helvetica, sans-serif">Note: 
+            if the generated invoice fields appear empty, it could be caused by 
+            known issues between Internet Explorer, Apache 2.0.43 and the PHP 
+            engine version 4.3.1, if this is the case, upgrading Apache and/or 
+            the PHP engine to more recent builds will fix the problem.</font><font size="2" face="Verdana, Arial, Helvetica, sans-serif"><br>
+            </font></em>&nbsp; &nbsp; &nbsp; </p>
+          </div></td>
+    </tr>
+    <tr valign="bottom"> 
+      <td height="64"> <hr width="100%" size="1" noshade> 
+        <table width="100%" border="0" cellspacing="0" cellpadding="0">
+          <tr> 
+            <td width="443" height="25"><font face="Verdana, Arial, Helvetica, sans-serif" size="3"><a href="../default.htm">Samples 
+              Menu</a></font></td>
+            <td width="117" height="25"> <div align="right"><font face="Verdana, Arial, Helvetica, sans-serif" size="3"><a href="../security/default.htm">Next 
+                Sample</a> </font></div></td>
+          </tr>
+        </table>
+        <div align="center"><font face="Arial, Helvetica, sans-serif" size="1"><i>&nbsp;<br>
+          Flash is a trademark of Macromedia, Inc.</i></font> </div></td>
+    </tr>
+  </table>
+</center>
+
+</body>
+</html>

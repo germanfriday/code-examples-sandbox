@@ -1,0 +1,86 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" 
+  "http://www.w3.org/tr/xhtml1/DTD/xhtml1-transitional.dtd">
+<!-- 
+     Example File From "JavaScript and DHTML Cookbook"
+     Published by O'Reilly & Associates
+     Copyright 2003 Danny Goodman
+-->
+<html>
+<head>
+<title>Main Application Page</title>
+<link rel="stylesheet" id="mainStyle" href="../css/cookbook.css" type="text/css" />
+<script type="text/javascript" src="simModal.js"></script>
+<script language="JavaScript" type="text/javascript">
+
+
+// Function to run upon closing the dialog with "OK".
+function setPrefs() {
+    // We're just displaying the returned value in a text box.
+    document.returned.searchURL.value = dialogWin.returnedValue;
+}
+
+// Called by "Apply Settings" button to reload the page with
+// search string data appended to URL.
+function applySettings() {
+    if (document.returned.searchURL.value) {
+        location.href = "main.html" + document.returned.searchURL.value;
+    }
+}
+
+//*****************************************
+//      BEGIN CUSTOM PAGE STYLE CODE
+//******************************************/
+// Convert location.search into an array of values
+// indexed by name.
+function getSearchAsArray() {
+    var results = new Array()
+    var input = unescape(location.search.substr(1))
+    if (input) {
+        var srchArray = input.split("&")
+        var tempArray = new Array()
+        for (i = 0; i < srchArray.length; i++) {
+            tempArray = srchArray[i].split("=")
+            results[tempArray[0]] = tempArray[1]
+        }
+    }
+    return results
+}
+var srchData = getSearchAsArray()
+
+// Write style sheets with data passed in with location.search,
+// or use default values if no data has been passed.
+document.write("<style type='text/css'>")
+document.write("body {font-family:'Comic Sans MS',Helvetica,sans-serif; background-color:" +
+   ((srchData["bgColor"]) ? srchData["bgColor"] : "#eeeeee") + "; color:" + 
+   ((srchData["textColor"]) ? srchData["textColor"] : "#000000") + "}")
+document.write("h1 {text-align:right; font-size:" + 
+   ((srchData["h1Size"]) ? srchData["h1Size"] : "24") + "pt}")
+document.write("</style>")
+//*****************************************
+//      END CUSTOM PAGE STYLE CODE
+//******************************************/
+
+</script>
+
+</head>
+<body onclick="checkModal()" onfocus="return checkModal()">
+<h1>Giantco, Inc.</h1>
+<a href="#" onmouseover="status='Set preferences...';return true"
+            onmouseout="status='';return true"
+            onclick="openSimDialog('dialog_main.html', 400, 300, setPrefs);return false">
+Preferences
+</a> (click to open simulated modal window)
+<hr />
+<h2>Welcome,
+<script language="JavaScript" type="text/javascript">
+document.write(" " + ((srchData.name) ? srchData.name : "friend"))
+</script>
+!</h2>
+<form name="returned">
+Value returned from dialog window:
+<input type="text" name="searchURL" size="60" /><br />
+<div class="buttons">
+<input type="button" name="apply" value="Apply Settings" onclick="applySettings()">
+</div>
+</body>
+</html>

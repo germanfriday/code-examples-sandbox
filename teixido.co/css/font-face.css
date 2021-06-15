@@ -1,0 +1,48 @@
+@font-face {
+	font-family: 'TrumpGothicEastBold';
+	src: url('../type/trumpgoteasbol-webfont.eot');
+	src: local('☺'), url('../type/trumpgoteasbol-webfont.woff') format('woff'), url('../type/trumpgoteasbol-webfont.ttf') format('truetype'), url('../type/trumpgoteasbol-webfont.svg#webfontIEdw22Dw') format('svg');
+	font-weight: normal;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: 'TrumpGothicEastBoldItalic';
+	src: url('../type/trumpgoteasbolita-webfont.eot');
+	src: local('☺'), url('../type/trumpgoteasbolita-webfont.woff') format('woff'), url('../type/trumpgoteasbolita-webfont.ttf') format('truetype'), url('../type/trumpgoteasbolita-webfont.svg#webfontJ8WYpWCz') format('svg');
+	font-weight: normal;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: 'TrumpGothicEastItalic';
+	src: url('../type/trumpgoteasita-webfont.eot');
+	src: local('☺'), url('../type/trumpgoteasita-webfont.woff') format('woff'), url('../type/trumpgoteasita-webfont.ttf') format('truetype'), url('../type/trumpgoteasita-webfont.svg#webfont4pkURqFE') format('svg');
+	font-weight: normal;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: 'TrumpGothicEastMedium';
+	src: url('../type/trumpgoteasmed-webfont.eot');
+	src: local('☺'), url('../type/trumpgoteasmed-webfont.woff') format('woff'), url('../type/trumpgoteasmed-webfont.ttf') format('truetype'), url('../type/trumpgoteasmed-webfont.svg#webfontbvGEs1qr') format('svg');
+	font-weight: normal;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: 'TrumpGothicEastMediumItalic';
+	src: url('../type/trumpgoteasmedita-webfont.eot');
+	src: local('☺'), url('../type/trumpgoteasmedita-webfont.woff') format('woff'), url('../type/trumpgoteasmedita-webfont.ttf') format('truetype'), url('../type/trumpgoteasmedita-webfont.svg#webfont16BR3LtV') format('svg');
+	font-weight: normal;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: 'TrumpGothicEastRegular';
+	src: url('../type/trumpgoteasreg-webfont.eot');
+	src: local('☺'), url('../type/trumpgoteasreg-webfont.woff') format('woff'), url('../type/trumpgoteasreg-webfont.ttf') format('truetype'), url('../type/trumpgoteasreg-webfont.svg#webfontFQQ6W2nc') format('svg');
+	font-weight: normal;
+	font-style: normal;
+}
+/* Localized */

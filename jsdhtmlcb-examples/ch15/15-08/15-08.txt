@@ -1,0 +1,43 @@
+// global variables
+var targetInMS, timerInterval;
+var oneSec = 1000;
+
+// pass the number of seconds to count down
+function startTimer(secs) {
+    var targetTime = new Date();
+    targetTime.setSeconds(targetTime.getSeconds() + secs);
+    targetInMS = targetTime.getTime();
+    // display starting image
+    setImages(secs);
+    timerInterval = setInterval("countDown()", 100);
+}
+
+function countDown() {
+    var nowInMS = (new Date()).getTime();
+    var diff = targetInMS - nowInMS;
+    if (diff <= 0) {
+        clearInterval(timerInterval);
+        alert("Time is up!");
+        // more processing here
+    } else {
+        var scratchPad = diff / oneSec;
+        var secsLeft = Math.floor(scratchPad);    
+        setImages(secsLeft);
+    }
+}
+
+function setImages(secs) {
+    var i;
+    secs = formatNum(secs, 2);
+    for (i = 0; i < secs.length; i++) {
+        document.images["seconds" + i].src = imgArray[parseInt(secs.charAt(i))].src;
+    }
+}
+
+function formatNum(num, len) {
+    var numStr = "" + num;
+    while (numStr.length < len) {
+        numStr = "0" + numStr;
+    }
+    return numStr
+}

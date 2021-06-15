@@ -1,0 +1,14 @@
+table {font-size: 12px; font-family: Georgia, sans-serif; }
+div.column {width: 95%; float: left; padding: 10px 15px; vertical-align: top; background-color: #f1f1f1; margin: 0 20px 20px 0; border: solid 5px #e1e1e1;} 
+div.column input, div.column select, div.column textarea {border: solid 1px #aaa; padding-left: 5px; font-size: 12px; margin-left: 5px; width: 350px; }
+div.column input {height: 30px; line-height: 30px; }
+div.column input.checkbox {width: 30px;}
+div.column textarea {height: 150px; width: 500px;}
+div.column td {padding: 10px 0 0; }
+div.column input.submit {font-weight: normal; font-size: 11px; border: none; width: auto; height: auto; padding:0; margin:0 0 10px; }
+div.column td.label {width: 300px; font-weight: bold; background-color: #ddd; padding:0 5px; line-height: 18px; font-size: 12px; }
+div.column tr.sep1 td {border-bottom: dotted 1px #000; height: 10px; font-size: 1px; line-height: 1px; }
+div.column tr.description td p {font-size: 11px; color: #666; font-family: Tahoma, sans-serif; line-height: 15px;}
+div.column td.save {text-align: center; background-color: #ddd;}
+div.column h2 span.top {font-size: 14px; font-style: normal;}
+div.cleaner {font-size: 1px; line-height:1px; height:1px; clear: left; margin: 5px 0; }

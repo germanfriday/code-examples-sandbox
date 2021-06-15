@@ -1,0 +1,42 @@
+Version 3.03.02
+	released 2010-02-12
+	- Fix path error in admin
+	- Removed language packages for download (other than English and Spanish) - Will add languages to download page in web (to do)
+	- Removed unused files, images, icons etc from directories.
+	- Renamed various constant variables to use a uniform system.
+	- Added various missing language texts.
+	- Enabled deletion of all booking items and languages
+	- New function "itemTitle()" to retrieve the title of the currently selected calendar item
+	
+Version 3.03.01
+	released 2010-02-10
+	- Fix installation bug if "prefix" is defined for database tables.
+	- Fix "root" path issue in some php versions.
+	- Enable deletion of all Booking items (disabled in demo version)
+	- Fixed url to calender preview in admin panel.
+	
+Version 3.03
+	released 2010-02-07
+	- New Item field "id ref" to hold an external reference id number (for example for applications that already have the items in a separate database table).
+	- Administration of Booking Stages and Item "active states"
+	- Added support for themes (currently only default theme provided)
+	- Restructure of directory and file system
+
+Version 3.02
+	released 2009-11-07
+	- Language administration added - languages can now be added and edited via admin.
+	- New function to get calendar last update date "get_cal_update_date(ID_ITEM)"
+	
+	
+Version 3.01
+	released September 2009
+	- User admin added to allow individual users to be added with permission to administrate 
+	their own calendars but NOT the general calendar details (states etc)
+
+Version 3.0
+	released August 2009
+	- complete rewrite of version 2.
+	- use mootools for all javascript needs
+	- complete administration panel to control all aspects of the calendar
+	- unlimited "states" now possible
+	- many other new features

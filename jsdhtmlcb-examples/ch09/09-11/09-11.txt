@@ -1,0 +1,21 @@
+function incoming(evt) {
+    evt = (evt) ? evt : ((window.event) ? event : null);
+    if (evt) {
+        var from = (evt.relatedTarget) ? evt.relatedTarget : 
+            ((evt.fromElement) ? evt.fromElement : null);
+        if (from) {
+            // work with adjacent "from" element
+        }
+    }
+}
+
+function outgoing(evt) {
+    evt = (evt) ? evt : ((window.event) ? event : null);
+    if (evt) {
+        var to = (evt.relatedTarget) ? evt.relatedTarget : 
+            ((evt.toElement) ? evt.toElement : null);
+        if (to) {
+            // work with adjacent "to" element
+        }
+    }
+}

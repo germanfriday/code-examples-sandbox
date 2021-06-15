@@ -1,0 +1,17 @@
+MANIFEST
+zope.app.session/__init__.py
+zope.app.session/api.txt
+zope.app.session/bootstrap.py
+zope.app.session/browser.zcml
+zope.app.session/configure.zcml
+zope.app.session/DEPENDENCIES.cfg
+zope.app.session/design.txt
+zope.app.session/ftests.py
+zope.app.session/http.py
+zope.app.session/interfaces.py
+zope.app.session/session.py
+zope.app.session/SETUP.cfg
+zope.app.session/tests.py
+zope.app.session/zope.app.session-configure.zcml
+setup.py
+setup.cfg

@@ -1,0 +1,1 @@
+// in WebVC.m //#import "WebVC.h"#import "NewsItem.h"@implementation WebVC@synthesize storyNewsItem;- (void)viewDidLoad {    [super viewDidLoad];	self.title = storyNewsItem.title;	storyWebView.scalesPageToFit = TRUE;	[storyWebView loadRequest:[NSURLRequest requestWithURL:storyNewsItem.link]];}

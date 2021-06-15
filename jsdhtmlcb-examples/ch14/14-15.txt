@@ -1,0 +1,56 @@
+var elem = document.getElementById("spanToGo");
+elem.parentNode.removeChild(elem);
+
+----------
+
+var container = document.getElementById("someSpan");
+// verify that the child node is a text node before emptying it
+if (container.firstChild.nodeType == 3) {
+    container.firstChild.nodeValue = "";
+}
+
+----------
+
+var tbody = document.getElementById("myTableBody");
+while (tbody.rows.length > 0) {
+    tbody.removeChild(tbody.firstChild);
+}
+
+----------
+
+<form>
+<table>
+<tbody id="myTBody">
+<tr>
+    <td><input type="checkbox"></td><td>Item 1</td>
+</tr>
+<tr>
+    <td><input type="checkbox"></td><td>Item 2</td>
+</tr>
+<tr>
+    <td><input type="checkbox"></td><td>Item 3</td>
+</tr>
+<tr>
+    <td><input type="checkbox"></td><td>Item 4</td>
+</tr>
+<tr>
+    <td><input type="checkbox"></td><td>Item 5</td>
+</tr>
+<tr>
+    <td colspan="2">
+    <input type="button" value="Remove Checked" onclick="remove()"></td>
+    </td>
+</tr>
+</tbody>
+</table>
+</form>
+
+
+function remove() {
+    var elem = document.getElementById("myTBody");
+    for (var i = elem.rows.length-1; i >= 0 ; i--) {
+        if (elem.rows[i].cells[0].firstChild.checked) {
+            elem.removeChild(elem.rows[i]);
+        }
+    }
+}

@@ -1,0 +1,9 @@
+<Script>
+  turbineDebug("This text was logged from a script block.");
+
+var now = new Date();
+  turbineDebug("Current time is " + now.toString());
+
+  turbineDebug("Flash Player version is: " + getVersion());
+
+</Script>

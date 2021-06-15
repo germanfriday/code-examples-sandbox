@@ -1,0 +1,364 @@
+<!doctype html public "-//w3c//dtd html 4.0 transitional//en">
+<html>
+<head>
+   <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+   <meta name="GENERATOR" content="Mozilla/4.51 [en] (Win95; I) [Netscape]">
+   <title>AutoMovieClip Sample</title>
+</head>
+<BODY topmargin="0" leftmargin="0" rightmargin="0" marginwidth="0" marginheight="0" TEXT="#000000" BGCOLOR="#FFFFFF" LINK="#003366" VLINK="#FF9900" ALINK="#FF6600">
+<center>
+  <table width="100%" border="0" cellspacing="0" cellpadding="0" align="center">
+    <tr bgcolor="#000033"> 
+      <td background="../common/bar_left.gif" width="50%">&nbsp;</td>
+      <td> 
+        <table width="560" border="0" cellspacing="0" cellpadding="0">
+          <tr> 
+            <td width="334"><img src="../common/bar_left.gif" width="334" height="28"></td>
+            <td><img src="../common/bar_central.gif" width="110" height="28"></td>
+            <td><img src="../common/bar_logo.gif" width="116" height="28"></td>
+          </tr>
+        </table>
+      </td>
+      <td background="../common/1x1_azul_esc.gif" width="50%">&nbsp;</td>
+    </tr>
+    <tr bgcolor="#FFFFFF" height="4"> 
+      <td colspan="3"></td>
+    </tr>
+  </table>
+  <table width="560" border="0" cellspacing="0" cellpadding="0">
+    <tr valign="top"> 
+      <td height="39"> <table width="600" border="0" cellspacing="0" cellpadding="0">
+          <tr> 
+            <td width="443" height="25"><font face="Verdana, Arial, Helvetica, sans-serif" size="3"><a href="../default.htm">Samples 
+              Menu</a></font></td>
+            <td width="157" height="25"> <div align="right"><font face="Verdana, Arial, Helvetica, sans-serif" size="3"><a href="../products-sqlite/default.htm">Next 
+                Sample</a> </font></div></td>
+          </tr>
+        </table></td>
+    </tr>
+    <tr valign="top"> 
+      <td> 
+        <p align="center"><font face="Arial" size="6">AutoMovieClip 
+          Sample<font size="1"><b><br>
+          (Flash MX/5)<br>
+          &nbsp;&nbsp; </b></font></font></p>
+        <div> 
+          <p>&nbsp; 
+          <p><font face="Verdana, Arial, Helvetica, sans-serif" size="2"> Turbine 
+            includes a set of commands designed to simplify common development 
+            tasks - for example displaying a list of links can be done with the 
+            &lt;AutoMovieClip&gt; MML command. Let's see an example of this in 
+            action, starting by simple movie clip with a button:</font></p>
+          <p>
+            <object classid="clsid:D27CDB6E-AE6D-11cf-96B8-444553540000" codebase="http://download.macromedia.com/pub/shockwave/cabs/flash/swflash.cab#version=6,0,29,0" width="100%" height="120" align="middle">
+              <param name="movie" value="movieclip.php">
+              <param name="quality" value="high">
+              <param name="valign" value="center">
+              <embed src="movieclip.php" width="100%" height="120" align="middle" quality="high" pluginspage="http://www.macromedia.com/go/getflashplayer" type="application/x-shockwave-flash" valign="center"></embed></object>
+          </p>
+          <p><font face="Verdana, Arial, Helvetica, sans-serif" size="2"> Although 
+            we could easily create the movieclip and button visually on a Flash 
+            editor, we'll create it in MML, by using a &lt;Movieclip&gt;, &lt;Button&gt; 
+            and &lt;TextField&gt; tags:</font></p>
+          <table width="600" border="1" cellpadding="0" cellspacing="0" bordercolor="#999999">
+            <tr> 
+              <td><table width="100%" border="0" cellpadding="16" cellspacing="0" bgcolor="#eeeef4">
+                  <tr> 
+                    <td> <div align="left">
+                        <p><font face="Courier New, Courier, mono" size="2">&lt;Movieclip 
+                          id=&quot;button_movieclip_id&quot;&gt;</font></p>
+                        <p> <font size="2" face="Courier New, Courier, mono">&nbsp;&nbsp;&lt;Button&gt;</font></p>
+                        <p> <font size="2" face="Courier New, Courier, mono">&nbsp;&nbsp;&nbsp;&nbsp;&lt;State 
+                          type=&quot;up,hit&quot;&gt; <font color="#009900">&lt;!-- 
+                          these are the up/hit button states --&gt;</font><br>
+                          &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;Shape&gt;<br>
+                          &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;LineStyle 
+                          color=&quot;#404080&quot; width=&quot;4&quot;/&gt;<br>
+                          &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;FillColor 
+                          color=&quot;#8080ff&quot;/&gt;<br>
+                          &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;Rect 
+                          size=&quot;220,50&quot;/&gt;<br>
+                          &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;/Shape&gt;<br>
+                          &nbsp;&nbsp;&nbsp;&nbsp;&lt;/State&gt;</font></p>
+                        <p> <font size="2" face="Courier New, Courier, mono">&nbsp;&nbsp;&nbsp;&nbsp;&lt;State 
+                          type=&quot;over,down&quot;&gt; <font color="#009900">&lt;!-- 
+                          the over/down button states --&gt;</font><br>
+                          &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;Shape&gt;<br>
+                          &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;LineStyle 
+                          color=&quot;#8080dd&quot; width=&quot;4&quot;/&gt;<br>
+                          &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;FillColor 
+                          color=&quot;#ddddff&quot;/&gt;<br>
+                          &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;Rect 
+                          size=&quot;220,50&quot;/&gt;<br>
+                          &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;/Shape&gt;<br>
+                          &nbsp;&nbsp;&nbsp;&nbsp;&lt;/State&gt;</font></p>
+                        <p> <font size="2" face="Courier New, Courier, mono"> 
+                          &nbsp;&nbsp;&nbsp;&nbsp;&lt;Audio event=&quot;MouseOver&quot; 
+                          src=&quot;tick.wav&quot;/&gt; <font color="#009900">&lt;!-- 
+                          a tick sound --&gt;</font></font></p>
+                        <p><font size="2" face="Courier New, Courier, mono">&nbsp;&nbsp;&nbsp;&nbsp;&lt;Script 
+                          event=&quot;Release&quot;&gt; <font color="#009900">&lt;!-- 
+                          getUrl to the button_url AS var --&gt;</font><br>
+                          &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;getUrl(button_url, 
+                          &quot;_blank&quot;);<br>
+                          &nbsp;&nbsp;&nbsp;&nbsp;&lt;/Script&gt;</font></p>
+                        <p> <font size="2" face="Courier New, Courier, mono">&nbsp;&nbsp;&lt;/Button&gt;</font></p>
+                        <p> <font color="#009900" size="2" face="Courier New, Courier, mono">&lt;!-- 
+                          the button text label, with the button_label AS var 
+                          --&gt;</font><font size="2" face="Courier New, Courier, mono"><br>
+                          &nbsp;&nbsp;&lt;TextField variable=&quot;button_label&quot;<br>
+                          &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;pos=&quot;0,12&quot; 
+                          size=&quot;220,30&quot;<br>
+                          &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;fontSize=&quot;20&quot;<br>
+                          &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;align=&quot;center&quot;<br>
+                          &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;flags=&quot;noSelect,readOnly&quot;&gt;default 
+                          label&lt;/TextField&gt;</font></p>
+                        <p><font size="2" face="Courier New, Courier, mono">&lt;/Movieclip&gt;<br>
+                          &nbsp; </font><br>
+                        </p>
+                      </div></td>
+                  </tr>
+                </table></td>
+            </tr>
+          </table>
+          <p><font size="2" face="Verdana, Arial, Helvetica, sans-serif">The first 
+            movie above was displayed by simply loading the above MML file.</font></p>
+          <p><font size="2" face="Verdana, Arial, Helvetica, sans-serif">Let's 
+            now create the DataSet that will be used to display a number of instances 
+            of this button - it will be loacted in the buttons_dataset.txt:</font></p>
+          <table width="90%" border="1" cellspacing="0" cellpadding="4">
+            <tr bgcolor="#000000"> 
+              <td width="37%"><strong><font color="#FFFFFF" size="3" face="Courier New, Courier, mono">&lt;button_label,</font></strong></td>
+              <td width="63%"><strong><font color="#FFFFFF" size="3" face="Courier New, Courier, mono">button_url&gt;</font></strong></td>
+            </tr>
+            <tr> 
+              <td><font size="2" face="Courier New, Courier, mono">&quot;Dingo 
+                Industries&quot;, <br>
+                </font></td>
+              <td><font size="2" face="Courier New, Courier, mono">&quot;http://www.example.com/?dingo&quot;</font></td>
+            </tr>
+            <tr> 
+              <td><font size="2" face="Courier New, Courier, mono">&quot;Lagoon 
+                Supermarket&quot;, </font></td>
+              <td><font size="2" face="Courier New, Courier, mono">&quot;http://www.example.com/?lagoon&quot;</font></td>
+            </tr>
+            <tr> 
+              <td><font size="2" face="Courier New, Courier, mono">&quot;Martinica 
+                Bar&quot;, </font></td>
+              <td><font size="2" face="Courier New, Courier, mono">&quot;http://www.example.com/?martinica&quot;</font></td>
+            </tr>
+            <tr> 
+              <td><font size="2" face="Courier New, Courier, mono">&quot;Dragon 
+                Lounge&quot;, </font></td>
+              <td><font size="2" face="Courier New, Courier, mono">&quot;http://www.example.com/?dragon&quot;</font></td>
+            </tr>
+            <tr> 
+              <td><font size="2" face="Courier New, Courier, mono">&quot;Blue 
+                Pasteur, inc&quot;, </font></td>
+              <td><font size="2" face="Courier New, Courier, mono">&quot;http://www.example.com/?pasteur&quot;</font></td>
+            </tr>
+            <tr> 
+              <td><font size="2" face="Courier New, Courier, mono">&quot;Sri Lanka 
+                Bar&quot;, </font></td>
+              <td><font size="2" face="Courier New, Courier, mono">&quot;http://www.example.com/?sri&quot;</font></td>
+            </tr>
+            <tr> 
+              <td><font size="2" face="Courier New, Courier, mono">&quot;Sunday 
+                Road inc.&quot;, </font></td>
+              <td><font size="2" face="Courier New, Courier, mono">&quot;http://www.example.com/?sunday&quot;</font></td>
+            </tr>
+            <tr> 
+              <td><font size="2" face="Courier New, Courier, mono">&quot;Bay Records&quot;, 
+                </font></td>
+              <td><font size="2" face="Courier New, Courier, mono">&quot;http://www.example.com/?bay&quot;</font></td>
+            </tr>
+            <tr> 
+              <td><font size="2" face="Courier New, Courier, mono">&quot;Friday 
+                Bank&quot;, </font></td>
+              <td><font size="2" face="Courier New, Courier, mono">&quot;http://www.example.com/?friday&quot;</font></td>
+            </tr>
+            <tr> 
+              <td><font size="2" face="Courier New, Courier, mono">&quot;Global 
+                Cloud Ltd.&quot;, </font></td>
+              <td><font size="2" face="Courier New, Courier, mono">&quot;http://www.example.com/?cloud&quot;</font></td>
+            </tr>
+            <tr> 
+              <td><font size="2" face="Courier New, Courier, mono">&quot;Beethoven 
+                Sings, inc&quot;, </font></td>
+              <td><font size="2" face="Courier New, Courier, mono">&quot;http://www.example.com/?beethoven&quot;</font></td>
+            </tr>
+            <tr> 
+              <td><font size="2" face="Courier New, Courier, mono">&quot;Fill 
+                Max inc.&quot;, </font></td>
+              <td><font size="2" face="Courier New, Courier, mono">&quot;http://www.example.com/?fill&quot;</font></td>
+            </tr>
+          </table>
+          <p><font size="2" face="Verdana, Arial, Helvetica, sans-serif">&nbsp;<br>
+            The above DataSet will be used by this &lt;AutoMovieClip&gt; MML command:</font></p>
+          <table width="450" border="1" cellpadding="0" cellspacing="0" bordercolor="#999999">
+            <tr> 
+              <td><table width="100%" border="0" cellpadding="16" cellspacing="0" bgcolor="#eeeef4">
+                  <tr> 
+                    <td> <div align="left"><font size="2" face="Courier New, Courier, mono">&lt;AutoMovieClip 
+                        dataSet='buttonsDataSet'<br>
+                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+                        defaultId='button_movieclip_id' <br>
+                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+                        defaultDy='56'/&gt;<br>
+                        &nbsp; </font> </div></td>
+                  </tr>
+                </table></td>
+            </tr>
+          </table>
+          <p><font size="2" face="Verdana, Arial, Helvetica, sans-serif">We have 
+            two choices where to issue this command - either in the MML where 
+            the button/movieclip is defined or on the .php script - let's issue 
+            it from our script(automovieclip1.php):</font></p>
+          <table width="100%" border="0" cellspacing="12" cellpadding="0" bgcolor="#FFFFCC">
+            <tr> 
+              <td>
+<p><font size="2" face="Courier New, Courier, mono">&lt;?<br>
+                  <font color="#009900"># create the turbine object:</font><br>
+                  $turbine = new Turbine7();</font></p>
+                <p><font color="#009900" size="2" face="Courier New, Courier, mono"># 
+                  load DataSet from the buttons_dataset.txt file:</font><font size="2" face="Courier New, Courier, mono"><br>
+                  $turbine-&gt;loadDataSet(&quot;buttons_dataset.txt&quot;, &quot;buttonsDataSet&quot;);</font></p>
+                <p><font color="#009900" size="2" face="Courier New, Courier, mono"># 
+                  include movieclip.mml:</font><font size="2" face="Courier New, Courier, mono"><br>
+                  $turbine-&gt;include(&quot;movieclip.mml&quot;);</font></p>
+                <p><font color="#009900" size="2" face="Courier New, Courier, mono"># 
+                  create an &lt;AutoMovieClip&gt; tag:</font><font size="2" face="Courier New, Courier, mono"><br>
+                  $turbine-&gt;create(&quot;&lt;AutoMovieClip dataSet='buttonsDataSet' 
+                  defaultId='button_movieclip_id' defaultDy='56'/&gt;&quot;);</font></p>
+                <p><font color="#009900" size="2" face="Courier New, Courier, mono"># 
+                  now generate the movie to the web browser:</font><font size="2" face="Courier New, Courier, mono"><br>
+                  $turbine-&gt;generateFlash();</font></p>
+                <p><font size="2" face="Courier New, Courier, mono">?&gt;</font></p></td>
+            </tr>
+          </table>
+          <p><font size="2" face="Verdana, Arial, Helvetica, sans-serif">&nbsp;<br>
+            And we'll obtain the following Flash movie:</font>
+            <object classid="clsid:D27CDB6E-AE6D-11cf-96B8-444553540000" codebase="http://download.macromedia.com/pub/shockwave/cabs/flash/swflash.cab#version=6,0,29,0" width="550" height="440">
+              <param name="movie" value="automovieclip1.php">
+              <param name="quality" value="high">
+              <embed src="automovieclip1.php" quality="high" pluginspage="http://www.macromedia.com/go/getflashplayer" type="application/x-shockwave-flash" width="550" height="440"></embed></object>
+          </p>
+          <p><font size="2" face="Verdana, Arial, Helvetica, sans-serif">We have a problem 
+            with the number of movie clips, which are too large to fit in a reasonable 
+            size (and besides the number might grow as we change the DataSet) 
+            - so add a Flash component that provides us with scrolling capabilities 
+            - we can use the ScrollPane component from the &quot;Flash UI Components 
+            Set 2&quot;. We can add this component by drag'm'dropping an instance 
+            of the component into an empty Flash .swf, and then simply including 
+            it on our .php script here's our new script (automovieclip2.php):</font></p>
+          <table width="100%" border="0" cellspacing="12" cellpadding="0" bgcolor="#FFFFCC">
+            <tr> 
+              <td valign="top"> 
+                <p><font size="2" face="Courier New, Courier, mono">&lt;?<br>
+                  <font color="#009900"># create the turbine object:</font><br>
+                  $turbine = new Turbine7();</font></p>
+                <p><font color="#009900" size="2" face="Courier New, Courier, mono"># 
+                  load DataSet from the buttons_dataset.txt file:</font><font size="2" face="Courier New, Courier, mono"><br>
+                  $turbine-&gt;loadDataSet(&quot;buttons_dataset.txt&quot;, &quot;buttonsDataSet&quot;);</font></p>
+                <p><font color="#009900" size="2" face="Courier New, Courier, mono"># 
+                  include movieclip.mml:</font><font size="2" face="Courier New, Courier, mono"><br>
+                  $turbine-&gt;include(&quot;movieclip.mml&quot;);</font></p>
+                <p><font color="#009900" size="2" face="Courier New, Courier, mono"># 
+                  create an &lt;AutoMovieClip&gt; tag:</font><font size="2" face="Courier New, Courier, mono"><br>
+                  $turbine-&gt;create(&quot;&lt;AutoMovieClip id='automovieclip_buttons' 
+                  dataSet='buttonsDataSet' defaultId='button_movieclip_id' defaultDy='56' 
+                  flags='define'/&gt;&quot;);</font></p>
+                <p><font color="#009900" size="2" face="Courier New, Courier, mono"># 
+                  include the ScrollPane component:</font><font size="2" face="Courier New, Courier, mono"><br>
+                  $turbine-&gt;include(&quot;scrollpane.swf&quot;);</font></p>
+                <p><font color="#009900" size="2" face="Courier New, Courier, mono"># 
+                  place a ScrollPane component referring to the automovieclip_buttons 
+                  id we created above:</font><font size="2" face="Courier New, Courier, mono"><br>
+                  $turbine-&gt;create(&quot;&lt;Place component='ScrollPane' size='240,222'&gt;&lt;Param 
+                  name='Scroll Content' value='automovieclip_buttons'/&gt;&lt;/Place&gt;&quot;);</font></p>
+                <p><font color="#009900" size="2" face="Courier New, Courier, mono"># 
+                  set a convenient native width and height:</font><font size="2" face="Courier New, Courier, mono"><br>
+                  $turbine-&gt;width(550);<br>
+                  $turbine-&gt;height(300);</font></p>
+                <p><font color="#009900" size="2" face="Courier New, Courier, mono"># 
+                  now generate the movie to the web browser:</font><font size="2" face="Courier New, Courier, mono"><br>
+                  $turbine-&gt;generateFlash();</font></p>
+                <p><font size="2" face="Courier New, Courier, mono">?&gt;</font></p></td>
+            </tr>
+          </table>
+          <p>&nbsp;<br>
+            <font size="2" face="Verdana, Arial, Helvetica, sans-serif"> With 
+            the above script we'll obtain a scrollable panel with our AutoMovieClip 
+            generated movie clips:</font></p>
+          <p> <font size="2" face="Verdana, Arial, Helvetica, sans-serif"> 
+            <object classid="clsid:D27CDB6E-AE6D-11cf-96B8-444553540000" codebase="http://download.macromedia.com/pub/shockwave/cabs/flash/swflash.cab#version=6,0,29,0" width="550" height="300">
+              <param name="movie" value="automovieclip2.php">
+              <param name="quality" value="high">
+              <embed src="automovieclip2.php" quality="high" pluginspage="http://www.macromedia.com/go/getflashplayer" type="application/x-shockwave-flash" width="550" height="300"></embed></object>
+            </font></p>
+          <p><font size="2" face="Verdana, Arial, Helvetica, sans-serif">A list 
+            is nice - but let's now create a grid of movie clips. We can do this 
+            easily with the &lt;AutoMovieClip&gt; tag by adding the cols and few 
+            more attributes - arriving at the following &lt;AutoMovieClip&gt; 
+            tag (created form the .php script):</font></p>
+          <table width="450" border="1" cellpadding="0" cellspacing="0" bordercolor="#999999">
+            <tr> 
+              <td><table width="100%" border="0" cellpadding="16" cellspacing="0" bgcolor="#eeeef4">
+                  <tr> 
+                    <td> <div align="left"><font size="2" face="Courier New, Courier, mono">&lt;AutoMovieClip 
+                        dataSet='buttonsDataSet'<br>
+                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+                        defaultId='button_movieclip_id' <br>
+                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+                        defaultDy='56'<br>
+                        <font color="#0000CC">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+                        defaultDx='227'<br>
+                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;cols='4'<br>
+                        </font>/&gt;</font><br>
+                      </div></td>
+                  </tr>
+                </table></td>
+            </tr>
+          </table>
+          <p><font size="2" face="Verdana, Arial, Helvetica, sans-serif">And we'll 
+            obtain the following movie (automovieclip3.php):</font></p>
+          <p><font size="2" face="Verdana, Arial, Helvetica, sans-serif">
+            <object classid="clsid:D27CDB6E-AE6D-11cf-96B8-444553540000" codebase="http://download.macromedia.com/pub/shockwave/cabs/flash/swflash.cab#version=6,0,29,0" width="550" height="250">
+              <param name="movie" value="automovieclip3.php">
+              <param name="quality" value="high">
+              <embed src="automovieclip3.php" quality="high" pluginspage="http://www.macromedia.com/go/getflashplayer" type="application/x-shockwave-flash" width="550" height="250"></embed></object>
+            </font></p>
+          <p><font size="2" face="Verdana, Arial, Helvetica, sans-serif">Hummm, 
+            we again have a problem with sizes... Well, let's add the ScrollPane 
+            component and it will be easily solved (automovieclip4.php):</font></p>
+          <p><font size="2" face="Verdana, Arial, Helvetica, sans-serif"> 
+            <object classid="clsid:D27CDB6E-AE6D-11cf-96B8-444553540000" codebase="http://download.macromedia.com/pub/shockwave/cabs/flash/swflash.cab#version=6,0,29,0" width="550" height="250">
+              <param name="movie" value="automovieclip4.php">
+              <param name="quality" value="high">
+              <embed src="automovieclip4.php" quality="high" pluginspage="http://www.macromedia.com/go/getflashplayer" type="application/x-shockwave-flash" width="550" height="250"></embed></object>
+            </font></p>
+          <p><font size="2" face="Verdana, Arial, Helvetica, sans-serif">Besides 
+            the &lt;AutoMovieClip&gt; command, Turbine includes the &lt;AutoImage&gt; 
+            command, that can create lists/grids of images, and the very powerful 
+            &lt;AutoMedia&gt;, that can automate the display of any element type 
+            - text, buttons, images - in fact, anything element possible in MML.</font></p>
+          <p>&nbsp;</p>
+        </div>
+        </td>
+    </tr>
+    <tr valign="bottom"> 
+      <td height="64"> <hr width="100%" size="1" noshade> <table width="599" border="0" cellspacing="0" cellpadding="0">
+          <tr> 
+            <td width="443" height="25"><font face="Verdana, Arial, Helvetica, sans-serif" size="3"><a href="../default.htm">Samples 
+              Menu</a></font></td>
+            <td width="156" height="25"> <div align="right"><font face="Verdana, Arial, Helvetica, sans-serif" size="3"><a href="../products-sqlite/default.htm">Next 
+                Sample</a> </font></div></td>
+          </tr>
+        </table>
+        <div align="center"><font face="Arial, Helvetica, sans-serif" size="1"><i>&nbsp;<br>
+          Flash is a trademark of Macromedia, Inc.</i></font> </div></td>
+    </tr>
+  </table>
+          </center>
+</body>
+</html>

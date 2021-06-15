@@ -1,0 +1,121 @@
+FILE: FJ - XML News
+
+Help File Contents:
+
+1) Setting up the news viewer.
+2) Using the LocalMode variable.
+3) Understanding the categories XML file.
+4) Understanding the individual list XML files.
+5) Using the Cookie Notification system
+6) Customization tips
+7) Credits
+8) Extra help and modification service
+
+///////////////////////////////////////////////////////////////////////////
+////////////1) Setting up the news viewer./////////////////////////////////
+///////////////////////////////////////////////////////////////////////////
+
+The news viewer can be used in the following ways...
+
+1) As a standalone file using the files provided.
+2) Included in an AS2 flash file by dragging and dropping the viewer into your file.
+3) Loaded externally into an AS2 project using the loadMovie method.
+4) Loaded externally into an AS3 project using the AS3 equivalent to the AS2 loadMovie method.
+
+///////////////////////////////////////////////////////////////////////////
+////////////2) Using the localmode variable.///////////////////////////////
+///////////////////////////////////////////////////////////////////////////
+
+Set the localMode variable to TRUE when you are working on the file, but when you are ready to upload to a server, set it to false before exporting the SWF.
+
+This enables the Cache killers the mean the XML files are reloaded every time to check for new posts.
+
+///////////////////////////////////////////////////////////////////////////
+////////////3) Understanding the categories XML file.//////////////////////
+///////////////////////////////////////////////////////////////////////////
+
+Each category must have the following single line of XML code.
+
+<catItem title = "Aug09" xml = "xml/august09.xml"></catItem>
+
+The title is what will appear in the Tabs at the top of the viewer.
+
+The xml is the link to the xml file for the category.
+
+NOTE: The title field CANNOT contain spaces as it will corrupt the cookie for the category.
+
+///////////////////////////////////////////////////////////////////////////
+////////////4) Understanding the individual list XML files.////////////////
+///////////////////////////////////////////////////////////////////////////
+
+Each post must have all the following elements to the XML.
+
+<newsItem id = "1">
+This is used to make the notifications work for new posts. This must increment with each new post.
+	<type>FULL</type>
+This can be FULL or URL, full will load the post in the viewer, URL will link directly to the URL in the link node.
+	<day>27</day>
+This will be displayed in the date icon on the left of the preview text.
+	<month>April</month>
+This will be displayed in the date icon on the left of the preview text.
+	<title><![CDATA[ TITLE OF POST ]]></title>
+This is the title of the post, you can use HTML <b>Tags</b> to format your post.
+	<image>images/1.jpg</image>
+This is the link to the image or SWF you want to accompany the main post
+	<author><![CDATA[AUTHOR: Name]]></author>
+This is the text for the author/footer field.
+	<link>http://flashden.net/user/flashjunkie</link>
+This is the link for the button on the bottom right of the main post, leave this blank to hide the button.
+	<preview><![CDATA[Preview text]]></preview>
+This is the text that appears opposite the date icon.
+	<body><![CDATA[Body text]]></body>
+This is the main body of the post.
+	<linkBtnName>FlashDen.net</linkBtnName>
+This is the link, either for the link button on the main post, or as a link for the button in the list view if you chose URL above.
+</newsItem>
+
+///////////////////////////////////////////////////////////////////////////
+////////////5) Using the Cookie Notification system////////////////////////
+///////////////////////////////////////////////////////////////////////////
+
+When adding new posts to the viewer, ensure that the XML 'id' attribute is incremented on the new post. This will mean returning users will be informed that the post is new and wasnt visible last time they visited.
+
+When adding a new category ensure that the title of the category is unique as the title is used in the cookie system.
+
+As long as you follow these rules your users will be notified of all new posts and all new categories when they return to your site.
+
+The best thing is, even if a user clears their browser cookies, they will still be notified as flash cookies arent cleared in this way, there is a special app on the adobe website with the purpose of clearing flash shared objects. Google, 'Clear Flash Cache' if you wish to use it.
+
+///////////////////////////////////////////////////////////////////////////
+////////////6) Customization Tips//////////////////////////////////////////
+///////////////////////////////////////////////////////////////////////////
+
+Here are a few tips that should aid you in customizing the file.
+
+1) Changing the size of the viewer.
+
+When trying to change the overall size of the viewer, ensure that you unlock all the layers as their are masks present on the scrollers and also a mask on the main timeline of the viewer. These will have to be resized in order for the file to work.
+
+Also, when modifying the width the category tabs may become cut off. To fix this, change in the code (where commented) the spacing between the tabs to get better alignment.
+
+2) Inserting longer text into the tabs. In order to insert longer text into the category tabs you will have to resize the tabs within the flash file. Its relatively easy to do, just make sure you edit the shape and not the moviclip so that you retain the curve quality.
+
+///////////////////////////////////////////////////////////////////////////
+////////////7) Credits/////////////////////////////////////////////////////
+///////////////////////////////////////////////////////////////////////////
+
+All the code and design within this file was created by FlashJunkie for exclusive sale on flashden.net. Images within are property of Envato.
+
+Greensock TweenMax Classes are used to animate certain elements on this file. These classes are included and the 'gs' folder must be in the same folder as the FLA when attempting to carry out modifications on the file.
+
+///////////////////////////////////////////////////////////////////////////
+////////////8) Extra help and modification service/////////////////////////
+///////////////////////////////////////////////////////////////////////////
+
+If you have read all the instructions but are still stuck, feel free to send me an email thought my flashden profile.
+
+If you require modifications making to the file, i am available for freelance work, again please contact me via my flashden profile.
+
+Finally i would like to thank you again for buying this file, i hope it meets all your expectations.
+
+FlashJunkie

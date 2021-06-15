@@ -1,0 +1,52 @@
+<html><head><title>How To Use The Login Script Creator Version 4.2 June 2000</title></head>
+<body bgcolor="#bfc8cf"><center>
+<table border=1 cellpadding=1 cellspacing=1>
+ <tr><td valign="top">Follow these step by step instructions. For more information read below.<br>
+There are lots more hints, tips and tricks in all these javascript/password pages.</td>
+  <td><ol start="1" type="1"><li>Create a list of member names, passwords and destinations.
+   <dir><li>Store this in a file called members.js
+    <li>It will be automatically read by version4.htm the Creator.</dir>
+  <li>Load the creator version4.htm file into your browser
+   <dir><li>Check all the information loaded from members.js is correct
+    <dir><li>Make any changes if needed
+     <li>Click the LIST button and get a complete members.js listing</dir>
+    <li>Click the mighty CREATE button to make a data list for the login.js file
+    <li>Copy the encrypted member list to a text editor and save as 'login.js'</dir>
+  <li>The login.js file must be in the same directory as the login.htm file
+   <dir><li>You can change the directory if you edit the login.htm file apropriately
+    <li>The login.js file does not contain any member names or passwords
+    <li>All the destinations are encrypted.</dir>
+  <li>Make a 'button' which opens a popup window containing the login.htm file
+   <dir><li>The button can be anywhere on one of your existing pages.
+    <li>The login.htm file reads the login.js file for member information
+    <li>Members can now access your hidden pages using the login window</dir>
+</ol></td></tr>
+<tr><td colspan=2><hr width=75% size=3></td></tr>
+ <tr><td><dir><li><b>Files You Need:</b>
+  <ol start="1" type="1">
+   <li>members.js
+   <li>version4.htm
+   <li>login.js
+   <li>login.htm</ol></dir></td><form>
+ <td><input type="button" value=" 1 "><font size=4> members.js - List of Members, Passwords and Destinations.</font><br>
+You can create this file in a text editor or by using the LIST button in the version3.htm page. The format for the member list is:<br>
+<font size=2><b>m[m.length]=new Array("Member Name","Password","Title1","dest1","Title2","dest2");<br>
+m[m.length]=new Array("Mike Black","romeo","yahoo","http://www.yahoo.com");</b></font>
+</td></tr>
+<tr><td>Neither the members.js file or the version4.htm page should ever be on the internet. You should always keep these on your hard drive only. The members.js file contains the password and destinations; keep it hidden.</td>
+ <td><input type="button" value=" 2 "><font size=4> version4.htm - Control program and login.js data creator.</font><br>
+This is the main tool of the package. This file/program reads the contents of the members.js file and allows you to examine and manipulate the information. You can also create a members.js file listing from the data you input. The primary function is to create the data for the login.js file.
+</td></tr>
+<tr><td>'login.js' is created by the Login Script Creator Version 4.0. You need to copy the output of the 'creator' to a text file and save it as 'login.js'.</td>
+ <td><input type="button" value=" 3 "><font size=4> login.js - Hashed and Coded Member Information file.</font><br>
+The login.htm file reads the contents of the login.js file. It contains all the encrypted information about your members including their membership name, password hashcode and destination(s). The login.js file can only be created by using the Login Script Creator Version 4.0. You need to have this file in the same directory as the login.htm file. No, this .js file does not contain any passwords!</td></tr>
+<tr><td>The members.js file is read by Creator Version 4.0 and encrypted. The data is stored in the login.js file. This file is used by login.htm so your members can access your hidden pages.</td>
+ <td><input type="button" value=" 4 "><font size=4> login.htm - Popup Window HTML file.</font><br>
+  login.htm is the HTML file for the 'popup' window which allows your members to enter their name and password. The popup window is opened from one of YOUR sites windows. The HTML code you need to open the login popup window is:<br>
+ <pre><tt><b>&lt;form&gt;
+ &lt;input type="button" value="LOGIN"
+  onclick="window.open('login.htm','','width=180,height=150');"&gt;
+&lt;/form&gt;</b></tt></pre>
+</td>
+</form></tr></table>
+</body></html>

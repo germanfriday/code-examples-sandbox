@@ -1,0 +1,140 @@
+@charset "utf-8";
+body {
+	background-image: url(../images/page-bg.jpg);
+	background-repeat: repeat;
+	background-color: #000;
+	background-position: center top;
+	background-attachment: fixed;
+}
+/********************************************************************************  Suppersized Slider Starts */
+.slider-text {
+	position: absolute;
+	overflow: hidden;
+	bottom: 15%;
+	padding-left: 12px;
+	padding-right: 12px;
+}
+#slidecaption {
+	font-family: 'Oswald', sans-serif;
+	font-size: 30px;
+	line-height: 36px;
+	text-transform: uppercase;
+	font-weight: 700;
+	overflow: hidden;
+	color: white;
+}
+.slidedescription {
+	font-family: 'Oswald', sans-serif;
+	font-size: 24px;
+	line-height: 28px;
+	font-weight: 300;
+	padding-top: 2px;
+	padding-bottom: 4px;
+	margin-top: 2px;
+}
+.social-icons {
+	position: absolute;
+	overflow: hidden;
+	top: 80%;
+}
+.center {
+	text-align: center;
+}
+/********************************************************************************  Suppersized Slider Ends */
+
+
+
+
+
+.wrapper-landscape {
+	width: 990px;
+	margin: auto;
+}
+.wrapper {
+	width: 1170px;
+	margin: auto;
+	padding-top: 10px;
+	padding-right: 0px;
+	padding-bottom: 0px;
+	padding-left: 0px;
+}
+.wrapper-mob {
+	width: 320px;
+	margin-right: auto;
+	margin-left: auto;
+}
+.iphone-portrait {
+	margin-left: 530px;
+	position:fixed;
+}
+.go-landscape {
+	position: absolute;
+	margin-left: 0px;
+	margin-top: 0px;
+	z-index: 9999999;
+}
+.go-portrait {
+	z-index: 999999;
+	position: absolute;
+	margin-top: 30px;
+	margin-left: 200px;
+}
+.landscape-thumbs {
+	z-index: 999999;
+	position: absolute;
+	margin-top: 540px;
+	margin-left: 100px;
+}
+* {
+	border: 0px;
+	padding: 0px;
+	margin: 0px;
+}
+.iphone-landscape {
+	position: absolute;
+	padding-left: 70px;
+	padding-top: 120px;
+	z-index: 999;
+}
+.iphone-landscape-frame {
+	position: absolute;
+	z-index: 9999;
+	margin-top: -366px;
+	margin-left: 132px;
+}
+.hide-scroll-2 {
+	background-image: url(../images/fixscroll-2.png);
+	width: 132px;
+	height: 385px;
+	position: absolute;
+	margin-top: -399px;
+	margin-left: 612px;
+	z-index: 99999;
+}
+.hide-scroll-3 {
+	background-image: url(../images/fixscroll-3.png);
+	width: 621px;
+	height: 33px;
+	position: absolute;
+	margin-top: -38px;
+	margin-left: -5px;
+	z-index: 99999;
+}
+.hide-scroll {
+	background-image: url(../images/fixscroll.png);
+	position: absolute;
+	height: 805px;
+	width: 34px;
+	margin-left: 541px;
+	margin-top: 0px;
+	z-index: 99999;
+}
+.iphone {
+	position: absolute;
+	z-index: 999;
+	margin-left: 222px;
+	margin-top: 120px;
+}
+.iphone-pic {
+	position: absolute;
+}

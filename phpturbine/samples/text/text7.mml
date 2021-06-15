@@ -1,0 +1,4 @@
+<Text>Text Area:</Text>
+
+<TextField size="300,100" flags="multiline,border,wrap">This text is editable and is inside a multiline text field. Click here to edit!
+</TextField>

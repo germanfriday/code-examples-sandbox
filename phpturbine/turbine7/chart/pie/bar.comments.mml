@@ -1,0 +1,163 @@
+<!-- pie/bar.mml -->
+
+<!-- This MML file will draw the data shapes that forms the chart. This file is loaded once for each data value -->
+
+
+<!--
+Turbine vars used in this file:
+
+_barX, _barY                  top-left position of the data shape
+_barcolor                     data shape color
+_barwidth                     dimensions of the data shape
+_barheight0                   height of the current data shape
+_barheight1                   height of the next data shape
+_barTooltip                   data shape text tooltip
+_barValue                     data shape text
+_defaultFontHeight            default font height
+_barURL                       url to navigate when the data shape is clicked
+_barLabel                     text label of the X axis
+_threeDDepthX, _threeDDepthY  X,Y displacement to simulate the 3D depth
+_currentSumValue              the accumulated values to this moment
+_nextSumValue                 the accumulated values to the next iteration
+_sumValues                    the total sum of all the values
+-->
+
+<!-- set origin to 0,half the frame to simply -->
+<Origin  pos="0,{=_frameHeight/2}"/>
+
+<!-- draw the data shape in "rest" mode -->
+<BaseDepth depth="0"/>
+<shape pos="{=_frameWidth/2},0">
+  <FillColor side="right" color="{_barcolor}"/>
+  <LineStyle width="1" color="#000000"/>
+  <slice   
+    center="0,0"
+    startAngle="{=360*_currentSumValue/_sumValues}"
+    endAngle="{=360*_nextSumValue/_sumValues}"
+    radius="{=_frameHeight/2},{=_frameHeight/2}"/>
+</shape>
+
+
+<BaseDepth depth="1000"/>
+<!--draw a label inside the bar - the percentage-->
+<Text
+  
+  flags="base"
+  size="{=_defaultFontHeight*0.75}"
+  color="#000000"
+  align="center"
+  placepoint="center"
+--pos="{ cos(angle_between_the_slice_in_degrees_______________________________)*(radius________/1.5)+deltaX_______},{ sin(angle_between_the_slice_in_degrees_______________________________)*(radius________/1.5)}"
+--pos="{ cos(angle_between_the_slice_in_radians___________________*Math.PI/180)*(radius________/1.5)+deltaX_______},{ sin(angle_between_the_slice_in_radians___________________*Math.PI/180)*(radius________/1.5)}"
+  pos="{=cos((360*((_nextSumValue+_currentSumValue)/2)/_sumValues)*Math.PI/180)*(_frameHeight/2/1.5)+_frameWidth/2},{=sin((360*((_nextSumValue+_currentSumValue)/2)/_sumValues)*Math.PI/180)*(_frameHeight/2/1.5)}"
+  _width="{=_barwidth-10}">{_currentPercentageValue}%</Text>
+
+<!--draw the axis label-->
+<Text
+  flags="base"
+  size="{=_defaultFontHeight*0.75}"
+  color="#000000"
+  align="center"
+  placepoint="center"
+--pos="{ cos(angle_between_the_slice_in_degrees_______________________________)*(radius________*1.25)+deltaX_______},{ sin(angle_between_the_slice_in_degrees_______________________________)*(radius________*1.25)}"
+--pos="{ cos(angle_between_the_slice_in_radians___________________*Math.PI/180)*(radius________*1.25)+deltaX_______},{ sin(angle_between_the_slice_in_radians___________________*Math.PI/180)*(radius________*1.25)}"
+  pos="{=cos((360*((_nextSumValue+_currentSumValue)/2)/_sumValues)*Math.PI/180)*(_frameHeight/2*1.15)+_frameWidth/2},{=sin((360*((_nextSumValue+_currentSumValue)/2)/_sumValues)*Math.PI/180)*(_frameHeight/2*1.15)}"
+  _width="{=_barwidth-10}">{_barLabel}</Text>
+
+
+
+
+<!-- use a button to draw the hit, over and down states -->
+<BaseDepth depth="2000"/>
+<button pos="0,0">
+  <State type="hit">
+    <BaseDepth depth="0"/>
+    <shape pos="{=_frameWidth/2},0">
+      <FillColor side="right" color="{_barcolor}"/>
+      <LineStyle width="1" color="#000000"/>
+      <slice   
+        center="0,0"
+        startAngle="{=360*_currentSumValue/_sumValues}"
+        endAngle="{=360*_nextSumValue/_sumValues}"
+        radius="{=_frameHeight/2},{=_frameHeight/2}"/>
+    </shape>
+  </State>
+
+  <State type="over,down">
+    <BaseDepth depth="0"/>
+    <shape pos="{=_frameWidth/2},0">
+      <LineStyle width="2" color="#ffffff"/>
+      <slice   
+        center="0,0"
+        startAngle="{=360*_currentSumValue/_sumValues}"
+        endAngle="{=360*_nextSumValue/_sumValues}"
+        radius="{=_frameHeight/2},{=_frameHeight/2}"/>
+    </shape>
+
+  <BaseDepth depth="1000"/>
+	<!--draw a label inside the bar - the percentage-->
+  <Text
+	  flags="base"
+	  size="{=_defaultFontHeight*0.75}"
+	  color="#000000"
+	  align="center"
+    placepoint="center"
+	--pos="{ cos(angle_between_the_slice_in_degrees_______________________________)*(radius________/1.5)+deltaX_______},{ sin(angle_between_the_slice_in_degrees_______________________________)*(radius________/1.5)}"
+	--pos="{ cos(angle_between_the_slice_in_radians___________________*Math.PI/180)*(radius________/1.5)+deltaX_______},{ sin(angle_between_the_slice_in_radians___________________*Math.PI/180)*(radius________/1.5)}"
+	  pos="{=cos((360*((_nextSumValue+_currentSumValue)/2)/_sumValues)*Math.PI/180)*(_frameHeight/2/1.5)+_frameWidth/2},{=sin((360*((_nextSumValue+_currentSumValue)/2)/_sumValues)*Math.PI/180)*(_frameHeight/2/1.5)}"
+	  _width="{=_barwidth-10}">{_currentPercentageValue}%</Text>
+
+  <!--draw the axis label-->
+	<Text
+	  flags="base"
+	  size="{=_defaultFontHeight*0.75}"
+	  color="#000000"
+	  align="center"
+    placepoint="center"
+	--pos="{ cos(angle_between_the_slice_in_degrees_______________________________)*(radius________*1.25)+deltaX_______},{ sin(angle_between_the_slice_in_degrees_______________________________)*(radius________*1.25)}"
+	--pos="{ cos(angle_between_the_slice_in_radians___________________*Math.PI/180)*(radius________*1.25)+deltaX_______},{ sin(angle_between_the_slice_in_radians___________________*Math.PI/180)*(radius________*1.25)}"
+	  pos="{=cos((360*((_nextSumValue+_currentSumValue)/2)/_sumValues)*Math.PI/180)*(_frameHeight/2*1.15)+_frameWidth/2},{=sin((360*((_nextSumValue+_currentSumValue)/2)/_sumValues)*Math.PI/180)*(_frameHeight/2*1.15)}"
+	  _width="{=_barwidth-10}">{_barLabel}</Text>
+
+    <!-- draw the text tooltip -->
+    <BaseDepth depth="2000"/>
+    <Text
+      background="color(#aaffff), border(#000000,1),space(3)"
+	    size="{_defaultFontHeight}"
+      flags="base"
+      color="#000000"
+      align="center"
+      placepoint="center"
+    --pos="{ cos(angle_between_the_slice_in_degrees_______________________________)*(radius________*1.25)+deltaX_______},{ sin(angle_between_the_slice_in_degrees_______________________________)*(radius________*1.25)}"
+    --pos="{ cos(angle_between_the_slice_in_radians___________________*Math.PI/180)*(radius________*1.25)+deltaX_______},{ sin(angle_between_the_slice_in_radians___________________*Math.PI/180)*(radius________*1.25)}"
+      pos="{=cos((360*((_nextSumValue+_currentSumValue)/2)/_sumValues)*Math.PI/180)*(_frameHeight/2*1.25)+_frameWidth/2},{=sin((360*((_nextSumValue+_currentSumValue)/2)/_sumValues)*Math.PI/180)*(_frameHeight/2*1.25)}"
+      _align="left">{_barTooltip}</Text>
+
+
+    <!-- draw text tooltip inside the bar - the value -->
+    <BaseDepth depth="2000"/>
+    <Text
+      background="color(#aaffff), border(#000000,1),space(3)"
+      flags="base"
+      color="#000000"
+	    size="{_defaultFontHeight}"
+      align="center"
+      placepoint="center"
+    --pos="{ cos(angle_between_the_slice_in_degrees_______________________________)*(radius________*0.30)+deltaX_______},{ sin(angle_between_the_slice_in_degrees_______________________________)*(radius________*0.30)}"
+    --pos="{ cos(angle_between_the_slice_in_radians___________________*Math.PI/180)*(radius________*0.30)+deltaX_______},{ sin(angle_between_the_slice_in_radians___________________*Math.PI/180)*(radius________*0.30)}"
+      pos="{=cos((360*((_nextSumValue+_currentSumValue)/2)/_sumValues)*Math.PI/180)*(_frameHeight/2*0.30)+_frameWidth/2},{=sin((360*((_nextSumValue+_currentSumValue)/2)/_sumValues)*Math.PI/180)*(_frameHeight/2*0.30)+0}">{_barValue}</Text>
+
+
+  </State>
+
+  <!-- navigate to the url when this bar value is clicked -->
+  <if notEmpty="{_barURL}">
+    <Script event="press" type="source">
+    getUrl("{_barURL}");
+    </Script>
+  </if>
+
+  <Audio src="~/chart/bip.mp3"
+         event="RollOver"/>
+
+</button>

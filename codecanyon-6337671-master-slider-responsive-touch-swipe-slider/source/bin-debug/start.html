@@ -1,0 +1,312 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8" />
+
+		<title>index</title>	
+		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+		
+		
+		<!-- Base MasterSlider style sheet -->
+		<link rel="stylesheet" href="masterslider/style/masterslider.css" />
+		 
+		<!-- MasterSlider default skin -->
+		<link rel="stylesheet" href="masterslider/skins/default/style.css" />
+		 
+		<script src="jquery-1.8.2.js"></script>
+		<script src="jquery.easing.min.js"></script>
+		
+		<script src="../dev/slider/tools/base.js"></script>
+		<script src="../dev/slider/tools/EventDispatcher.js"></script>
+		<script src="../dev/slider/tools/TouchSwipe.js"></script>
+		<script src="../dev/slider/tools/Timer.js"></script>
+		<script src="../dev/slider/tools/CSSTweener.js"></script>
+		<script src="../dev/slider/tools/Aligner.js"></script>
+		<script src="../dev/slider/controls/controller.js"></script>
+		<script src="../dev/slider/controls/LayerEffects.js"></script>
+		<script src="../dev/slider/controls/LayerElement.js"></script>
+		<script src="../dev/slider/controls/ImageLayerElement.js"></script>
+		<script src="../dev/slider/controls/VideoLayerElement.js"></script>
+		<script src="../dev/slider/controls/HotspotLayer.js"></script>
+		<script src="../dev/slider/SliderEvent.js"></script>
+		<script src="../dev/slider/Slide.js"></script>
+		<script src="../dev/slider/SlideController.js"></script>
+		<script src="../dev/slider/MasterSlider.js"></script>
+		<script src="../dev/slider/views/ViewEvents.js"></script>
+		<script src="../dev/slider/views/BasicView.js"></script>
+		<script src="../dev/slider/views/WaveView.js"></script>
+		<script src="../dev/slider/views/FadeBasicView.js"></script>
+		<script src="../dev/slider/views/FadeWaveView.js"></script>
+		<script src="../dev/slider/views/FlowView.js"></script>
+		<script src="../dev/slider/views/FadeFlowView.js"></script>
+		<script src="../dev/slider/views/MaskView.js"></script>
+		<script src="../dev/slider/views/FadeView.js"></script>
+		<script src="../dev/slider/views/ScaleView.js"></script>
+		<script src="../dev/slider/views/FocusView.js"></script>
+		<script src="../dev/slider/views/PartialWaveView.js"></script>
+		<script src="../dev/slider/uicontrols/BaseControl.js"></script>
+		<script src="../dev/slider/uicontrols/Arrows.js"></script>
+		<script src="../dev/slider/uicontrols/Thumblist.js"></script>
+		<script src="../dev/slider/uicontrols/Bullets.js"></script>
+		<script src="../dev/slider/uicontrols/Scrollbar.js"></script>
+		<script src="../dev/slider/uicontrols/Timebar.js"></script>
+		<script src="../dev/slider/uicontrols/CircleTimer.js"></script>
+		<script src="../dev/slider/uicontrols/SlideInfo.js"></script>
+	
+		<style type="text/css" media="screen">
+
+			html,body{margin:0;
+				height: 100%;overflow: hidden;}
+	
+			.page-wrapper{
+				max-width: 1000px;
+				margin: 0 auto;
+			}
+
+			.btn{
+				-webkit-transform-origin: 0 0 ;
+				-moz-transform-origin: 0 0 ;
+				-ms-transform-origin: 0 0 ;
+				-o-transform-origin: 0 0 ;
+				transform-origin: 0 0 ;
+			}
+
+			/* .ms-slide-layers{ display: block !important;}
+			.ms-noamin-layer{ opacity: 1 !important; display: block !important;} */
+
+
+
+		</style>
+	</head>
+	
+	
+	
+	<body>
+
+<!-- 	<video controls>
+			<source src="video/video.mp4" type="video/mp4"/>
+			<source src="video/video.webm" type="video/webm"/>
+			<source src="video/video.ogv" type="video/ogg"/>
+	</video> -->
+		<div class="page-wrapper">
+		<!-- masterslider -->
+		<div class="master-slider ms-skin-default" id="masterslider">
+				<div class="ms-slide" id="slide1">
+					
+						<img src="masterslider/blank.gif" data-src="img/1.jpg" alt="lorem ipsum dolor sit"/>			 
+						
+
+   						 <img class="ms-thumb" src="img/thumbs/1.jpg" alt="lorem ipsum dolor sit"/>
+
+
+						<div class="ms-layer ms-caption" style="top:10px; left:30px;">
+								Lorem ipsum dolor sit amet
+						</div>
+						
+					 <div class="ms-layer" 	style="left:418px; top:335px;"
+											data-delay="300"
+											data-type="hotspot"
+											data-align="left"
+										>
+										<div class="product-tt"><h3>LOREM IPSUM DOLOR</h3>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt.</div>
+								</div>
+								
+								 <div class="ms-layer" style="left:664px; top:208px;"
+											data-delay="400"
+											data-type="hotspot"
+											data-align="right"
+										>
+										<div class="product-tt"><h3>LOREM IPSUM DOLOR</h3>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt.</div>
+								</div>
+								
+								 <div class="ms-layer" style="left:375px; top:115px;"
+											data-delay="500"
+											data-type="hotspot"
+											data-align="bottom"
+										>
+										<div class="product-tt"><h3>LOREM IPSUM DOLOR</h3>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt.</div>
+								</div>
+												
+										<a href="#ms-slide:2"	class="ms-layer btn" >
+											<img src="../masterslider/blank.gif" class="ms-noamin-layer " data-src="btn.gif" alt="layer"
+										style="left:535px; top:338px"
+							
+										data-duration="1500"
+										data-delay="599"
+										data-effect="t(true,550,550,n,90000,n,n,n,n,n,n,n,n,n,n)"
+										data-ease="easeInOutQuint"
+										data-type="image"
+									/>
+								</a>
+								<div class="ms-info">
+			                <h3>TERRY THOMPSON</h3>
+			                <h4>REVIEWER</h4>
+			                <p class="email">E-Mail: <a href="#">terrythompson@teleworm.us</a></p>
+			                <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt.</p>
+		                </div>
+							<!-- <a href="http://google.com"></a> -->
+				</div>
+				 <div class="ms-slide" id="slide2">
+						
+						<img src="masterslider/blank.gif" data-src="img/2.jpg" alt="lorem ipsum dolor sit"/>			 
+					<img class="ms-thumb" src="img/thumbs/2.jpg" alt="lorem ipsum dolor sit"/>
+
+						<video>
+						
+							<source src="video/video.webm" type="video/webm"/>
+							<source src="video/video.ogv" type="video/ogg"/>
+						</video>
+				
+						<div class="ms-layer ms-caption" style="top:10px; right:30px;">
+								Lorem ipsum dolor sit amet
+						</div>
+								
+								 <div class="ms-layer"	style="left:418px; top:335px;"
+											data-delay="300"
+											data-type="hotspot"
+											data-align="left"
+										>
+										<div class="product-tt"><h3>LOREM IPSUM DOLOR</h3>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt.</div>
+								</div>
+								
+								 <div class="ms-layer" style="left:664px; top:208px;"
+											data-delay="400"
+											data-type="hotspot"
+											data-align="top"
+										>
+										<div class="product-tt"><h3>LOREM IPSUM DOLOR</h3>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt.</div>
+								</div>
+								
+								 <div class="ms-layer" style="left:375px; top:115px;"
+											data-delay="500"
+											data-type="hotspot"
+											data-align="bottom"
+										>
+										<div class="product-tt"><h3>LOREM IPSUM DOLOR</h3>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt.</div>
+								</div>
+												
+										<a href="#ms-slide:2"	class="ms-layer" >
+											<img src="../masterslider/blank.gif" data-src="btn.gif" alt="layer"
+										style="left:535px; top:338px"
+										data-effect="rotateright(20,120,br)"
+										data-duration="500"
+										
+										data-ease="easeOutExpo"
+										data-type="image"
+									/>
+								</a>
+
+								<div class="ms-info">
+			                <h3>TERRY THOMPSON</h3>
+			                <h4>REVIEWER</h4>
+			                <p class="email">E-Mail: <a href="#">terrythompson@teleworm.us</a></p>
+			                <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt.</p>
+		                </div>
+				</div>
+				<div class="ms-slide" id="slide3">
+
+						<img src="masterslider/blank.gif" data-src="img/3.jpg" alt="lorem ipsum dolor sit"/>			 
+					<img class="ms-thumb" src="img/thumbs/3.jpg" alt="lorem ipsum dolor sit"/>
+
+						<div class="ms-layer ms-caption" style="bottom:10px; left:30px;">
+								test title
+						</div>
+						<div class="ms-info">
+			                <h3>TERRY THOMPSON</h3>
+			                <h4>REVIEWER</h4>
+			                <p class="email">E-Mail: <a href="#">terrythompson@teleworm.us</a></p>
+			                <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt.</p>
+		                </div>
+						
+							<!-- slide video layer -->
+							<!-- <div style="top:0; left:0; width:100%; height:100%"
+							>
+							    <iframe src="http://www.youtube.com/embed/YHWkro9-e9Q?hd=1&wmode=opaque&autoplay=1&showinfo=0&controls=0" width="100%" height="100%"> </iframe>
+							</div>
+							 -->
+						<!-- <a href="http://www.youtube.com/embed/YHWkro9-e9Q?hd=1&wmode=opaque&controls=1&showinfo=0" data-type="video">Youtube video</a> -->
+						 
+				</div>
+				
+			<!-- 	  <div class="ms-slide">
+								    <img src="../masterslider/blank.gif" data-src="masterslider/images/3.jpg" alt="lorem ipsum dolor sit" />
+								    <h3 class="ms-layer video-title" style="right:41px; bottom:40px; background-color:#313D50;" data-effect="rotateback(20,620,br)" data-ease="easeOutQuad" data-delay="100">Red Bull Signature Series 2013</h3>
+								    <h4 class="ms-layer video-author" style="right:285px; bottom:14px; background-color:#86838B; color:#FFF;" data-effect="rotate3dbottom(95,0,0,100)" data-ease="easeOutExpo" data-duration="1400" data-delay="500"> by Vogner</h4>
+								    <a href="https://w.soundcloud.com/player/?visual=true&url=http%3A%2F%2Fapi.soundcloud.com%2Ftracks%2F138004369&show_artwork=true" data-type="video"> </a>
+								 </div>
+			
+					</div> -->
+		<!-- end of masterslider -->
+		
+		</div>
+		
+	</body>
+	
+	<script type="text/javascript">		
+
+			
+	var slider = new MasterSlider();
+	slider.control("arrows");
+
+	slider.control("circletimer");
+	slider.control("timebar",{autohide:false,hideUnder:300,align:'top',margin:0,color:'#333'});
+	slider.control('bullets',{autohide:false,hideUnder:300,align:'bottom',margin:15})
+	slider.control('scrollbar',{autohide:false,hideUnder:300,dir:'v',align:'right',margin:4,inset:false,width:3})
+	slider.control('thumblist',{autohide:false,width:100,height:66,inset:false,align:'bottom',dir:'h',space:5,margin:5,hideUnder:800})
+	slider.control("slideinfo",{inset:false,align:'left',dir:'v',size:200,hideUnder:600});
+	
+	slider.setup("masterslider", {
+		height:500,
+		width:1000,
+	  	space:0,
+		speed:20,
+		view:'fadeFlow',
+		dir:'v',
+		autoplay:true,
+		//loop:true,
+		//autoHeight: true,
+		//instantStartLayers:true,
+		layout:'fullscreen'
+		//fullscreenMargin:60
+	});
+
+/*	function resetslider(){
+		if (slider) {
+				slider.destroy(true);
+		 }
+
+		 slider = new MasterSlider().control('arrows', {
+			 autohide: false
+		 }).setup('masterslider', {
+			 width: 780,
+			 height: 585,
+		 //	start: uncommon.initial+1 || 1,
+			 space: 68,
+			 wheel: true,
+			 loop: false,
+			 view: 'flow',
+			 dir: 'v'
+		 })
+	}
+*/
+
+		//setTimeout(setupslider , 0)
+		//setupslider();
+
+		/*$(document).ready(function(){
+		slider.api.addEventListener(MSSliderEvent.CHANGE_START , function(){
+			var slides = slider.api.view.slides;
+			var indexs = []
+			for(var i = 0 ; i < slides.length ; i ++)
+				indexs.push(slides[i].index);
+			//console.log(indexs , slider.api.index() , slides.indexOf(slider.api.view.slideList[slider.api.index()]));
+		});
+			
+		});
+*/
+		$(window).on('hashchange', function() {	
+			//slider.api.gotoSlide(parseInt(window.location.hash.match(/ms-slide:\d*/)[0].split(':')[1]));		
+		});
+		
+	</script>
+</html>

@@ -1,0 +1,591 @@
+<!doctype html>  
+<!--[if IE 6 ]><html lang="en-us" class="ie6"> <![endif]-->
+<!--[if IE 7 ]><html lang="en-us" class="ie7"> <![endif]-->
+<!--[if IE 8 ]><html lang="en-us" class="ie8"> <![endif]-->
+<!--[if (gt IE 7)|!(IE)]><!-->
+<html lang="en-us"><!--<![endif]-->
+<head>
+	<meta charset="utf-8">
+	
+	<title>FileIt - HTML to Word/PDF</title>
+	
+	<meta name="description" content="Thank You for Puchasing FileIt">
+	<meta name="author" content="Koen Vendrik">
+	<meta name="copyright" content="Koen Vendrik">
+	<meta name="generator" content="Documenter v1.6 http://rxa.li/documenter">
+	<meta name="date" content="2012-03-24T00:00:00+01:00">
+	
+	<link rel="stylesheet" href="css/documenter_style.css" media="all">
+	
+	
+	<script src="js/jquery.1.6.4.js"></script>
+	
+	<script src="js/jquery.scrollTo-1.4.2-min.js"></script>
+	<script src="js/jquery.easing.js"></script>
+	
+	
+	<script>document.createElement('section');var duration=500,easing='swing';</script>
+	<script src="js/script.js"></script>
+	
+	<style>
+		html{background-color:#EEEEEE;color:#383838;}
+		::-moz-selection{background:#444444;color:#DDDDDD;}
+		::selection{background:#444444;color:#DDDDDD;}
+		#documenter_sidebar #documenter_logo{background-image:url(assets/images/image_1.png);}
+		a{color:#0000FF;}
+		hr{border-top:1px solid #EBEBEB;border-bottom:1px solid #FFFFFF;}
+		#documenter_sidebar, #documenter_sidebar ol a{background-color:#DDDDDD;color:#222222;}
+		#documenter_sidebar ol a{-webkit-text-shadow:1px 1px 0px #EEEEEE;-moz-text-shadow:1px 1px 0px #EEEEEE;text-shadow:1px 1px 0px #EEEEEE;}
+		#documenter_sidebar ol{border-top:1px solid #AAAAAA;}
+		#documenter_sidebar ol a{border-top:1px solid #EEEEEE;border-bottom:1px solid #AAAAAA;color:#444444;}
+		#documenter_sidebar ol a:hover{background:#444444;color:#DDDDDD;border-top:1px solid #444444;}
+		#documenter_sidebar ol a.current{background:#444444;color:#DDDDDD;border-top:1px solid #444444;}
+		#documenter_copyright{display:block !important;visibility:visible !important;}
+	</style>
+	
+</head>
+<body>
+	<div id="documenter_sidebar">
+		<a href="#documenter_cover" id="documenter_logo"></a>
+		<ol id="documenter_nav">
+			<li><a class="current" href="#documenter_cover">Start</a></li>
+			<li><a href="#installation">Installation</a></li>
+			<li><a href="#installation_word">Installation Word</a>
+				<ol>
+					<li><a href="#installation_word_quick_installation">Quick Installation</a>
+					<li><a href="#installation_word_costum_installation_only_if_you_have_knowledge_of_coding_">Costum Installation (only if you have knowledge of coding)</a>
+				</ol>
+			</li>
+			<li><a href="#installation_pdf">Installation PDF</a>
+				<ol>
+					<li><a href="#installation_pdf_quick_installation">Quick Installation</a>
+					<li><a href="#installation_pdf_costum_installation_only_if_you_have_knowledge_of_coding_">Costum Installation (only if you have knowledge of coding)</a>
+				</ol>
+			</li>
+			<li><a href="#styling">Styling</a>
+				<ol>
+					<li><a href="#styling_strongquick_installation_styling_strong">Quick Installation Styling</a>
+					<li><a href="#styling_strongcostum_installation_styling_strong">Costum Installation Styling</a>
+				</ol>
+			</li>
+			<li><a href="#modify_word">Modify Word</a>
+				<ol>
+					<li><a href="#modify_word_filename">Filename</a>
+					<li><a href="#modify_word_content">Content</a>
+				</ol>
+			</li>
+			<li><a href="#modify_pdf">Modify PDF</a>
+				<ol>
+					<li><a href="#modify_pdf_details">Details</a>
+					<li><a href="#modify_pdf_content">Content</a>
+					<li><a href="#modify_pdf_language">Language</a>
+					<li><a href="#modify_pdf_layout">Layout</a>
+				</ol>
+			</li>
+			<li><a href="#support">Support</a></li>
+
+		</ol>
+		<div id="documenter_copyright">Copyright Koen Vendrik 2012<br>
+		made with the <a href="http://rxa.li/documenter">Documenter v1.6</a> 
+		</div>
+	</div>
+	<div id="documenter_content">
+	<section id="documenter_cover"><h1>FileIt</h1><h2>HTML to Word/PDF</h2><hr><ul><li>Created: 03/23/2012</li><li>latest Update: 03/24/2012</li><li>By: Koen Vendrik</li><li><a href=""></a></li><li>Email: <a href="mailto:&#107;&#46;&#118;&#101;&#110;&#100;&#114;&#105;&#107;&#64;&#103;&#109;&#97;&#105;&#108;&#46;&#99;&#111;&#109;">&#107;&#46;&#118;&#101;&#110;&#100;&#114;&#105;&#107;&#64;&#103;&#109;&#97;&#105;&#108;&#46;&#99;&#111;&#109;</a></li></ul><p>Thank You for Puchasing FileIt</p></section><section id="installation">
+	<h3>Installation</h3><hr class="notop">
+<p>
+	First of all thank you for Purchasing my project.<br>
+	In the following Sections I will explane how you can use and modify FileIt.</p>
+<p>
+	&nbsp;</p>
+<p>
+	&nbsp;</p>
+<p>
+	&nbsp;</p>
+</section>
+<section id="installation_word">
+	<h3>Installation Word</h3><hr class="notop">
+<h4 id="installation_word_quick_installation">Quick Installation</h4>
+<p>
+	Navigate to the Word folder and copy the Include folder to your server. Now go to the HTML or PHP file where you want the converter to be and include the following code where you want your editor to be on the page.</p>
+<blockquote>
+	<p>
+		&lt;?php include(&quot;Include/index.html&quot;); ?&gt;</p>
+</blockquote>
+<p>
+	You&#39;re Done, Note that you need to make sure that the path to the file is correct so if you would rename the Include folder to let&#39;s say for example Converter then you would need to replace Include in the code by Converter and your code would look like this.</p>
+<blockquote>
+	<p>
+		&lt;?php include(&quot;Converter/index.html&quot;); ?&gt;</p>
+</blockquote>
+<p>
+	&nbsp;</p>
+<p>
+	When you are useing a include tag it tells the browser that it should include the page into the page you are using the include tag in. So when the HTML file you&#39;re using the include tag in is in another folder then the path of the Editor and PHP files won&#39;t be correct anymore. So the last thing you need to do is open index.html in a editor and make sure that you are useing the right paths on everything between the head tags and on the form action element. For example if you placed the Include folder on the root of your server and you included the index.html file in one of your webpages on the root of your server then you would need to add Include/ before every code between the head tags and to the action element in the form so the browser would know where the files are located. When you did this then your code would like like this.</p>
+<blockquote>
+	<div>
+		&lt;script type=&quot;text/javascript&quot; src=&quot;Include/Editor/ckeditor.js&quot;&gt;&lt;/script&gt;</div>
+	<div>
+		&lt;script src=&quot;Include/Editor/editor.js&quot; type=&quot;text/javascript&quot;&gt;&lt;/script&gt;</div>
+	<div>
+		&lt;link href=&quot;Include/Editor/editor.css&quot; rel=&quot;stylesheet&quot; type=&quot;text/css&quot; /&gt;</div>
+	<div>
+		&nbsp;</div>
+</blockquote>
+<div>
+	And the form tag would look like.</div>
+<blockquote>
+	<div>
+		&lt;form action=&quot;Include/Word.php&quot; method=&quot;post&quot;&gt;</div>
+</blockquote>
+<div>
+	&nbsp;</div>
+<h4 id="installation_word_costum_installation_only_if_you_have_knowledge_of_coding_">Costum Installation (only if you have knowledge of coding)</h4>
+<p>
+	If you need the Word converter then you should take a look inside the Word map and copy the following files/maps to&nbsp;your server.</p>
+<p>
+	&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;- &nbsp; &nbsp; &nbsp; &nbsp;Word.php<br>
+	&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;- &nbsp; &nbsp; &nbsp; &nbsp;Editor &nbsp;(Located in the Root directory)<br>
+	<br>
+	Now you copied all the neccessary files to run the Word converter. The next thing you need to do is copying the neccesery locations to you HTML file.</p>
+<p>
+	You need to copy the following between your Head tags</p>
+<blockquote>
+	<div>
+		&lt;script type=&quot;text/javascript&quot; src=&quot;Editor/ckeditor.js&quot;&gt;&lt;/script&gt;</div>
+	<div>
+		&lt;script src=&quot;Editor/editor.js&quot; type=&quot;text/javascript&quot;&gt;&lt;/script&gt;</div>
+	<div>
+		&lt;link href=&quot;Example/Editor/editor.css&quot; rel=&quot;stylesheet&quot; type=&quot;text/css&quot; /&gt;</div>
+	<div>
+		&nbsp;</div>
+</blockquote>
+<div>
+	You will need to adjust the path to the Location of the Editor map.</div>
+<div>
+	&nbsp;</div>
+<div>
+	You also need to copy the &nbsp;following between your Body tags where you want the editor to be.</div>
+<div>
+	&nbsp;</div>
+<div>
+	&nbsp;</div>
+<div>
+	<blockquote>
+		<div>
+			&lt;form action=&quot;Word.php&quot; method=&quot;post&quot;&gt;</div>
+		<div>
+			&lt;p&gt;</div>
+		<div>
+			&lt;textarea class=&quot;ckeditor&quot; cols=&quot;80&quot; id=&quot;editor1&quot; name=&quot;editortext&quot; rows=&quot;10&quot;&gt;&lt;/textarea&gt;</div>
+		<div>
+			&lt;/p&gt;</div>
+		<div>
+			&lt;p&gt;</div>
+		<div>
+			&lt;input type=&quot;submit&quot; class=&quot;downloadbutton&quot; value=&quot;Download as Word&quot; /&gt;</div>
+		<div>
+			&lt;/p&gt;</div>
+		<div>
+			&lt;/form&gt;</div>
+		<div>
+			&nbsp;</div>
+	</blockquote>
+</div>
+<p>
+	&nbsp;</p>
+<p>
+	Again you will need to adjust the Path to the location of the Word.php</p>
+</section>
+<section id="installation_pdf">
+	<h3>Installation PDF</h3><hr class="notop">
+<h4 id="installation_pdf_quick_installation">Quick Installation</h4>
+<p>
+	Navigate to the PDF folder and copy the Include folder to your server. Now go to the HTML or PHP file where you want the converter to be and include the following code where you want your editor to be on the page.</p>
+<blockquote>
+	<p>
+		&lt;?php include(&quot;Include/index.html&quot;); ?&gt;</p>
+</blockquote>
+<p>
+	You need to make sure that the path to the file is correct so if you would rename the Include folder to let&#39;s say for example Converter then you would need to replace Include in the code by Converter and your code would look like this.</p>
+<blockquote>
+	<p>
+		&lt;?php include(&quot;Converter/index.html&quot;); ?&gt;</p>
+</blockquote>
+<p>
+	&nbsp;</p>
+<p>
+	When you are useing a include tag it tells the browser that it should include the page into the page you are using the include tag in. So when the HTML file you&#39;re using the include tag in is in another folder then the path of the Editor and PHP files won&#39;t be correct anymore. So the last thing you need to do is open index.html in a editor and make sure that you are useing the right paths on everything between the head tags and on the form action element. For example if you placed the Include folder on the root of your server and you included the index.html file in one of your webpages on the root of your server then you would need to add Include/ before every code between the head tags and to the action element in the form so the browser would know where the files are located. When you did this then your code would like like this.</p>
+<blockquote>
+	<div>
+		&lt;script type=&quot;text/javascript&quot; src=&quot;Include/Editor/ckeditor.js&quot;&gt;&lt;/script&gt;</div>
+	<div>
+		&lt;script src=&quot;Include/Editor/editor.js&quot; type=&quot;text/javascript&quot;&gt;&lt;/script&gt;</div>
+	<div>
+		&lt;link href=&quot;Include/Editor/editor.css&quot; rel=&quot;stylesheet&quot; type=&quot;text/css&quot; /&gt;</div>
+	<div>
+		&nbsp;</div>
+</blockquote>
+<div>
+	And the form tag would look like.</div>
+<blockquote>
+	<div>
+		&lt;form action=&quot;Include/PDF/PDF.php&quot; method=&quot;post&quot;&gt;</div>
+</blockquote>
+<div>
+	&nbsp;</div>
+<h4 id="installation_pdf_costum_installation_only_if_you_have_knowledge_of_coding_">Costum Installation (only if you have knowledge of coding)</h4>
+<p>
+	If you need the PDF converter then you should copy the following files/maps to&nbsp;your server.</p>
+<p>
+	&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;- &nbsp; &nbsp; &nbsp; &nbsp;PDF (Located in the Root directory)<br>
+	&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;- &nbsp; &nbsp; &nbsp; &nbsp;Editor &nbsp;(Located in the Root directory)<br>
+	<br>
+	Now you copied all the neccessary files to run the PDF converter. The next thing you need to do is copying the neccesery locations to you HTML file.</p>
+<p>
+	You need to copy the following between your Head tags</p>
+<p>
+	&nbsp;</p>
+<blockquote>
+	<div>
+		&lt;script type=&quot;text/javascript&quot; src=&quot;Example/Editor/ckeditor.js&quot;&gt;&lt;/script&gt;</div>
+	<div>
+		&lt;script src=&quot;Example/Editor/editor.js&quot; type=&quot;text/javascript&quot;&gt;&lt;/script&gt;</div>
+	<div>
+		&lt;link href=&quot;Example/Editor/editor.css&quot; rel=&quot;stylesheet&quot; type=&quot;text/css&quot; /&gt;</div>
+	<div>
+		&nbsp;</div>
+</blockquote>
+<div>
+	You will need to adjust the path to the Location of the Editor map.</div>
+<div>
+	&nbsp;</div>
+<div>
+	You also need to copy the &nbsp;following between your Body tags where you want the editor to be.</div>
+<div>
+	&nbsp;</div>
+<div>
+	&nbsp;</div>
+<div>
+	<blockquote>
+		<div>
+			<div>
+				&lt;form action=&quot;PDF/PDF.php&quot; method=&quot;post&quot;&gt;</div>
+			<div>
+				&nbsp; &nbsp;&nbsp;</div>
+			<div>
+				&nbsp; &nbsp; &lt;h4&gt;Global Information&lt;/h4&gt;</div>
+			<div>
+				&lt;input type=&quot;text&quot; name=&quot;creator&quot; placeholder=&quot;File Creator&quot; /&gt;</div>
+			<div>
+				&lt;input type=&quot;text&quot; name=&quot;filename&quot; placeholder=&quot;Filename&quot;/&gt; &lt;br /&gt; &lt;br /&gt;</div>
+			<div>
+				&lt;input type=&quot;text&quot; name=&quot;title&quot; placeholder=&quot;Title&quot;/&gt;</div>
+			<div>
+				&lt;input type=&quot;text&quot; name=&quot;subject&quot; placeholder=&quot;Subject&quot;/&gt; &lt;br /&gt; &lt;br /&gt;</div>
+			<div>
+				&lt;input type=&quot;text&quot; name=&quot;author&quot; placeholder=&quot;Author&quot;/&gt;&lt;br /&gt;</div>
+			<div>
+				&lt;textarea type=&quot;text&quot; name=&quot;keywords&quot; placeholder=&quot;Keywords&quot; cols=&quot;40&quot; rows=&quot;3&quot;&gt;&lt;/textarea&gt; &lt;br /&gt;&lt;br /&gt;</div>
+			<div>
+				&nbsp;</div>
+			<div>
+				&lt;h4&gt;Page Settings&lt;/h4&gt;</div>
+			<div>
+				&lt;label&gt;Format&lt;/label&gt;</div>
+			<div>
+				&lt;input type=&quot;radio&quot; name=&quot;format&quot; value=&quot;A3&quot; /&gt; A3</div>
+			<div>
+				&lt;input type=&quot;radio&quot; name=&quot;format&quot; value=&quot;A4&quot; /&gt; A4</div>
+			<div>
+				&lt;input type=&quot;radio&quot; name=&quot;format&quot; value=&quot;A5&quot; /&gt; A5</div>
+			<div>
+				&lt;input type=&quot;radio&quot; name=&quot;format&quot; value=&quot;A6&quot; /&gt; A6 &lt;br /&gt;&lt;br /&gt;</div>
+			<div>
+				&nbsp;</div>
+			<div>
+				&lt;label&gt;Page Orientation&lt;/label&gt;</div>
+			<div>
+				&lt;input type=&quot;radio&quot; name=&quot;orientation&quot; value=&quot;P&quot; /&gt; Portrait &lt;br /&gt;</div>
+			<div>
+				&lt;input type=&quot;radio&quot; name=&quot;orientation&quot; value=&quot;L&quot; /&gt; Landscape &lt;br /&gt;&lt;br /&gt;</div>
+			<div>
+				&nbsp; &nbsp;&nbsp;</div>
+			<div>
+				&nbsp; &nbsp; &lt;label&gt;Measure Unit&lt;/label&gt;</div>
+			<div>
+				&lt;label&gt;Default: mm&lt;/label&gt;</div>
+			<div>
+				&lt;input type=&quot;radio&quot; name=&quot;unit&quot; value=&quot;pt&quot; /&gt; Point</div>
+			<div>
+				&lt;input type=&quot;radio&quot; name=&quot;unit&quot; value=&quot;mm&quot; /&gt; Millimeter</div>
+			<div>
+				&lt;input type=&quot;radio&quot; name=&quot;unit&quot; value=&quot;cm&quot; /&gt; Centimeter</div>
+			<div>
+				&lt;input type=&quot;radio&quot; name=&quot;unit&quot; value=&quot;in&quot; /&gt; Inch &lt;br /&gt;&lt;br /&gt;</div>
+			<div>
+				&nbsp; &nbsp;&nbsp;</div>
+			<div>
+				&lt;h4&gt;Layout&lt;/h4&gt;</div>
+			<div>
+				&lt;input type=&quot;text&quot; name=&quot;header&quot; placeholder=&quot;Header Text&quot;/&gt; &lt;br /&gt;</div>
+			<div>
+				&lt;input type=&quot;text&quot; name=&quot;headermargin&quot; placeholder=&quot;Header Margin /5 mm/&quot;/&gt;&lt;br /&gt;</div>
+			<div>
+				&lt;input type=&quot;text&quot; name=&quot;footermargin&quot; placeholder=&quot;Footer Margin /10mm/&quot;/&gt;&lt;br /&gt;&lt;br /&gt;</div>
+			<div>
+				&nbsp;</div>
+			<div>
+				&lt;input type=&quot;text&quot; name=&quot;margintop&quot; placeholder=&quot;Margin Top /27 mm/&quot;/&gt;</div>
+			<div>
+				&lt;input type=&quot;text&quot; name=&quot;marginbottom&quot; placeholder=&quot;Margin Bottom /25 mm/&quot;/&gt;</div>
+			<div>
+				&lt;input type=&quot;text&quot; name=&quot;marginleft&quot; placeholder=&quot;Margin Left /15 mm/&quot;/&gt;</div>
+			<div>
+				&lt;input type=&quot;text&quot; name=&quot;marginright&quot; placeholder=&quot;Margin Right /15 mm/&quot;/&gt;&lt;br /&gt;&lt;br /&gt;</div>
+			<div>
+				&nbsp; &nbsp;&nbsp;</div>
+			<div>
+				&lt;h4&gt;Content&lt;/h4&gt;</div>
+			<div>
+				&lt;input type=&quot;text&quot; name=&quot;fontsize&quot; placeholder=&quot;Font Size /10/&quot;/&gt;&lt;br /&gt;&lt;br /&gt;</div>
+			<div>
+				&nbsp;</div>
+			<div>
+				&lt;textarea class=&quot;ckeditor&quot; cols=&quot;80&quot; id=&quot;editor2&quot; name=&quot;pdftext&quot; rows=&quot;10&quot;&gt;&lt;/textarea&gt; &lt;br /&gt;</div>
+			<div>
+				&lt;input type=&quot;submit&quot; class=&quot;downloadbutton&quot; value=&quot;Preview and Save as PDF&quot; /&gt;</div>
+			<div>
+				&lt;/form&gt;</div>
+		</div>
+		<div>
+			&nbsp;</div>
+	</blockquote>
+</div>
+<p>
+	&nbsp;</p>
+<p>
+	Again you will need to adjust the Path to the location of the PDF Map.</p>
+</section>
+<section id="styling">
+	<h3>Styling</h3><hr class="notop">
+<h4 id="styling_strongquick_installation_styling_strong"><strong>Quick Installation Styling</strong></h4>
+<p>
+	If you need to adjust the styling to get the editor in a specific position then you can do this by&nbsp;opening the index.html file in your editor and adding classes or id&#39;s to the style tag.&nbsp;You could for example style the editor so it would be 70% of your page and it would be positioned in the center of the page. To do this you would need to add a class or id to the style tag. Let&#39;s say we name it container.</p>
+<blockquote>
+	<p>
+		#container {</p>
+	<p>
+		&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;width: 70%<br>
+		&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;margin-left: 15%;<br>
+		}</p>
+</blockquote>
+<p>
+	This code tells the browser that the editor is 70% of the page and that it should be pushed to the right by 15%.<br>
+	Now you have the code you need to tell the browser to apply it to the page. To do this you would need to add a div tag at the top of the body. so you would need to add the following code below the &lt;body&gt; tag.</p>
+<blockquote>
+	<p>
+		&lt;div id=&quot;container&quot;&gt;</p>
+</blockquote>
+<p>
+	And then you would have to need to tell the browser to close it at th end of the body by using a &lt;/div&gt; tag. So you would need to add a &lt;/div&gt; tag above the &lt;/body&gt; tag.</p>
+<p>
+	Now you&#39;re done styling your editor. You can if you want add everything between the style tags to your own CSS and &nbsp;make a link to it by adding the following code to the head tag in the FileIt HTML file.</p>
+<blockquote>
+	<p>
+		&lt;link rel=&quot;stylesheet&quot; type=&quot;text/css&quot; href=&quot;path/to/file/style.css&quot;&gt;</p>
+</blockquote>
+<p>
+	You would need to replace the path/to/file/stye.css with your own path and file name.</p>
+<p>
+	You can also use the div tag in your own HTML file instead of in the FileIt index.html file. To do this you would still need to add the container id to your CSS or between the style tags but instead of adding the div tags to the HTML file you would need to add them to the include tag.</p>
+<blockquote>
+	<p>
+		&lt;div id=&quot;container&quot;&gt;<br>
+		&lt;?php include(&quot;Include/index.html&quot;); ?&gt;<br>
+		&lt;/div&gt;</p>
+</blockquote>
+<p>
+	&nbsp;</p>
+<h4 id="styling_strongcostum_installation_styling_strong"><strong>Costum Installation Styling</strong></h4>
+<p>
+	You would need to add your own CSS and make a link to CSS it by adding the following code to the head tag in the FileIt HTML file.</p>
+<blockquote>
+	<p>
+		&lt;link rel=&quot;stylesheet&quot; type=&quot;text/css&quot; href=&quot;path/to/file/style.css&quot;&gt;</p>
+</blockquote>
+<p>
+	You would need to replace the path/to/file/stye.css with your own path and file name.</p>
+<p>
+	&nbsp;</p>
+<p>
+	You could for example style the editor so it would be 70% of your page and it would be positioned in the center of the page. To do this you would need to add a class or id to your CSS. Let&#39;s say we name it container.</p>
+<blockquote>
+	<p>
+		#container {</p>
+	<p>
+		&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;width: 70%<br>
+		&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;margin-left: 15%;<br>
+		}</p>
+</blockquote>
+<p>
+	This code tells the browser that the editor is 70% of the page and that it should be pushed to the right by 15%.<br>
+	Now you have the code you need to tell the browser to apply it to the page. To do this you would need to add a div tag at the top of the body. so you would need to add the following code below the &lt;body&gt; tag.</p>
+<blockquote>
+	<p>
+		&lt;div id=&quot;container&quot;&gt;</p>
+</blockquote>
+<p>
+	And then you would have to need to tell the browser to close it at th end of the body by using a &lt;/div&gt; tag. So you would need to add a &lt;/div&gt; tag above the &lt;/body&gt; tag.</p>
+<p>
+	&nbsp;</p>
+<p>
+	You can also use the div tag in your own HTML file instead of in the FileIt index.html file. To do this you would still need to add the container id to your CSS but instead of adding the div tags to the HTML file you would need to add them to the include tag.</p>
+<blockquote>
+	<p>
+		&lt;div id=&quot;container&quot;&gt;<br>
+		&lt;?php include(&quot;Include/index.html&quot;); ?&gt;<br>
+		&lt;/div&gt;</p>
+</blockquote>
+<p>
+	&nbsp;</p>
+<p>
+	&nbsp;</p>
+</section>
+<section id="modify_word">
+	<h3>Modify Word</h3><hr class="notop">
+<p>
+	The Word.php file is very short and easy to edit. Word.php includes the following code.</p>
+<p>
+	&nbsp;</p>
+<blockquote>
+	<div>
+		&lt;?php</div>
+	<div>
+		header(&quot;Content-type: application/vnd.ms-word&quot;);</div>
+	<div>
+		header(&quot;Content-Disposition: attachment;Filename=Editor.doc&quot;);</div>
+	<div>
+		&nbsp;</div>
+	<div>
+		echo &quot;&lt;html&gt;&quot;;</div>
+	<div>
+		echo &quot;&lt;meta http-equiv=\&quot;Content-Type\&quot; content=\&quot;text/html; charset=Windows-1252\&quot;&gt;&quot;;</div>
+	<div>
+		echo &quot;&lt;body&gt;&quot;;</div>
+	<div>
+		echo $_REQUEST[&#39;editortext&#39;];</div>
+	<div>
+		echo &quot;&lt;/body&gt;&quot;;</div>
+	<div>
+		echo &quot;&lt;/html&gt;&quot;;</div>
+	<div>
+		?&gt;</div>
+	<div>
+		&nbsp;</div>
+</blockquote>
+<h4 id="modify_word_filename">Filename</h4>
+<p>
+	If you want to edit the default filename you should edit the following line:</p>
+<blockquote>
+	<p>
+		header(&quot;Content-Disposition: attachment;Filename=Editor.doc&quot;);</p>
+</blockquote>
+<p>
+	This like tells the browser that the file is a attachment and that it should be downloaded. It also tells the browser that<br>
+	the name of the file should be Editor and the extension should be .doc. The only thing you need to do to edit the file name is change Editor.doc to another name like for example Text.doc.</p>
+<p>
+	&nbsp;</p>
+<h4 id="modify_word_content">Content</h4>
+<p>
+	The content of the file is decided in the following code.</p>
+<p>
+	&nbsp;</p>
+<blockquote>
+	<div>
+		echo &quot;&lt;html&gt;&quot;;</div>
+	<div>
+		echo &quot;&lt;meta http-equiv=\&quot;Content-Type\&quot; content=\&quot;text/html; charset=Windows-1252\&quot;&gt;&quot;;</div>
+	<div>
+		echo &quot;&lt;body&gt;&quot;;</div>
+	<div>
+		echo $_REQUEST[&#39;editortext&#39;];</div>
+	<div>
+		echo &quot;&lt;/body&gt;&quot;;</div>
+	<div>
+		echo &quot;&lt;/html&gt;&quot;;</div>
+</blockquote>
+<p>
+	This code tells the browser that it should request the text that was typed inside the editortext text area. Let&#39;s say you need your Word file to always have 2 sentinces with your company&#39;s name and number at the bottom of the content the user types. To do this you would need to edit the PHP file so it would add those things. Your code would like something like this.</p>
+<p>
+	&nbsp;</p>
+<blockquote>
+	<div>
+		echo &quot;&lt;html&gt;&quot;;</div>
+	<div>
+		echo &quot;&lt;meta http-equiv=\&quot;Content-Type\&quot; content=\&quot;text/html; charset=Windows-1252\&quot;&gt;&quot;;</div>
+	<div>
+		echo &quot;&lt;body&gt;&quot;;</div>
+	<div>
+		echo $_REQUEST[&#39;editortext&#39;];</div>
+	<div>
+		echo &quot;&lt;strong&gt;Company Name&lt;/strong&gt;&quot;;</div>
+	<div>
+		echo &quot;&lt;strong&gt;Phone Number:&lt;/strong&gt;2376729283&quot;;</div>
+	<div>
+		echo &quot;&lt;/body&gt;&quot;;</div>
+	<div>
+		echo &quot;&lt;/html&gt;&quot;;</div>
+</blockquote>
+<p>
+	&nbsp;</p>
+</section>
+<section id="modify_pdf">
+	<h3>Modify PDF</h3><hr class="notop">
+<h4 id="modify_pdf_details">Details</h4>
+<p>
+	The HTML PDF converter code uses the PDF.php file as action. This file is located inside the PDF map and includes the following codes.</p>
+<p>
+	&nbsp;</p>
+<blockquote>
+	<div>
+		$pdf-&gt;SetCreator(PDF_CREATOR);</div>
+	<div>
+		$pdf-&gt;SetAuthor($_REQUEST[&#39;author&#39;]);</div>
+	<div>
+		$pdf-&gt;SetTitle($_REQUEST[&#39;title&#39;]);</div>
+	<div>
+		$pdf-&gt;SetSubject($_REQUEST[&#39;subject&#39;]);</div>
+	<div>
+		$pdf-&gt;SetKeywords($_REQUEST[&#39;keywords&#39;]);</div>
+</blockquote>
+<p>
+	Those code lines tells the browser where to get the PDF details. As you can see it requests some of the HTML forms to set those details. You could edit this so for example the people who see the file will always know that the PDF file was generated on your site. To do this you would have to replace&nbsp;$_REQUEST[&#39;author&#39;] by for example &quot;http://www.example.com&quot;.</p>
+<h4 id="modify_pdf_content">Content</h4>
+<blockquote>
+	<p>
+		$html = $_REQUEST[&#39;pdftext&#39;];</p>
+</blockquote>
+<p>
+	This code is used to request the content of the PDF. The code tells the browser to use the text from the pdftext field from your HTML file as content for the PDF. You could change this to your own content by replacing&nbsp;$_REQUEST[&#39;pdftext&#39;] by for example &quot;exampletext&quot;.</p>
+<h4 id="modify_pdf_language">Language</h4>
+<blockquote>
+	<p>
+		require_once(&#39;PDF/config/lang/eng.php&#39;);</p>
+</blockquote>
+<p>
+	This code tells the browser that the language used is English. You can change this to any language you want by going to the languages folder in PDF/config/lang and changing the code to any file in that folder.</p>
+<h4 id="modify_pdf_layout">Layout</h4>
+<p>
+	To edit things like margin and the layout of your file you would need to edit the tcpdf_config.php. This file is located in the /PDF/config/ map and can be edited to your needs. By default it will request form inputs that are specified by the user. This can obviously be changed by replaceing any $_REQUEST[&#39;example&#39;] value by a &quot;example&quot; value.</p>
+<p>
+	&nbsp;</p>
+</section>
+<section id="support">
+	<h3>Support</h3><hr class="notop">
+<p>
+	If you have any problems or questions after reading this documentation then you can contact me trough my Envato contact page.</p>
+</section>
+
+	</div>
+</body>
+</html>

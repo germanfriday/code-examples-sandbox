@@ -1,0 +1,1 @@
+<html><head><title>Cookie Example</title><SCRIPT>function setCookie(){document.cookie = 'prior_visitor=Greeting; expires=Thu, 1 May 2005 20:00:00 UTC; secure; path=/'}</SCRIPT></head><body onload="setCookie()";></body></html>

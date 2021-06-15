@@ -1,0 +1,9 @@
+<TextField instance="field" size="300,100" flags="multiline,border,wrap">The next values are added by the script:
+</TextField>
+
+<Script>
+  for(i=1; i<=3; i++){
+    field.text = field.text + i + "\n";
+  }
+    
+</Script>

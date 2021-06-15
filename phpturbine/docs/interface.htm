@@ -1,0 +1,858 @@
+<HTML>
+<HEAD>
+<META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=iso-8859-1">
+<META NAME="GENERATOR" CONTENT="Mozilla/4.04 [en] (Win95; I) [Netscape]">
+<TITLE>PHP Interface</TITLE>
+</HEAD>
+<BODY topmargin="0" leftmargin="0" rightmargin="0" marginwidth="0" marginheight="0" TEXT="#000000" BGCOLOR="#FFFFFF" LINK="#003366" VLINK="#FF9900" ALINK="#FF6600">
+<CENTER>
+  <table width="100%" border="0" cellspacing="0" cellpadding="0" align="center">
+    <tr bgcolor="#000033"> 
+      <td background="images/bar_left.gif" width="50%">&nbsp;</td>
+      <td> 
+        <table width="560" border="0" cellspacing="0" cellpadding="0">
+          <tr> 
+            <td width="334"><img src="images/bar_left.gif" width="334" height="28"></td>
+            <td><img src="images/bar_central.gif" width="110" height="28"></td>
+            <td><img src="images/bar_logo.gif" width="116" height="28"></td>
+          </tr>
+        </table>
+      </td>
+      <td background="images/1x1_azul_esc.gif" width="50%">&nbsp;</td>
+    </tr>
+    <tr bgcolor="#FFFFFF" height="4"> 
+      <td colspan="3"></td>
+    </tr>
+  </table>
+  <TABLE BORDER=0 COLS=2 WIDTH="560" cellpadding="0" cellspacing="0" >
+    <TR valign="top">
+      <TD COLSPAN="2" height="12"> 
+        <table border=0 cols=2 width="560" cellpadding="0" cellspacing="0" >
+          <tr> 
+            <td width="443" height="25"><font face="Verdana, Arial, Helvetica, sans-serif" size="3"><a href="manual.htm">Table 
+              of Contents</a></font></td>
+            <td width="117" height="25"> 
+              <div align="center"><font face="Verdana, Arial, Helvetica, sans-serif" size="3"><a href="devdeploy.htm">Next 
+                Chapter </a> </font></div>
+            </td>
+          </tr>
+        </table>
+      </TD>
+    </TR>
+    <TR valign="top"> 
+      <TD COLSPAN="2"> 
+        <p align="left">&nbsp;</p>
+        <p align="left"><font face="Arial, Helvetica, sans-serif" size="6">5. 
+          PHP Interface</font></p>
+        <p align="left"><font size="2" face="Verdana, Arial, Helvetica, sans-serif">This 
+          section describes the Turbine PHP interface, its methods and properties 
+          and how to accomplish the most common tasks.</font></p>
+        <ul>
+          <li><font size="2" face="Arial, Helvetica, sans-serif" align="left"><a href="#start"><font size="3">Getting 
+            started</font></a></font></li>
+          <li><font size="2" face="Arial, Helvetica, sans-serif" align="left"><a href="#turbinecomponent"><font size="3">The 
+            Turbine PHP Component</font></a></font></li>
+          <li><font size="2" face="Arial, Helvetica, sans-serif" align="left"><a href="#properties"><font size="3">Turbine 
+            Properties</font></a></font></li>
+          <li><font size="2" face="Arial, Helvetica, sans-serif" align="left"><a href="#variables"><font size="3">Working 
+            with Variables</font></a></font></li>
+          <li><font size="2" face="Arial, Helvetica, sans-serif" align="left"><a href="#datasets"><font size="3">Working 
+            with DataSets</font></a></font></li>
+          <li><font size="2" face="Arial, Helvetica, sans-serif" align="left"><a href="#media"><font size="3">Working 
+            with Media Templates</font></a></font></li>
+          <li><font size="2" face="Arial, Helvetica, sans-serif" align="left"><a href="#mml"><font size="3">Creating 
+            MML </font></a></font></li>
+          <li><font size="2" face="Arial, Helvetica, sans-serif" align="left"><a href="#components"><font size="3">Working 
+            with Flash Components</font></a></font></li>
+          <li><font size="2" face="Arial, Helvetica, sans-serif" align="left"><a href="#javascript"><font size="3">Creating 
+            Scripting</font></a></font></li>
+          <li><font size="2" face="Arial, Helvetica, sans-serif" align="left"><a href="#publish"><font size="3">Publishing 
+            to Client Side</font></a></font></li>
+          <li><font size="2" face="Arial, Helvetica, sans-serif" align="left"><a href="#http"><font size="3">Fetching 
+            HTTP Content</font></a></font></li>
+          <li><font size="2" face="Arial, Helvetica, sans-serif" align="left"><a href="#generate"><font size="3">Generating 
+            into the Browser</font></a></font></li>
+          <li><font size="2" face="Arial, Helvetica, sans-serif" align="left"><a href="#generatetofile"><font size="3">Generating 
+            to a File</font></a></font></li>
+          <li><font size="2" face="Arial, Helvetica, sans-serif" align="left"><a href="#generatehtmlfirst"><font size="3">Generating 
+            HTML Plug-in Page</font></a></font></li>
+          <li><font size="2" face="Arial, Helvetica, sans-serif" align="left"><a href="#cache"><font size="3">Media 
+            Caching </font></a></font></li>
+          <li><font size="2" face="Arial, Helvetica, sans-serif" align="left"><a href="#ie"><font size="3">Special 
+            Case Internet Explorer Optimization</font></a></font></li>
+        </ul>
+        <p><br>
+          &nbsp; </p>
+        <p>&nbsp;</p>
+        <p><font face="Arial, Helvetica, sans-serif" size="5"><a name="start" id="start"></a>Getting 
+          Started </font></p>
+        <p><font size="2" face="Verdana, Arial, Helvetica, sans-serif">Let's start 
+          with a first example of a PHP script that shows how to create a Turbine 
+          object and how to generate a Flash movie based on a media template:</font></p>
+        <table width="100%" border="0" cellspacing="12" cellpadding="0" bgcolor="#FFFFCC">
+          <tr> 
+            <td valign="top"> <p><font size="2" face="Courier New, Courier, mono">&lt;?<br>
+                <font color="#009900"># create the turbine object:</font><br>
+                $turbine = new Turbine7();<br>
+                &nbsp;<br>
+                </font><font face="Courier New, Courier, mono" color="#009900" size="2"># 
+                assign a variable:</font><font face="Courier New, Courier, mono" size="2"><br>
+                $turbine-&gt;setVariable(&quot;name&quot;, &quot;some text&quot;);<br>
+                <font color="#009900">&nbsp;<br>
+                #</font><font face="Courier New, Courier, mono" color="#009900" size="2"> 
+                select a Flash .swf template to use:</font><br>
+                $turbine-&gt;load(&quot;template.swf&quot;);<br>
+                &nbsp;<br>
+                </font><font face="Courier New, Courier, mono" color="#009900" size="2"> 
+                # now generate the movie to the web browser</font><font face="Courier New, Courier, mono" size="2">:<br>
+                $turbine-&gt;generateFlash();<br>
+                </font><font face="Courier New, Courier, mono" color="#009900" size="2"># 
+                we could also generate PDF:</font><font face="Courier New, Courier, mono" size="2"><br>
+                </font><font face="Courier New, Courier, mono" color="#009900" size="2">#$turbine-&gt;GeneratePDF();</font><font face="Courier New, Courier, mono" size="2"> 
+                <br>
+                &nbsp;<br>
+                %&gt;<br>
+                </font> </p></td>
+          </tr>
+        </table>
+        <p><font size="2" face="Verdana, Arial, Helvetica, sans-serif">We start 
+          by creating the Turbine7 object into the $turbine varialble.</font></p>
+        <p><font size="2" face="Verdana, Arial, Helvetica, sans-serif">The next 
+          line creates a Turbine variable <em>{name</em>} which will have a string 
+          value of &quot;<em>some text</em>&quot;. This variable will be used 
+          in the Flash .swf template, loaded on the next line.</font></p>
+        <p><font size="2" face="Verdana, Arial, Helvetica, sans-serif">Finally 
+          we generate the Flash movie and send it to the web browser. Alternatively 
+          we could also generate a PDF document.</font></p>
+        <p>&nbsp;</p>
+        <p><font face="Arial, Helvetica, sans-serif" size="5"><a name="turbinecomponent" id="turbinecomponent"></a>The 
+          Turbine PHP Component</font></p>
+        <p><font size="2" face="Verdana, Arial, Helvetica, sans-serif">Turbine 
+          is implemented as a PHP component module - a few important things about 
+          the behavior of the Turbine component: </font></p>
+        <ol>
+          <li><font size="2" face="Verdana, Arial, Helvetica, sans-serif">It's 
+            very important to remember not to have any text before the PHP script 
+            block ( &lt;? ... ?&gt; ) as all this info will be served to the web 
+            browser, and can cause the generated media to be misunderstood by 
+            the Flash plug-in or the PDF reader on the browser.</font></li>
+          <li><font size="2" face="Verdana, Arial, Helvetica, sans-serif">Text 
+            after the PHP script block where the media is generated will also 
+            be sent to the web browser and can possibly be misunderstood by the 
+            Flash plug-in or the PDF reader. Don't leave text after the trailing 
+            ?&gt; of the PHP script block. </font></li>
+          <li><font size="2" face="Verdana, Arial, Helvetica, sans-serif">If you 
+            decide not to generate a media (that is, if the PHP script doesn't 
+            call the $turbine-&gt;generate command) you can still send any normal 
+            HTML to the browser. However, after a call to $turbine-&gt;generate 
+            it's not possible to revert and send HTML data, since the generated 
+            media was already sent.</font></li>
+        </ol>
+        <p>&nbsp; </p>
+        <p><font face="Arial, Helvetica, sans-serif" size="5"><a name="properties" id="properties"></a>Turbine 
+          Properties</font></p>
+        <p><font size="2" face="Verdana, Arial, Helvetica, sans-serif">Some of 
+          the characteristics of the movie to generate can be manipulated by setting 
+          Turbine's Media properties, through a number of functions - for example 
+          the background color, the frame rate, width or height.<br>
+          There are two major groups of Turbine properties: properties that are 
+          applied to the output media and properties that dictate the overall 
+          system settings. Most of the Media settings which are auto-explanatory:</font></p>
+        <table width="100%" border="0" cellspacing="12" cellpadding="0" bgcolor="#FFFFCC">
+          <tr> 
+            <td height="84"><p><br>
+                <font face="Courier New, Courier, mono" color="#009900" size="2"># 
+                set media Width:</font><font face="Courier New, Courier, mono" size="2"><br>
+                $turbine-&gt;width(300<font color="#009900">);<br>
+                </font><br>
+                <font color="#009900">#</font><font face="Courier New, Courier, mono" color="#009900" size="2"> 
+                set media Height:</font><br>
+                $turbine-&gt;height(200);</font></p>
+              <p><font size="2" face="Courier New, Courier, mono"><font color="#009900">#</font><font face="Courier New, Courier, mono" color="#009900" size="2"> 
+                set media background Color:</font><br>
+                $turbine-&gt;color(&quot;#FF0000&quot;);<br>
+                <br>
+                <font color="#009900">#</font><font face="Courier New, Courier, mono" color="#009900" size="2"> 
+                set FrameRate to 12 frames per second</font><font size="2" face="Courier New, Courier, mono"><font face="Courier New, Courier, mono" color="#009900" size="2">(Flash 
+                only)</font></font><font face="Courier New, Courier, mono" color="#009900" size="2">:</font> 
+                </font><font size="2" face="Courier New, Courier, mono"><br>
+                $turbine-&gt;frameRate(12);<br>
+                <br>
+                <font color="#009900">#</font><font face="Courier New, Courier, mono" color="#009900" size="2"> 
+                set Compression level to the maximum:</font> <br>
+                $turbine-&gt;compress(9);<br>
+                <br>
+                <font color="#009900">#</font><font face="Courier New, Courier, mono" color="#009900" size="2"> 
+                Allow output media to be imported</font><font size="2" face="Courier New, Courier, mono"><font face="Courier New, Courier, mono" color="#009900" size="2">(Flash 
+                only)</font></font><font face="Courier New, Courier, mono" color="#009900" size="2">:</font><br>
+                $turbine-&gt;protect(false);<br>
+                <br>
+                <font color="#009900">#</font><font face="Courier New, Courier, mono" color="#009900" size="2"> 
+                enable Debug window:</font> <br>
+                $turbine-&gt;debug(true);<br>
+                <br>
+                <font color="#009900">#</font><font face="Courier New, Courier, mono" color="#009900" size="2"> 
+                let's generate flash MX (which is version 6):</font> <br>
+                $turbine-&gt;flashVersion(&quot;6&quot;);<br>
+                <br>
+                <font color="#009900">#</font><font face="Courier New, Courier, mono" color="#009900" size="2"> 
+                get the number of frames from media:</font> <br>
+                mediaNumFrames = $turbine-&gt;numFrames();</font></p>
+              <p><font face="Courier New, Courier, mono" color="#009900" size="2"># 
+                tell Turbine to log every kind of events<br>
+                # (errors, warnings and infos):</font><font face="Courier New, Courier, mono" size="2"><br>
+                $turbine-&gt;log(&quot;all&quot;);<br>
+                <br>
+                </font><font face="Courier New, Courier, mono" color="#009900" size="2"># 
+                log to file:</font><font face="Courier New, Courier, mono" size="2"><br>
+                $turbine-&gt;logTo(&quot;file&quot;);<br>
+                &nbsp;<br>
+                </font> </p></td>
+          </tr>
+        </table>
+        <p><font size="2" face="Verdana, Arial, Helvetica, sans-serif">You can 
+          find a complete list of Turbine properties <a href="interfacereference.htm#propertylist">here</a>.</font></p>
+        <p>&nbsp;</p>
+        <p><font face="Arial, Helvetica, sans-serif" size="5"><a name="variables" id="variables"></a>Working 
+          with Variables</font></p>
+        <p><font size="2" face="Verdana, Arial, Helvetica, sans-serif">Defining 
+          a value for a Turbine variable will cause the value of such variable 
+          to be substituted when the media is generated, everywhere the variable 
+          name appears on Text Blocks, Text Fields, Action Script, Turbine commands, 
+          both in MML or in Flash .swf templates. With the Turbine PHP interface, 
+          variables can be defined by using the <em><a href="interfacereference.htm#variable">setVariable</a></em>. 
+          Let's see an example:</font></p>
+        <table width="100%" border="0" cellspacing="12" cellpadding="0" bgcolor="#FFFFCC">
+          <tr> 
+            <td height="84"><p><font face="Courier New, Courier, mono" color="#009900" size="2"><br>
+                # define an integer variable:</font><font face="Courier New, Courier, mono" size="2"><br>
+                $turbine-&gt;setVariable(&quot;int_variable&quot;, 7);<br>
+                <br>
+                </font><font face="Courier New, Courier, mono" color="#009900" size="2"># 
+                define a real variable:</font><font face="Courier New, Courier, mono" size="2"><br>
+                Turbine.setVariable(&quot;real_variable&quot;, 7.77 );</font></p>
+              <p><font face="Courier New, Courier, mono" color="#009900" size="2"># 
+                define a string variable:</font><font face="Courier New, Courier, mono" size="2"><br>
+                $turbine-&gt;setVariable(&quot;string_variable&quot;,&quot;Julia&quot;);<br>
+                <br>
+                </font><font face="Courier New, Courier, mono" color="#009900" size="2"># 
+                define a boolean variable:</font><font face="Courier New, Courier, mono" size="2"><br>
+                $turbine-&gt;setVariable(&quot;bool_variable&quot;, true);<br>
+                &nbsp;<br>
+                </font> </p></td>
+          </tr>
+        </table>
+        <p><font size="2" face="Verdana, Arial, Helvetica, sans-serif">Several 
+          variables can be loaded at once from a file by using the <em><a href="interfacereference.htm#loadvar">LoadVar</a></em> 
+          command:</font></p>
+        <table width="100%" border="0" cellspacing="12" cellpadding="0" bgcolor="#FFFFCC">
+          <tr> 
+            <td height="84"><p><font face="Courier New, Courier, mono" color="#009900" size="2"><br>
+                # load several variables from a local file:</font><font face="Courier New, Courier, mono" size="2"><br>
+                $turbine-&gt;loadVar(&quot;names.txt&quot;);<br>
+                <br>
+                </font><font face="Courier New, Courier, mono" color="#009900" size="2"># 
+                load several variables from a remote file:</font><font face="Courier New, Courier, mono" size="2"><br>
+                $turbine-&gt;loadVar(&quot;http://www.example.com/names.php&quot;);<br>
+                &nbsp;<br>
+                </font> </p></td>
+          </tr>
+        </table>
+        <p><font size="2" face="Verdana, Arial, Helvetica, sans-serif">The file 
+          can be locally or remotely located.</font></p>
+        <p>&nbsp;</p>
+        <p><font face="Arial, Helvetica, sans-serif" size="5"><a name="datasets" id="datasets"></a>Working 
+          with DataSets</font><font size="2" face="Verdana, Arial, Helvetica, sans-serif"></font></p>
+        <p><font size="2" face="Verdana, Arial, Helvetica, sans-serif">Turbine 
+          supports the concept of a DataSet which is a collection of variables 
+          organized in rows and columns. Please see the <a href="vardataset.htm#datasets">DataSet 
+          section</a> for more details about Turbine DataSets.</font></p>
+        <p><font size="2" face="Verdana, Arial, Helvetica, sans-serif">There are 
+          four methods to define DataSets: handmade; from a string; from a string 
+          defined inside a file; and from database RecordSets.</font></p>
+        <p><strong><font size="2" face="Verdana, Arial, Helvetica, sans-serif">&quot;Handmade&quot; 
+          DataSets</font></strong></p>
+        <p><font size="2" face="Verdana, Arial, Helvetica, sans-serif">To build 
+          an handmade DataSet, you need to define the columns that it contains, 
+          and then to add one row/line at a time (of course these lines need to 
+          have the same number of defined columns). <br>
+          To make an analogy with a database table (DataSets are pretty much like 
+          tables), first you define which columns (the column titles) that the 
+          table will have and then define each of the rows:</font></p>
+        <table width="100%" border="0" cellspacing="12" cellpadding="0" bgcolor="#FFFFCC">
+          <tr> 
+            <td height="84"><p><font face="Courier New, Courier, mono" color="#009900" size="2"><br>
+                # define the DataSet with 2 columns:</font><font face="Courier New, Courier, mono" size="2"><br>
+                $turbine-&gt;makeDataSet(&quot;people&quot;, &quot;name,age&quot;);<br>
+                <br>
+                </font><font face="Courier New, Courier, mono" color="#009900" size="2"># 
+                add a row to the DataSet:</font><font face="Courier New, Courier, mono" size="2"><br>
+                $turbine-&gt;addDataSetRow(&quot;John,37&quot;);<br>
+                <br>
+                </font><font face="Courier New, Courier, mono" color="#009900" size="2"># 
+                add another row:</font><font face="Courier New, Courier, mono" size="2"> 
+                <br>
+                $turbine-&gt;addDataSetRow(&quot;Rose,32&quot;);<br>
+                <br>
+                </font><font face="Courier New, Courier, mono" color="#009900" size="2"># 
+                let's add another column:</font><font face="Courier New, Courier, mono" size="2"><br>
+                $row = 0;<br>
+                $turbine-&gt;addDataSetColumn(&quot;people&quot;, &quot;address&quot;, 
+                $row, &quot;Street B&quot;);<br>
+                &nbsp; <br>
+                <br>
+                </font> </p></td>
+          </tr>
+        </table>
+        <p><strong><font size="2" face="Verdana, Arial, Helvetica, sans-serif">&nbsp;<br>
+          Defining DataSets from a String</font></strong></p>
+        <p><font size="2" face="Verdana, Arial, Helvetica, sans-serif">The format 
+          of the string that defines the DataSet can be a special formatted string 
+          or it can be an XML string: </font></p>
+        <table width="100%" border="0" cellspacing="12" cellpadding="0" bgcolor="#FFFFCC">
+          <tr> 
+            <td height="84"><p><font face="Courier New, Courier, mono" color="#009900" size="2"><br>
+                # define the DataSet from a DataSet string:</font><font face="Courier New, Courier, mono" size="2"><br>
+                $turbine-&gt;dataSetFromString(&quot;&lt;name,age&gt;john,77,Rose,50&quot;, 
+                &quot;people&quot;);<br>
+                <br>
+                </font><font face="Courier New, Courier, mono" color="#009900" size="2"># 
+                define the DataSet from a XML string:</font><font face="Courier New, Courier, mono" size="2"><br>
+                $turbine-&gt;dataSetFromString(&quot;&lt;people&gt; &lt;person&gt; 
+                &lt;name&gt; John &lt;/name&gt; &lt;age&gt; 7 &lt;/age&gt; &lt;/person&gt; 
+                &lt;/people&gt;&quot;, &quot;people&quot;, &quot;person&quot;, 
+                &quot;name,age&quot;);<br>
+                &nbsp;<br>
+                </font> </p></td>
+          </tr>
+        </table>
+        <p><font size="2" face="Verdana, Arial, Helvetica, sans-serif">The format 
+          of the DataSet string is the same as DataSet files and can be found 
+          <a href="vardataset.htm#loadingdatasetfile">here</a>.</font></p>
+        <p><font size="2" face="Verdana, Arial, Helvetica, sans-serif">&nbsp;<br>
+          <strong>Defining DataSets from Files</strong></font></p>
+        <p><font size="2" face="Verdana, Arial, Helvetica, sans-serif">Instead 
+          of having the string defined inside PHP script, one can have the DataSet 
+          string defined in a local or remote file:</font></p>
+        <table width="100%" border="0" cellspacing="12" cellpadding="0" bgcolor="#FFFFCC">
+          <tr> 
+            <td height="84"><p><font face="Courier New, Courier, mono" color="#009900" size="2"><br>
+                # define the DataSet from a file:</font><font face="Courier New, Courier, mono" size="2"><br>
+                $turbine-&gt;loadDataSet(&quot;people.txt&quot;, &quot;people&quot;);<br>
+                <br>
+                </font><font face="Courier New, Courier, mono" color="#009900" size="2"># 
+                define the DataSet from a XML file:</font><font face="Courier New, Courier, mono" size="2"><br>
+                $turbine-&gt;dataSetFromString(&quot;http://example.com/people.php&quot;, 
+                &quot;people&quot;, &quot;person&quot;, &quot;name,age&quot;);<br>
+                &nbsp; <br>
+                </font> </p></td>
+          </tr>
+        </table>
+        <p><strong><font size="2" face="Verdana, Arial, Helvetica, sans-serif">&nbsp;<br>
+          Defining DataSets from Database RecordSets</font></strong></p>
+        <p><font size="2" face="Verdana, Arial, Helvetica, sans-serif">Turbine 
+          DataSets can also be defined from Database queries - please see the 
+          &quot;<a href="../vardataset.htm#databasedatasets">Defining DataSets 
+          from Database Queries</a>&quot; section to learn more.</font></p>
+        <p>&nbsp;<br>
+          &nbsp; </p>
+        <p><font face="Arial, Helvetica, sans-serif" size="5"><a name="media" id="media"></a>Working 
+          with Media Templates</font></p>
+        <p><font size="2" face="Verdana, Arial, Helvetica, sans-serif">Turbine 
+          can use media from several sources, &quot;mixing&quot; it together with 
+          templates to produce the final media. The media templates formats currently 
+          supported by Turbine are MML and Flash .swf files. Turbine can include 
+          multiple media templates to produce the resulting media.</font></p>
+        <p><font size="2" face="Verdana, Arial, Helvetica, sans-serif">Let's see 
+          a simple example:</font></p>
+        <table width="100%" border="0" cellspacing="12" cellpadding="0" bgcolor="#FFFFCC">
+          <tr> 
+            <td height="84"><p><font face="Courier New, Courier, mono" color="#009900" size="2"><br>
+                # load a Flash .swf template:</font><font face="Courier New, Courier, mono" size="2"><br>
+                $turbine-&gt;load(&quot;frame.swf&quot;);<br>
+                <br>
+                </font><font face="Courier New, Courier, mono" color="#009900" size="2"># 
+                load an MML template:</font><font face="Courier New, Courier, mono" size="2"><br>
+                $turbine-&gt;load(&quot;menu.mml&quot;);<br>
+                &nbsp;&nbsp; <br>
+                </font> </p></td>
+          </tr>
+        </table>
+        <p><font size="2" face="Verdana, Arial, Helvetica, sans-serif">This approach 
+          is very useful and powerful, because you can build an application by 
+          having several parts of the application in separate files and them assemble 
+          them with Turbine. It allows the structuring of media templates to build 
+          complex applications through the reuse of common parts by simply <a href="interfacereference.htm#load">Loading</a> 
+          them.</font></p>
+        <p><font size="2" face="Verdana, Arial, Helvetica, sans-serif">What if 
+          you want to just include the same file several times? Do you have to 
+          load it several times as well? No - for these cases you can use the 
+          <em><a href="interfacereference.htm#include">Include</a></em> command 
+          which includes the file, but does not show it. Later on, you can display 
+          it in several places. Let's see an example:</font></p>
+        <table width="100%" border="0" cellspacing="12" cellpadding="0" bgcolor="#FFFFCC">
+          <tr> 
+            <td height="84"><p><font face="Courier New, Courier, mono" color="#009900" size="2"><br>
+                # load a Flash file but don't show it:</font><font face="Courier New, Courier, mono" size="2"><br>
+                </font><font face="Courier New, Courier, mono" color="#009900" size="2"># 
+                internally this Flash file defines the id &quot;frame&quot;</font><font face="Courier New, Courier, mono" size="2"><br>
+                $turbine-&gt;include(&quot;frame.swf&quot;);<br>
+                <br>
+                </font><font face="Courier New, Courier, mono" color="#009900" size="2">#</font><font face="Courier New, Courier, mono" color="#009900" size="2"> 
+                place id &quot;frame&quot; several times in different positions:</font><font face="Courier New, Courier, mono" size="2"><br>
+                $turbine-&gt;create(&quot;&lt;Place id='frame' pos='100,100'/&gt;&quot;);<br>
+                $turbine-&gt;create(&quot;&lt;Place id='frame' pos='100,120'/&gt;&quot;);<br>
+                $turbine-&gt;create(&quot;&lt;Place id='frame' pos='100,140'/&gt;&quot;);<br>
+                &nbsp;<br>
+                </font> </p></td>
+          </tr>
+        </table>
+        <br>
+        &nbsp; 
+        <p><font face="Arial, Helvetica, sans-serif" size="5"><a name="mml" id="mml"></a>Creating 
+          MML </font></p>
+        <p><font size="2" face="Verdana, Arial, Helvetica, sans-serif">What if 
+          we'd want to include arbitrary MML in your resulting media? For this 
+          situation the PHP Turbine interface provides the <em><a href="interfacereference.htm#create">Create</a></em> 
+          command:</font></p>
+        <table width="100%" border="0" cellspacing="12" cellpadding="0" bgcolor="#FFFFCC">
+          <tr> 
+            <td height="84"><p><font face="Courier New, Courier, mono" size="2"><br>
+                </font><font face="Courier New, Courier, mono" color="#009900" size="2"># 
+                place some text:</font><font face="Courier New, Courier, mono" size="2"><br>
+                $turbine-&gt;create(&quot;&lt;text&gt;Text generated with MML&lt;text/&gt;&quot;);</font></p>
+              <p><font face="Courier New, Courier, mono" color="#009900" size="2"># 
+                place an image:</font><font face="Courier New, Courier, mono" size="2"><br>
+                $turbine-&gt;create(&quot;&lt;image src='http://example.com/image.jpg'/&gt;&quot;);</font></p>
+              <p><font face="Courier New, Courier, mono" color="#009900" size="2"># 
+                move objects from depth 10 to another position:</font><font face="Courier New, Courier, mono" size="2"> 
+                <br>
+                $turbine-&gt;create(&quot;&lt;move depth='10' pos='10,10'/&gt;&quot;);<br>
+                &nbsp;&nbsp;<br>
+                </font> </p></td>
+          </tr>
+        </table>
+        <p>&nbsp;</p>
+        <p><font face="Arial, Helvetica, sans-serif" size="5"><a name="components" id="components"></a>Working 
+          with Flash Components</font></p>
+        <p><font size="2" face="Verdana, Arial, Helvetica, sans-serif">Flash components 
+          will not be outputted to PDF. If you intend to use Turbine as a PDF 
+          outputter only, this subsection can be skipped.</font></p>
+        <p><font size="2" face="Verdana, Arial, Helvetica, sans-serif">Turbine 
+          includes an advanced mechanism to include and use Flash MX components. 
+          Turbine can include a component, create several instances of it placed 
+          where appropriated and customize each one of the instances by modifying 
+          its properties. Turbine can also automatically feed data to a component 
+          from a DataSet. <br>
+          Let's see an example:</font></p>
+        <table width="100%" border="0" cellspacing="12" cellpadding="0" bgcolor="#FFFFCC">
+          <tr> 
+            <td height="84"><p><font face="Courier New, Courier, mono" size="2"><br>
+                </font><font face="Courier New, Courier, mono" color="#009900" size="2"># 
+                let's include a ListBox component:</font><font face="Courier New, Courier, mono" size="2"><br>
+                $turbine-&gt;include(&quot;flistboxsymbol.swf&quot;);<br>
+                </font><font face="Courier New, Courier, mono" color="#009900" size="2"><br>
+                # place the component and<br>
+                # customize it by setting its parameter 'select multiple' to true:</font><font face="Courier New, Courier, mono" size="2"><br>
+                $turbine-&gt;create(<br>
+                &nbsp;&nbsp;&quot;&lt;place component='ListBox' <br>
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;pos='30,50' 
+                <br>
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; instance='lst'&gt;<br>
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &lt;param name='select multiple' 
+                value='true'/&gt;<br>
+                &nbsp;&nbsp; &lt;/place&gt;&quot;);<br>
+                &nbsp;<br>
+                </font> </p></td>
+          </tr>
+        </table>
+        <p><font size="2" face="Verdana, Arial, Helvetica, sans-serif">Please 
+          note that you can use the component's screen name as available on the 
+          Macromedia Flash authoring tool: <em>ListBox</em>. Also note that the 
+          parameters are also called by their names as seen in Flash editor.</font></p>
+        <p><font size="2" face="Verdana, Arial, Helvetica, sans-serif">Now we 
+          want to populate the ListBox, right? You can do that in a very simple 
+          way by loading a DataSet and passing it to the ListBox by using the 
+          <a href="interfacereference.htm#injectdata"> <em>InjectData</em></a> 
+          command:</font></p>
+        <table width="100%" border="0" cellspacing="12" cellpadding="0" bgcolor="#FFFFCC">
+          <tr> 
+            <td height="84"><p><font face="Courier New, Courier, mono" size="2"><br>
+                </font><font face="Courier New, Courier, mono" color="#009900" size="2">#</font><font face="Courier New, Courier, mono" color="#009900" size="2"> 
+                read a DataSet from a file:<br>
+                # the DataSet is made of one unique column with the ListBox labels</font><font face="Courier New, Courier, mono" size="2"><br>
+                $turbine-&gt;loadDataSet(&quot;data.txt&quot;, &quot;data&quot;);<br>
+                </font><font face="Courier New, Courier, mono" color="#009900" size="2"><br>
+                # now give the DataSet to the ListBox:<br>
+                # 'lst' is the name of the ListBox</font><font face="Courier New, Courier, mono" size="2"><br>
+                $turbine-&gt;injectData(&quot;data&quot;, &quot;lst&quot;);<br>
+                &nbsp;<br>
+                </font> </p></td>
+          </tr>
+        </table>
+        <p><font size="2" face="Verdana, Arial, Helvetica, sans-serif">Please 
+          see the '<a href="mmlcommands.htm#components">Using Components</a>' 
+          section for more details about components.</font></p>
+        <p>&nbsp;</p>
+        <p><font face="Arial, Helvetica, sans-serif" size="5"><a name="javascript" id="javascript"></a>Creating 
+          Scripting</font></p>
+        <p><font size="2" face="Verdana, Arial, Helvetica, sans-serif">Scripting 
+          will not be exported to PDF. If you intend to use Turbine as a PDF outputter 
+          only, this subsection can be skipped.</font></p>
+        <p><font size="2" face="Verdana, Arial, Helvetica, sans-serif">The ECMA-262 
+          Script or JavaScript scripting language, also known as Action Script 
+          (AS) can be included in the resulting Flash media since Turbine has 
+          a built-in JavaScript compiler. To include JavaScript, simply use the 
+          <em><a href="interfacereference.htm#script">Script</a></em> command:</font></p>
+        <table width="100%" border="0" cellspacing="12" cellpadding="0" bgcolor="#FFFFCC">
+          <tr> 
+            <td height="84"><p><font face="Courier New, Courier, mono" color="#009900" size="2"># 
+                create an onscreen text field:<br>
+                </font><font face="Courier New, Courier, mono" size="2">$turbine-&gt;script(&quot;createTextField('txt', 
+                1, 150, 170, 200, 20);&quot;);<br>
+                &nbsp; </font> </p></td>
+          </tr>
+        </table>
+        <p>&nbsp;&nbsp; </p>
+        <p><font face="Arial, Helvetica, sans-serif" size="5"><a name="publish" id="publish"></a>Publishing 
+          to Client Side</font></p>
+        <p><font size="2" face="Verdana, Arial, Helvetica, sans-serif">This subsection 
+          depends on scripting which will not be exported to PDF. If you intend 
+          to use Turbine as a PDF outputter only, this subsection can be skipped.</font></p>
+        <p><font size="2" face="Verdana, Arial, Helvetica, sans-serif">We already 
+          know how to define server-side variables and DataSets in Turbine, but 
+          there are some situations where it would be useful to have these same 
+          variables and DataSets available to be used at player-time. The PHP 
+          Interface provides two commands to accomplish this: the <em><a href="interfacereference.htm#publishvar">PublishVar</a></em> 
+          and <em><a href="interfacereference.htm#publishdataset">PublishDataSet</a></em> 
+          commands.</font></p>
+        <p><font size="2" face="Verdana, Arial, Helvetica, sans-serif">The next 
+          example publishes one variable into a simple JavaScript variable:</font></p>
+        <table width="100%" border="0" cellspacing="12" cellpadding="0" bgcolor="#FFFFCC">
+          <tr> 
+            <td height="84"><p><font face="Courier New, Courier, mono" color="#009900" size="2"><br>
+                # create a Turbine variable:<br>
+                </font><font face="Courier New, Courier, mono" size="2">$turbine-&gt;setVar(&quot;globalAlphaValue&quot;, 
+                50);<br>
+                <br>
+                </font><font face="Courier New, Courier, mono" color="#009900" size="2"># 
+                publish it to client side:</font><font face="Courier New, Courier, mono" size="2"><br>
+                $turbine-&gt;publishVar(&quot;globalAlphaValue&quot;);<br>
+                <br>
+                </font><font face="Courier New, Courier, mono" color="#009900" size="2"># 
+                now create a client script to use it:<br>
+                </font><font face="Courier New, Courier, mono" size="2"> $turbine-&gt;script(&quot;_root.alpha=globalAlphaValue&quot;);<br>
+                &nbsp;<br>
+                </font> </p></td>
+          </tr>
+        </table>
+        <p><font size="2" face="Verdana, Arial, Helvetica, sans-serif">Next let's 
+          publish an entire DataSet to an Action Script Named Array:</font></p>
+        <table width="100%" border="0" cellspacing="12" cellpadding="0" bgcolor="#FFFFCC">
+          <tr> 
+            <td height="84"><p><font face="Courier New, Courier, mono" color="#009900" size="2"><br>
+                # create a Turbine DataSet from a string:<br>
+                </font><font face="Courier New, Courier, mono" size="2">$turbine-&gt;dataSetFromString(&quot;&lt;name,num&gt;\njohn,64\nRose,50&quot;, 
+                &quot;people&quot;);<br>
+                <br>
+                </font><font face="Courier New, Courier, mono" color="#009900" size="2"># 
+                publish it to client side under the name 'ASPeople':</font><font face="Courier New, Courier, mono" size="2"><br>
+                $turbine-&gt;publishDataSet(&quot;people&quot;, &quot;namedArray&quot;, 
+                &quot;ASPeople&quot;);<br>
+                <br>
+                </font><font face="Courier New, Courier, mono" color="#009900" size="2"># 
+                now create a client script to use it:<br>
+                # it should print 'Rose', assuming we have a textfield named 'txt' 
+                <br>
+                </font><font face="Courier New, Courier, mono" size="2"> $turbine-&gt;script(&quot;txt.text 
+                = 'name 1: ' + ASPeople[1]['name'];&quot;);<br>
+                &nbsp; <br>
+                </font> </p></td>
+          </tr>
+        </table>
+        <p>&nbsp;</p>
+        <p><font face="Arial, Helvetica, sans-serif" size="5"><a name="http" id="http"></a>Fetching 
+          HTTP Content</font></p>
+        <p><font size="2" face="Verdana, Arial, Helvetica, sans-serif">This command 
+          does an HTTP GET request to an absolute or relative HTTP URL. This can 
+          be useful for a host of situations where you might desire to filter 
+          received data before feeding it to Turbine. Let's see an example of 
+          the <a href="interfacereference.htm#httpget"><em>HTTPGet</em></a> command 
+          in action:</font></p>
+        <table width="100%" border="0" cellspacing="12" cellpadding="0" bgcolor="#FFFFCC">
+          <tr> 
+            <td height="84"><p><font face="Courier New, Courier, mono" color="#009900" size="2"><br>
+                ' access a remote script:<br>
+                </font><font face="Courier New, Courier, mono" size="2">$str = 
+                $turbine-&gt;HTTPGet(&quot;http://www.example.com/to.php&quot;);<br>
+                <br>
+                if($str == &quot;John&quot;)<br>
+                &nbsp; $turbine-&gt;load(&quot;john.swf&quot;);<br>
+                else <br>
+                &nbsp;&nbsp;$turbine-&gt;load(&quot;default.swf&quot;);<br>
+                &nbsp; <br>
+                </font> </p></td>
+          </tr>
+        </table>
+        <p><font size="5" face="Arial, Helvetica, sans-serif">&nbsp;</font></p>
+        <p><font face="Arial, Helvetica, sans-serif" size="5"><a name="generate" id="generate"></a>Generating 
+          Media into the Browser</font></p>
+        <p><font size="2" face="Verdana, Arial, Helvetica, sans-serif">After all 
+          the content and templates have been loaded, it's time to actually generate 
+          the media and send it into the web browser. This is as easy as calling 
+          the <em><a href="interfacereference.htm#generateflash">GenerateFlash</a></em> 
+          or <em><a href="interfacereference.htm#generatepdf">GeneratePDF</a></em> 
+          command, as you'll see in most of the examples we've seen - for instance 
+          as in the <a href="#start">first example</a> of this chapter.</font></p>
+        <p>&nbsp;</p>
+        <p><font face="Arial, Helvetica, sans-serif" size="5"><a name="generatetofile" id="generatetofile"></a>Generating 
+          to Local Files</font></p>
+        <p><font size="2" face="Verdana, Arial, Helvetica, sans-serif">Besides 
+          generating dynamic Flash media to web users with the <a href="interfacereference.htm#generateflash"><em>GenerateFlash</em></a> 
+          or <a href="interfacereference.htm#generatepdf"><em>GeneratePDF</em></a> 
+          command, Turbine allows you to generate and save the media into a file 
+          on the web server local disk - this is accomplished by the <em><a href="interfacereference.htm#generatetofile">GenerateToFile</a></em> 
+          command:</font></p>
+        <table width="100%" border="0" cellspacing="12" cellpadding="0" bgcolor="#FFFFCC">
+          <tr> 
+            <td height="84"><p><font face="Courier New, Courier, mono" size="2"><br>
+                </font><font face="Courier New, Courier, mono" color="#009900" size="2"># 
+                ************** generate first file ********* <br>
+                # set data to generate the media:<br>
+                </font><font face="Courier New, Courier, mono" size="2"> $turbine-&gt;setVariable(&quot;name&quot;, 
+                &quot;Grace&quot;);<br>
+                $turbine-&gt;load(&quot;template.swf&quot;);<br>
+                </font><font face="Courier New, Courier, mono" color="#009900" size="2"><br>
+                # generate to a local Flash file:</font><font face="Courier New, Courier, mono" size="2"><br>
+                $turbine-&gt;generateToFile(&quot;grace.swf&quot;, &quot;flash&quot;);<br>
+                </font><font face="Courier New, Courier, mono" color="#009900" size="2"># 
+                generate also a PDF document:</font><font face="Courier New, Courier, mono" size="2"><br>
+                $turbine-&gt;generateToFile(&quot;grace.pdf&quot;, &quot;pdf&quot;); 
+                <br>
+                </font><font face="Courier New, Courier, mono" color="#009900" size="2"><br>
+                # empty Turbine memory and start over with a different name:<br>
+                </font><font face="Courier New, Courier, mono" size="2">$turbine-&gt;reset();<br>
+                <br>
+                </font><font face="Courier New, Courier, mono" color="#009900" size="2"># 
+                ************** generate second file *********</font><font face="Courier New, Courier, mono" size="2"><br>
+                </font><font face="Courier New, Courier, mono" color="#009900" size="2"># 
+                set data to generate another media:<br>
+                </font><font face="Courier New, Courier, mono" size="2"> $turbine-&gt;setVariable(&quot;name&quot;, 
+                &quot;Dora&quot;);<br>
+                $turbine-&gt;load(&quot;template.swf&quot;);<br>
+                </font><font face="Courier New, Courier, mono" color="#009900" size="2"><br>
+                # generate to a local Flash file:</font><font face="Courier New, Courier, mono" size="2"><br>
+                $turbine-&gt;generateToFile(&quot;dora.swf&quot;, &quot;flash&quot;);<br>
+                </font><font face="Courier New, Courier, mono" color="#009900" size="2"># 
+                generate also a PDF document:</font><font face="Courier New, Courier, mono" size="2"><br>
+                $turbine-&gt;generateToFile(&quot;dora.pdf&quot;, &quot;pdf&quot;);</font><font face="Courier New, Courier, mono" size="2"> 
+                <br>
+                &nbsp;&nbsp;<br>
+                </font> </p></td>
+          </tr>
+        </table>
+        <p><font size="2" face="Verdana, Arial, Helvetica, sans-serif">Note the 
+          <em><a href="interfacereference.htm#reset">Reset</a></em> command which 
+          cleans the memory so we can start all over again.</font></p>
+        <p>&nbsp;</p>
+        <p><font face="Arial, Helvetica, sans-serif" size="5"><a name="generatehtmlfirst"></a>Generating 
+          an HTML Plug-in Page</font></p>
+        <p><font size="2" face="Verdana, Arial, Helvetica, sans-serif">As we've 
+          seen Turbine generates PDF or Flash format content. So if one directly 
+          requests a Turbine generated media (from an HTML page or by typing the 
+          URL on the browser location bar), the web browser displays the generated 
+          media in the full browser window. Sometimes this behavior is not desired, 
+          so Turbine features an automatic way of detecting if it should directly 
+          generate the media content or send before an HTML page with the necessary 
+          plug-in loading tags (&lt;object...&gt; and &lt;embed...&gt;). This 
+          page in turn will load the generated media content. This can be a great 
+          commodity, because you no longer need to care about using a separate 
+          HTML page for loading the Turbine generated content. Here's an example 
+          of the <a href="interfacereference.htm#generatehtmlfirst"><em>GenerateHTMLFirst</em></a> 
+          command:</font></p>
+        <table width="100%" border="0" cellspacing="12" cellpadding="0" bgcolor="#FFFFCC">
+          <tr> 
+            <td valign="top"> 
+              <p><font face="Courier New, Courier, mono" color="#009900" size="2"><br>
+                # generate the HTML page with the plug-in<br>
+                # use the default html page: flashplugin.htm</font><font face="Courier New, Courier, mono" size="2"><br>
+                $turbine-&gt;generateHTMLFirst();<br>
+                <br>
+                </font><font color="#009900" size="2" face="Courier New, Courier, mono"># 
+                browsers should not cache this page</font><font size="2" face="Courier New, Courier, mono">:<br>
+                header (&quot;Expires: Sat, 01 Jan 2000 01:01:01 GMT&quot;);<br>
+                <br>
+                </font><font color="#009900" size="2" face="Courier New, Courier, mono"># 
+                now generate the movie to the web browser</font><font size="2" face="Courier New, Courier, mono">:<br>
+                $turbine-&gt;generateFlash();<br>
+                &nbsp;<br>
+                </font> </p></td>
+          </tr>
+        </table>
+        <p><font size="2" face="Verdana, Arial, Helvetica, sans-serif">When outputting 
+          to PDF we can use the same command with a different argument:</font></p>
+        <table width="100%" border="0" cellspacing="12" cellpadding="0" bgcolor="#FFFFCC">
+          <tr> 
+            <td valign="top"> <p><font face="Courier New, Courier, mono" color="#009900" size="2"><br>
+                # generate the HTML page with the plug-in<br>
+                # use the default html page: pdfplugin.htm</font><font face="Courier New, Courier, mono" size="2"><br>
+                $turbine-&gt;generateHTMLFirst(&quot;pdf&quot;);<br>
+                <br>
+                </font><font color="#009900" size="2" face="Courier New, Courier, mono"># 
+                browsers should not cache this page</font><font size="2" face="Courier New, Courier, mono">:<br>
+                header (&quot;Expires: Sat, 01 Jan 2000 01:01:01 GMT&quot;);<br>
+                <br>
+                </font><font color="#009900" size="2" face="Courier New, Courier, mono"># 
+                now generate the document to the web browser</font><font size="2" face="Courier New, Courier, mono">:<br>
+                $turbine-&gt;generatePDF();<br>
+                &nbsp;<br>
+                </font> </p></td>
+          </tr>
+        </table>
+        <p>&nbsp;</p>
+        <p><font face="Arial, Helvetica, sans-serif" size="5"><a name="cache" id="cache"></a>Media 
+          Caching </font></p>
+        <p><font size="2" face="Verdana, Arial, Helvetica, sans-serif">Sometimes 
+          the data access operations involved in generating media can impose heavy 
+          loads on database servers or other back-office servers. Also on some 
+          situations the accessed data does not change frequently - obvious examples 
+          are the news industry (for example a daily news site generated from 
+          a database only needs to access this database once a day, as all the 
+          other media for the day will be equal), weather maps, distribution maps 
+          (with update periods of 3 hours for example), product descriptions (for 
+          example updated only weekly at most) and others. </font></p>
+        <p><font size="2" face="Verdana, Arial, Helvetica, sans-serif">Turbine's 
+          caching capabilities can be used in two ways - an easy way, and another 
+          more complex (and powerful) way. The easy way is by using the <em><a href="interfacereference.htm#cache">Cache</a></em> 
+          command which will:</font></p>
+        <ol>
+          <li><font size="2" face="Verdana, Arial, Helvetica, sans-serif">Verify 
+            if there's any valid (non-expired) media on the media cache. Media 
+            is identified on the cache by a code based on the script URL (this 
+            is automatically calculated inside Turbine). If there's a cached media, 
+            it will be served and script execution will stop as in a &quot;Response.End&quot; 
+            command. </font></li>
+          <li><font size="2" face="Verdana, Arial, Helvetica, sans-serif">If no 
+            valid media exists on the cache, execution continues, the media will 
+            be generated and its results cached at the end with the specified 
+            expiration date. The next request, if the media is on the cache, will 
+            be served directly as described on step 1.</font></li>
+        </ol>
+        <table width="100%" border="0" cellspacing="12" cellpadding="0" bgcolor="#FFFFCC">
+          <tr> 
+            <td>
+<p><font face="Courier New, Courier, mono" color="#009900" size="2"><br>
+                # cache the media for 7 hours:<br>
+                </font><font face="Courier New, Courier, mono" size="2">$turbine-&gt;cache(&quot;++070000&quot;);<br>
+                <br>
+                </font> </p></td>
+          </tr>
+        </table>
+        <p><font size="2" face="Verdana, Arial, Helvetica, sans-serif"><br>
+          But media caching can be controlled in another more powerful way, by 
+          using two commands - basically one command adds a file to cache with 
+          a certain validity; the other command will serve the media straight 
+          from the cache while it is still valid.<br>
+          The command to add a generated media to the cache is <em><a href="interfacereference.htm#cachemedia">CacheMedia</a></em>.</font></p>
+        <p><font size="2" face="Verdana, Arial, Helvetica, sans-serif">The media 
+          will only be cached after it is generated, when you issue the <em><a href="interfacereference.htm#generateflash">GenerateFlash</a></em>, 
+          <em><a href="interfacereference.htm#generatepdf">GeneratePDF</a></em> 
+          or <em><a href="interfacereference.htm#generatetofile">GenerateToFile</a></em>. 
+          So after you issue a <em><a href="interfacereference.htm#cachemedia">CacheMedia</a></em> 
+          command the media will be cached when the <em>Generate</em> command 
+          is executed. Any media currently on the cache with the given &quot;reference&quot; 
+          will be deleted when the new media is cached.</font></p>
+        <p><font size="2" face="Verdana, Arial, Helvetica, sans-serif">So we know 
+          how to add media to the cache, but how do we serve it (if available, 
+          straight from the cache)? By using the <em><a href="interfacereference.htm#servecached">ServeCached</a></em> 
+          command.</font></p>
+        <p><font size="2" face="Verdana, Arial, Helvetica, sans-serif">This command 
+          works by checking if there's some valid media on the cache and if so 
+          serves it and returns True, exactly in the same way as in the <em>GenerateFlash</em> 
+          or <em>GeneratePDF</em> command. But if the media is not in the cache 
+          or is out of validity then this command will do nothing and return false.</font></p>
+        <p><font size="2" face="Verdana, Arial, Helvetica, sans-serif">Usually 
+          you will want to use the above commands as in the following example:</font></p>
+        <table width="100%" border="0" cellspacing="12" cellpadding="0" bgcolor="#FFFFCC">
+          <tr> 
+            <td valign="top"> 
+              <p><font face="Courier New, Courier, mono" color="#009900" size="2"><br>
+                # Is media cached? <br>
+                # If yes, it is served and we can terminate execution<br>
+                # If no, then we ask it to be cached for 1 minute from now:<br>
+                </font><font face="Courier New, Courier, mono" size="2">if($turbine-&gt;serveCached(&quot;some_ref&quot;))<br>
+                &nbsp;&nbsp; exit;<br>
+                else<br>
+                &nbsp;&nbsp;$turbine-&gt;cacheMedia(&quot;some_ref&quot;, &quot;++0100&quot;);<br>
+                <br>
+                <font color="#009900">#</font><font color="#009900"> now generate 
+                the media to the web browser:<br>
+                # (which will also automatically cache it)</font><br>
+                $turbine-&gt;generateFlash();<br>
+                &nbsp;<br>
+                </font> </p></td>
+          </tr>
+        </table>
+        <p><font size="2" face="Verdana, Arial, Helvetica, sans-serif"><br>
+          </font><font face="Arial, Helvetica, sans-serif" size="5"><a name="ie" id="ie"></a>Special 
+          Case Internet Explorer Optimization</font></p>
+        <p><font size="2" face="Verdana, Arial, Helvetica, sans-serif">The popular 
+          (as in &quot;ubiquitous&quot;) Microsoft Internet Explorer browser has 
+          a weird behavior when requesting full browser window Flash movies or 
+          PDF documents. What happens is that IE makes several HTTP requests for 
+          the same page/movie/document - this is not a good thing because it represents 
+          more load to the web server, and it's a problem for scripts that do 
+          database inserts or updates. ASP Turbine includes a solution for this 
+          problem, the <em><a href="interfacereference.htm#ieoptimize">IEOptimize</a></em> 
+          command.</font></p>
+        <p><font size="2" face="Verdana, Arial, Helvetica, sans-serif"> Please 
+          note that this is only a problem on full browser window requests (without 
+          the &lt;object&gt; HTML loader tag). It will not happen when the media 
+          is loaded from HTML (for example if you use <em>GenerateHTMLFirst</em> 
+          this IE behavior will not happen); It will also not happen on Action 
+          Script loadMovie command requests. And it will not happen with other 
+          browsers like Mozilla and Opera.</font></p>
+        <p><font size="2" face="Verdana, Arial, Helvetica, sans-serif">The IEOptimize 
+          command must be placed immediately after the Turbine object creation, 
+          and preferably on the start of the script, as execution will stop at 
+          this command for the unnecessary requests, thus improving performance:</font></p>
+        <blockquote> 
+          <p><font size="2" face="Courier New, Courier, mono">$turbine = new Turbine7();<br>
+            $turbine-&gt;IEOptimize();</font></p>
+        </blockquote>
+        <p><font size="2" face="Verdana, Arial, Helvetica, sans-serif">This command 
+          will stop script execution (as in a PHP exit command) if the request 
+          is one of the unnecessary requests fired by IE. However, if the request 
+          is the valid one (which will actually be displayed on the browser), 
+          then normal script execution will continue.<br>
+          This command will only do something for IE browsers (for other browsers 
+          the execution will simply continue), and if the {System.IEOptimization} 
+          global setting is enabled, which is the default setting.<br>
+          Please note that <em>IEOptimize</em> cannot be used on the same script 
+          where the <em><a href="interfacereference.htm#generatehtmlfirst">GenerateHTMLFirst</a></em> 
+          command is used.<br>
+          </font></p>
+        <p>&nbsp;</p></TD>
+    </TR>
+    <TR valign="top"> 
+      <TD COLSPAN="2" height="6"> 
+        <table border=0 cols=2 width="560" cellpadding="0" cellspacing="0" >
+          <tr> 
+            <td width="443" height="25"><font face="Verdana, Arial, Helvetica, sans-serif" size="3"><a href="manual.htm">Table 
+              of Contents</a></font></td>
+            <td width="117" height="25"> 
+              <div align="center"><font face="Verdana, Arial, Helvetica, sans-serif" size="3"><a href="devdeploy.htm">Next 
+                Chapter </a> </font></div>
+            </td>
+          </tr>
+        </table>
+      </TD>
+    </TR>
+  </TABLE>
+</CENTER>
+<CENTER>
+  <p> <font face="Verdana, Arial, Helvetica, sans-serif" size="1"><i>&nbsp;<br>
+    Flash and Macromedia Flash are trademarks of Macromedia, Inc.</i></font>
+</CENTER>
+</BODY>
+</HTML>

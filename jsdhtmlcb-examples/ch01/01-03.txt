@@ -1,0 +1,12 @@
+var myString = "New York";
+var lcString = myString.toLowerCase();
+var ucString = myString.toUpperCase();
+
+----------
+
+myString = myString.toLowerCase();
+
+----------
+
+<input type="text" name="firstName" id="firstName" size="20" maxlength="25" 
+    onchange="this.value = this.value.toUpperCase()" />

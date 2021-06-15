@@ -1,0 +1,14 @@
+<Text>
+  <font size="35" color="#ff0000">
+    This text is in red, 
+  </font>
+  <br>
+  <font color="#00ff00" size="35">
+    this is in green and
+  </font>
+  <br>
+  <font color="#0000ff" size="35">
+    this one is in blue
+  </font>
+</Text>
+

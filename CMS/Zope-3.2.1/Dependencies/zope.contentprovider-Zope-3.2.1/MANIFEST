@@ -1,0 +1,12 @@
+MANIFEST
+zope.contentprovider/__init__.py
+zope.contentprovider/configure.zcml
+zope.contentprovider/DEPENDENCIES.cfg
+zope.contentprovider/interfaces.py
+zope.contentprovider/README.txt
+zope.contentprovider/SETUP.cfg
+zope.contentprovider/tales.py
+zope.contentprovider/tests.py
+zope.contentprovider/zope.contentprovider-configure.zcml
+setup.py
+setup.cfg

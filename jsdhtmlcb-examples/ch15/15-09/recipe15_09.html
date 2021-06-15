@@ -1,0 +1,226 @@
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+
+<html>
+<head>
+<title>JavaScript Date Picker</title>
+<link rel="stylesheet" id="mainStyle" href="../css/cookbook.css" type="text/css" />
+<style type="text/css">
+#calendar {position:absolute; 
+           left:0px; 
+           top:0px; 
+           visibility:hidden
+          }
+table {font-family:Verdana, Arial, Helvetica, sans-serif; 
+       background-color:#999999
+      }
+th {background-color:#ccffcc; 
+    text-align:center; 
+    font-size:10px; 
+    width:26px
+   }
+#tableHeader {background-color:#ffcccc; 
+              width:100%
+             }
+td {background-color:#ffffcc; 
+    text-align:center; 
+    font-size:10px
+   }
+#tableBody tr td {width:26px}
+#today {background-color:#ffcc33}
+a:link {color:#000000; text-decoration:none}
+a:active {color:#000000; text-decoration:none}
+a:visited {color:#000000; text-decoration:none}
+a:hover {color:#990033; text-decoration:underline}
+</style>
+<script type="text/javascript" src="../js/DHTMLAPI.js"></script>
+<script type="text/javascript">
+/*******************
+  UTILITY FUNCTIONS
+********************/
+// day of week of month's first day
+function getFirstDay(theYear, theMonth){
+    var firstDate = new Date(theYear,theMonth,1);
+    return firstDate.getDay();
+}
+// number of days in the month
+function getMonthLen(theYear, theMonth) {
+    var nextMonth = new Date(theYear, theMonth + 1, 1);
+    nextMonth.setHours(nextMonth.getHours() - 3);
+    return nextMonth.getDate();
+}
+
+function getElementPosition(elemID) {
+	var offsetTrail = document.getElementById(elemID);
+    var offsetLeft = 0;
+    var offsetTop = 0;
+    while (offsetTrail) {
+        offsetLeft += offsetTrail.offsetLeft;
+        offsetTop += offsetTrail.offsetTop;
+        offsetTrail = offsetTrail.offsetParent;
+    }
+    if (navigator.userAgent.indexOf("Mac") != -1 && 
+        typeof document.body.leftMargin != "undefined") {
+        offsetLeft += document.body.leftMargin;
+        offsetTop += document.body.topMargin;
+    }
+    return {left:offsetLeft, top:offsetTop};
+}
+
+// position and show calendar
+function showCalendar(evt) {
+    evt = (evt) ? evt : event;
+    if (evt) {
+    	if (document.getElementById("calendar").style.visibility != "visible") {
+    	    var elem = (evt.target) ? evt.target : evt.srcElement;
+    	    var position = getElementPosition(elem.id);
+            shiftTo("calendar", position.left + elem.offsetWidth, position.top);
+            show("calendar");
+        } else {
+            hide("calendar");
+        }
+    }
+}
+
+/************************
+  DRAW CALENDAR CONTENTS
+*************************/
+// clear and re-populate table based on form's selections
+function populateTable(form) {
+    // pick up date form choices
+    var theMonth = form.chooseMonth.selectedIndex;
+    var theYear = parseInt(form.chooseYear.options[form.chooseYear.selectedIndex].text);
+    // initialize date-dependent variables
+    var firstDay = getFirstDay(theYear, theMonth);
+    var howMany = getMonthLen(theYear, theMonth);
+    var today = new Date();
+    
+    // fill in month/year in table header
+    document.getElementById("tableHeader").innerHTML = 
+        form.chooseMonth.options[theMonth].text + " " + theYear;
+    
+    // initialize vars for table creation
+    var dayCounter = 1;
+    var TBody = document.getElementById("tableBody");
+    // clear any existing rows
+    while (TBody.rows.length > 0) {
+        TBody.deleteRow(0);
+    }
+    var newR, newC, dateNum;
+    var done=false;
+    while (!done) {
+        // create new row at end
+        newR = TBody.insertRow(TBody.rows.length);
+        if (newR) {
+            for (var i = 0; i < 7; i++) {
+                // create new cell at end of row
+                newC = newR.insertCell(newR.cells.length);
+                if (TBody.rows.length == 1 && i < firstDay) {
+                    // empty boxes before first day
+                    newC.innerHTML = "&nbsp;";
+                    continue;
+                }
+                if (dayCounter == howMany) {
+                    // no more rows after this one
+                    done = true;
+                }
+                // plug in link/date (or empty for boxes after last day)
+                if (dayCounter <= howMany) {
+                    if (today.getFullYear() == theYear &&
+                        today.getMonth() == form.chooseMonth.selectedIndex &&
+                        today.getDate() == dayCounter) {
+                        newC.id = "today";
+                    }
+                    newC.innerHTML = "<a href='#'onclick='chooseDate(" +
+                        dayCounter + "," + theMonth + "," + theYear + 
+                        "); return false;'>" + dayCounter + "</a>";
+                     dayCounter++;
+               } else {
+                    newC.innerHTML = "&nbsp;";
+                }
+            }
+        } else {
+            done = true;
+        }
+    }
+}
+
+/*******************
+  INITIALIZATIONS
+********************/
+// create dynamic list of year choices
+function fillYears() {
+    var today = new Date();
+    var thisYear = today.getFullYear();
+    var yearChooser = document.dateChooser.chooseYear;
+    for (i = thisYear; i < thisYear + 5; i++) {
+        yearChooser.options[yearChooser.options.length] = new Option(i, i);
+    }
+    setCurrMonth(today);
+}
+// set month choice to current month
+function setCurrMonth(today) {
+    document.dateChooser.chooseMonth.selectedIndex = today.getMonth();
+}
+
+/*******************
+   PROCESS CHOICE
+********************/
+function chooseDate(date, month, year) {
+    document.mainForm.date.value = date;
+    document.mainForm.month.value = month + 1;
+    document.mainForm.year.value = year;
+    hide("calendar");
+}
+
+</script>
+</head>
+
+<body onload="fillYears(); populateTable(document.dateChooser); initDHTMLAPI()">
+
+
+<h1>Date Picker</h1>
+<hr />
+
+<form name="mainForm" id="mainForm" method="POST" action="">
+<p>Enter a date:</p>
+<p>mm:<input type="text" name="month" id="month" size="3" maxlength="2" value="1"> 
+dd:<input type="text" name="date" id="date" size="3" maxlength="2" value="1"> 
+yyyy:<input type="text" name="year" id="year" size="5" maxlength="4" value="2003">
+<input type="button" id="showit" value="Pick Date >>" onclick="showCalendar(event)">
+</p>
+</form>
+
+
+<div id="calendar">
+<table id="calendarTable" border=1>
+<tr>
+    <th id="tableHeader" colspan="7"></th>
+</tr>
+<tr><th>Sun</th><th>Mon</th><th>Tue</th><th>Wed</th>
+<th>Thu</th><th>Fri</th><th>Sat</th></tr>
+<tbody id="tableBody"></tbody>
+<tr>
+    <td colspan="7">
+    <p>
+    <form name="dateChooser">
+        <select name="chooseMonth" 
+        onchange="populateTable(this.form)">
+            <option selected>January<option>February
+            <option>March<option>April<option>May
+            <option>June<option>July<option>August
+            <option>September<option>October
+            <option>November<option>December
+    </select>
+    <select name="chooseYear" onchange="populateTable(this.form)">
+    </select>
+    </form>
+    </p>
+    </td>
+</tr>
+</table>
+</div>
+
+</body>
+</html>

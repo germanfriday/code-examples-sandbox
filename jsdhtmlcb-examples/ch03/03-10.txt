@@ -1,0 +1,7 @@
+function listProperties(obj, objName) {
+    var result = "";
+    for (var i in obj) {
+        result += objName + "." + i + "=" + obj[i] + "\n";
+    }
+    alert(result);
+}

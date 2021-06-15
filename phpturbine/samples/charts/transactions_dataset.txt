@@ -1,0 +1,13 @@
+<date,amount,balance,to,url,color>
+10/1, $110, $3443, "Dingo Industries", "default.htm", #fa6700
+10/2, $550, $10000, "Lagoon Supermarket", "default.htm", #32B9FE
+10/2, $350, $9700, "Martinica Bar", "default.htm", #92E501
+11/1, $400, $9300, "Dragon Lounge", "default.htm", #FF9900
+11/3, $410, $8890, "Blue Pasteur, inc", "default.htm", #00bb33
+11/4, $200, $8690, "Sri Lanka Bar", "default.htm", #FF6600
+11/5, $320, $8590, "Sunday Road inc.", "default.htm", #9933FF
+11/9, $125, $8365, "Bay Records", "default.htm", #FFCC00
+11/11, $520, $10000, "Friday Bank", "default.htm", #339966
+11/20, $250, $7727, "Global Cloud Ltd.", "default.htm", #1020ff
+11/28, $300, $8065, "Beethoven Sings, inc", "default.htm", #FF6666
+12/1, $410, $7530, "Fill Max inc.", "default.htm", #a0a000

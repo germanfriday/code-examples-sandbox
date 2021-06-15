@@ -1,0 +1,375 @@
+<HTML>
+<HEAD>
+<META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=iso-8859-1">
+<META NAME="GENERATOR" CONTENT="Mozilla/4.04 [en] (Win95; I) [Netscape]">
+<TITLE>Development and Deployment</TITLE>
+</HEAD>
+<BODY topmargin="0" leftmargin="0" rightmargin="0" marginwidth="0" marginheight="0" TEXT="#000000" BGCOLOR="#FFFFFF" LINK="#003366" VLINK="#FF9900" ALINK="#FF6600">
+<CENTER>
+  <table width="100%" border="0" cellspacing="0" cellpadding="0" align="center">
+    <tr bgcolor="#000033"> 
+      <td background="images/bar_left.gif" width="50%">&nbsp;</td>
+      <td> 
+        <table width="560" border="0" cellspacing="0" cellpadding="0">
+          <tr> 
+            <td width="334"><img src="images/bar_left.gif" width="334" height="28"></td>
+            <td><img src="images/bar_central.gif" width="110" height="28"></td>
+            <td><img src="images/bar_logo.gif" width="116" height="28"></td>
+          </tr>
+        </table>
+      </td>
+      <td background="images/1x1_azul_esc.gif" width="50%">&nbsp;</td>
+    </tr>
+    <tr bgcolor="#FFFFFF" height="4"> 
+      <td colspan="3"></td>
+    </tr>
+  </table>
+  <TABLE BORDER=0 COLS=2 WIDTH="560" cellpadding="0" cellspacing="0" >
+    <TR valign="top">
+      <TD COLSPAN="2" height="12"> 
+        <table border=0 cols=2 width="560" cellpadding="0" cellspacing="0" >
+          <tr> 
+            <td width="443" height="25"><font face="Verdana, Arial, Helvetica, sans-serif" size="3"><a href="manual.htm">Table 
+              of Contents</a></font></td>
+            <td width="117" height="25"> 
+              <div align="center"><font face="Verdana, Arial, Helvetica, sans-serif" size="3"><a href="mmlreference.htm">Next 
+                Chapter </a> </font></div>
+            </td>
+          </tr>
+        </table>
+      </TD>
+    </TR>
+    <TR valign="top"> 
+      <TD COLSPAN="2"> 
+        <p align="left">&nbsp;</p>
+        <p align="left"><font face="Arial, Helvetica, sans-serif" size="6">6. 
+          Development and Deployment</font></p>
+        <p align="left"><font size="2" face="Verdana, Arial, Helvetica, sans-serif">This 
+          chapter presents important information about developing with Turbine 
+          7 and about deploying into a production server. A few notes are included 
+          for Turbine 5.0 users as well as a series of useful tips on working 
+          with Turbine.</font></p>
+        <ul>
+          <li><font size="2" face="Arial, Helvetica, sans-serif" align="left"><a href="#install"><font size="3">Installation</font></a></font></li>
+          <li><font size="2" face="Arial, Helvetica, sans-serif" align="left"><a href="#develop"><font size="3">Development</font></a></font></li>
+          <li><font size="3" face="Arial, Helvetica, sans-serif"><a href="#deploy">Deployment 
+            Guide</a></font></li>
+          <li><font size="3" face="Arial, Helvetica, sans-serif"><a href="#upgrade">Notes 
+            for Turbine 5.0 Users</a></font></li>
+          <li><font size="3" face="Arial, Helvetica, sans-serif"><a href="#tips">Useful 
+            Tips</a></font></li>
+        </ul>
+        <p></p>
+        <p></p>
+        <p></p>
+        <p></p>
+        <p></p>
+        <p></p>
+        <p><font face="Arial, Helvetica, sans-serif" size="5"><a name="install" id="install"></a>Installation</font></p>
+        <p><font size="2" face="Verdana, Arial, Helvetica, sans-serif"> Before 
+          we can do anything with Turbine, we must make sure it is correctly installed 
+          and running. A simple test to see if your Turbine installation is running 
+          is available <a href="install.htm#testing">here</a>. </font><font size="2" face="Verdana, Arial, Helvetica, sans-serif"><br>
+          Detailed installation instructions that explain how to setup a virtual 
+          directory where the Turbine samples can be run is available <a href="install.htm">here</a>.</font><br>
+          &nbsp; </p>
+        <p><font face="Arial, Helvetica, sans-serif" size="5"><a name="develop" id="develop"></a>Development</font></p>
+        <p><font size="2" face="Verdana, Arial, Helvetica, sans-serif"> In this 
+          section we'll propose the optimal settings to develop a Turbine application 
+          and the tools provided by Turbine for debugging.</font></p>
+        <p><font size="2" face="Verdana, Arial, Helvetica, sans-serif">Turbine 
+          keeps its settings in a text file located at the root of its installation 
+          named <em>system.settings.</em> In this file Turbine stores things like: 
+          the default font to use, image settings, debug settings, etc. All these 
+          settings are global and can be customized, by simply editing this file 
+          (and restarting your web server). </font></p>
+        <p><font size="2" face="Verdana, Arial, Helvetica, sans-serif">Some of 
+          these settings are important to simplify the development and debugging 
+          tasks - the recommended settings for this purpose are:</font></p>
+        <blockquote> 
+          <p><font size="2" face="Courier New, Courier, mono">System.Debug = yes</font></p>
+        </blockquote>
+        <p><font size="2" face="Verdana, Arial, Helvetica, sans-serif">This setting 
+          tells Turbine to always include the Turbine Window in the generated 
+          media. The Turbine Window will show the errors and warnings log for 
+          the current media - it is also very useful if you want to trace messages 
+          from the generated Flash, through the <em>turbineDebug(msg)</em> Action 
+          Script function.<br>
+          On Flash media output, it also defines a native debug tag, allowing 
+          the movie to be debugged on the browser/Flash editor.<br>
+          &nbsp; </font></p>
+        <blockquote> 
+          <p><font size="2" face="Courier New, Courier, mono">System.Log = errors, 
+            warnings</font></p>
+        </blockquote>
+        <p><font size="2" face="Verdana, Arial, Helvetica, sans-serif">This setting 
+          tells Turbine to log all the errors and all the warnings. With this 
+          configuration you will receive all the warnings and errors that might 
+          occur during the media generation.</font><br>
+          <font size="2">&nbsp; </font></p>
+        <blockquote> 
+          <p><font size="2" face="Courier New, Courier, mono">System.LogTo = file, 
+            media</font></p>
+        </blockquote>
+        <p><font size="2" face="Verdana, Arial, Helvetica, sans-serif">The above 
+          setting tells Turbine to log into the Turbine Window as well as into 
+          a text file. This text log file is located on the Turbine installation 
+          directory and is named <em>turbine.log</em>.</font></p>
+        <p><font size="2" face="Verdana, Arial, Helvetica, sans-serif">Please 
+          note that these settings are read when Turbine starts up, which is usually 
+          when the web server starts or restarts, so any change you did to the 
+          <em>system.settings</em> file will only take effect the next time you 
+          restart your web server .</font></p>
+        <p>&nbsp;</p>
+        <p><font face="Arial, Helvetica, sans-serif" size="5"><a name="deploy" id="deploy"></a>Deployment 
+          Guide </font></p>
+        <p><font size="2" face="Verdana, Arial, Helvetica, sans-serif">In this 
+          section we'll describe the steps involved in a typical deployment into 
+          a production machine. This description assumes the production machine 
+          is already setup, with the web server properly configured and with Turbine 
+          properly installed:</font></p>
+        <p><font size="2" face="Verdana, Arial, Helvetica, sans-serif"><strong>1 
+          - Change the System Settings</strong></font></p>
+        <p><font size="2" face="Verdana, Arial, Helvetica, sans-serif">The <em>system.settings</em> 
+          file mentioned in the last section should be edited before starting 
+          to copy anything to the production machine. First make a backup of the 
+          file and set the following settings to:</font></p>
+        <blockquote> 
+          <p><font size="2" face="Courier New, Courier, mono">System.Log = errors, 
+            warnings</font></p>
+        </blockquote>
+        <p><font size="2" face="Verdana, Arial, Helvetica, sans-serif">We could 
+          even remove the <em>warnings</em> (and <em>info</em> if set) since in 
+          a production environment we are not interested in this extra information, 
+          however errors are always important and should be logged.<br>
+          &nbsp; </font></p>
+        <blockquote> 
+          <p><font size="2" face="Courier New, Courier, mono">System.LogTo = file</font></p>
+        </blockquote>
+        <p><font size="2" face="Verdana, Arial, Helvetica, sans-serif">The <em>media</em> 
+          keyword was removed since we do not want the final user to see any eventual 
+          errors. With this configuration the error log is only sent to the turbine.log 
+          file.<br>
+          &nbsp; </font></p>
+        <blockquote> 
+          <p><font size="2" face="Courier New, Courier, mono">System.Debug = no</font></p>
+        </blockquote>
+        <p><font size="2" face="Verdana, Arial, Helvetica, sans-serif">This setting 
+          will hide the Turbine Window.</font><br>
+          &nbsp; </p>
+        <p><font size="2" face="Verdana, Arial, Helvetica, sans-serif"><strong>2 
+          - Copy the files to the target machine</strong></font></p>
+        <p><font size="2" face="Verdana, Arial, Helvetica, sans-serif">To move 
+          your application into a production machine, the following steps are 
+          involved:</font></p>
+        <ul>
+          <li><font size="2" face="Verdana, Arial, Helvetica, sans-serif">Install 
+            the PHP Turbine run-time as explained on the <a href="install.htm">Installation</a>. 
+            Make sure to restart your web server for the Turbine7 module to start 
+            running. To see if Turbine7 is running, create a PHP file with:<br>
+            <font face="Courier New, Courier, mono">&nbsp;&nbsp;&nbsp; </font></font><font size="2" face="Courier New, Courier, mono">&lt;? 
+            phpinfo() ?&gt;</font><br>
+            &nbsp; <br>
+            <font size="2" face="Verdana, Arial, Helvetica, sans-serif">Then request 
+            this script through the web browser - a section named &quot;Turbine7&quot; 
+            should appear listing the running version. This means PHP Turbine 
+            is running.</font></li>
+          <li><font size="2" face="Verdana, Arial, Helvetica, sans-serif">Copy 
+            your application files to the destination web directory (.php; .htm; 
+            .mml; Flash; images...).</font></li>
+        </ul>
+        <p><font size="2" face="Verdana, Arial, Helvetica, sans-serif">Then proceed 
+          to test your application to check if it works. If it does not work, 
+          please carefully check each one of the above steps (in particular the 
+          Installation instructions), looking for any missing or incorrect step.</font></p>
+        <p>&nbsp;</p>
+        <p><font face="Arial, Helvetica, sans-serif" size="5"><a name="upgrade" id="upgrade"></a>Notes 
+          for Turbine 5.0 Users</font></p>
+        <p><font size="2" face="Verdana, Arial, Helvetica, sans-serif">Turbine 
+          7 is so much more powerful than its PHP Turbine 5.0 predecessor, that 
+          almost every area includes new features. Unfortunately, in the process, 
+          some back-compatibility had to be abandoned on some areas. What follows 
+          is a resume of some features that have been changed or completely replaced 
+          on this new version:</font></p>
+        <p><strong><font size="2" face="Verdana, Arial, Helvetica, sans-serif">DrawScript 
+          was replaced by MML</font></strong></p>
+        <p><font size="2" face="Verdana, Arial, Helvetica, sans-serif">Drawscript 
+          is no longer available and has been substituted by a much more expressive 
+          XML language which we call MML for short. We hope you won't regret this 
+          new feature as soon as you see MML working.</font></p>
+        <p><strong><font size="2" face="Verdana, Arial, Helvetica, sans-serif">Old 
+          Template Property was replaced by Media loading</font></strong></p>
+        <p><font size="2" face="Verdana, Arial, Helvetica, sans-serif">Turbine 
+          7 no longer has the concept of a unique template. It was replaced by 
+          the concept of several pieces of Media that can be loaded and mixed 
+          together. Media templates can now be Flash .swf or MML files. </font></p>
+        <p><font size="2" face="Verdana, Arial, Helvetica, sans-serif">One important 
+          difference is that when any media template is loaded it is automatically 
+          merged into the resulting media and its Turbine variables are interpreted 
+          in the moment they are read. Due to this behavior you should define 
+          your Turbine variables and DataSets <strong>before</strong> you load 
+          any media template that depends on such variables or DataSets.</font></p>
+        <p><strong><font size="2" face="Verdana, Arial, Helvetica, sans-serif">Some 
+          commands have changed or have been removed</font></strong></p>
+        <p><font size="2" face="Verdana, Arial, Helvetica, sans-serif">Some commands 
+          have changed (for the better we believe) and as such you should be careful 
+          when using them; other commands have disappeared altogether, usually 
+          when better alternatives exist. The list of changes is:</font></p>
+        <ul>
+          <li><font size="2" face="Verdana, Arial, Helvetica, sans-serif">AutoMovieClip 
+            now only supports movie clips: please use an &lt;AutoImage&gt; command 
+            above the &lt;AutoMovieClip&gt; for the same effect.</font></li>
+          <li><font size="2" face="Verdana, Arial, Helvetica, sans-serif">Turbine 
+            Drivers and Objects are not available: better results can be obtained 
+            with Flash components and the new data injection capabilities.</font></li>
+          <li><font size="2" face="Verdana, Arial, Helvetica, sans-serif">The 
+            Table and List commands are not available: better results can be obtained 
+            by simple MML composition or by using the &lt;AutoMedia&gt; command.</font></li>
+        </ul>
+        <p><font size="2" face="Verdana, Arial, Helvetica, sans-serif">Please 
+          note that PHP Turbine 7 and PHP Turbine 5.0 can co-exist on the same 
+          machine and PHP engine without any problems.<br>
+          &nbsp; </font></p>
+        <p><font face="Arial, Helvetica, sans-serif" size="5"><a name="tips" id="tips"></a>Useful 
+          Tips</font></p>
+        <p><font size="2" face="Verdana, Arial, Helvetica, sans-serif"> In this 
+          subsection we will show you some tips that will hopefully transform 
+          themselves in time-savers for you.</font></p>
+        <p><strong><font size="2" face="Verdana, Arial, Helvetica, sans-serif">IE 
+          displays text &quot;garbage&quot; instead of Flash movie</font></strong></p>
+        <p><font size="2" face="Verdana, Arial, Helvetica, sans-serif">Internet 
+          Explorer (IE) sometimes displays text &quot;garbage&quot; instead of 
+          a Flash Movie - this may happen after a previous ASP scripting error 
+          and when requesting the movie in a full browser window.<br>
+          During normal development, a script error may cause IE to display the 
+          error message text in an HTML page. When the error is fixed (corrected 
+          on the source script) and the user hits Refresh, IE receives a generated 
+          Flash movie, however sometimes IE still assumes that the content type 
+          for this request to be HTML (ignoring the generated content-type header) 
+          and displays the binary contents of the generated Flash as text &quot;garbage&quot;.<br>
+          To solve this problem you'll need to change the requested query string 
+          - for example by adding some characters to the end of the query string, 
+          for example something like &quot;?1&quot; - this will force IE to correctly 
+          retrieve the generated Flash movie.<br>
+          Note that this problem only happens with IE and not with any other browser 
+          and only when the browser is requesting the Flash movie directly without 
+          the involving HTML plugin page.</font></p>
+        <p><strong><font size="2" face="Verdana, Arial, Helvetica, sans-serif">Explicitly 
+          define Media.* settings</font></strong></p>
+        <p><font size="2" face="Verdana, Arial, Helvetica, sans-serif">If not 
+          defined, global media settings like the frame rate or Flash version 
+          will assume the values of the first media template to be loaded. By 
+          explicitly defining the pertinent media settings, you are not dependent 
+          on the characteristics of the loaded templates, which can change during 
+          the development process.</font></p>
+        <p><strong><font size="2" face="Verdana, Arial, Helvetica, sans-serif">Be 
+          careful when dealing with Video</font></strong></p>
+        <p><font size="2" face="Verdana, Arial, Helvetica, sans-serif">Video is 
+          a wonderful feature of Turbine 7, but it can create some problems if 
+          not used on the right way. Video encoding is, by its nature, a CPU and 
+          memory-intensive process, so the following characteristics should be 
+          counted on when encoding videos to Flash - most of these are limitations 
+          derived from running on a web server environment:</font></p>
+        <ul>
+          <li><font size="2" face="Verdana, Arial, Helvetica, sans-serif">FLV 
+            movies are the fastest to be encoded, followed by Animated GIFs; AVI 
+            and QuickTime will consume larger system resources.</font></li>
+          <li><font size="2" face="Verdana, Arial, Helvetica, sans-serif">AVI 
+            and QuickTime have a limitation of a maximum of 16000 frames. If this 
+            is a problem, then the frame rate at which the video is being integrated 
+            must be decreased.</font></li>
+          <li><font size="2" face="Verdana, Arial, Helvetica, sans-serif">Due 
+            to QuickTime SDK limitations, QuickTime videos cannot be encoded in 
+            parallel, rather they are internally sequenced by Turbine.</font></li>
+          <li><font size="2" face="Verdana, Arial, Helvetica, sans-serif">Video 
+            and audio encoding quality settings are available for all formats, 
+            except for FLV videos, which are not re-encoded at a lower level.</font></li>
+          <li><font size="2" face="Verdana, Arial, Helvetica, sans-serif">Encoding 
+            can be a resource-intensive process, with all the related consequences 
+            - for example if running from a web server, the default page timeout 
+            (which can be set to larger values) can be reached.</font></li>
+        </ul>
+        <p><font size="2" face="Verdana, Arial, Helvetica, sans-serif">One possible 
+          solution for overload issues is to encode &quot;offline&quot; and save 
+          the resulting file to disk - for instance have a scheduled task that 
+          once a day calls a special page that performs the encoding tasks.<br>
+          Some of these limitations arise from the web server environment and 
+          online nature of PHP Turbine 7. Blue Pacific Software is preparing a 
+          different new product specifically aimed at more intensive video encoding 
+          possibilities - please <a href="mailto:support@blue-pac.com">contact 
+          us</a> for further information.<br>
+          Please note that AVI and QuickTime video integration is only available 
+          on the Windows version.</font></p>
+        <p><strong><font size="2" face="Verdana, Arial, Helvetica, sans-serif">Response.Expires 
+          = -1 is your friend</font></strong></p>
+        <p><font size="2" face="Verdana, Arial, Helvetica, sans-serif">Everybody 
+          already had problems with the web browser cache. To avoid it we encourage 
+          you to start your PHP scripts with the line:</font></p>
+        <blockquote> 
+          <p><font size="2" face="Courier New, Courier, mono">header (&quot;Expires: Sat, 
+            01 Jan 2000 01:01:01 GMT&quot;);</font></p>
+        </blockquote>
+        <p><font size="2" face="Verdana, Arial, Helvetica, sans-serif">Of course, 
+          there are situations when you want the web browser to cache the page 
+          (but usually not during development).</font></p>
+        <p><strong><font size="2" face="Verdana, Arial, Helvetica, sans-serif">Server 
+          time vs. Client time</font></strong></p>
+        <p><font size="2" face="Verdana, Arial, Helvetica, sans-serif">Be careful 
+          not to misunderstand the difference between server time and client time: 
+          The resulting media is assembled on server time by loading several kinds 
+          of media and that's where Turbine works to assemble media. For instance, 
+          Turbine variables and DataSets only exist during server time, and are 
+          expanded (transformed in concrete values) during server time.</font></p>
+        <p><font size="2" face="Verdana, Arial, Helvetica, sans-serif">At client 
+          time, Turbine already did its work and is no longer present, only its 
+          generated media, which is now running. This resulting media (which is 
+          now running in the client side) can however have information that previously 
+          was in the form of Turbine variables or DataSets, now available on the 
+          form of Action Script variables, as long as they were published during 
+          server time.</font></p>
+        <p><strong><font size="2" face="Verdana, Arial, Helvetica, sans-serif">Have 
+          your .php files cleaned</font></strong></p>
+        <p><font size="2" face="Verdana, Arial, Helvetica, sans-serif">If your 
+          script ends with a <em>$turbine-&gt;generateFlash</em> command then 
+          it's very important to remember not to have any text before the PHP 
+          script block ( &lt;? ... ?&gt; ) as all this info will be served to 
+          the web browser, and can cause the generated Flash Movie to be misunderstood 
+          by the Flash plug-in on the browser. </font></p>
+        <p><font size="2" face="Verdana, Arial, Helvetica, sans-serif">Text after 
+          the PHP script block where the Flash movie is generated will also be 
+          sent to the web browser and can possibly be misunderstood by the Flash 
+          plug-in. Don't leave text after the trailing ?&gt; of the PHP script 
+          block.</font></p>
+        <p><strong><font size="2" face="Verdana, Arial, Helvetica, sans-serif">Components 
+          like to be together</font></strong></p>
+        <p><font size="2" face="Verdana, Arial, Helvetica, sans-serif">When using 
+          multiple Flash components, it's advisable to create a single Flash .swf 
+          with all the components to be included - the .swf acts as a kind of 
+          a component library, which is more efficient than including from separate 
+          Flash .swf files and rules out any component version mismatches that 
+          might occur.</font></p>
+        <p>&nbsp;<br>
+        </p></TD>
+    </TR>
+    <TR valign="top"> 
+      <TD COLSPAN="2" height="6"> 
+        <table border=0 cols=2 width="560" cellpadding="0" cellspacing="0" >
+          <tr> 
+            <td width="443" height="25"><font face="Verdana, Arial, Helvetica, sans-serif" size="3"><a href="manual.htm">Table 
+              of Contents</a></font></td>
+            <td width="117" height="25"> 
+              <div align="center"><font face="Verdana, Arial, Helvetica, sans-serif" size="3"><a href="mmlreference.htm">Next 
+                Chapter </a> </font></div>
+            </td>
+          </tr>
+        </table>
+      </TD>
+    </TR>
+  </TABLE>
+</CENTER>
+<CENTER>
+  <p> <font face="Verdana, Arial, Helvetica, sans-serif" size="1"><i>&nbsp;<br>
+    Flash and Macromedia Flash are trademarks of Macromedia, Inc.</i></font>
+</CENTER>
+</BODY>
+</HTML>

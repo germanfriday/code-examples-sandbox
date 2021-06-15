@@ -1,0 +1,62 @@
+function moveToClick(evt) {
+    evt = (evt) ? evt : event;
+    if (evt.shiftKey) {
+        var coords = getEventCoords(evt);    // to be filled in with real function name
+        shiftTo("mapArrow", coords.left, coords.top);
+    }
+}
+
+document.onmousedown = moveToClick;
+
+----------
+
+function getPageEventCoords(evt) {
+    var coords = {left:0, top:0};
+    if (evt.pageX) {
+        coords.left = evt.pageX;
+        coords.top = evt.pageY;
+    } else if (evt.clientX) {
+        coords.left = 
+            evt.clientX + document.body.scrollLeft - document.body.clientLeft;
+        coords.top = 
+            evt.clientY + document.body.scrollTop - document.body.clientTop;
+        // include html element space, if applicable
+        if (document.body.parentElement && document.body.parentElement.clientLeft) {
+            var bodParent = document.body.parentElement;
+            coords.left += bodParent.scrollLeft - bodParent.clientLeft;
+            coords.top += bodParent.scrollTop - bodParent.clientTop;
+        }
+    }
+    return coords;
+}
+
+----------
+
+function getPositionedEventCoords(evt) {
+    var elem = (evt.target) ? evt.target : evt.srcElement;
+    var coords = {left:0, top:0};
+    if (evt.layerX) {
+        var borders = {left:parseInt(getElementStyle("progressBar", 
+                       "borderLeftWidth", "border-left-width")),
+                       top:parseInt(getElementStyle("progressBar", 
+                       "borderTopWidth", "border-top-width"))};
+        coords.left = evt.layerX - borders.left;
+        coords.top = evt.layerY - borders.top;
+    } else if (evt.offsetX) {
+        coords.left = evt.offsetX;
+        coords.top = evt.offsetY;
+    }
+    evt.cancelBubble = true;
+    return coords;
+}
+
+function getElementStyle(elemID, IEStyleAttr, CSSStyleAttr) {
+    var elem = document.getElementById(elemID);
+    if (elem.currentStyle) {
+        return elem.currentStyle[IEStyleAttr];
+    } else if (window.getComputedStyle) {
+        var compStyle = window.getComputedStyle(elem, "");
+        return compStyle.getPropertyValue(CSSStyleAttr);
+    }
+    return "";
+}

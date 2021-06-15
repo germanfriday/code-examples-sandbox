@@ -1,0 +1,16 @@
+for (var i = 0; i < employeeDB.length; i++) {
+    employeeDB[employeeDB[i].name] = employeeDB[i];
+}
+
+----------
+
+var sales = new Array();
+sales[sales.length] = {period:"q1", region:"east", total:2300};
+sales[sales.length] = {period:"q2", region:"east", total:3105};
+...
+sales[sales.length] = {period:"q4", region:"west", total:3810};
+
+for (var i = 0; i < sales.length; i++) {
+    sales[sales[i].region + "_" + sales[i].period] = sales[i];
+}
+

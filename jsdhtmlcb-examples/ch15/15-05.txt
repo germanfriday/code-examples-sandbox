@@ -1,0 +1,6 @@
+function scrollWindow() {
+    window.scrollBy(0, 1);
+}
+function initScroll() {
+    setInterval("scrollWindow()", 100);
+}

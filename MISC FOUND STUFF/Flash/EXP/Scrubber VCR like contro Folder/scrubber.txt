@@ -1,0 +1,21 @@
+Scrubber v1.0
+The scrubber is a sweet little controller for reviewing your
+shockwave movies. It provides VCR type controls to navigate through
+any movie clip you tell it to. It's super easy to put into any movie
+your working on... just copy and paste, then set one variable to
+point to the movie you want to control! It has the following
+controls: play, stop, fast foward, reverse, beginning, end. It shows
+the current frame of the target movie, and has a "live" speed
+adjuster.
+
+Author:
+Mike Gieson
+
+Company:
+plaino
+
+Web Site:
+www.gieson.com
+
+e-mail:
+info@plaino.com

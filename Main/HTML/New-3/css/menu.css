@@ -1,0 +1,183 @@
+@charset "utf-8";
+/* CSS Document */
+/* Hexa-menu style ------------------------------------------*/
+
+.menu {
+	display: table;
+	margin-left: auto;
+	margin-right: auto;
+	color: #FFF;
+}
+.menu ul {
+	display: table-row;
+}
+.menu ul li {
+	display: table-cell;
+	width: 90px;
+	height: 90px;
+	text-align: center;
+	vertical-align: middle;
+	color: #FFF;
+	background-image: url(../images/menu/small.png);
+	background-repeat: no-repeat;
+	background-position: center center;
+	background-size: cover;
+	-webkit-background-size: cover;
+	-moz-background-size: cover;
+	-o-background-size: cover;	
+}
+.menu ul li a {
+	color: #FFF;
+	text-decoration: none;
+}
+.menu ul li i {
+	font-size: 35px;
+}
+.menu ul li span {
+	display: block;
+	text-align: center;
+	font-size: 12px;
+	line-height: 15px;
+}
+
+
+/* Smartphones (portrait and landscape) ----------- */
+@media only screen and (min-device-width : 320px) and (max-device-width : 480px) {
+.menu ul li {
+	display: table-cell;
+	width: 90px;
+	height: 90px;
+}
+.menu ul li i {
+	font-size: 35px;
+}
+.menu ul li span {
+	font-size: 12px;
+	line-height: 15px;
+}
+}
+
+/* Smartphones (landscape) ----------- */
+@media only screen and (min-width : 321px) {
+.menu ul li {
+	display: table-cell;
+	width: 90px;
+	height: 90px;
+}
+.menu ul li i {
+	font-size: 35px;
+}
+.menu ul li span {
+	font-size: 12px;
+	line-height: 15px;
+}
+}
+
+/* Smartphones (portrait) ----------- */
+@media only screen and (max-width : 320px) {
+.menu ul li {
+	display: table-cell;
+	width: 90px;
+	height: 90px;
+}
+.menu ul li i {
+	font-size: 35px;
+}
+.menu ul li span {
+	font-size: 12px;
+	line-height: 15px;
+}
+}
+
+/* iPads (portrait and landscape) ----------- */
+@media only screen and (min-device-width : 768px) and (max-device-width : 1024px) {
+.menu ul li {
+	display: table-cell;
+	width: 150px;
+	height: 150px;
+	background-image: url(../images/menu/big.png);
+}
+.menu ul li i {
+	font-size: 60px;
+}
+.menu ul li span {
+	font-size: 18px;
+	line-height: 20px;
+}
+}
+
+/* iPads (landscape) ----------- */
+@media only screen and (min-device-width : 768px) and (max-device-width : 1024px) and (orientation : landscape) {
+.menu ul li {
+	display: table-cell;
+	width: 150px;
+	height: 150px;
+	background-image: url(../images/menu/big.png);
+}
+.menu ul li i {
+	font-size: 60px;
+}
+.menu ul li span {
+	font-size: 18px;
+	line-height: 20px;
+}
+}
+
+/* iPads (portrait) ----------- */
+@media only screen and (min-device-width : 768px) and (max-device-width : 1024px) and (orientation : portrait) {
+.menu ul li {
+	display: table-cell;
+	width: 150px;
+	height: 150px;
+	background-image: url(../images/menu/big.png);
+}
+.menu ul li i {
+	font-size: 60px;
+}
+.menu ul li span {
+	font-size: 18px;
+	line-height: 20px;
+}
+}
+ 
+/* Desktops and laptops ----------- */
+@media only screen and (min-width : 1224px) {
+.menu ul li {
+	display: table-cell;
+	width: 150px;
+	height: 150px;
+	background-image: url(../images/menu/big.png);
+}
+.menu ul li i {
+	font-size: 60px;
+}
+.menu ul li span {
+	font-size: 18px;
+	line-height: 20px;
+}
+}
+
+/* Large screens ----------- */
+@media only screen and (min-width : 1824px) {
+.menu ul li {
+	display: table-cell;
+	width: 150px;
+	height: 150px;
+	background-image: url(../images/menu/big.png);
+}
+.menu ul li i {
+	font-size: 60px;
+}
+.menu ul li span {
+	font-size: 18px;
+	line-height: 20px;
+}
+}
+
+
+/* iPhone 4 ----------- */
+@media only screen and (-webkit-min-device-pixel-ratio : 1.5), only screen and (min-device-pixel-ratio : 1.5) {
+.menu ul li {
+	background-image: url(../images/menu/small@2x.png);
+}
+}

@@ -1,0 +1,14 @@
+<AutoLayout type="Vertical"/>
+
+<Text>This is a block of text</Text>
+
+<Shape>
+  <LineStyle color="#ff0000" width="5"/>
+  <FillColor color="#8080ff"/>
+  <Rect size="200,100"/>
+</Shape>
+
+<Image src="../common/flower.jpg"/>
+
+<!-- The image below is placed at a specific position of 350,50: -->
+<Image pos="350,50" src="../common/flower.bmp"/>

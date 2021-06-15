@@ -1,0 +1,84 @@
+function coworker(name, age) {
+    this.name = name;
+    this.age = age;
+}
+
+var emp1 = new coworker("Alice", 23);
+var emp2 = new coworker("Fred", 32);
+
+----------
+
+var emp1 = {name:"Alice", age:23};
+var emp2 = {name:"Fred", age:32};
+
+----------
+
+function showAll() {
+    alert("Employee " + this.name + " is " + this.age + " years old.");    
+}
+
+function coworker(name, age) {
+    this.name = name;
+    this.age = age;
+    this.show = showAll;
+}
+
+var emp1 = {name:"Alice", age:23, show:showAll};
+var emp2 = {name:"Fred", age:32, show:showAll};
+
+emp1.show();
+
+----------
+
+function coworker(name, age) {
+    this.name = name;
+    this.age = age || 0;
+    this.show = showAll;
+}
+
+----------
+
+function verify(obj) {
+    alert("Just added " + obj.name + ".");
+}
+function coworker(name, age) {
+    this.name = name;
+    this.age = age;
+    this.show = showAll;
+    verify(this);
+}
+
+----------
+
+var employeeDB = new Array();
+employeeDB[employeeDB.length] = new coworker("Alice", 23);
+employeeDB[employeeDB.length] = new coworker("Fred", 32);
+employeeDB[employeeDB.length] = new coworker("Jean", 28);
+employeeDB[employeeDB.length] = new coworker("Steve", 24);
+
+----------
+
+var employeeDB = new Array();
+employeeDB[employeeDB.length] = {name:"Alice", age:23, show:showAll};
+employeeDB[employeeDB.length] = {name:"Fred", age:32, show:showAll};
+employeeDB[employeeDB.length] = {name:"Jean", age:28, show:showAll};
+employeeDB[employeeDB.length] = {name:"Steve", age:24, show:showAll};
+
+----------
+
+var employeeDB = [{name:"Alice", age:23, show:showAll},
+                  {name:"Fred", age:32, show:showAll},
+                  {name:"Jean", age:28, show:showAll},
+                  {name:"Steve", age:24, show:showAll}];
+
+----------
+
+function findInAgeGroup(low, high) {
+    var result = new Array();
+    for (var i = 0; i < employeeDB.length; i++) {
+        if (employeeDB[i].age >= low && employeeDB[i].age <= high) {
+            result = result.concat(employeeDB[i].name);
+        }
+    }
+    return result;
+}

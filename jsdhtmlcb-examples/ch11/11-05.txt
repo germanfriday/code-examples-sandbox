@@ -1,0 +1,9 @@
+<head>
+...
+<script language="JavaScript" type="text/javascript">
+var cssFile = (navigator.userAgent.indexOf("Mac") != -1) ? 
+    "styles/macCSS.css" : "styles/pcCSS.css";
+document.write("<link rel='stylesheet' type='text/css' href='" + cssFile + "' />");
+</script>
+...
+</head>

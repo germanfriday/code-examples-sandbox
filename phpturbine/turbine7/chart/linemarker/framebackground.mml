@@ -1,0 +1,5 @@
+<BaseDepth depth="0"/>
+<Shape pos="0,0" alpha="40">
+  <FillColor side="right" color="#a9cc8f"/>
+  <Rect pos="0,0" size="{_frameWidth},{_frameHeight}"/>
+</shape>

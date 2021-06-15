@@ -1,0 +1,479 @@
+/*
+----------------------------------------------------------
+autodesk.com base styles for screen media
+FileName: ad_html.css
+Version: 2003.03.27
+----------------------------------------------------------
+*/
+
+
+/* General Elements */
+/* ----------------------------------------------------- */
+body {
+    margin: 0px 11px 11px 11px;
+    color: #000000;
+    background-color: #ffffff;
+    font-family: Arial,Helvetica,Verdana,Geneva,sans-serif;
+    font-size: 11px;
+}
+td {
+    color: #000000;
+    font-size: 11px;
+	line-height: 15px;
+}
+a:link {
+    color: #0066CC;
+	text-decoration: none;
+}
+a:visited {
+    color: #6699CC;
+	text-decoration: none;
+}
+a:hover {
+    color: #0066CC;
+	text-decoration: underline;
+}
+p { margin: 0px 0px 11px 0px; }
+p.toc {
+	margin: 0px 0px 0px 2em;
+	text-indent: -2em;
+}/* indent second line */
+ul {
+	margin:  0px  0px  11px 27px;	
+	list-style: url(images/bullet.gif);
+	list-style-type: square;
+}
+ol {
+	margin:  0px  0px  11px 27px;	
+	list-style-type : decimal;
+}
+.nolist { list-style: none; }
+
+input, select, textarea {
+	font-family: Arial,Helvetica,Verdana,Geneva,sans-serif;
+    font-size: 11px;
+}
+form { margin: 0px 0px 11px 0px; }
+
+
+/* Gray Borders */
+/* ----------------------------------------------------- */
+td.gray-border {
+    border-right: solid 1px #999999;
+}/* right border */
+td.gray-border2 {
+    border-right: solid 1px #999999;
+    border-bottom: solid 1px #999999;
+}/* right and bottom border */
+td.border-bottom { 
+	border-bottom: solid 1px #999999;
+}/* bottom border */
+td.frame-border {
+    border-bottom: solid 1px #999999;
+    border-left: solid 1px #999999;
+    border-right: solid 1px #999999;
+}/* outline borders */
+td.border-top { 
+	border-top: solid 1px #CCCCCC;
+}/* top ltgray table border */
+
+
+/* Formatting Structure */
+/* ----------------------------------------------------- */
+td.glnav {
+	color: #666666;
+	text-decoration: none;
+}
+td.countryid {
+	color: #666666;
+	text-decoration: none;
+	font-size: 10px;
+}
+td.ftnav {
+	color: #666666;
+	text-decoration: none;
+	line-height: 14px;
+	font-size: 10px;
+	height : 26px;
+}
+td.section-header {
+	text-align : right;
+ 	padding: 0px 11px 0px 0px;
+	height : 36px;
+}/* right-indent Section Header Image */
+td.lhsash { 
+	background-color: #F4F4F4;
+	width: 180px;
+}
+td.lhnav, td.lhnavbld {
+	padding: 4px 0px 0px 1px; /* Ww */
+	line-height: 11px;
+}
+
+/* Content Area */
+td.content-ww { padding: 0px 0px 0px 1px; } /* Ww */ 
+td.content { 
+	padding: 11px 11px 28px 10px; /* Ww 11-1px */	
+	vertical-align: top; 
+	height : 402px; /* keeps min page height */
+} 
+td.center { 
+	width: 345px;
+	vertical-align: top;	
+	padding: 0px 0px 0px 1px; /* Ww */
+}/* Center Area with Horizontal Nav */
+td.center-top { 
+	width: 345px;
+	vertical-align: top;		
+	padding: 25px 0px 0px 1px; /* Ww */
+}/* Center Area no Title */
+td.center-title { 
+	width: 345px;
+	vertical-align: top;		
+	padding: 23px 0px 0px 1px; /* Ww */
+}/* Center Area with Title */
+td.center518-title { 
+	width: 518px;
+	vertical-align: top;	
+	padding: 23px 0px 0px 1px; /* Ww */
+}/* wide content area, with Title */
+td.center720-title { 
+	width: 720px;
+	vertical-align: top;	
+	padding: 23px 0px 0px 1px; /* Ww */
+}/* wide content area, with Title, no LHSash */
+td.right { 
+	width: 158px;
+	vertical-align: top;	
+}/* with Normal Sig Image */
+td.right-top { 
+	padding-top: 16px;
+	width: 158px;
+	vertical-align: top;	
+}/* with Image Banner */
+td.column2-left { 
+	width: 254px;
+	vertical-align: top;	
+	padding: 0px 0px 0px 0px;
+}
+td.column2-right { 
+	width: 253px;
+	vertical-align: top;	
+	padding: 0px 0px 0px 11px; /* Ww */
+}
+td.space { 
+	width: 12px; 
+	vertical-align: top;
+	padding: 0px 0px 0px 4px;
+}
+td.space11 { width: 11px; } 
+td.tdw167 { width: 167px; } /* Ww */ 
+td.tdw70 { width: 70px; vertical-align: top; } 
+tr.pad { padding: 4px 11px 7px 0px; }
+
+/* Tables */
+table.header { margin: 8px 11px 13px 11px; }
+table.footer { margin: 29px 11px 8px 11px; }/* 26-29 11-8 */	
+table.lhsash { margin: 16px 11px 28px 10px; width: 159px; } /* Ww */	
+table.subnav { margin: 0px 0px 0px 0px; width: 332px; }
+table.content { width: 519px; } /* Ww  518+1 */	
+table.logo { 
+	width: 170px;
+	margin: 11px 0px 0px 11px;
+}
+
+/* Table Alignment */
+table.left { 
+	margin: 0px 11px 0px 0px; 
+	width: 22px;  /* Just to keep it fixed */	
+	float : left; 
+}
+table.right { 
+	margin: 0px 0px 0px 11px; 
+	width: 22px;  /* Just to keep it fixed */	
+	float : right; 
+}
+
+table.rightmargin { 
+	margin: 0px 11px 0px 0px; 
+	width: 22px;  /* Just to keep it fixed */	
+}
+
+/*  Table Gray Borders */
+ table.graybrd  {
+	background-color:#CCCCCC;
+}
+table.graybrd TD {
+	vertical-align:top;
+	background-color:#ffffff;
+}
+
+/* DIV */
+/* ----------------------------------------------------- */
+div.clear { clear: both; }
+div.lh-blue {
+	color: #0066CC;
+	padding: 4px 4px 0px 1px; /* Ww */	
+	line-height: 11px;
+	font-size: 11px;
+}/* blue '-' on the LHSash subnavigation */
+div.lh-drkblue {
+	color: #666666;
+	padding: 4px 4px 0px 1px; /* Ww */	
+	line-height: 11px;
+	font-size: 11px;
+}/* active gray '-' on the LHSash subnavigation */
+div.lh-black {
+	color: #000000;
+	padding: 4px 4px 0px 1px; /* Ww */	
+	line-height: 11px;
+	font-size: 11px;
+}/* black '-' on the LHSash subnavigation */
+div.intro {
+	font-weight: bold;
+}
+
+
+/* Navigation Links */
+/* ----------------------------------------------------- */
+.glnav, a.glnav, a.glnav:visited {
+    color: #0066CC;
+    font-size: 11px;
+	text-decoration: none;
+}
+a.glnav:hover {
+	text-decoration: underline;
+}
+.lhnav {
+    color: #000000;
+    font-size: 11px;
+	text-decoration: none;
+}
+a.lhnav, a.lhnav:visited {
+    color: #0066CC;
+	text-decoration: none;
+}
+a.lhnav:hover {
+    color: #0066CC;
+	text-decoration: underline;
+}
+a.lhnav-active, a.lhnav-active:visited {
+    color: #666666;
+    font-size: 11px;
+	text-decoration: none;
+}
+a.lhnav-active:hover {
+    color: #666666;
+	text-decoration: underline;
+}
+.lhnavbld {
+    color: #000000;
+    font-size: 11px;
+	font-weight: bold;
+	text-decoration: none;
+}
+a.lhnavbld, a.lhnavbld:visited {
+    color: #0066CC;
+	text-decoration: none;
+}
+a.lhnavbld:hover {
+    color: #0066CC;
+	text-decoration: underline;
+}
+.ftnav, a.ftnav, a.ftnav:visited {
+    color: #0066CC;
+    font-size: 10px;
+	text-decoration: none;
+}
+a.ftnav:hover {
+	text-decoration: underline;
+}
+
+
+/* Text Formatting */
+/* ----------------------------------------------------- */
+.title { 
+	color: #000000;
+	font-weight: bold;
+	font-size: 14px;
+	line-height: 17px;
+ }
+ .subtitle { 
+	font-style : italic;
+ }
+ .pdf {
+	color: #666666;
+	font-size: 8pt;
+	font-style : italic;
+	text-decoration: none;
+}
+.disclamer {
+	font-size: 9px;
+	line-height: 12px;
+	text-decoration: none;
+}
+.summary {
+	color: #000000;
+	font-size: 9px;
+	line-height: 12px;
+}
+.summary P { margin: 0px 0px 7px 0px; }
+
+.gray {
+	color: #666666;
+	text-decoration: none;
+}
+.ltgray {
+	color: #999999;
+	text-decoration: none;
+}
+.black {
+	color: #000000;
+	text-decoration: none;
+}
+.red {
+	color: #FF0000;
+	text-decoration: none;
+}
+
+
+/* Ticks, HR */
+/* ----------------------------------------------------- */
+hr {
+	color: #CCCCCC;
+	height: 1px;
+	margin: 0px 0px 5px 0px;
+}
+hr.tick {
+	color: #999999;
+	margin: 4px 0px 0px 1px; /* Ww */	
+	height: 1px;
+	width: 36px;
+	text-align : left;
+}/* horizontal LHSash tick with margin-left=1px */
+hr.ltick {
+	color: #999999;
+	margin: 4px 0px 0px 0px;
+	height: 1px;
+	width: 36px;
+	text-align : left;
+}/* horizontal tick for content area */
+hr.rtick {
+	color: #999999;
+	margin: 4px 0px 4px 122px;
+	height: 1px;
+	width: 36px;
+	text-align : right;
+}/* horizontal RHSash tick */
+
+
+/* Images */
+/* ----------------------------------------------------- */
+img  { border: 0px; }/* remove border from image */
+.promo  { 
+	margin-bottom: 5px;
+}/* 5px space after promo boxes */
+.icon { 
+	margin: 0px 5px 0px 0px;
+	vertical-align : middle;
+}
+.img-rightpadding  { 
+	margin: 4px 11px 7px 0px;
+}
+.img-leftpadding  { 
+	margin: 4px 0px 7px 11px;
+}
+.img-left, .img-top, .img-texttop  { 
+	margin: 4px 11px 7px 0px;
+	float : left;
+}
+.img-right  { 
+	margin: 4px 0px 7px 11px;
+	float: right;
+}
+.img-bottom, .img-absbottom, .img-baseline   { 
+	margin: 4px 5px 0px 5px;
+}
+.img-middle, .img-absmiddle  { 
+	margin: 4px 5px 7px 5px;
+	vertical-align: middle; 
+}
+.img-view  { 
+	margin: 4px 0px 5px 0px;
+}
+
+
+/* Home Page */
+/* ----------------------------------------------------- */
+table.bannercell {
+	margin: 11px 11px 11px 11px;
+}
+table.gray {
+	background-color: #777777;
+	padding: 7px 7px 11px 7px;
+	width: 157px;
+	height: 106px;
+}
+table.blue {
+	background-color: #003366;
+}
+table.ltblue {
+	background-color: #ddeeff;
+	padding: 7px 7px 11px 7px;
+	width: 457px;
+	height: 60px;
+}
+td.home360 { 
+	padding-top: 27px;
+	padding-right: 11px;
+	width: 349px;
+	vertical-align: top;	
+}
+.home-nav, a.home-nav, a.home-nav:visited {
+	color: #FFFFFF;
+	text-decoration : none;
+	padding-left: 1px;  /* Ww */	
+}
+a.home-nav:hover {
+ 	color: #FFFFFF;
+	text-decoration : underline;
+}
+hr.htick {
+	color: #999999;
+	margin: 4px 0px 4px 1px; /* Ww */	
+	height: 1px;
+	width: 36px;
+	text-align : left;
+}/* tick for LHSash of home page */
+
+
+/* Popup Windows */
+/* ----------------------------------------------------- */
+body.popup {
+    margin: 0px 0px 0px 0px;
+    color: #000000;
+    background-color: #ffffff;
+    font-family: Arial,Helvetica,Verdana,Geneva,sans-serif;
+    font-size: 11px;
+}
+table.popup { 
+	width: 387px; 
+	height:425px;
+	margin: 11px 22px 11px 10px;  /* Ww */	
+} 
+table.logo-popup { 
+	width: 139px;
+	height: 36 px;
+	margin: 8px 0px 17px 11px;
+}
+table.popup-footer { 
+	width: 398px; 
+	margin: 11px 11px 11px 11px; 
+}
+td.popup-footer {
+	padding: 10px 10px 10px 0px; 
+	line-height: 11px; 
+}
+
+
+

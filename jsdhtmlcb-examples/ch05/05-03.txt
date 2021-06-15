@@ -1,0 +1,15 @@
+function getIEVersionNumber() {
+    var ua = navigator.userAgent;
+    var MSIEOffset = ua.indexOf("MSIE ");
+    if (MSIEOffset == -1) {
+        return 0;
+    } else {
+        return parseFloat(ua.substring(MSIEOffset + 5, ua.indexOf(";", MSIEOffset)));
+    }
+}
+
+var isIE5Min = getIEVersionNumber() >= 5;
+
+if (isIE5Min) {
+    // perform statements for IE 5 or later
+}

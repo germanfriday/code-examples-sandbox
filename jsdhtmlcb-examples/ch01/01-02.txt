@@ -1,0 +1,12 @@
+var myString = "Every good boy does fine.";
+var section = myString.substring(0, 10);    // section is now "Every good"
+
+----------
+
+var myString = "Every good boy does fine.";
+var section = myString.slice(11, -6);    // section is now "boy does"
+
+----------
+
+var myString = "Every good boy does fine.";
+var section = myString.substr(6, 4);    // section is now "good"

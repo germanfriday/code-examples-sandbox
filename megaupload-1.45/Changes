@@ -1,0 +1,32 @@
+0.90 Initial release
+
+0.91 Additional documentation added.
+
+1.00 The use of cookies to share information betweem the 'posting acceptor' and the progress bar
+	 was dropped. This makes mega upload accessible even by those users who dislike cookies.
+     Though the limit on file uploads was imposed on the demo, that was a feature that didn't somehow
+	 make it's way into the release. Now it's included. Settings are changed in header.cgi
+
+1.01 The progress bar has been made smoother with the help of a 'sleep'. If you are already successfully
+	using megaupload on your site you might not want to upgrade since it does not introduce any 
+	new features or fix any bugs
+
+1.02 Added a cached control header and removed the 'non-blocking' nature of stdin based
+	on user feedback.
+
+1.03 added a minor improvment to get rid of the 'annoying clicking sound' seen on ie.
+
+1.10 The progress bar now displays time elapsed, time remaining and upload speed (kb/s)
+
+1.20 A much improved progress monitor.
+
+1.30 FTP upload
+
+1.40 No more POST
+
+1.42 Fixed a bug in 1.41 and reorganized how temporary files are used.
+
+1.44 Fixed a minor bug that resulted in the progress bar not changing to 'upload complete' on
+     some rare occaisions when the meter reaches 100%
+
+

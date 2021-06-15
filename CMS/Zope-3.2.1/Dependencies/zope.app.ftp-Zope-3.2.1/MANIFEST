@@ -1,0 +1,11 @@
+MANIFEST
+zope.app.ftp/__init__.py
+zope.app.ftp/configure.zcml
+zope.app.ftp/ftp-configure.zcml
+zope.app.ftp/README.txt
+zope.app.ftp/SETUP.cfg
+zope.app.ftp/tests/__init__.py
+zope.app.ftp/tests/demofs.py
+zope.app.ftp/tests/test_ftpview.py
+setup.py
+setup.cfg

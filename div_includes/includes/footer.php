@@ -1,0 +1,1 @@
+<div id="footer"><img src="images/footer.png" alt="site design and programming by me copyright 2006"/></div>

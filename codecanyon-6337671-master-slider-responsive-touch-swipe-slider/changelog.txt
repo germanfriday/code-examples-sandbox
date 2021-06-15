@@ -1,0 +1,52 @@
+Master Slider 1.5.7, 2014-3-31
+-----------------------------
+- Added "align" and "margin" options to thumblist, sliderinfo, scrollbar, bullets and timebar controls.
+- Added new option "hideUnder" to controls, now you can specify window width in pixel for each control and hides control in smaller window size.
+- Added thumb width and height and space between thumbs options to thumblist control.
+- Added "color" option to scrollbar and timebar control.
+- Added Ajax sample in download package.
+- Fixed auto height slider resizing.
+- Improved slide changing transition.
+- Improved layer transitions.
+
+Master Slider 1.5.6, 2014-3-20
+-----------------------------
+- Added new option "layout", now you can change layout of slider (fullwidth, fullscreen, partial, boxed, ...) by one option in slider options.
+- Added links for hotspots.
+- Added new option "instantStartLayers" which starts layer before slide transition complete.
+- Added new destroy method with reset parameter.
+- Fixed accessing to slider api before slider init.
+- Fixed background sizing problem with not cached images.
+
+Master Slider 1.5.0, 2014-2-8
+-----------------------------
+- Added HD background videos.
+- Added autofill option.
+- Added fullheight option.
+- Added fullscreen template.
+- Added Masterslider's homepage slider in download package.
+- Added smart memory management, now slider works with over 150 slides in touch devices.
+- Added dynamic speed to swipe gesture.
+- Added update method in slider API.
+- Fixed tooltip positioning in Firefox and Opera.
+- Improved slide changing transition.
+
+Master Slider 1.2, 2013-12-28
+-----------------------------
+- Fixed video close button in touch devices. 
+- Fixed layers z-sorting in Safari.
+- Fixed linking layers.
+- Fixed video cover image positioning.
+- Improved timer functionality.
+
+
+Master Slider 1.1, 2013-12-14
+-----------------------------
+- Added scrolling speed option to thumbnails/tabs UI control.
+- Fixed positioning of tooltips in mobile and tablet view.
+- Improved sliding performance.
+
+
+Master Slider 1.0, 2013-12-9
+-----------------------------
+- Initial release

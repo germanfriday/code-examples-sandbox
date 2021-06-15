@@ -1,0 +1,160 @@
+fileupload.class.php
+
+
+
+REQUIREMENTS:
+----------------------------------------------------------------------
+	- PHP 5.0 or greater
+	- PHP 'file_uploads' turned On (this is PHP's default)
+	
+	
+
+
+QUICK START:
+----------------------------------------------------------------------
+	1. Create a directory named 'fileupload' on your website, so 
+	the path is http://yoursite.com/fileupload
+
+	2. Copy all the following files to your /fileupload dir
+		+ fileupload.class.php
+		+ index.php
+		+ uploads (empty directory)
+	
+	3. Change permissions on the 'uploads' directory so it's 
+	writable by your webserver:
+		chmod -R 777 /path/to/fileupload/uploads
+	
+	4. Test it out: http://yoursite.com/fileupload/index.php
+
+
+
+
+EXAMPLE HTML FORM:
+----------------------------------------------------------------------
+	
+	To upload files, the HTML form method must be "POST", and you must 
+	specify: enctype="multipart/form-data"
+	
+	HTML Form for single uplods:
+	<form action="index.php method="post" enctype="multipart/form-data">
+		<input type="file" name="userfile" /> 
+		<input type="submit" />
+	</form>
+	
+
+	HTML Form for multiple uplods:
+	<form action="index.php method="post" enctype="multipart/form-data">
+		<input type="file" name="userfile[]" /> 
+		<input type="file" name="userfile[]" /> 
+		<input type="file" name="userfile[]" /> 
+		<input type="submit" />
+	</form>
+	
+	* Note the input field is an array of identically named files
+	
+	
+	
+CODE EXAMPLES:
+----------------------------------------------------------------------
+	
+	1. Simple implementation:
+	
+		$upload = new fileupload();
+		$upload->upload("userfile", "uploads/");
+	
+	
+	2. Add user feedback. Error or success message:
+	
+		$upload   = new fileupload();
+		$filename = $upload->upload("userfile", "uploads/");
+		if ($filename) {
+			echo $filename . ' successfully uploaded';
+		} else {
+			echo $upload->get_error();
+		}
+	
+	
+	2. Add restrictions to what we accept:
+		
+		$upload = new fileupload();
+		
+		// restrict filesize to 1500 bytes (1.5kb) or smaller
+		$upload->set_max_filesize(15000);
+		
+		// limit types of files based on MIME type
+		// 'image' - accept any MIME type containing 'image' (.gif, .jpg, .png, .tif, etc...)
+		// 'image/gif' - only accept gif images
+		// 'image/gif, image/png' - only accept gif and png images
+		// 'image/gif, text' - accept gif images and any MIME type containing 'text'
+		$upload->set_acceptable_types('image'); // comma separated string, or array
+		
+		// reject files, even if they are an acceptable MIME type
+		// 
+		// the following will accept all image file not ending with '.jpg'
+		//    $upload->set_acceptable_types('image');
+		//    $upload->set_reject_extension('.jpg');
+		$upload->set_reject_extension('.jpg'); // comma separated string, or array
+		
+		// reject image files larger than these pixels dimensions (only affects image uploads)
+		$upload->set_max_image_size(400, 400); // width, height
+		
+		// Set mode to manage identically named files 
+		// 
+		// user uploads 'foo.gif', but that file already exists in the upload directory:
+		//    1 = (overwrite) overwrite existing file with uploaded foo.gif
+		//    2 = (rename) keep original foo.gif, upload new file but call it 'foo_copy1.gif'
+		//    3 = (do nothing) keep original foo.gif, do nothing with uploaded file, raise error
+		$upload->set_overwrite_mode(2);
+		
+		$filename = $upload->upload("userfile", "uploads/");
+		if ($filename) {
+			echo $filename . ' successfully uploaded';
+		} else {
+			echo $upload->get_error();
+		}
+	
+	
+	3. Change error messaging to Spanish
+		
+		$upload = new fileupload('es');		
+		
+		$filename = $upload->upload("userfile", "uploads/");
+		if ($filename) {
+			echo implode(", ", $filename) . ' successfully uploaded';
+		} else {
+			echo $upload->get_error();
+		}
+		
+		// Languages options:
+		// en = English (default)
+		// fr = French
+		// de = German
+		// nl = Dutch
+		// it = Italian
+		// fi = Finnish
+		// es = Spanish
+		// no = Norwegian
+		// da = Danish
+		// se = Swedish
+	
+	
+	4. Upload an array of files
+
+		HTML:
+		<form action="index.php method="post" enctype="multipart/form-data">
+		<input type="file" name="userfile[]" /> 
+		<input type="file" name="userfile[]" /> 
+		<input type="file" name="userfile[]" /> 
+		<input type="submit" />
+		</form>
+		
+		PHP:
+		$upload = new fileupload();
+
+		$filename = $upload->upload("userfile", "uploads/");
+		if ($filename) {
+			// with multiple files, upload() returns an array of filenames
+			echo implode(", ", $filename) . ' successfully uploaded';
+		} else {
+			echo $upload->get_error();
+		}

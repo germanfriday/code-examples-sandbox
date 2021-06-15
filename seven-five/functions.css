@@ -1,0 +1,140 @@
+/********************************************************************************************* 
+
+Page Setup
+
+*********************************************************************************************/
+#message {
+margin: 10px 0 10px 0;
+width: 99%;
+}
+
+#theme-options {
+width: 790px;
+}
+
+.left-column {
+width: 450px;
+margin: 0 10px 0 0;
+}
+
+.right-column {
+width: 320px;
+}
+
+.postbox ul {
+margin: 0;
+padding: 0 10px 5px 10px;
+}
+
+.postbox li {
+margin: 10px 0 5px 0;
+}
+
+.postbox h4 {
+margin: 0 0 2px 0;
+}
+
+.inside p {
+padding: 0 10px 0 10px;
+}
+
+
+/********************************************************************************************* 
+
+Fields & Labels
+
+*********************************************************************************************/
+.option-label {
+font-weight: bold;
+margin: 0 0 5px 0;
+}
+
+.option-field {
+width: 100%;
+margin: -8px 0 0 0;
+}
+
+.option-field-medium {
+width: 50%;
+margin: -8px 0 0 0;
+}
+
+.option-field-small {
+width: 25%;
+margin: -8px 0 0 0;
+}
+
+.option-field-row {
+margin: -8px 0 0 0;
+}
+
+.option-field-table {
+width: 55px;
+text-align: center;
+}
+
+.option-area {
+width: 100%;
+padding-right: 1px;
+height: 120px;
+}
+
+.checkbox {
+margin: -5px 0 0 0;
+}
+
+p.field-label {
+margin: 0 0 0 0;
+color: #999999;
+}
+
+p.purchase {
+margin-bottom: 15px;
+}
+
+
+/********************************************************************************************* 
+
+Tables
+
+*********************************************************************************************/
+.row {
+width: 100%;
+padding: 5px 0 5px 0;
+border-top: 1px solid #F5F5F5;
+float: left;
+}
+
+.last {
+margin: 0 0 10px 0;
+border-bottom: 1px solid #F5F5F5;
+}
+
+.option {
+padding: 5px 0 0 10px;
+float: left;
+}
+
+.option-select {
+float: right;
+margin-right: 10px;
+}
+
+
+/********************************************************************************************* 
+
+Finishing Up
+
+*********************************************************************************************/
+.clearfix {
+content: ".";
+display: block;
+clear: both;
+visibility: hidden;
+line-height: 0;
+height: 0;
+}
+
+p.submit {
+margin: 0 0 10px 0;
+}

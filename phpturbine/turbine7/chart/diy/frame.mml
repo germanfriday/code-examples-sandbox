@@ -1,0 +1,23 @@
+<!-- dyi/frame.mml -->
+
+<!-- The entire contents of this file is Copyright © 2003, Jorge Nogueira Diogo Unipessoal, Lda/Blue Pacific Software, All Rights Reserved. -->
+
+<!-- This MML file will draw the chart frame: the X axis and the Y axis. This file is loaded only once for each chart -->
+
+
+<!--
+Turbine vars used in this file:
+
+_frameWidth             frame width
+_frameHeight            frame height
+-->
+
+
+
+
+<BaseDepth depth="4000"/>
+<Shape pos="0,0">
+  <LineStyle width="2" color="#000000"/>
+  <line path="0,{_frameHeight};0,0"/>
+  <line path="0,{_frameHeight};{_frameWidth},{_frameHeight}"/>
+</shape>

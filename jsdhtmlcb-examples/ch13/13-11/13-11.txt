@@ -1,0 +1,24 @@
+var zone = {left:20, top:20, right:400, bottom:400};
+
+function dragIt(evt) {
+    evt = (evt) ? evt : event;
+    var x, y, width, height;
+    if (selectedObj) {
+        if (evt.pageX) {
+            x = evt.pageX - offsetX;
+            y = evt.pageY - offsetY;
+        } else if (evt.clientX || evt.clientY) {
+            x = evt.clientX - offsetX;
+            y = evt.clientY - offsetY;
+        }
+        width = getObjectWidth(selectedObj);
+        height = getObjectHeight(selectedObj);
+        x = (x < zone.left) ? zone.left : 
+           ((x + width > zone.right) ? zone.right - width : x);
+        y = (y < zone.top) ? zone.top : 
+           ((y + height > zone.bottom) ? zone.bottom - height : y);
+        shiftTo(selectedObj, x, y);
+        evt.cancelBubble = true;
+        return false;
+    }
+}

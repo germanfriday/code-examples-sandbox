@@ -1,0 +1,18 @@
+var elem = document.createElement("p");
+var txt = document.createTextNode("My dog has fleas.");
+elem.appendChild(txt);
+document.body.appendChild(elem);
+
+----------
+
+var myEm, myP, txt1, txt2;
+myEm = document.createElement("em");
+txt1 = document.createTextNode("very");
+myEm .appendChild(txt1);
+myP = document.createElement("p");
+txt1 = document.createTextNode("I am ");
+txt2 = document.createTextNode(" happy to see you.");
+myP.appendChild(txt1);
+myP.appendChild(myEm);
+myP.appendChild(txt2);
+document.body.appendChild(myP);

@@ -1,0 +1,55 @@
+function coworker(name, age) {
+    this.name = name;
+    this.age = age || 0;
+    this.show = showAll;
+}
+var employeeDB = new Array();
+employeeDB[employeeDB.length] = new coworker("Alice", 23);
+employeeDB[employeeDB.length] = new coworker("Fred", 32);
+employeeDB[employeeDB.length] = new coworker("Jean", 28);
+employeeDB[employeeDB.length] = new coworker("Steve", 24);
+
+coworker.prototype.status = "on duty";
+
+employeeDB[2].status = "on sick leave";
+
+----------
+
+// coworker object constructor
+function coworker(name, age) {
+    this.name = name;
+    this.age = age;
+    this.show = showAll;
+}
+// teamMember object constructor
+function teamMember(name, age, projects, hours) {
+    this.projects = projects;
+    this.hours = hours;
+    this.member = coworker;
+    this.member(name, age);
+}
+
+var projectTeams = new Array();
+projectTeams[projectTeams.length] = new teamMember("Alice", 23, ["Gizmo"], 240);
+projectTeams[projectTeams.length] = new teamMember("Fred", 32, ["Gizmo", "Widget"], 325);
+projectTeams[projectTeams.length] = new teamMember("Jean", 28, ["Gizmo"], 200);
+projectTeams[projectTeams.length] = new teamMember("Steve", 23, ["Widget"], 190);
+
+
+teamMember.prototype = new coworker();
+
+coworker.prototype.status = "on duty";
+
+----------
+
+function clearTbody() {
+    var tbodies = this.getElementsByTagName("tbody");
+    for (var i = 0; i < tbodies.length; i++) {
+        while (tbodies[i].rows.length > 0) {
+            tbodies[i].deleteRow(0);
+        }
+    }
+}
+HTMLTableElement.prototype.clear = clearTbody;
+
+document.getElementById("myTable").clear();

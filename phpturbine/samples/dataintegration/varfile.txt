@@ -1,0 +1,10 @@
+﻿# this is a comment
+
+# this is a var definition file
+var1 = "value of var1"
+
+# the following line is an error. Errors are ignored
+invalid line
+
+# var names can be optionally enclosed by {}s
+{var2} = value of var2

@@ -1,0 +1,19 @@
+function showAll() {
+    alert("Employee " + this.name + " is " + this.age + " years old.");    
+}
+var employeeDB = [{name:"Alice", age:23, show:showAll},
+                  {name:"Fred", age:32, show:showAll},
+                  {name:"Jean", age:28, show:showAll},
+                  {name:"Steve", age:24, show:showAll}];
+
+employeeDB[2].show();
+
+----------
+
+var employeeDB = [{name:"Alice", age:23, 
+                   show:function() {alert("Alice\'s age is not open to the public.")}},
+                  {name:"Fred", age:32, show:showAll},
+                  {name:"Jean", age:28, show:showAll},
+                  {name:"Steve", age:24, show:showAll}];
+
+employeeDB[2].show();

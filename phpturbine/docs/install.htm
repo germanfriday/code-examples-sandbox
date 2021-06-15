@@ -1,0 +1,390 @@
+<!doctype html public "-//w3c//dtd html 4.0 transitional//en">
+
+<html>
+
+<head>
+
+   <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+
+   <meta name="GENERATOR" content="Mozilla/4.51 [en] (Win95; I) [Netscape]">
+
+   <title>PHP Turbine 7 Installation</title>
+
+</head>
+
+<body topmargin="0" leftmargin="0" rightmargin="0" marginwidth="0" marginheight="0" TEXT="#000000" BGCOLOR="#FFFFFF" LINK="#003366" VLINK="#FF9900" ALINK="#FF6600">
+
+<center>
+
+  <table width="100%" border="0" cellspacing="0" cellpadding="0" align="center">
+
+    <tr bgcolor="#000033"> 
+
+      <td background="images/bar_left.gif" width="50%">&nbsp;</td>
+
+      <td> 
+
+        <table width="560" border="0" cellspacing="0" cellpadding="0">
+
+          <tr> 
+
+            <td width="334"><img src="images/bar_left.gif" width="334" height="28"></td>
+
+            <td><img src="images/bar_central.gif" width="110" height="28"></td>
+
+            <td><img src="images/bar_logo.gif" width="116" height="28"></td>
+
+          </tr>
+
+        </table>
+
+      </td>
+
+      <td background="images/1x1_azul_esc.gif" width="50%">&nbsp;</td>
+
+    </tr>
+
+    <tr bgcolor="#FFFFFF" height="4"> 
+
+      <td colspan="3"></td>
+
+    </tr>
+
+  </table>
+
+  <table BORDER=0 COLS=2 WIDTH="560" >
+
+    <tr valign="top"> 
+
+      <td COLSPAN="2" height="2"> 
+
+        <p><font face="Arial, Helvetica, sans-serif" size="6">PHP Turbine 7 Installation<br>
+
+          <font size="3"> Linux PHP</font></font></p>
+
+        <p>&nbsp;</p>
+
+        <p><font face="Arial, Helvetica, sans-serif" size="5"><a name="Installation of the Samples"></a>Installing 
+
+          Turbine and the Samples</font> </p>
+
+        <p><font face="Verdana, Arial, Helvetica, sans-serif" size="2">To install 
+
+          Turbine on the PHP scripting host please follow these simple steps: 
+
+          </font> 
+
+        <p><font face="Verdana, Arial, Helvetica, sans-serif" size="2">1) Run 
+
+          the installation script, which will:<br>
+          &nbsp;&nbsp;a) Copy the runtime elements of PHP Turbine into the extensions 
+          directory of the PHP installation directory.<br>
+          </font><font face="Verdana, Arial, Helvetica, sans-serif" size="2">&nbsp;&nbsp;b) 
+          Configure the PHP host, by adding a Turbine extension entry to the php.ini 
+          file.<br>
+
+          </font><font face="Verdana, Arial, Helvetica, sans-serif" size="2">&nbsp;&nbsp;c) 
+
+          Set permissions so that the PHP runtime user is able to process Turbine 
+
+          requests.</font> 
+
+        <p><font face="Verdana, Arial, Helvetica, sans-serif" size="2">To to this 
+
+          please run the install.sh script by doing:</font></p>
+
+        <blockquote> 
+
+          <p><font face="Courier New, Courier, mono" size="2">./install.sh</font></p>
+
+        </blockquote>
+
+        <p><font face="Verdana, Arial, Helvetica, sans-serif" size="2">Turbine 
+
+          can only be installed by an account with permission to configure PHP 
+
+          - usually the root account.<br>
+
+          Otherwise, if you'd like to install manually, please follow the instructions 
+
+          on the <a href="#manualinstall">Manual Installation section</a>.</font></p>
+
+        <p><font face="Verdana, Arial, Helvetica, sans-serif" size="2"> 2) After 
+          this you should make the Samples available through Apache (or other 
+          web server supporting PHP). This is done by making the samples directory 
+          web-available. The samples directory is inside the directory to where 
+          you've unpacked the Turbine tar.gz file. Supposing this directory is 
+          /some_path/phpturbine you can add the following to the access.conf Apache 
+          configuration file:</font></p>
+
+        <blockquote> 
+
+          <p><font face="Courier New, Courier, mono" size="2">Alias /phpturbine 
+
+            /some_path/phpturbine<br>
+
+            &lt;Directory /some_path/phpturbine&gt;<br>
+
+            &nbsp;Options Indexes FollowSymLinks<br>
+
+            &lt;/Directory&gt;</font></p>
+
+        </blockquote>
+
+        <p><font face="Verdana, Arial, Helvetica, sans-serif" size="2">3) You 
+          now need to restart Apache Web Server (on Apache for example: <font face="Courier New, Courier, mono">apachectl 
+          restart</font> ).</font></p>
+
+        <p><font face="Verdana, Arial, Helvetica, sans-serif" size="2">4) After 
+          a successful installation of Turbine and the Samples you can proceed 
+          to the <a href="#testing">Testing the Installation</a> section.</font><font face="Verdana, Arial, Helvetica, sans-serif" size="2"><br>
+
+          &nbsp; </font></p>
+
+        <p> 
+
+        <hr size=1 width="50%">
+
+      </td>
+
+    </tr>
+
+    <tr valign="top"> 
+      <td COLSPAN="2" height="2"> <p><font size="5"><a name="manualinstall"></a> 
+          <font face="Arial,Helvetica">Manual Installation </font></font> </p>
+        <p><font face="Verdana, Arial, Helvetica, sans-serif" size="2">To install 
+          in a &quot;manual&quot; way, please execute the following steps: </font> 
+        <p><font size="2" face="Verdana, Arial, Helvetica, sans-serif">1) Locate 
+          your php.ini file and the PHP extensions directory (normally inside 
+          your PHP installation directory). This information is needed because 
+          we'll add a php_turbine entry to php.ini and then copy the turbine runtime 
+          into inside the PHP extensions directory. It's also necessary that you 
+          learn which PHP engine version is running on your machine.</font></p>
+        <p><font face="Verdana, Arial, Helvetica, sans-serif" size="2"><br>
+          2) Copy the turbine runtime (inside the turbine7/ directory) into the 
+          PHP extensions directory - assuming php_root/ is the path to your PHP 
+          installation, in PHP 4 you'll simply need to do:</font></p>
+        <blockquote> 
+          <p><font face="Courier New, Courier, mono" size="2">cp -r turbine7/ 
+            php_root/extensions/</font></p>
+        </blockquote>
+        <p><font face="Verdana, Arial, Helvetica, sans-serif" size="2">While in 
+          PHP 5, you should copy to inside the PHP installation directory itself:</font></p>
+        <blockquote> 
+          <p><font face="Courier New, Courier, mono" size="2">cp -r turbine7/ 
+            php_root/</font></p>
+        </blockquote>
+        <p><font face="Verdana, Arial, Helvetica, sans-serif" size="2"><br>
+          3) Next we'll add the PHP Turbine 7 extension entry to the php.ini file. 
+          <br>
+          Depending on your PHP engine version, you'll need to add a specific 
+          <br>
+          PHP Turbine module from this list:</font></p>
+        <blockquote> 
+          <p><font face="Courier New, Courier, mono" size="2"> ===========================================<br>
+            PHP Engine Version&nbsp;&nbsp; -&gt; PHP Turbine Module:<br>
+            ===========================================<br>
+            5.0.0 to 5.0.2 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;-&gt; php_turbine7_5.0.0.so<br>
+            5.0.0zts to 5.0.2zts -&gt; php_turbine7_5.0.0zts.so<br>
+            4.3.0 to 4.3.9 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;-&gt; php_turbine7_4.3.0.so<br>
+            4.3.0zts to 4.3.9zts -&gt; php_turbine7_4.3.0zts.so<br>
+            4.2.3 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;-&gt; 
+            php_turbine7_4.2.1.so<br>
+            4.2.3zts &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;-&gt; 
+            php_turbine7_4.2.3zts.so<br>
+            4.2.1&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+            -&gt; php_turbine7_4.2.1.so<br>
+            4.2.2 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;-&gt; 
+            php_turbine7_4.2.1.so<br>
+            4.1.0 to 4.2.0 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;-&gt; php_turbine7_4.1.0.so<br>
+            4.0.6 and 4.0.5 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;-&gt; php_turbine7_4.0.5.so<br>
+            4.0.4 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;-&gt; 
+            php_turbine7_4.0.4.so</font></p>
+        </blockquote>
+        <p><font size="2" face="Verdana, Arial, Helvetica, sans-serif">Choose a PHP engine 
+          version entry with the &quot;zts&quot; suffix if your PHP engine is 
+          <br>
+          compiled with thread safety enabled. For example PHP compiled as an 
+          Apache 2.0<br>
+          module usually has thread safety enabled, but PHP for Apache 1.3.* does 
+          not.<br>
+          The PHP engine running as a CGI-Bin does not have thread safety enabled.</font></p>
+        <p><font size="2" face="Verdana, Arial, Helvetica, sans-serif">If your 
+          PHP engine version is not in this list, try using the last available 
+          <br>
+          PHP Turbine module, the topmost entry in the above list. If the module 
+          doesn't <br>
+          work, please contact <a href="mailto:support@blue-pacific.com">support@blue-pacific.com</a> 
+          .</font></p>
+        <p><font size="2" face="Verdana, Arial, Helvetica, sans-serif">After choosing 
+          the right PHP Turbine module, add the following lines to php.ini:</font></p>
+        <blockquote> 
+          <p><font size="2" face="Verdana, Arial, Helvetica, sans-serif"><font face="Courier New, Courier, mono">; 
+            PHP Turbine 7 settings<br>
+            extension=turbine7/<strong>*module*</strong><br>
+            ; PHP Turbine 7 end of settings</font></font></p>
+        </blockquote>
+        <p><font size="2" face="Verdana, Arial, Helvetica, sans-serif">Where <strong>*module*</strong> 
+          should be substituted by the appropriate module from the <br>
+          above list. For example if we were adding Turbine to PHP 5.0.0, the 
+          following <br>
+          lines would be used (the table says PHP Version 5.0.0 -&gt; php_turbine7_5.0.0.so):</font></p>
+        <blockquote> 
+          <p><font size="2" face="Courier New, Courier, mono">; PHP Turbine 7 
+            settings<br>
+            extension=turbine7/php_turbine7_5.0.0.so<br>
+            ; PHP Turbine 7 end of settings</font></p>
+        </blockquote>
+        <p><font size="2" face="Courier New, Courier, mono"></font><font size="2" face="Verdana, Arial, Helvetica, sans-serif">Please 
+          make sure your extension_dir entry is set to the absolute path of the 
+          <br>
+          PHP extensions directory - in PHP 4 it should be pointing to (php_root 
+          is <br>
+          the PHP installation dir):</font></p>
+        <blockquote> 
+          <p><font size="2" face="Courier New, Courier, mono"> extension_dir = 
+            php_root/extensions</font></p>
+        </blockquote>
+        <p><font size="2" face="Verdana, Arial, Helvetica, sans-serif">However 
+          in PHP 5 the extension_dir should be pointing to the PHP installation 
+          <br>
+          directory itself:</font></p>
+        <blockquote> 
+          <p><font size="2" face="Courier New, Courier, mono">extension_dir = 
+            php_root</font></p>
+        </blockquote>
+        <p>&nbsp;<br>
+          <font size="2" face="Verdana, Arial, Helvetica, sans-serif">4) Since 
+          the web server user is usually 'nobody', we need to give permissions<br>
+          for Turbine logging, caching and charting - in PHP 4 please do the following:</font></p>
+        <blockquote> 
+          <p><font size="2" face="Courier New, Courier, mono">chmod o+rx php_root/extensions/turbine7/*<br>
+            chmod o+rw php_root/extensions/turbine7/turbine.log<br>
+            chmod o+rwx php_root/extensions/turbine7/cache<br>
+            chmod -R o+rx php_root/extensions/turbine7/chart<br>
+            chmod -R o+rx php_root/extensions/turbine7/font</font></p>
+        </blockquote>
+        <p><font face="Verdana, Arial, Helvetica, sans-serif" size="2">While in 
+          PHP 5 do the following instead:</font></p>
+        <blockquote> 
+          <p><font size="2" face="Courier New, Courier, mono">chmod o+rx php_root/turbine7/*<br>
+            chmod o+rw php_root/turbine7/turbine.log<br>
+            chmod o+rwx php_root/turbine7/cache<br>
+            chmod -R o+rx php_root/turbine7/chart<br>
+            chmod -R o+rx php_root/turbine7/font</font></p>
+        </blockquote>
+        <p><font face="Verdana, Arial, Helvetica, sans-serif" size="2"><br>
+          5) You now need to restart the web server. On Apache for example:<br>
+          <font face="Courier New, Courier, mono">apachectl restart</font></font></p>
+        <p><font face="Verdana, Arial, Helvetica, sans-serif" size="2"><br>
+          6) To install the samples you need to make web-available the directory 
+          to<br>
+          where you've previously untared the installation file.<br>
+          So, suppose the directory was /that_path/phpturbine you could add the 
+          following <br>
+          to the access.conf Apache configuration file:</font></p>
+        <blockquote> 
+          <p><font face="Courier New, Courier, mono" size="2">Alias /phpturbine 
+            /that_path/phpturbine<br>
+            &lt;Directory /that_path/phpturbine&gt;<br>
+            Options Indexes FollowSymLinks<br>
+            &lt;/Directory&gt;</font></p>
+        </blockquote>
+        <p><font face="Verdana, Arial, Helvetica, sans-serif" size="2"><br>
+          </font><font face="Verdana, Arial, Helvetica, sans-serif" size="2">7) 
+          After a successful installation of Turbine and the Samples you can proceed 
+          to the <a href="#testing">Testing the Installation</a> section! </font> 
+        </p>
+        <p>&nbsp; 
+        <hr size=1 width="50%"> </td>
+
+    </tr>
+
+    <tr> 
+
+      <td COLSPAN="2" height="2"><font face="Verdana, Arial, Helvetica, sans-serif" size="3"><b><a NAME="testing"></a>Testing 
+
+        the Installation</b></font> 
+
+        <p><font face="Verdana, Arial, Helvetica, sans-serif" size="2">To test 
+
+          the PHP Turbine 7 installation, open a web browser (you must have the 
+
+          Flash plug-in installed) and enter the URL:</font> 
+
+        <ul>
+
+          <font face="Verdana, Arial, Helvetica, sans-serif" size="2">http://server/phpturbine/readme.htm</font> 
+
+        </ul>
+
+        <font face="Verdana, Arial, Helvetica, sans-serif" size="2">where <b><i>server</i></b> 
+
+        is the machine to where you installed Turbine (possibly 127.0.0.1 - the 
+
+        localhost machine), and <i><b>phpturbine</b></i> is the Virtual Directory 
+
+        you've created previously. <br>
+
+        An HTML page should appear, scroll to the end and click <b>Samples</b>.<br>
+
+        The Samples page will appear - select the <b>Hello Worlds Sample</b>.</font> 
+
+        <font face="Verdana, Arial, Helvetica, sans-serif" size="2"><br>
+
+        - now type in your <b>name</b> on one of the available input fields.</font> 
+
+        <font face="Verdana, Arial, Helvetica, sans-serif" size="2"><br>
+
+        - after you click one of the submit buttons you should see a scrolling 
+
+        marquee saying <b>"Hello name!"</b>, where name is the name you previously 
+
+        typed.<br>
+
+        You can check more info on Turbine extension by looking at the output 
+
+        of the phpinfo() command. </font><font face="Verdana, Arial, Helvetica, sans-serif" size="2"><br>
+
+        If you successfully completed these steps your installation is correct 
+
+        and you may proceed on your meeting with PHP Turbine 7 - Enjoy!</font> 
+
+        <p><font face="Verdana, Arial, Helvetica, sans-serif" size="2">Else, if 
+
+          you could not complete some of the above steps please review and then 
+
+          repeat your installation as explained above.</font> 
+
+        <p> 
+
+        <hr SIZE=1 WIDTH="100%" noshade>
+
+      </td>
+
+    </tr>
+
+  </table>
+
+  </center>
+
+<center>
+
+  <p><font face="Times New Roman,Times" size="+1"><a href="../readme.htm"><font face="Verdana, Arial, Helvetica, sans-serif" size="3">Read 
+
+    Me</font></a><font face="Verdana, Arial, Helvetica, sans-serif" size="3">&nbsp; 
+
+    <a href="../samples/default.htm">Samples</a>&nbsp; <a href="manual.htm">Manual</a></font></font>
+
+<p> <font face="Verdana, Arial, Helvetica, sans-serif" size="1"><i>Flash is 
+
+    a registered trademark of Macromedia, Inc.</i></font> 
+
+</center>
+
+
+
+</body>
+
+</html>
+

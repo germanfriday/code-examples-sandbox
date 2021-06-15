@@ -1,0 +1,12 @@
+function focusNext(form, elemName, evt) {
+    evt = (evt) ? evt : event;
+    var charCode = (evt.charCode) ? evt.charCode :
+        ((evt.which) ? evt.which : evt.keyCode);
+    if (charCode == 13) {
+        form.elements[elemName].focus();
+        return false;
+    }
+    return true;
+}
+
+onkeypress="return focusNext(this.form, 'name2', event)"

@@ -1,0 +1,21 @@
+<BaseDepth depth="4000"/>
+<Shape pos="0,0">
+  <LineStyle width="2" color="#000000"/>
+  <line path="0,{_frameHeight};0,0"/>
+  <line path="0,{_frameHeight};{_frameWidth},{_frameHeight}"/>
+</shape>
+
+<BaseDepth depth="0"/>
+<Origin delta="{_threeDDepthX},{=-_threeDDepthY}"/>
+<Shape pos="0,0">
+  <LineStyle width="1" color="#000000"/>
+  <line path="0,{_frameHeight};0,0"/>
+  <line path="0,{_frameHeight};{_frameWidth},{_frameHeight}"/>
+</shape>
+
+<Shape pos="0,0">
+  <LineStyle width="1" color="#000000"/>
+  <line path="0,0;{=-_threeDDepthX},{_threeDDepthY}"/>
+  <line path="{_frameWidth},{_frameHeight};{=_frameWidth-_threeDDepthX},{=_frameHeight+_threeDDepthY}"/>
+</shape>
+<Origin pos="0,0"/>

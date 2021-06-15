@@ -1,0 +1,11 @@
+function initEvents() {
+    // these events OK with all but NN2 and IE3
+    document.forms[0].onsubmit = validateMainForm;
+    document.forms[0].elements["email"].onchange = validateEmail;
+    if (document.getElementById) {
+        // these work only in when W3C DOM supported
+        document.getElementById("logo").onclick = goHome;
+        document.body.onclick = blockEvent;
+    }
+}
+window.onload = initEvents;

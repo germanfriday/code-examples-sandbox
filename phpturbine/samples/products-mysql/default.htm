@@ -1,0 +1,296 @@
+<!doctype html public "-//w3c//dtd html 4.0 transitional//en">
+<html>
+<head>
+   <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+   <meta name="GENERATOR" content="Mozilla/4.51 [en] (Win95; I) [Netscape]">
+   <title>Products Sample - MySQL</title>
+</head>
+<BODY topmargin="0" leftmargin="0" rightmargin="0" marginwidth="0" marginheight="0" TEXT="#000000" BGCOLOR="#FFFFFF" LINK="#003366" VLINK="#FF9900" ALINK="#FF6600">
+<center>
+  <table width="100%" border="0" cellspacing="0" cellpadding="0" align="center">
+    <tr bgcolor="#000033"> 
+      <td background="../common/bar_left.gif" width="50%">&nbsp;</td>
+      <td> 
+        <table width="560" border="0" cellspacing="0" cellpadding="0">
+          <tr> 
+            <td width="334"><img src="../common/bar_left.gif" width="334" height="28"></td>
+            <td><img src="../common/bar_central.gif" width="110" height="28"></td>
+            <td><img src="../common/bar_logo.gif" width="116" height="28"></td>
+          </tr>
+        </table>
+      </td>
+      <td background="../common/1x1_azul_esc.gif" width="50%">&nbsp;</td>
+    </tr>
+    <tr bgcolor="#FFFFFF" height="4"> 
+      <td colspan="3"></td>
+    </tr>
+  </table>
+  <table width="560" border="0" cellspacing="0" cellpadding="0">
+    <tr valign="top"> 
+      <td height="39"> <table width="600" border="0" cellspacing="0" cellpadding="0">
+          <tr> 
+            <td width="443" height="25"><font face="Verdana, Arial, Helvetica, sans-serif" size="3"><a href="../default.htm">Samples 
+              Menu</a></font></td>
+            <td width="157" height="25"> <div align="center"><font face="Verdana, Arial, Helvetica, sans-serif" size="3"><a href="../invoice/default.htm">Next 
+                Sample</a> </font></div></td>
+          </tr>
+        </table></td>
+    </tr>
+    <tr valign="top"> 
+      <td> 
+        <p align="center"><font face="Arial" size="6">Products Sample - MySQL<font size="1"><b><br>
+          (Flash MX)<br>
+          &nbsp;&nbsp; </b></font></font></p>
+        <div> 
+          <p>&nbsp;
+          <p><font face="Arial, Helvetica, sans-serif" size="3"><strong>Important 
+            - MySQL Database Creation</strong></font>
+          <p><font face="Verdana, Arial, Helvetica, sans-serif" size="2">For this 
+            example to run, you'll need to <strong>create a MySQL Database</strong> 
+            - to do this you'll need a working MySQL installation (MySQL can be 
+            downloaded from <a href="http://www.mysql.com" target="_blank">http://www.mysql.com</a>). 
+            Run the mysql command prompt, connect to the database and then, on 
+            the mysql command prompt enter:</font></p>
+          <blockquote> 
+            <p><font face="Courier New, Courier, mono" size="2">source turbine_samples.sql</font></p>
+          </blockquote>
+          <p><font face="Verdana, Arial, Helvetica, sans-serif" size="2">This 
+            will run the <a href="turbine_samples.sql">turbine_samples.sql</a></font><font face="Verdana, Arial, Helvetica, sans-serif" size="2"> 
+            script located on this directory, which will create and populate the 
+            used database.<br>
+            After this you'll need to edit the MySQL connection settings on these 
+            scripts:</font></p>
+          <blockquote> 
+            <p><font face="Verdana, Arial, Helvetica, sans-serif" size="2">productlist1.php<br>
+              productlist2.php<br>
+              productdisplay.php </font></p>
+          </blockquote>
+          <p><font face="Verdana, Arial, Helvetica, sans-serif" size="2">This 
+            is as simple as changing the values on the top of these scripts, with 
+            the values you've just used to connect to MySQL:</font></p>
+          <blockquote>
+<p><font face="Courier New, Courier, mono" size="2">&lt;?<br>
+              # database access info, please modify as needed:<br>
+              $dbHost = &quot;<font color="#000099">localhost</font>&quot;;<br>
+              $dbUser = &quot;<font color="#000099">user</font>&quot;;<br>
+              $dbPass = &quot;<font color="#000099">password</font>&quot;;<br>
+              </font><font face="Courier New, Courier, mono">...</font></p>
+          </blockquote>
+          <p><font face="Verdana, Arial, Helvetica, sans-serif" size="2">After 
+            doing this, the sample should be perfectly functional. Since the <a href="turbine_samples.sql">turbine_samples.sql</a> 
+            script is a plain vanilla SQL-92 script you should be able to create 
+            the database structure on other database systems.</font></p>
+          <p><font size="2" face="Verdana, Arial, Helvetica, sans-serif">Please 
+            also make sure that the MySQL PHP extension is enabled on your PHP 
+            engine (on PHP 5 the MySQL extension is disabled by default).</font></p>
+          <p><font size="2" face="Verdana, Arial, Helvetica, sans-serif">&nbsp;<br>
+            This example shows step by step how to build a dynamic catalog with 
+            product information fetched from a MySQL Database. We'll use a table 
+            containing product information, with the following structure:</font> 
+          </p>
+          <p><img src="dbimage.png" width="569" height="195"></p>
+          <p><font face="Verdana, Arial, Helvetica, sans-serif" size="2">The SQL 
+            that creates this table is available on the <a href="turbine_samples.sql">turbine_samples.sql</a> 
+            script file.</font></p>
+          <p><font face="Verdana, Arial, Helvetica, sans-serif" size="2">We'll 
+            create a template to display the product list, which should display 
+            a list box with the available products - this is implemented on the 
+            productlist1.swf file (source is available in <a href="productlist1.fla">productlist1.fla</a>):</font></p>
+          <p>
+            <object classid="clsid:D27CDB6E-AE6D-11cf-96B8-444553540000" codebase="http://download.macromedia.com/pub/shockwave/cabs/flash/swflash.cab#version=6,0,29,0" width="550" height="400" align="middle">
+              <param name="movie" value="productlist1.swf">
+              <param name="quality" value="high">
+              <param name="valign" value="center">
+              <embed src="productlist1.swf" width="550" height="400" align="middle" quality="high" pluginspage="http://www.macromedia.com/go/getflashplayer" type="application/x-shockwave-flash" valign="center"></embed></object>
+          </p>
+          <p><font size="2" face="Verdana, Arial, Helvetica, sans-serif">Next 
+            we'll create the PHP script that will access the database and integrate 
+            the product list (name and id for each product) into the Flash template, 
+            filling the above ListBox component:</font></p>
+          <table width="100%" border="0" cellspacing="12" cellpadding="0" bgcolor="#FFFFCC">
+            <tr> 
+              <td valign="top"> <p><font size="2" face="Courier New, Courier, mono">&lt;?<br>
+                  <font color="#009900"># database access info, please modify 
+                  as needed:</font><br>
+                  $dbHost = &quot;localhost&quot;;<br>
+                  $dbUser = &quot;user&quot;;<br>
+                  $dbPass = &quot;password&quot;;</font></p>
+                <p><font color="#009900" size="2" face="Courier New, Courier, mono"># 
+                  load the dataset_import.php library:</font><font size="2" face="Courier New, Courier, mono"><br>
+                  require_once(&quot;../../libraries/dataset_import.php&quot;);</font></p>
+                <p><font color="#009900" size="2" face="Courier New, Courier, mono"># 
+                  create the turbine object:</font><font size="2" face="Courier New, Courier, mono"><br>
+                  $turbine = new Turbine7();</font></p>
+                <p><font color="#009900" size="2" face="Courier New, Courier, mono"># 
+                  load the template:</font><font size="2" face="Courier New, Courier, mono"><br>
+                  $turbine-&gt;load(&quot;productlist1.swf&quot;);</font></p>
+                <p><font color="#009900" size="2" face="Courier New, Courier, mono"># 
+                  set current frame to 0, so that the list is filled right on 
+                  the first frame:</font><font size="2" face="Courier New, Courier, mono"><br>
+                  $turbine-&gt;frame(0);</font></p>
+                <p><font color="#009900" size="2" face="Courier New, Courier, mono"># 
+                  access the Products table on the MySQL database<br>
+                  #================================================<br>
+                  </font><font size="2" face="Courier New, Courier, mono">$conn 
+                  = mysql_connect( $dbHost, $dbUser, $dbPass );<br>
+                  mysql_select_db(&quot;turbine_samples_db&quot;);</font></p>
+                <p><font size="2" face="Courier New, Courier, mono">$query = &quot;SELECT 
+                  ProductName as label, ProductId as data FROM Products ORDER 
+                  BY ProductName&quot;;<br>
+                  $recordSet = mysql_query( $query, $conn);</font></p>
+                <p><font size="2" face="Courier New, Courier, mono">loadDataSetMySQL($turbine, 
+                  $recordSet, &quot;ProductsDataSet&quot;);</font></p>
+                <p><font size="2" face="Courier New, Courier, mono">mysql_close($conn);</font></p>
+                <p><font color="#009900" size="2" face="Courier New, Courier, mono"># 
+                  fill the ProductListBox with the DataSet:</font><font size="2" face="Courier New, Courier, mono"><br>
+                  $turbine-&gt;injectData(&quot;ProductsDataSet&quot;, &quot;ProductListBox&quot;);</font></p>
+                <p><font color="#009900" size="2" face="Courier New, Courier, mono"># 
+                  now generate the movie to the web browser:</font><font size="2" face="Courier New, Courier, mono"><br>
+                  $turbine-&gt;generateFlash();</font></p>
+                <p><font size="2" face="Courier New, Courier, mono">?&gt;</font></p></td>
+            </tr>
+          </table>
+          <p><font size="2" face="Verdana, Arial, Helvetica, sans-serif">As result 
+            we obtain a list of products on the List Box component:</font></p>
+          <p><font size="2" face="Verdana, Arial, Helvetica, sans-serif">
+            <object classid="clsid:D27CDB6E-AE6D-11cf-96B8-444553540000" codebase="http://download.macromedia.com/pub/shockwave/cabs/flash/swflash.cab#version=6,0,29,0" width="550" height="400">
+              <param name="movie" value="productlist1.php">
+              <param name="quality" value="high">
+              <embed src="productlist1.php" quality="high" pluginspage="http://www.macromedia.com/go/getflashplayer" type="application/x-shockwave-flash" width="550" height="400"></embed></object>
+            </font></p>
+          <p><font face="Verdana, Arial, Helvetica, sans-serif" size="2">However 
+            on the movie generated above nothing happens when we click the &quot;Display...&quot; 
+            button - we'll add a simple handler function to this button that loads 
+            the product details through a loadMovie into the Display movie clip. 
+            The following Action Script is added to the above Flash template:</font></p>
+          <table width="600" border="1" cellpadding="0" cellspacing="0" bordercolor="#999999">
+            <tr> 
+              <td><table width="100%" border="0" cellpadding="16" cellspacing="0" bgcolor="#eeeef4">
+                  <tr> 
+                    <td> <div align="left"> 
+                        <p><font color="#009900" size="2" face="Courier New, Courier, mono">// 
+                          This function will be called when the &quot;Display...&quot; 
+                          button is clicked:</font><font size="2" face="Courier New, Courier, mono"><br>
+                          function ButtonClicked(){<br>
+                          &nbsp;&nbsp;_root.Display.loadMovie(&quot;productdisplay.php?id=&quot; 
+                          + &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;ProductListBox.getValue()&nbsp;); 
+                          <br>
+                          }<br>
+                          </font> </p>
+                        </div></td>
+                  </tr>
+                </table></td>
+            </tr>
+          </table>
+          <p><font size="2" face="Verdana, Arial, Helvetica, sans-serif">The above 
+            script will request the productdisplay.php script passing the product 
+            id on the query string. The productdisplay.php script uses a simple 
+            Flash .swf template (productdisplay.swf) to display the product information:</font></p>
+          <p> <font size="2" face="Verdana, Arial, Helvetica, sans-serif">
+            <object classid="clsid:D27CDB6E-AE6D-11cf-96B8-444553540000" codebase="http://download.macromedia.com/pub/shockwave/cabs/flash/swflash.cab#version=6,0,29,0" width="550" height="400">
+              <param name="movie" value="productdisplay.swf">
+              <param name="quality" value="high">
+              <embed src="productdisplay.swf" quality="high" pluginspage="http://www.macromedia.com/go/getflashplayer" type="application/x-shockwave-flash" width="550" height="400"></embed></object>
+            </font></p>
+          <p><font size="2" face="Verdana, Arial, Helvetica, sans-serif">For example, 
+            calling this script with id for the first product (id=1 - the Amaryllis 
+            flower) - that is, calling productdisplay.php?id=1 we obtain:</font></p>
+          <p>
+            <object classid="clsid:D27CDB6E-AE6D-11cf-96B8-444553540000" codebase="http://download.macromedia.com/pub/shockwave/cabs/flash/swflash.cab#version=6,0,29,0" width="550" height="400">
+              <param name="movie" value="productdisplay.php?id=1">
+              <param name="quality" value="high">
+              <embed src="productdisplay.php?id=1" quality="high" pluginspage="http://www.macromedia.com/go/getflashplayer" type="application/x-shockwave-flash" width="550" height="400"></embed></object>
+          </p>
+          <p><font face="Verdana, Arial, Helvetica, sans-serif" size="2">To fill 
+            the above template with product information fetched from the database 
+            we use the productdisplay.php script:</font></p>
+          <table width="100%" border="0" cellspacing="12" cellpadding="0" bgcolor="#FFFFCC">
+            <tr> 
+              <td valign="top"> <p><font size="2" face="Courier New, Courier, mono">&lt;?<br>
+                  <font color="#009900"># database access info, please modify 
+                  as needed:</font><br>
+                  $dbHost = &quot;localhost&quot;;<br>
+                  $dbUser = &quot;user&quot;;<br>
+                  $dbPass = &quot;password&quot;;</font></p>
+                <p><font color="#009900" size="2" face="Courier New, Courier, mono"># 
+                  load the dataset_import.php library:</font><font size="2" face="Courier New, Courier, mono"><br>
+                  require_once(&quot;../../libraries/dataset_import.php&quot;);</font></p>
+                <p><font color="#009900" size="2" face="Courier New, Courier, mono"># 
+                  create the turbine object:</font><font size="2" face="Courier New, Courier, mono"><br>
+                  $turbine = new Turbine7();</font></p>
+                <p><font size="2" face="Courier New, Courier, mono">if($HTTP_GET_VARS[&quot;id&quot;] 
+                  == &quot;&quot;){<br>
+                  <font color="#009900"># display a message complaining about 
+                  missing id:</font><br>
+                  $turbine-&gt;create(&quot;&lt;Text pos='0,100'&gt;Please select 
+                  a Flower from the list...&lt;/Text&gt;&quot;);</font></p>
+                <p><font color="#009900" size="2" face="Courier New, Courier, mono"># 
+                  now generate the movie to the web browser:</font><font size="2" face="Courier New, Courier, mono"><br>
+                  $turbine-&gt;generateFlash();<br>
+                  exit;<br>
+                  }</font></p>
+                <p><font color="#009900" size="2" face="Courier New, Courier, mono"># 
+                  access the Products table on the MySQL database<br>
+                  #================================================<br>
+                  </font><font size="2" face="Courier New, Courier, mono">$conn 
+                  = mysql_connect( $dbHost, $dbUser, $dbPass );<br>
+                  mysql_select_db(&quot;turbine_samples_db&quot;);</font></p>
+                <p><font size="2" face="Courier New, Courier, mono">$query = &quot;SELECT 
+                  ProductName, ProductDetails, ProductPrice, ProductImage FROM 
+                  Products WHERE ProductId = &quot; . $HTTP_GET_VARS[&quot;id&quot;];<br>
+                  $recordSet = mysql_query( $query, $conn);</font></p>
+                <p><font size="2" face="Courier New, Courier, mono">$row = mysql_fetch_row($recordSet);</font></p>
+                <p><font color="#009900" size="2" face="Courier New, Courier, mono"># 
+                  set Turbine variables from the query result values:</font><font size="2" face="Courier New, Courier, mono"><br>
+                  $turbine-&gt;setVariable(&quot;ProductName&quot;, $row[0]); 
+                  <font color="#009900"># ProductName column</font><br>
+                  $turbine-&gt;setVariable(&quot;ProductDetails&quot;, $row[1]); 
+                  <font color="#009900"># ProductDetails column</font><br>
+                  $turbine-&gt;setVariable(&quot;ProductPrice&quot;, $row[2]); 
+                  <font color="#009900"># ProductPrice column</font></font></p>
+                <p><font color="#009900" size="2" face="Courier New, Courier, mono"># 
+                  since images are on the common sub-directory we add &quot;../common/&quot;:</font><font size="2" face="Courier New, Courier, mono"><br>
+                  $turbine-&gt;setVariable(&quot;ProductImage&quot;, &quot;../common/&quot; 
+                  . $row[3]); # ProductImage column</font></p>
+                <p><font size="2" face="Courier New, Courier, mono">mysql_close($conn);</font></p>
+                <p><font color="#009900" size="2" face="Courier New, Courier, mono"># 
+                  load the template:</font><font size="2" face="Courier New, Courier, mono"><br>
+                  $turbine-&gt;load(&quot;productdisplay.swf&quot;);</font></p>
+                <p><font color="#009900" size="2" face="Courier New, Courier, mono"># 
+                  now generate the movie to the web browser:</font><font size="2" face="Courier New, Courier, mono"><br>
+                  $turbine-&gt;generateFlash();</font></p>
+                <p><font size="2" face="Courier New, Courier, mono">?&gt;</font></p></td>
+            </tr>
+          </table>
+          <p><font size="2" face="Verdana, Arial, Helvetica, sans-serif">The complete 
+            example then becomes:</font></p>
+          <p>
+            <object classid="clsid:D27CDB6E-AE6D-11cf-96B8-444553540000" codebase="http://download.macromedia.com/pub/shockwave/cabs/flash/swflash.cab#version=6,0,29,0" width="550" height="400">
+              <param name="movie" value="productlist2.php">
+              <param name="quality" value="high">
+              <embed src="productlist2.php" quality="high" pluginspage="http://www.macromedia.com/go/getflashplayer" type="application/x-shockwave-flash" width="550" height="400"></embed></object>
+          </p>
+          <p><font size="2" face="Verdana, Arial, Helvetica, sans-serif">By selecting a 
+            flower and clicking on the &quot;Display...&quot; button, information 
+            about that product is displayed. From here we could extend the sample 
+            by adding a &quot;Buy&quot; option and a shopping cart, for example.</font></p>
+          <p><font size="2" face="Verdana, Arial, Helvetica, sans-serif">&nbsp;</font></p>
+          </div>
+        </td>
+    </tr>
+    <tr valign="bottom"> 
+      <td height="64"> <hr width="100%" size="1" noshade> <table width="599" border="0" cellspacing="0" cellpadding="0">
+          <tr> 
+            <td width="443" height="25"><font face="Verdana, Arial, Helvetica, sans-serif" size="3"><a href="../default.htm">Samples 
+              Menu</a></font></td>
+            <td width="156" height="25"> <div align="center"><font face="Verdana, Arial, Helvetica, sans-serif" size="3"><a href="../invoice/default.htm">Next 
+                Sample</a> </font></div></td>
+          </tr>
+        </table>
+        <div align="center"><font face="Arial, Helvetica, sans-serif" size="1"><i>&nbsp;<br>
+          Flash is a trademark of Macromedia, Inc.</i></font> </div></td>
+    </tr>
+  </table>
+          </center>
+</body>
+</html>

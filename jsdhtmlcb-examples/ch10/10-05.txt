@@ -1,0 +1,19 @@
+<script language="JavaScript" type="text/javascript" >
+function saveData() {
+    top.userName = document.forms[0].userName.value;
+}
+</script>
+...
+<body onunload="saveData()">
+
+----------
+
+<script language="JavaScript" type="text/javascript" >
+function readData() {
+    if (typeof top.userName != "undefined") {
+        document.forms[0].userName.value = top.userName; 
+    }
+}
+</script>
+...
+<body onload="readData()">

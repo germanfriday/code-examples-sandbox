@@ -1,0 +1,14 @@
+MANIFEST
+zope.app.pluggableauth/__init__.py
+zope.app.pluggableauth/configure.zcml
+zope.app.pluggableauth/interfaces.py
+zope.app.pluggableauth/README.txt
+zope.app.pluggableauth/SETUP.cfg
+zope.app.pluggableauth/zope.app.pluggableauth-configure.zcml
+zope.app.pluggableauth/browser/__init__.py
+zope.app.pluggableauth/browser/configure.zcml
+zope.app.pluggableauth/tests/__init__.py
+zope.app.pluggableauth/tests/authsetup.py
+zope.app.pluggableauth/tests/test_pluggableauth.py
+setup.py
+setup.cfg

@@ -1,0 +1,6 @@
+<div style="position:relative; margin-left:20%">
+    <img src="kitty.jpg" height="511" width="383" style="border:4px groove darkred" 
+         alt="My Kitty" />
+    <img src="photoCopyright.jpg" style="position:absolute; top:519px; left:263px" 
+         alt="Copyright 2003 Snaps McGraw" />
+</div>

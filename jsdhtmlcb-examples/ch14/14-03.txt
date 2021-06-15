@@ -1,0 +1,57 @@
+<iframe id="myFrame" frameborder="0" vspace="0" hspace="0" marginwidth="0" 
+marginheight="0" width="100%" src="external.html" scrolling="no" 
+style="overflow:visible"></iframe>
+
+----------
+
+function adjustIFrameSize(id) {
+    var myIframe = document.getElementById(id);
+    if (myIframe) {
+        if (myIframe .contentDocument && myIframe.contentDocument.body.offsetHeight) {
+            // W3C DOM (and Mozilla) syntax
+            myIframe.height = myIframe.contentDocument.body.offsetHeight;    
+        } else if (myIframe.Document && myIframe.Document.body.scrollHeight) {
+            // IE DOM syntax
+            myIframe.height = myIframe.Document.body.scrollHeight;
+        }
+    }
+}
+
+----------
+
+<body ... onload = "adjustIFrameSize('myFrame');">
+
+----------
+
+function adjustIFrameSize(id) {
+    var myIframe = document.getElementById(id);
+    if (myIframe) {
+        if (myIframe.contentDocument && myIframe.contentDocument.body.offsetHeight) {
+            // W3C DOM (and Mozilla) syntax
+            myIframe.height = myIframe.contentDocument.body.offsetHeight;    
+        } else if (myIframe.Document && myIframe.Document.body.scrollHeight) {
+            // IE DOM syntax
+            myIframe.height = myIframe.Document.body.scrollHeight;
+        }
+        // bind onload events to iframe
+        if (myIframe.addEventListener) {
+            myIframe.addEventListener("load", resizeIframe, false);
+        } else {
+            myIframe.attachEvent("onload", resizeIframe);
+        }
+   }
+}
+
+function resizeIframe(evt) {
+    evt = (evt) ? evt : event;
+    var target = (evt.target) ? evt.target : evt.srcElement;
+    // take care of W3C event processing from iframe's root document
+    if (target.nodeType == 9) {
+      if (evt.currentTarget && evt.currentTarget.tagName.toLowerCase() == "iframe") {
+            target = evt.currentTarget;    
+        }
+    }
+    if (target) {
+        adjustIFrameSize(target.id);
+    }
+}

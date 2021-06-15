@@ -1,0 +1,20 @@
+<Text>
+  <font size="22">
+    <p align="left">
+      This is left-aligned text,
+    </p>
+
+    <p align="right">
+      this is right-aligned text,
+    </p>
+
+    <p align="center">
+      this is centered text and
+    </p>
+
+    <p align="justify">
+      here we have lots and lots and lots and still lots and still lots and lots and lots and lots and lots and lots and lots of justified text.
+    </p>
+
+  </font>
+</Text>

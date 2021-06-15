@@ -1,0 +1,1 @@
+// in WebVC.h // #import <UIKit/UIKit.h>@class NewsItem;@interface WebVC : UIViewController {	IBOutlet UIWebView *storyWebView;	NewsItem * storyNewsItem;}@property (retain) NewsItem * storyNewsItem;@end

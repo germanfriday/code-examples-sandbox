@@ -1,0 +1,7 @@
+The big question always seems to be, how the heck do you preload external swf files. 
+Here is the answer....a host clip to hide it in and a little script intellegence.
+
+Thanks to:
+Markus Kuosmanen 
+
+send comments and questions to: tammit1971@earthlink.net

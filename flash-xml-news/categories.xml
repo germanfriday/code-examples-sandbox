@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<catList>
+	<catItem title = "Aug09" xml = "xml/august09.xml"></catItem>
+	<catItem title = "July09" xml = "xml/july09.xml"></catItem>
+	<catItem title = "June09" xml = "xml/june09.xml"></catItem>
+	<catItem title = "May09" xml = "xml/may09.xml"></catItem>
+	<catItem title = "Apr09" xml = "xml/april09.xml"></catItem>
+	<catItem title = "Mar09" xml = "xml/march09.xml"></catItem>
+	<catItem title = "Feb09" xml = "xml/february09.xml"></catItem>
+	<catItem title = "Jan09" xml = "xml/january09.xml"></catItem>
+	<catItem title = "Dec08" xml = "xml/december08.xml"></catItem>
+	<catItem title = "Nov08" xml = "xml/november08.xml"></catItem>
+</catList>

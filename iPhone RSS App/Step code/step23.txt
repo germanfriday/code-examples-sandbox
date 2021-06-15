@@ -1,0 +1,1 @@
+// In NewsCell.h //#import <UIKit/UIKit.h>@interface NewsCell : UITableViewCell {	UILabel * titleLabel;	UILabel	* descriptionLabel;}@property (retain) UILabel * titleLabel;@property (retain) UILabel * descriptionLabel;@end

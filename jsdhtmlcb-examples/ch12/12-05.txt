@@ -1,0 +1,6 @@
+<style type="text/css">
+a:link {color:#993300; background-color:#ffffff; text-decoration:none}
+a:visited {color:#993300; background-color:#ffffff; text-decoration:none}
+a:active {color:#ffffff; background-color:#993300; text-decoration:none}
+a:hover {text-decoration:underline}
+</style>

@@ -1,0 +1,79 @@
+<BaseDepth depth="1000"/>
+<Shape alpha="80" pos="{=_barX+_threeDDepthX/2+_barwidth*0.05},{=_barY-_threeDDepthY/2}">
+  <FillColor side="right" color="{_barcolor}"/>
+  <LineStyle width="1" color="#70000000"/>
+  <Rect size="{=_barwidth*0.90},-{_barheight0}"/>
+</shape>
+
+
+<BaseDepth depth="3000"/>
+<button pos="{=_barX+_threeDDepthX/2+_barwidth*0.05},{=_barY-_threeDDepthY/2}">
+  <State type="hit">
+    <BaseDepth depth="0"/>
+    <Shape id="bar" pos="0,0">
+      <FillColor side="right" color="{_barcolor}"/>
+      <LineStyle width="1" color="#000000"/>
+      <Rect size="{=_barwidth*0.90},-{_barheight0}"/>
+    </shape>
+  </State>
+
+  <State type="over,down">
+    <BaseDepth depth="0"/>
+    <Shape pos="0,0">
+      <FillColor side="right" color="{_barcolor}"/>
+      <LineStyle width="1" color="#000000"/>
+      <Rect size="{=_barwidth*0.90},-{_barheight0}"/>
+    </shape>
+    
+    <BaseDepth depth="2000"/>
+    
+    <Text
+      background="color(#aaffff), border(#000000,1),space(3)"
+      flags="base"
+      size="{=_defaultFontHeight*0.75}"
+      color="#000000" 
+      style="normal"
+      Pos="2,{=-_barheight0-4}">{_barTooltip}</Text>
+
+    <Text
+      flags="base"
+      size="{=_defaultFontHeight*0.75}"
+      color="#000000"
+      angle="-90"
+      Pos="{=_barwidth*0.45+_defaultFontHeight*0.75/2},-7">{_barValue}</Text>
+  
+  </State>
+
+  <if notEmpty="{_barURL}">
+    <Script event="press" type="source">
+    getUrl("{_barURL}");
+    </Script>
+  </if>
+
+  <Audio
+          src="~/chart/bip.mp3"
+          event="RollOver"/>
+
+</button>
+
+
+<BaseDepth depth="2000"/>
+<Text size="{=_defaultFontHeight*0.75}"
+  flags="base"
+  color="#000000"
+  angle="-90"
+  Pos="{=_barX+_threeDDepthX/2+_barwidth*0.50+_defaultFontHeight*0.75/2},{=_barY-_threeDDepthY/2-7}">{_barValue}</Text>
+
+<Text
+  size="{_defaultFontHeight}"
+  flags="base"
+  color="#000000"
+  align="center"
+  placepoint="center"
+  Pos="{=_barwidth/2+_barX},{=_barY+_defaultFontHeight}">{_barLabel}</Text>
+
+<BaseDepth depth="0"/>
+<Shape pos="{_barX},{_barY}>
+  <LineStyle width="1" color="#000000"/>
+  <line path="0,0;{_threeDDepthX},{=-_threeDDepthY}"/>
+</shape>

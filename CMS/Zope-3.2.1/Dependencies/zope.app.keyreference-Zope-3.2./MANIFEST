@@ -1,0 +1,11 @@
+MANIFEST
+zope.app.keyreference/__init__.py
+zope.app.keyreference/configure.zcml
+zope.app.keyreference/interfaces.py
+zope.app.keyreference/persistent.py
+zope.app.keyreference/persistent.txt
+zope.app.keyreference/SETUP.cfg
+zope.app.keyreference/tests.py
+zope.app.keyreference/zope.app.keyreference-configure.zcml
+setup.py
+setup.cfg

@@ -1,0 +1,1740 @@
+<HTML>
+<HEAD>
+<META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=iso-8859-1">
+<META NAME="GENERATOR" CONTENT="Mozilla/4.04 [en] (Win95; I) [Netscape]">
+<TITLE>Turbine Media Markup Language</TITLE>
+</HEAD>
+<BODY topmargin="0" leftmargin="0" rightmargin="0" marginwidth="0" marginheight="0" TEXT="#000000" BGCOLOR="#FFFFFF" LINK="#003366" VLINK="#FF9900" ALINK="#FF6600">
+<CENTER>
+  <table width="100%" border="0" cellspacing="0" cellpadding="0" align="center">
+    <tr bgcolor="#000033"> 
+      <td background="images/bar_left.gif" width="50%">&nbsp;</td>
+      <td> 
+        <table width="560" border="0" cellspacing="0" cellpadding="0">
+          <tr> 
+            <td width="334"><img src="images/bar_left.gif" width="334" height="28"></td>
+            <td><img src="images/bar_central.gif" width="110" height="28"></td>
+            <td><img src="images/bar_logo.gif" width="116" height="28"></td>
+          </tr>
+        </table>
+      </td>
+      <td background="images/1x1_azul_esc.gif" width="50%">&nbsp;</td>
+    </tr>
+    <tr bgcolor="#FFFFFF" height="4"> 
+      <td colspan="3"></td>
+    </tr>
+  </table>
+  <TABLE BORDER=0 COLS=2 WIDTH="560" cellpadding="0" cellspacing="0" >
+    <TR valign="top">
+      <TD COLSPAN="2" height="12"> 
+        <table border=0 cols=2 width="100%" cellpadding="0" cellspacing="0" >
+          <tr> 
+            <td width="443" height="25"><font face="Verdana, Arial, Helvetica, sans-serif" size="3"><a href="manual.htm">Table 
+              of Contents</a></font></td>
+            <td width="117" height="25"> 
+              <div align="center"><font face="Verdana, Arial, Helvetica, sans-serif" size="3"><a href="mmlcommands.htm">Next 
+                Chapter </a> </font></div>
+            </td>
+          </tr>
+        </table>
+      </TD>
+    </TR>
+    <TR valign="top"> 
+      <TD COLSPAN="2" height="2"> <p align="left">&nbsp;</p>
+        <p align="left"><font face="Arial, Helvetica, sans-serif" size="6">3. 
+          Turbine Media Markup Language</font></p>
+        <p align="left"><font size="2" face="Verdana, Arial, Helvetica, sans-serif">This 
+          chapter describes the very powerful Turbine MML language that allows 
+          you to create a variety of multimedia elements. A good number of examples 
+          is included while the reference for all tags available on the <a href="mmlreference.htm">MML 
+          Reference section</a>.</font></p>
+        <ul>
+          <li><font size="3" face="Arial, Helvetica, sans-serif" align="left"><a href="#turbinemml">Turbine 
+            MML</a></font></li>
+          <li><font size="3" face="Arial, Helvetica, sans-serif" align="left"><a href="#placingscreen">Placing 
+            Elements on the Screen</a></font></li>
+          <li><font size="3" face="Arial, Helvetica, sans-serif" align="left"><a href="#placingframes">Placing 
+            Elements Across Frames</a></font></li>
+          <li><font size="3" face="Arial, Helvetica, sans-serif" align="left"><a href="#moveremove">Moving 
+            and Removing Elements</a></font></li>
+          <li><font size="3" face="Arial, Helvetica, sans-serif" align="left"><a href="#placecommon">The 
+            &lt;Place&gt; Common Attributes</a></font></li>
+          <li><font size="3" face="Arial, Helvetica, sans-serif" align="left"><a href="#media">The 
+            &lt;Media&gt; Tag</a></font></li>
+          <li><font size="3" face="Arial, Helvetica, sans-serif" align="left"><a href="#text">Using 
+            Text</a></font></li>
+          <li><font size="3" face="Arial, Helvetica, sans-serif" align="left"><a href="#shape">Shapes</a></font></li>
+          <li><font size="3" face="Arial, Helvetica, sans-serif" align="left"><a href="#image">The 
+            &lt;Image&gt; Tag</a></font></li>
+          <li><font size="3" face="Arial, Helvetica, sans-serif" align="left"><a href="#movieclip">Movie 
+            Clips</a></font></li>
+          <li><font size="3" face="Arial, Helvetica, sans-serif" align="left"><a href="#button">Buttons</a></font></li>
+          <li><font size="3" face="Arial, Helvetica, sans-serif" align="left"><a href="#video">Video</a></font></li>
+          <li><font size="3" face="Arial, Helvetica, sans-serif" align="left"><a href="#audio">Audio</a></font></li>
+          <li><font size="3" face="Arial, Helvetica, sans-serif" align="left"><a href="#script">The 
+            &lt;Script&gt; Tag</a></font></li>
+          <li><font size="3" face="Arial, Helvetica, sans-serif" align="left"><a href="#autolayout">AutoLayout</a></font></li>
+        </ul>
+        <p>&nbsp;</p>
+        <p>&nbsp;</p>
+        <p>&nbsp;</p>
+        <p><font size="5" face="Arial, Helvetica, sans-serif"><a name="turbinemml"></a>Turbine 
+          MML</font></p>
+        <p><font size="2" face="Verdana, Arial, Helvetica, sans-serif">Turbine 
+          Media Markup Language is an XML language that models all the possible 
+          multimedia elements inside Turbine, from text, images and shapes to 
+          audio and video, as well as complex commands like charts and automedia. 
+          MML is pervasive across Turbine, it can be used both from text MML templates 
+          as well as from inside Flash .swf template files. Turbine MML specifies 
+          where and when elements are placed, moved or removed. An example of 
+          MML that displays text, starts playing an MP3 and creates a movie clip 
+          with two images:</font></p>
+        <table width="320" border="1" cellpadding="0" cellspacing="0" bordercolor="#999999">
+          <tr> 
+            <td>
+<table width="100%" border="0" cellpadding="16" cellspacing="0" bgcolor="#eeeef4">
+                <tr> 
+                  <td>
+<div align="left"> 
+                      <p><font color="#0000FF" size="2" face="Courier New, Courier, mono">&lt;Text&gt;</font><font size="2" face="Courier New, Courier, mono"><font color="#CC0000">Title</font><font color="#0000FF">&lt;/Text&gt;</font></font></p>
+                      <p><font color="#0000FF" size="2" face="Courier New, Courier, mono">&lt;Audio 
+                        src=</font><font color="#0000FF" size="2" face="Courier New, Courier, mono">&quot;<font color="#33CC33">Mozart.mp3</font>&quot;/&gt;</font></p>
+                      <p><font color="#0000FF" size="2" face="Courier New, Courier, mono">&lt;MovieClip&gt;<br>
+                        &nbsp;&nbsp;&lt;Frame&gt;<br>
+                        </font><font color="#0000FF" size="2" face="Courier New, Courier, mono">&nbsp;&nbsp;&nbsp;&nbsp;&lt;Image 
+                        src=&quot;<font color="#33CC33">image1.gif</font>&quot;/&gt;<br>
+                        </font><font color="#0000FF" size="2" face="Courier New, Courier, mono">&nbsp;&nbsp;&lt;/Frame&gt;</font></p>
+                      <p><font color="#0000FF" size="2" face="Courier New, Courier, mono">&nbsp;&nbsp;&lt;Frame&gt;<br>
+                        </font><font color="#0000FF" size="2" face="Courier New, Courier, mono">&nbsp;&nbsp;&nbsp;&nbsp;&lt;Image 
+                        src=&quot;<font color="#33CC33">image2.gif</font>&quot;/&gt;<br>
+                        </font><font color="#0000FF" size="2" face="Courier New, Courier, mono">&nbsp;&nbsp;&lt;/Frame&gt;<br>
+                        </font><font size="2" face="Courier New, Courier, mono"><font color="#0000FF">&lt;/MovieClip&gt;</font><br>
+                        </font></p>
+                    </div></td>
+                </tr>
+              </table></td>
+          </tr>
+        </table>
+        <p>&nbsp;<br>
+          <font size="2" face="Verdana, Arial, Helvetica, sans-serif">Being an 
+          XML language, common XML characteristics also apply - for example XML-style 
+          comments, XML entities, and the need for MML documents to be well-formed. 
+          <br>
+          Here's a resume of the XML traits accepted by the Turbine MML parser:</font></p>
+        <table width="97%" height="153" border="1" cellpadding="4" cellspacing="0">
+          <tr valign="top"> 
+            <td width="55%"><font size="2" face="Courier New, Courier, mono">&lt;Tag 
+              attr1=&quot;value1&quot; attr2='value2' /&gt;</font></td>
+            <td width="45%"><font size="2" face="Verdana, Arial, Helvetica, sans-serif">attributes 
+              can be specified inside double or single quotes</font></td>
+          </tr>
+          <tr valign="top"> 
+            <td><font size="2" face="Courier New, Courier, mono">&amp;gt; &amp;lt; 
+              &amp;nbsp; &amp;apos; &amp;ograve;</font></td>
+            <td><font size="2" face="Verdana, Arial, Helvetica, sans-serif">standard 
+              and latin XML entities</font></td>
+          </tr>
+          <tr valign="top"> 
+            <td><font size="2" face="Courier New, Courier, mono">&lt;!-- this 
+              is a comment --&gt;</font></td>
+            <td><font size="2" face="Verdana, Arial, Helvetica, sans-serif">common 
+              XML comments are accepted</font></td>
+          </tr>
+          <tr valign="top"> 
+            <td><font size="2" face="Courier New, Courier, mono">&lt;![CDATA[ 
+              <br>
+              this text is not parsed by MML parser <br>
+              ]]&gt;</font></td>
+            <td><font size="2" face="Verdana, Arial, Helvetica, sans-serif">CDATA 
+              escape tags</font></td>
+          </tr>
+        </table>
+        <p><font size="2" face="Verdana, Arial, Helvetica, sans-serif">In general, 
+          white space characters are ignored by the MML parser, except on places 
+          where they can be important, for example on text elements.</font></p>
+        <p><font size="2" face="Verdana, Arial, Helvetica, sans-serif">MML shares 
+          certain characteristics with HTML - for example, colors are specified 
+          in the traditional HTML form <font face="Courier New, Courier, mono">#<font color="#FF0000">RR</font><font color="#00FF00">GG</font><font color="#0000FF">BB</font></font> 
+          or in the form <font face="Courier New, Courier, mono">#<font color="#999999">AA</font><font color="#FF0000">RR</font><font color="#00FF00">GG</font><font color="#0000FF">BB</font></font>, 
+          where <font face="Courier New, Courier, mono"><font color="#999999">AA</font></font> 
+          is an extra alpha component.</font></p>
+        <p>&nbsp;</p>
+        <p><font size="5" face="Arial, Helvetica, sans-serif"><a name="placingscreen"></a>Placing 
+          Elements on the Screen</font></p>
+        <p><font size="2" face="Verdana, Arial, Helvetica, sans-serif">Turbine 
+          MML is in part about describing where and when to display media elements, 
+          like text audio or video. Elements are placed in a screen with left-to-right 
+          X-axis values and top-to-bottom Y-axis values - horizontal coordinates 
+          increase to the right, vertical coordinates increase downwards, with 
+          all values in pixels:</font></p>
+        <p><font size="2" face="Verdana, Arial, Helvetica, sans-serif"><img src="images/coords.gif" width="350" height="150"></font></p>
+        <p><font size="2" face="Verdana, Arial, Helvetica, sans-serif">For example 
+          to display an image at position 20,20 we can use the pos attribute, 
+          which is common to all visual tags:</font></p>
+        <table width="367" border="1" cellpadding="0" cellspacing="0" bordercolor="#999999">
+          <tr> 
+            <td width="363"><table width="100%" border="0" cellpadding="16" cellspacing="0" bgcolor="#eeeef4">
+                <tr> 
+                  <td width="405"><div align="left"> 
+                      <p><font size="2" face="Verdana, Arial, Helvetica, sans-serif"><font color="#0000FF" face="Courier New, Courier, mono">&lt;Image 
+                        pos=</font><font color="#0000FF" size="2" face="Courier New, Courier, mono">&quot;</font><font color="#33CC33" size="2" face="Courier New, Courier, mono">20,20</font><font color="#0000FF" size="2" face="Courier New, Courier, mono">&quot;</font> 
+                        <font color="#0000FF" face="Courier New, Courier, mono">src=&quot;<font color="#33CC33">image.gif</font>&quot;/&gt;</font><font color="#0000FF"><br>
+                        </font></font><font size="2" face="Verdana, Arial, Helvetica, sans-serif"> 
+                        </font></p>
+                    </div></td>
+                </tr>
+              </table></td>
+          </tr>
+        </table>
+        <p>&nbsp;<br>
+          <font size="2" face="Verdana, Arial, Helvetica, sans-serif">What happens 
+          if a pos attribute is not specified? In this case, the behavior is ruled 
+          by the <a href="mmlreference.htm#autolayout">AutoLayout</a> settings 
+          which basically tell whether the element should be placed below the 
+          latest one, to the right of last element or if the pos should default 
+          to the origin, that is to (0,0).</font></p>
+        <p><font size="2" face="Verdana, Arial, Helvetica, sans-serif">The coordinates 
+          origin, the point (0,0) is on the top-left corner of the media being 
+          generated. Certain elements like movie clips, buttons and shapes create 
+          their own coordinate spaces, which means that the location where those 
+          elements are placed represents the origin for any elements that are 
+          placed inside them (their 0,0) - this happens because those elements 
+          can contain other elements inside themselves. For example suppose this 
+          movie clip placed at position 100,100:</font></p>
+        <table width="367" border="1" cellpadding="0" cellspacing="0" bordercolor="#999999">
+          <tr> 
+            <td width="363"><table width="100%" border="0" cellpadding="16" cellspacing="0" bgcolor="#eeeef4">
+                <tr> 
+                  <td width="405"><div align="left"> 
+                      <p><font color="#0000FF" size="2" face="Courier New, Courier, mono">&lt;MovieClip 
+                        pos=&quot;</font><font color="#33CC33" size="2" face="Courier New, Courier, mono">100,100</font><font color="#0000FF" size="2" face="Courier New, Courier, mono">&quot; 
+                        &gt;</font></p>
+                      <p><font color="#0000FF" size="2" face="Courier New, Courier, mono"> 
+                        &nbsp;&nbsp;&lt;Frame&gt;<br>
+                        </font><font size="2" face="Courier New, Courier, mono"><font color="#0000FF">&nbsp;&nbsp;&nbsp;&nbsp;&lt;Image 
+                        pos=&quot;<font color="#33CC33">20,20</font>&quot;</font> 
+                        <font color="#0000FF">src=&quot;<font color="#33CC33">image.gif</font>&quot;/&gt;<br>
+                        </font></font><font color="#0000FF" size="2" face="Courier New, Courier, mono">&nbsp;&nbsp;&lt;/Frame&gt;</font></p>
+                      <p><font size="2" face="Courier New, Courier, mono"><font color="#0000FF">&lt;/MovieClip&gt;</font><br>
+                        </font></p>
+                    </div></td>
+                </tr>
+              </table></td>
+          </tr>
+        </table>
+        <p><font size="2" face="Verdana, Arial, Helvetica, sans-serif">Inside 
+          this movie clip, an image is placed at position 20,20 - since the image 
+          is inside the movie clip and thus should use its coordinate system, 
+          the image is in fact placed at 100+20, 100+20 that is at global position 
+          120,120. What happens is that elements placed inside the movie clip 
+          relate to the position where the movie clip is placed as being their 
+          origin, as their 0,0 point.</font></p>
+        <p><font size="3" face="Verdana, Arial, Helvetica, sans-serif"><strong>&nbsp;<br>
+          <font face="Arial, Helvetica, sans-serif">The Depth</font></strong></font></p>
+        <p><font size="2" face="Verdana, Arial, Helvetica, sans-serif">Besides 
+          x and y coordinates, elements can be placed at different depth values, 
+          so that some elements are above or below other elements. The depth of 
+          an element is a numeric value, where higher values mean that the element 
+          was placed &quot;higher&quot;, with respect to elements placed on lower 
+          depths. By default and if not specified, depth values continuously go 
+          up - that is an element placed after another element will be immediately 
+          above it.<br>
+          </font><font size="2" face="Verdana, Arial, Helvetica, sans-serif">On 
+          the next example, an image is placed at depth 10, another at depth 20 
+          (above) and a third one in-between the two, on depth 15:</font></p>
+        <table width="500" border="1" cellpadding="0" cellspacing="0" bordercolor="#999999">
+          <tr> 
+            <td>
+<table width="100%" border="0" cellpadding="16" cellspacing="0" bgcolor="#eeeef4">
+                <tr> 
+                  <td>
+<div align="left"> 
+                      <p><font size="2" face="Verdana, Arial, Helvetica, sans-serif"><font color="#0000FF" face="Courier New, Courier, mono">&lt;Image 
+                        depth=&quot;<font color="#33CC33">10</font>&quot; </font><font color="#0000FF" size="2" face="Courier New, Courier, mono">pos=&quot;<font color="#33CC33">20,20</font>&quot; 
+                        </font><font color="#0000FF" size="2" face="Courier New, Courier, mono">src=&quot;<font color="#33CC33">bottom-image.gif</font>&quot;/&gt;</font></font></p>
+                      <p><font size="2" face="Courier New, Courier, mono"><font color="#0000FF">&lt;Image 
+                        depth=&quot;<font color="#33CC33">20</font>&quot; pos=&quot;<font color="#33CC33">20,20</font>&quot;</font> 
+                        <font color="#0000FF">src=&quot;<font color="#33CC33">top-image.gif</font>&quot;/&gt;</font></font></p>
+                      <p><font size="2" face="Courier New, Courier, mono"><font color="#0000FF">&lt;Image 
+                        depth=&quot;<font color="#33CC33">15</font>&quot; pos=&quot;<font color="#33CC33">20,20</font>&quot;</font> 
+                        <font color="#0000FF">src=&quot;<font color="#33CC33">middle-image.gif</font>&quot;/&gt;<br>
+                        </font></font></p>
+                    </div></td>
+                </tr>
+              </table></td>
+          </tr>
+        </table>
+        <p><font size="2" face="Verdana, Arial, Helvetica, sans-serif">Elements 
+          should always be placed at separated depths, so that each element is 
+          on its own depth, to avoid confusions. Most of the time, automatic depth 
+          values are used, so this is not a problem.</font></p>
+        <p><font size="2" face="Verdana, Arial, Helvetica, sans-serif"> But when 
+          numeric depth values need to be specified, and to make things easier, 
+          it's possible to use depth aliases for those numbers - a depth alias 
+          is a name that refer to a certain depth, instead of numeric values. 
+          On the next example the image and text elements will appear at the same 
+          depth:</font></p>
+        <table width="500" border="1" cellpadding="0" cellspacing="0" bordercolor="#999999">
+          <tr> 
+            <td>
+<table width="100%" border="0" cellpadding="16" cellspacing="0" bgcolor="#eeeef4">
+                <tr> 
+                  <td>
+<div align="left"> 
+                      <p><font color="#0000FF" size="2" face="Verdana, Arial, Helvetica, sans-serif">&lt;Image 
+                        depth=&quot;<font color="#33CC33">aDepthAlias</font>&quot; 
+                        src=&quot;<font color="#33CC33">bottom-image.gif</font>&quot;/&gt;</font></p>
+                      <p><font color="#0000FF" size="2" face="Verdana, Arial, Helvetica, sans-serif">&lt;Text 
+                        depth=&quot;</font><font color="#33CC33" size="2" face="Verdana, Arial, Helvetica, sans-serif">aDepthAlias</font><font color="#0000FF" size="2" face="Verdana, Arial, Helvetica, sans-serif">&quot;&gt;</font><font size="2" face="Verdana, Arial, Helvetica, sans-serif"><font color="#CC0000">Title</font><font color="#0000FF">&lt;/Text&gt;</font> 
+                        </font></p>
+                    </div></td>
+                </tr>
+              </table></td>
+          </tr>
+        </table>
+        <p><font size="2" face="Verdana, Arial, Helvetica, sans-serif">The first 
+          time a non-numeric value is used in a depth attribute, it defines that 
+          depth as being that alias. Later the alias can be used to refer to that 
+          depth. Depth aliases are thus a convenience to structure element depths, 
+          avoiding the need to specify numeric depths.<br>
+          <br>
+          &nbsp; </font></p>
+        <p><font size="5" face="Arial, Helvetica, sans-serif"><a name="placingframes"></a>Placing 
+          Elements Across Frames</font></p>
+        <p><font size="2" face="Verdana, Arial, Helvetica, sans-serif">On a multimedia 
+          environment such as Turbine, besides positioning elements spatially, 
+          it's also necessary to distribute them across time - to place them, 
+          remove them or change their position across the frames on a timeline. 
+          Each of these frames display for a certain duration of time, with all 
+          frames having the same duration - this duration is set by the frame 
+          rate at which the generated movie plays. </font></p>
+        <p><font size="2" face="Verdana, Arial, Helvetica, sans-serif">Besides 
+          the main timeline, each movie clip has its own timeline, with frames 
+          from all timelines displaying synchronized - that is having the same 
+          frame rate and displaying at the same instant. By default, successions 
+          of frames are displayed in a continuous loop, with the screen always 
+          starting in a cleared state (with no elements placed) on the first frame.</font></p>
+        <p><font size="2" face="Verdana, Arial, Helvetica, sans-serif">However, 
+          the &quot;frame&quot; and &quot;frame rate&quot; concepts apply in different 
+          ways to a PDF document. The &quot;frame rate&quot; concept is completely 
+          eliminated but the &quot;frame&quot; concept is translated to a PDF 
+          page. When outputting to PDF, one would end with a PDF document with 
+          as many pages as existing frames in the input media.</font></p>
+        <p><font size="2" face="Verdana, Arial, Helvetica, sans-serif">Some examples:</font></p>
+        <table width="100%" border="0" cellspacing="0" cellpadding="4">
+          <tr valign="top"> 
+            <td width="55%"> <table width="300" border="1" cellpadding="0" cellspacing="0" bordercolor="#999999">
+                <tr> 
+                  <td width="363"><table width="100%" border="0" cellpadding="16" cellspacing="0" bgcolor="#eeeef4">
+                      <tr> 
+                        <td width="405" valign="top"> <div align="left"> 
+                            <p><font color="#0000FF" size="2" face="Courier New, Courier, mono">&lt;Frame&gt;<br>
+                              </font><font size="2" face="Courier New, Courier, mono"><font color="#0000FF">&nbsp;&nbsp;&lt;Text&gt;</font><font color="#CC0000">First 
+                              Frame</font><font color="#0000FF">&lt;/Text&gt;<br>
+                              </font></font><font color="#0000FF" size="2" face="Courier New, Courier, mono">&lt;/Frame&gt;</font></p>
+                            <p><font color="#0000FF" size="2" face="Courier New, Courier, mono">&lt;Frame&gt;<br>
+                              &nbsp;&nbsp;&lt;Remove/&gt; <br>
+                              </font><font size="2" face="Courier New, Courier, mono"><font color="#0000FF">&nbsp;&nbsp;&lt;Text&gt;</font><font color="#CC0000">Second 
+                              Frame</font><font color="#0000FF">&lt;/Text&gt;<br>
+                              </font></font><font color="#0000FF" size="2" face="Courier New, Courier, mono">&lt;/Frame&gt;</font></p>
+                            <p><font color="#0000FF" size="2" face="Courier New, Courier, mono">&lt;Frame&gt;<br>
+                              </font><font size="2" face="Courier New, Courier, mono"><font color="#0000FF">&nbsp;&nbsp;&lt;Remove/&gt; 
+                              <br>
+                              &nbsp;&nbsp;&lt;Text&gt;</font><font color="#CC0000">Third 
+                              Frame</font><font color="#0000FF">&lt;/Text&gt;<br>
+                              </font></font><font color="#0000FF" size="2" face="Courier New, Courier, mono">&lt;/Frame&gt;</font></p>
+                          </div></td>
+                      </tr>
+                    </table></td>
+                </tr>
+              </table></td>
+            <td width="45%"><p><font size="2" face="Verdana, Arial, Helvetica, sans-serif"><strong>When 
+                outputting to Flash</strong>: displays the text &quot;First Frame&quot; 
+                on the first frame; then clears the screen (with the &lt;Remove/&gt; 
+                tag) and then displays the text &quot;Second Frame&quot; on the 
+                second frame; on the third frame clears and then displays &quot;Third 
+                Frame&quot;.</font></p>
+              <p><font size="2" face="Verdana, Arial, Helvetica, sans-serif"><strong>When 
+                outputting to PDF</strong>: displays the text &quot;First Frame&quot; 
+                on the first page; then clears the buffer (with the &lt;Remove/&gt; 
+                tag) and then displays the text &quot;Second Frame&quot; on the 
+                second page; on the third page clears the buffer and then displays 
+                &quot;Third Frame&quot;</font></p></td>
+          </tr>
+          <tr valign="top"> 
+            <td> <table width="300" border="1" cellpadding="0" cellspacing="0" bordercolor="#999999">
+                <tr> 
+                  <td width="363"><table width="100%" border="0" cellpadding="16" cellspacing="0" bgcolor="#eeeef4">
+                      <tr> 
+                        <td width="405"><div align="left"> 
+                            <p><font color="#0000FF" size="2" face="Courier New, Courier, mono">&lt;Frame&gt;<br>
+                              </font><font size="2" face="Courier New, Courier, mono"><font color="#0000FF">&nbsp;&nbsp;&lt;Text&gt;</font><font color="#CC0000">First 
+                              Frame</font><font color="#0000FF">&lt;/Text&gt;<br>
+                              </font></font><font color="#0000FF" size="2" face="Courier New, Courier, mono">&lt;/Frame&gt;</font></p>
+                            <p><font color="#0000FF" size="2" face="Courier New, Courier, mono">&lt;Frame&gt;<br>
+                              &lt;/Frame&gt;</font></p>
+                            <p><font color="#0000FF" size="2" face="Courier New, Courier, mono">&lt;Frame&gt;<br>
+                              &lt;/Frame&gt;</font></p>
+                            <p><font color="#0000FF" size="2" face="Courier New, Courier, mono">&lt;Frame&gt;<br>
+                              &lt;/Frame&gt;</font></p>
+                            <p><font color="#0000FF" size="2" face="Courier New, Courier, mono">&lt;Frame&gt;<br>
+                              </font><font size="2" face="Courier New, Courier, mono"><font color="#0000FF">&nbsp;&nbsp;&lt;Remove/&gt; 
+                              <br>
+                              &nbsp;&nbsp;&lt;Text&gt;</font><font color="#CC0000">Fifth 
+                              Frame</font><font color="#0000FF">&lt;/Text&gt;<br>
+                              </font></font><font color="#0000FF" size="2" face="Courier New, Courier, mono">&lt;/Frame&gt;</font></p>
+                          </div></td>
+                      </tr>
+                    </table></td>
+                </tr>
+              </table></td>
+            <td><p><font size="2" face="Verdana, Arial, Helvetica, sans-serif"><strong>When 
+                outputting to Flash</strong>: displays the text &quot;First Frame&quot; 
+                during three frames, then the text &quot;Fifth Frame&quot;, on 
+                frame five.</font></p>
+              <p><font size="2" face="Verdana, Arial, Helvetica, sans-serif"><strong>When 
+                outputting to PDF</strong>: displays the text &quot;First Frame&quot; 
+                in the first three pages, then the text &quot;Fifth Frame&quot;, 
+                on page five.</font></p></td>
+          </tr>
+          <tr valign="top"> 
+            <td> <table width="300" border="1" cellpadding="0" cellspacing="0" bordercolor="#999999">
+                <tr> 
+                  <td width="363"><table width="100%" border="0" cellpadding="16" cellspacing="0" bgcolor="#eeeef4">
+                      <tr> 
+                        <td width="405"><div align="left"> 
+                            <p><font color="#0000FF" size="2" face="Courier New, Courier, mono">&lt;MovieClip&gt;<br>
+                              &nbsp;&nbsp;&lt;Frame&gt;<br>
+                              </font><font size="2" face="Courier New, Courier, mono"><font color="#0000FF">&nbsp;&nbsp;&nbsp;&nbsp;&lt;Text&gt;</font><font color="#CC0000">First 
+                              Frame @ movie clip 1</font><font color="#0000FF">&lt;/Text&gt;<br>
+                              </font></font><font color="#0000FF" size="2" face="Courier New, Courier, mono">&nbsp;&nbsp;&lt;/Frame&gt;</font></p>
+                            <p><font color="#0000FF" size="2" face="Courier New, Courier, mono">&nbsp;&nbsp;&lt;Frame&gt;<br>
+                              </font><font color="#0000FF" size="2" face="Courier New, Courier, mono">&nbsp;&nbsp;&nbsp;&nbsp;&lt;Remove/&gt; 
+                              </font><font color="#0000FF" size="2" face="Courier New, Courier, mono"><br>
+                              </font><font size="2" face="Courier New, Courier, mono"><font color="#0000FF">&nbsp;&nbsp;&nbsp;&nbsp;&lt;Text&gt;</font><font color="#CC0000">Second 
+                              Frame @ movie clip 1</font><font color="#0000FF">&lt;/Text&gt;<br>
+                              </font></font><font color="#0000FF" size="2" face="Courier New, Courier, mono">&nbsp;&nbsp;&lt;/Frame&gt;<br>
+                              &lt;/MovieClip&gt; </font></p>
+                            <p><font color="#0000FF" size="2" face="Courier New, Courier, mono">&lt;MovieClip&gt;<br>
+                              &nbsp;&nbsp;&lt;Frame&gt;<br>
+                              </font><font size="2" face="Courier New, Courier, mono"><font color="#0000FF">&nbsp;&nbsp;&nbsp;&nbsp;&lt;Text&gt;</font><font color="#CC0000">First 
+                              Frame @ movie clip 2</font><font color="#0000FF">&lt;/Text&gt;<br>
+                              </font></font><font color="#0000FF" size="2" face="Courier New, Courier, mono">&nbsp;&nbsp;&lt;/Frame&gt;</font></p>
+                            <p><font color="#0000FF" size="2" face="Courier New, Courier, mono">&nbsp;&nbsp;&lt;Frame&gt;<br>
+                              </font><font size="2" face="Courier New, Courier, mono"><font color="#0000FF">&nbsp;&nbsp;&nbsp;&nbsp;&lt;Remove/&gt; 
+                              </font><br>
+                              <font color="#0000FF">&nbsp;&nbsp;&nbsp;&nbsp;&lt;Text&gt;</font><font color="#CC0000">Second 
+                              Frame @ movie clip 2</font><font color="#0000FF">&lt;/Text&gt;<br>
+                              </font></font><font color="#0000FF" size="2" face="Courier New, Courier, mono">&nbsp;&nbsp;&lt;/Frame&gt;<br>
+                              &lt;/MovieClip&gt;</font></p>
+                          </div></td>
+                      </tr>
+                    </table></td>
+                </tr>
+              </table></td>
+            <td><p><font size="2" face="Verdana, Arial, Helvetica, sans-serif"><strong>When 
+                outputting to Flash</strong>: since movie clips display their 
+                frames in a parallel, synchronized way - the text &quot;First 
+                Frame @ movie clip 1&quot; displays at the same time than the 
+                text &quot;First Frame @ movie clip 2&quot;, with the same thing 
+                happening on the second frame.</font></p>
+              <p><font size="2" face="Verdana, Arial, Helvetica, sans-serif"><strong>When 
+                outputting to PDF</strong>: the PDF document will have as many 
+                pages as the existing frames of the main timeline of the input 
+                media. In this case the main timeline only contains one frame 
+                therefore the PDF document will contain one single page with the 
+                contents of the first frame.</font></p></td>
+          </tr>
+        </table>
+        <p><font size="2" face="Verdana, Arial, Helvetica, sans-serif">&nbsp; 
+          </font></p>
+        <p><font size="5" face="Arial, Helvetica, sans-serif"><a name="moveremove"></a>Moving 
+          and Removing Elements</font></p>
+        <p><font size="2" face="Verdana, Arial, Helvetica, sans-serif">Besides 
+          placing elements across frames, one must be able to move and remove 
+          them where necessary. This can be accomplished with the &lt;<a href="mmlreference.htm#move">Move</a>&gt; 
+          and &lt;<a href="mmlreference.htm#remove">Remove</a>&gt; tags.</font></p>
+        <p><font size="2" face="Verdana, Arial, Helvetica, sans-serif">Move tags 
+          deal with depth values - you can move whatever element is at a specified 
+          depth. On the next example, an image, which is at depth 10, displays 
+          for two frames at position 100,100 and is then moved to a different 
+          position (200,200) for another two frames. </font></p>
+        <table width="400" border="1" cellpadding="0" cellspacing="0" bordercolor="#999999">
+          <tr> 
+            <td>
+<table width="100%" border="0" cellpadding="16" cellspacing="0" bgcolor="#eeeef4">
+                <tr> 
+                  <td>
+<div align="left"> 
+                      <p><font color="#0000FF" size="2" face="Courier New, Courier, mono">&lt;Frame&gt;<br>
+                        </font><font size="2" face="Courier New, Courier, mono"><font color="#0000FF">&nbsp;&nbsp;&lt;Image 
+                        depth=&quot;<font color="#33CC33">10</font>&quot;</font> 
+                        <font color="#0000FF"> pos=&quot;<font color="#33CC33">100,100</font>&quot; 
+                        <br>
+                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;src=&quot;<font color="#33CC33">image.gif</font>&quot;/&gt;<br>
+                        </font></font><font color="#0000FF" size="2" face="Courier New, Courier, mono">&lt;/Frame&gt;</font></p>
+                      <p><font color="#0000FF" size="2" face="Courier New, Courier, mono">&lt;Frame&gt;<br>
+                        &lt;/Frame&gt;</font></p>
+                      <p><font color="#0000FF" size="2" face="Courier New, Courier, mono">&lt;Frame&gt;<br>
+                        </font><font size="2" face="Courier New, Courier, mono"><font color="#0000FF">&nbsp;&nbsp;&lt;Move 
+                        depth=&quot;<font color="#33CC33">10</font>&quot;</font> 
+                        <font color="#0000FF"> pos=&quot;<font color="#33CC33">200,200</font>&quot;/&gt;<br>
+                        </font></font><font color="#0000FF" size="2" face="Courier New, Courier, mono">&lt;/Frame&gt;</font></p>
+                      <p><font color="#0000FF" size="2" face="Courier New, Courier, mono">&lt;Frame&gt;<br>
+                        &lt;/Frame&gt;</font></p>
+                    </div></td>
+                </tr>
+              </table></td>
+          </tr>
+        </table>
+        <p><font size="2" face="Verdana, Arial, Helvetica, sans-serif">Besides 
+          changing the position, the &lt;Move&gt; tag can in fact change any other 
+          attributes of an element - known as the <a href="#placecommon">common 
+          &lt;place&gt; attributes</a>.</font></p>
+        <p><font size="2" face="Verdana, Arial, Helvetica, sans-serif">The Remove 
+          tag, removes an element placed at a certain depth. For example on the 
+          next example, an image displays for three frames at depth 10 and is 
+          then removed from the screen:</font></p>
+        <table width="350" border="1" cellpadding="0" cellspacing="0" bordercolor="#999999">
+          <tr> 
+            <td width="363"><table width="100%" border="0" cellpadding="16" cellspacing="0" bgcolor="#eeeef4">
+                <tr> 
+                  <td width="405"><div align="left"> 
+                      <p><font color="#0000FF" size="2" face="Courier New, Courier, mono">&lt;Frame&gt;<br>
+                        </font><font size="2" face="Courier New, Courier, mono"><font color="#0000FF">&nbsp;&nbsp;&lt;Image 
+                        depth=&quot;<font color="#33CC33">10</font>&quot;</font> 
+                        <font color="#0000FF"> pos=&quot;<font color="#33CC33">100,100</font>&quot; 
+                        <br>
+                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; src=&quot;<font color="#33CC33">image.gif</font>&quot;/&gt;<br>
+                        </font></font><font color="#0000FF" size="2" face="Courier New, Courier, mono">&lt;/Frame&gt;</font></p>
+                      <p><font color="#0000FF" size="2" face="Courier New, Courier, mono">&lt;Frame&gt;<br>
+                        &lt;/Frame&gt;</font></p>
+                      <p><font color="#0000FF" size="2" face="Courier New, Courier, mono">&lt;Frame&gt;<br>
+                        &lt;/Frame&gt;</font></p>
+                      <p><font color="#0000FF" size="2" face="Courier New, Courier, mono">&lt;Frame&gt;<br>
+                        </font><font color="#0000FF" size="2" face="Courier New, Courier, mono">&nbsp;&nbsp;&lt;Remove 
+                        depth=&quot;<font color="#33CC33">10</font>&quot;/&gt;<br>
+                        </font><font color="#0000FF" size="2" face="Courier New, Courier, mono">&lt;/Frame&gt;</font></p>
+                    </div></td>
+                </tr>
+              </table></td>
+          </tr>
+        </table>
+        <p><font size="2" face="Verdana, Arial, Helvetica, sans-serif">As in the 
+          &lt;Move&gt; tag, the elements to remove must be referenced by their 
+          depth values.</font></p>
+        <p><font size="2" face="Verdana, Arial, Helvetica, sans-serif">A special 
+          case of the &lt;Remove&gt; tag is when it is used without a depth attribute 
+          - on this case all the visible elements (elements previously placed) 
+          are removed from the screen. On the next example, two text blocks display 
+          for two frames are then removed and substituted by a new text block:</font></p>
+        <table width="350" border="1" cellpadding="0" cellspacing="0" bordercolor="#999999">
+          <tr> 
+            <td width="363"><table width="100%" border="0" cellpadding="16" cellspacing="0" bgcolor="#eeeef4">
+                <tr> 
+                  <td width="405"><div align="left"> 
+                      <p><font color="#0000FF" size="2" face="Courier New, Courier, mono">&lt;Frame&gt;<br>
+                        &nbsp;&nbsp;</font><font size="2" face="Courier New, Courier, mono"><font color="#0000FF">&lt;Text&gt;</font><font color="#CC0000">A 
+                        text</font><font color="#0000FF">&lt;/Text&gt;<br>
+                        &nbsp;&nbsp;&lt;Text&gt;</font><font color="#CC0000">Another 
+                        text</font><font color="#0000FF">&lt;/Text&gt; <br>
+                        </font></font><font color="#0000FF" size="2" face="Courier New, Courier, mono">&lt;/Frame&gt;</font></p>
+                      <p><font color="#0000FF" size="2" face="Courier New, Courier, mono">&lt;Frame&gt;<br>
+                        &lt;/Frame&gt;</font></p>
+                      <p><font color="#0000FF" size="2" face="Courier New, Courier, mono">&lt;Frame&gt;<br>
+                        </font><font color="#0000FF" size="2" face="Courier New, Courier, mono">&nbsp;&nbsp;&lt;Remove/&gt;<br>
+                        </font><font color="#0000FF" size="2" face="Courier New, Courier, mono">&nbsp;&nbsp;</font><font size="2" face="Courier New, Courier, mono"><font color="#0000FF">&lt;Text&gt;</font><font color="#CC0000">A 
+                        text - now alone</font><font color="#0000FF">&lt;/Text&gt;<br>
+                        </font></font><font color="#0000FF" size="2" face="Courier New, Courier, mono">&lt;/Frame&gt;</font></p>
+                      <p><font color="#0000FF" size="2" face="Courier New, Courier, mono">&lt;Frame&gt;<br>
+                        &lt;/Frame&gt;</font></p>
+                    </div></td>
+                </tr>
+              </table></td>
+          </tr>
+        </table>
+        <br>
+        &nbsp; <p><font size="5" face="Arial, Helvetica, sans-serif"><a name="placecommon"></a>The 
+          &lt;Place&gt; Common Attributes</font></p>
+        <p><font size="2" face="Verdana, Arial, Helvetica, sans-serif"> So far 
+          we've seen examples of element placing, with the pos and depth attributes 
+          - these two attributes are part of a family of attributes that are common 
+          to all visual tags, to tags that can be placed on the screen. The most 
+          interesting of these common attributes are:</font></p>
+        <table width="93%" border="1" cellspacing="0" cellpadding="4">
+          <tr> 
+            <td width="49%" bgcolor="#000000"><strong><font color="#FFFFFF" size="2" face="Verdana, Arial, Helvetica, sans-serif">Attribute</font></strong></td>
+            <td width="51%" bgcolor="#000000"><strong><font color="#FFFFFF" size="2" face="Verdana, Arial, Helvetica, sans-serif">Description</font></strong></td>
+          </tr>
+          <tr valign="top"> 
+            <td><font size="2" face="Verdana, Arial, Helvetica, sans-serif">pos=&quot;x,y&quot;</font></td>
+            <td><font size="2" face="Verdana, Arial, Helvetica, sans-serif">The 
+              position where the element appears, in pixel coordinates</font></td>
+          </tr>
+          <tr valign="top"> 
+            <td><font size="2" face="Verdana, Arial, Helvetica, sans-serif">depth=&quot;depthOrder&quot;</font></td>
+            <td><font size="2" face="Verdana, Arial, Helvetica, sans-serif">The 
+              depth where the element will be placed. Increasing depth numbers 
+              display above prior depth values. Every element should appear on 
+              its own depth</font></td>
+          </tr>
+          <tr valign="top"> 
+            <td><font size="2" face="Verdana, Arial, Helvetica, sans-serif">angle=&quot;a&quot; 
+              </font></td>
+            <td><font size="2" face="Verdana, Arial, Helvetica, sans-serif">A 
+              rotation to apply into the element</font></td>
+          </tr>
+          <tr valign="top"> 
+            <td><font size="2" face="Verdana, Arial, Helvetica, sans-serif">placepoint=&quot;center, 
+              left, top, right, bottom, origin&quot;</font></td>
+            <td><font size="2" face="Verdana, Arial, Helvetica, sans-serif">This 
+              attribute specifies what location on the object should the pos attribute 
+              use. For example if selecting placepoint=&quot;center&quot;, the 
+              element will be placed with its center at the coordinates specified 
+              on the pos attribute</font></td>
+          </tr>
+          <tr valign="top"> 
+            <td><font size="2" face="Verdana, Arial, Helvetica, sans-serif">alpha=&quot;a&quot; 
+              </font></td>
+            <td><font size="2" face="Verdana, Arial, Helvetica, sans-serif">A 
+              transparency setting for the element, from 0 (full transparent) 
+              to 100 (full opaque)</font></td>
+          </tr>
+          <tr valign="top"> 
+            <td><font size="2" face="Verdana, Arial, Helvetica, sans-serif">brightness=&quot;-100-&gt;+100&quot;</font></td>
+            <td><font size="2" face="Verdana, Arial, Helvetica, sans-serif">Applies 
+              a brightness effect into the element. Accepts values from -100 (negative 
+              numbers will darken the element) to +100 (positive numbers will 
+              brighten the element)</font></td>
+          </tr>
+          <tr valign="top"> 
+            <td><font size="2" face="Verdana, Arial, Helvetica, sans-serif">tint=&quot;#RRGGBB:level&quot; 
+              </font></td>
+            <td><font size="2" face="Verdana, Arial, Helvetica, sans-serif">Applies 
+              a tint effect to the element, specified by the #RRGGBB color and 
+              by a level percentage number from 0 to 100 (none to full effect)</font></td>
+          </tr>
+          <tr valign="top"> 
+            <td height="67"><font size="2" face="Verdana, Arial, Helvetica, sans-serif">size=&quot;width,height&quot;<em> 
+              -or-</em><br>
+              size=&quot;width,&quot;<em> -or-</em><br>
+              size=&quot;,height&quot;<em> -or-</em><br>
+              size=&quot;10%,10%&quot;<em> -or-</em><br>
+              size=&quot;10%&quot;</font></td>
+            <td><p><font size="2" face="Verdana, Arial, Helvetica, sans-serif">If 
+                one of the values is missing, means that Turbine will calculate 
+                the other value, to maintain original proportions.<br>
+                </font><font size="2" face="Verdana, Arial, Helvetica, sans-serif">A 
+                percentage sign means the resulting size is a percentage relative 
+                to the native size.</font></p>
+              </td>
+          </tr>
+        </table>
+        <p><font size="2" face="Verdana, Arial, Helvetica, sans-serif">These attributes 
+          are very important for element composition, because they can express 
+          a variety of effects: size changes, rotations, transparency and many 
+          others.</font></p>
+        <p><font size="2" face="Verdana, Arial, Helvetica, sans-serif">&nbsp;<br>
+          <font size="3" face="Arial, Helvetica, sans-serif"><strong>The id Common 
+          Attribute</strong></font></font></p>
+        <p><font size="2" face="Verdana, Arial, Helvetica, sans-serif">The id 
+          attribute can be used on any element to specify that the element can 
+          later be used, for example to be placed several times into different 
+          positions or frames, through the <a href="mmlreference.htm#place">&lt;Place&gt;</a> 
+          tag. The id attribute works as the unique identity for the element, 
+          allowing for reuse of the element on multiple situations. On the next 
+          example, the logo-image.tiff image is loaded on the &lt;Image&gt; tag, 
+          displayed and assigned to the id &quot;logo&quot;; later it is placed 
+          three more times on distinct positions by the &lt;Place&gt; tags, by 
+          using the &quot;logo&quot; id attribute: </font></p>
+        <table width="400" border="1" cellpadding="0" cellspacing="0" bordercolor="#999999">
+          <tr> 
+            <td>
+<table width="100%" border="0" cellpadding="16" cellspacing="0" bgcolor="#eeeef4">
+                <tr> 
+                  <td>
+<div align="left"> 
+                      <p><font size="2" face="Verdana, Arial, Helvetica, sans-serif"><font color="#0000FF" face="Courier New, Courier, mono">&lt;Image 
+                        src=&quot;<font color="#33CC33">logo-image.tiff</font>&quot; 
+                        </font><font color="#0000FF" size="2" face="Courier New, Courier, mono">id=&quot;<font color="#33CC33">logo</font>&quot;</font><font color="#0000FF" size="2" face="Courier New, Courier, mono">/&gt;</font></font></p>
+                      <p><font color="#0000FF" size="2" face="Courier New, Courier, mono">&lt;Place 
+                        id=&quot;<font color="#33CC33">logo</font>&quot; pos=&quot;<font color="#33CC33">100,100</font>&quot;/&gt;</font></p>
+                      <p><font color="#0000FF" size="2" face="Courier New, Courier, mono">&lt;Place 
+                        id=&quot;<font color="#33CC33">logo</font>&quot; pos=&quot;<font color="#33CC33">200,100</font>&quot;/&gt;</font></p>
+                      <p><font color="#0000FF" size="2" face="Courier New, Courier, mono">&lt;Place 
+                        id=&quot;<font color="#33CC33">logo</font>&quot; pos=&quot;<font color="#33CC33">300,100</font>&quot;/&gt;<br>
+                        </font></p>
+                    </div></td>
+                </tr>
+              </table></td>
+          </tr>
+        </table>
+        <p><font size="2" face="Verdana, Arial, Helvetica, sans-serif">What if 
+          we wanted to define the image on the &lt;Image&gt; tag, but did not 
+          want to display it at that time? This can be accomplished by adding 
+          a flags attribute set to &quot;define&quot;.</font></p>
+        <p><font size="2" face="Verdana, Arial, Helvetica, sans-serif">An interesting 
+          side-efect of the id attribute is that in Flash it exports the element 
+          into Action Script, making it available for later manipulation at player-time. 
+          This is equivalent to enabling the &quot;Linkage Properties&quot; on 
+          the Macromedia Flash editor, to be used with methods like MovieClip.AttachMovie 
+          or Sound.AttachSound.</font><br>
+          &nbsp; </p>
+        <p><font size="3" face="Arial, Helvetica, sans-serif"><strong>The 
+          Instance Common Attribute</strong></font></p>
+        <p><font size="2" face="Verdana, Arial, Helvetica, sans-serif">While the 
+          id attribute is a server-side identifier of the element that allows 
+          placement of multiple copies of such element, the instance attribute 
+          is instead a Flash player-time identification of element instances. 
+          In the Flash player, a Turbine element with the instance attribute set, 
+          can be referenced from Flash Action Script as a regular instance. <br>
+          On the next example the instance name for an image is defined, and a 
+          script block later sets its _x and _y properties to 100,100:</font></p>
+        <table width="450" border="1" cellpadding="0" cellspacing="0" bordercolor="#999999">
+          <tr> 
+            <td> <table width="100%" border="0" cellpadding="16" cellspacing="0" bgcolor="#eeeef4">
+                <tr> 
+                  <td> <div align="left"> 
+                      <p><font color="#0000FF" size="2" face="Courier New, Courier, mono">&lt;Image 
+                        src=&quot;<font color="#33CC33">side-image.tiff</font>&quot; 
+                        instance=&quot;<font color="#33CC33">sideImage</font>&quot;/&gt;</font></p>
+                      <p><font color="#0000FF" size="2" face="Courier New, Courier, mono">&lt;Script&gt;<br>
+                        &nbsp;&nbsp;<font color="#33CC33">sideImage</font>._x=100;<br>
+                        &nbsp;&nbsp;<font color="#33CC33">sideImage</font>._y=100;<br>
+                        &lt;/Script&gt;<br>
+                        </font></p>
+                    </div></td>
+                </tr>
+              </table></td>
+          </tr>
+        </table>
+        <p><font size="2" face="Verdana, Arial, Helvetica, sans-serif">Through 
+          the instance attribute, elements can be composed inside Turbine and 
+          then made available for direct Action Script manipulation on the Flash 
+          player.</font></p>
+        <p><font size="2" face="Verdana, Arial, Helvetica, sans-serif">.<br>
+          &nbsp; <br>
+          &nbsp; </font></p>
+        <p><font size="5" face="Arial, Helvetica, sans-serif"><a name="media"></a>The 
+          &lt;Media&gt; Tag</font></p>
+        <p><font size="2" face="Verdana, Arial, Helvetica, sans-serif">The <a href="mmlreference.htm#media">&lt;Media&gt;</a> 
+          tag is an optional top-level tag that can specify properties of the 
+          media being generated - properties like the frame rate, native size, 
+          background color or compression settings. The next example shows a &lt;Media&gt; 
+          tag specifying a native size of 400 x 300 against a blue background:</font></p>
+        <table width="450" border="1" cellpadding="0" cellspacing="0" bordercolor="#999999">
+          <tr> 
+            <td>
+<table width="100%" border="0" cellpadding="16" cellspacing="0" bgcolor="#eeeef4">
+                <tr> 
+                  <td>
+<div align="left"> 
+                      <p><font color="#0000FF" size="2" face="Courier New, Courier, mono">&lt;Media 
+                        width=&quot;<font color="#33CC33">400</font>&quot; height=&quot;<font color="#33CC33">300</font>&quot; 
+                        color=&quot;<font color="#33CC33">#0000ff</font>&quot;&gt;</font></p>
+                      <p><font color="#0000FF" size="2" face="Courier New, Courier, mono">&nbsp;&nbsp;&lt;Image 
+                        src=&quot;<font color="#33CC33">image.png</font>&quot;/&gt;</font></p>
+                      <p><font color="#0000FF" size="2" face="Courier New, Courier, mono">&lt;/Media&gt;<br>
+                        </font></p>
+                    </div></td>
+                </tr>
+              </table></td>
+          </tr>
+        </table>
+        <p><font size="2" face="Verdana, Arial, Helvetica, sans-serif">Most of 
+          the attributes available on the &lt;Media&gt; tag map into the {Media.*} 
+          special variables.<br>
+          &nbsp; </font></p>
+        <p><font size="5" face="Arial, Helvetica, sans-serif"><a name="text"></a>Using 
+          Text</font></p>
+        <p><font size="2" face="Verdana, Arial, Helvetica, sans-serif">Turbine 
+          includes sophisticated text layout capabilities accessible through a 
+          very simple HTML 1.0-like interface. There are two types of text elements:</font></p>
+        <ul>
+          <li><font size="2" face="Verdana, Arial, Helvetica, sans-serif">Static 
+            text through the &lt;Text&gt; tag, which allows extensive formatting 
+            and always displays with high-fidelity across different systems.</font></li>
+          <li><font size="2" face="Verdana, Arial, Helvetica, sans-serif">Dynamic 
+            through the &lt;TextField&gt; tag which although not so controllable 
+            as static text, is available at player-time.</font></li>
+        </ul>
+        <p><font size="2" face="Verdana, Arial, Helvetica, sans-serif">Static 
+          text is thus best fitted for non-changing code that complex layout/formatting, 
+          while dynamic text can be used for more &quot;dynamic&quot; purposes.<br>
+          In both tags, Unicode characters and fonts can be used.<br>
+          </font><font size="2" face="Verdana, Arial, Helvetica, sans-serif">Let's 
+          see more about the two available text tags.</font></p>
+        <p><font size="3" face="Arial, Helvetica, sans-serif"><strong>Text 
+          Tag</strong></font></p>
+        <p><font size="2" face="Verdana, Arial, Helvetica, sans-serif">The <a href="mmlreference.htm#text">&lt;Text&gt;</a> 
+          tag creates static text blocks with the several options, most of which 
+          can be defined for the whole text block or down to paragraphs and individual 
+          characters:</font></p>
+        <ul>
+          <li><font size="2" face="Verdana, Arial, Helvetica, sans-serif">font 
+            faces, styles and sizes</font></li>
+          <li><font size="2" face="Verdana, Arial, Helvetica, sans-serif">text 
+            color</font></li>
+          <li><font size="2" face="Verdana, Arial, Helvetica, sans-serif">paragraph 
+            alignment</font></li>
+          <li><font size="2" face="Verdana, Arial, Helvetica, sans-serif">line 
+            vertical leading</font></li>
+          <li><font size="2" face="Verdana, Arial, Helvetica, sans-serif">character 
+            spacing</font></li>
+          <li><font size="2" face="Verdana, Arial, Helvetica, sans-serif">definable 
+            text flow areas</font></li>
+        </ul>
+        <p><font size="2" face="Verdana, Arial, Helvetica, sans-serif">Most of 
+          these characteristics can either be specified for the whole block as 
+          attributes of the &lt;Text&gt; tag:</font></p>
+        <table width="500" border="1" cellpadding="0" cellspacing="0" bordercolor="#999999">
+          <tr> 
+            <td>
+<table width="100%" border="0" cellpadding="16" cellspacing="0" bgcolor="#eeeef4">
+                <tr> 
+                  <td>
+<div align="left"> 
+                      <p><font color="#0000FF" size="2" face="Courier New, Courier, mono">&lt;Text 
+                        font=&quot;<font color="#33CC33">Verdana</font>&quot; 
+                        fontSize=&quot;<font color="#33CC33">20</font>&quot; color=&quot;<font color="#33CC33">#ff0000</font>&quot;&gt;</font></p>
+                      <p><font color="#CC0000" size="2" face="Courier New, Courier, mono">&nbsp;&nbsp;This 
+                        is some text.</font></p>
+                      <p><font color="#0000FF" size="2" face="Courier New, Courier, mono">&lt;/Text&gt;<br>
+                        </font></p>
+                    </div></td>
+                </tr>
+              </table></td>
+          </tr>
+        </table>
+        <p><font size="2" face="Verdana, Arial, Helvetica, sans-serif">- Or they 
+          can be specified inside the &lt;Text&gt; tag, as HTML-like formatting 
+          tags, allowing for fine granularity:</font></p>
+        <table width="500" border="1" cellpadding="0" cellspacing="0" bordercolor="#999999">
+          <tr> 
+            <td>
+<table width="100%" border="0" cellpadding="16" cellspacing="0" bgcolor="#eeeef4">
+                <tr> 
+                  <td>
+<div align="left"> 
+                      <p><font color="#0000FF" size="2" face="Courier New, Courier, mono">&lt;Text&gt;</font></p>
+                      <p><font color="#CC0000" size="2" face="Courier New, Courier, mono">&nbsp;&nbsp;</font><font color="#0000FF" size="2" face="Courier New, Courier, mono">&lt;Font 
+                        face=&quot;<font color="#33CC33">Verdana</font>&quot; 
+                        fontSize=&quot;<font color="#33CC33">20</font>&quot; color=&quot;<font color="#33CC33">#ff0000</font>&quot;&gt; 
+                        </font><font color="#0000FF" size="2" face="Courier New, Courier, mono">&nbsp;&nbsp;&nbsp;&nbsp;&lt;i&gt;</font><font color="#CC0000" size="2" face="Courier New, Courier, mono">This 
+                        is some <font color="#0000FF">&lt;b&gt;</font>text<font color="#0000FF">&lt;/b&gt;&lt;/i&gt;</font>.<br>
+                        <font color="#0000FF">&nbsp;&nbsp;&lt;/Font&gt; </font></font></p>
+                      <p><font color="#0000FF" size="2" face="Courier New, Courier, mono">&lt;/Text&gt;<br>
+                        </font></p>
+                    </div></td>
+                </tr>
+              </table></td>
+          </tr>
+        </table>
+        <p><font size="2" face="Verdana, Arial, Helvetica, sans-serif">For the 
+          tags possible inside a &lt;Text&gt; tag, please see the <a href="mmlreference.htm#textlist">Text 
+          Tags</a> section on the MML reference.</font></p>
+        <p><font size="2" face="Verdana, Arial, Helvetica, sans-serif">By using 
+          the bounds attribute, a number of rectangular areas can be specified, 
+          across which the text will flow. The general rule is that text will 
+          always flow from the top to the bottom, trying to fit the next available 
+          flow area. For example, the following text displays first across a rectangular 
+          area, and then down across a thin right-side rectangle (of 100 pixels, 
+          between left=500 and right=600):</font></p>
+        <table width="500" border="1" cellpadding="0" cellspacing="0" bordercolor="#999999">
+          <tr> 
+            <td>
+<table width="100%" border="0" cellpadding="16" cellspacing="0" bgcolor="#eeeef4">
+                <tr> 
+                  <td>
+<div align="left"> 
+                      <p><font color="#0000FF" size="2" face="Courier New, Courier, mono">&lt;Text 
+                        bounds=&quot;<font color="#33CC33">0,0,600,50; 500,50,600,400</font>&quot;&gt;</font><font size="2" face="Courier New, Courier, mono"><br>
+                        <font color="#CC0000">Here we have lots and lots and lots 
+                        and still lots and lots and lots of justified text. Still, 
+                        text continues and continues and continues to make its 
+                        way on and on across the available space. Sooner or later, 
+                        surely text will at some point terminate, which is certainly 
+                        a change from the current state of things!</font><br>
+                        <font color="#0000FF">&lt;/Text&gt;<br>
+                        </font></font></p>
+                    </div></td>
+                </tr>
+              </table></td>
+          </tr>
+        </table>
+        <p><font size="2" face="Verdana, Arial, Helvetica, sans-serif">&nbsp;<br>
+          The &lt;Text&gt; tag can also be used with an src attribute, to load 
+          its contents from an external file or remote HTTP location:</font></p>
+        <table width="500" border="1" cellpadding="0" cellspacing="0" bordercolor="#999999">
+          <tr> 
+            <td>
+<table width="100%" border="0" cellpadding="16" cellspacing="0" bgcolor="#eeeef4">
+                <tr> 
+                  <td>
+<div align="left"> 
+                      <p><font size="2" face="Verdana, Arial, Helvetica, sans-serif"><font color="#0000FF" face="Courier New, Courier, mono">&lt;Text 
+                        src=&quot;<font color="#33CC33">message.txt</font>&quot; 
+                        </font><font color="#0000FF" size="2" face="Courier New, Courier, mono"><br>
+                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; font=&quot;<font color="#33CC33">Verdana</font>&quot; 
+                        </font> <font color="#0000FF" face="Courier New, Courier, mono">fontSize=&quot;<font color="#33CC33">20</font>&quot; 
+                        color=&quot;<font color="#33CC33">#ff0000</font>&quot;/&gt;<br>
+                        &nbsp; </font></font></p>
+                    </div></td>
+                </tr>
+              </table></td>
+          </tr>
+        </table>
+        <p>&nbsp;<br>
+          <font size="3" face="Arial, Helvetica, sans-serif"><strong>TextField 
+          Tag</strong></font></p>
+        <p><font size="2" face="Verdana, Arial, Helvetica, sans-serif">The <a href="mmlreference.htm#textfield">&lt;TextField&gt;</a> 
+          tag can display a dynamic or editable text block - the following options 
+          can be used when outputting to Flash:</font></p>
+        <ul>
+          <li><font size="2" face="Verdana, Arial, Helvetica, sans-serif">font 
+            faces, styles and sizes</font></li>
+          <li><font size="2" face="Verdana, Arial, Helvetica, sans-serif">text 
+            color</font></li>
+          <li><font size="2" face="Verdana, Arial, Helvetica, sans-serif">paragraph 
+            alignment</font></li>
+          <li><font size="2" face="Verdana, Arial, Helvetica, sans-serif">line 
+            vertical leading and horizontal indent and margins</font></li>
+          <li><font size="2" face="Verdana, Arial, Helvetica, sans-serif">a maximum 
+            length for editable text</font></li>
+          <li><font size="2" face="Verdana, Arial, Helvetica, sans-serif">multiline 
+            text wrapping</font></li>
+          <li><font size="2" face="Verdana, Arial, Helvetica, sans-serif">whether 
+            the text field is selectable and/or editable</font></li>
+          <li><font size="2" face="Verdana, Arial, Helvetica, sans-serif">the 
+            text field can display * characters, as a password field</font></li>
+          <li><font size="2" face="Verdana, Arial, Helvetica, sans-serif">the 
+            text field can display HTML-like tags</font></li>
+          <li><font size="2" face="Verdana, Arial, Helvetica, sans-serif">a border 
+            and background can be displayed around the text field</font></li>
+          <li><font size="2" face="Verdana, Arial, Helvetica, sans-serif">an Action 
+            Script variable can be mapped to the text field contents</font></li>
+        </ul>
+        <p><font size="2" face="Verdana, Arial, Helvetica, sans-serif">When outputting 
+          to PDF, there are some limitations associated with text fields:</font></p>
+        <ul>
+          <li><font size="2" face="Verdana, Arial, Helvetica, sans-serif">the 
+            font used in the PDF text field is always Times-Roman</font></li>
+          <li><font size="2" face="Verdana, Arial, Helvetica, sans-serif">the 
+            PDF text field font style is always regular</font></li>
+          <li><font size="2" face="Verdana, Arial, Helvetica, sans-serif">the 
+            alignment is applied globally to the text field</font></li>
+          <li><font size="2" face="Verdana, Arial, Helvetica, sans-serif">there 
+            are no line vertical leading and horizontal indent and margins</font></li>
+          <li><font size="2" face="Verdana, Arial, Helvetica, sans-serif">there 
+            is no text wrapping</font></li>
+          <li><font size="2" face="Verdana, Arial, Helvetica, sans-serif">the 
+            text field can't display HTML-like tags</font></li>
+          <li><font size="2" face="Verdana, Arial, Helvetica, sans-serif">the 
+            text will be encoded using Windows Code Page 1252, often called the 
+            &#8220;Windows ANSI&#8221; encoding. This is the standard encoding 
+            for Latin text in Western writing systems</font></li>
+        </ul>
+        <p><font size="2" face="Verdana, Arial, Helvetica, sans-serif">Because 
+          of the above limitations, when outputting text to PDF, it is generally 
+          advisable to use static text instead of text fields whenever possible, 
+          because of its extra flexibility.</font></p>
+        <p><font size="2" face="Verdana, Arial, Helvetica, sans-serif">An example 
+          of the &lt;TextField&gt; tag is:</font></p>
+        <table width="500" border="1" cellpadding="0" cellspacing="0" bordercolor="#999999">
+          <tr> 
+            <td>
+<table width="100%" border="0" cellpadding="16" cellspacing="0" bgcolor="#eeeef4">
+                <tr> 
+                  <td>
+<div align="left"> 
+                      <p><font size="2" face="Verdana, Arial, Helvetica, sans-serif"><font color="#0000FF" face="Courier New, Courier, mono">&lt;TextField 
+                        size=&quot;<font color="#33CC33">200,100</font>&quot;</font> 
+                        <font color="#0000FF" size="2" face="Courier New, Courier, mono"><br>
+                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+                        font=&quot;<font color="#33CC33">Verdana</font>&quot; 
+                        fontSize=&quot;<font color="#33CC33">20</font>&quot;&gt;</font></font></p>
+                      <p><font color="#CC0000" size="2" face="Courier New, Courier, mono">&nbsp;&nbsp;This 
+                        is dynamic text.</font></p>
+                      <p><font size="2" face="Courier New, Courier, mono"><font color="#0000FF">&lt;/TextField&gt;<br>
+                        </font></font></p>
+                    </div></td>
+                </tr>
+              </table></td>
+          </tr>
+        </table>
+        <p><font size="2" face="Verdana, Arial, Helvetica, sans-serif">As in the 
+          &lt;Text&gt; tag, &lt;TextField&gt; can also be used with an src attribute, 
+          to load its contents from an external file or remote HTTP location:</font></p>
+        <table width="500" border="1" cellpadding="0" cellspacing="0" bordercolor="#999999">
+          <tr> 
+            <td>
+<table width="100%" border="0" cellpadding="16" cellspacing="0" bgcolor="#eeeef4">
+                <tr> 
+                  <td>
+<div align="left"> 
+                      <p><font size="2" face="Verdana, Arial, Helvetica, sans-serif"><font color="#0000FF" face="Courier New, Courier, mono">&lt;TextField 
+                        src=&quot;<font color="#33CC33">message.txt</font>&quot; 
+                        </font><font color="#0000FF" face="Courier New, Courier, mono">size</font><font color="#0000FF" face="Courier New, Courier, mono">=&quot;<font color="#33CC33">300,200</font>&quot;</font><font color="#0000FF" face="Courier New, Courier, mono"><br>
+                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;font=&quot;<font color="#33CC33">Verdana</font>&quot; 
+                        </font> <font color="#0000FF" face="Courier New, Courier, mono">fontSize=&quot;<font color="#33CC33">20</font>&quot; 
+                        color=&quot;<font color="#33CC33">#ff0000</font>&quot;/&gt;<br>
+                        &nbsp; </font></font></p>
+                    </div></td>
+                </tr>
+              </table></td>
+          </tr>
+        </table>
+        <p>&nbsp;</p>
+        <p> <font size="5" face="Arial, Helvetica, sans-serif"><a name="shape"></a>Shapes</font></p>
+        <p><font size="2" face="Verdana, Arial, Helvetica, sans-serif">The <a href="mmlreference.htm#shape">&lt;Shape&gt;</a> 
+          tag and its inner tags allow the drawing of shape elements, from a set 
+          of commands to select line and fill styles, draw lines and curves, or 
+          draw graphic elements like rectangles or circles. Next is an example 
+          of a circle shape with a radius of 50 pixels, centered at 100,100 and 
+          filled with a semi-transparent red:</font></p>
+        <table width="450" border="1" cellpadding="0" cellspacing="0" bordercolor="#999999">
+          <tr> 
+            <td>
+<table width="100%" border="0" cellpadding="16" cellspacing="0" bgcolor="#eeeef4">
+                <tr> 
+                  <td>
+<div align="left"> 
+                      <p><font color="#0000FF" size="2" face="Courier New, Courier, mono">&lt;Shape&gt;</font></p>
+                      <p><font color="#0000FF" size="2" face="Courier New, Courier, mono">&nbsp;&nbsp;&lt;FillColor 
+                        color=&quot;<font color="#33CC33">#80FF0000</font>&quot;/&gt; 
+                        <br>
+                        &nbsp;&nbsp;&lt;Circle center=&quot;<font color="#33CC33">100,100</font>&quot; 
+                        radius=&quot;<font color="#33CC33">50</font>&quot;/&gt;</font></p>
+                      <p><font color="#0000FF" size="2" face="Courier New, Courier, mono">&lt;/Shape&gt;<br>
+                        </font></p>
+                    </div></td>
+                </tr>
+              </table></td>
+          </tr>
+        </table>
+        <p><font size="2" face="Verdana, Arial, Helvetica, sans-serif">The next 
+          sections describe the capabilities of the different Shape tags. The 
+          reference for all the &lt;Shape&gt; tags is available <a href="mmlreference.htm#shape">here</a>.<br>
+          &nbsp; </font></p>
+        <p><font size="3" face="Arial, Helvetica, sans-serif"><strong>Fill 
+          and Line Style Shape Tags</strong></font></p>
+        <p><font size="2" face="Verdana, Arial, Helvetica, sans-serif">Shapes 
+          can be rendered using a Line Style describing the thickness and color 
+          to use, and a Fill Color that basically tells the type of paint to use 
+          for the enclosed areas of a shape. For example, to draw a blue line 
+          with a thickness of 5 pixels, a Line Style command must be issued prior 
+          to this Line command - afterwards all commands that need to draw lines 
+          will use the last defined Line Style command; the same applies for Fill 
+          Style definitions.<br>
+          There are three types of Fill Styles:</font></p>
+        <ul>
+          <li><font size="2" face="Verdana, Arial, Helvetica, sans-serif">Solid 
+            color fills, with the &lt;FillColor&gt; tag.</font></li>
+          <li><font size="2" face="Verdana, Arial, Helvetica, sans-serif">Bitmap 
+            fills, with the &lt;FillBitmap&gt; tag, supports the same image formats 
+            from the &lt;Image&gt; tag.</font></li>
+          <li><font size="2" face="Verdana, Arial, Helvetica, sans-serif">Gradient 
+            fills, with the &lt;FillGradient&gt; tag.</font></li>
+        </ul>
+        <p>&nbsp;</p>
+        <p><strong><font size="3" face="Arial, Helvetica, sans-serif">Line 
+          and Curve Shape Tags</font></strong></p>
+        <p><font size="2" face="Verdana, Arial, Helvetica, sans-serif">Two types 
+          of lines are possible - straight and curved lines:</font></p>
+        <ul>
+          <li><font size="2" face="Verdana, Arial, Helvetica, sans-serif">Straight 
+            lines can be specified by their endpoints, with the &lt;Line&gt; or 
+            &lt;LineTo&gt; tags.</font></li>
+          <li><font size="2" face="Verdana, Arial, Helvetica, sans-serif">Curved 
+            lines can be specified as quadratic (three points) or bezier (four 
+            points) with the &lt;Curve&gt; or &lt;CurveTo&gt; tags.</font></li>
+        </ul>
+        <p>&nbsp;</p>
+        <p><font size="3" face="Arial, Helvetica, sans-serif"><strong>Graphic 
+          Shape Tags</strong></font></p>
+        <p><font size="2" face="Verdana, Arial, Helvetica, sans-serif">Besides 
+          simple lines, tags are available to display other common graphic shapes 
+          like:</font></p>
+        <ul>
+          <li><font size="2" face="Verdana, Arial, Helvetica, sans-serif">Rectangles, 
+            with the &lt;Rect&gt; tag.</font></li>
+          <li><font size="2" face="Verdana, Arial, Helvetica, sans-serif">Circles 
+            and Ellipses with the &lt;Circle&gt; and &lt;Ellipse&gt; tags.</font></li>
+          <li><font size="2" face="Verdana, Arial, Helvetica, sans-serif">Ellipse/circle 
+            arcs with the &lt;Arc&gt; and &lt;ArcTo&gt; tags.</font></li>
+          <li><font size="2" face="Verdana, Arial, Helvetica, sans-serif">Slices, 
+            (arcs connected to their center position) with the &lt;Slice&gt; tag. 
+            </font></li>
+        </ul>
+        <p>&nbsp;</p>
+        <p><font size="5" face="Arial, Helvetica, sans-serif"><a name="image"></a>The 
+          &lt;Image&gt; Tag</font></p>
+        <p><font size="2" face="Verdana, Arial, Helvetica, sans-serif">Through 
+          the <a href="mmlreference.htm#image">&lt;Image&gt;</a> tag, Turbine 
+          can load external images from local files or remote HTTP locations in 
+          the following formats:</font></p>
+        <ul>
+          <li><font size="2" face="Verdana, Arial, Helvetica, sans-serif">PNG</font></li>
+          <li><font size="2" face="Verdana, Arial, Helvetica, sans-serif">GIF</font></li>
+          <li><font size="2" face="Verdana, Arial, Helvetica, sans-serif">JPEG</font></li>
+          <li><font size="2" face="Verdana, Arial, Helvetica, sans-serif">BMP</font></li>
+          <li><font size="2" face="Verdana, Arial, Helvetica, sans-serif">TIFF</font></li>
+        </ul>
+        <p><font size="2" face="Verdana, Arial, Helvetica, sans-serif">Displaying 
+          an image at a size of 200x160 pixels, through the size attribute is 
+          very simple:</font></p>
+        <table width="450" border="1" cellpadding="0" cellspacing="0" bordercolor="#999999">
+          <tr> 
+            <td>
+<table width="100%" border="0" cellpadding="16" cellspacing="0" bgcolor="#eeeef4">
+                <tr> 
+                  <td>
+<div align="left"> 
+                      <p><font color="#0000FF" size="2" face="Courier New, Courier, mono">&lt;Image 
+                        src=&quot;<font color="#33CC33">image.png</font>&quot; 
+                        size=&quot;<font color="#33CC33" size="2" face="Verdana, Arial, Helvetica, sans-serif">200,160</font>&quot;/&gt;<br>
+                        &nbsp; </font></p>
+                    </div></td>
+                </tr>
+              </table></td>
+          </tr>
+        </table>
+        <p><font size="2" face="Verdana, Arial, Helvetica, sans-serif">A number 
+          of interesting things can be done with images, through the attributes 
+          of this tag:</font></p>
+        <table width="100%" border="1" cellspacing="0" cellpadding="4">
+          <tr valign="top"> 
+            <td><font size="2" face="Courier New, Courier, mono"> resample=&quot;width,height&quot;<br>
+              -or-<br>
+              resample=&quot;10%,10%&quot;<br>
+              -or- <br>
+              resample=&quot;10%&quot;<br>
+              </font></td>
+            <td><font size="2" face="Verdana, Arial, Helvetica, sans-serif">Although 
+              the size attribute can control the displayed size of the image, 
+              the image is still stored at its original internal resolution. With 
+              the resample attribute, the image can have its resolution changed, 
+              for example to save bandwidth.</font></td>
+          </tr>
+          <tr valign="top"> 
+            <td><font size="2" face="Courier New, Courier, mono">fx=&quot;alphaColor(alphaLevel,#RRGGBB)<br>
+              &nbsp;&nbsp;&nbsp;&nbsp;smooth(0-&gt;1000)<br>
+              &nbsp;&nbsp;&nbsp;&nbsp;gray<br>
+              &nbsp;&nbsp;&nbsp;&nbsp;blackwhite(0-&gt;255)&quot;</font></td>
+            <td><p><font size="2" face="Verdana, Arial, Helvetica, sans-serif">The 
+                fx attribute applies one or more effects to the image:<br>
+                - alphaColor sets the alpha (as a percentage) of pixels with the 
+                specified color<br>
+                - smooth applies a smoothening or blur effect to the image, with 
+                the specified level<br>
+                - gray creates a grayscale version of the image<br>
+                - blackwhite creates an image in black and white, ruled by the 
+                specified threshold.</font></p></td>
+          </tr>
+          <tr valign="top"> 
+            <td><font size="2" face="Courier New, Courier, mono">encoding=&quot;jpeg,zlib,native&quot;</font></td>
+            <td><font size="2" face="Verdana, Arial, Helvetica, sans-serif">The 
+              encoding attribute specifies how will the image be encoded on the 
+              output media:<br>
+              - jpeg means in a lossy way, with quality controlled by the encodingQuality 
+              attribute<br>
+              - zlib means the image will be encoded in a lossless way, similar 
+              to PNG or GIF images.<br>
+              - native means Turbine should try to leave the image encoded in 
+              its original format (if the output media allows it to), to prevent 
+              quality loss on images with an original lossy compression (currently 
+              only JPEG images).</font></td>
+          </tr>
+          <tr valign="top"> 
+            <td><font size="2" face="Courier New, Courier, mono">encodingQuality=&quot;quality&quot;</font></td>
+            <td><font size="2" face="Verdana, Arial, Helvetica, sans-serif">Sets 
+              the quality of images encoded with the jpeg encoding attribute. 
+              A percentage from 0 to 100, with the same meaning as JPEG file quality 
+              settings.</font></td>
+          </tr>
+        </table>
+        <p><font size="2" face="Verdana, Arial, Helvetica, sans-serif">Turbine 
+          will always try to reuse multiple equal images to optimize the generated 
+          file size.<br>
+          &nbsp; </font></p>
+        <p><font size="5" face="Arial, Helvetica, sans-serif"><a name="movieclip"></a>Movie 
+          Clips</font></p>
+        <p><font size="2" face="Verdana, Arial, Helvetica, sans-serif">Created 
+          with the <a href="mmlreference.htm#movieclip">&lt;MovieClip&gt;</a> 
+          tag, movie clips are the basic unit of time organization, allowing elements 
+          to be sequenced across time. Movie clips provide a base where a succession 
+          of frames (through the <a href="mmlreference.htm#frame">&lt;Frame&gt;</a> 
+          tag) are displayed - on these frames elements can be placed, changed 
+          or removed as needed. Frames always have the same duration, which is 
+          specified by the global frameRate setting (available on the {Media.FrameRate} 
+          variable or through the Interface).<br>
+          Besides being directly defined, movie clips can be loaded from external 
+          sources, either Flash .swf movies or other MML, by using the src attribute 
+          - the following example creates a movie clip with the contents of an 
+          external Flash .swf movie:</font></p>
+        <table width="450" border="1" cellpadding="0" cellspacing="0" bordercolor="#999999">
+          <tr> 
+            <td>
+<table width="100%" border="0" cellpadding="16" cellspacing="0" bgcolor="#eeeef4">
+                <tr> 
+                  <td>
+<div align="left"> 
+                      <p><font size="2" face="Verdana, Arial, Helvetica, sans-serif"><font color="#0000FF" face="Courier New, Courier, mono">&lt;MovieClip 
+                        src=&quot;<font color="#33CC33">animation.swf</font>&quot; 
+                        pos=&quot;</font><font color="#33CC33" face="Courier New, Courier, mono">1</font><font color="#33CC33" size="2" face="Courier New, Courier, mono">00,100</font><font color="#0000FF" face="Courier New, Courier, mono">&quot;/&gt;<br>
+                        </font></font></p>
+                    </div></td>
+                </tr>
+              </table></td>
+          </tr>
+        </table>
+        <p><font size="2" face="Verdana, Arial, Helvetica, sans-serif">Please 
+          see the above '<a href="#placingframes">Placing Elements Across Frames</a>' 
+          section for an overview and examples of movie clips.</font></p>
+        <p>&nbsp;</p>
+        <p><font size="5" face="Arial, Helvetica, sans-serif"> <a name="button"></a>Buttons</font></p>
+        <p><font size="2" face="Verdana, Arial, Helvetica, sans-serif">Button 
+          elements created with the <a href="mmlreference.htm#button">&lt;Button&gt;</a> 
+          tag, can be used to create clickable hot-spots for anything from normal 
+          buttons to dragging areas and a lot more. A simple example of a button 
+          displaying an image with a text above it; when clicked, a URL is requested; 
+          when the mouse enters the button area, a wash.wav audio file is played:</font></p>
+        <table width="450" border="1" cellpadding="0" cellspacing="0" bordercolor="#999999">
+          <tr> 
+            <td>
+<table width="100%" border="0" cellpadding="16" cellspacing="0" bgcolor="#eeeef4">
+                <tr> 
+                  <td>
+<div align="left"> 
+                      <p><font color="#0000FF" size="2" face="Courier New, Courier, mono">&lt;Button&gt;</font></p>
+                      <p> <font color="#0000FF" size="2" face="Courier New, Courier, mono">&nbsp;&nbsp;&lt;State 
+                        type=&quot;<font color="#33CC33">up,hit</font>&quot;&gt;<br>
+                        &nbsp;&nbsp;&nbsp;&nbsp;&lt;Image src=&quot;<font color="#33CC33">button-image.bmp</font>&quot;/&gt;<br>
+                        &nbsp;&nbsp;&nbsp;&nbsp;&lt;Text pos=&quot;<font color="#33CC33">50,50</font>&quot;&gt;<font color="#CC0000">An 
+                        Image Button</font>&lt;/Text&gt;<br>
+                        &nbsp;&nbsp;&lt;/State&gt;</font></p>
+                      <p> <font color="#0000FF" size="2" face="Courier New, Courier, mono">&nbsp;&nbsp;&lt;Script 
+                        event=&quot;<font color="#33CC33">Release</font>&quot;&gt;<br>
+                        &nbsp;&nbsp;&nbsp;&nbsp;getUrl(&quot;<font color="#33CC33">http://www.example.com</font>&quot;, 
+                        &quot;<font color="#33CC33">_blank</font>&quot;);<br>
+                        &nbsp;&nbsp;&lt;/Script&gt;</font></p>
+                      <p><font color="#0000FF" size="2" face="Courier New, Courier, mono">&nbsp;&nbsp;&lt;Audio 
+                        event=&quot;<font color="#33CC33">MouseOver</font>&quot; 
+                        src=&quot;<font color="#33CC33">wosh.wav</font>&quot;/&gt;</font></p>
+                      <p><font color="#0000FF" size="2" face="Courier New, Courier, mono">&lt;/Button&gt;<br>
+                        </font></p>
+                    </div></td>
+                </tr>
+              </table></td>
+          </tr>
+        </table>
+        <p><font size="2" face="Verdana, Arial, Helvetica, sans-serif">On the 
+          example we can see button states expressed through the <a href="mmlreference.htm#state">&lt;State&gt;</a> 
+          tag; as well as button events, signaled on the event attribute of the<a href="mmlreference.htm#script"> 
+          &lt;Script&gt;</a> and <a href="mmlreference.htm#audio">&lt;Audio&gt;</a> 
+          tags.</font></p>
+        <p><font size="3" face="Verdana, Arial, Helvetica, sans-serif"> <strong>Button 
+          States</strong></font></p>
+        <p><font size="2" face="Verdana, Arial, Helvetica, sans-serif">Button 
+          states describe how the button will appear on the four possible states:</font></p>
+        <ul>
+          <li><font size="2" face="Verdana, Arial, Helvetica, sans-serif">Up state 
+            is the normal, default button state.</font></li>
+          <li><font size="2" face="Verdana, Arial, Helvetica, sans-serif">Over 
+            state is when the mouse is floating over the button hit area (the 
+            Hit state).</font></li>
+          <li><font size="2" face="Verdana, Arial, Helvetica, sans-serif">Down 
+            state happens when the user clicks the button.</font></li>
+          <li><font size="2" face="Verdana, Arial, Helvetica, sans-serif">Hit 
+            state or hit area defines what is the sensible area of the button 
+            used to determine whether the mouse is floating over the button or 
+            whether it was clicked.</font></li>
+        </ul>
+        <p><font size="2" face="Verdana, Arial, Helvetica, sans-serif">A button 
+          state is specified by the <a href="mmlreference.htm#state">&lt;State&gt;</a> 
+          tag, which can express one or more of these states. All the elements 
+          placed inside a &lt;State&gt; will appear as the representation of that 
+          button state.</font></p>
+        <p><font size="2" face="Verdana, Arial, Helvetica, sans-serif">The button 
+          tag can include a type attribute that can be set to &quot;push&quot; 
+          or &quot;menu&quot;, specifying how the button behaves:</font></p>
+        <ul>
+          <li><font size="2" face="Verdana, Arial, Helvetica, sans-serif">With 
+            &quot;push&quot; type the mouse is captured, all events are sent to 
+            the button, for example clicking on a push button and dragging outside 
+            will still affect the button.</font></li>
+          <li><font size="2" face="Verdana, Arial, Helvetica, sans-serif">With 
+            &quot;menu&quot; type, as soon as the mouse cursor leaves the button 
+            area it is ignored by the button, which returns to its normal state.</font></li>
+        </ul>
+        <p><font size="2" face="Verdana, Arial, Helvetica, sans-serif"><br>
+          <strong><font size="3">Button Events</font></strong></font></p>
+        <p><font size="2" face="Verdana, Arial, Helvetica, sans-serif">If the 
+          button states specify the looks, the events specify what to do when 
+          a button changes state - two types of actions can be specified: scripting 
+          to execute or audio to play. The following events are possible, depending 
+          on the mouse interaction with the button:</font></p>
+        <table width="90%" border="1" cellspacing="0" cellpadding="4">
+          <tr valign="top" bgcolor="#000000"> 
+            <td width="18%"><strong><font color="#FFFFFF" size="2" face="Verdana, Arial, Helvetica, sans-serif">Event</font></strong></td>
+            <td width="55%"><strong><font color="#FFFFFF" size="2" face="Verdana, Arial, Helvetica, sans-serif">State 
+              Transition</font></strong></td>
+            <td width="27%"><strong><font color="#FFFFFF" size="2" face="Verdana, Arial, Helvetica, sans-serif">Available 
+              on </font></strong></td>
+          </tr>
+          <tr valign="top"> 
+            <td><font size="2" face="Verdana, Arial, Helvetica, sans-serif">Press<br>
+              </font></td>
+            <td><font size="2" face="Verdana, Arial, Helvetica, sans-serif">Over 
+              with mouse up to Over with mouse down</font></td>
+            <td><font size="2" face="Verdana, Arial, Helvetica, sans-serif">Script 
+              and Audio</font></td>
+          </tr>
+          <tr valign="top"> 
+            <td><font size="2" face="Verdana, Arial, Helvetica, sans-serif">Release<br>
+              </font></td>
+            <td><font size="2" face="Verdana, Arial, Helvetica, sans-serif">Over 
+              with mouse down to Over with mouse up</font></td>
+            <td><font size="2" face="Verdana, Arial, Helvetica, sans-serif">Script 
+              and Audio</font></td>
+          </tr>
+          <tr valign="top"> 
+            <td><font size="2" face="Verdana, Arial, Helvetica, sans-serif">RollOver<br>
+              </font></td>
+            <td><font size="2" face="Verdana, Arial, Helvetica, sans-serif">Outside 
+              to Over state, with mouse up</font></td>
+            <td><font size="2" face="Verdana, Arial, Helvetica, sans-serif">Script 
+              and Audio</font></td>
+          </tr>
+          <tr valign="top"> 
+            <td><font size="2" face="Verdana, Arial, Helvetica, sans-serif">RollOut<br>
+              </font></td>
+            <td><font size="2" face="Verdana, Arial, Helvetica, sans-serif">Over 
+              to Outside state, with mouse up</font></td>
+            <td><font size="2" face="Verdana, Arial, Helvetica, sans-serif">Script 
+              and Audio</font></td>
+          </tr>
+          <tr valign="top"> 
+            <td><font size="2" face="Verdana, Arial, Helvetica, sans-serif">DragOver<br>
+              </font></td>
+            <td><font size="2" face="Verdana, Arial, Helvetica, sans-serif">Outside 
+              to Over, with mouse down</font></td>
+            <td><font size="2" face="Verdana, Arial, Helvetica, sans-serif">Script 
+              only</font></td>
+          </tr>
+          <tr valign="top"> 
+            <td><font size="2" face="Verdana, Arial, Helvetica, sans-serif">DragOut</font></td>
+            <td><font size="2" face="Verdana, Arial, Helvetica, sans-serif">Over 
+              to Outside, with mouse down</font></td>
+            <td><font size="2" face="Verdana, Arial, Helvetica, sans-serif">Script 
+              only </font></td>
+          </tr>
+          <tr valign="top"> 
+            <td><font size="2" face="Verdana, Arial, Helvetica, sans-serif">RelOutside<br>
+              </font></td>
+            <td><font size="2" face="Verdana, Arial, Helvetica, sans-serif">Outside 
+              mouse down to mouse up - <em>available only on push-type buttons</em></font></td>
+            <td><font size="2" face="Verdana, Arial, Helvetica, sans-serif">Script 
+              only</font></td>
+          </tr>
+        </table>
+        <p><font size="2" face="Verdana, Arial, Helvetica, sans-serif">Buttons 
+          are outputted to PDF by showing only its &quot;up&quot; state. Associated 
+          audio and script are not exported</font></p>
+        <p>&nbsp;</p>
+        <p><font size="5" face="Arial, Helvetica, sans-serif"><a name="video"></a>Video</font></p>
+        <p><font size="2" face="Verdana, Arial, Helvetica, sans-serif"> The <a href="mmlreference.htm#video">&lt;Video&gt;</a> 
+          tag can integrate video from the following formats:</font></p>
+        <ul>
+          <li><font size="2" face="Verdana, Arial, Helvetica, sans-serif">Animated 
+            GIF format</font></li>
+          <li><font size="2" face="Verdana, Arial, Helvetica, sans-serif">FLV 
+            format (except FlashComm-encoded Nelymoser 8 khz audio)</font></li>
+          <li><font size="2" face="Verdana, Arial, Helvetica, sans-serif">AVI 
+            format (Windows version only)</font></li>
+          <li><font size="2" face="Verdana, Arial, Helvetica, sans-serif">QuickTime 
+            format (Windows version only - the QuickTime runtime must be installed)</font></li>
+        </ul>
+        <p><font size="2" face="Verdana, Arial, Helvetica, sans-serif">The next 
+          example displays a video loaded from a QuickTime movie, at a 200x160 
+          size, in 12 frames per second:</font></p>
+        <table width="400" border="1" cellpadding="0" cellspacing="0" bordercolor="#999999">
+          <tr> 
+            <td>
+<table width="100%" border="0" cellpadding="16" cellspacing="0" bgcolor="#eeeef4">
+                <tr> 
+                  <td>
+<div align="left"> 
+                      <p><font color="#0000FF" size="2" face="Courier New, Courier, mono">&lt;Video 
+                        src=&quot;<font color="#33CC33">jingle.mov</font>&quot; 
+                        <br>
+                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;frameRate=&quot;<font color="#33CC33">12</font>&quot; 
+                        size=&quot;<font color="#33CC33">200,160</font>&quot;/&gt;<br>
+                        &nbsp; </font></p>
+                    </div></td>
+                </tr>
+              </table></td>
+          </tr>
+        </table>
+        <p><font size="2" face="Verdana, Arial, Helvetica, sans-serif">Please 
+          have the following characteristics in mind when encoding videos, most 
+          of these are limitations derived from running on a web server environment:</font></p>
+        <ul>
+          <li><font size="2" face="Verdana, Arial, Helvetica, sans-serif">The 
+            required codecs for AVI or QuickTime must be installed on the machine 
+            where Turbine runs - when in doubt over this try to display the video 
+            on Media Player or QuickTime player. Note that AVI and QuickTime integration 
+            is only available on the Windows version of PHP Turbine.</font></li>
+          <li><font size="2" face="Verdana, Arial, Helvetica, sans-serif">FLV 
+            movies are the fastest to be encoded, followed by Animated GIFs; AVI 
+            and QuickTime will consume larger system resources.</font></li>
+          <li><font size="2" face="Verdana, Arial, Helvetica, sans-serif">AVI 
+            and QuickTime (Windows only) have a limitation of a maximum of 16000 
+            frames. If this is problem, the frame rate at which the video is being 
+            integrated must be decreased.</font></li>
+          <li><font size="2" face="Verdana, Arial, Helvetica, sans-serif">Due 
+            to QuickTime SDK limitations, QuickTime (Windows only) videos cannot 
+            be encoded in parallel, rather they are internally sequenced by Turbine.</font></li>
+          <li><font size="2" face="Verdana, Arial, Helvetica, sans-serif">Video 
+            and audio encoding quality settings are available for all formats, 
+            except for FLV videos, which are not re-encoded.</font></li>
+          <li><font size="2" face="Verdana, Arial, Helvetica, sans-serif">Encoding 
+            can be a resource-intensive process, with all the related consequences 
+            - for example if running from a web server, the default page timeout 
+            (which can be set to larger values) can be reached.</font></li>
+        </ul>
+        <p><font size="2" face="Verdana, Arial, Helvetica, sans-serif">In general, 
+          encoding time and final file size can be improved by the following two 
+          factors:</font></p>
+        <ul>
+          <li><font size="2" face="Verdana, Arial, Helvetica, sans-serif">Selecting 
+            a lower frame rate (less frames are encoded)</font></li>
+          <li><font size="2" face="Verdana, Arial, Helvetica, sans-serif">Selecting 
+            a lower resample size (less pixels are processed)</font></li>
+          <li><font size="2" face="Verdana, Arial, Helvetica, sans-serif">Selecting 
+            lower quality settings will lower file size</font></li>
+        </ul>
+        <p><font size="2" face="Verdana, Arial, Helvetica, sans-serif">&nbsp;<br>
+          The following encoding options and quality settings are available on 
+          the encode attribute:</font></p>
+        <table width="100%" border="1" cellspacing="0" cellpadding="4">
+          <tr bgcolor="#000000"> 
+            <td width="54%"><strong><font color="#FFFFFF" size="2" face="Verdana, Arial, Helvetica, sans-serif">Value</font></strong></td>
+            <td width="46%"><strong><font color="#FFFFFF" size="2" face="Verdana, Arial, Helvetica, sans-serif">Description</font></strong></td>
+          </tr>
+          <tr valign="top"> 
+            <td><font size="2" face="Verdana, Arial, Helvetica, sans-serif">video(verylow, 
+              low, medium, high, lossless)</font></td>
+            <td><font size="2" face="Verdana, Arial, Helvetica, sans-serif">Specifies 
+              the video encoding quality, with one of these settings - for example 
+              video(high). This setting is only possible for non-FLV formats, 
+              since FLV is not re-encoded</font></td>
+          </tr>
+          <tr valign="top"> 
+            <td><font size="2" face="Verdana, Arial, Helvetica, sans-serif">noAudio</font></td>
+            <td><font size="2" face="Verdana, Arial, Helvetica, sans-serif">No 
+              audio should be encoded</font></td>
+          </tr>
+          <tr valign="top"> 
+            <td><font size="2" face="Verdana, Arial, Helvetica, sans-serif">raw, 
+              <br>
+              adpcm(verylow, low, med, high), <br>
+              mp3</font></td>
+            <td><font size="2" face="Verdana, Arial, Helvetica, sans-serif">The 
+              audio encoding quality, either raw samples (that is without compression), 
+              or ADPCM compression with one of the possible quality settings. 
+              Turbine does not perform MP3 encoding, which will only be used if 
+              the original video already includes audio on this format</font></td>
+          </tr>
+        </table>
+        <p><font size="2" face="Verdana, Arial, Helvetica, sans-serif">Video (except 
+          loaded from FLV format) is exported to PDF as individual images, one 
+          per frame/page.</font></p>
+        <p>&nbsp;</p>
+        <p><font size="5" face="Arial, Helvetica, sans-serif"><a name="audio"></a>Audio</font></p>
+        <p><font size="2" face="Verdana, Arial, Helvetica, sans-serif"> The <a href="mmlreference.htm#audio">&lt;Audio&gt;</a> 
+          tag can integrate audio from the following formats:</font></p>
+        <ul>
+          <li><font size="2" face="Verdana, Arial, Helvetica, sans-serif">WAV 
+            files (uncompressed)</font></li>
+          <li><font size="2" face="Verdana, Arial, Helvetica, sans-serif">MP3 
+            files (with 11khz, 22khz and 44khz sampling rates)</font></li>
+          <li><font size="2" face="Verdana, Arial, Helvetica, sans-serif">FLV 
+            format (except FlashComm-encoded Nelymoser 8 khz)</font></li>
+          <li><font size="2" face="Verdana, Arial, Helvetica, sans-serif">AVI 
+            format (Windows only)</font></li>
+          <li><font size="2" face="Verdana, Arial, Helvetica, sans-serif">QuickTime 
+            format (Windows only - the QuickTime runtime must be installed)</font></li>
+        </ul>
+        <p><font size="2" face="Verdana, Arial, Helvetica, sans-serif">The next 
+          example plays an audio block encoded from a WAV file, with an high ADPCM 
+          encoding quality:</font></p>
+        <table width="400" border="1" cellpadding="0" cellspacing="0" bordercolor="#999999">
+          <tr> 
+            <td>
+<table width="100%" border="0" cellpadding="16" cellspacing="0" bgcolor="#eeeef4">
+                <tr> 
+                  <td>
+<div align="left"> 
+                      <p><font color="#0000FF" size="2" face="Courier New, Courier, mono">&lt;Audio 
+                        src=&quot;<font color="#33CC33">speech29.wav</font>&quot; 
+                        <br>
+                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;encoding=&quot;<font color="#33CC33">adpcm(high)</font>&quot;/&gt;<br>
+                        &nbsp; </font></p>
+                    </div></td>
+                </tr>
+              </table></td>
+          </tr>
+        </table>
+        <p><font size="2" face="Verdana, Arial, Helvetica, sans-serif">Please 
+          have the following characteristics or limitations in mind when encoding 
+          audio, most of them derived from running on a web server environment:</font></p>
+        <ul>
+          <li><font size="2" face="Verdana, Arial, Helvetica, sans-serif">The 
+            required audio codecs for AVI or QuickTime must be installed on the 
+            machine where Turbine runs - when in doubt over this try to play the 
+            video on Media Player or QuickTime player. Note that AVI and QuickTime 
+            integration is only available on the Windows version of PHP Turbine.</font></li>
+          <li><font size="2" face="Verdana, Arial, Helvetica, sans-serif">MP3 
+            and FLV movies are the fastest to be audio-encoded, followed by WAV 
+            files; AVI and QuickTime will consume larger system resources.</font></li>
+          <li><font size="2" face="Verdana, Arial, Helvetica, sans-serif">Due 
+            to QuickTime SDK limitations, QuickTime (on Windows only) audio cannot 
+            be encoded in parallel, rather it is sequenced by Turbine.</font></li>
+          <li><font size="2" face="Verdana, Arial, Helvetica, sans-serif">Audio 
+            encoding can be a resource-intensive process (although not as much 
+            as video encoding), with all the related consequences - for example 
+            if running from a web server, the default page timeout (which can 
+            be set) can be reached.</font></li>
+        </ul>
+        <p><font size="2" face="Verdana, Arial, Helvetica, sans-serif">&nbsp;<br>
+          The following encoding options and quality settings are available on 
+          the encode attribute:</font></p>
+        <table width="100%" border="1" cellspacing="0" cellpadding="4">
+          <tr bgcolor="#000000"> 
+            <td width="42%"><strong><font color="#FFFFFF" size="2" face="Verdana, Arial, Helvetica, sans-serif">Value</font></strong></td>
+            <td width="58%"><strong><font color="#FFFFFF" size="2" face="Verdana, Arial, Helvetica, sans-serif">Description</font></strong></td>
+          </tr>
+          <tr valign="top"> 
+            <td><font size="2" face="Verdana, Arial, Helvetica, sans-serif">raw, 
+              <br>
+              adpcm(verylow, low, med, high), <br>
+              mp3</font></td>
+            <td><font size="2" face="Verdana, Arial, Helvetica, sans-serif">The 
+              encoding quality, either raw samples (that is without compression), 
+              or ADPCM compression with one of the possible quality settings. 
+              <br>
+              Turbine does not perform MP3 encoding, which will only be used if 
+              the original audio already includes audio on this format</font></td>
+          </tr>
+        </table>
+        <p><font size="2" face="Verdana, Arial, Helvetica, sans-serif">Audio is 
+          not exported to PDF.</font></p>
+        <p>&nbsp;</p>
+        <p><font size="5" face="Arial, Helvetica, sans-serif"><a name="script"></a>The 
+          &lt;Script&gt; Tag</font></p>
+        <p><font size="2" face="Verdana, Arial, Helvetica, sans-serif">With the 
+          <a href="mmlreference.htm#script">&lt;Script&gt;</a> tag, Turbine supports 
+          ECMA-262 Script, also known as Action Script or JavaScript. The full 
+          ECMA Script specification is available at:</font></p>
+        <blockquote> 
+          <p><font size="2" face="Verdana, Arial, Helvetica, sans-serif"><a href="http://www.ecma-international.org/publications/standards/ECMA-262.HTM" target="_blank">http://www.ecma-international.org/publications/standards/ECMA-262.HTM</a></font></p>
+        </blockquote>
+        <p><font size="2" face="Verdana, Arial, Helvetica, sans-serif">Although 
+          the above standard specification covers the whole ECMA-262, we suggest 
+          instead using the Action Script reference included with the Macromedia 
+          Flash authoring tool help, which is also available online at the <a href="http://www.macromedia.com" target="_blank">Macromedia.com</a> 
+          website:</font></p>
+        <blockquote> 
+          <p><font size="2" face="Verdana, Arial, Helvetica, sans-serif"><a href="http://www.macromedia.com/support/flash/action_scripts/actionscript_dictionary" target="_blank">http://www.macromedia.com/support/flash/action_scripts/actionscript_dictionary</a></font></p>
+        </blockquote>
+        <p><font size="2" face="Verdana, Arial, Helvetica, sans-serif">The subset of this 
+          standard supported by the Macromedia Flash MX authoring tool is also 
+          supported by Turbine with the following characteristics:</font></p>
+        <ul>
+          <li><font size="2" face="Verdana, Arial, Helvetica, sans-serif">Deprecated 
+            Flash functions, from Flash 4 and Flash 5, are not supported</font></li>
+        </ul>
+        <p><font size="2" face="Verdana, Arial, Helvetica, sans-serif">On the 
+          next example, Action Script variables are set by the script tag:</font></p>
+        <table width="450" border="1" cellpadding="0" cellspacing="0" bordercolor="#999999">
+          <tr> 
+            <td>
+<table width="100%" border="0" cellpadding="16" cellspacing="0" bgcolor="#eeeef4">
+                <tr> 
+                  <td>
+<div align="left"> 
+                      <p><font color="#0000FF" size="2" face="Courier New, Courier, mono">&lt;Script&gt;</font></p>
+                      <p><font color="#CC0000" size="2" face="Courier New, Courier, mono">&nbsp;&nbsp;var1 
+                        = &quot;a value&quot;;<br>
+                        &nbsp;&nbsp;var2 = 21;</font><font color="#CC0000"><br>
+                        <font size="2" face="Courier New, Courier, mono">&nbsp;&nbsp;var3 
+                        = 3.65;<br>
+                        &nbsp;&nbsp;var4 = ['array value', 'another array value'];</font></font></p>
+                      <p><font color="#0000FF" size="2" face="Courier New, Courier, mono">&lt;/Script&gt;</font></p>
+                      </div></td>
+                </tr>
+              </table></td>
+          </tr>
+        </table>
+        <p><font size="2" face="Verdana, Arial, Helvetica, sans-serif">All the 
+          usual object-oriented techniques are supported - on the next example, 
+          an onEnterFrame handler is set to _root:</font></p>
+        <table width="450" border="1" cellpadding="0" cellspacing="0" bordercolor="#999999">
+          <tr> 
+            <td>
+<table width="100%" border="0" cellpadding="16" cellspacing="0" bgcolor="#eeeef4">
+                <tr> 
+                  <td>
+<div align="left"> 
+                      <p><font color="#0000FF" size="2" face="Courier New, Courier, mono">&lt;Script&gt;</font></p>
+                      <p><font color="#CC0000" size="2" face="Courier New, Courier, mono">&nbsp;&nbsp;_root.onEnterFrame 
+                        = function(){<br>
+                        &nbsp;&nbsp;// code here runs at the start of each frame<br>
+                        &nbsp; &nbsp;&nbsp;this.update();<br>
+                        &nbsp;&nbsp;}</font></p>
+                      <p><font color="#0000FF" size="2" face="Courier New, Courier, mono">&lt;/Script&gt;</font></p>
+                    </div></td>
+                </tr>
+              </table></td>
+          </tr>
+        </table>
+        <p></p>
+        <p><font size="2" face="Verdana, Arial, Helvetica, sans-serif">Script 
+          blocks can interact with Turbine elements, by using the instance attribute 
+          - on the next example, the coordinates of an &lt;Image&gt; are manipulated 
+          from a script object, by setting them to the current mouse position:</font></p>
+        <table width="500" border="1" cellpadding="0" cellspacing="0" bordercolor="#999999">
+          <tr> 
+            <td>
+<table width="100%" border="0" cellpadding="16" cellspacing="0" bgcolor="#eeeef4">
+                <tr> 
+                  <td>
+<div align="left"> 
+                      <p><font color="#0000ff" size="2" face="Courier New, Courier, mono">&lt;Image 
+                        src=&quot;<font color="#33CC33">flower.gif</font>&quot; 
+                        instance=&quot;<font color="#33CC33">flower</font>&quot;/&gt;</font></p>
+                      <p><font color="#0000FF" size="2" face="Courier New, Courier, mono">&lt;Script&gt;</font></p>
+                      <p><font color="#CC0000" size="2" face="Courier New, Courier, mono">&nbsp;&nbsp;onEnterFrame 
+                        = function (){<br>
+                        &nbsp;&nbsp;&nbsp;&nbsp;flower._x=_xmouse;<br>
+                        &nbsp;&nbsp;&nbsp;&nbsp;flower._y=_ymouse;<br>
+                        &nbsp;&nbsp;}</font></p>
+                      <p><font color="#0000FF" size="2" face="Courier New, Courier, mono">&lt;/Script&gt;</font></p>
+                    </div></td>
+                </tr>
+              </table></td>
+          </tr>
+        </table>
+        <p><font size="2" face="Verdana, Arial, Helvetica, sans-serif">Scripting 
+          can also be loaded from an external file or HTTP location by using the 
+          src attribute:</font></p>
+        <table width="500" border="1" cellpadding="0" cellspacing="0" bordercolor="#999999">
+          <tr> 
+            <td> <table width="100%" border="0" cellpadding="16" cellspacing="0" bgcolor="#eeeef4">
+                <tr> 
+                  <td> <div align="left"> 
+                      <p><font size="2" face="Verdana, Arial, Helvetica, sans-serif"><font color="#0000FF" face="Courier New, Courier, mono">&lt;Script 
+                        src=&quot;<font color="#33CC33">source.as</font>&quot;</font><font color="#0000FF" face="Courier New, Courier, mono">/&gt;<br>
+                        </font></font></p>
+                    </div></td>
+                </tr>
+              </table></td>
+          </tr>
+        </table>
+        <p><font size="2" face="Verdana, Arial, Helvetica, sans-serif">Scripts 
+          are not exported to PDF.</font></p>
+        <p><font size="2" face="Verdana, Arial, Helvetica, sans-serif">&nbsp;&nbsp;<br>
+          <font size="3"><strong><a name="turbinedebug"></a>The turbineDebug Function</strong></font></font></p>
+        <p><font size="2" face="Verdana, Arial, Helvetica, sans-serif">When used 
+          with the Turbine Window (by setting {Media.Debug} to Yes or through 
+          the <a href="mmlreference.htm#media">&lt;Media&gt;</a> tag), debug messages 
+          can be issued from a script block for debugging purposes. This is done 
+          by calling the turbineDebug(msg) function, which is made available when 
+          the Turbine Window is included on the generated media. On the next example 
+          messages are logged by calling this function:</font></p>
+        <table width="90%" border="1" cellpadding="0" cellspacing="0" bordercolor="#999999">
+          <tr> 
+            <td><table width="100%" border="0" cellpadding="16" cellspacing="0" bgcolor="#eeeef4">
+                <tr> 
+                  <td valign="top"> <div align="left"> 
+                      <p><font color="#0000FF" size="2" face="Courier New, Courier, mono">&lt;Media 
+                        Debug=&quot;<font color="#33CC33">yes</font>&quot;/&gt;</font></p>
+                      <p><font color="#0000FF" size="2" face="Courier New, Courier, mono">&lt;Script&gt;<br>
+                        <font color="#CC0000">&nbsp;&nbsp;turbineDebug(&quot;This 
+                        text was logged from a script block.&quot;);</font></font></p>
+                      <p><font color="#CC0000" size="2" face="Courier New, Courier, mono"> 
+                        &nbsp;&nbsp;var now = new Date();<br>
+                        &nbsp;&nbsp;turbineDebug(&quot;Current time is &quot; 
+                        + now.toString());</font></p>
+                      <p><font color="#CC0000" size="2" face="Courier New, Courier, mono"> 
+                        &nbsp;&nbsp;turbineDebug(&quot;Flash Player version is: 
+                        &quot; + getVersion());</font></p>
+                      <p> <font color="#0000FF" size="2" face="Courier New, Courier, mono">&lt;/Script&gt;</font><font size="2" face="Courier New, Courier, mono"><br>
+                        &nbsp; </font></p>
+                    </div></td>
+                </tr>
+              </table></td>
+          </tr>
+        </table>
+        <p>&nbsp;<br>
+          <font size="2" face="Verdana, Arial, Helvetica, sans-serif"> </font><font size="2" face="Verdana, Arial, Helvetica, sans-serif"><br>
+          <font size="5" face="Arial, Helvetica, sans-serif"><a name="autolayout"></a>AutoLayout</font></font></p>
+        <p><font size="2" face="Verdana, Arial, Helvetica, sans-serif">What happens 
+          when the pos attribute of a visual object is not specified - where is 
+          it placed? The answer depends on the current AutoLayout settings defined 
+          by the <a href="mmlreference.htm#autolayout">&lt;AutoLayout&gt;</a> 
+          tag, or by the default {System.AutoLayout} variable. Depending on the 
+          AutoLayout type, the behavior is:</font></p>
+        <table width="80%" border="1" cellspacing="0" cellpadding="4">
+          <tr bgcolor="#000000"> 
+            <td width="25%"><font color="#FFFFFF" size="2" face="Verdana, Arial, Helvetica, sans-serif"><strong>Type 
+              Attribute</strong></font></td>
+            <td width="75%"><font color="#FFFFFF" size="2" face="Verdana, Arial, Helvetica, sans-serif"><strong>Description</strong></font></td>
+          </tr>
+          <tr> 
+            <td><font size="2" face="Courier New, Courier, mono">Vertical</font></td>
+            <td><font size="2" face="Verdana, Arial, Helvetica, sans-serif">Elements 
+              will be placed in a vertical succession, along a vertical column</font></td>
+          </tr>
+          <tr> 
+            <td><font size="2" face="Courier New, Courier, mono">Horizontal</font></td>
+            <td><font size="2" face="Verdana, Arial, Helvetica, sans-serif">Elements 
+              will be placed in an horizontal succession, along an horizontal 
+              row </font></td>
+          </tr>
+          <tr> 
+            <td><font size="2" face="Courier New, Courier, mono">Off</font></td>
+            <td><font size="2" face="Verdana, Arial, Helvetica, sans-serif">AutoLayout 
+              is disabled, element positions default to the origin (0,0) </font></td>
+          </tr>
+        </table>
+        <p><font size="2" face="Verdana, Arial, Helvetica, sans-serif">When using 
+          Vertical or Horizontal AutoLayout types, we can align the elements column 
+          or elements row, with the align attribute, using the usual left, right 
+          or center alignments.</font></p>
+        <p>&nbsp;</p>
+        </TD>
+    </TR>
+    <TR valign="top"> 
+      <TD COLSPAN="2" height="6"> 
+        <table border=0 cols=2 width="100%" cellpadding="0" cellspacing="0" >
+          <tr> 
+            <td width="443" height="25"><font face="Verdana, Arial, Helvetica, sans-serif" size="3"><a href="manual.htm">Table 
+              of Contents</a></font></td>
+            <td width="117" height="25"> 
+              <div align="center"><font face="Verdana, Arial, Helvetica, sans-serif" size="3"><a href="mmlcommands.htm">Next 
+                Chapter </a> </font></div>
+            </td>
+          </tr>
+        </table>
+      </TD>
+    </TR>
+  </TABLE>
+</CENTER>
+<CENTER>
+  <p> <font face="Verdana, Arial, Helvetica, sans-serif" size="1"><i>&nbsp;<br>
+    Flash and Macromedia Flash are trademarks of Macromedia, Inc.</i></font>
+</CENTER>
+</BODY>
+</HTML>

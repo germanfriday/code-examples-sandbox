@@ -1,0 +1,65 @@
+function handleArrowKeys(evt) {
+    evt = (evt) ? evt : ((window.event) ? event : null);
+    if (evt) {
+        var top = getElementStyle("moveableElem", "top", "top");
+        var left = getElementStyle("moveableElem", "left", "left");
+        var elem = document.getElementById("moveableElem");
+        switch (evt.keyCode) {
+            case 37:
+                elem.style.left = (parseInt(left) - 5) + "px";
+                break;    
+            case 38:
+                elem.style.top = (parseInt(top) - 5) + "px";
+                break;    
+            case 39:
+                elem.style.left = (parseInt(left) + 5) + "px";
+                break;    
+            case 40:
+                elem.style.top = (parseInt(top) + 5) + "px";
+                break;    
+         }
+    }
+}
+
+document.onkeyup = handleArrowKeys;
+
+----------
+
+function handleAccelerator(evt) {
+    evt = (evt) ? evt : ((window.event) ? event : null);
+    if (evt) {
+        if (evt.keyCode == 80 && evt.ctrlKey && evt.altKey) {
+            runSpecial();
+        }
+    }
+}
+
+document.onkeyup = handleAccelerator;
+
+----------
+
+function showHelp(elem) {
+    var elemID = elem.id;
+    switch (elemID) {
+        case "name":
+            alert("Enter your full name.");
+            break;
+        case "email":
+            alert("We will be contacting you with your access code. \n" +
+                   "Make sure the address is accurate and up to date.");
+            break;
+        ...
+    }
+}
+
+function handleAccelerator(evt) {
+    evt = (evt) ? evt : ((window.event) ? event : null);
+    var elem = (evt.target) ? evt.target : ((evt.srcElement) ? evt.srcElement : null);
+    if (evt) {
+        // for Ctrl+Alt+F2
+        if (evt.keyCode == 113 && evt.ctrlKey && evt.altKey) {
+            showHelp(elem);
+        }
+    }
+}
+document.onkeyup = handleAccelerator;

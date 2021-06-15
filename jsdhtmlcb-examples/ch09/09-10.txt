@@ -1,0 +1,18 @@
+function handleClick(evt) {
+    evt = (evt) ? evt : ((window.event) ? event : null);
+    if (evt) {
+        if (evt.shiftKey) {
+            // process Shift-Click here
+        } else {
+            // process normal Click here
+        }
+    }
+}
+
+----------
+
+if (evt.shiftKey && evt.ctrlKey) {...}
+
+----------
+
+if (evt.altKey || evt.ctrlKey || evt.metaKey || evt.shiftKey) {...}

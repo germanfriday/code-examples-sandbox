@@ -1,0 +1,12 @@
+// verify browser language
+function getLang(type) {
+    var lang;
+    if (typeof navigator.userLanguage != "undefined") {
+        lang = navigator.userLanguage.toUpperCase();
+    } else if (typeof navigator.language != "undefined") {
+        lang = navigator.language.toUpperCase();
+    }
+    return (lang && lang.indexOf(type.toUpperCase()) == 0)
+}
+...
+location.href = (getLang("de")) ? "de/home.html" : "en/home.html";

@@ -1,0 +1,404 @@
+#topBar {
+	position: absolute;
+	z-index: 2;
+	left: 0;
+	width: 100%;
+	height: 15px;	
+	background-color: #008040;	
+	margin: 0;
+	border-bottom: 10px inset #C6EC8C;	
+}
+
+#navigation {	
+	position: absolute;
+	z-index: 1;
+	width: 30px;
+	padding-right:10px;
+	padding-top: 0px;	
+	top: 40px;
+	left: 0%;	
+	height:100%;	
+	border-right: 1px dashed #999999;
+	text-align:right;
+	background-image: url("images/squareTileLighter.gif");
+	background-repeat: repeat;
+	}
+
+#centerDoc {
+	position: absolute;	
+	/*width:auto;*/
+	width:550px;
+	left: 50px;
+	top: 34px;	
+	text-align:left;
+	z-index: 10;	
+	margin: 0px 0 20px 0px; /*top right bottom left*/
+	display: block;	
+	}
+	body>#centerDoc{ left: 55px; }	
+	
+	
+	
+#topFrog {
+	position: absolute;	
+	width:100px;
+	height:100px;
+	right: 30px;
+	top: 8px;	
+	text-align:left;
+	z-index: 4;	
+	margin: 0px 0 20px 0px; /*top right bottom left*/
+	display: none;
+	/*
+	background-image:url(imagesNew/killersites_frog_small.gif);
+	background-repeat:no-repeat;
+	background-position:center;	*/
+	}
+
+#floater {
+	float:right;
+	display: block;
+	z-index: 1;	
+	position: relative;
+	padding:10px 10px 10px 10px;
+	margin-right:10px;
+	margin-left:10px;
+	margin-bottom:10px;
+	width:140px;
+	background-color: #F4F4F4;	
+	border:1px dashed #000000	
+}
+
+#partners {
+	
+}
+
+
+
+
+
+
+
+
+
+
+
+
+body {		
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: 12px;
+	color: #000000;
+	background-color: #F9F9F9;
+	margin: 0 0 0 0; /*top right bottom left*/
+	padding: 0 0 0 0;
+	background-attachment:fixed;
+	/*background-image: url("images/killersites_frog_small_tran.gif");
+	background-repeat:no-repeat;
+	background-position:bottom right;	*/	
+	}
+	
+tr {
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size:12px;
+}		
+#centerDoc p {width:500px;}
+#centerDoc tr p {width:90%;}
+
+h1 {
+	font-size: 20px;
+	font-weight: normal;
+	text-transform:uppercase;
+	margin-top:20px;	
+}
+
+h2 {	
+	font-size: 16px;
+	font-weight: bold;		
+	text-transform:uppercase;
+	color:#008040;
+	margin-top:70px;	
+	}
+
+h3 {
+	font-size: 15px;	
+	font-weight: bold;
+	color:#008040;
+	text-transform:uppercase;
+	margin-top:40px;
+	}
+
+h4 {
+	font-size: 10px;	
+	font-weight: bold;
+	text-transform:uppercase;
+	margin-top:30px;
+	}
+	
+h5 {
+	font-size: 12px;	
+	font-weight: bold;
+	text-transform:uppercase;	
+	margin-top:30px;
+}	
+
+li {
+	list-style-type: none;
+	line-height: 170%;	
+}
+
+input {
+	font-size: 10px;
+	font-weight: normal;	
+}
+
+dt {
+	line-height: 50px;	
+	}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.red_bullet {
+background:url(images/bullets_redsquare_arrow.gif) no-repeat left center;
+padding-left:25px;
+}
+
+
+
+
+.codeSnippet {
+	font-size: 12px;
+	font-weight: normal;
+	font-style:normal;
+	border: 1px dashed #009900;
+	padding:5px 5px 5px 5px;
+	margin-top:30px;
+}
+
+
+.showBullets {
+	margin-bottom:30px;	
+}
+
+.showBullets li {
+	list-style-type: square;
+	line-height: 170%;		
+}
+
+.showOrderedBullets li {
+	list-style-type: decimal;
+	line-height: 200%;	
+}
+
+.thin {
+	font-size: 10px;
+	font-weight: normal;
+	border: 1px dashed #009900;
+	background-color: #FFFFFF;	
+}
+
+.tableBottomSpace {
+	margin-bottom:25px;	
+}
+
+.linkBuddy {
+ font-family: Verdana, Arial, Helvetica, sans-serif;
+ font-size: 10px;
+ color: blue;
+ font-weight: bold;
+ text-decoration:underline;
+}
+
+.footer {
+margin-top:40px;
+margin-bottom:20px;
+}
+
+.footer p {text-transform:uppercase;}
+
+/* USED FOR THE WEBSITE REVIEW SECTION*/
+.customHeading {
+margin-bottom:20px;
+text-transform: uppercase;
+color:#006633;
+}
+
+.paragraphWrapper {
+margin-bottom:40px;
+}
+
+.titleBar {margin-bottom:30px;}
+/* USED FOR THE WEBSITE REVIEW SECTION*/
+
+
+
+
+
+
+
+
+/*  LINK CODE  */
+	
+	
+a:link {
+ font-family: Verdana, Arial, Helvetica, sans-serif; 
+ font-size: 12px;
+ color: #00000;
+ font-weight: normal;
+}
+
+a:visited {
+ font-family: Verdana, Arial, Helvetica, sans-serif;
+ font-size: 12px;
+ color: blue;
+ font-weight: normal;
+}
+a:hover {
+ font-family: Verdana, Arial, Helvetica, sans-serif;
+ font-size: 12px;
+ color: green;
+ font-weight: normal;
+}
+a:active {
+ font-family: Verdana, Arial, Helvetica, sans-serif;
+ font-size: 12px;
+ font-weight: normal;
+}
+
+
+
+
+
+
+li a:link {
+ font-family: Verdana, Arial, Helvetica, sans-serif; 
+ font-size: 12px;
+ color: #00000;
+ font-weight: normal;
+}
+li a:visited {
+ font-family: Verdana, Arial, Helvetica, sans-serif;
+ font-size: 12px;
+ color: blue;
+ font-weight: normal;
+}
+li a:hover {
+ font-family: Verdana, Arial, Helvetica, sans-serif;
+ font-size: 12px;
+ color: green;
+ font-weight: normal;
+}
+li a:active {
+ font-family: Verdana, Arial, Helvetica, sans-serif;
+ font-size: 12px;
+ font-weight: normal;
+}
+
+
+
+
+
+
+ 
+#Subpartners li a:link, #partners li a:link {
+ font-family: Verdana, Arial, Helvetica, sans-serif; 
+ font-size: 9px;
+ color: #999999;
+ font-weight: normal;
+}
+#Subpartners li a:visited, #partners li a:visited {
+ font-family: Verdana, Arial, Helvetica, sans-serif;
+ font-size: 9px;
+ color: #999999;
+ font-weight: normal;
+}
+#Subpartners li a:hover, #partners li a:hover {
+ font-family: Verdana, Arial, Helvetica, sans-serif;
+ font-size: 9px;
+ color: green;
+ font-weight: normal;
+}
+#partners li a:active {
+ font-family: Verdana, Arial, Helvetica, sans-serif;
+ font-size: 9px;
+ font-weight: normal;
+}
+
+
+
+
+
+
+
+
+/*NAVIGATION MENU CSS CODE*/
+
+#nav {
+margin: 0px; margin-left:10px; margin-top:1px; 
+}
+#navigation>#nav { margin-left:-5px;} /*IE Windows hack*/
+
+#nav li{
+list-style:none; 
+margin: 1px; 
+width: 184px; 
+border-bottom: 1px solid #CCCCCC; border-right: 1px solid #CCCCCC; border-left: 1px solid #CCCCCC;
+background-color: #EEEEEE;
+text-align:right;
+font-size:10px; 
+}
+#nav li a{
+text-decoration:none; display:block; width: 15.5em; padding-right:5px;
+}
+#nav>li a{ width:15.3em; padding-right:1px;}
+
+#nav a:hover{
+background-color: #008040; color: #FFFFFF;
+}
+.topMenuItem {border-top: 1px solid #CCCCCC;}
+
+
+
+
+
+
+
+
+/* DECIDED THAT THE MENU SHOULD BE APPLIED TO MULTIPLE ITEMS*/
+
+.nav {
+margin: 0px; margin-left:10px; margin-top:1px; 
+}
+#navigation>.nav { margin-left:-5px;} /*IE Windows hack*/
+
+.nav li{
+list-style:none; 
+margin: 1px; 
+width: 184px; 
+border-bottom: 1px solid #CCCCCC; border-right: 1px solid #CCCCCC; border-left: 1px solid #CCCCCC;
+background-color: #EEEEEE;
+text-align:right; 
+font-size:10px;
+}
+.nav li a{
+text-decoration:none; display:block; width: 15.5em; padding-right:5px;
+}
+.nav>li a{ width:15.3em; padding-right:1px;}
+
+.nav a:hover{
+background-color: #008040; color: #FFFFFF;
+}
+
+.form_element_div {
+margin-bottom:10px;
+}

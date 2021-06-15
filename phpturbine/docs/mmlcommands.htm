@@ -1,0 +1,534 @@
+<HTML>
+<HEAD>
+<META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=iso-8859-1">
+<META NAME="GENERATOR" CONTENT="Mozilla/4.04 [en] (Win95; I) [Netscape]">
+<TITLE>MML Command Tags</TITLE>
+</HEAD>
+<BODY topmargin="0" leftmargin="0" rightmargin="0" marginwidth="0" marginheight="0" TEXT="#000000" BGCOLOR="#FFFFFF" LINK="#003366" VLINK="#FF9900" ALINK="#FF6600">
+<CENTER>
+  <table width="100%" border="0" cellspacing="0" cellpadding="0" align="center">
+    <tr bgcolor="#000033"> 
+      <td background="images/bar_left.gif" width="50%">&nbsp;</td>
+      <td> 
+        <table width="560" border="0" cellspacing="0" cellpadding="0">
+          <tr> 
+            <td width="334"><img src="images/bar_left.gif" width="334" height="28"></td>
+            <td><img src="images/bar_central.gif" width="110" height="28"></td>
+            <td><img src="images/bar_logo.gif" width="116" height="28"></td>
+          </tr>
+        </table>
+      </td>
+      <td background="images/1x1_azul_esc.gif" width="50%">&nbsp;</td>
+    </tr>
+    <tr bgcolor="#FFFFFF" height="4"> 
+      <td colspan="3"></td>
+    </tr>
+  </table>
+  <TABLE BORDER=0 COLS=2 WIDTH="560" cellpadding="0" cellspacing="0" >
+    <TR valign="top">
+      <TD COLSPAN="2" height="12"> 
+        <table border=0 cols=2 width="560" cellpadding="0" cellspacing="0" >
+          <tr> 
+            <td width="443" height="25"><font face="Verdana, Arial, Helvetica, sans-serif" size="3"><a href="manual.htm">Table 
+              of Contents</a></font></td>
+            <td width="117" height="25"> 
+              <div align="center"><font face="Verdana, Arial, Helvetica, sans-serif" size="3"><a href="interface.htm">Next 
+                Chapter </a> </font></div>
+            </td>
+          </tr>
+        </table>
+      </TD>
+    </TR>
+    <TR valign="top"> 
+      <TD COLSPAN="2"> <p align="left">&nbsp;</p>
+        <p align="left"><font face="Arial, Helvetica, sans-serif" size="6">4. 
+          MML Command Tags</font></p>
+        <p align="left"><font size="2" face="Verdana, Arial, Helvetica, sans-serif">This 
+          chapter describes some higher-level MML tags, which are called MML commands. 
+          See the <a href="mmlreference.htm">MML Reference section</a> for the 
+          full reference about these commands.</font></p>
+        <ul>
+          <li><font size="3" face="Arial, Helvetica, sans-serif" align="left"><a href="#loadingvars">Loading 
+            Turbine Variables</a></font></li>
+          <li><font size="3" face="Arial, Helvetica, sans-serif" align="left"><a href="#loadingdatasets">Loading 
+            Turbine DataSets</a></font></li>
+          <li><font size="3" face="Arial, Helvetica, sans-serif" align="left"><a href="#automovieclip">AutoMovieClip</a></font></li>
+          <li><font size="3" face="Arial, Helvetica, sans-serif" align="left"><a href="#autoimage">AutoImage</a></font></li>
+          <li><font size="3" face="Arial, Helvetica, sans-serif" align="left"><a href="#automedia">AutoMedia</a></font></li>
+          <li><font size="3" face="Arial, Helvetica, sans-serif" align="left"><a href="#chart">Chart</a></font></li>
+          <li><font size="3" face="Arial, Helvetica, sans-serif" align="left"><a href="#publishing">Publishing 
+            Variables and DataSets</a></font></li>
+          <li><font size="3" face="Arial, Helvetica, sans-serif" align="left"><a href="#components">Using 
+            Flash Components</a></font></li>
+        </ul>
+        <p>&nbsp;</p>
+        <p>&nbsp;</p>
+        <p>&nbsp;</p>
+        <p><font size="5" face="Arial, Helvetica, sans-serif"><a name="loadingvars"></a>Loading 
+          Turbine Variables</font></p>
+        <p><font size="2" face="Verdana, Arial, Helvetica, sans-serif">Turbine 
+          variables can be loaded from MML through the <a href="mmlreference.htm#var">&lt;Var&gt;</a> 
+          tag. Variables can be either specified &quot;inline&quot; within the 
+          &lt;Var&gt; tag itself:</font></p>
+        <table width="296" border="1" cellpadding="0" cellspacing="0" bordercolor="#999999">
+          <tr> 
+            <td> <table width="100%" border="0" cellpadding="16" cellspacing="0" bgcolor="#eeeef4">
+                <tr> 
+                  <td> <div align="left"> 
+                      <p><font color="#0000FF" size="2" face="Courier New, Courier, mono">&lt;Var&gt;</font><font size="2" face="Courier New, Courier, mono"><br>
+                        <font color="#CC0000">&nbsp;&nbsp;Variable1 = value1<br>
+                        &nbsp;&nbsp;Variable2 = value2<br>
+                        &nbsp;&nbsp;Variable3 = value3 </font><br>
+                        <font color="#0000FF">&lt;/Var&gt;<br>
+                        &nbsp; </font></font><font size="2" face="Courier New, Courier, mono"> 
+                        </font></p>
+                    </div></td>
+                </tr>
+              </table></td>
+          </tr>
+        </table>
+        <p><font size="2" face="Verdana, Arial, Helvetica, sans-serif">Or they 
+          can be loaded from an external location:</font></p>
+        <table width="500" border="1" cellpadding="0" cellspacing="0" bordercolor="#999999">
+          <tr> 
+            <td> <table width="100%" border="0" cellpadding="16" cellspacing="0" bgcolor="#eeeef4">
+                <tr> 
+                  <td> <div align="left"> 
+                      <p><font color="#0000FF" size="2" face="Courier New, Courier, mono">&lt;Var 
+                        src=&quot;<font color="#33CC33">varfile.txt</font>&quot;/&gt;</font></p>
+                      <p><font color="#0000FF" size="2" face="Courier New, Courier, mono">&lt;Var 
+                        src=&quot;<font color="#33CC33">http://example.com/getvars.php?id=2004</font>&quot;/&gt;<br>
+                        &nbsp; </font></p>
+                    </div></td>
+                </tr>
+              </table></td>
+          </tr>
+        </table>
+        <p><font size="2" face="Verdana, Arial, Helvetica, sans-serif">Please 
+          see the '<a href="vardataset.htm#definingvariables">Defining Variables</a>' 
+          Section for more details.<br>
+          &nbsp;<br>
+          &nbsp; &nbsp;</font></p>
+        <p><font size="5" face="Arial, Helvetica, sans-serif"><a name="loadingdatasets"></a>Loading 
+          Turbine DataSets</font></p>
+        <p><font size="2" face="Verdana, Arial, Helvetica, sans-serif">Through 
+          the <a href="mmlreference.htm#dataset">&lt;DataSet&gt;</a> MML tag, 
+          DataSets can be loaded from XML tags included &quot;inline&quot; in 
+          MML:</font></p>
+        <table width="500" border="1" cellpadding="0" cellspacing="0" bordercolor="#999999">
+          <tr> 
+            <td> <table width="100%" border="0" cellpadding="16" cellspacing="0" bgcolor="#eeeef4">
+                <tr> 
+                  <td> <div align="left"> 
+                      <p><font color="#0000FF" size="2" face="Courier New, Courier, mono">&lt;DataSet 
+                        dataSet=&quot;<font color="#33CC33">dataSetName</font>&quot;<br>
+                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;rowTag= 
+                        &quot;<font color="#33CC33">chapter</font>&quot;<br>
+                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;columnTags=&quot;<font color="#33CC33">title,pages,interesting,topics</font>&quot;&gt;</font></p>
+                      <p> <font color="#CC0000" size="2" face="Courier New, Courier, mono">&nbsp;&nbsp;&lt;book&gt;</font></p>
+                      <p> <font color="#CC0000" size="2" face="Courier New, Courier, mono">&nbsp;&nbsp;&nbsp;&nbsp;&lt;name&gt;Gone 
+                        with the rain&lt;/name&gt;<br>
+                        &nbsp;&nbsp;&nbsp;&nbsp;&lt;author&gt;Arabian Bruce Lawrence&lt;/author&gt;<br>
+                        &nbsp;&nbsp;&nbsp;&nbsp;&lt;price&gt;$39&lt;/price&gt;</font></p>
+                      <p> <font color="#CC0000" size="2" face="Courier New, Courier, mono">&nbsp;&nbsp;&nbsp;&nbsp;&lt;chapter&gt; 
+                        <br>
+                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;title id=&quot;1&quot;&gt;First 
+                        Launch&lt;/title&gt;<br>
+                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;pages&gt;45&lt;/pages&gt;<br>
+                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;interesting&gt;90%&lt;/interesting&gt;<br>
+                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;topics&gt;Love, 
+                        hate, adventure&lt;/topics&gt;<br>
+                        &nbsp;&nbsp;&nbsp;&nbsp;&lt;/chapter&gt;</font></p>
+                      <p> <font color="#CC0000" size="2" face="Courier New, Courier, mono">&nbsp;&nbsp;&nbsp;&nbsp;&lt;chapter&gt;<br>
+                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;title id=&quot;2&quot;&gt;Second 
+                        Launch&lt;/title&gt;<br>
+                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;pages&gt;71&lt;/pages&gt;<br>
+                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;interesting&gt;30%&lt;/interesting&gt;<br>
+                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;topics&gt;Love&lt;/topics&gt;<br>
+                        &nbsp;&nbsp;&nbsp;&nbsp;&lt;/chapter&gt;</font></p>
+                      <p> <font color="#CC0000" size="2" face="Courier New, Courier, mono">&nbsp;&nbsp;&lt;/book&gt;</font></p>
+                      <p><font color="#0000FF" size="2" face="Courier New, Courier, mono">&lt;/DataSet&gt;</font></p>
+                      <p><font color="#0000FF" size="2" face="Courier New, Courier, mono">&nbsp; 
+                        </font></p>
+                    </div></td>
+                </tr>
+              </table></td>
+          </tr>
+        </table>
+        <p><font size="2" face="Verdana, Arial, Helvetica, sans-serif">For more 
+          details about loading DataSets from XML please see the '<a href="vardataset.htm#loadingdatasetxml">Loading 
+          a DataSet from XML</a>' Section.</font></p>
+        <p>&nbsp;<br>
+          <br>
+          <font size="5" face="Arial, Helvetica, sans-serif"><a name="automovieclip"></a>AutoMovieClip</font></p>
+        <p><font size="2" face="Verdana, Arial, Helvetica, sans-serif">The AutoMovieClip 
+          command is a really powerful way of automatically generating items like 
+          spots on maps, grids, menus, combo-boxes and all sorts of widgets.<br>
+          Simply put, the AutoMovieClip command displays movie clips driven by 
+          values from a DataSet - each row of the DataSet originates the placement 
+          of a movie clip. The driving DataSet can have some specially named columns 
+          (that start by an underscore character) with information like the movie 
+          clip position, scaling, alpha, etc.</font></p>
+        <p><font size="2" face="Verdana, Arial, Helvetica, sans-serif">The AutoMovieClip 
+          tag can work in two modes, with respect to the place coordinates:</font></p>
+        <ul>
+          <li><font size="2" face="Verdana, Arial, Helvetica, sans-serif">with 
+            an automatic cursor - this mode is useful for horizontal/vertical 
+            lists and grids.</font></li>
+          <li><font size="2" face="Verdana, Arial, Helvetica, sans-serif">with 
+            coordinate values specified on the DataSet - this mode is more suited 
+            for applications like hot-spots on maps, where coordinates are not 
+            structured.</font></li>
+        </ul>
+        <p><font size="2" face="Verdana, Arial, Helvetica, sans-serif">For the 
+          complete reference information, please see the <a href="mmlreference.htm#automovieclip">&lt;AutoMovieClip&gt; 
+          reference entry</a> and the command in action on the included AutoMovieClip 
+          Sample.<br>
+          &nbsp; </font></p>
+        <p> <font size="5" face="Arial, Helvetica, sans-serif"><a name="autoimage" id="autoimage"></a>AutoImage</font></p>
+        <p><font size="2" face="Verdana, Arial, Helvetica, sans-serif">The AutoImage 
+          tag does for images what the AutoMovieClip tag does for movie clips 
+          - it is a way of displaying either structured or unstructured sets of 
+          images, commanded by a DataSet, with each DataSet row originating the 
+          placement of an image, with custom properties being controlled by the 
+          DataSet values.</font></p>
+        <p><font size="2" face="Verdana, Arial, Helvetica, sans-serif">As the 
+          AutoMovieClip, AutoImage can also work in two modes, in respect to the 
+          placement coordinates:</font></p>
+        <ul>
+          <li><font size="2" face="Verdana, Arial, Helvetica, sans-serif">with 
+            an automatic cursor - this mode is useful for horizontal/vertical 
+            image lists and grids.</font></li>
+          <li><font size="2" face="Verdana, Arial, Helvetica, sans-serif">with 
+            coordinate values specified on the DataSet - this mode is more suited 
+            for applications like images on on maps, where coordinates are not 
+            structured.</font></li>
+        </ul>
+        <p><font size="2" face="Verdana, Arial, Helvetica, sans-serif">For the 
+          complete reference information, please see the <a href="mmlreference.htm#autoimage">&lt;AutoImage&gt; 
+          reference entry</a>.</font><font size="2" face="Verdana, Arial, Helvetica, sans-serif"><br>
+          &nbsp; </font></p>
+        <p><font size="2" face="Verdana, Arial, Helvetica, sans-serif"><br>
+          <font size="5" face="Arial, Helvetica, sans-serif"> <a name="automedia"></a>AutoMedia</font></font></p>
+        <p><font size="2" face="Verdana, Arial, Helvetica, sans-serif">While the 
+          AutoMovieClip and AutoImage MML commands automate the displaying of 
+          Movie Clips and Images respectively, AutoMedia can automate the displaying 
+          of any combination of MML tags. With AutoMedia, each DataSet row can 
+          originate the creation and display of an element, making it possible 
+          to orchestrate complex scenes from structured information in a DataSet.</font></p>
+        <p><font size="2" face="Verdana, Arial, Helvetica, sans-serif">AutoMedia 
+          can work in two different modes, depending on whether pre-defined element 
+          ids are specified (on the DataSet or as a tag attribute) or are not 
+          specified at all. When an id is specified, instances of the element 
+          of such id are displayed as commanded by the DataSet rows. But if no 
+          id is specified, Turbine will try to create new elements as instructed 
+          by the DataSet and specified &lt;AutoMedia&gt; tag attributes.</font></p>
+        <p><font size="2" face="Verdana, Arial, Helvetica, sans-serif">For the 
+          complete reference information, please see the <a href="mmlreference.htm#automedia">&lt;AutoMedia&gt; 
+          reference entry</a>.</font></p>
+        <p><br>
+          <font size="5" face="Arial, Helvetica, sans-serif"><a name="chart"></a>Chart</font></p>
+        <p><font size="2" face="Verdana, Arial, Helvetica, sans-serif">Turbine 
+          can create sophisticated chart graphics based on DataSet contents, by 
+          using the <a href="mmlreference.htm#chart">&lt;Chart&gt;</a> tag. Turbine 
+          can create charts where each bar, column or pie slice automatically 
+          display information contained in DataSet rows. Besides the actual chart 
+          element proportions, this information can include a label text, custom 
+          color, tooltip text and/or a link to be used (for example) on custom 
+          drill-down sequences.</font></p>
+        <p><font size="2" face="Verdana, Arial, Helvetica, sans-serif">The following 
+          chart types are included:</font></p>
+        <ul>
+          <li><font size="2" face="Verdana, Arial, Helvetica, sans-serif">Area</font></li>
+          <li><font size="2" face="Verdana, Arial, Helvetica, sans-serif">Area3d</font></li>
+          <li><font size="2" face="Verdana, Arial, Helvetica, sans-serif">Column</font></li>
+          <li><font size="2" face="Verdana, Arial, Helvetica, sans-serif">Column3d</font></li>
+          <li><font size="2" face="Verdana, Arial, Helvetica, sans-serif">CoolColumn</font></li>
+          <li><font size="2" face="Verdana, Arial, Helvetica, sans-serif">Glass</font></li>
+          <li><font size="2" face="Verdana, Arial, Helvetica, sans-serif">Line</font></li>
+          <li><font size="2" face="Verdana, Arial, Helvetica, sans-serif">Line3d</font></li>
+          <li><font size="2" face="Verdana, Arial, Helvetica, sans-serif">LineMarker</font></li>
+          <li><font size="2" face="Verdana, Arial, Helvetica, sans-serif"> Pie</font></li>
+          <li><font size="2" face="Verdana, Arial, Helvetica, sans-serif"> Pie3d</font></li>
+          <li><font size="2" face="Verdana, Arial, Helvetica, sans-serif">Plain</font></li>
+          <li><font size="2" face="Verdana, Arial, Helvetica, sans-serif">Scatter</font></li>
+          <li><font size="2" face="Verdana, Arial, Helvetica, sans-serif">Stick</font></li>
+          <li><font size="2" face="Verdana, Arial, Helvetica, sans-serif">Triangle</font></li>
+          <li><font size="2" face="Verdana, Arial, Helvetica, sans-serif">Triangle3d</font></li>
+        </ul>
+        <p><font size="2" face="Verdana, Arial, Helvetica, sans-serif">Please 
+          see the included Charts sample for live examples of all these chart 
+          types.<br>
+          &nbsp; </font></p>
+        <p><font size="2" face="Verdana, Arial, Helvetica, sans-serif"></font><font size="5" face="Arial, Helvetica, sans-serif"><a name="publishing"></a>Publishing 
+          Variables and DataSets</font></p>
+        <p><font size="2" face="Verdana, Arial, Helvetica, sans-serif">Turbine 
+          Variables exist at server-time, when the output media is processed and 
+          generated; often, it's useful to make some of these values available 
+          into the Flash player, as Action Script variables. <br>
+          Turbine Variables can be published in MML by using the the <a href="mmlreference.htm#publishvar">&lt;PublishVar&gt;</a> 
+          tag, which can publish into different types of Action Script variables 
+          - these variables are defined, just as if they were natively defined 
+          in Action Script code - the following variable types can be created:</font></p>
+        <table width="78%" border="1" cellspacing="0" cellpadding="4">
+          <tr bgcolor="#000000"> 
+            <td width="34%"><strong><font color="#FFFFFF" size="2" face="Verdana, Arial, Helvetica, sans-serif">AS 
+              Variable Type</font></strong></td>
+            <td width="66%"><strong><font color="#FFFFFF" size="2" face="Verdana, Arial, Helvetica, sans-serif">In 
+              AS would be created was:</font></strong></td>
+          </tr>
+          <tr valign="top"> 
+            <td><font size="2" face="Verdana, Arial, Helvetica, sans-serif">Simple 
+              variable</font></td>
+            <td><font size="2" face="Verdana, Arial, Helvetica, sans-serif">var1=21; 
+              var2=&quot;value2&quot;;</font></td>
+          </tr>
+          <tr valign="top"> 
+            <td><font size="2" face="Verdana, Arial, Helvetica, sans-serif">Array</font></td>
+            <td><font size="2" face="Verdana, Arial, Helvetica, sans-serif">arr=new 
+              Array(&quot;value1&quot;,&quot;value2&quot;);</font></td>
+          </tr>
+          <tr valign="top"> 
+            <td><font size="2" face="Verdana, Arial, Helvetica, sans-serif">Named 
+              Array</font></td>
+            <td><font size="2" face="Verdana, Arial, Helvetica, sans-serif">arr=new 
+              Array();<br>
+              arr[&quot;var1&quot;]=&quot;value1&quot;;<br>
+              arr[&quot;var2&quot;]=&quot;value2&quot;; </font></td>
+          </tr>
+        </table>
+        <font size="2" face="Verdana, Arial, Helvetica, sans-serif">&nbsp;<br>
+        </font> <p><font size="2" face="Verdana, Arial, Helvetica, sans-serif">The 
+          following example publishes Turbine variables {name} and {address} into 
+          AS variables:</font></p>
+        <table width="400" border="1" cellpadding="0" cellspacing="0" bordercolor="#999999">
+          <tr> 
+            <td> <table width="100%" border="0" cellpadding="16" cellspacing="0" bgcolor="#eeeef4">
+                <tr> 
+                  <td> <div align="left"> 
+                      <p><font color="#0000FF" size="2" face="Courier New, Courier, mono">&lt;PublishVar 
+                        name=&quot;<font color="#33CC33">name,address</font>&quot;/&gt;<br>
+                        &nbsp;</font><font color="#0000FF" size="2" face="Courier New, Courier, mono"><br>
+                        &nbsp; </font></p>
+                    </div></td>
+                </tr>
+              </table></td>
+          </tr>
+        </table>
+        <p><font size="2" face="Verdana, Arial, Helvetica, sans-serif">This would 
+          create two AS variables, similar as the following AS block:</font></p>
+        <table width="300" border="1" cellpadding="0" cellspacing="0" bordercolor="#999999">
+          <tr> 
+            <td> <table width="100%" border="0" cellpadding="16" cellspacing="0" bgcolor="#eeeef4">
+                <tr> 
+                  <td> <div align="left"> 
+                      <p><font color="#0000FF" size="2" face="Courier New, Courier, mono">name=&quot;value1&quot;;<br>
+                        address=&quot;value2&quot;;<br>
+                        &nbsp; </font></p>
+                    </div></td>
+                </tr>
+              </table></td>
+          </tr>
+        </table>
+        <p><font size="2" face="Verdana, Arial, Helvetica, sans-serif">On a similar 
+          way, the contents of a DataSet can also be published into Action Script 
+          with the <a href="mmlreference.htm#publishdataset">&lt;PublishDataSet&gt;</a> 
+          tag - for example:</font></p>
+        <table width="400" border="1" cellpadding="0" cellspacing="0" bordercolor="#999999">
+          <tr> 
+            <td> <table width="100%" border="0" cellpadding="16" cellspacing="0" bgcolor="#eeeef4">
+                <tr> 
+                  <td> <div align="left"> 
+                      <p><font color="#0000FF" size="2" face="Courier New, Courier, mono">&lt;PublishDataSet 
+                        dataSet=&quot;<font color="#33CC33">dataSetName</font>&quot;/&gt;<br>
+                        &nbsp;</font><font color="#0000FF" size="2" face="Courier New, Courier, mono"><br>
+                        &nbsp; </font></p>
+                    </div></td>
+                </tr>
+              </table></td>
+          </tr>
+        </table>
+        <p><font size="2" face="Verdana, Arial, Helvetica, sans-serif">The same 
+          possibilities in regard to Action Script variable types are also present 
+          when publishing DataSets.</font></p>
+        <p><font size="2" face="Verdana, Arial, Helvetica, sans-serif">Published 
+          variables will not be available when exporting to PDF.</font></p>
+        <p><font size="2" face="Verdana, Arial, Helvetica, sans-serif"><a name="components" id="components"></a></font><font size="5" face="Arial, Helvetica, sans-serif">Using 
+          Flash Components</font></p>
+        <p><font size="2" face="Verdana, Arial, Helvetica, sans-serif">Flash MX components 
+          can be used with Turbine to build complex interfaces. To use a Flash 
+          component, the following simple steps are needed:</font></p>
+        <ul>
+          <li><font size="2" face="Verdana, Arial, Helvetica, sans-serif">A Flash 
+            .swf file containing an instance of the component must be included 
+            with the <a href="mmlreference.htm#include">&lt;Include&gt;</a> tag 
+            or with the Interface with the Turbine.Include call</font></li>
+          <li><font size="2" face="Verdana, Arial, Helvetica, sans-serif">The 
+            component must be placed with the <a href="mmlreference.htm#place">&lt;Place&gt;</a> 
+            tag, by using the special component attribute. Any component parameters 
+            can be defined with &lt;Param&gt; tags inside the &lt;Place&gt; tag 
+            - the component parameter names should be the same as used on the 
+            Macromedia Flash authoring tool.</font></li>
+        </ul>
+        <p><font size="2" face="Verdana, Arial, Helvetica, sans-serif">Suppose 
+          we have a Flash .swf movie (pushbutton.swf) where an instance of a PushButton 
+          component as been placed. To include and use this component, all we 
+          need to do is:</font></p>
+        <table width="400" border="1" cellpadding="0" cellspacing="0" bordercolor="#999999">
+          <tr> 
+            <td> <table width="100%" border="0" cellpadding="16" cellspacing="0" bgcolor="#eeeef4">
+                <tr> 
+                  <td> <div align="left"> 
+                      <p><font color="#0000FF" size="2" face="Courier New, Courier, mono">&lt;Include 
+                        src=&quot;<font color="#33CC33">pushbutton.swf</font>&quot;/&gt;</font></p>
+                      <p><font color="#0000FF" size="2" face="Courier New, Courier, mono">&lt;Place 
+                        component=&quot;<font color="#33CC33">PushButton</font>&quot;/&gt;</font><font color="#0000FF" size="2" face="Courier New, Courier, mono">&nbsp; 
+                        <br>
+                        &nbsp; </font></p>
+                    </div></td>
+                </tr>
+              </table></td>
+          </tr>
+        </table>
+        <p><font size="2" face="Verdana, Arial, Helvetica, sans-serif">The above 
+          would display a PushButton component with default values - to set component 
+          parameters, we can use &lt;Param&gt; tags inside the &lt;Place&gt; - 
+          for example to set the button label, we can:</font></p>
+        <table width="550" border="1" cellpadding="0" cellspacing="0" bordercolor="#999999">
+          <tr> 
+            <td> <table width="100%" border="0" cellpadding="16" cellspacing="0" bgcolor="#eeeef4">
+                <tr> 
+                  <td> <div align="left"> 
+                      <p><font color="#0000FF" size="2" face="Courier New, Courier, mono">&lt;Include 
+                        src=&quot;<font color="#33CC33">pushbutton.swf</font>&quot;/&gt;</font></p>
+                      <p><font color="#0000FF" size="2" face="Courier New, Courier, mono">&lt;Place 
+                        component=&quot;<font color="#33CC33">PushButton</font>&quot;&gt;</font></p>
+                      <p><font color="#0000FF" size="2" face="Courier New, Courier, mono">&nbsp;&nbsp;&lt;Param 
+                        name=&quot;<font color="#33CC33">Label</font>&quot; value=&quot;<font color="#33CC33">This 
+                        is a Button</font>&quot;&gt;</font></p>
+                      <p><font color="#0000FF" size="2" face="Courier New, Courier, mono">&lt;/Place&gt;<br>
+                        &nbsp; </font></p>
+                    </div></td>
+                </tr>
+              </table></td>
+          </tr>
+        </table>
+        <p><font size="2" face="Verdana, Arial, Helvetica, sans-serif">The above 
+          example displays the button with its label set to the inspiring &quot;This 
+          is a Button&quot;.<br>
+          Component and parameter names and value types are the same as used in 
+          the Macromedia Flash authoring tool 'Component Panel' and on the 'Component 
+          Parameters' window.</font></p>
+        <p>&nbsp;<br>
+          <font size="2" face="Verdana, Arial, Helvetica, sans-serif">Now suppose 
+          we have a Flash .swf movie (listbox.swf) where an instance of a ListBox 
+          component as been placed. As above, to include and use the component, 
+          all we need to do is:</font></p>
+        <table width="400" border="1" cellpadding="0" cellspacing="0" bordercolor="#999999">
+          <tr> 
+            <td> <table width="100%" border="0" cellpadding="16" cellspacing="0" bgcolor="#eeeef4">
+                <tr> 
+                  <td> <div align="left"> 
+                      <p><font color="#0000FF" size="2" face="Courier New, Courier, mono">&lt;Include 
+                        src=&quot;<font color="#33CC33">listbox.swf</font>&quot;/&gt;</font></p>
+                      <p><font color="#0000FF" size="2" face="Courier New, Courier, mono">&lt;Place 
+                        component=&quot;<font color="#33CC33">ListBox</font>&quot;/&gt;</font><font color="#0000FF" size="2" face="Courier New, Courier, mono">&nbsp; 
+                        <br>
+                        &nbsp; </font></p>
+                      </div></td>
+                </tr>
+              </table></td>
+          </tr>
+        </table>
+        <p><font size="2" face="Verdana, Arial, Helvetica, sans-serif">The above 
+          would display the ListBox component with default entries - to add some 
+          entries to the list box, we can:</font></p>
+        <table width="550" border="1" cellpadding="0" cellspacing="0" bordercolor="#999999">
+          <tr> 
+            <td> <table width="100%" border="0" cellpadding="16" cellspacing="0" bgcolor="#eeeef4">
+                <tr> 
+                  <td> <div align="left"> 
+                      <p><font color="#0000FF" size="2" face="Courier New, Courier, mono">&lt;Include 
+                        src=&quot;<font color="#33CC33">listbox.swf</font>&quot;/&gt;</font></p>
+                      <p><font color="#0000FF" size="2" face="Courier New, Courier, mono">&lt;Place 
+                        component=&quot;<font color="#33CC33">ListBox</font>&quot;&gt;</font></p>
+                      <p><font color="#0000FF" size="2" face="Courier New, Courier, mono">&nbsp;&nbsp;&lt;Param 
+                        name=&quot;<font color="#33CC33">labels</font>&quot; value=&quot;<font color="#33CC33">['first', 
+                        'second', 'one more']</font>&quot;&gt;</font></p>
+                      <p><font color="#0000FF" size="2" face="Courier New, Courier, mono">&lt;/Place&gt;<br>
+                        &nbsp; </font></p>
+                    </div></td>
+                </tr>
+              </table></td>
+          </tr>
+        </table>
+        <p><font size="2" face="Verdana, Arial, Helvetica, sans-serif">The above 
+          example displays a list box with the three entries as specified on the 
+          labels parameter. Note that the value is an Action Script array - parameter 
+          names and values are the same as used in the Macromedia Flash authoring 
+          tool Component Parameters window, specified as valid Action Script data 
+          types.</font></p>
+        <p><font size="2" face="Verdana, Arial, Helvetica, sans-serif">The component 
+          names that can be used on the &lt;Place&gt; tag should be the same as 
+          the component names used on the Flash authoring tool, as listed on the 
+          Components panel or on the component's Symbol Properties under the &quot;Name:&quot; 
+          field (on this case &quot;ListBox&quot;):</font></p>
+        <p><font size="2" face="Verdana, Arial, Helvetica, sans-serif"><img src="images/symbol_props.gif" width="414" height="438"> 
+          </font></p>
+        <p><font size="2" face="Verdana, Arial, Helvetica, sans-serif">However 
+          if the component name as such is not understood by Turbine, then the 
+          'Linkage Identifier' name should be used instead (for example on the 
+          above dialog &quot;FListBoxSymbol&quot;) - this means that Turbine doesn't 
+          known the component and cannot perform this mapping.</font></p>
+        <p><font size="2" face="Verdana, Arial, Helvetica, sans-serif">A similar 
+          mapping is also done for the component parameter names - the parameter 
+          names listed on the Component Parameters panel should be used on the 
+          &lt;Param&gt; tag, which will cause Turbine to perform a mapping from 
+          the parameter names to the actual parameter variable names. In fact 
+          this mapping is similar to the mapping listed on the Component Definition 
+          dialog (in the Name and Variable columns):</font></p>
+        <p><font size="2" face="Verdana, Arial, Helvetica, sans-serif"><img src="images/symbol_params.gif" width="504" height="467"></font></p>
+        <p><font size="2" face="Verdana, Arial, Helvetica, sans-serif">As long 
+          as you use the component names and component parameter names, this mapping 
+          will occur in a transparent way. The mappings between component parameter 
+          names and their underlying Action Script names are stored on the componentregistry.settings 
+          file, located on the Turbine installation directory, which already includes 
+          a large number of standard component mappings.<br>
+          If you find a component that is not supported by Turbine, please <a href="mailto:support@blue-pac.com">contact 
+          us</a> about it, so we can update it as soon as possible.</font></p>
+        <p>&nbsp;</p>
+        <p><font size="2" face="Verdana, Arial, Helvetica, sans-serif">When using 
+          multiple components, it's advisable to create a single Flash .swf with 
+          all the components to be included - the .swf acts as a kind of a component 
+          library, which is more efficient than including from separate Flash 
+          .swf files and rules out any component version mismatches that might 
+          occur.</font></p>
+        <p><font size="2" face="Verdana, Arial, Helvetica, sans-serif">See the 
+          included Components sample for examples of component usage. </font></p>
+        <p><font size="2" face="Verdana, Arial, Helvetica, sans-serif">Flash components 
+          will not be available when exporting to PDF.</font></p>
+        <p><font size="2" face="Verdana, Arial, Helvetica, sans-serif">&nbsp;</font></p>
+        </TD>
+    </TR>
+    <TR valign="top"> 
+      <TD COLSPAN="2" height="6"> 
+        <table border=0 cols=2 width="560" cellpadding="0" cellspacing="0" >
+          <tr> 
+            <td width="443" height="25"><font face="Verdana, Arial, Helvetica, sans-serif" size="3"><a href="manual.htm">Table 
+              of Contents</a></font></td>
+            <td width="117" height="25"> 
+              <div align="center"><font face="Verdana, Arial, Helvetica, sans-serif" size="3"><a href="interface.htm">Next 
+                Chapter </a> </font></div>
+            </td>
+          </tr>
+        </table>
+      </TD>
+    </TR>
+  </TABLE>
+</CENTER>
+<CENTER>
+  <p> <font face="Verdana, Arial, Helvetica, sans-serif" size="1"><i>&nbsp;<br>
+    Flash and Macromedia Flash are trademarks of Macromedia, Inc.</i></font>
+</CENTER>
+</BODY>
+</HTML>

@@ -1,0 +1,8 @@
+MANIFEST
+zope.deprecation/__init__.py
+zope.deprecation/DEPENDENCIES.cfg
+zope.deprecation/deprecation.py
+zope.deprecation/README.txt
+zope.deprecation/tests.py
+setup.py
+setup.cfg

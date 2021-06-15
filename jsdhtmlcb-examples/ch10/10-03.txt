@@ -1,0 +1,40 @@
+function navigate() {
+    var choice = document.forms[0].chooser;
+    var url = choice.options[choice.selectedIndex].value;
+    if (url) {
+        location.href = url;
+    }
+}
+
+<select name="chooser" id="chooser">
+    <option value="">Choose a Destination:</option>
+    <option value="http://www.megacorp.com/index.html">Home</option>
+    <option value="http://www.megacorp.com/products/index.html">Products</option>
+    <option value="http://www.megacorp.com/support/index.html">Support</option>
+    <option value="http://www.megacorp.com/contact.html">Contact Us</option>
+</select>
+
+----------
+
+function navigate(choice) {
+    var url = choice.options[choice.selectedIndex].value;
+    if (url) {
+        location.href = url;
+    }
+}
+
+<select name="chooser" id="chooser" onchange="navigate(this)">É</select>
+
+----------
+
+function navigate(evt) {
+   evt = (evt) ? evt : ((event) ? event : null);
+   if (evt) {
+      var elem = (evt.target) ? evt.target : ((evt.srcElement) ? evt.srcElement : null);
+      if (elem && elem.tagName.toLowerCase() == "select" && elem.value) {
+         location.href = elem.value;
+      }
+   }
+}
+
+document.getElementById("chooser").onchange = navigate;

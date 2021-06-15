@@ -1,0 +1,9 @@
+MANIFEST
+zope.cachedescriptors/__init__.py
+zope.cachedescriptors/DEPENDENCIES.cfg
+zope.cachedescriptors/property.py
+zope.cachedescriptors/property.txt
+zope.cachedescriptors/README.txt
+zope.cachedescriptors/tests.py
+setup.py
+setup.cfg

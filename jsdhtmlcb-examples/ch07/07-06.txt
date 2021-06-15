@@ -1,0 +1,58 @@
+var isNav4 = (navigator.appName == "Netscape" && parseInt(navigator.appVersion) == 4);
+if (top.location.href == self.location.href) {
+    if (isNav4) {
+        if (window.innerWidth != 0) {
+            top.location.href = "frameset12.html";
+        }
+    } else {
+        top.location.href = "frameset12.html";
+    }
+}
+
+----------
+
+if (top.location.href == self.location.href) {
+    top.location.href = "frameset12.html";
+}
+
+----------
+
+var isNav4 = (navigator.appName == "Netscape" && parseInt(navigator.appVersion) == 4);
+if (parent == window) {
+    // Don't do anything if NN4 is printing frame
+    if (!isNav4 || (isNav4 && window.innerWidth != 0)) {
+        if (location.replace) {
+           // Use replace(), if available, to keep current page out of history
+           location.replace("masterFrameset.html?content=" + escape(location.href));
+        } else {
+           location.href = "masterFrameset.html?content=" + escape(location.href);
+        }
+    }
+}
+
+----------
+
+function getSearchData() {
+    var results = new Object();
+    if (location.search.substr) {
+        var input = unescape(location.search.substr(1));
+        if (input) {
+            var srchArray = input.split("&");
+            var tempArray = new Array();
+            for (var i = 0; i < srchArray.length; i++) {
+                tempArray = srchArray[i].split("=");
+                results[tempArray[0]] = tempArray[1];
+            }
+        }
+    }
+    return results;
+}
+
+function loadFrame() {
+    if (location.search) {
+        var srchArray = getSearchData();
+        if (srchArray["content"]) {
+            self.content.location.href = srchArray["content"];
+        }
+    }
+}

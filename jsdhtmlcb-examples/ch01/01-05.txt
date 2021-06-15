@@ -1,0 +1,21 @@
+function handleClick(evt) {
+   var evt = (evt) ? evt : ((window.event) ? window.event : null);
+   if (evt) {
+       var elem = (evt.target) ? evt.target : ((evt.srcElement) ? evt.srcElement : null);
+       if (elem && elem.id.indexOf("menuImg") == 0) {
+           // process events from elements whose IDs begin with "menuImg"
+       }
+   }
+}
+
+----------
+
+function countInstances(mainStr, srchStr) {
+    var count = 0;
+    var offset = 0;
+    do {
+        offset = mainStr.indexOf(srchStr, offset);
+        count += (offset != -1) ? 1 : 0;
+    } while (offset++ != -1)
+    return count
+}

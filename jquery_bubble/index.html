@@ -1,0 +1,98 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<title>Untitled Document</title>
+<style type="text/css">
+.bubbleInfo {
+    position: relative;
+	padding: 100px;
+}
+
+.popup {
+    position: absolute;
+	margin: 100px 0 0 200px;
+    display: none;
+	height: 200px;
+	background: #000; /* keeps the popup hidden if no JS available */
+}
+</style>
+<script type="text/javascript" src="js/jquery.js">
+</script>
+<script type="text/javascript">
+$(function () {
+  $('.bubbleInfo').each(function () {
+    // options
+    var distance = 10;
+    var time = 250;
+    var hideDelay = 500;
+
+    var hideDelayTimer = null;
+
+    // tracker
+    var beingShown = false;
+    var shown = false;
+    
+    var trigger = $('.trigger', this);
+    var popup = $('.popup', this).css('opacity', 0);
+
+    // set the mouseover and mouseout on both element
+    $([trigger.get(0), popup.get(0)]).mouseover(function () {
+      // stops the hide event if we move from the trigger to the popup element
+      if (hideDelayTimer) clearTimeout(hideDelayTimer);
+
+      // don't trigger the animation again if we're being shown, or already visible
+      if (beingShown || shown) {
+        return;
+      } else {
+        beingShown = true;
+
+        // reset position of popup box
+        popup.css({
+          top: -100,
+          left: -33,
+          display: 'block' // brings the popup back in to view
+        })
+
+        // (we're using chaining on the popup) now animate it's opacity and position
+        .animate({
+          top: '-=' + distance + 'px',
+          opacity: 1
+        }, time, 'swing', function() {
+          // once the animation is complete, set the tracker variables
+          beingShown = false;
+          shown = true;
+        });
+      }
+    }).mouseout(function () {
+      // reset the timer if we get fired again - avoids double animations
+      if (hideDelayTimer) clearTimeout(hideDelayTimer);
+      
+      // store the timer so that it can be cleared in the mouseover if required
+      hideDelayTimer = setTimeout(function () {
+        hideDelayTimer = null;
+        popup.animate({
+          top: '-=' + distance + 'px',
+          opacity: 0
+        }, time, 'swing', function () {
+          // once the animate is complete, set the tracker variables
+          shown = false;
+          // hide the popup entirely after the effect (opacity alone doesn't do the job)
+          popup.css('display', 'none');
+        });
+      }, hideDelay);
+    });
+  });
+});
+</script>
+</head>
+
+<body>
+<div class="bubbleInfo">
+  <img class="trigger" src="images/bg.png" />
+  <div class="popup">
+    YooHoo!!
+  </div>
+</div>
+</body>
+</html>

@@ -1,0 +1,85 @@
+document.myForm.total.value = someNumber.toFixed(2);
+
+----------
+
+document.myForm.rate.value = someNumber.toPrecision(5);
+
+----------
+
+function formatNumber (num, decplaces) {
+    // convert in case it arrives as a string value
+    num = parseFloat(num);
+    // make sure it passes conversion
+    if (!isNaN(num)) {
+        // multiply value by 10 to the decplaces power;
+        // round the result to the nearest integer;
+        // convert the result to a string
+        var str = "" + Math.round (eval(num) * Math.pow(10,decplaces));
+        // exponent means value is too big or small for this routine
+        if (str.indexOf("e") != -1) {
+            return "Out of Range";
+        }
+        // if needed for small values, pad zeros
+        // to the left of the number
+        while (str.length <= decplaces) {
+            str = "0" + str;
+        }
+        // calculate decimal point position
+        var decpoint = str.length - decplaces;
+        // assemble final result from: (a) the string up to the position of
+        // the decimal point; (b) the decimal point; and (c) the balance
+        // of the string. Return finished product.
+        return str.substring(0,decpoint) + "." + str.substring(decpoint,str.length);
+    } else {
+        return "NaN";
+    }
+}
+
+document.myForm.total.value = formatNumber(someNumber, 2);
+
+----------
+
+function formatCommas(numString) {
+    var re = /(-?\d+)(\d{3})/;
+    while (re.test(numString)) {
+        numString = numString.replace(re, "$1,$2");
+    }
+    return numString;
+}
+
+function formatNumber (num, decplaces) {
+    // convert in case it arrives as a string value
+    num = parseFloat(num);
+    // make sure it passes conversion
+    if (!isNaN(num)) {
+        // multiply value by 10 to the decplaces power;
+        // round the result to the nearest integer;
+        // convert the result to a string
+        var str = "" + Math.round (eval(num) * Math.pow(10,decplaces));
+        // exponent means value is too big or small for this routine
+        if (str.indexOf("e") != -1) {
+            return "Out of Range";
+        }
+        // if needed for small values, pad zeros
+        // to the left of the number
+        while (str.length <= decplaces) {
+            str = "0" + str;
+        }
+        // calculate decimal point position
+        var decpoint = str.length - decplaces;
+        // assemble final result from: (a) the string up to the position of
+        // the decimal point; (b) the decimal point; and (c) the balance
+        // of the string. Return finished product.
+        return formatCommas(str.substring(0,decpoint)) + "." + str.substring(decpoint,str.length);
+
+    } else {
+        return "NaN";
+    }
+}
+
+----------
+
+function stripCommas(numString) {
+    var re = /,/g;
+    return numString.replace(re,"");
+}

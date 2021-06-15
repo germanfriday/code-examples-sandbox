@@ -1,0 +1,37 @@
+<Movieclip id="button_movieclip_id">
+
+  <Button>
+
+    <State type="up,hit"> <!-- this is the up/hit button states -->
+      <Shape>
+        <LineStyle color="#404080" width="4"/>
+        <FillColor color="#8080ff"/>
+        <Rect size="220,50"/>
+      </Shape>
+    </State>
+
+    <State type="over,down"> <!-- this is the over/down button states -->
+      <Shape>
+        <LineStyle color="#8080dd" width="4"/>
+        <FillColor color="#ddddff"/>
+        <Rect size="220,50"/>
+      </Shape>
+    </State>
+
+    <Audio event="MouseOver" src="tick.wav"/> <!-- a tick sound -->
+
+    <Script event="Release"> <!-- getUrl to the button_url AS var -->
+      getUrl(button_url, "_blank");
+    </Script>
+
+  </Button>
+
+<!-- the button text label, with the button_label AS var -->
+  <TextField variable="button_label"
+             pos="0,12" size="220,30"
+             fontSize="20"
+             align="center"
+             flags="noSelect,readOnly"
+             >default label</TextField>
+
+</Movieclip>

@@ -1,0 +1,5 @@
+<style type="text/css">
+#someElementID {position:absolute; left:100px; top:100px}
+</style>
+
+<div id="myDIV" style="position:absolute; left:100px; top:100px">Content Here</div>

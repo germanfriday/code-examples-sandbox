@@ -1,0 +1,6 @@
+MANIFEST
+mechanize/__init__.py
+mechanize/_mechanize.py
+mechanize/_useragent.py
+setup.py
+setup.cfg

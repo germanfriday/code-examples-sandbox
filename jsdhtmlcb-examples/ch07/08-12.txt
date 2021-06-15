@@ -1,0 +1,23 @@
+function autofocus(field, limit, next, evt) {
+    evt = (evt) ? evt : event;
+    var charCode = (evt.charCode) ? evt.charCode : ((evt.keyCode) ? evt.keyCode : 
+        ((evt.which) ? evt.which : 0));
+    if (charCode > 31 && field.value.length == limit) {
+        field.form.elements[next].focus();
+    }
+}
+
+...
+
+Credit Card Number:
+<input type="text" name="cc1" size="5" maxlength="4" 
+    onkeypress="return numeralsOnly(event)" 
+    onkeyup="autofocus(this, 4, 'cc2', event)">&nbsp;&nbsp;
+<input type="text" name="cc2" size="5" maxlength="4" 
+    onkeypress="return numeralsOnly(event)" 
+    onkeyup="autofocus(this, 4, 'cc3', event)">&nbsp;&nbsp;
+<input type="text" name="cc3" size="5" maxlength="4" 
+    onkeypress="return numeralsOnly(event)" 
+    onkeyup="autofocus(this, 4, 'cc4', event)">&nbsp;&nbsp;
+<input type="text" name="cc4" size="5" maxlength="4" 
+    onkeypress="return numeralsOnly(event)">

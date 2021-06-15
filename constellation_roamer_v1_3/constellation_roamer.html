@@ -1,0 +1,51 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+	<head>
+		<title>Constellation Roamer</title>
+		
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+		<script type="text/javascript" src="swfobject.js"></script>
+		<script type="text/javascript">
+			
+			var flashvars = {
+				config_url: 'constellation_config.xml',
+				selected_node_id: '1',
+				instance_id: '1',
+				passthru: 'myVar0=value&myVar1=3.4',
+				debug: 'false'
+			};
+			
+			var params = {
+				bgcolor: '#ffffff',
+				allowScriptAccess: 'sameDomain',
+				quality: 'high',
+				scale: 'noscale'
+			};
+			
+			var attributes = {
+				id: "constellation_roamer",
+				name: "constellation_roamer"
+			};
+			
+			swfobject.embedSWF(
+				"constellation_roamer.swf", "placeholder", "100%", "100%",
+				"9", "expressInstall.swf", flashvars, params, attributes);
+
+		</script>
+		
+		<style type="text/css">
+			html, body
+			{
+				border: 0;
+				height: 100%;
+				margin: 0;
+				overflow: hidden;
+				padding: 0;
+				width: 100%;
+			}
+		</style>
+	</head>
+	<body>
+		<div id="placeholder"></div>
+	</body>
+</html>

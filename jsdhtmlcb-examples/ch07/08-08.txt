@@ -1,0 +1,31 @@
+function submitViaEnter(evt) {
+    evt = (evt) ? evt : event;
+    var target = (evt.target) ? evt.target : evt.srcElement;
+    var form = target.form;
+    var charCode = (evt.charCode) ? evt.charCode :
+        ((evt.which) ? evt.which : evt.keyCode);
+    if (charCode == 13) {
+        if (validateForm(form)) {
+            form.submit();
+            return false;
+        }
+    }
+    return true;
+}
+
+<input type="text" ... onkeypress="return submitViaEnter(event)">
+
+----------
+
+<form action="..." method="GET" name="sampleForm" onsubmit="return false">
+First Name: <input type="text" size="30" name="name1" id="name1"
+    onkeypress="return focusNext(this.form, 'name2', event)"
+    onchange="isNotEmpty(this)" /><br>
+Last Name: <input type="text" size="30" name="name2" id="name2"
+    onkeypress="return focusNext(this.form, 'eMail', event)"
+    onchange="isNotEmpty(this)" /><br>
+Email Address: <input type="text" size="30" name="eMail" id="eMail"
+    onkeypress="return submitViaEnter(event)" /><br>
+<input type="reset" /> <input type="button" value="Submit"
+    onclick="if (validateForm(this.form)) {this.form.submit( )}" />
+</form>

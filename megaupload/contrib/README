@@ -1,0 +1,11 @@
+
+1) No Sound.
+	Orest Kinasevych's contribution for getting rid of that annoying clicking sound on IE.
+	02 Oct 2003
+
+2) ftp/
+	Upload to an FTP server. (Raditha Dissanayake)
+	
+3) Cookie
+	Yuri Weseman makes a Strong case for cookies and has contributed a modification that more
+	effectively shares cookies between PHP and perl.

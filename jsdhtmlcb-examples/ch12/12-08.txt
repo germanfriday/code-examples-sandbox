@@ -1,0 +1,14 @@
+#watermark {filter:alpha(opacity=25)}
+
+#watermark {filter:progid:DXImageTransform.Microsoft.Alpha(opacity=25)}
+
+#watermark {-moz-opacity:25%}
+
+----------
+
+document.getElementById("myBox").style.filter = "alpha(opacity=80)";
+
+document.getElementById("myBox").
+   filters["DXImageTransform.Microsoft.Alpha"].Opacity=80;
+
+document.getElementById("myBox").style.MozOpacity = "80%";

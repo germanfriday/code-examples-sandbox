@@ -1,0 +1,35 @@
+<!-- dyi/frame.mml -->
+
+<!-- The entire contents of this file is Copyright © 2003, Jorge Nogueira Diogo Unipessoal, Lda/Blue Pacific Software, All Rights Reserved. -->
+
+<!-- This MML file will draw the Y axis label. This file is loaded once for each Y axis label -->
+
+
+<!--
+Turbine vars used in this file:
+
+_frameWidth             frame width
+_frameHeight            frame height
+
+_defaultFontHeight      default font height
+_frameLabelY            Y position of the label
+_frameLabelValue        Y axis label text
+-->
+
+
+<!-- draw one horizontal line -->
+<BaseDepth depth="0"/>
+<Shape pos="0,0">
+  <LineStyle width="1" color="#000000"/>
+  <line path="-5,{_frameLabelY};{_frameWidth},{_frameLabelY}"/>
+</shape>
+
+
+<!-- draw the Y axis text label -->
+<text
+  size="{_defaultFontHeight}"
+  flags="base"
+  color="#000000"
+  align="right"
+  placepoint="bottom-right"
+  Pos="-10,{=_frameLabelY-1}">{_frameLabelValue}</text>

@@ -1,0 +1,33 @@
+<p onmouseup="selection2Element()">Lorem ipsum dolor sit amet, consectetaur 
+adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. </p>
+
+
+function selection2Element() {
+    var rng = document.selection.createRange();
+    var newHTML = "<span class='newSpan'>" + rng.text + "</span>";
+    rng.pasteHTML(newHTML);
+}
+
+----------
+
+<p onmouseup="selection2Element()" onselectstart="saveStart()">Lorem ipsum dolor sit amet, consectetaur 
+adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. </p>
+
+
+// global
+var selectionStart;
+
+// invoked by onselectstart
+function saveStart() {
+    selectionStart = event.srcElement;
+}
+// invoked by onmouseup
+function selection2Element() {
+    if (event.srcElement == selectionStart) {
+        var rng = document.selection.createRange();
+        var newHTML = "<span class='newSpan'>" + rng.text + "</span>";
+        rng.pasteHTML(newHTML);
+    } else {
+        alert("Please restrict selections to within a single paragraph.");
+    }
+}

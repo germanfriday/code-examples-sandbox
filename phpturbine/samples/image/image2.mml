@@ -1,0 +1,19 @@
+<Text pos="0,50">flower.gif - resized to 30x20:</Text>
+<Image pos="0,72" src="../common/flower.gif"
+       resample="30,20" size="225,150"/>
+
+<Text pos="240,50">flower.jpg with a grayscale fx:</Text>
+<Image pos="240,72" src="../common/flower.jpg"
+       fx="grayscale"/>
+
+<Text pos="480,50">flower.png with 50% smooth:</Text>
+<Image pos="480,72" src="../common/flower.png"
+       fx="smooth(80)"/>
+
+<Text pos="120,240">flower.tif - 10% quality:</Text>
+<Image pos="120,262" src="../common/flower.tif"
+       encoding="jpeg" encodingQuality="10"/>
+
+<Text pos="360,240">flower.tif - 95% quality:</Text>
+<Image pos="360,262" src="../common/flower.tif"
+       encoding="jpeg" encodingQuality="50"/>

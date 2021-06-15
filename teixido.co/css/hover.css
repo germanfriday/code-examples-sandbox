@@ -1,0 +1,57 @@
+@media only screen and (min-width: 290px) {
+
+div.fadehover {
+	position: relative;
+	width: 282px;
+	height: 212px;
+	}
+	
+}
+
+@media only screen and (min-width: 544px) {
+
+div.fadehover {
+	position: relative;
+	width: 168px;
+	height: 127px;
+	}
+	
+}
+
+@media only screen and (min-width: 960px) {
+
+div.fadehover {
+	position: relative;
+	width: 168px;
+	height: 127px;
+	}
+	
+}
+
+@media only screen and (min-width: 1200px) {
+
+div.fadehover {
+	position: relative;
+	width: 208px;
+	height: 156px;
+	}
+	
+}
+ 
+a.hover_img {
+	width: 100%;
+	height: auto;
+	display: block;
+	position: absolute;
+	left: 0;
+	top: 0;
+        z-index: 10;
+	}
+ 
+a.hover_img1 {
+	width: 100%;
+	height: auto;
+	position: absolute;
+	left: 0;
+	top: 0;
+	}

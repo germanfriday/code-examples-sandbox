@@ -1,0 +1,37 @@
+var timeoutID;
+function goNextPage() {
+    location.href = "slide3.html";
+}
+function resetTimer() {
+    clearTimeout(timeoutID);
+    timeoutID = setTimeout("goNextPage()", 15000);
+}
+window.onmousemove = resetTimer;
+
+----------
+
+function isEMailAddr(elem) {
+    var str = elem.value;
+    var re = /^[\w-]+(\.[\w-]+)*@([\w-]+\.)+[a-zA-Z]{2,7}$/;
+    if (!str.match(re)) {
+        alert("Verify the e-mail address format.");
+        setTimeout("focusElement('" + elem.form.name + "', '" + elem.name + "')", 0);
+        return false;
+    } else {
+        return true;
+    }
+}
+
+----------
+
+function mainFunc() {
+    // initial statements here
+    setTimeout("funcPart2()", 10000);
+}
+function funcPart2() {
+    // initial statements here
+    setTimeout("finishFunc()", 5000);
+}
+function finishFunc() {
+    // final batch of statements here
+}

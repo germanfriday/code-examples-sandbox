@@ -1,0 +1,9 @@
+var newWindow;
+function makeNewWindow(url) {
+    if (!newWindow || newWindow.closed) {
+        newWindow = window.open(url,"subwind","status,height=200,width=300");
+    } else {
+        // window is already open, so bring it to the front
+        newWindow.focus();
+    }
+}

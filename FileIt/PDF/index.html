@@ -1,0 +1,107 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+	<meta content="text/html; charset=utf-8" http-equiv="content-type" />
+    
+    <title>FileIt</title>
+    
+	<script type="text/javascript" src="../Example/Editor/ckeditor.js"></script>
+	<script src="../Example/Editor/editor.js" type="text/javascript"></script>
+	<link href="../Example/Editor/editor.css" rel="stylesheet" type="text/css" />
+    
+    <link href="../Example/css/style.css" rel="stylesheet" type="text/css" />
+    
+    <script language="Javascript">
+	function PDFPreview()
+	{
+    document.PDFForm.action = "../Example/PDF/PDF.php"
+    document.PDFForm.submit();
+
+    return true;
+	}
+
+	function PDFDownload()
+	{
+    document.PDFForm.action = "../Example/PDF/DownloadPDF.php"
+    document.PDFForm.submit();
+
+    return true;
+	}
+</script>
+
+</head>
+<body>
+
+<div id="container">
+
+	<div id="logo"></div>
+    <div class="clear"></div>
+    
+    <br />
+    <br />
+    <br />
+    <br />
+    
+     <form name="PDFForm" method="post">
+    
+    <h4>Global Information</h4>
+	<input type="text" name="creator" placeholder="File Creator" />
+	<input type="text" name="filename" placeholder="Filename"/> <br /> <br />
+	<input type="text" name="title" placeholder="Title"/>
+    <input type="text" name="header" placeholder="Header Text"/> <br />
+	<input type="text" name="author" placeholder="Author"/>
+    <input type="text" name="subject" placeholder="Subject"/><br /> <br />
+	<textarea type="text" name="keywords" placeholder="Keywords" cols="40" rows="3"></textarea> <br /><br />
+
+	<h4>Page Settings</h4>
+	<label>Format</label>
+	<input type="radio" name="format" value="A3" /> A3
+	<input type="radio" name="format" value="A4" checked /> A4
+	<input type="radio" name="format" value="A5" /> A5
+	<input type="radio" name="format" value="A6" /> A6 <br /><br />
+
+	<label>Page Orientation</label>
+	<input type="radio" name="orientation" value="P" checked /> Portrait <br />
+	<input type="radio" name="orientation" value="L" /> Landscape <br /><br />
+    
+    <label>Measure Unit</label>
+	<label>Default: mm</label>
+	<input type="radio" name="unit" value="pt" /> Point
+	<input type="radio" name="unit" value="mm" checked /> Millimeter
+	<input type="radio" name="unit" value="cm" /> Centimeter
+	<input type="radio" name="unit" value="in" /> Inch <br /><br />
+    
+	<h4>Layout</h4>
+	<input type="text" name="headermargin" placeholder="Header Margin /5 mm/"/><br />
+	<input type="text" name="footermargin" placeholder="Footer Margin /10mm/"/><br /><br />
+
+	<input type="text" name="margintop" placeholder="Margin Top /27 mm/"/>
+	<input type="text" name="marginbottom" placeholder="Margin Bottom /25 mm/"/>
+	<input type="text" name="marginleft" placeholder="Margin Left /15 mm/"/>
+	<input type="text" name="marginright" placeholder="Margin Right /15 mm/"/><br /><br />
+    
+	<h4>Content</h4>
+	<input type="text" name="fontsize" placeholder="Font Size /10/"/><br /><br />
+
+	<textarea class="ckeditor" cols="80" id="editor2" name="pdftext" rows="10"></textarea> <br />
+	<input type="submit" class="downloadbutton" value="Preview PDF" onclick="PDFPreview();"/>
+    <input type="submit" class="downloadbutton" value="Download PDF" onclick="PDFDownload();"/>
+	</form>
+    
+    
+    <br />
+    <br />
+    <br />
+    <br />
+    
+    <div class="clear"></div>
+    
+    <br />
+	
+    <div id="footer">KVendrik Design 2012</div>
+    
+    
+    </div>
+    
+</body>
+</html>

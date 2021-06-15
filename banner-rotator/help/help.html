@@ -1,0 +1,1493 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Help Guide</title>    
+    <link type="text/css" rel="stylesheet" href="styles/shCoreDefault.css"/>
+    <link type="text/css" rel="stylesheet" href="styles/bootstrap.min.css"/>
+    <link type="text/css" rel="stylesheet" href="styles/bootstrap-responsive.min.css"/>
+    <style type="text/css">
+        .section{
+        margin-top:40px;
+        }
+        .th-attr{
+        width:15%;
+        }
+        .th-desc{
+        width:40%;
+        }
+        .th-def{
+        width:15%;
+        }
+        .th-val{
+        width:30%;
+        }
+        .cat-odd{
+        background-color:#ffd !important;
+        }
+        .cat-even{
+        background-color:#fff !important;
+        }
+        ul ul{
+        list-style:disc;
+        }
+    </style>
+    <script type="text/javascript" src="scripts/shCore.js"></script>
+    <script type="text/javascript" src="scripts/shBrushJScript.js"></script>
+    <script type="text/javascript">
+        SyntaxHighlighter.defaults.toolbar = false;
+        SyntaxHighlighter.all();
+    </script>
+</head>
+<body>
+<br/>
+<div class="container">
+	<div class="row">
+    	<div class="span3">
+        	<div class="well affix">
+            	<h4>Contents</h4>
+                <ul>
+                    <li><a href="#install">Installation</a></li>
+                    <li><a href="#markup">HTML Markup</a>
+                        <ul>                   
+                            <li><a href="#images">Images</a></li>                            
+                            <li><a href="#text-tt">Text Tooltip</a></li>
+                            <li><a href="#img-tt">Image Tooltip</a></li>
+                            <li><a href="#links">Links</a></li>
+                            <li><a href="#img-tran">Image Transition</a></li>
+                            <li><a href="#layers">Caption Layers</a></li>
+                            <li><a href="#layer-style">Layer Style</a></li>
+                            <li><a href="#layer-tran">Layer Transition</a></li>
+                            <li><a href="#layer-tran-out">Layer Transition Out</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="#activate">Activation &amp; Configuration</a></li>
+                    <li><a href="#opts">Options</a>
+                    	<ul>
+                        	<li><a href="#size-opts">Size</a></li>
+                            <li><a href="#ss-opts">Slideshow</a></li>
+                            <li><a href="#tran-opts">Transition</a></li>
+                            <li><a href="#nav-opts">Navigation Control</a></li>
+                            <li><a href="#layer-opts">Layers</a></li>
+                            <li><a href="#misc-opts">Misc.</a></li>
+                            <li><a href="#callback-opts">Callbacks</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="#ref">References</a>
+                    	<ul>
+                        	<li><a href="#img-effects">Image Effects</a></li>
+                            <li><a href="#layer-effects">Layer Effects</a></li>
+                            <li><a href="#ctrl-align">Control Panel Alignment</a></li>
+                            <li><a href="#events">Custom Events</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="#contact">Contact Info</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="span9">
+            <div class="hero-unit">
+            	<h1>jQuery Banner Rotator</h1>
+                <h2><span class="muted">help guide</span></h2>
+          	</div>
+        	<div class="section">
+            	<div class="page-header">
+        			<h1 id="install">Installation</h1>
+                </div>
+                <p>
+                	To install the banner rotator, 
+                    first include the style sheet inside the <code>&lt;head&gt;</code> tag:
+                </p>
+<pre class="brush:js;">
+&lt;link rel="stylesheet" type="text/css" href="css/banner-rotator.css" /&gt;
+</pre>
+                <p>
+                    Next, include the jQuery's library file, the easing plugin file, and the banner rotator's script file 
+                    inside the <code>&lt;head&gt;</code> tag:
+                </p>
+<pre class="brush:js;">
+&lt;script type="text/javascript" src="js/jquery-1.10.2.min.js"&gt;&lt;/script&gt;
+&lt;script type="text/javascript" src="js/jquery.easing.1.3.min.js"&gt;&lt;/script&gt;
+&lt;script type="text/javascript" src="js/jquery.banner-rotator.js"&gt;&lt;/script&gt;
+</pre>
+				<p>
+                	This completes the installation process, next you'll have to specify the <a href="#markup">HTML markup</a>.
+                </p>
+            </div>
+            <br/>
+            
+        	<div class="section">
+            	<div class="page-header">
+        			<h1 id="markup">HTML Markup</h1>
+                </div>
+        		<p>
+            		To insert a banner rotator for your page, specify the banner rotator's markup inside the <code>&lt;body&gt;</code> tag. 
+            		The following is an example of a basic markup:
+        		</p>        
+<pre class="brush:js;">
+&lt;div id="rotator1" class="banner-rotator"&gt;
+    &lt;ul class="br-slides"&gt;
+        &lt;li&gt;
+            &lt;img src="images/photo1.jpg"/&gt;
+        &lt;/li&gt;                    
+        &lt;li&gt; 
+            &lt;img src="images/photo2.jpg"/&gt;
+        &lt;/li&gt;
+        &lt;li&gt; 
+            &lt;img src="images/photo3.jpg"/&gt;
+        &lt;/li&gt;
+    &lt;/ul&gt;
+&lt;/div&gt;
+</pre>  
+                <p>
+                    From the example, the <code>&lt;div&gt;</code> tag on line 1 represents the banner rotator container.
+                    The <code>&lt;div&gt;</code> tag should have the required class <code>banner-rotator</code> but can have any <code>id</code>
+                    value. 
+                    For this example, we use an <code>id</code> of <code>rotator1</code> which will be referenced in the <a href="#activate">activation</a> function call.
+                </p>
+                <p>
+                    Also of importance is the <code>&lt;ul&gt;</code> tag with class <code>br-slides</code>.
+                    This <code>&lt;ul&gt;</code> tag will hold all the <code>&lt;li&gt;</code> tags, with 
+                    each <code>&lt;li&gt;</code> tag representing an individual slide.  
+                </p>
+                <br/>
+                
+                <h2 id="images">Images</h2>        
+                <p>
+                    There are two ways to add an image to the banner rotator.
+                    One is using a regular <code>&lt;img&gt;</code> tag and the other is using an <code>&lt;a&gt;</code> tag with a link to the image.
+                    You can mix the two methods for each image in the banner rotator.
+                </p>
+                <p>     	
+                    For the first method, just insert an <code>&lt;img&gt;</code> tag inside the <code>&lt;li&gt;</code> tag:
+                </p>
+<pre class="brush:js; highlight:2">
+&lt;li&gt;
+    &lt;img src="images/photo1.jpg" title="photo 1"/&gt;
+&lt;/li&gt;
+</pre>      
+                <p>
+                    This is the simpler of the two methods but the image is downloaded immediately versus when needed.                    
+                    Also, the <code>title</code> value will be used for the thumbnail's text and the same image will be used for the thumbnail's image.
+                </p>
+                <p>
+                	For more information on setting the <strong>thumbnail</strong> type, refer to the <a href="#nav-opts">navigation control options</a>.
+                </p>
+                <br/>
+                <p>
+                    For the second method, to add an image using a link, 
+                    insert an <code>&lt;a&gt;</code> tag inside the <code>&lt;li&gt;</code> tag:
+                </p>
+<pre class="brush:js; highlight:2">
+&lt;li&gt;
+    &lt;a href="images/photo1.jpg"&gt;photo 1&lt;/a&gt;
+&lt;/li&gt;
+</pre>     
+                <p>
+                    This method will reduce the initial download time since the image is downloaded as needed instead of all at once.
+                	Also, the text content inside the <code>&lt;a&gt;</code> tag is used as the thumbnail's text.
+                </p>  
+                <p>
+                    To have a thumbnail image instead of text, insert an <code>&lt;img&gt;</code> tag inside the <code>&lt;a&gt;</code> tag like the following:
+                </p>        
+<pre class="brush:js; highlight:3">
+&lt;li&gt;
+    &lt;a href="images/photo1.jpg"&gt;
+        &lt;img src="images/thumb1.jpg" title="photo 1"/&gt;
+    &lt;/a&gt;
+&lt;/li&gt;
+</pre>       
+				<br/>
+                
+                <h2 id="text-tt">Text Tooltip</h2>       
+                <p>
+                    By default, the tooltip will use the same text as its thumbnail's text.
+                    You can however enter a completely different text by
+                    embedding a tag with class <code>tt-html</code> with the tooltip content inside:
+                </p>
+<pre class="brush:js; highlight:[3,4,5]">
+&lt;li&gt;
+    &lt;a href="images/photo1.jpg"&gt;photo 1&lt;/a&gt;
+    &lt;div class="tt-html"&gt;
+    	<strong>lorem ipsum</strong>
+    &lt;/div&gt;
+&lt;/li&gt;
+</pre>
+				<p>
+                    This is especially useful when you want html content for the tooltip instead of just plain text.
+                </p>
+                <p>
+                	For more information on setting the <strong>tooltip</strong> type, refer to the <a href="#nav-opts">navigation control options</a>.
+                </p> 
+                <br/>
+                    
+                <h2 id="img-tt">Image Tooltip</h2>       
+                <p>
+                    By default, the tooltip will use the thumbnail's image as its tooltip image.
+                    You can however embed a completely different tooltip image by 
+                    inserting an <code>&lt;img&gt;</code> tag with class <code>tt-img</code>:
+                </p>
+<pre class="brush:js; highlight:3">
+&lt;li&gt;
+    &lt;a href="images/photo1.jpg"&gt;photo 1&lt;/a&gt;
+    &lt;img src="images/tooltip1.jpg" class="tt-img"/&gt;
+&lt;/li&gt;
+</pre>
+                <p>
+                	For more information on setting the <strong>tooltip</strong> type, refer to the <a href="#nav-opts">navigation control options</a>.
+                </p> 
+                <br/>
+                
+                <h2 id="links">Links</h2>
+                <p>
+                    To add a link for the slide, use the <code>data-link</code> attribute for the <code>&lt;li&gt;</code> tag.
+                    You can also specify an optional link target by using the <code>data-target</code> attribute:
+                </p>
+<pre class="brush:js; highlight:1">
+&lt;li data-link="http://www.google.com" data-target="_blank"&gt;
+    &lt;a href="images/photo1.jpg"&gt;photo 1&lt;/a&gt;
+&lt;/li&gt;
+</pre>  
+				<br/>
+             
+                <h2 id="img-tran">Image Transition</h2>
+                <p>
+                	You can configure the transition behavior of each slide.
+                    To customize these options, set the following data attributes for the <code>&lt;li&gt;</code> tag:            
+                </p>    
+<pre class="brush:js; highlight:1">
+&lt;li data-effect="fade" data-duration="500" data-easing="linear" data-delay="5000"&gt;
+    &lt;a href="images/photo1.jpg"&gt;photo 1&lt;/a&gt;
+&lt;/li&gt;
+</pre>		
+                <p>
+                    The available options are:
+                </p>
+                <ul>
+                    <li><code>data-effect</code> - the image's transition effect. (see <a href="#img-effects">image effects</a> for available values)</li>
+                    <li><code>data-duration</code> - the transition's duration in milliseconds.</li>
+                    <li><code>data-easing</code> - the transition's animation easing.</li>
+                    <li><code>data-delay</code> -  the delay in milliseconds before the image changes.</li>
+                </ul>
+                <p>
+                    Alternatively, you can use the shorthand attribute <code>data-transition</code> instead to specify all four options at once:
+                </p>
+<pre class="brush:js; highlight:1">
+&lt;li data-transition="fade 500 linear 5000"&gt;
+    &lt;a href="images/photo1.jpg"&gt;photo 1&lt;/a&gt;
+&lt;/li&gt;
+</pre>	        
+                <br/>
+                
+                <h2 id="layers">Caption Layers</h2>
+                <p>
+                	You can add caption layers on top of the slide's image.  These caption layers can hold most html content as well as plain text.
+                    To add a caption layer, insert any normal tag with its content inside:
+                </p>
+<pre class="brush:js; highlight:[3,4,5,6]">
+&lt;li&gt;
+    &lt;a href="images/photo1.jpg"&gt;photo 1&lt;/a&gt;
+    &lt;h1&gt;
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
+        Sed convallis justo arcu. Fusce adipiscing condimentum aliquam.
+    &lt;/h2&gt;
+&lt;/li&gt;
+</pre>
+                <p>
+                    To add multiple caption layers for the slide, insert each layer tag one after another:
+                </p>
+<pre class="brush:js; highlight:[3,4,5,6,7,8,9,10,11,12,13,14]">
+&lt;li&gt;
+    &lt;a href="images/photo1.jpg"&gt;photo 1&lt;/a&gt;
+    &lt;h1&gt;
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
+        Sed convallis justo arcu. Fusce adipiscing condimentum aliquam.
+    &lt;/h1&gt;
+    &lt;h2&gt;
+        Quisque ultrices, dui a pellentesque blandit, nisl velit posuere enim.
+        Nulla commodo urna non velit venenatis id aliquet lorem tincidunt.
+    &lt;/h2&gt;
+    &lt;div&gt;
+        Fusce fringilla cursus purus dignissim elementum.  
+        Phasellus vehicula ligula eu justo tempus eget adipiscing justo porttitor.
+    &lt;/div&gt;
+&lt;/li&gt;
+</pre>
+                <p>
+                    You can use virtually any tags to represent a caption layer. Some examples are <code>&lt;span&gt;</code>, <code>&lt;div&gt;</code>, <code>&lt;p&gt;</code>, and <code>&lt;h1&gt;</code> thru <code>&lt;h6&gt;</code>.
+                </p>
+                <br/>
+        
+                <h2 id="layer-style">Layer Style</h2>
+                <p>
+                	Normally, you would want to adjust each caption layer like its <code>top</code>, <code>left</code>, <code>width</code>, and <code>height</code> properties.
+                    In order to do so, use the <code>style</code> attribute and set any necessary properties:
+                </p>
+<pre class="brush:js; highlight:3">
+&lt;li&gt;
+    &lt;a href="images/photo1.jpg"&gt;photo 1&lt;/a&gt;
+    &lt;h1 style="top:10px; left:25px; width:300px; height:auto; padding:5px; background-color:#00f; border:1px solid #000"&gt;
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
+        Sed convallis justo arcu. Fusce adipiscing condimentum aliquam.
+    &lt;/h1&gt;
+&lt;/li&gt;
+</pre>        
+                <p>
+                    You can set almost any properties as you would for any normal tag.<br/>
+                    Some useful <code>style</code> properties are:
+                </p>
+                <ul>
+                    <li><code>top</code> - the top position of the layer.</li>
+                    <li><code>left</code> - the left position of the layer.</li>
+                    <li><code>bottom</code> - the bottom position of the layer. (If <code>top</code> is set, <code>bottom</code> will be ignored.)</li>
+                    <li><code>right</code> - the right position of the layer. (If <code>left</code> is set, <code>right</code> will be ignored.)</li>
+                    <li><code>width</code> - the width of the layer. (Use <code>auto</code> for auto width.)</li>
+                    <li><code>height</code> - the height of the layer. (Use <code>auto</code> for auto height.)</li>
+                    <li><code>padding</code> - the padding of the layer.</li>
+                    <li><code>border</code> - the border style of the layer.</li>            
+                    <li><code>color</code> - the color of the text.</li>
+                    <li><code>background-color</code> - the background color.</li>
+                </ul>
+          		<br/>
+                
+        		<h2 id="layer-tran">Layer Transition</h2>
+                <p>
+                	You can configure the transition behavior of each layer.
+                    To customize these options, set the following <code>data-*</code> attributes for the layer tag:
+                </p>       
+<pre class="brush:js; highlight:3">
+&lt;li&gt;
+    &lt;a href="images/photo1.jpg"&gt;photo 1&lt;/a&gt;
+    &lt;h1 data-effect="fade" data-duration="1000" data-easing="swing" data-delay="100"&gt;
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
+        Sed convallis justo arcu. Fusce adipiscing condimentum aliquam.
+    &lt;/h1&gt;
+&lt;/li&gt;
+</pre> 
+                <p>
+                    The customizable options are:
+                </p>
+                <ul>
+                    <li><code>data-effect</code> - the layer's transition effect. (see <a href="#layer-effects">layer effects</a> for available effects)</li>
+                    <li><code>data-duration</code> - the transition's duration in milliseconds.</li>
+                    <li><code>data-easing</code> - the transition's animation easing.</li>
+                    <li><code>data-delay</code> -  the delay in milliseconds before the transition starts.</li>
+                </ul>
+                <p>
+                    Alternatively, you can use the shorthand attribute <code>data-transition</code> instead to specify all four options at once:
+                </p>
+<pre class="brush:js; highlight:3">
+&lt;li&gt;
+    &lt;a href="images/photo1.jpg"&gt;photo 1&lt;/a&gt;
+    &lt;h1 data-transition="fade 1000 swing 100"&gt;
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
+        Sed convallis justo arcu. Fusce adipiscing condimentum aliquam.
+    &lt;/h1&gt;
+&lt;/li&gt;
+</pre>             
+				<br/>
+        	
+                <h2 id="layer-tran-out">Layer Transition Out</h2>
+                <p>
+                	You can configure the transition out behavior of each layer.
+                    To customize these options, set the following <code>data-*</code> attributes for the layer tag:
+                </p>       
+<pre class="brush:js; highlight:3">
+&lt;li&gt;
+    &lt;a href="images/photo1.jpg"&gt;photo 1&lt;/a&gt;
+    &lt;h1 data-effect-out="moveDown" data-duration-out="800" data-easing-out="linear" data-delay-out="1000"&gt;
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
+        Sed convallis justo arcu. Fusce adipiscing condimentum aliquam.
+    &lt;/h1&gt;
+&lt;/li&gt;
+</pre> 
+				<p>
+                    The customizable options are:
+                </p>
+                <ul>
+                    <li><code>data-effect-out</code> - the layer's transition out effect. (see <a href="#layer-effects">layer effects</a> for available effects)</li>
+                    <li><code>data-duration-out</code> - the transition out duration in milliseconds.</li>
+                    <li><code>data-easing-out</code> - the transition out animation easing.</li>
+                    <li><code>data-delay-out</code> -  the delay in milliseconds before the transition out starts.</li>
+                </ul>
+                <p>
+                    Alternatively, you can use the shorthand attribute <code>data-transition-out</code> instead to specify all four options at once:
+                </p>
+<pre class="brush:js; highlight:3">
+&lt;li&gt;
+    &lt;a href="images/photo1.jpg"&gt;photo 1&lt;/a&gt;
+    &lt;h1 data-transition-out="moveDown 800 linear 1000"&gt;
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
+        Sed convallis justo arcu. Fusce adipiscing condimentum aliquam.
+    &lt;/h1&gt;
+&lt;/li&gt;
+</pre> 		
+        	</div>
+            <br/>
+            
+      		<div class="section">
+                <div class="page-header">
+                    <h1 id="activate">Activation &amp; Configuration</h1>
+                </div>
+                <p>
+                	Once the <a href="#markup">HTML markup</a> is specified, the final step is to activate it to get it running.
+                    To activate the banner rotator, simply use the following script in your page:
+                </p>
+<pre class="brush:js; highlight:4">
+&lt;script type="text/javascript"&gt;
+$(window).load(
+   function() {
+      $("#rotator1").bannerRotator();
+   }
+);
+&lt;/script&gt;
+</pre>
+                <p>
+                    The code snippet activates the banner rotator by using the <code>id</code> of the banner rotator's <code>&lt;div&gt;</code> container tag and applying the activation function on it.           
+                    Also, make sure the activation function call is within the <code>$(window).load()</code> function.
+                </p>
+                <br/>
+                <p>
+                    The banner rotator has many configurable options to suit virtually any needs.
+                    In order to configure the banner rotator, pass in a list of the options to the activation function call.
+                    The following example activates the banner rotator, but this time with the option <code>width</code> and <code>height</code> specified.
+                </p>
+<pre class="brush:js; highlight:[5,6]">
+&lt;script type="text/javascript"&gt;
+$(window).load(
+    function() {
+        $("#rotator1").bannerRotator({
+            width:1200,
+            height:400
+        });
+    }
+);
+&lt;/script&gt;
+</pre>
+                <p>
+                    Please note any options not specified for the function call will take on its default value. 
+                	For more information on all available options, please refer to the <a href="#opts">Options</a> tables.
+                </p>
+                <p>
+                    After activation and configuration, your banner rotator is ready to run.
+                </p>
+    		</div>
+			<br/>
+            
+            <div class="section">	
+    			<div class="page-header">
+                	<h1 id="opts">Options</h1>
+              	</div>
+                
+                <h3 id="size-opts">Size</h3>
+                <table class="table table-striped table-bordered">
+                <thead>
+                    <tr>
+                        <th class="th-attr">Name</th>
+                        <th class="th-desc">Description</th>
+                        <th class="th-def">Default Value</th>
+                        <th class="th-val">Possible Values</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>width</td>
+                        <td>The banner rotator's width</td>
+                        <td>1000</td>
+                        <td>Any positive integer</td>
+                    </tr>
+                    <tr>
+                        <td>height</td>
+                        <td>The banner rotator's height</td>
+                        <td>300</td>
+                        <td>Any positive integer</td>
+                    </tr>   
+                    <tr>
+                        <td>thumbWidth</td>
+                        <td>The thumbnail's width</td>
+                        <td>28</td>
+                        <td>Any positive integer</td>
+                    </tr>
+                    <tr>
+                        <td>thumbHeight</td>
+                        <td>The thumbnail's height</td>
+                        <td>28</td>
+                        <td>Any positive integer</td>
+                    </tr>
+                    <tr>
+                        <td>thumbMargin</td>
+                        <td>The thumbnail's margin</td>
+                        <td>3</td>
+                        <td>Any non-negative integer</td>
+                    </tr>
+                    <tr>
+                        <td>buttonWidth</td>
+                        <td>The button's width</td>
+                        <td>28</td>
+                        <td>Any positive integer</td>
+                    </tr>
+                    <tr>
+                        <td>buttonHeight</td>
+                        <td>The button's height</td>
+                        <td>28</td>
+                        <td>Any positive integer</td>
+                    </tr>  
+                    <tr>
+                        <td>buttonMargin</td>
+                        <td>The button's margin</td>
+                        <td>3</td>
+                        <td>Any non-negative integer</td>
+                    </tr>
+                    <tr>
+                        <td>tooltipWidth</td>
+                        <td>The thumbnail's tooltip width</td>
+                        <td>auto</td>
+                        <td>Any positive integer or auto for auto-size.</td>
+                    </tr>
+                    <tr>
+                        <td>tooltipHeight</td>
+                        <td>The thumbnail's tooltip height</td>
+                        <td>auto</td>
+                        <td>Any positive integer or auto for auto-size.</td>
+                    </tr> 
+                </tbody>
+                </table>
+            
+                <h3 id="ss-opts">Slideshow</h3>
+                <table class="table table-striped table-bordered">
+                <thead>
+                    <tr>
+                        <th class="th-attr">Name</th>
+                        <th class="th-desc">Description</th>
+                        <th class="th-def">Default Value</th>
+                        <th class="th-val">Possible Values</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>autoPlay</td>
+                        <td>Set true for slide show to play automatically on startup.</td>
+                        <td>true</td>
+                        <td>true, false</td>
+                    </tr>
+                    <tr>
+                        <td>delay</td>
+                        <td>
+                            The slide show's delay in milliseconds. 
+                            Delay can also be set per slide using <a href="#img-tran">data-delay</a>.
+                        </td>
+                        <td>6000</td>
+                        <td>Any positive integer</td>
+                    </tr>
+                    <tr>
+                        <td>startIndex</td>
+                        <td>The index of the slide to start on.</td>
+                        <td>0</td>
+                        <td>Any non-negative integer or random</td>
+                    </tr>         
+                    <tr>
+                        <td>pauseOnHover</td>
+                        <td>Set true to pause slide show on mouseover and play on mouseout.</td>
+                        <td>false</td>
+                        <td>true, false</td>
+                    </tr>
+                    <tr>
+                        <td>pauseOnInteraction</td>
+                        <td>Set true to pause slide show on control's interaction.</td>
+                        <td>false</td>
+                        <td>true, false</td>
+                    </tr>
+                    <tr>
+                        <td>playOnce</td>
+                        <td>Set true for slide show to play through only once, stopping at the last slide.</td>
+                        <td>false</td>
+                        <td>true, false</td>
+                    </tr>
+                    <tr>
+                        <td>timer</td>
+                        <td>The type of timer to display.</td>
+                        <td>pie</td>
+                        <td>none, bar, pie</td>
+                    </tr>        
+                    <tr>
+                        <td>timerAlign</td>
+                        <td>The alignment of the timer.</td>
+                        <td>topRight</td>
+                        <td>top, bottom, topLeft, topRight, bottomLeft, bottomRight</td>
+                    </tr>
+                </tbody>
+                </table>
+        
+                <h3 id="tran-opts">Transition</h3>
+                <table class="table table-striped table-bordered">
+                <thead>
+                    <tr>
+                        <th class="th-attr">Name</th>
+                        <th class="th-desc">Description</th>
+                        <th class="th-def">Default Value</th>
+                        <th class="th-val">Possible Values</th>
+                    </tr>
+                </thead>
+                <tbody>                  
+                    <tr>
+                        <td>effect</td>
+                        <td>
+                            The transition effect for images.
+                            Effect can also be set per slide using <a href="#img-tran">data-effect</a>.
+                        </td>
+                        <td>fade</td>
+                        <td>See <a href="#image-effects">image effects</a> for available effects.</td>
+                    </tr>   
+                    <tr>
+                        <td>duration</td>
+                        <td>
+                            The transition duration in milliseconds. 
+                            Duration can also be set per slide using <a href="#img-tran">data-duration</a>.
+                        </td>
+                        <td>800</td>
+                        <td>Any positive integer</td>
+                    </tr>
+                    <tr>
+                        <td>easing</td>
+                        <td>
+                            The transition animation easing. 
+                            Easing can also be set per slide using <a href="#img-tran">data-easing</a>.
+                        </td>
+                        <td>swing</td>
+                        <td>See <a href="http://jqueryui.com/resources/demos/effect/easing.html" target="_blank">jQuery Easing</a> for information on available easing.</td>
+                    </tr>
+                    <tr>      	
+                        <td>blockCols</td>
+                        <td>The number of blocks spanning horizontally.</td>
+                        <td>12</td>
+                        <td>Any positive integer</td>
+                    </tr>
+                    <tr>      	
+                        <td>blockRows</td>
+                        <td>The number of blocks spanning vertically.</td>
+                        <td>4</td>
+                        <td>Any positive integer</td>
+                    </tr>
+                    <tr>
+                        <td>blockDelay</td>
+                        <td>The animation delay between blocks in milliseconds.</td>
+                        <td>25</td>
+                        <td>Any positive integer</td>
+                    </tr>
+                    <tr>
+                        <td>verticalSlices</td>
+                        <td>The number of vertical slices.</td>
+                        <td>14</td>
+                        <td>Any positive integer</td>
+                    </tr>
+                    <tr>
+                        <td>verticalSliceDelay</td>
+                        <td>The animation delay between vertical slices in milliseconds.</td>
+                        <td>75</td>
+                        <td>Any positive integer</td>
+                    </tr>
+                    <tr>
+                        <td>horizontalSlices</td>
+                        <td>The number of horizontal slices.</td>
+                        <td>6</td>
+                        <td>Any positive integer</td>
+                    </tr>
+                    <tr>
+                        <td>horizontalSliceDelay</td>
+                        <td>The animation delay between horizontal slices in milliseconds.</td>
+                        <td>75</td>
+                        <td>Any positive integer</td>
+                    </tr>
+                </tbody>
+                </table>
+        
+                <h3 id="nav-opts">Navigation Control</h3>
+                <table class="table table-striped table-bordered">
+                <thead>
+                    <tr>
+                        <th class="th-attr">Name</th>
+                        <th class="th-desc">Description</th>
+                        <th class="th-def">Default Value</th>
+                        <th class="th-val">Possible Values</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>cpanelAlign</td>
+                        <td>The alignment of the navigation control panel.</td>
+                        <td>bottom</td>
+                        <td>See <a href="#ctrl-align">control panel alignment</a> for available values.</td>
+                    </tr> 
+                    <tr>
+                        <td>cpanelOutside</td>
+                        <td>Set true for control panel to be positioned outside of slide area.</td>
+                        <td>false</td>
+                        <td>true, false</td>
+                    </tr>        
+                    <tr>
+                        <td>cpanelOnHover</td>
+                        <td>Set true for control panel to appear on mouseover and hide on mouseout.</td>
+                        <td>false</td>
+                        <td>true, false</td>
+                    </tr>
+                    <tr>
+                        <td>thumbnails</td>
+                        <td>The type of thumbnails displayed.</td>
+                        <td>number</td>
+                        <td>none, bullet, number, text, image, empty</td>
+                    </tr>
+                    <tr>
+                        <td>selectOnHover</td>
+                        <td>Set true to select slides with mouseover of thumbnails.</td>
+                        <td>false</td>
+                        <td>true, false</td>
+                    </tr>
+                    <tr>
+                        <td>tooltip</td>
+                        <td>The type of tooltip for thumbnails.</td>
+                        <td>text</td>
+                        <td>none, text, image</td>
+                    </tr>
+                    <tr>       	
+                        <td>tooltipDelay</td>
+                        <td>The time delay for tooltip to appear in milliseconds.</td>
+                        <td>0</td>
+                        <td>Any non-negative integer</td>
+                    </tr>
+                    <tr>
+                        <td>navButtons</td>
+                        <td>The type of navigation buttons.</td>
+                        <td>small</td>
+                        <td>none, small, large</td>
+                    </tr>
+                    <tr>
+                        <td>navButtonsOnHover</td>
+                        <td>Set true for large navigation buttons to appear on mouseover and hide on mouseout.</td>
+                        <td>false</td>
+                        <td>true, false</td>
+                    </tr>
+                    <tr>
+                        <td>playButton</td>
+                        <td>Set true to display the play button.</td>
+                        <td>true</td>
+                        <td>true, false</td>
+                    </tr>
+                </tbody>
+                </table>
+        
+                <h3 id="layer-opts">Layers</h3>
+                <table class="table table-striped table-bordered">
+                <thead>
+                    <tr>
+                        <th class="th-attr">Name</th>
+                        <th class="th-desc">Description</th>
+                        <th class="th-def">Default Value</th>
+                        <th class="th-val">Possible Values</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>layerEffect</td>
+                        <td>
+                        	The layer's transition effect.
+                            Effect can also be set per layer using <a href="#layer-tran">data-effect</a>.                            
+                        </td>
+                        <td>fade</td>
+                        <td>See <a href="#layer-effects">layer effects</a> for available effects.</td>
+                    </tr>
+                   	<tr>
+                        <td>layerDuration</td>
+                        <td>
+                            The layer's transition duration in milliseconds.
+                            Duration can also be set per layer using <a href="#layer-tran">data-duration</a>.
+                        </td>
+                        <td>500</td>
+                        <td>Any positive integer</td>
+                    </tr>
+                    <tr>
+                        <td>layerEasing</td>
+                        <td>
+                        	The layer's transition easing.
+                            Easing can also be set per layer using <a href="#layer-tran">data-easing</a>.
+                        </td>
+                        <td>swing</td>
+                        <td>See <a href="http://jqueryui.com/resources/demos/effect/easing.html" target="_blank">jQuery Easing</a> for information on available easing.</td>
+                    </tr>
+                    <tr>
+                        <td>layerDelay</td>
+                        <td>
+                        	The time delay in milliseconds before layer's transition starts.
+                            Delay can also be set per layer using <a href="#layer-tran">data-delay</a>.
+                        </td>
+                        <td>0</td>
+                        <td>Any non-negative integer</td>
+                    </tr>
+                    <tr>
+                        <td>layerEffectOut</td>
+                        <td>
+                        	The layer's transition out effect.
+                            Effect out can also be set per layer using <a href="#layer-tran-out">data-effect-out</a>.
+                        </td>
+                        <td>fade</td>
+                        <td>See <a href="#layer-effects">layer effects</a> for available effects.</td>
+                    </tr>
+                   	<tr>
+                        <td>layerDurationOut</td>
+                        <td>
+                        	The layer's transition out duration in milliseconds.
+                            Duration out can also be set per layer using <a href="#layer-tran-out">data-duration-out</a>.
+                       	</td>
+                        <td>500</td>
+                        <td>Any positive integer</td>
+                    </tr>
+                    <tr>
+                        <td>layerEasingOut</td>
+                        <td>
+                        	The layer's transition out easing.
+                            Easing out can also be set per layer using <a href="#layer-tran-out">data-easing-out</a>.
+                        </td>
+                        <td>swing</td>
+                        <td>See <a href="http://jqueryui.com/resources/demos/effect/easing.html" target="_blank">jQuery Easing</a> for information on available easing.</td>
+                	</tr>                    
+                    <tr>
+                        <td>layerDelayOut</td>
+                        <td>
+                        	The time delay in milliseconds before layer's transition out starts.
+                            Set -1 for no delay out.
+                            Delay out can also be set per layer using <a href="#layer-tran-out">data-delay-out</a>.
+                        </td>
+                        <td>-1</td>
+                        <td>Any integer</td>
+                    </tr>
+                    <tr>
+                        <td>layerSync</td>
+                        <td>
+                            Set true for layers to appear after image transition is complete. 
+                            Set false for layers to appear immediately.
+                        </td>
+                        <td>true</td>
+                        <td>true, false</td>
+                    </tr>
+                    <tr>
+                        <td>layerOutSync</td>
+                        <td>
+                            Set true for slide's transition to wait until previous layers are cleared. 
+                            Set false for slide's transition to run immediately.
+                        </td>
+                        <td>true</td>
+                        <td>true, false</td>
+                    </tr>
+                    <tr>
+                        <td>layerOnHover</td>
+                        <td>Set true to show layers on mouseover and hide on mouseout.</td>
+                        <td>false</td>
+                        <td>true, false</td>
+                    </tr>
+                </tbody>
+                </table>
+        
+                <h3 id="misc-opts">Miscellaneous</h3>
+                <table class="table table-striped table-bordered">
+                <thead>
+                    <tr>
+                        <th class="th-attr">Name</th>
+                        <th class="th-desc">Description</th>
+                        <th class="th-def">Default Value</th>
+                        <th class="th-val">Possible Values</th>
+                    </tr>
+                </thead>
+                <tbody>
+                	<tr>
+                        <td>responsive</td>
+                        <td>Set true for banner rotator to be responsive. Set false for fixed size.</td>
+                        <td>true</td>
+                        <td>true, false</td>
+                    </tr> 
+                	<tr>
+                    	<td>cssTransition</td>
+                        <td>Set true for css3 transition. Set false for jQuery transition.</td>
+                        <td>true</td>
+                        <td>true, false</td>
+                    </tr>  
+                    <tr>
+                        <td>imagePosition</td>
+                        <td>The position of the image.</td>
+                        <td>fill</td>
+                        <td>none, center, fill, fit, stretch</td>
+                    </tr>
+                    <tr>
+                        <td>shuffle</td>
+                        <td>Set true to shuffle slides in random order.</td>
+                        <td>false</td>
+                        <td>true, false</td>
+                    </tr>        
+                    <tr>
+                        <td>keyboard</td>
+                        <td>Set true to enable keyboard navigation.</td>
+                        <td>true</td>
+                        <td>true, false</td>
+                    </tr>
+                    <tr>
+                        <td>mousewheel</td>
+                        <td>Set true to enable mousewheel scroll navigation.</td>
+                        <td>false</td>
+                        <td>true, false</td>
+                    </tr>
+                    <tr>
+                        <td>swipe</td>
+                        <td>Set true to enable swipe navigation for touch-screen devices.</td>
+                        <td>true</td>
+                        <td>true, false</td>
+                    </tr>
+                </tbody>
+                </table>
+        		
+                <h3 id="callback-opts">Callbacks</h3>
+                <table class="table table-striped table-bordered">
+                <thead>
+                    <tr>
+                        <th class="th-attr">Name</th>
+                        <th class="th-desc">Description</th>
+                        <th class="th-def">Default Value</th>
+                        <th class="th-val">Possible Values</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>	
+                        <td>onInit</td>
+                        <td>Called after banner rotator's initialization.</td>
+                        <td>function() {}</td>
+                        <td>Any javascript function</td>
+                    </tr>
+                    <tr>
+                        <td>onFirstSlide</td>
+                        <td>Called when first slide is reached.</td>
+                        <td>function() {}</td>
+                        <td>Any javascript function</td>
+                    </tr>        
+                    <tr>
+                        <td>onLastSlide</td>
+                        <td>Called when last slide is reached.</td>
+                        <td>function() {}</td>
+                        <td>Any javascript function</td>
+                    </tr>                    
+                    <tr>
+                        <td>onPlay</td>
+                        <td>Called when slideshow plays.</td>
+                        <td>function() {}</td>
+                        <td>Any javascript function</td>
+                    </tr>
+                    <tr>
+                        <td>onPause</td>
+                        <td>Called when slideshow pauses.</td>
+                        <td>function() {}</td>
+                        <td>Any javascript function</td>
+                    </tr>
+                    <tr>
+                        <td>onPrev</td>
+                        <td>Called when advancing to previous slide.</td>
+                        <td>function() {}</td>
+                        <td>Any javascript function</td>
+                    </tr>
+                    <tr>
+                        <td>onNext</td>
+                        <td>Called when advancing to next slide.</td>
+                        <td>function() {}</td>
+                        <td>Any javascript function</td>
+                    </tr>
+                    <tr>      
+                        <td>onSlideChange</td>
+                        <td>Called when slide changes, before transition begins.</td>
+                        <td>function() {}</td>
+                        <td>Any javascript function</td>
+                    </tr>
+                    <tr>
+                        <td>onSlideComplete</td>
+                        <td>Called after slide's transition is complete.</td>
+                        <td>function() {}</td>
+                        <td>Any javascript function</td>
+                    </tr>
+                </tbody>
+                </table>
+			</div>
+            <br/>
+            
+           	<div class="section">	
+                <div class="page-header">
+                	<h1 id="ref">References</h1>
+             	</div>
+                
+                <h3 id="img-effects">Image Effects</h3>
+                <table class="table table-striped table-bordered">
+                <thead>
+                    <tr>
+                        <th style="width:25%">Value</th>
+                        <th style="width:50%">Description</th>
+                        <th style="width:25%">Category</th>
+                    </tr>  
+                </thead>
+                <tbody>      
+                    <tr>
+                        <td>none</td>
+                        <td>No transition</td>
+                        <td rowspan="3" class='cat-odd'>N/A</td>
+                    </tr>
+                    <tr>
+                        <td>random</td>
+                        <td>Randomly selected transition</td>
+                    </tr>
+                    <tr>
+                        <td>fade</td>
+                        <td>Fade in transition</td>
+                    </tr>
+                    <tr>
+                        <td>horizontalSlide</td>
+                        <td>Horizontal slide transition</td>
+                        <td rowspan="2" class='cat-even'>Slide</td>
+                    </tr>
+                    <tr>
+                        <td>verticalSlide</td>
+                        <td>Vertical slide transition</td>
+                    </tr>
+                    <tr>
+                        <td>zoomIn</td>
+                        <td>zoom in transition</td>
+                        <td rowspan="2" class='cat-odd'>Zoom</td>
+                    </tr>
+                    <tr>
+                        <td>zoomOut</td>
+                        <td>zoom out transition</td>
+                    </tr>
+                    <tr>
+                        <td>coverDown</td>
+                        <td>Cover down transition</td>
+                        <td rowspan="4" class='cat-even'>Cover</td>
+                    </tr>
+                    <tr>
+                        <td>coverUp</td>
+                        <td>Cover up transition</td>
+                    </tr>
+                    <tr>
+                        <td>coverRight</td>
+                        <td>Cover right transition</td>
+                    </tr>            
+                    <tr>
+                        <td>coverLeft</td>
+                        <td>Cover left transition</td>
+                    </tr>
+                    <tr>
+                        <td>blockExpandDown</td>
+                        <td>Blocks expand in down direction</td>
+                        <td rowspan="19" class='cat-odd'>Block</td>
+                    </tr>
+                    <tr>
+                        <td>blockExpandUp</td>
+                        <td>Blocks expand in up direction</td>
+                    </tr>
+                    <tr>
+                        <td>blockExpandRight</td>
+                        <td>Blocks expand in right direction</td>
+                    </tr>
+                    <tr>
+                        <td>blockExpandLeft</td>
+                        <td>Blocks expand in left direction</td>
+                    </tr>
+                    <tr>
+                        <td>diagonalFade</td>
+                        <td>Blocks fade in diagonal direction</td>
+                    </tr>
+                    <tr>
+                        <td>diagonalExpand</td>
+                        <td>Blocks expand in diagonal direction</td>
+                    </tr>
+                    <tr>
+                        <td>diagonalShift</td>
+                        <td>Blocks shift in diagonal direction</td>
+                    </tr>
+                    <tr>
+                        <td>reverseDiagonalFade</td>
+                        <td>Blocks fade in reverse diagonal direction</td>
+                    </tr>
+                    <tr>
+                        <td>reverseDiagonalExpand</td>
+                        <td>Blocks expand in reverse diagonal direction</td>
+                    </tr>
+                    <tr>
+                        <td>reverseDiagonalShift</td>
+                        <td>Blocks shift in reverse diagonal direction</td>
+                    </tr>
+                    <tr>
+                        <td>blockRandomFade</td>
+                        <td>Blocks fade in at random</td>
+                    </tr>
+                    <tr>
+                        <td>blockRandomExpand</td>
+                        <td>Blocks expand at random</td>
+                    </tr> 
+                    <tr>
+                        <td>blockRandomDrop</td>
+                        <td>Blocks drop down at random</td>
+                    </tr>      
+                    <tr>
+                        <td>zigZagDown</td>
+                        <td>Blocks fade in zigzagging in down direction</td>
+                    </tr>
+                    <tr>
+                        <td>zigZagUp</td>
+                        <td>Blocks fade in zigzagging in up direction</td>
+                    </tr>
+                    <tr>
+                        <td>zigZagRight</td>
+                        <td>Blocks fade in zigzagging in right direction</td>
+                    </tr>
+                    <tr>
+                        <td>zigZagLeft</td>
+                        <td>Blocks fade in zigzagging in left direction</td>
+                    </tr>
+                    <tr>
+                        <td>spiralIn</td>
+                        <td>Blocks fade in spiraling in direction</td>
+                    </tr>
+                    <tr>
+                        <td>spiralOut</td>
+                        <td>Blocks fade in spiraling out direction</td>
+                    </tr>
+                    <tr>
+                        <td>sliceDownRight</td>
+                        <td>Vertical slices down in right direction</td>
+                        <td rowspan="16" class="cat-even">Vertical Slice</td>
+                    </tr>
+                    <tr>
+                        <td>sliceDownLeft</td>
+                        <td>Vertical slices down in left direction</td>
+                    </tr>
+                    <tr>
+                        <td>sliceDownRandom</td>
+                        <td>Vertical slices down at random</td>
+                    </tr>
+                    <tr>
+                        <td>sliceUpRight</td>
+                        <td>Vertical slices up in right direction</td>
+                    </tr>
+                    <tr>
+                        <td>sliceUpLeft</td>
+                        <td>Vertical slices up in left direction</td>
+                    </tr>
+                    <tr>
+                        <td>sliceUpRandom</td>
+                        <td>Vertical slices up at random</td>
+                    </tr>
+                    <tr>
+                        <td>sliceFadeRight</td>
+                        <td>Vertical slices fade in right direction</td>
+                    </tr>
+                    <tr>
+                        <td>sliceFadeLeft</td>
+                        <td>Vertical slices fade in left direction</td>
+                    </tr>                    
+                    <tr>
+                        <td>verticalRandomFade</td>
+                        <td>Vertical slices fade in at random</td>
+                    </tr>
+                    <tr>
+                        <td>sliceAltRight</td>
+                        <td>Alternating vertical slices in, right direction</td>
+                    </tr>
+                    <tr>
+                        <td>sliceAltLeft</td>
+                        <td>Alternating vertical slices in, left direction</td>
+                    </tr>
+                    <tr>
+                        <td>blindsRight</td>
+                        <td>Vertical blinds transition in right direction</td>
+                    </tr>
+                    <tr>
+                        <td>blindsLeft</td>
+                        <td>Vertical blinds transition in left direction</td>
+                    </tr>
+                    <tr>
+                        <td>verticalRandomBlinds</td>
+                        <td>Vertical blinds transition at random</td>
+                    </tr>
+                    <tr>
+                        <td>sliceMoveRight</td>
+                        <td>Vertical slices move right</td>
+                    </tr>
+                    <tr>
+                        <td>sliceMoveLeft</td>
+                        <td>Vertical slices move left</td>
+                    </tr>
+                    <tr>
+                        <td>sliceRightDown</td>
+                        <td>Horizontal slices right in down direction</td>
+                        <td rowspan="16" class="cat-odd">Horizontal Slice</td>
+                    </tr>                    
+                    <tr>
+                        <td>sliceRightUp</td>
+                        <td>Horizontal slices right in up direction</td>
+                    </tr>
+                    <tr>
+                        <td>sliceRightRandom</td>
+                        <td>Horizontal slices right at random</td>
+                    </tr>                    
+                    <tr>
+                        <td>sliceLeftDown</td>
+                        <td>Horizontal slices left in down direction</td>
+                    </tr>
+                    <tr>
+                        <td>sliceLeftUp</td>
+                        <td>Horizontal slices left in up direction</td>
+                    </tr>
+                    <tr>
+                        <td>sliceLeftRandom</td>
+                        <td>Horizontal slices left at random</td>
+                    </tr>  
+                    <tr>
+                        <td>sliceFadeDown</td>
+                        <td>Horizontal slices fade in down direction</td>
+                    </tr>
+                    <tr>
+                        <td>sliceFadeUp</td>
+                        <td>Horizontal slices fade in up direction</td>
+                    </tr>                    
+                    <tr>
+                        <td>horizontalRandomFade</td>
+                        <td>Horizontal slices fade in at random</td>
+                    </tr>
+                    <tr>
+                        <td>sliceAltDown</td>
+                        <td>Alternating horizontal slices in, down direction</td>
+                    </tr>        
+                    <tr>
+                        <td>sliceAltUp</td>
+                        <td>Alternating horizontal slices in, up direction</td>
+                    </tr>        
+                    <tr>
+                        <td>blindsDown</td>
+                        <td>Horizontal blinds transition in down direction</td>
+                    </tr>          
+                    <tr>
+                        <td>blindsUp</td>
+                        <td>Horizontal blinds transition in up direction</td>
+                    </tr>
+                    <tr>
+                        <td>horizontalRandomBlinds</td>
+                        <td>Horizontal blinds transition at random</td>
+                    </tr>
+                    <tr>
+                        <td>sliceMoveDown</td>
+                        <td>Horizontal slices move down</td>
+                    </tr>
+                    <tr>
+                        <td>sliceMoveUp</td>
+                        <td>Horizontal slices move up</td>
+                    </tr>
+                </tbody>
+                </table>
+                
+                <h3 id="layer-effects">Layer Effects</h3>
+                <table class="table table-striped table-bordered">
+                <thead>
+                    <tr>
+                        <th style="width:25%">Value</th>
+                        <th style="width:50%">Description</th>
+                        <th style="width:25%">Category</th>
+                    </tr>  
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>none</td>
+                        <td>No transition</td>
+                        <td rowspan="2" class="cat-odd">N/A</td>
+                    </tr>
+                    <tr>
+                        <td>fade</td>
+                        <td>Layer fade in</td>
+                    </tr>
+                    <tr>
+                        <td>moveDown</td>
+                        <td>Layer move down</td>                        
+                        <td rowspan="4" class="cat-even">Move</td>
+                    </tr>
+                    <tr>
+                        <td>moveUp</td>
+                        <td>Layer move up</td>
+                    </tr>
+                    <tr>
+                        <td>moveRight</td>
+                        <td>Layer move right</td>
+                    </tr>        
+                    <tr>
+                        <td>moveLeft</td>
+                        <td>Layer move left</td>
+                    </tr>        
+                    <tr>
+                        <td>slideDown</td>
+                        <td>Layer slide down</td>        
+                        <td rowspan="4" class="cat-odd">Slide</td>
+                    </tr>
+                    <tr>
+                        <td>slideUp</td>
+                        <td>Layer slide up</td>
+                    </tr>    
+                    <tr>
+                        <td>slideRight</td>
+                        <td>Layer slide right</td>
+                    </tr>    
+                    <tr>
+                        <td>slideLeft</td>
+                        <td>Layer slide left</td>
+                    </tr>
+                    <tr>
+                        <td>flipDown</td>
+                        <td>Layer flips in down direction</td>
+                        <td rowspan="4" class="cat-even">Flip</td>
+                    </tr>
+                    <tr>
+                        <td>flipUp</td>
+                        <td>Layer flips in up direction</td>
+                    </tr>
+                    <tr>
+                        <td>flipRight</td>
+                        <td>Layer flips in right direction</td>
+                    </tr>
+                    <tr>
+                        <td>flipLeft</td>
+                        <td>Layer flips in left direction</td>
+                    </tr>
+                    <tr>
+                        <td>zoomIn</td>
+                        <td>Layer zooms in</td>
+                        <td rowspan="2" class="cat-odd">Zoom</td>
+                    </tr>
+                    <tr>
+                        <td>zoomOut</td>
+                        <td>Layer zooms out</td>
+                    </tr>
+                </tbody>    
+                </table>
+                
+                <h3 id="ctrl-align">Control Panel Alignment</h3>
+                <table class="table table-striped table-bordered">
+                <thead>
+                    <tr>
+                        <th style="width:25%;">Value</th>
+                        <th style="width:75%">Description</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>bottom</td>
+                        <td>bottom center</td>
+                    </tr>        
+                    <tr>
+                        <td>bottomLeft</td>
+                        <td>bottom left</td>
+                    </tr>
+                    <tr>
+                        <td>bottomRight</td>
+                        <td>bottom right</td>
+                    </tr>
+                    <tr>
+                        <td>top</td>
+                        <td>top center</td>
+                    </tr>            
+                    <tr>
+                        <td>topLeft</td>
+                        <td>top left</td>
+                    </tr>
+                    <tr>
+                        <td>topRight</td>
+                        <td>top right</td>
+                    </tr>
+                    <tr>
+                        <td>left</td>
+                        <td>left center</td>
+                    </tr>
+                    <tr>
+                        <td>leftTop</td>
+                        <td>left top</td>
+                    </tr>
+                    <tr>
+                        <td>leftBottom</td>
+                        <td>left bottom</td>
+                    </tr>
+                    <tr>
+                        <td>right</td>
+                        <td>right center</td>
+                    </tr>
+                    <tr>
+                        <td>rightTop</td>
+                        <td>right top</td>
+                    </tr>
+                    <tr>
+                        <td>rightBottom</td>
+                        <td>right bottom</td>
+                    </tr>
+                </tbody>
+                </table>
+                
+               	<h3 id="events">Custom Events</h3>
+                <table class="table table-striped table-bordered">
+                <thead>
+                    <tr>
+                        <th style="width:25%;">Value</th>
+                        <th style="width:75%">Description</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>rotatorInit</td>
+                        <td>Triggered after banner rotator intializes.</td>
+                    </tr>        
+                    <tr>
+                        <td>rotatorSlideChange</td>
+                        <td>Triggered on slide change.</td>
+                    </tr>
+                    <tr>
+                        <td>rotatorSlideComplete</td>
+                        <td>Triggered after slide's transition is complete.</td>
+                    </tr>
+                    <tr>
+                        <td>rotatorFirst</td>
+                        <td>Triggered when first slide is reached.</td>
+                    </tr>            
+                    <tr>
+                        <td>rotatorLast</td>
+                        <td>Triggered when last slide is reached.</td>
+                    </tr>
+                    <tr>
+                        <td>rotatorPlay</td>
+                        <td>Triggered when banner rotator plays.</td>
+                    </tr>
+                    <tr>
+                        <td>rotatorPause</td>
+                        <td>Triggered when banner rotator pauses.</td>
+                    </tr>
+                    <tr>
+                        <td>rotatorPrevious</td>
+                        <td>Triggered when previous slide is reached.</td>
+                    </tr>
+                    <tr>
+                        <td>rotatorNext</td>
+                        <td>Triggered when next slide is reached.</td>
+                    </tr>                    
+                </tbody>
+                </table>
+            </div>
+            <br/>
+            
+     		<div class="section">
+            	<div class="page-header"><h1 id="contact">Contact Info</h1></div>
+                <p>
+                    For help or questions regarding this file,
+                    please contact me using the email form on my <a href="http://codecanyon.net/user/webtako">profile page</a>.         
+                </p>
+            </div>
+            <br/>  
+  	 	</div>
+   	</div>
+</div>
+</body>
+</html>

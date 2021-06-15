@@ -1,0 +1,7 @@
+MANIFEST
+zope.thread/__init__.py
+zope.thread/_zope_thread.c
+zope.thread/SETUP.cfg
+zope.thread/tests.py
+setup.py
+setup.cfg

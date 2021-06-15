@@ -1,0 +1,2 @@
+var amounts = "30.25,120.00,45.09,200.10";
+var amtArray = amounts.split(/\.\d{2},?/);

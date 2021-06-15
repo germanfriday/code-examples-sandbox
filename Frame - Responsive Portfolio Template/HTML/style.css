@@ -1,0 +1,451 @@
+* {
+	margin: 0;
+	padding: 0;
+}
+
+img {
+	border: none;
+}
+
+body {
+	font-size: 1em;
+	background: white;
+	font-family: 'Open Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+	color: #616161;
+}
+
+header img {
+	padding: 40px 0;
+}
+
+a {
+	text-decoration: none;
+	color: #5cd8b4;
+}
+
+a:hover {
+	text-decoration: none;
+}
+
+ul, li {
+	list-style: none;
+}
+
+header {
+	background-color: #222;
+	background: url(images/banner.jpg) center;
+	width: 100%;
+	text-align: center;
+	padding: 100px 0;
+}
+
+.content {
+	max-width: 1000px;
+	margin: 0 auto;
+	position: relative;
+}
+
+h1.logo {
+	width: 300px;
+	margin: 20px auto;
+	color: #fff;
+	font-size: 3.8em;
+	font-weight: 300;
+	padding: 30px 0px;
+	background: 
+	url(images/corner-topleft.png) no-repeat top left,
+	url(images/corner-topright.png) no-repeat top right,
+	url(images/corner-bottomleft.png) no-repeat bottom left,
+	url(images/corner-bottomright.png) no-repeat bottom right;
+}
+
+header .button {
+	color: #ccc;
+	background-color: #444;
+	padding: 10px 0;
+	border-radius: 0 0 0 5px;
+	position: absolute;
+	margin-top: -120px;
+	top: 0;
+	font-size: .8em;
+	right: 0;
+	width: 100px;
+	text-align: center;
+}
+
+aside {
+	background: #444;
+	border-top: 3px solid #5cd8b4;
+	color: #ccc;
+}
+
+#intro {
+	margin: 20px 0 20px;
+	text-align: center;
+	padding: 0 10px;
+}
+
+#intro h2 {
+	color: #444;
+	font-weight: 300;
+	font-size: 2.5em;
+	margin-bottom: 10px;
+}
+
+#intro p {
+	color: #777;
+	font-weight: 300;
+	font-size: 1.4em;
+	margin-bottom: 40px;
+}
+
+#intro p a {
+	color: #777;
+	border-bottom: 1px solid #ddd;
+}
+
+#intro p a:hover {
+	color: #444;
+	border-bottom-color: #999;
+}
+
+.hireMe {
+	color: white;
+	font-weight: 600;
+	background-color: #5cd8b4;
+	text-align: center;
+	padding: 20px 50px;
+	border-radius: 5px;
+	display: inline-block;
+}
+
+.hireMe:hover {
+	background-color: #6de7c3;
+}
+
+#gallery {
+	overflow: hidden;
+	text-align: center;
+	margin-bottom: 20px;
+}
+
+#gallery li {
+	width: 100%;
+	margin-bottom: 20px;
+}
+
+#gallery li img {
+	border-radius: 5px;
+	max-width: 100%;
+}
+
+#gallery li img:hover {
+	opacity: 0.5;
+}
+
+footer {
+	margin-bottom: 50px;
+	font-size: .8em;
+	padding: 0 10px;
+}
+
+aside {
+	padding: 10px 10px;
+}
+
+aside h3 {
+	color: #fff;
+	font-weight: 300;	
+	font-size: 1.4em;
+	margin-bottom: 20px;
+}
+
+aside p{
+	line-height: 1.4em;
+	margin-bottom: 10px;
+}
+
+aside ul {
+	margin-bottom: 20px;
+	padding-left: 20px;
+}
+
+aside ul li:before {
+	content: '- ';
+}
+
+#socials {
+	float: right;
+	margin-top: -18px;
+}
+
+#socials li {
+	float: left;
+	margin-left: 15px;
+}
+
+#socials li a {
+	display: block;
+	text-indent: -99999px;
+	height: 24px;
+	width: 24px;
+	background-image: url(images/sprite.png);
+	background-repeat: none;
+}
+
+.facebook {
+	background-position: 0 0;
+}
+
+.twitter {
+	background-position: -24px 0;
+}
+
+.google {
+	background-position: -48px 0;
+}
+
+.instagram {
+	background-position: -72px 0;
+}
+
+.dribbble {
+	background-position: -96px 0;
+}
+
+.pinterest {
+	background-position: -120px 0;
+}
+
+.skype {
+	background-position: -144px 0;
+}
+
+.linkedin {
+	background-position: -168px 0;
+}
+
+.vimeo {
+	background-position: -192px 0;
+}
+
+.behance {
+	background-position: -216px 0;
+}
+
+.rss {
+	background-position: -240px 0;
+}
+
+.youtube {
+	background-position: -264px 0;
+}
+
+.dropbox {
+	background-position: -288px 0;
+}
+
+.flickr {
+	background-position: -312px 0;
+}
+
+.blogger {
+	background-position: -336px 0;
+}
+
+
+@media only screen and (max-width: 768px) { 
+	.hireMe {
+		width: 300px;
+		padding: 20px 0;
+	}
+}
+
+@media only screen and (min-width: 480px) and (max-width: 768px) { 
+
+header .button {
+	right: 20px;
+	border-radius: 0 0 5px 5px;
+}
+
+#intro {
+	margin: 30px 0 30px;
+}
+
+#gallery {
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	-ms-box-sizing: border-box;
+	box-sizing: border-box;
+	padding: 0 4%;
+}
+
+#gallery li {
+	float: left;
+	width: 46%;
+	margin: 10px 4% 10px 0;
+}
+
+#gallery li:nth-child(2n) {
+	margin-right: 0;
+}
+
+
+}
+
+@media only screen and (min-width: 769px) and (max-width: 1024px) { 
+
+header .button {
+	right: 20px;
+	border-radius: 0 0 5px 5px;
+}
+
+#gallery {
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	-ms-box-sizing: border-box;
+	box-sizing: border-box;
+	padding: 0 4%;
+}
+
+
+#gallery li {
+	float: left;
+	width: 30%;
+	margin: 0 2% 30px;
+}
+
+#gallery li:nth-child(3n) {
+	margin-right: 0;
+}
+
+#intro {
+	margin: 50px 0 50px;
+}
+
+}
+
+@media only screen and (min-width: 1025px) { 
+
+header .button {
+	right: 0;
+	border-radius: 0 0 5px 5px;
+}
+
+header .button:hover {
+	color: #969696;
+}
+
+#intro {
+	margin: 50px 0 50px;
+}
+
+#gallery {
+	margin-bottom: 50px;
+}
+
+#gallery li {
+	float: left;
+	width: 30%;
+	margin: 45px 5% 0 0;
+}
+
+#gallery li:nth-child(3n) {
+	margin-right: 0;
+}
+
+footer {
+	margin-bottom: 50px;
+	font-size: .8em;
+}
+
+aside {
+	padding: 40px 0;
+}
+
+aside h3 {
+	font-size: 1.4em;
+	margin-bottom: 20px;
+}
+
+aside p{
+	line-height: 1.4em;
+	margin-bottom: 10px;
+}
+
+aside ul {
+	margin-bottom: 20px;
+	padding-left: 20px;
+}
+
+aside ul li:before {
+	content: '- ';
+}
+
+#socials {
+	float: right;
+	margin-top: -18px;
+}
+
+.facebook:hover {
+	background-position: 0 -24px;
+}
+
+.twitter:hover {
+	background-position: -24px -24px;
+}
+
+.google:hover {
+	background-position: -48px -24px;
+}
+
+.instagram:hover {
+	background-position: -72px -24px;
+}
+
+.dribbble:hover {
+	background-position: -96px -24px;
+}
+
+.pinterest:hover {
+	background-position: -120px -24px;
+}
+
+.skype:hover {
+	background-position: -144px -24px;
+}
+
+.linkedin:hover {
+	background-position: -168px -24px;
+}
+
+.vimeo:hover {
+	background-position: -192px -24px;
+}
+
+.behance:hover {
+	background-position: -216px -24px;
+}
+
+.rss:hover {
+	background-position: -240px -24px;
+}
+
+.youtube:hover {
+	background-position: -264px -24px;
+}
+
+.dropbox:hover {
+	background-position: -288px -24px;
+}
+
+.flickr:hover {
+	background-position: -312px -24px;
+}
+
+.blogger:hover {
+	background-position: -336px -24px;
+}
+
+}
+

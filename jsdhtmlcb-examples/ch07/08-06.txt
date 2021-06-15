@@ -1,0 +1,13 @@
+function blockEnter(evt) {
+    evt = (evt) ? evt : event;
+    var charCode = (evt.charCode) ? evt.charCode :
+        ((evt.which) ? evt.which : evt.keyCode);
+    if (charCode == 13) {
+        return false;
+    } else {
+        return true;
+    }
+}
+...
+<input type="text" name="search" size="40" onkeydown="return blockEnter(event)" />
+

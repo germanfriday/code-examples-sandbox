@@ -1,0 +1,372 @@
+ /* - - - - - - - - - - - - - - - - - - - - -
+
+Título		: TEIXIDO
+Autor		: Vivian Espínola
+URL 		: teixido.co
+
+Creado 		: September 26, 2010
+Modificado	: September 26, 2010
+
+- - - - - - - - - - - - - - - - - - - - - */
+
+/* 
+	Resets
+	------
+*/
+
+html, body, div, span, object, iframe, h1, h2, h3, h4, h5, h6, 
+p, blockquote, pre, a, abbr, address, cite, code, del, dfn, em, 
+img, ins, q, small, strong, sub, sup, dl, dt, dd, ol, ul, li, 
+fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td {
+	margin: 0;
+	padding: 0;
+	border: 0;
+}
+
+article, aside, figure, figure img, figcaption, hgroup,
+footer, header, nav, section, video, object {
+	display: block;
+}
+
+a img {border: 0;}
+
+figure {position: relative;}
+figure img, #profiles img {width: 100%;}
+
+::selection 	 {background: rgb(255,204,0);}
+::-moz-selection {background: rgb(255,204,0);}
+
+
+@media only screen and (min-width: 290px) {
+
+	body { width:290px; margin:0 auto;}
+	
+	
+	/* reset_grillas
+	---------------------------------------- */
+	.p_1,
+	.p_2,
+	.p_3,
+	.p_4,
+	.p_5{
+		display:inline;
+		float: left;
+		position: relative;
+		margin-left: 0px;
+		margin-right: 0px;
+	}
+	
+	/* Grid >> 1Column
+	----------------------------------------------------------------------------------------------------*/
+	.p_1, .p_2, .p_3, .p_4, .p_5 { width:290px; }
+	
+	/* Excepciones
+	---------------------------------------- */
+	#slider,
+	#logo_slider, #logo_slider_d,
+	#testimonials { display:none;}
+	#logo 		 { padding-left: 92px; }
+	#info_2, #services_2, .dn290		 { display:none;}
+	#clients .happy_clients, #project_title  {width:290px; }
+
+	.just290	 {  display:block; font-family: 'TrumpGothicEastRegular', Helvetica, Arial, "Trebuchet MS", Tahoma, Arial, sans-serif; margin-top: 20px;}
+			
+	#profiles img{ width:50%; }
+	
+	/* footer
+	---------------------------------------- */
+
+	footer	{ width:290px; 
+			height:166px;  
+			margin-top:20px;
+			background: url("../gfx/backs/footer_right_s.jpg") no-repeat scroll right bottom, url("../gfx/backs/footer_left_s.jpg") no-repeat scroll left bottom, 
+			url("../gfx/backs/footer_bg_s.jpg") repeat scroll right bottom transparent;
+			line-height: 140%;
+				
+			}
+			
+			footer nav ul {
+				margin: 0;
+				padding: 0;
+				list-style-type: none;
+			}
+			
+	footer div#logo_footer		{display: none;}
+	footer div#browser	{display: none;}
+	footer div#connect		{ width:180px; float:left; padding-top:20px; padding-left: 60px; }
+	footer div#timeline		{ 	display: none}
+	#logo_footer	{ margin-top:30px;}
+	footer div li	{ display:block; clear:both;}
+		#slider_small {
+			display:none;
+			margin: 0;
+		}
+}
+
+
+
+@media only screen and (min-width: 544px) {
+
+	body { width:544px; margin:0 auto;}
+	
+	/* reset_grillas
+	---------------------------------------- */
+	.p_1,
+	.p_2,
+	.p_3 {
+		display:inline;
+		float: left;
+		position: relative;
+		margin-left: 10px;
+		margin-right: 10px;
+	}
+
+	/* Grid >> 3 Columns
+	----------------------------------------------------------------------------------------------------*/
+	.p_1 {width:168px;}
+	.p_2 {width:356px;}
+	.p_3, .p_4 {width:544px;}
+	.push_1 {left:0px;}
+	
+	
+	
+	/* Excepciones
+	---------------------------------------- */
+	#logo_slider,#logo_slider_d,
+	.dn544, .just290,
+	#slider 	{ display:none;}
+	
+	#logo 		{ margin-left:188px; padding-left: 41px; width:168px; }
+	#info_2, #services_2,#testimonials, 
+	.dn290	 	{ display:block;}
+	
+	#clients .happy_clients, #project_title {width:544px; }
+	.push_1_540 {left:198px;} 
+	#profiles img {width: 100%;}
+	.portfolio {width: 356px; float:left;margin-left: 10px;}
+		#slider_small{
+			display:block;
+			margin-bottom: 20px;
+		}
+
+	
+	
+	/* misc
+	---------------------------------------- */
+	.alpha_f {margin-left: 0;}
+	.omega_f {margin-right: 0;}
+	
+		/* footer
+		---------------------------------------- */
+
+		footer	{ width:544px; height:166px;  margin-top:40px;
+				background: url("../gfx/backs/footer_right_s.jpg") no-repeat scroll right bottom, url("../gfx/backs/footer_left_s.jpg") no-repeat scroll left bottom, 
+				url("../gfx/backs/footer_bg_s.jpg") repeat scroll right bottom transparent;
+				line-height: 140%;
+				}
+		footer nav ul {margin: 0;padding: 0;list-style-type: none;}
+		footer div#logo_footer	{ width:160px; float:left; padding-top:20px; display: block;}
+		footer div#browser		{ width:140px; float:left; padding-top:20px; display: block;}
+		footer div#connect		{ width:180px; float:left; padding-top:20px; display: block; padding-left: 0;}
+		footer div#timeline		{ 	display: none}
+				#logo_footer	{ margin-top:30px;}
+		footer div li			{ display:block; clear:both;}
+	}
+
+@media only screen and (min-width: 960px) {
+	
+	
+	/* reset_grillas
+	---------------------------------------- */
+	
+	body { width:960px; margin:0 auto;}
+	.p_1,
+	.p_2,
+	.p_3,
+	.p_4,
+	.p_5 {
+		display:inline;
+		float: left;
+		position: relative;
+		margin-left: 15px;
+		margin-right: 15px;
+	}
+	
+	
+	
+	/* Grid >> 5 Columns
+	----------------------------------------------------------------------------------------------------*/
+	.p_1 {width:168px;}
+ 	.p_2 {width:366px;}
+ 	.p_3, .p_3_5 {width:564px;}
+ 	.p_4 {width:762px;}
+ 	.p_5 {width:960px;}
+	.push_1_540 {left:0px;}
+ 	.push_1, .push_1_2 {left:198px;}
+	
+	
+
+	
+	/* Misc
+	---------------------------------------- */
+	.alpha {margin-left: 0;}
+	.omega {margin-right: 0;}
+	
+	/* Excepciones
+	---------------------------------------- */
+	
+	#logo 		{ margin-left:0px; width:168px; text-align:left; padding: 0;}
+	#logo_slider, #logo_slider_d,
+	#info_2, #services_2, .just290
+				{ display:none;}
+	#clients .happy_clients {width:564px; }
+	#slider {display:none}
+	#testimonials{ display:block;}
+	#profiles img {width: 100%;}
+	.portfolio {width: 564px;float:left;margin-left: 15px;}
+	#project_title {width:168px;}
+		#slider_small {
+			display: block;
+			margin-bottom: 20px;
+		}
+	/* footer
+	---------------------------------------- */
+
+	footer			{ width:960px; height:166px;  margin-top:40px;
+		background: url("../gfx/backs/footer_right_s.jpg") no-repeat scroll right bottom, url("../gfx/backs/footer_left_s.jpg") no-repeat scroll left bottom, 
+		url("../gfx/backs/footer_bg_s.jpg") repeat scroll right bottom transparent;
+		line-height: 140%;
+		}
+	
+/*	footer div		{ width:220px; float:left; padding-top:20px;}*/
+	footer div li	{ display:block; clear:both;}
+	#logo_footer	{ margin-top:30px;}
+	
+			footer div#logo_footer	{ width:220px; float:left; padding-top:20px; display: block;}
+			footer div#browser	{ width:170px; float:left; padding-top:20px; display: block;}
+			footer div#connect		{ width:210px; float:left; padding-top:20px; display: block; padding-left: 0;}
+			footer div#timeline		{ width:270px; float:left; padding-top:20px; display: block;}
+	
+}
+
+
+
+/* 
+---------------------------------------- */
+
+@media only screen and (min-width: 1200px) {
+
+	
+	body	{ width:1200px; margin:0 auto;}
+	ul li	{ list-style: none;}
+
+	/* reset_grillas
+	---------------------------------------- */
+		.p_1,
+		.p_2,
+		.p_3,
+		.p_4,
+		.p_5 {
+			display:inline;
+			float: left;
+			position: relative;
+			margin-left: 20px;
+			margin-right: 20px;
+		}
+	/* Grid >> 5 Columns
+	----------------------------------------------------------------------------------------------------*/
+
+	 	.p_1 {width:208px;}
+	 	.p_2 {width:456px;}
+	 	.p_3 {width:704px;}
+	 	.p_4 {width:952px;}
+	 	.p_5 {width:1200px;}
+		.push_1 {left:248px;}
+		
+	/* Misc
+	---------------------------------------- */
+		.alpha {margin-left: 0;}
+		.omega {margin-right: 0;}
+	
+	
+	/* Excepciones
+	---------------------------------------- */
+		
+		#logo 		 	{ margin-left:0px; width:208px; text-align:left ; padding: 0;}
+		#logo_slider,#logo_slider_d,
+		#testimonials 	{ display:block;}
+		#info_2, #services_2,
+		.just290		{ display:none;}
+		#clients .happy_clients {width:208px; }
+		.push_1_2		{ left:0px;}
+		.push_1_540 {left:0px;}
+		#profiles img {width: 100%;}
+		.portfolio {width: 704px;float:left;margin-left: 20px;}
+		#project_title {width:208px;}
+			#slider {display:block}
+		.work {
+			width:208px;
+			margin-right: 40px;
+			float: left;
+		}
+		
+		.work_1	 {
+				width:208px;
+					float: left;
+				}
+		#slider_small {
+			display:none;
+			margin: 0;
+		}
+		
+		
+		
+	/* Footer
+	---------------------------------------- */
+		footer			{ width:1200px; height:207px;  margin-top:40px;
+			background: url("../gfx/backs/footer_right_s.jpg") no-repeat scroll right top, url("../gfx/backs/footer_left_s.jpg") no-repeat scroll left top, 
+			url("../gfx/backs/footer_bg_s.jpg") repeat scroll right top transparent;
+			line-height: 140%;
+			}
+			
+/*		footer div		{ width:280px; float:left; padding-top:40px;}*/
+		footer div li	{ display:block; clear:both;}
+		#logo_footer	{ margin-top:35px;}
+			footer div#logo_footer	{ width:247px; float:left; padding-top:40px; display: block;}
+			footer div#browser	{ width:248px; float:left; padding-top:40px; display: block;}
+			footer div#connect		{ width:248px; float:left; padding-top:40px; display: block; padding-left: 0;}
+			footer div#timeline		{ width:323px; float:left; padding-top:40px; display: block;}
+		
+	
+}
+
+
+/* MISC
+---------------------------------------- */
+
+.cl{ clear:left;}
+.cr{ clear:right;}
+
+.clear {
+	clear: both;
+	display: block;
+	overflow: hidden;
+	visibility: hidden;
+	width: 0;
+	height: 0;
+	margin: 0;
+	padding: 0;
+}
+.group:after{
+	content:".";
+	display:block;
+	height:0px;
+	clear:both;
+	visibility:hidden;
+}
+
+
+
+
+
+/* Localized */

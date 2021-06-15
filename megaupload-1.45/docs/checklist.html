@@ -1,0 +1,97 @@
+<html>
+<head><title>Mega Upload</title></head>
+<body>
+<style type="text/css">
+<!--
+.heading {
+	font-size: larger;
+	margin: 4px;
+}
+.indented {
+	margin-left: 15px;
+}
+-->
+</style>
+<table width="90%" cellspacing="10">
+  <tbody>
+    <tr bgcolor="#FCFCC4">
+      <td><p class="heading">Check if perl 5 is installed.</p></td>
+    </tr>
+	<tr>
+      <td><p class="indented">Perl 5 or higher. is required for the successfull execution of Mega Upload PHP version. You 
+	  can out which version of perl is intalled by typing in <code> perl -v</code> at the 
+	  command prompt. The <a href="http://www.raditha.com/php/progress.php">demo</a> that you see on this site
+	  utilizes perl 5.8
+	  </p></td>
+    </tr>
+	
+	<tr  bgcolor="#FCFCC4">
+	  <td><p class="heading">What is the path to perl?</p></td>
+	</tr>
+	
+	<tr>
+	 <td>
+	 	<p class="indented">The first line of each perl scripts specifies the path to perl.</p>
+		<p  class="indented">
+		Type <code>which perl</code> at the console to find your perl installation path. This may be
+		different from the path specified in the scripts (/usr/local/bin/perl). Please edit
+		the first line of each perl script to make the changes.</p>
+	 </td>
+	</tr>
+	
+    <tr  bgcolor="#FCFCC4">
+      <td><p class="heading">Confirm that the required perl modules are intalled.</td>
+    </tr>
+    <tr>
+      <td><p class="indented">If perl is installed, perl LWP modules are likely to be installed. The full list of
+	  required modules include Fcntl,CGI,Cookie and Carp. All these are typically installed
+	  along with perl. You can find out 
+	  if they have been installed by typing. <br>
+	  </p>
+	  <p style="margin-left:30px">
+	  <code>
+	  perl -MCGI -e 1<br>
+	  perl -MCarp -e 1<br>
+	  perl -MLWP -e 1<br>
+	  perl -MFcntl -e 1<br>
+
+	  </code>
+	  </p>
+	  <p class="indented">As with all well behaved linux apps, the above commands will not produce any output if the modules
+	  have been installed.</p> 
+	  <p class="indented">
+	  If they have not been installed please download them from <a href="http://cpan.org">CPAN</a>  
+	  and follow the instructions for installing them. The installation of these modules are straight forward
+	  and can be completed even by a newbie.</p>
+	 </td>
+    </tr>
+    <tr bgcolor="#FCFCC4">
+      <td><p class="heading">is POST installed?</p></td>
+    </tr>
+	<tr>
+	  <td><p class="indented">POST is part of the LWP package. You can find out if this has been installed
+	  by typing <code>which POST</code> at the console. If it is not installed you will have to
+	  recompile the LWP modules to install it. Instructions are available with the LWP documentation.</p>
+      </td>
+	</tr>	  
+	
+    <tr  bgcolor="#FCFCC4">
+      <td><p class="heading">Have you set the correct permissions for the scripts?</p></td>
+	</tr>
+	<tr>
+	 	<td><p class="indented">This one is very obvious but often overlooked. You can set the correct permissons for
+		the perl scripts with the command <code>chmod oug+x *cgi</code>. You will also need to
+		<code>chmod 777 cgi-bin</code> to set the correct permissions on the CGI folder.</p>
+		
+		<p class="indented">Also make sure that you have write permission on the /tmp/ directory. Don't forget to
+		update the header.cgi file if you choose a different location for your temp files.
+		</p>
+		</td>
+	</tr>
+  </tbody>
+</table>
+<p>&nbsp;</p>
+<p>Please visit <a href="http://www.raditha.com/php/progress.php">raditha.com</a> for updated versions of this
+document.</p>
+</body>
+</html>

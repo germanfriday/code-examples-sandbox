@@ -1,0 +1,17 @@
+MANIFEST
+zdaemon/__init__.py
+zdaemon/component.xml
+zdaemon/DEPENDENCIES.cfg
+zdaemon/sample.conf
+zdaemon/schema.xml
+zdaemon/SETUP.cfg
+zdaemon/zdctl.py
+zdaemon/zdoptions.py
+zdaemon/zdrun.py
+zdaemon/tests/__init__.py
+zdaemon/tests/nokill.py
+zdaemon/tests/parent.py
+zdaemon/tests/testzdoptions.py
+zdaemon/tests/testzdrun.py
+setup.py
+setup.cfg

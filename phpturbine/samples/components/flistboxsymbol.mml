@@ -1,0 +1,28 @@
+
+<include src="../include/flistboxsymbol.swf"/>
+
+<place id="FListBoxSymbol" pos="10,10" instance="obj">
+  <script type="initialize">
+    labels=[];
+    for(n=0;n<1000;n++)
+      labels.push("label " + n);
+
+    obj.setDataProvider(labels);
+  </script>
+</place>
+
+
+
+<place component="ListBox" pos="30,50" instance="lst"></place>
+<dataset dataset="data" RowTag="row" ColumnTags="value">
+  <row>
+    <value>ola</value>
+  </row>
+  <row>
+    <value>hello</value>
+  </row>
+  <row>
+    <value>tchau</value>
+  </row>
+</dataset>
+<injectdata instance="lst" dataset="data"/>

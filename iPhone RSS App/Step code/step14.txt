@@ -1,0 +1,1 @@
+// in NewsItem.m //@implementation NewsItem@synthesize title, description, link;@end

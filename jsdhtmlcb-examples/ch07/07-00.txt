@@ -1,0 +1,34 @@
+function getFrameDoc(frameElem) {
+    var doc = (frameElem.contentDocument) ? frameElem.contentDocument : 
+        ((frameElem.contentWindow) ? frameElem.contentWindow.document : null);
+    return doc;
+}
+
+----------
+
+<script type="text/javascript">
+var loaded = false;
+...
+</script>
+...
+<body onload="loaded = true">
+
+----------
+
+// count attempts to reach other frame
+var tries = 0;
+// the function that needs info from the other frame
+function someFunc() {
+    if (parent.otherFrameName.loaded) {
+        // OK, other frame is ready; use it in this branch
+        tries = 0;    // prepare for next access
+        ...
+    } else if (tries < 5) {
+        tries++;
+        // try again in 1 second
+        setTimeout("someFunc()", 1000);
+    } else {
+        tries = 0;
+        alert("Sorry, we could not complete this task.");
+    }
+}

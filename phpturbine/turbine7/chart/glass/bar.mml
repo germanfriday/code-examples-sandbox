@@ -1,0 +1,102 @@
+<BaseDepth depth="1000"/>
+<Shape alpha="60" pos="{=_barX+_threeDDepthX/2},{=_barY-_threeDDepthY/2}">
+  <FillColor side="right" color="{_barcolor}"/>
+  <LineStyle width="1" color="#000000"/>
+  <moveTo pos="0,0">
+  <lineTo path="0,{=-_barheight0}"/>
+  <lineTo path="{=_barWidth*0.97},{=-_barheight1}"/>
+  <lineTo path="{=_barWidth*0.97},0"/>
+  <lineTo path="0,0"/>
+</shape>
+
+
+<BaseDepth depth="5000"/>
+<button pos="{=_barX+_threeDDepthX/2},{=_barY-_threeDDepthY/2}">
+  <State type="hit">
+    <BaseDepth depth="0"/>
+    <Shape pos="0,0">
+      <FillColor side="right" color="#ffaaaa"/>
+      <lineTo path="0,{=-_barheight0}"/>
+      <lineTo path="{=_barWidth*0.97},{=-_barheight1}"/>
+      <lineTo path="{=_barWidth*0.97},0"/>
+    </shape>
+  </State>
+
+  <State type="over, down">
+    <BaseDepth depth="0"/>
+    <Shape alpha="70" pos="0,0">
+      <FillColor side="right" color="{_barcolor}"/>
+      <LineStyle width="1" color="#000000"/>
+      <moveTo pos="0,0">
+      <lineTo path="0,{=-_barheight0}"/>
+      <lineTo path="{=_barWidth*0.97},{=-_barheight1}"/>
+      <lineTo path="{=_barWidth*0.97},0"/>
+      <lineTo path="0,0"/>
+    </shape>
+
+    <Text
+      size="{_defaultFontHeight}"
+      flags="base"
+      color="#000000"
+      _align="left"
+      _width="{=_barwidth-10}"
+      pos="2,{=-_barheight0}">{_barValue}</Text>
+
+    <if test="{=_barheight0 > _barheight1}">
+      
+      <Text
+        background="color(#aaffff), border(#000000,1),space(3)"
+        flags="base"
+        size="{=_defaultFontHeight*0.75}"
+        color="#000000" 
+        align="center"
+        placepoint="center"
+        Pos="{=_barWidth/2},{=-_barheight0-4-_defaultFontHeight}">{_barTooltip}</Text>
+    <else/>
+      
+      <Text
+        background="color(#aaffff), border(#000000,1),space(3)"
+        flags="base"
+        size="{=_defaultFontHeight*0.75}"
+        color="#000000" 
+        align="center"
+        placepoint="center"
+        Pos="{=_barWidth/2},{=-_barheight1-4-_defaultFontHeight}">{_barTooltip}</Text>
+    </if>
+    
+  </State>
+
+
+  <if notEmpty="{_barURL}">
+    <Script event="press" type="source">
+    getUrl("{_barURL}");
+    </Script>
+  </if>
+
+  <Audio
+          src="~/chart/bip.mp3"
+          event="RollOver"/>
+
+</button>
+
+
+
+<BaseDepth depth="2000"/>
+<Text
+  size="{_defaultFontHeight}"
+  flags="base"
+  color="#000000"
+  pos="{=_barX+_threeDDepthX/2+2},{=_barY-_barheight0-_threeDDepthY/2}">{_barValue}</Text>
+
+<Text
+  size="{_defaultFontHeight}"
+  flags="base"
+  color="#000000"
+  
+  pos="{=_barX},{=_barY+_defaultFontHeight}">{_barLabel}</Text>
+
+<BaseDepth depth="0"/>
+<Shape pos="{_barX},{_barY}>
+  <LineStyle width="1" color="#000000"/>
+  <line path="0,0;{_threeDDepthX},{=-_threeDDepthY}"/>
+</shape>

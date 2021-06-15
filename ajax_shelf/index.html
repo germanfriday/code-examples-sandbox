@@ -1,0 +1,86 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1" />
+<title>Ajax Shelf</title>
+
+
+
+<script type="text/javascript" src="js/prototype.lite.js"></script>
+<script type="text/javascript" src="js/moo.fx.js"></script>
+<script type="text/javascript" src="js/moo.fx.pack.js"></script>
+<script type="text/javascript" src="js/mootools.js"></script>
+
+<script type="text/javascript">
+// Initialize the effects
+var stretch;
+var stretch2;
+
+window.onload = function() {
+stretch = new fx.Combo('stretch', { height: true, opacity: false, duration: 300});
+stretch2 = new fx.Combo('stretch2', { height: true, opacity: false, duration: 300});
+
+// Hide them to begin with
+stretch.hide();
+stretch2.hide();
+}
+</script>
+
+<!--<script type="text/javascript">
+     window.onload = function() {
+          //remembers the height with a cookie
+          myRememberHeight = new fx.RememberHeight('stretch',
+                                            {duration: 300});
+          myRememberHeight.hide();
+      };
+</script>--> 
+
+
+<style type="text/css">
+body {margin: 0;}
+#stretch, #stretch2 {height: 0; overflow: hidden; background: #000; color: #fff;}
+</style>
+
+</head>
+<body>
+
+<div id="stretch">
+<p>ubhzdgiusdbgiuodghf</p>
+<p>ubhzdgiusdbgiuodghf</p>
+<p>ubhzdgiusdbgiuodghf</p>
+<p>ubhzdgiusdbgiuodghf</p>
+<p>ubhzdgiusdbgiuodghf</p>
+<p>ubhzdgiusdbgiuodghf</p>
+<p>ubhzdgiusdbgiuodghf</p>
+</div>
+
+<a href="javascript:;" onclick="stretch.toggle();">Access Shelf</a>
+
+<a href="javascript:;" onclick="myRememberHeight.toggle();">Access Shelf Remember</a><br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<div id="stretch2">
+<p>ubhzdgiusdbgiuodghf</p>
+<p>ubhzdgiusdbgiuodghf</p>
+<p>ubhzdgiusdbgiuodghf</p>
+<p>ubhzdgiusdbgiuodghf</p>
+<p>ubhzdgiusdbgiuodghf</p>
+<p>ubhzdgiusdbgiuodghf</p>
+<p>ubhzdgiusdbgiuodghf</p>
+</div>
+
+<a href="javascript:;" onclick="stretch2.toggle();">Access Shelf</a>
+
+<a href="javascript:;" onclick="myRememberHeight.toggle();">Access Shelf Remember</a>
+
+</body>
+
+</html>

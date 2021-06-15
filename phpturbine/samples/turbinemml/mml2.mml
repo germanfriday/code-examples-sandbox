@@ -1,0 +1,16 @@
+<MovieClip>
+  <Frame>
+    <Text>Running</Text>
+  </Frame>
+  <Frame>
+    <Text>Running.</Text>
+  </Frame>
+  <Frame>
+    <Text>Running..</Text>
+  </Frame>
+  <Frame>
+    <Text">Running...</Text>
+  </Frame>
+</MovieClip>
+
+<MovieClip pos="0,25" src="../common/wheelmovie.swf"/>

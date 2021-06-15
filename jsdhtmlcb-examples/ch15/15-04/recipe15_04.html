@@ -1,0 +1,252 @@
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+
+<html>
+<head>
+<title>DHTML Slide Show</title>
+<style type="text/css">
+#slides {font-family:Verdana, Arial, sans-serif; 
+         position:absolute; 
+         top:40px; 
+         width:90%
+        }
+.slide {position:absolute; 
+        top:0px; 
+        left:0px; 
+        display:none; 
+        width:80%; 
+        height:500px; 
+        overflow:hidden; 
+        background-color:#ccffcc; 
+        font-size:18px; 
+        padding:20px; 
+        border:5px solid #ff9900; 
+        margin:10%
+       }
+h1 {text-align:right; 
+    padding-right:10%
+   }
+h2 {font-size:36px; 
+    text-align:center
+   }
+li {list-style-image:url(end.gif); 
+    list-style-position:outside
+   }
+hr {width:60%; 
+    height:5px; 
+    background-color:#ff9900
+   }
+#titleBar {width:100%; 
+           height:10px
+          }
+body {background-color:#339966}
+#controller {position:absolute; 
+             top:30px; 
+             left:10%
+            }
+</style>
+<script type="text/javascript" src="../js/DHTMLAPI.js"></script>
+<script type="text/javascript">
+// Array of all slides
+var allSlides;
+// Slide counter
+var currSlide = -1;
+
+// Set global with array of slide elements
+function getAllSlides() {
+    var allChildren = document.getElementById("slides").childNodes;
+    var slideElems = new Array();
+    for (var i = 0; i < allChildren.length; i++) {
+        if (allChildren[i].nodeType == 1) {
+             slideElems[slideElems.length] = allChildren[i];
+        }
+    }
+    allSlides = slideElems;
+}
+
+// Set pixel heights of slide elements to fit window
+function setHeights() {
+    for (var i = 0; i < allSlides.length; i++) {
+        allSlides[i].style.height = getInsideWindowHeight() - 200 + "px";
+    }
+}
+
+// Advance to next slide
+function next() {
+    if (currSlide < 0) {
+        allSlides[++currSlide].style.display = "block";
+    } else if (currSlide < allSlides.length - 1) {
+        allSlides[currSlide].style.display = "none";
+        allSlides[++currSlide].style.display = "block";
+    } else if (currSlide == allSlides.length - 1) {
+        allSlides[currSlide++].style.display = "none";
+    }
+}
+
+// Go to previous slide
+function prev() {
+    if (currSlide > allSlides.length - 1) {
+        allSlides[--currSlide].style.display = "block";
+    } else if (currSlide > 0) {
+        allSlides[currSlide].style.display = "none";
+        allSlides[--currSlide].style.display = "block";
+    } else if (currSlide == 0) {
+        allSlides[currSlide--].style.display = "none";
+    }
+}
+
+// Initialize slide show
+function initSlides() {
+    getAllSlides();
+    setHeights();
+}
+</script>
+</head>
+<body onload="initDHTMLAPI(); initSlides()" onresize="setHeights()">
+<h1>U.S. Bill of Rights</h1>
+<hr id="titleBar" />
+<div id="controller">
+<form>
+<input type="button" value="Prev" onclick="prev()" />
+<input type="button" value="Next" onclick="next()" />
+</form>
+</div>
+
+<div id="slides">
+
+<div id="slide1" class="slide">
+<h2>ARTICLE I</h2>
+<hr />
+<p>
+Congress shall make no law respecting an establishment of religion, or prohibiting the free exercise thereof; or abridging the freedom of speech, or of the press; or the right of the people peaceably to assemble, and to petition the government for a redress of grievances.
+</p>
+<ul>
+<li>Note 1</li>
+<li>Note 2</li>
+<li>Note 3</li>
+</ul>
+</div>
+
+
+<div id="slide2" class="slide">
+<h2>ARTICLE II</h2>
+<hr />
+<p>
+A well regulated militia, being necessary to the security of a free state, the right of the people to keep and bear arms, shall not be infringed.
+</p>
+<ul>
+<li>Note 1</li>
+<li>Note 2</li>
+<li>Note 3</li>
+</ul>
+</div>
+
+<div id="slide3" class="slide">
+<h2>ARTICLE III</h2>
+<hr />
+<p>
+No soldier shall, in time of peace, be quartered in any house, without the consent of the owner, nor in time of war, but in in a manner to be prescribed by law.
+</p>
+<ul>
+<li>Note 1</li>
+<li>Note 2</li>
+<li>Note 3</li>
+</ul>
+</div>
+
+<div id="slide4" class="slide">
+<h2>ARTICLE IV</h2>
+<hr />
+<p>
+The right of the people to be secure in their persons, houses, papers, and effects, against unreasonable searches and seizures shall not be violated, and no warrants shall issue, but upon probable cause, supported by oath or affirmation, and particularly describing the place to be searched, and the persons or things to be seized.
+</p>
+<ul>
+<li>Note 1</li>
+<li>Note 2</li>
+<li>Note 3</li>
+</ul>
+</div>
+
+<div id="slide5" class="slide">
+<h2>ARTICLE V</h2>
+<hr />
+<p>
+No person shall be held to answer for a capital, or otherwise infamous crime, unless on a presentment or indictment of a grand jury, except in cases arising in the land or naval forces, or in the militia, when in actual service in time of war or public danger; nor shall any person be subject for the same offense to be twice put in jeopardy of life or limb; nor shall be compelled in any criminal case to be a witness against himself, nor be deprived of life, liberty, or property, without due process of law; nor shall private property be taken for public use, without just compensation.
+</p>
+<ul>
+<li>Note 1</li>
+<li>Note 2</li>
+<li>Note 3</li>
+</ul>
+</div>
+
+<div id="slide6" class="slide">
+<h2>ARTICLE VI</h2>
+<hr />
+<p>
+In all criminal prosecutions the accused shall enjoy the right to a speedy and public trial, by an impartial jury of the state and district wherein the crime shall have been committed, which district shall have been previously ascertained by law, and to be informed of the nature and cause of the accusation; to be confronted with the witnesses against him; to have compulsory process for obtaining witnesses in his favor, and to have the assistance of counsel for his defense.
+</p>
+<ul>
+<li>Note 1</li>
+<li>Note 2</li>
+<li>Note 3</li>
+</ul>
+</div>
+
+<div id="slide7" class="slide">
+<h2>ARTICLE VII</h2>
+<hr />
+<p>
+In suits at common law, where the value in controversy shall exceed twenty dollars, the right of trial by jury shall be preserved, and no fact tried by a jury shall be otherwise re-examined in any court of the United States, than according to the rules of the common law.
+</p>
+<ul>
+<li>Note 1</li>
+<li>Note 2</li>
+<li>Note 3</li>
+</ul>
+</div>
+
+<div id="slide8" class="slide">
+<h2>ARTICLE VIII</h2>
+<hr />
+<p>
+Excessive bail shall not be required, nor excessive fines imposed, nor cruel and unusual punishments inflicted.
+</p>
+<ul>
+<li>Note 1</li>
+<li>Note 2</li>
+<li>Note 3</li>
+</ul>
+</div>
+
+<div id="slide9" class="slide">
+<h2>ARTICLE IX</h2>
+<hr />
+<p>
+The enumeration in the Constitution, of certain rights, shall not be construed to deny or disparage others retained by the people.
+</p>
+<ul>
+<li>Note 1</li>
+<li>Note 2</li>
+<li>Note 3</li>
+</ul>
+</div>
+
+<div id="slide10" class="slide">
+<h2>ARTICLE X</h2>
+<hr />
+<p>
+The powers not delegated to the United States by the Constitution, nor prohibited by it to the states, are reserved to the states respectively, or the the people.
+</p>
+<ul>
+<li>Note 1</li>
+<li>Note 2</li>
+<li>Note 3</li>
+</ul>
+</div>
+
+</div>
+
+</body>
+</html>

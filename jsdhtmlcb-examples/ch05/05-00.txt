@@ -1,0 +1,42 @@
+<noscript>
+<p>
+If you are able to turn on JavaScript in your browsers, you will enjoy 
+convenient shortcuts to speed your site navigation. To learn how to enable 
+JavaScript for your browser, click the link for your browser: 
+<a href="jsiewin.html">Internet Explorer for Windows</a>, 
+<a href="jsiemac.html">Internet Explorer for Macintosh</a>, 
+<a href="jsnetscape.html">Netscape Navigator</a>.
+</p>
+</noscript>
+
+----------
+
+<script language="JavaScript" type="text/javascript">
+function myFunction() {
+    function statements
+}
+</script>
+<script language="JavaScript1.2" type="text/javascript">
+function myFunction() {
+    function statements
+}
+</script>
+
+----------
+
+<script language="JavaScript">
+<!--
+script statements go here
+//-->
+</script>
+
+----------
+var isMacOS = (navigator.userAgent.indexOf("Mac") != -1);
+...
+if (isMacOS) {
+    Macintosh-specific scripts here
+} else {
+    Other scripts here
+}
+
+var isW3C = (document.getElementById) ? true : false;

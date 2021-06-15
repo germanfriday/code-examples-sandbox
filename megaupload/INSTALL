@@ -1,0 +1,56 @@
+How to install Mega Upload.
+===========================
+
+Requirements.
+-------------
+1) A webserver.
+		apache recommended
+
+2) perl installed.
+	LWP, CGI and Fcntl modules are required for versions prior to 1.40
+    CGI, Fcntl and File modules for versions 1.40 or higher
+		
+	(These are available by default on most webservers running on linux 
+	based systems.)
+
+3) PHP 4
+
+
+Installation Steps.
+-------------------
+1) copy the files in the php folder to your webspace. This will be
+	/var/www/html or /usr/local/apache/htdocs for default installations
+	of apache. c:\inetpub\wwwroot for IIS
+
+2) copy the files in the cgi-bin folder into your webservers cgi-bin 
+	directory. For 'standard' apache installations this may be
+	/var/www/cgi-bin or /usr/local/apache/cgi-bin
+
+3) load upload.html in your browser and test. 
+
+4) If your web server's cgi-bin is NOT labeled as cgi-bin you will have
+	to edit the upload.php and replace '/cgi-bin/upload.cgi' with what
+	ever your path is. Also open header.cgi and change the line that 
+	starts with php_uploader to match your PHP scripts url.
+
+That's all folks. 
+
+
+If these steps do not work for you please refer to the checklist.html
+file in the docs folder. Also visit the project website at 
+http://www.sourceforge.net/megaupload or the project home page at 
+http://www.raditha.com/php/progress.php for more upto date information.
+
+
+NOTE:
+-----
+	Though megaupload make use of perl to build the progress bar, you 
+	don't need any knowledge of perl to use megaupload.
+
+more upto date installation instructions are available at
+http://www.raditha.com/php/progress.php
+
+
+
+
+

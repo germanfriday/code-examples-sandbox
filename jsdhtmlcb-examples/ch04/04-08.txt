@@ -1,0 +1,29 @@
+function myFunction(elemID) {
+    for (i = 0; i < document.getElementById(elemID).childNodes.length; i++) {
+        if (document.getElementById(elemID).childNodes[i].nodeType == 1) {
+            // processing element nodes here
+        }
+    }
+}
+
+----------
+
+function myFunction(elemID) {
+    var elem = document.getElementById(elemID);
+    for (i = 0; i < elem .childNodes.length; i++) {
+        if (elem .childNodes[i].nodeType == 1) {
+            // processing element nodes here
+        }
+    }
+}
+
+----------
+
+function myFunction(elemID) {
+    var elemNodes = document.getElementById(elemID).childNodes;
+    for (i = 0; i < elemNodes.length; i++) {
+        if (elemNodes[i].nodeType == 1) {
+            // processing element nodes here
+        }
+    }
+}

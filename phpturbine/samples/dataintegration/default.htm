@@ -1,0 +1,569 @@
+<!doctype html public "-//w3c//dtd html 4.0 transitional//en">
+<html>
+<head>
+   <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+   <meta name="GENERATOR" content="Mozilla/4.51 [en] (Win95; I) [Netscape]">
+   <title>Data Integration Sample</title>
+</head>
+<BODY topmargin="0" leftmargin="0" rightmargin="0" marginwidth="0" marginheight="0" TEXT="#000000" BGCOLOR="#FFFFFF" LINK="#003366" VLINK="#FF9900" ALINK="#FF6600">
+<center>
+  <table width="100%" border="0" cellspacing="0" cellpadding="0" align="center">
+    <tr bgcolor="#000033"> 
+      <td background="../common/bar_left.gif" width="50%">&nbsp;</td>
+      <td> 
+        <table width="560" border="0" cellspacing="0" cellpadding="0">
+          <tr> 
+            <td width="334"><img src="../common/bar_left.gif" width="334" height="28"></td>
+            <td><img src="../common/bar_central.gif" width="110" height="28"></td>
+            <td><img src="../common/bar_logo.gif" width="116" height="28"></td>
+          </tr>
+        </table>
+      </td>
+      <td background="../common/1x1_azul_esc.gif" width="50%">&nbsp;</td>
+    </tr>
+    <tr bgcolor="#FFFFFF" height="4"> 
+      <td colspan="3"></td>
+    </tr>
+  </table>
+  <table width="560" border="0" cellspacing="0" cellpadding="0">
+    <tr valign="top"> 
+      <td height="39"> 
+        <table width="666" border="0" cellspacing="0" cellpadding="0">
+          <tr> 
+            <td width="443" height="25"><font face="Verdana, Arial, Helvetica, sans-serif" size="3"><a href="../default.htm">Samples 
+              Menu</a></font></td>
+            <td width="223" height="25"> 
+              <div align="center"><font face="Verdana, Arial, Helvetica, sans-serif" size="3"><a href="../components/default.htm">Next 
+                Sample</a> </font></div>
+            </td>
+          </tr>
+        </table>
+      </td>
+    </tr>
+    <tr valign="top"> 
+      <td> 
+        <p align="center"><font face="Arial" size="6">Data Integration 
+          Sample<font size="1"><b><br>
+          (Flash MX/5)<br>
+          &nbsp; </b></font></font></p>
+        <div> 
+          <p>&nbsp; 
+          <p><font face="Verdana, Arial, Helvetica, sans-serif" size="2"> Turbine 
+            can read data from several sources and from several formats either 
+            locally or from remote locations through HTTP requests. Turbine supports 
+            the following data sources:</font></p>
+        </div>
+        <ul>
+          <li> 
+            <div><font face="Verdana, Arial, Helvetica, sans-serif" size="2">local 
+              or remote XML documents</font></div>
+          </li>
+          <li> 
+            <div><font face="Verdana, Arial, Helvetica, sans-serif" size="2">local 
+              or remote files</font></div>
+          </li>
+          <li><font face="Verdana, Arial, Helvetica, sans-serif" size="2">recordSets</font></li>
+          <li> 
+            <div><font size="2" face="Verdana, Arial, Helvetica, sans-serif">local 
+              strings passed as an argument</font></div>
+          </li>
+        </ul>
+        <hr size="1" noshade>
+        <p><font size="5"><font face="Verdana, Arial, Helvetica, sans-serif">Reading 
+          Variables from a Var File</font></font></p>
+        <p><font size="2" face="Verdana, Arial, Helvetica, sans-serif">This example 
+          shows how to read several variables from a variables file. The following 
+          MML reads the file varfile.txt and displays the read variables in &lt;Text&gt; 
+          tags:</font></p>
+        <table width="90%" border="1" cellpadding="0" cellspacing="0" bordercolor="#999999">
+          <tr> 
+            <td><table width="100%" border="0" cellpadding="16" cellspacing="0" bgcolor="#eeeef4">
+                <tr> 
+                  <td valign="top"> <div align="left"> 
+                      <p> <font size="2" face="Courier New, Courier, mono">&lt;Var 
+                        src=&quot;varfile.txt&quot;/&gt;<br>
+                        &lt;Text pos='10,10'&gt;var1 = {var1}&lt;/Text&gt;<br>
+                        &lt;Text pos='10,30'&gt;var2 = {var2}&lt;/Text&gt;<br>
+                        &nbsp; </font></p>
+                    </div></td>
+                </tr>
+              </table></td>
+          </tr>
+        </table>
+        <p><font face="Verdana, Arial, Helvetica, sans-serif" size="2"><font face="Verdana, Arial, Helvetica, sans-serif" size="2">To 
+          accomplish the same results directly from the scripting interface, we 
+          could instead do (data1.php):</font></font> </p>
+        <table width="80%" border="1" cellpadding="0" cellspacing="0" bordercolor="#CCCCCC">
+          <tr> 
+            <td><table width="100%" border="0" align="left" cellpadding="16" cellspacing="0" bgcolor="#FFFFCC">
+                <tr> 
+                  <td valign="top"> <div align="left">
+                      <p><font color="#009900" size="2" face="Courier New, Courier, mono"># 
+                        load a variables file:</font><font face="Courier New, Courier, mono" size="2"><br>
+                        $turbine-&gt;loadVar("varfile.txt");</font></p>
+                      <p><font color="#009900" size="2" face="Courier New, Courier, mono"># 
+                        display two loaded variables by using two &lt;text&gt; 
+                        tags:</font><font face="Courier New, Courier, mono" size="2"><br>
+                        $turbine-&gt;create("&lt;text pos='10,10'>var1 = {var1}&lt;/text>");<br>
+                        $turbine-&gt;create("&lt;text pos='10,30'>var2 = {var2}&lt;/text>");<br>
+                        &nbsp; </font></p>
+                    </div></td>
+                </tr>
+              </table></td>
+          </tr>
+        </table>
+        <p><font face="Verdana, Arial, Helvetica, sans-serif" size="2">The varfile.txt 
+          contents are:</font></p>
+        <div>
+<table width="90%" border="1" cellpadding="0" cellspacing="0" bordercolor="#999999">
+            <tr> 
+              <td><table width="100%" border="0" cellpadding="16" cellspacing="0" bgcolor="#eeeef4">
+                  <tr> 
+                    <td valign="top"> <div align="left"> 
+                        <p><font size="2" face="Courier New, Courier, mono"># this is a 
+                          comment <br>
+                          # this is a var definition file<br>
+                          var1 = &quot;value of var1&quot;</font></p>
+                        <p><font size="2" face="Courier New, Courier, mono"># 
+                          the following line is an error. Errors are ignored:<br>
+                          invalid line</font></p>
+                        <p><font size="2" face="Courier New, Courier, mono"># var names 
+                          can be optionally enclosed by {}s<br>
+                          {var2} = value of var2<br>
+                          &nbsp;</font> </p>
+                        </div></td>
+                  </tr>
+                </table></td>
+            </tr>
+          </table>
+          <p><font face="Verdana, Arial, Helvetica, sans-serif" size="2">The results 
+            in Flash are:<br>
+            &nbsp;<br>
+            <OBJECT classid="clsid:D27CDB6E-AE6D-11cf-96B8-444553540000" 
+        codebase="http://active.macromedia.com/flash2/cabs/swflash.cab#version=5,0,0,0"
+        ID="sw" WIDTH="600" HEIGHT="200">
+              <PARAM NAME="movie" VALUE="data1.php">
+              <PARAM NAME="quality" VALUE="best">
+              <PARAM NAME="bgcolor" VALUE="#ffffff">
+              <EMBED src="data1.php" 
+         quality="best" bgcolor="#ffffff" 
+         WIDTH="600" HEIGHT="200"	swLiveConnect="false"
+         TYPE="application/x-shockwave-flash" 
+         PLUGINSPAGE="http://www.macromedia.com/shockwave/download/index.cgi?P1_Prod_Version=ShockwaveFlash"> 
+              </EMBED> </OBJECT>
+            </font> </p>
+          <font face="Verdana, Arial, Helvetica, sans-serif" size="2"></font></div>
+        <hr size="1" noshade> 
+        <div> 
+          <p><font size="5"><font face="Verdana, Arial, Helvetica, sans-serif">Reading 
+            a DataSet from File</font></font></p>
+          <p><font size="2" face="Verdana, Arial, Helvetica, sans-serif">This 
+            example shows how to read a Turbine DataSet from a file:</font></p>
+          <table width="90%" border="1" cellpadding="0" cellspacing="0" bordercolor="#999999">
+            <tr> 
+              <td><table width="100%" border="0" cellpadding="16" cellspacing="0" bgcolor="#eeeef4">
+                  <tr> 
+                    <td valign="top"> <div align="left"> 
+                        <p> <font size="2" face="Courier New, Courier, mono">&lt;DataSet 
+                          src=&quot;dataset.txt&quot; DataSet=&quot;data&quot;/&gt;</font></p>
+                        <p><font size="2" face="Courier New, Courier, mono">&lt;Text 
+                          pos='10,{data$y.0}' color='{data$color.0}'&gt;<br>
+                          &nbsp; row 0 url: {data$url.0}<br>
+                          &lt;/Text&gt;</font></p>
+                        <p><font size="2" face="Courier New, Courier, mono">&lt;Text 
+                          pos='10,{data$y.1}' color='{data$color.1}'&gt;<br>
+                          &nbsp; row 1 url: {data$url.1}<br>
+                          &lt;/Text&gt;</font></p>
+                        <p><font size="2" face="Courier New, Courier, mono">&lt;Text 
+                          pos='10,{data$y.2}' color='{data$color.2}'&gt;<br>
+                          &nbsp; row 2 url: {data$url.2}<br>
+                          &lt;/Text&gt;</font></p>
+                        <p><font size="2" face="Courier New, Courier, mono">&lt;Text 
+                          pos='10,{data$y.3}' color='{data$color.3}'&gt;<br>
+                          &nbsp; row 3 url: {data$url.3}<br>
+                          &lt;/Text&gt;<br>
+                          &nbsp; </font> </p>
+                      </div></td>
+                  </tr>
+                </table></td>
+            </tr>
+          </table>
+          <p><font face="Verdana, Arial, Helvetica, sans-serif" size="2">To accomplish 
+            the same results directly from the scripting interface, one could 
+            do instead (data2.php):</font></p>
+          <table width="90%" border="1" cellpadding="0" cellspacing="0" bordercolor="#999999">
+            <tr> 
+              <td><table width="100%" border="0" cellpadding="16" cellspacing="0" bgcolor="#FFFFCC">
+                  <tr> 
+                    <td valign="top"> <div align="left"> 
+                        <p> <font color="#009900" size="2" face="Courier New, Courier, mono"># 
+                          load a DataSet file:</font><font size="2" face="Courier New, Courier, mono"><br>
+                          $turbine-&gt;loadDataSet(&quot;dataset.txt&quot;, &quot;data&quot;);</font></p>
+                        <p><font size="2" face="Courier New, Courier, mono"> <font color="#009900"># 
+                          display DataSet cells by using some &lt;text&gt; tags 
+                          -<br>
+                          # we escape $name as \$name to avoid being interpreted 
+                          as PHP variables:<br>
+                          </font>$turbine-&gt;create(&quot;&lt;text pos='10,{data\$y.0}' 
+                          color='{data\$color.0}'&gt;row 0 url: {data\$url.0}&lt;/text&gt;&quot;);</font></p>
+                        <p><font size="2" face="Courier New, Courier, mono">$turbine-&gt;create(&quot;&lt;text 
+                          pos='10,{data\$y.1}' color='{data\$color.1}'&gt;row 
+                          1 url: {data\$url.1}&lt;/text&gt;&quot;);</font></p>
+                        <p><font size="2" face="Courier New, Courier, mono">$turbine-&gt;create(&quot;&lt;text 
+                          pos='10,{data\$y.2}' color='{data\$color.2}'&gt;row 
+                          2 url: {data\$url.2}&lt;/text&gt;&quot;);</font></p>
+                        <p><font size="2" face="Courier New, Courier, mono">$turbine-&gt;create(&quot;&lt;text 
+                          pos='10,{data\$y.3}' color='{data\$color.3}'&gt;row 
+                          3 url: {data\$url.3}&lt;/text&gt;&quot;);<br>
+                          &nbsp; </font></p>
+                        </div></td>
+                  </tr>
+                </table></td>
+            </tr>
+          </table>
+          <p><font face="Verdana, Arial, Helvetica, sans-serif" size="2"><font face="Verdana, Arial, Helvetica, sans-serif" size="2">The 
+            dataset.txt file contents are:</font></font></p>
+          <table width="90%" border="1" cellpadding="0" cellspacing="0" bordercolor="#999999">
+            <tr> 
+              <td><table width="100%" border="0" cellpadding="16" cellspacing="0" bgcolor="#eeeef4">
+                  <tr> 
+                    <td valign="top"> <div align="left"> 
+                        <p><font size="2" face="Courier New, Courier, mono">&lt;date, url, 
+                          color, y&gt;<br>
+                          10-2, http://www.blue-pac.com, #ff00ff, 10<br>
+                          11-2, http://www.flashkit.com, #ff0000, 30<br>
+                          12-2, http://slashdot.org, #000000, 50<br>
+                          13-2, http://www.e-sheep.com, #11ff00, 70<br>
+                          </font></p>
+                      </div></td>
+                  </tr>
+                </table></td>
+            </tr>
+          </table>
+          <div>
+<p><font face="Verdana, Arial, Helvetica, sans-serif" size="2">The 
+              results in Flash are:<br>
+              &nbsp;<br>
+              <OBJECT classid="clsid:D27CDB6E-AE6D-11cf-96B8-444553540000" 
+        codebase="http://active.macromedia.com/flash2/cabs/swflash.cab#version=5,0,0,0"
+        ID="sw" WIDTH="600" HEIGHT="200">
+                <PARAM NAME="movie" VALUE="data2.php">
+                <PARAM NAME="quality" VALUE="best">
+                <PARAM NAME="bgcolor" VALUE="#ffffff">
+                <EMBED src="data2.php" 
+         quality="best" bgcolor="#ffffff" 
+         WIDTH="600" HEIGHT="200"	swLiveConnect="false"
+         TYPE="application/x-shockwave-flash" 
+         PLUGINSPAGE="http://www.macromedia.com/shockwave/download/index.cgi?P1_Prod_Version=ShockwaveFlash"> 
+                </EMBED> </OBJECT>
+              </font> </p>
+          </div>
+        </div>
+        <hr size="1" noshade>
+        <div> 
+          <p><font size="5"><font face="Verdana, Arial, Helvetica, sans-serif">Creating 
+            a DataSet Manually</font></font>
+          <p><font size="2" face="Verdana, Arial, Helvetica, sans-serif">This 
+            example shows how to use the component interface to create a DataSet 
+            and to fill it with data (data3.php):</font>
+          <table width="90%" border="1" cellpadding="0" cellspacing="0" bordercolor="#CCCCCC">
+            <tr> 
+              <td><table width="100%" border="0" align="left" cellpadding="16" cellspacing="0" bgcolor="#FFFFCC">
+                  <tr> 
+                    <td valign="top"> <div align="left"> <font color="#009900" size="2" face="Courier New, Courier, mono"># 
+                        make a DataSet &quot;manually&quot;:</font><font size="2" face="Courier New, Courier, mono"><br>
+                        $turbine-&gt;makeDataSet(&quot;handmade_dataset&quot;, 
+                        &quot;col1,col2&quot;);<br>
+                        $turbine-&gt;addDataSetRow(&quot;r0.c0,r0.c1&quot;);<br>
+                        $turbine-&gt;addDataSetValue(&quot;handmade_dataset&quot;, 
+                        &quot;col2&quot;, 0, &quot;new value&quot;);<br>
+                        $turbine-&gt;addDataSetColumn(&quot;handmade_dataset&quot;, 
+                        &quot;col3&quot;, 0, &quot;r0.c2&quot;); </font> 
+                        <p><font color="#009900" size="2" face="Courier New, Courier, mono"># 
+                          display DataSet cells by using some &lt;text&gt; tags 
+                          -<br>
+                          # we escape $name as \$name to avoid being interpreted 
+                          as PHP variables:</font><font size="2" face="Courier New, Courier, mono"><br>
+                          $turbine-&gt;create(&quot;&lt;text pos='10,10'&gt;handmade_dataset\$col1.0 
+                          = {handmade_dataset\$col1.0}&lt;/text&gt;&quot;);</font></p>
+                        <p><font size="2" face="Courier New, Courier, mono">$turbine-&gt;create(&quot;&lt;text 
+                          pos='10,30'&gt;handmade_dataset\$col2.0 = {handmade_dataset\$col2.0}&lt;/text&gt;&quot;);</font></p>
+                        <p><font size="2" face="Courier New, Courier, mono">$turbine-&gt;create(&quot;&lt;text 
+                          pos='10,50'&gt;handmade_dataset\$col3.0 = {handmade_dataset\$col3.0}&lt;/text&gt;&quot;);<br>
+                          &nbsp;</font> <br>
+                          &nbsp; </p>
+                      </div></td>
+                  </tr>
+                </table></td>
+            </tr>
+          </table>
+          <p><font face="Verdana, Arial, Helvetica, sans-serif" size="2"><font face="Verdana, Arial, Helvetica, sans-serif" size="2">The 
+            results in Flash are:</font></font></p>
+          <div><font face="Verdana, Arial, Helvetica, sans-serif" size="2"><font face="Verdana, Arial, Helvetica, sans-serif" size="2"></font>
+            <font face="Verdana, Arial, Helvetica, sans-serif" size="2"><OBJECT classid="clsid:D27CDB6E-AE6D-11cf-96B8-444553540000" 
+        codebase="http://active.macromedia.com/flash2/cabs/swflash.cab#version=5,0,0,0"
+        ID="sw" WIDTH="600" HEIGHT="200">
+                <PARAM NAME="movie" VALUE="data3.php">
+                <PARAM NAME="quality" VALUE="best">
+                <PARAM NAME="bgcolor" VALUE="#ffffff">
+                <EMBED src="data3.php" 
+         quality="best" bgcolor="#ffffff" 
+         WIDTH="600" HEIGHT="200"	swLiveConnect="false"
+         TYPE="application/x-shockwave-flash" 
+         PLUGINSPAGE="http://www.macromedia.com/shockwave/download/index.cgi?P1_Prod_Version=ShockwaveFlash"> 
+                </EMBED> </OBJECT>
+              </font> 
+            </font></div>
+        </div>
+        <hr size="1" noshade> 
+        <div><font face="Verdana, Arial, Helvetica, sans-serif" size="2"> </font> 
+          <font size="5"><font face="Verdana, Arial, Helvetica, sans-serif">Reading 
+          a DataSet from an XML File</font></font> 
+          <p><font size="2" face="Verdana, Arial, Helvetica, sans-serif">Turbine 
+            also deals very well with XML data. This example shows how to convert 
+            XML into a DataSet:</font> </p>
+          <table width="90%" border="1" cellpadding="0" cellspacing="0" bordercolor="#999999">
+            <tr> 
+              <td><table width="100%" border="0" cellpadding="16" cellspacing="0" bgcolor="#eeeef4">
+                  <tr> 
+                    <td valign="top"> <div align="left"> 
+                        <p><font size="2" face="Courier New, Courier, mono">&lt;DataSet 
+                          src=&quot;xml_xmldatasetfile.txt&quot;<br>
+                          &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;DataSet=&quot;book&quot; 
+                          <br>
+                          &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;RowTag=&quot;chapter&quot; 
+                          <br>
+                          &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;ColumnTags=&quot;pages, 
+                          title, interesting, topics&quot;&gt;<br>
+                          <br>
+                          &lt;text pos='10,10'&gt;book$title.0 = {book$title.0}&lt;/text&gt;&quot;<br>
+                          &lt;text pos='10,30'&gt;book$pages.0 = {book$pages.0}&lt;/text&gt;&quot;<br>
+                          &lt;text pos='10,50'&gt;book$interesting.0 = {book$interesting.0}&lt;/text&gt;&quot;<br>
+                          &lt;text pos='10,70'&gt;book$topics.0 = {book$topics.0}&lt;/text&gt;&quot;</font></p>
+                        <p> <font size="2" face="Courier New, Courier, mono">&lt;text pos='10,100'&gt;book$title.1 
+                          = {book$title.1}&lt;/text&gt;&quot;<br>
+                          &lt;text pos='10,120'&gt;book$pages.1 = {book$pages.1}&lt;/text&gt;&quot;<br>
+                          &lt;text pos='10,140'&gt;book$interesting.1 = {book$interesting.1}&lt;/text&gt;&quot;<br>
+                          &lt;text pos='10,160'&gt;book$topics.1 = {book$topics.1}&lt;/text&gt;&quot;<br>
+                          &nbsp; </font></p>
+                        </div></td>
+                  </tr>
+                </table></td>
+            </tr>
+          </table>
+          <div>
+            <p><font face="Verdana, Arial, Helvetica, sans-serif" size="2">To 
+              accomplish the same results directly from the scripting interface, 
+              one could do (data4.php):</font></p>
+            <table width="95%" border="1" cellpadding="0" cellspacing="0" bordercolor="#CCCCCC">
+              <tr> 
+                <td><table width="100%" border="0" align="left" cellpadding="16" cellspacing="0" bgcolor="#FFFFCC">
+                    <tr> 
+                      <td valign="top"> <div align="left"> <font color="#009900" size="2" face="Courier New, Courier, mono"># 
+                          load a DataSet from an XML file:</font><font size="2" face="Courier New, Courier, mono"><br>
+                          $turbine-&gt;loadDataSet(&quot;xml_xmldatasetfile.txt&quot;, 
+                          &quot;book&quot;, &quot;chapter&quot;, &quot;pages, 
+                          title, interesting, topics&quot;); </font><font face="Courier New, Courier, mono"> 
+                          <p><font color="#009900" size="2" face="Courier New, Courier, mono"># 
+                            display DataSet cells by using some &lt;text&gt; tags 
+                            -<br>
+                            # we escape $name as \$name to avoid being interpreted 
+                            as PHP variables:</font><font size="2" face="Courier New, Courier, mono"><br>
+                            $turbine-&gt;create(&quot;&lt;text pos='10,10'&gt;book\$title.0 
+                            = {book\$title.0}&lt;/text&gt;&quot;);</font></p>
+                          <p><font size="2" face="Courier New, Courier, mono">$turbine-&gt;create(&quot;&lt;text 
+                            pos='10,30'&gt;book\$pages.0 = {book\$pages.0}&lt;/text&gt;&quot;);</font></p>
+                          <p><font size="2" face="Courier New, Courier, mono">$turbine-&gt;create(&quot;&lt;text 
+                            pos='10,50'&gt;book\$interesting.0 = {book\$interesting.0}&lt;/text&gt;&quot;);</font></p>
+                          <p><font size="2" face="Courier New, Courier, mono">$turbine-&gt;create(&quot;&lt;text 
+                            pos='10,70'&gt;book\$topics.0 = {book\$topics.0}&lt;/text&gt;&quot;);<br>
+                            ...</font><font size="2" face="Courier New, Courier, mono"><br>
+                            &nbsp;<br>
+                            </font></p>
+                          </font></div></td>
+                    </tr>
+                  </table></td>
+              </tr>
+            </table>
+            <p><font face="Verdana, Arial, Helvetica, sans-serif" size="2">The 
+              xml_xmldatasetfile.txt file contents are:</font></p>
+            <table width="90%" border="1" cellpadding="0" cellspacing="0" bordercolor="#999999">
+              <tr> 
+                <td><table width="100%" border="0" cellpadding="16" cellspacing="0" bgcolor="#eeeef4">
+                    <tr> 
+                      <td valign="top"> <div align="left"> 
+                          <p> <font size="2" face="Courier New, Courier, mono">&lt;book&gt;</font></p>
+                          <p> <font size="2" face="Courier New, Courier, mono">&nbsp;&nbsp;&lt;name&gt;Gone 
+                            with the rain&lt;/name&gt;<br>
+                            &nbsp;&nbsp;&lt;author&gt;Arabian Bruce Lawrence&lt;/author&gt;<br>
+                            &nbsp;&nbsp;&lt;price&gt;$39&lt;/price&gt;</font></p>
+                          <p> <font size="2" face="Courier New, Courier, mono">&nbsp;&nbsp;&lt;chapter&gt;<br>
+                            &nbsp;&nbsp;&nbsp;&nbsp;&lt;title id=&quot;1&quot;&gt;First 
+                            Launch&lt;/title&gt;<br>
+                            &nbsp;&nbsp;&nbsp;&nbsp;&lt;pages&gt;45&lt;/pages&gt;<br>
+                            &nbsp;&nbsp;&nbsp;&nbsp;&lt;interesting&gt;90%&lt;/interesting&gt;<br>
+                            &nbsp;&nbsp;&nbsp;&nbsp;&lt;topics&gt;Love, hate &amp; 
+                            video&lt;/topics&gt;<br>
+                            &nbsp;&nbsp;&lt;/chapter&gt;</font></p>
+                          <p> <font size="2" face="Courier New, Courier, mono">&nbsp;&nbsp;&lt;chapter_not_valid&gt;<br>
+                            &nbsp;&nbsp;&nbsp;&nbsp;&lt;title id=&quot;1&quot;&gt;what?&lt;/title&gt;<br>
+                            &nbsp;&nbsp;&nbsp;&nbsp;&lt;pages&gt;45&lt;/pages&gt;<br>
+                            &nbsp;&nbsp;&nbsp;&nbsp;&lt;interesting&gt;90%&lt;/interesting&gt;<br>
+                            &nbsp;&nbsp;&nbsp;&nbsp;&lt;topics&gt;Love, hate &amp; 
+                            adventure&lt;/topics&gt;<br>
+                            &nbsp;&nbsp;&lt;/chapter_not_valid&gt;</font></p>
+                          <p> <font size="2" face="Courier New, Courier, mono">&nbsp;&nbsp;&lt;chapter&gt;<br>
+                            &nbsp;&nbsp;&nbsp;&nbsp;&lt;title id=&quot;2&quot;&gt;Second 
+                            Launch&lt;/title&gt;<br>
+                            &nbsp;&nbsp;&nbsp;&nbsp;&lt;pages&gt;71&lt;/pages&gt;<br>
+                            &nbsp;&nbsp;&nbsp;&nbsp;&lt;interesting&gt;30%&lt;/interesting&gt;<br>
+                            &nbsp;&nbsp;&nbsp;&nbsp;&lt;topics&gt;Sex, Love &amp; 
+                            Hate&lt;/topics&gt;<br>
+                            &nbsp;&nbsp;&lt;/chapter&gt;</font></p>
+                          <p> <font size="2" face="Courier New, Courier, mono">&lt;/book&gt;<br>
+                            &nbsp; </font></p>
+                        </div></td>
+                    </tr>
+                  </table></td>
+              </tr>
+            </table>
+            <p><font face="Verdana, Arial, Helvetica, sans-serif" size="2">T</font><font face="Verdana, Arial, Helvetica, sans-serif" size="2">he 
+              results in Flash are:<br>
+              &nbsp;<br>
+              <OBJECT classid="clsid:D27CDB6E-AE6D-11cf-96B8-444553540000" 
+        codebase="http://active.macromedia.com/flash2/cabs/swflash.cab#version=5,0,0,0"
+        ID="sw" WIDTH="600" HEIGHT="200">
+                <PARAM NAME="movie" VALUE="data4.php">
+                <PARAM NAME="quality" VALUE="best">
+                <PARAM NAME="bgcolor" VALUE="#ffffff">
+                <EMBED src="data4.php" 
+         quality="best" bgcolor="#ffffff" 
+         WIDTH="600" HEIGHT="200"	swLiveConnect="false"
+         TYPE="application/x-shockwave-flash" 
+         PLUGINSPAGE="http://www.macromedia.com/shockwave/download/index.cgi?P1_Prod_Version=ShockwaveFlash"> 
+                </EMBED> </OBJECT>
+              </font> </p>
+            <font face="Verdana, Arial, Helvetica, sans-serif" size="2"></font></div>
+        </div>
+        <hr size="1" noshade> 
+        <div> 
+          <p><font size="5"><font face="Verdana, Arial, Helvetica, sans-serif">Reading 
+            a DataSet from a String</font></font></p>
+          <p><font size="2" face="Verdana, Arial, Helvetica, sans-serif">And data 
+            can also be integrated from a string. This example shows how to read 
+            a Turbine DataSet from an XML string:</font>
+          <table width="90%" border="1" cellpadding="0" cellspacing="0" bordercolor="#999999">
+            <tr> 
+              <td><table width="100%" border="0" cellpadding="16" cellspacing="0" bgcolor="#eeeef4">
+                  <tr> 
+                    <td valign="top"> <div align="left"> 
+                        <p> <font size="2" face="Courier New, Courier, mono">&lt;DataSet&nbsp;dataSet=&quot;book&quot; 
+                          <br>
+                          &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;rowTag=&quot;chapter&quot; 
+                          <br>
+                          &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;columnTags=&quot;interesting=int, 
+                          title#titleattr, &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;pages#pagesattr=pg, 
+                          topics, pages#pagesattr&quot;&gt; </font></p>
+                        <p> <font size="2" face="Courier New, Courier, mono">&nbsp;&nbsp;&lt;chapter&gt;<br>
+                          &nbsp;&nbsp;&nbsp;&nbsp;&lt;title titleattr='1st launch'&gt;First 
+                          Launch&lt;/title&gt;<br>
+                          &nbsp;&nbsp;&nbsp;&nbsp;&lt;pages pagesattr='45'/&gt;<br>
+                          &nbsp;&nbsp;&nbsp;&nbsp;&lt;interesting&gt;90%&lt;/interesting&gt;<br>
+                          &nbsp;&nbsp;&nbsp;&nbsp;&lt;topics&gt;Love, hate, adventure&lt;/topics&gt;<br>
+                          &nbsp;&nbsp;&lt;/chapter&gt;</font></p>
+                        <p> <font size="2" face="Courier New, Courier, mono">&lt;/DataSet&gt;</font></p>
+                        <p> <font size="2" face="Courier New, Courier, mono">&lt;Text 
+                          pos='10,10'&gt;book$title#titleattr.0 = {book$title#titleattr.0}&lt;/Text&gt;<br>
+                          &lt;Text pos='10,30'&gt;book$int.0 = {book$int.0}&lt;/Text&gt; 
+                          <br>
+                          &lt;Text pos='10,50'&gt;book$pg.0 = {book$pg.0}&lt;/Text&gt;<br>
+                          &lt;Text pos='10,70'&gt;book$topics.0 = {book$topics.0}&lt;/Text&gt;<br>
+                          &lt;Text pos='10,90'&gt;book$pages#pagesattr.0 = {book$pages#pagesattr.0}&lt;/Text&gt;<br>
+                          &nbsp;</font> </p>
+                        </div></td>
+                  </tr>
+                </table></td>
+            </tr>
+          </table>
+          <p><font face="Verdana, Arial, Helvetica, sans-serif" size="2"><font face="Verdana, Arial, Helvetica, sans-serif" size="2">To 
+            accomplish the same results directly from the scripting interface, 
+            we could instead do (data5.php):</font></font></p>
+          <table width="100%" border="1" cellpadding="0" cellspacing="0" bordercolor="#CCCCCC">
+            <tr> 
+              <td><table width="100%" border="0" align="left" cellpadding="16" cellspacing="0" bgcolor="#FFFFCC">
+                  <tr> 
+                    <td valign="top"> <div align="left"> <font color="#009900" size="2" face="Courier New, Courier, mono"># 
+                        load a DataSet from an XML string:</font><font size="2" face="Courier New, Courier, mono"><br>
+                        $turbine-&gt;dataSetFromString(&quot;&lt;chapter&gt;&lt;title 
+                        titleattr='1st launch'&gt;First Launch&lt;/title&gt;<br>
+                        &lt;pages pagesattr='45'/&gt;<br>
+                        &lt;interesting&gt;90%&lt;/interesting&gt;<br>
+                        &lt;topics&gt;Love, hate, adventure&lt;/topics&gt;<br>
+                        &lt;/chapter&gt;&quot;,<br>
+                        &quot;book&quot;,<br>
+                        &quot;chapter&quot;,<br>
+                        &quot;interesting=int, title#titleattr, pages#pagesattr=pg, 
+                        topics, pages#pagesattr&quot;);</font><font face="Courier New, Courier, mono"> 
+                        <p><font size="2" face="Courier New, Courier, mono"> <font color="#009900"># 
+                          display DataSet cells by using some &lt;text&gt; tags 
+                          -<br>
+                          # we escape $name as \$name to avoid being interpreted 
+                          as PHP variables:<br>
+                          </font>$turbine-&gt;create(&quot;&lt;text pos='10,10'&gt;book\$title#titleattr.0 
+                          = {book\$title#titleattr.0}&lt;/text&gt;&quot;);<br>
+                          $turbine-&gt;create(&quot;&lt;text pos='10,30'&gt;book\$int.0 
+                          = {book\$int.0}&lt;/text&gt;&quot;);<br>
+                          $turbine-&gt;create(&quot;&lt;text pos='10,50'&gt;book\$pg.0 
+                          = {book\$pg.0}&lt;/text&gt;&quot;);<br>
+                          $turbine-&gt;create(&quot;&lt;text pos='10,70'&gt;book\$topics.0 
+                          = {book\$topics.0}&lt;/text&gt;&quot;);<br>
+                          $turbine-&gt;create(&quot;&lt;text pos='10,90'&gt;book\$pages#pagesattr.0 
+                          = {book\$pages#pagesattr.0}&lt;/text&gt;&quot;);<br>
+                          &nbsp;<br>
+                          &nbsp; </font></p>
+                        </font></div></td>
+                  </tr>
+                </table></td>
+            </tr>
+          </table>
+          <p><font size="2" face="Verdana, Arial, Helvetica, sans-serif">The results 
+            in Flash are:<br>
+            &nbsp;<br>
+            <OBJECT classid="clsid:D27CDB6E-AE6D-11cf-96B8-444553540000" 
+        codebase="http://active.macromedia.com/flash2/cabs/swflash.cab#version=5,0,0,0"
+        ID="sw" WIDTH="600" HEIGHT="200">
+              <PARAM NAME="movie" VALUE="data5.php">
+              <PARAM NAME="quality" VALUE="best">
+              <PARAM NAME="bgcolor" VALUE="#ffffff">
+              <EMBED src="data5.php" 
+         quality="best" bgcolor="#ffffff" 
+         WIDTH="600" HEIGHT="200"	swLiveConnect="false"
+         TYPE="application/x-shockwave-flash" 
+         PLUGINSPAGE="http://www.macromedia.com/shockwave/download/index.cgi?P1_Prod_Version=ShockwaveFlash"> 
+              </EMBED> </OBJECT>
+            </font> </p>
+          </div>
+
+        </td>
+    </tr>
+    <tr valign="bottom"> 
+      <td height="64"> 
+        <hr width="100%" size="1" noshade>
+        <table width="666" border="0" cellspacing="0" cellpadding="0">
+          <tr> 
+            <td width="443" height="25"><font face="Verdana, Arial, Helvetica, sans-serif" size="3"><a href="../default.htm">Samples 
+              Menu</a></font></td>
+            <td width="223" height="25"> 
+              <div align="center"><font face="Verdana, Arial, Helvetica, sans-serif" size="3"><a href="../components/default.htm">Next 
+                Sample</a> </font></div>
+            </td>
+          </tr>
+        </table>
+        <div align="center"><font face="Arial, Helvetica, sans-serif" size="1"><i>&nbsp;<br>
+          Flash is a trademark of Macromedia, Inc.</i></font> </div>
+      </td>
+    </tr>
+  </table>
+          </center>
+</body>
+</html>

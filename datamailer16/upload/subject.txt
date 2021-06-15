@@ -1,0 +1,1 @@
+subject source [random min=4 max=8 lang=rus case=lc][cyrlat]•İ”‰Œİ”Ö’”Œ •–Ÿ“”[/cyrlat] N[fromfile src=./upload/macros1.txt]

@@ -1,0 +1,2 @@
+<Text size="40" style="bold,italic" pos="120,100">Hello {&name}!<br/>Welcome to <br/>PHP Turbine 7...</Text>
+

@@ -1,0 +1,5 @@
+.pan_frame
+{
+	background: none;
+	filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(src='img/pan_frame.png', sizingMethod='crop');
+}

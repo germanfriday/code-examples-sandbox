@@ -1,0 +1,353 @@
+<!doctype html public "-//w3c//dtd html 4.0 transitional//en">
+<html>
+<head>
+   <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+   <meta name="GENERATOR" content="Mozilla/4.51 [en] (Win95; I) [Netscape]">
+   <title>Turbine MML</title>
+</head>
+<BODY topmargin="0" leftmargin="0" rightmargin="0" marginwidth="0" marginheight="0" TEXT="#000000" BGCOLOR="#FFFFFF" LINK="#003366" VLINK="#FF9900" ALINK="#FF6600">
+<center>
+  <table width="100%" border="0" cellspacing="0" cellpadding="0" align="center">
+    <tr bgcolor="#000033"> 
+      <td background="../common/bar_left.gif" width="50%">&nbsp;</td>
+      <td> 
+        <table width="560" border="0" cellspacing="0" cellpadding="0">
+          <tr> 
+            <td width="334"><img src="../common/bar_left.gif" width="334" height="28"></td>
+            <td><img src="../common/bar_central.gif" width="110" height="28"></td>
+            <td><img src="../common/bar_logo.gif" width="116" height="28"></td>
+          </tr>
+        </table>
+      </td>
+      <td background="../common/1x1_azul_esc.gif" width="50%">&nbsp;</td>
+    </tr>
+    <tr bgcolor="#FFFFFF" height="4"> 
+      <td colspan="3"></td>
+    </tr>
+  </table>
+  <table width="560" border="0" cellspacing="0" cellpadding="0">
+    <tr valign="top"> 
+      <td height="39"> <table width="599" border="0" cellspacing="0" cellpadding="0">
+          <tr> 
+            <td width="443" height="25"><font face="Verdana, Arial, Helvetica, sans-serif" size="3"><a href="../default.htm">Samples 
+              Menu</a></font></td>
+            <td width="156" height="25"> <div align="center"><font face="Verdana, Arial, Helvetica, sans-serif" size="3"><a href="../text/default.htm">Next 
+                Sample</a> </font></div></td>
+          </tr>
+        </table></td>
+    </tr>
+    <tr valign="top"> 
+      <td height="769"> <p align="center"><font face="Arial" size="6">Turbine 
+          MML Sample<font size="1"><b><br>
+          (Flash MX)<br>
+          &nbsp;&nbsp; </b></font></font></p>
+        <div> 
+          <p>&nbsp; 
+          <p><font face="Verdana, Arial, Helvetica, sans-serif" size="2"> Turbine 
+            Media Markup Language is a simple XML language that can express all 
+            the rich media capabilities contained in Turbine. With MML you can 
+            display text and images, draw shapes, movie clips, buttons, video 
+            and audio, and control all of these with scripting. MML elements can 
+            be explicitly placed on a certain position or they assume sequential 
+            positions across the movie (this feature is called AutoLayout). For 
+            example the following tags display a text label above a shape and 
+            an image:</font></p>
+          <table width="90%" border="1" cellpadding="0" cellspacing="0" bordercolor="#999999">
+            <tr> 
+              <td><table width="100%" border="0" cellpadding="16" cellspacing="0" bgcolor="#eeeef4">
+                  <tr> 
+                    <td><div align="left"> 
+                        <p><font face="Courier New, Courier, mono" size="2"> &lt;AutoLayout 
+                          type=&quot;Vertical&quot;/&gt;</font></p>
+                        <p><font face="Courier New, Courier, mono" size="2">&lt;Text>This 
+                          is a block of text&lt;/Text></font></p>
+                        <p><font face="Courier New, Courier, mono" size="2">&lt;Shape><br>
+                          </font><font face="Courier New, Courier, mono" size="2">&nbsp;&nbsp;&lt;LineStyle 
+                          color="#ff0000" width="5"/> <br>
+                          &nbsp;&nbsp;&lt;FillColor color="#8080ff"/> <br>
+                          &nbsp;&nbsp;&lt;Rect size="200,100"/> <br>
+                          &lt;/Shape></font></p>
+                        <p><font face="Courier New, Courier, mono" size="2">&lt;Image 
+                          src="../common/flower.jpg"/></font></p>
+                        <p><font face="Courier New, Courier, mono" size="2">&lt;Image 
+                          pos="350,50" src="../common/flower.bmp"/></font><br>
+                          &nbsp; </p>
+                      </div></td>
+                  </tr>
+                </table></td>
+            </tr>
+          </table>
+          <p><font face="Verdana, Arial, Helvetica, sans-serif" size="2">The above 
+            tags will display in Flash as:<br>
+            &nbsp;<br>
+            <OBJECT classid="clsid:D27CDB6E-AE6D-11cf-96B8-444553540000" 
+        codebase="http://active.macromedia.com/flash2/cabs/swflash.cab#version=5,0,0,0"
+        ID="sw" WIDTH="600" HEIGHT="300">
+              <PARAM NAME="movie" VALUE="mml.php?num=1">
+              <PARAM NAME="quality" VALUE="best">
+              <PARAM NAME="bgcolor" VALUE="#ffffff">
+              <EMBED src="mml.php?num=1" 
+         quality="best" bgcolor="#ffffff" 
+         WIDTH="600" HEIGHT="300"	swLiveConnect="false"
+         TYPE="application/x-shockwave-flash" 
+         PLUGINSPAGE="http://www.macromedia.com/shockwave/download/index.cgi?P1_Prod_Version=ShockwaveFlash"> 
+              </EMBED> </OBJECT>
+            </font></p>
+          <div>
+            <p><font face="Verdana, Arial, Helvetica, sans-serif" size="2"><br>
+              And in PDF as: <em><font size="1">(a new window will open)</font></em></font></p>
+          </div>
+          <blockquote> 
+            <div><font face="Verdana, Arial, Helvetica, sans-serif" size="2"><a href="mml.php?num=1&media=pdf" target="_blank">Click 
+              Here to Generate PDF</a> <em></em></font></div>
+          </blockquote>
+          <div>&nbsp;</div>
+          </div>
+        <hr size="1" noshade> 
+        <div> 
+          <p><font size="5"><font face="Verdana, Arial, Helvetica, sans-serif">Movie 
+            Clips </font></font> 
+          <p><font face="Verdana, Arial, Helvetica, sans-serif" size="2"> Movie 
+            Clips can be used to organize or animate elements like text, images 
+            or shapes. For example the example below displays a series of text 
+            blocks across 4 frames, and also a Flash movie from an external .swf 
+            file (either from the local disk or a remote http location):</font></p>
+          <table width="90%" border="1" cellpadding="0" cellspacing="0" bordercolor="#999999">
+            <tr> 
+              <td><table width="100%" border="0" cellpadding="16" cellspacing="0" bgcolor="#eeeef4">
+                  <tr> 
+                    <td><div align="left"> 
+                        <p> <font size="2" face="Courier New, Courier, mono">&lt;MovieClip&gt;<br>
+                          &nbsp;&nbsp;&lt;Frame&gt;<br>
+                          &nbsp;&nbsp;&nbsp;&nbsp;&lt;Text&gt;Running&lt;/Text&gt;<br>
+                          &nbsp;&nbsp;&lt;/Frame&gt;<br>
+                          &nbsp;&nbsp;&lt;Frame&gt;<br>
+                          &nbsp;&nbsp;&nbsp;&nbsp;&lt;Text&gt;Running.&lt;/Text&gt;<br>
+                          &nbsp;&nbsp;&lt;/Frame&gt;<br>
+                          &nbsp;&nbsp;&lt;Frame&gt;<br>
+                          &nbsp;&nbsp;&nbsp;&nbsp;&lt;Text&gt;Running..&lt;/Text&gt;<br>
+                          &nbsp;&nbsp;&lt;/Frame&gt;<br>
+                          &nbsp;&nbsp;&lt;Frame&gt;<br>
+                          &nbsp;&nbsp;&nbsp;&nbsp;&lt;Text&gt;Running...&lt;/Text&gt;<br>
+                          &nbsp;&nbsp;&lt;/Frame&gt;<br>
+                          &lt;/MovieClip&gt;</font></p>
+                        <p> <font size="2" face="Courier New, Courier, mono">&lt;MovieClip 
+                          pos=&quot;0,25&quot; src=&quot;../common/wheelmovie.swf&quot;/&gt;<br>
+                          &nbsp; </font><font face="Courier New, Courier, mono" size="2"> 
+                          </font></p>
+                        </div></td>
+                  </tr>
+                </table></td>
+            </tr>
+          </table>
+          <p><font face="Verdana, Arial, Helvetica, sans-serif" size="2">This 
+            displays in Flash as:<br>
+            &nbsp;<br>
+            <OBJECT classid="clsid:D27CDB6E-AE6D-11cf-96B8-444553540000" 
+        codebase="http://active.macromedia.com/flash2/cabs/swflash.cab#version=5,0,0,0"
+        ID="sw" WIDTH="600" HEIGHT="300">
+              <PARAM NAME="movie" VALUE="mml.php?num=2">
+              <PARAM NAME="quality" VALUE="best">
+              <PARAM NAME="bgcolor" VALUE="#ffffff">
+              <EMBED src="mml.php?num=2" 
+         quality="best" bgcolor="#ffffff" 
+         WIDTH="600" HEIGHT="300"	swLiveConnect="false"
+         TYPE="application/x-shockwave-flash" 
+         PLUGINSPAGE="http://www.macromedia.com/shockwave/download/index.cgi?P1_Prod_Version=ShockwaveFlash"> 
+              </EMBED> </OBJECT>
+            <br>
+            </font> </p>
+        </div>
+        <hr size="1" noshade> 
+        <div> 
+          <p><font size="5"><font face="Verdana, Arial, Helvetica, sans-serif">Buttons</font></font>
+          <p><font face="Verdana, Arial, Helvetica, sans-serif" size="2"> Turbine 
+            MML can also create clickable buttons, with up, over and down states:</font></p>
+          <table width="90%" border="1" cellpadding="0" cellspacing="0" bordercolor="#999999">
+            <tr> 
+              <td><table width="100%" border="0" cellpadding="16" cellspacing="0" bgcolor="#eeeef4">
+                  <tr> 
+                    <td valign="top"> <div align="left"> 
+                        <p> <font size="2" face="Courier New, Courier, mono">&lt;Button 
+                          pos=&quot;10,10&quot;&gt;</font></p>
+                        <p> <font size="2" face="Courier New, Courier, mono">&nbsp;&nbsp;&lt;State 
+                          type=&quot;up,hit&quot;&gt;<br>
+                          &nbsp;&nbsp;&nbsp;&nbsp;&lt;Shape&gt;<br>
+                          &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;LineStyle color=&quot;#404080&quot; 
+                          width=&quot;5&quot;/&gt;<br>
+                          &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;FillColor color=&quot;#8080ff&quot;/&gt;<br>
+                          &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;Rect size=&quot;200,100&quot;/&gt;<br>
+                          &nbsp;&nbsp;&nbsp;&nbsp;&lt;/Shape&gt;<br>
+                          &nbsp;&nbsp;&nbsp;&nbsp;&lt;Text pos=&quot;100,50&quot; 
+                          placepoint=&quot;center&quot;&gt;This is the UP state&lt;/Text&gt;<br>
+                          &nbsp;&nbsp;&lt;/State&gt;</font></p>
+                        <p> <font size="2" face="Courier New, Courier, mono">&nbsp;&nbsp;&lt;State 
+                          type=&quot;over&quot;&gt;<br>
+                          &nbsp;&nbsp;&nbsp;&nbsp;&lt;Shape&gt;<br>
+                          &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;LineStyle color=&quot;#8080dd&quot; 
+                          width=&quot;5&quot;/&gt;<br>
+                          &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;FillColor color=&quot;#ddddff&quot;/&gt;<br>
+                          &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;Rect size=&quot;200,100&quot;/&gt;<br>
+                          &nbsp;&nbsp;&nbsp;&nbsp;&lt;/Shape&gt;<br>
+                          &nbsp;&nbsp;&nbsp;&nbsp;&lt;Text pos=&quot;100,50&quot; 
+                          placepoint=&quot;center&quot;&gt;This is the OVER state&lt;/Text&gt;<br>
+                          &nbsp;&nbsp;&lt;/State&gt;</font></p>
+                        <p> <font size="2" face="Courier New, Courier, mono">&nbsp;&nbsp;&lt;State 
+                          type=&quot;down&quot;&gt;<br>
+                          &nbsp;&nbsp;&nbsp;&nbsp;&lt;Shape&gt;<br>
+                          &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;LineStyle color=&quot;#606060&quot; 
+                          width=&quot;5&quot;/&gt;<br>
+                          &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;FillColor color=&quot;#808080&quot;/&gt;<br>
+                          &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;Rect size=&quot;200,100&quot;/&gt;<br>
+                          &nbsp;&nbsp;&nbsp;&nbsp;&lt;/Shape&gt;<br>
+                          &nbsp;&nbsp;&nbsp;&nbsp;&lt;Text pos=&quot;100,50&quot; 
+                          placepoint=&quot;center&quot; color=&quot;#ffffff&quot;&gt;This 
+                          is the DOWN state&lt;/Text&gt;<br>
+                          &nbsp;&nbsp;&lt;/State&gt;</font></p>
+                        <p> <font size="2" face="Courier New, Courier, mono">&nbsp;&nbsp;&lt;Script 
+                          event=&quot;Release&quot;&gt;<br>
+                          &nbsp;&nbsp;&nbsp;&nbsp;getUrl(&quot;http://www.blue-pac.com&quot;, 
+                          &quot;_blank&quot;);<br>
+                          &nbsp;&nbsp;&lt;/Script&gt;</font></p>
+                        <p> <font size="2" face="Courier New, Courier, mono">&lt;/Button&gt;<br>
+                          &nbsp; </font></p>
+                        </div></td>
+                  </tr>
+                </table></td>
+            </tr>
+          </table>
+          <p><font size="2" face="Verdana, Arial, Helvetica, sans-serif">This 
+            displays in Flash as:<br>
+            &nbsp;</font><br>
+            <OBJECT classid="clsid:D27CDB6E-AE6D-11cf-96B8-444553540000" 
+        codebase="http://active.macromedia.com/flash2/cabs/swflash.cab#version=5,0,0,0"
+        ID="sw" WIDTH="600" HEIGHT="300">
+              <PARAM NAME="movie" VALUE="mml.php?num=3">
+              <PARAM NAME="quality" VALUE="best">
+              <PARAM NAME="bgcolor" VALUE="#ffffff">
+              <EMBED src="mml.php?num=3" 
+         quality="best" bgcolor="#ffffff" 
+         WIDTH="600" HEIGHT="300"	swLiveConnect="false"
+         TYPE="application/x-shockwave-flash" 
+         PLUGINSPAGE="http://www.macromedia.com/shockwave/download/index.cgi?P1_Prod_Version=ShockwaveFlash"> 
+              </EMBED> </OBJECT>
+          </p>
+          <div> 
+            <p><font face="Verdana, Arial, Helvetica, sans-serif" size="2">When 
+              outputting to PDF, only the &quot;Up&quot; state of the button will 
+              be visible: </font></p>
+          </div>
+          <blockquote> 
+            <div><font face="Verdana, Arial, Helvetica, sans-serif" size="2"><a href="mml.php?num=3&media=pdf" target="_blank">Click 
+              Here to Generate PDF</a></font></div>
+          </blockquote>
+          <p>&nbsp;</p>
+          <font face="Verdana, Arial, Helvetica, sans-serif" size="2"></font> 
+        </div>
+        <hr size="1" noshade> 
+        <div> 
+          <p><font size="5"><font face="Verdana, Arial, Helvetica, sans-serif">Scripting</font></font> 
+          <p><font face="Verdana, Arial, Helvetica, sans-serif" size="2"> Powerful 
+            scripting is also included in Turbine 7, which includes an on-the-fly 
+            ECMA Script compiler. ECMA Script is known in the Flash scene as Action 
+            Script and has a simple JavaScript-like syntax. Action Script can 
+            freely interact with all the MML elements. The following example causes 
+            an image to be attached to the mouse cursor:</font></p>
+          <table width="90%" border="1" cellpadding="0" cellspacing="0" bordercolor="#999999">
+            <tr> 
+              <td><table width="100%" border="0" cellpadding="16" cellspacing="0" bgcolor="#eeeef4">
+                  <tr> 
+                    <td valign="top"> <div align="left"> 
+                        <p><font size="2" face="Courier New, Courier, mono"><br>
+                          &lt;Text&gt;Move the mouse over here&lt;/Text&gt;</font></p>
+                        <p> <font size="2" face="Courier New, Courier, mono">&lt;Image 
+                          src=&quot;../common/flower.gif&quot; instance=&quot;flower&quot;/&gt;</font></p>
+                        <p> <font size="2" face="Courier New, Courier, mono">&lt;Script&gt;<br>
+                          &nbsp;&nbsp;onEnterFrame = function (){<br>
+                          &nbsp;&nbsp;&nbsp;&nbsp;flower._x=_xmouse;<br>
+                          &nbsp;&nbsp;&nbsp;&nbsp;flower._y=_ymouse;<br>
+                          &nbsp;&nbsp;}<br>
+                          &lt;/Script&gt;<br>
+                          &nbsp; </font></p>
+                        </div></td>
+                  </tr>
+                </table></td>
+            </tr>
+          </table>
+          <p><font face="Verdana, Arial, Helvetica, sans-serif" size="2">This 
+            displays in Flash as:<br>
+            &nbsp;<br>
+            <OBJECT classid="clsid:D27CDB6E-AE6D-11cf-96B8-444553540000" 
+        codebase="http://active.macromedia.com/flash2/cabs/swflash.cab#version=5,0,0,0"
+        ID="sw" WIDTH="600" HEIGHT="300">
+              <PARAM NAME="movie" VALUE="mml.php?num=4">
+              <PARAM NAME="quality" VALUE="best">
+              <PARAM NAME="bgcolor" VALUE="#ffffff">
+              <EMBED src="mml.php?num=4" 
+         quality="best" bgcolor="#ffffff" 
+         WIDTH="600" HEIGHT="300"	swLiveConnect="false"
+         TYPE="application/x-shockwave-flash" 
+         PLUGINSPAGE="http://www.macromedia.com/shockwave/download/index.cgi?P1_Prod_Version=ShockwaveFlash"> 
+              </EMBED> </OBJECT>
+            <br>
+            </font> </p>
+        </div>
+        <hr size="1" noshade> 
+        <div> 
+          <p><font size="5"><font face="Verdana, Arial, Helvetica, sans-serif">MML 
+            inside .swf Movies</font></font>
+          <p><font size="2" face="Verdana, Arial, Helvetica, sans-serif">But MML 
+            can also be integrated inside .swf movies, which allows for better, 
+            simpler positioning of elements. On this example the tags that create 
+            the above "Running..." movie clips are placed on a textfield inside 
+            this .swf movie:</font>
+          <p><font size="2" face="Verdana, Arial, Helvetica, sans-serif"> 
+            <OBJECT classid="clsid:D27CDB6E-AE6D-11cf-96B8-444553540000" 
+        codebase="http://active.macromedia.com/flash2/cabs/swflash.cab#version=5,0,0,0"
+        ID="sw" WIDTH="550" HEIGHT="400">
+              <PARAM NAME="movie" VALUE="mmlonswf.swf">
+              <PARAM NAME="quality" VALUE="best">
+              <PARAM NAME="bgcolor" VALUE="#CCCCCC">
+              <EMBED src="mmlonswf.swf" 
+         quality="best" bgcolor="#CCCCCC" 
+         WIDTH="550" HEIGHT="400"	swLiveConnect="false"
+         TYPE="application/x-shockwave-flash" 
+         PLUGINSPAGE="http://www.macromedia.com/shockwave/download/index.cgi?P1_Prod_Version=ShockwaveFlash"> 
+              </EMBED> </OBJECT>
+            </font>
+          <p><font size="2" face="Verdana, Arial, Helvetica, sans-serif">After 
+            being loaded by Turbine, the MML tags on the above .swf will be executed 
+            and produce the results below. Note how the resulting elements are 
+            displayed on the position of the above Flash text field (where the 
+            MML tags were issued):<br>
+            &nbsp;<br>
+            <OBJECT classid="clsid:D27CDB6E-AE6D-11cf-96B8-444553540000" 
+        codebase="http://active.macromedia.com/flash2/cabs/swflash.cab#version=5,0,0,0"
+        ID="sw" WIDTH="600" HEIGHT="300">
+              <PARAM NAME="movie" VALUE="mmlonswf.php">
+              <PARAM NAME="quality" VALUE="best">
+              <PARAM NAME="bgcolor" VALUE="#ffffff">
+              <EMBED src="mmlonswf.php" 
+         quality="best" bgcolor="#ffffff" 
+         WIDTH="600" HEIGHT="300"	swLiveConnect="false"
+         TYPE="application/x-shockwave-flash" 
+         PLUGINSPAGE="http://www.macromedia.com/shockwave/download/index.cgi?P1_Prod_Version=ShockwaveFlash"> 
+              </EMBED> </OBJECT>
+            </font> </div></td>
+    </tr>
+    <tr valign="bottom"> 
+      <td height="64"> <hr width="100%" size="1" noshade> <table width="600" border="0" cellspacing="0" cellpadding="0">
+          <tr> 
+            <td width="443" height="25"><font face="Verdana, Arial, Helvetica, sans-serif" size="3"><a href="../default.htm">Samples 
+              Menu</a></font></td>
+            <td width="157" height="25"> <div align="center"><font face="Verdana, Arial, Helvetica, sans-serif" size="3"><a href="../text/default.htm">Next 
+                Sample</a> </font></div></td>
+          </tr>
+        </table>
+        <div align="center"><font face="Arial, Helvetica, sans-serif" size="1"><i>&nbsp;<br>
+          Flash is a trademark of Macromedia, Inc.</i></font> </div></td>
+    </tr>
+  </table>
+          </center>
+</body>
+</html>

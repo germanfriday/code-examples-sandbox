@@ -1,0 +1,10 @@
+MANIFEST
+zope.app.zptpage.textindex/__init__.py
+zope.app.zptpage.textindex/configure.zcml
+zope.app.zptpage.textindex/DEPENDENCIES.cfg
+zope.app.zptpage.textindex/SETUP.cfg
+zope.app.zptpage.textindex/tests.py
+zope.app.zptpage.textindex/zope.app.zptpage.textindex-configure.zcml
+zope.app.zptpage.textindex/zptpage.py
+setup.py
+setup.cfg

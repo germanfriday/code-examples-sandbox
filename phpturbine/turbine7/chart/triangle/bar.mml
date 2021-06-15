@@ -1,0 +1,90 @@
+<Origin pos="{=_barX+_threeDDepthX/2},{=_barY-_threeDDepthY/2}"/>
+
+<BaseDepth depth="1000"/>
+<Shape pos="0,0">
+  <FillColor side="right" color="{_barcolor}"/>
+  <LineStyle width="1" color="#000000"/>
+  <moveTo pos="0,0"/>
+  <lineTo path="{_barWidth},0"/>
+  <lineTo path="{=_barWidth/2},{=-_barHeight0}"/>
+  <lineTo path="0,0"/>
+</shape>
+
+
+<BaseDepth depth="5000"/>
+<button pos="0,0">
+  <State type="hit">
+    <BaseDepth depth="0"/>
+    <Shape pos="0,0">
+      <FillColor side="right" color="{_barcolor}"/>
+      <LineStyle width="1" color="#000000"/>
+      <moveTo pos="0,0"/>
+      <lineTo path="{_barWidth},0"/>
+      <lineTo path="{=_barWidth/2},{=-_barHeight0}"/>
+      <lineTo path="0,0"/>
+    </shape>
+
+  </State>
+
+  <State type="over,down">
+    <BaseDepth depth="0"/>
+    <Shape pos="0,0">
+      <LineStyle width="2" color="#800000ff"/>
+      <moveTo pos="0,0"/>
+      <lineTo path="{_barWidth},0"/>
+      <lineTo path="{=_barWidth/2},{=-_barHeight0}"/>
+      <lineTo path="0,0"/>
+    </shape>
+
+    
+    <Text size="{=_defaultFontHeight*0.75}"
+      background="color(#aaffff), border(#000000,1),space(3)"
+      flags="base"
+      color="#000000" 
+      align="center"
+      placepoint="center"
+      Pos="{=_barwidth/2},{=-_barheight0-_threeDDepthY-_defaultFontHeight-3}">{_barTooltip}</Text>
+
+    <Text size="{=_defaultFontHeight*0.75}"
+      flags="base"
+      color="#000000"
+      align="center"
+      placepoint="center"
+      Pos="{=_barwidth/2},{=-_barheight0-7}">{_barValue}</Text>
+  
+  </State>
+
+  <if notEmpty="{_barURL}">
+    <Script event="press" type="source">
+    getUrl("{_barURL}");
+    </Script>
+  </if>
+
+  <Audio
+          src="~/chart/bip.mp3"
+          event="RollOver"/>
+
+</button>
+
+<BaseDepth depth="2000"/>
+<Text size="{=_defaultFontHeight*0.75}"
+      flags="base"
+      color="#000000"
+      align="center"
+      placepoint="center"
+      Pos="{=_barwidth/2},{=-_barheight0-7}">{_barValue}</Text>
+
+
+<Text color="#000000"
+  size="{_defaultFontHeight}"
+  flags="base"
+  align="center"
+  placepoint="center"
+  Pos="{=_barwidth/2-_threeDDepthX/2},{=_defaultFontHeight+_threeDDepthY/2}">{_barLabel}</Text>
+
+<Origin pos="0,0"/>
+<BaseDepth depth="0"/>
+<Shape pos="{_barX},{_barY}>
+  <LineStyle width="1" color="#000000"/>
+  <line path="0,0;{_threeDDepthX},{=-_threeDDepthY}"/>
+</shape>

@@ -1,0 +1,61 @@
+@charset "utf-8";
+
+body {
+	font-family: Helvetica;
+	background: #eee;
+	color: #555;
+}
+
+#container {
+	width: 70%;
+	margin-left: 15%;
+}
+
+#logo {
+	background: url('../images/logo.png') no-repeat;
+	width: 124px;
+	height: 55px;
+	margin: 2% 0 1% 0;
+}
+
+.clear {
+	border-bottom: solid 1px #f15a23;
+	opacity: 0.8;
+}
+
+label {
+	color: 999;
+}
+
+#footer {
+	color: 999;
+	margin-left: 90%;
+}
+
+input[type=text]{
+	padding:4px 2px;
+	border:solid 1px #aacfe4;
+	width:200px;
+	margin:2px 0 20px 0;
+}
+
+textarea {
+	padding:4px 2px;
+	border:solid 1px #aacfe4;
+	width:200px;
+	margin:2px 0 20px 0;
+}
+
+.downloadbutton {
+	font-size: 12px;
+	margin-left: 90%;
+	color: #999;
+	background: transparent;
+	border:0px solid #EEE;
+	-webkit-transition: color .3s ease-out;
+}
+
+.downloadbutton:hover {
+	color: #444;
+}
+

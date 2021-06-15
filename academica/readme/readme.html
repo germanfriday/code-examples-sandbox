@@ -1,0 +1,102 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head profile="http://gmpg.org/xfn/11">
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8"/>
+<title>Getting Started with Daily Headlines Theme</title>
+<style type="text/css">
+body {background-color: #fff; color:#333; font: 14px "Lucida Sans Unicode", "Lucida Grande", Tahoma, Arial, Helvetica, sans-serif; line-height: 22px; margin: 60px auto 50px auto; width:900px; }
+p, ul, ol, dd, pre {margin-bottom:22px; }
+p.intro, p.intro em {color:#111; font-family:Georgia,serif; font-size:24px; line-height:36px; }
+h1 {color:#111; font-family: "Lucida Sans", "Lucida Sans Unicode", "Lucida Grande", Verdana, Arial, Helvetica, sans-serif; font-size:30px; line-height:30px; margin-bottom:12px;} 
+h2,h3 { color:#111; font-family: "Lucida Sans", "Lucida Sans Unicode", "Lucida Grande", Verdana, Arial, Helvetica, sans-serif; font-weight:bold;}
+h2 {font-family:Georgia,serif; font-size:18px; letter-spacing:1px; margin-bottom:22px; padding-top:22px; text-transform:uppercase; }
+h3 {color:#333; font-family:Georgia,serif; font-size:18px; font-style:italic; font-weight:normal; margin-bottom:22px; }
+li { color:#111; }
+.imghelp {float: right; display: inline; margin: 0 0 10px 10px; border: solid 5px #ddd; padding: 3px; }
+.nofloat {float: none; display: block;}
+div.clear {clear: both; line-height: 1px; height: 1px; font-size: 1px; }
+span.highlight {color: red; font-weight: bold; }
+</style>
+<meta name="robots" content="index,nofollow,noodp,noydir" />
+</head>
+
+<body>
+<h1>Getting Started with Academica Theme</h1>
+<p class="intro">Academica is a non-profit / education CMS theme with a modern layout and elegant design.</p>
+
+<h2>1. Installing Academica Theme</h2>
+<img src="images/step_1.png" alt="" class="imghelp" /><p>All themes by ProudThemes.com can be installed directly from the Dashboard: go to <strong>Appearance > Themes</strong> and click Add New > Upload.</p>
+<div class="clear">&nbsp;</div>
+
+<h2>2. Theme Options Page</h2>
+<img src="images/step_2.png" alt="" class="imghelp" /><p>Once you've uploaded and activated Academica Theme you will be automatically redirected to the <strong>Theme Options Page</strong>.</p>
+<p>There you will be able to tweak some settings and options, make sure to check them all out. We tried to make the process as simple as possible.</p>
+<div class="clear">&nbsp;</div>
+
+<h2>3. Post Thumbnails</h2>
+<img src="images/step_4.png" alt="" class="imghelp" /><img src="images/step_5.png" alt="" class="imghelp" /><p>All our themes support the <strong>Post Thumbnail</strong> feature that was introduced with WordPress 2.9.</p>
+<p>On the Add/Edit Post page, on the right, you will see the <strong>Featured Image</strong> box. Use it to upload an image as a thumbnail for the current post or click the <strong>"Use as thumbnail"</strong> link on images that are already uploaded.</p>
+<div class="clear">&nbsp;</div>
+
+<h2>4. Setting Up TimThumb</h2>
+<p>Make sure to set the permissions on the /themes/academica/scripts/cache folder to <span class="highlight">777</span> to allow TimThumb to automatically generate thumbnails.</p>
+
+<h3>TimThumb FAQ</h3>
+<ol>
+<li>TimThumb requires the GD library, which is available on any host server with PHP 4.3+ installed.</li>
+<li>With some hosting providers (ex: HostGator) TimThumb will work with default 755 permissions (rwx-rx-rx). On other hosting servers, you need to set 777 to the /cache/ folder. Try both cases and see which work for you.</li>
+<li>Some hosting providers (ex: HostGator) block TimThumb (mod_sec), take a look at this thread to solve the issue: <a href="http://code.google.com/p/timthumb/issues/detail?id=8">http://code.google.com/p/timthumb/issues/detail?id=8</a>.</li> 
+<li>TimThumb will NOT work with images hosted on other servers, so you will have to upload all images to your domain first.</li>
+</ol>
+
+<h2>5. Custom Menus (since WP 3.0)</h2>
+<img src="images/custom_menus.png" alt="" class="imghelp" /><p>Academica Theme fully supports the new Menu Management feature of WP 3.0 and has 2 default menu locations: one at the top of the page and one in the footer (bottom).</p>
+<p>You can also create additional custom menus and set them as widgets (fully styled in Academica Theme) on the Appearance > Widgets page, the <strong>Custom Menu</strong> widget.</p>
+<p>If you are not familiar with the new Menu Management in WordPress 3.0, you might want to read this small tutorial: <a href="http://www.proudthemes.com/2010/06/wordpress-3-0-custom-menu-management-tutorial/" rel="external,nofollow" target="_blank">Custom Menu Management in WordPress 3.0</a></p>
+
+<div class="clear">&nbsp;</div>
+
+<h2>6. Sidebars &amp; Custom Widgets by ProudThemes.com</h2>
+<p>Academica Theme has 9 built-in sidebars: three for the homepage, two for pages, two for posts, one for archive pages (category archives, author archives, search results pages) and one for the footer.</p>
+<img src="images/f_widgets.png" alt="" class="imghelp nofloat" /><p>Academica Theme includes 3 unique widgets developed by ProudThemes.com specifically for this theme.</p>
+<img src="images/f_widgets2.png" alt="" class="imghelp" />
+<ol>
+<li><strong>Proud: Featured Posts</strong><br />This widget allows you to add a special category block in the sidebar that will contain posts in that category. This widget can be added only to the <strong>Right</strong> sidebars.</li>
+<li><strong>Proud: Posts Gallery</strong><br />This widget allows you to add a special category block in the sidebar that will contain posts in that category, only thumbnails. This widget was designed for the <strong>Sidebar: Homepage (Middle)</strong> sidebar.</li>
+<li><strong>Proud: Ads Widget</strong><br />This widget allows you to add a special ad block (mostly used in the sidebar).</li>
+</ol>
+<p><strong>Important: You can add multiple instances of the Featured Posts and Ads Widget widgets. </strong></p>
+
+<div class="clear">&nbsp;</div>
+
+<h2>7. Custom Page Templates</h2>
+<img src="images/step_7.png" alt="" class="imghelp" /><p>Academica Theme includes 4 page layouts: default (sidebars on the left and right), full width (full page width, no sidebars), only left sidebar, only right sidebar.</p>
+<ol>
+<li><strong>Default: </strong><br />A three-column layout with the sidebar on the left and right. This is the default layout for all pages. Sidebars are 200px wide each.</li>
+<li><strong>Full Width: </strong><br />If you don't need the sidebar and would like to use the full width instead. Total width: 960px.</li>
+<li><strong>Only Left Sidebar: </strong><br />If you need the sidebar in the left column but not in the right column. Content area is extended to 730px.</li>
+<li><strong>Only Right Sidebar: </strong><br />If you need the sidebar in the right column but not in the left column. Content area is extended to 730px.</li>
+</ol>
+<p><strong>How To: </strong>To use one of the three custom layouts, simply choose the style from the <strong>Template</strong> field on the Edit Page page.</p>
+
+<div class="clear">&nbsp;</div>
+
+<h2>8. Custom Post Templates</h2>
+<p>Same as page templates, Academica Theme includes 3 templates for posts.</p>
+<p><strong>How To: </strong>To use one of the two custom layouts, simply add the <strong>template</strong> custom field with one of the values: <strong>double</strong> or <strong>full</strong> on the Edit Page page.</p>
+<img src="images/step_8.png" alt="" class="imghelp nofloat" />
+
+<div class="clear">&nbsp;</div>
+
+<h2>9. Theme Support</h2>
+<p>Academica Theme has been developed for the most recent official (stable) release of WordPress (3.0.1 at the time of writing this). <br />It is guaranteed to work on a clean instance of WordPress and does not require any third-party plug-ins.</p>
+<p>All theme support is provided only via our special Support Forum: <a href="http://www.proudthemes.com/forum/">http://www.proudthemes.com/forum/</a> <strong>and only to people who purchased the standard or developer license</strong>.</p>
+<p>To gain access to the forum, first you will have to <a href="http://www.proudthemes.com/members/member.php">log in</a> using the credentials you provided when signing up with ProudThemes.com. <br />If you downloaded this theme for free, your account will not have access to the Support Forum.</p>
+<p>We will <strong>NOT</strong> provide support via E-Mail, Skype, Twitter, Facebook or other means of communication.</p>
+<div class="clear">&nbsp;</div>
+
+<h2>10. Legal Disclaimer</h2>
+<p>Academica Theme has been developed by <a href="http://www.proudthemes.com">ProudThemes.com</a> and is property of ProudThemes.com</p>
+<p>Academica Theme may be applied to unlimited websites for the developer's purposes, but cannot be freely re-distributed to the public or re-sold verbatim as Academica Theme. It may be modified for your own projects.</p> 
+</body>
+</html>

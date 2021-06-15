@@ -1,0 +1,6 @@
+function functionName(evt) {
+    evt = (evt) ? evt : ((window.event) ? event : null);
+    if (evt) {
+        // perform processing here
+    }
+}

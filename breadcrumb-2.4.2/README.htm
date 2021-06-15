@@ -1,0 +1,142 @@
+<html>
+<head>
+	<title>Breadcrumb Trail</title>
+</head>
+<body>
+<pre>
+File: $Id: class.breadcrumb.inc.php, 2004/04/30 00:56 PDT
+-----------------------------------------------------------------------
+Purpose of file: Show the directories and their links in path form
+                 Home &gt; Firstdir &gt; Seconddir &gt; Etc &gt; filename.php
+Information: If you use this script please contact me with a url or
+             product information plus the product :) and please keep
+             all header information intact. Cheers!
+Pay-Pal info: paypal@baskettcase.com
+-----------------------------------------------------------------------
+@access public
+@author Richard Baskett &lt;rick@baskettcase.com&gt;
+@category directory structure
+@copyright Copyright © 2004, Baskettcase Web Development
+@example example.php
+@link http://www.baskettcase.com/classes/breadcrumb/
+@package breadcrumb
+@version 2.4.2
+
+SIMPLE EXAMPLE: (copy between the == lines and paste to your file
+  between your php tags)
+=======================================================================
+$lt;?php
+ include_once('class.breadcrumb.inc.php');
+ $breadcrumb = new breadcrumb;
+ echo &quot;&lt;p&gt;&quot;.$breadcrumb-&gt;show_breadcrumb().&quot;&lt;/p&gt;&quot;;
+?$gt;
+=======================================================================
+
+COMPLEX EXAMPLE: (copy between the == lines and paste to your file)
+=======================================================================
+$lt;?php
+ include_once('class.breadcrumb.inc.php');
+ $breadcrumb = new breadcrumb;
+ $breadcrumb-&gt;homepage='homepage'; // sets the home directory name
+ $breadcrumb-&gt;dirformat='ucfirst'; // Show the directory in this style
+ $breadcrumb-&gt;symbol=' || '; // set the separator between directories 
+ $breadcrumb-&gt;showfile=TRUE; // shows the file name in the path
+ $breadcrumb-&gt;special='elmer'; // special directory formatting
+ $breadcrumb-&gt;changeName=array('dirname1'=&gt;'Directory Name 1',
+                               'dirname2'=&gt;'Directory Name 2',
+                               'dirname3'=&gt;'Directory Name 3',
+                               'dirname4'=&gt;'Directory Name 4');
+ $breadcrumb-&gt;changeFileName=array($_SERVER['PHP_SELF']=&gt;'Example Page',
+                                   '/index.htm'=&gt;'Contact Us');
+ $breadcrumb-&gt;fileExists=array('index.htm','index.php','default.htm');
+ $breadcrumb-&gt;cssClass='crumb'; // css class to use
+ $breadcrumb-&gt;target='_top'; // frame target
+ $breadcrumb-&gt;linkFile=TRUE; // Link the file to itself
+ $breadcrumb-&gt;_toSpace=TRUE; // converts underscores to spaces
+ echo &quot;&lt;p&gt;&quot;.$breadcrumb-&gt;show_breadcrumb().&quot;&lt;/p&gt;&quot;;
+?$gt;
+=======================================================================
+
+DEFINITIONS: (Not setting any of these variables will result in the
+              DEFAULT settings)
+              
+-----------------------------------------------------------------------
+GLOBAL OPTIONS
+-----------------------------------------------------------------------
+(homepage) sets the name of the home directory, leave empty if you do
+   not want the home directory to show (DEFAULT = 'home')
+-----------------------------------------------------------------------
+(symbol) set the separator between directories (DEFAULT = ' &gt; ')
+-----------------------------------------------------------------------
+(special) special directory formatting
+   elmer = elmer fudd translation
+   hacker = hacker speach translation
+   pig = pig latin translation
+   reverse = Reverses the text so it is backwards
+   none = no special formatting (DEFAULT)
+-----------------------------------------------------------------------
+(cssClass) Use a css class to define the look of your breadcrumb.
+  (DEFAULT = No css style
+-----------------------------------------------------------------------
+(_toSpace) Converts underscores '_' to a space in directory names.
+  (DEFAULT = Keep underscores, no conversion
+-----------------------------------------------------------------------
+(target) set the frameset target value (DEFAULT '_self')
+-----------------------------------------------------------------------
+
+DIRECTORY OPTIONS
+-----------------------------------------------------------------------
+(dirformat) can be of type:
+   ucwords = uppers case words (use with _toSpace)
+   titlecase = upper case words except small words (the, is, with, etc)
+   ucfirst = upper case first letter
+   uppercase = all uppercase
+   lowercase = all lowercase
+   none = show directories as they are named in path structure (DEFAULT)
+-----------------------------------------------------------------------
+(imagedir) sets the image directory path, plus the image type. 
+  (DEFAULT - Does not use images) You need to name your images the same
+  as the actual directory names.
+-----------------------------------------------------------------------
+(changeName) Directory mapping/alias.  Alias your actual directory name
+  to one of your choosing. For example if your actual directory
+  structure is /temp/educ/science/bio/ you can map each directory name
+  to /Temporary/Education/Science/Biology and display it as such.
+  (DEFAULT = No aliasing, display the actual directory name)
+-----------------------------------------------------------------------
+(removeDirs) remove directories from the breadcrumb. So for example if
+   your breadcrumb looked like this:
+   home &gt; classes &gt; help &gt; status &gt; test.php
+   Using this function you can hide/remove the directory to show this:
+   home &gt; classes &gt; help &gt; text.php
+-----------------------------------------------------------------------
+(unlinkCurrentDir) Remove the link to the current directory 
+  (DEFAULT = FALSE)
+-----------------------------------------------------------------------
+
+FILE OPTIONS
+-----------------------------------------------------------------------
+(showfile) shows the file name in the path (DEFAULT = TRUE)
+-----------------------------------------------------------------------
+(fileExists) Link this directory only if one of the filenames exists
+  Set your webservers default webpages that it checks for  when a 
+  webpage has not been specified in the url.  So for example many 
+  webservers look for a page called index.htm, index.html, index.php,
+  default.htm, default.html, default.php.  Or you can use this variable 
+  to just look for files you specify and link the directory if they
+  exist.
+  (DEFAULT = Link directories regardless of whether or not the
+  directory has an index or default file)
+-----------------------------------------------------------------------
+(hideFileExt) hides the file extension (DEFAULT = FALSE)
+-----------------------------------------------------------------------
+(changeFileName) Filename mapping/alias.  Alias your file name to one 
+  of your choosing. For example if your filename is example.php you can
+  show it as 'Example Page'
+  (DEFAULT = No aliasing
+-----------------------------------------------------------------------
+(linkFile) Links the file to itself (DEFAULT = FALSE)
+-----------------------------------------------------------------------
+  </pre>
+</body>
+</html>

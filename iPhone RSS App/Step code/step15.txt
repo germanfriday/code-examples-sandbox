@@ -1,0 +1,1 @@
+// in RSSXMLParser.h //#import <Foundation/Foundation.h>@class NewsItem;@interface RSSXMLParser : NSObject {	NSXMLParser *theXMLParser;	NSMutableString * theCurrentString;	NewsItem * currentNewsItem;	NSMutableArray * newsArray;}@property (retain) NSMutableArray * newsArray;-(void) parseRSSFeed;@end

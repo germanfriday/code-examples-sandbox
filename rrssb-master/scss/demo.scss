@@ -1,0 +1,94 @@
+@import "bourbon";
+
+// config settings
+$button-contents: #fff;
+$email: #0a88ff;
+$facebook: #306199;
+$linkedin: #007bb6;
+$twitter: #26c4f1;
+$googleplus: #e93f2e;
+$youtube: #df1c31;
+$pinterest: #b81621;
+$github: #444;
+
+$border-radius: 2px;
+
+$main-font: "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+
+
+@mixin transition-all($time) {
+    -webkit-transition: all $time+s ease;
+    -moz-transition: all $time+s ease;
+    -o-transition: all $time+s ease;
+    transition: all  $time+s ease;
+}
+
+body {
+	overflow-x: hidden;
+}
+
+a {
+	text-decoration: none;
+	font-weight: 500;
+	color: $email;
+
+	&:hover {
+		color: shade($email, 55%);
+	}
+}
+
+.main-container {
+	padding: 1% 6%;
+
+	h1 {
+		letter-spacing: -.03em;
+		color: #444;
+		@include transition-all(0.2);
+
+		@media screen and (max-width: 767px)  {
+        font-size: 20px;
+    	}
+	}
+
+	p {
+		font-size: 16px;
+
+		@media screen and (min-width: 1024px)  {
+        font-size: 20px;
+    	}
+	}
+	small {
+		display: block;
+		margin-top: 50px;
+		font-size: 12px;
+		color: #999;
+	}
+
+
+}
+
+
+hr {
+	background-color: #ddd;
+	border: 0;
+	height: 1px;
+	margin: 30px 0px 15px;
+}
+
+.share-container {
+	position: relative;
+
+	.label {
+		color: #777;
+		display: block;
+		float: left;
+		font-size: 14px;
+		padding: 10px 0 0;
+		width: 115px;
+	}
+
+	.rrssb-buttons {
+		float: left;
+		width: calc(100% - 116px);
+	}
+}

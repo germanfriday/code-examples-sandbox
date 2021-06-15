@@ -1,0 +1,9 @@
+function myFuncA() {
+    var valueA = "A";
+    myFuncB();
+    function myFuncB() {
+        var valueB = "B";
+        alert(valueB);
+        alert(valueA);
+    }
+}

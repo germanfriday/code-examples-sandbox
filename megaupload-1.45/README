@@ -1,0 +1,41 @@
+Mega Upload version 1.45
+------------------------
+
+MEGA UPLOAD 1.4x IS EXPERIMENTAL PLEASE DON'T USE IT ON PRODUCTION 
+SITES USE 1.35 INSTEAD. 1.35 IS STABLE.
+
+
+What is it?
+-----------
+Mega Upload was originally a progress monitor for file uploads with PHP.
+The project has now grown to be a file upload progress indicator for 
+PHP as well as perl and JSP. You have downloaded the PHP edition.
+
+Additional information is available from the website 
+http://www.raditha.com/php/progress.php
+
+
+Recent Changes.
+---------------
+A much improved progress bar was added with version 1.10 using 
+contributed code. The classic version with out these enchanced features 
+can be found on the classic/ folder. 1.20 improved on this still further
+ by allowing client side filtering of certain file types.
+
+The Contrib folder contains varius enhancements and modifications sent
+in by users of megaupload. Among them you will find a  php ftp class 
+that allows you to display a progress monitor for web based ftp upload.
+
+The most recent addition to the contrib folder is a replacement for 
+progress.cgi in php
+
+
+Special Notes.
+--------------
+Version 1.4x is still new though 1.35 is very stable. This version may have
+race conditions, which may result in the loss of uploaded files.
+
+
+
+
+

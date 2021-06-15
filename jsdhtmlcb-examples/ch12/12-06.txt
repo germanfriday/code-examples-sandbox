@@ -1,0 +1,50 @@
+document.body.background = "url(watermark.jpg) repeat fixed";
+document.body.backgroundAttachment = "fixed";
+document.body.backgroundColor = "rgb(255, 255, 204)";
+document.body.backgroundImage = "url(corp%20watermark.jpg)";
+document.body.backgroundPosition = "5% 5%";
+document.body.backgroundRepeat = "repeat-y";
+
+----------
+
+// save user choice in cookie and set the style value
+function savebgImage(evt) {
+    evt = (evt) ? evt : ((event) ? event : null);
+    if (evt) {
+        var elem = (evt.target) ? evt.target : evt.srcElement;
+        setCookie("bgImage", elem.value, getExpDate(180, 0, 0);
+        // invoke function to change the visible image
+        setbgImage();
+    }
+}
+
+// change bkgnd image after user selection or onload
+function setbgImage() {
+    var uri = getCookie("bgImage");
+    // get reference to select element
+    var selector = document.getElementById("bgChooser");
+    if (uri) {
+        // apply cookie value to background image
+        document.body.style.backgroundImage = "url(" + uri + ")";
+        // for onload, set select to the cookie value
+        for (var i = 0; i < selector.options.length; i++) {
+            if (uri == selector.options[i].value) {
+                selector.options[i].selected = true;
+                break;    
+            }
+        }
+    } else {
+        // if no cookie, set to whatever is selected by default
+        document.body.style.backgroundImage = "url(" + selector.value + ")";
+    }
+}
+
+...
+<body onload="setbgImage()">
+...
+<select id="bgChooser" onchange="savebgImage(event)">
+    <option value="desk1.gif">Desk 1</option>
+    <option value="desk2.gif">Desk 2</option>
+    <option value="desk3.gif">Desk 3</option>
+    <option value="desk4.gif">Desk 4</option>
+</select>

@@ -1,0 +1,113 @@
+<Origin  pos="0,{=_frameHeight/2}"/>
+
+<BaseDepth depth="0"/>
+<shape pos="{=_frameWidth/2},0">
+  <FillColor side="right" color="{_barcolor}"/>
+  <LineStyle width="1" color="#000000"/>
+  <slice   
+    center="0,0"
+    startAngle="{=360*_currentSumValue/_sumValues}"
+    endAngle="{=360*_nextSumValue/_sumValues}"
+    radius="{=_frameHeight/2},{=_frameHeight/2}"/>
+</shape>
+
+
+<BaseDepth depth="1000"/>
+<Text
+  
+  flags="base"
+  size="{=_defaultFontHeight*0.75}"
+  color="#000000"
+  align="center"
+  placepoint="center"
+  pos="{=cos((360*((_nextSumValue+_currentSumValue)/2)/_sumValues)*Math.PI/180)*(_frameHeight/2/1.5)+_frameWidth/2},{=sin((360*((_nextSumValue+_currentSumValue)/2)/_sumValues)*Math.PI/180)*(_frameHeight/2/1.5)+0}">{_currentPercentageValue}%</Text>
+
+<Text
+  flags="base"
+  size="{=_defaultFontHeight*0.75}"
+  color="#000000"
+  align="center"
+  placepoint="center"
+  pos="{=cos((360*((_nextSumValue+_currentSumValue)/2)/_sumValues)*Math.PI/180)*(_frameHeight/2*1.15)+_frameWidth/2},{=sin((360*((_nextSumValue+_currentSumValue)/2)/_sumValues)*Math.PI/180)*(_frameHeight/2*1.15)+0}">{_barLabel}</Text>
+
+
+
+
+
+<BaseDepth depth="2000"/>
+<button pos="0,0">
+  <State type="hit">
+    <BaseDepth depth="0"/>
+    <shape pos="{=_frameWidth/2},0">
+      <FillColor side="right" color="{_barcolor}"/>
+      <LineStyle width="1" color="#000000"/>
+      <slice   
+        center="0,0"
+        startAngle="{=360*_currentSumValue/_sumValues}"
+        endAngle="{=360*_nextSumValue/_sumValues}"
+        radius="{=_frameHeight/2},{=_frameHeight/2}"/>
+    </shape>
+  </State>
+
+  <State type="over,down">
+    <BaseDepth depth="0"/>
+    <shape pos="{=_frameWidth/2},0">
+      <LineStyle width="2" color="#ffffff"/>
+      <slice   
+        center="0,0"
+        startAngle="{=360*_currentSumValue/_sumValues}"
+        endAngle="{=360*_nextSumValue/_sumValues}"
+        radius="{=_frameHeight/2},{=_frameHeight/2}"/>
+    </shape>
+
+  <BaseDepth depth="1000"/>
+  <Text
+	  flags="base"
+	  size="{=_defaultFontHeight*0.75}"
+	  color="#000000"
+	  align="center"
+    placepoint="center"
+	  pos="{=cos((360*((_nextSumValue+_currentSumValue)/2)/_sumValues)*Math.PI/180)*(_frameHeight/2/1.5)+_frameWidth/2},{=sin((360*((_nextSumValue+_currentSumValue)/2)/_sumValues)*Math.PI/180)*(_frameHeight/2/1.5)+0}">{_currentPercentageValue}%</Text>
+
+	<Text
+	  flags="base"
+	  size="{=_defaultFontHeight*0.75}"
+	  color="#000000"
+	  align="center"
+    placepoint="center"
+	  pos="{=cos((360*((_nextSumValue+_currentSumValue)/2)/_sumValues)*Math.PI/180)*(_frameHeight/2*1.15)+_frameWidth/2},{=sin((360*((_nextSumValue+_currentSumValue)/2)/_sumValues)*Math.PI/180)*(_frameHeight/2*1.15)+0}">{_barLabel}</Text>
+
+    <BaseDepth depth="2000"/>
+    <Text
+      background="color(#aaffff), border(#000000,1),space(3)"
+	    size="{_defaultFontHeight}"
+      flags="base"
+      color="#000000"
+      align="center"
+      placepoint="center"
+      pos="{=cos((360*((_nextSumValue+_currentSumValue)/2)/_sumValues)*Math.PI/180)*(_frameHeight/2*1.25)+_frameWidth/2},{=sin((360*((_nextSumValue+_currentSumValue)/2)/_sumValues)*Math.PI/180)*(_frameHeight/2*1.25)+0}">{_barTooltip}</Text>
+
+
+    <BaseDepth depth="2000"/>
+    <Text
+      background="color(#aaffff), border(#000000,1),space(3)"
+      flags="base"
+      color="#000000"
+	    size="{_defaultFontHeight}"
+      align="center"
+      placepoint="center"
+      pos="{=cos((360*((_nextSumValue+_currentSumValue)/2)/_sumValues)*Math.PI/180)*(_frameHeight/2*0.30)+_frameWidth/2},{=sin((360*((_nextSumValue+_currentSumValue)/2)/_sumValues)*Math.PI/180)*(_frameHeight/2*0.30)+0}">{_barValue}</Text>
+
+
+  </State>
+
+  <if notEmpty="{_barURL}">
+    <Script event="press" type="source">
+    getUrl("{_barURL}");
+    </Script>
+  </if>
+
+  <Audio src="~/chart/bip.mp3"
+         event="RollOver"/>
+
+</button>

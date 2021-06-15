@@ -1,0 +1,9 @@
+var shortStr = "Framistan 2000";
+var re = new RegExp(shortStr, "g");
+var result = longString.match(re);
+
+if (result) {
+    alert("Found " + result.length + " instances of the text: " + result[0]);
+} else {
+    alert("Sorry, no matches.");
+}

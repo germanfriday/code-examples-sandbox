@@ -1,0 +1,19 @@
+To make use of FTP support replace the 'standard' upload2.php file with
+the one in this folder. Don't forget to copy the ftp.php file into the
+same folder as well.
+
+You will have to open upload2.php in your favourite editor and change
+the settings for server, username and password.
+
+Before you attempt to use FTP upload please make sure that your 
+standard installation is installed correctly and also try connecting to
+your FTP server with the chosen username, password combination.
+
+If you run into errors you might want to enable logging in the FTP class
+by changing the $enable_log variable to 1 ($enable_log=1)
+
+more information about the FTP class is available at 
+http://www.raditha.com/php/
+
+more information on megaupload is available at 
+http://www.raditha.com/megaupload/

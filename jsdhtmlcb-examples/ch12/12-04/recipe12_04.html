@@ -1,0 +1,75 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<!-- 
+     Example File From "JavaScript and DHTML Cookbook"
+     Published by O'Reilly & Associates
+     Copyright 2003 Danny Goodman
+-->
+<html>
+<head>
+<title>Recipe 12.4</title>
+<link rel="stylesheet" id="mainStyle" href="../css/cookbook.css" type="text/css" />
+<style id="normalStyle" type="text/css">
+body {font-family:Verdana, Helvetica, sans-serif;
+      font-size:small}
+#textSizer {text-align:right; display:none}
+.textSize {border:1px solid black}
+</style>
+<style id="sizer" type="text/css" disabled="disabled">
+    @import url("textSizer.css");
+</style>
+<style id="smallStyle" type="text/css" disabled="disabled">
+    @import url("smallFont.css");
+</style>
+<style id="largeStyle" type="text/css" disabled="disabled">
+    @import url("largeFont.css");
+</style>
+<script type="text/javascript" src="../js/cookies.js"></script>
+<script type="text/javascript">
+// enable/disable 
+function setSizeStyle() {
+    if (document.getElementById) {
+        document.getElementById("sizer").disabled = false;            
+        var styleCookie = getCookie("fontSize");
+        var styleIDs = ["smallStyle", "largeStyle"];
+        for (var i = 0; i < styleIDs.length; i++) {
+            if (styleCookie == styleIDs[i]) {
+                document.getElementById(styleIDs[i]).disabled = false;            
+            } else {
+                document.getElementById(styleIDs[i]).disabled = true;    
+            }
+        }
+    }
+}
+// set active style now, before content renders
+setSizeStyle();
+
+// invoked by clicking on sizer icons
+function changeSizeStyle(styleID) {
+    setCookie("fontSize", styleID, getExpDate(180, 0, 0));
+    setSizeStyle();
+}
+</script>
+</head>
+<body style="background-color:#ffffff">
+<h1 style="font-size:26px; font-weight:bold">User-selectable Font Sizes</h1>
+<div id="textSizer">
+<img src="fontSizer.jpg" height="18" width="72" alt="Font Sizer"><a 
+href="" onclick="changeSizeStyle('smallStyle'); return false"><img 
+class="textSize" src="fontSmall.jpg" height="18" width="18" 
+alt="Smallest" /></a><a href="" onclick="changeSizeStyle(''); return false"><img 
+class="textSize" src="fontMedium.jpg"  height="18" width="18" alt="Default" /></a><a 
+href="" onclick="changeSizeStyle('largeStyle'); return false"><img 
+class="textSize" src="fontLarge.jpg" height="18" width="18" alt="Biggest" /></a>
+</div>
+<hr /> 
+
+<p>Lorem ipsum dolor sit amet, consectetaur adipisicing elit, sed do eiusmod tempor 
+incididunt ut labore et dolore magna aliqua. Ut enim adminim veniam, quis nostrud 
+exercitation ullamco laboris nisi ut aliquip ex ea commodo 
+consequat.
+</p>
+
+
+</body>
+</html>

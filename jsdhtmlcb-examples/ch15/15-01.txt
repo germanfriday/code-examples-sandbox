@@ -1,0 +1,37 @@
+var quotes = new Array();
+quotes[quotes.length] = {quote:"One should eat to live, and not live to eat.", 
+                          author:"Moliere"};
+quotes[quotes.length] = {quote:"For man is man and master of his fate.", 
+                          author:"Tennyson"};
+quotes[quotes.length] = {quote:"History is more or less bunk.", 
+                          author:"Henry Ford"};
+quotes[quotes.length] = {quote:"You should never have your best trousers on when you 
+                          turn out to fight for freedom and truth.", 
+                          author:"Ibsen"};
+quotes[quotes.length] = {quote:"It is vain and foolish to talk of knowing Greek.", 
+                          author:"Woolf"};
+
+function getSaying() {
+    var currIndex = Math.floor(Math.random() * (quotes.length));
+    var output = "<p class='quote'>" + quotes[currIndex].quote;
+    output += "<span class='author'>&nbsp;&nbsp;&nbsp;-- " + quotes[currIndex].author;
+    output += "</span></p>"
+    return output;
+}
+
+...
+
+<script type="text/javascript">document.write(getSaying())</script>
+
+----------
+
+var imgLinks = new Array();
+imgLinks[imgLinks.length] = {src:"images/prods/x25.jpg", url="products/x25.html"};
+...
+function getRandomImage() {
+    var currIndex = Math.floor(Math.random() * (quotes.length));
+    var output = "<a href='" + imgLinks[currIndex].url + "'>";
+    output += "<img src='" + imgLinks[currIndex].src + "' alt='Product of the day!' />";
+    output += "</a>"
+    return output;
+}

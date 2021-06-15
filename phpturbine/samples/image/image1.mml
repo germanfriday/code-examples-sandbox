@@ -1,0 +1,14 @@
+<Text pos="0,50">flower.gif:</Text>
+<Image pos="0,72" src="../common/flower.gif"/>
+
+<Text pos="240,50">flower.jpg:</Text>
+<Image pos="240,72" src="../common/flower.jpg"/>
+
+<Text pos="480,50">flower.png:</Text>
+<Image pos="480,72" src="../common/flower.png"/>
+
+<Text pos="120,240">flower.tif:</Text>
+<Image pos="120,262" src="../common/flower.tif"/>
+
+<Text pos="360,240">flower.bmp:</Text>
+<Image pos="360,262" src="../common/flower.bmp"/>

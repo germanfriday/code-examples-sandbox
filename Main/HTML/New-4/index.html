@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>Smarty Mobile Website Template</title>
+        <!-- All Stylesheets -->
+        <link rel="stylesheet"  href="css/All-Stylesheets.css">
+        <!-- Add 2 Home -->
+        <link rel="apple-touch-icon" href="images/add-to-home/touch-icon-iphone.png" />
+        <link rel="apple-touch-icon" sizes="72x72" href="images/add-to-home/touch-icon-ipad.png" />
+        <link rel="apple-touch-icon" sizes="114x114" href="images/add-to-home/touch-icon-iphone4.png" />
+        <script type="text/javascript" src="js/add2home.js" charset="utf-8"></script>
+        <!-- Javascript File -->
+        <script src="js/jquery.js"></script>
+        <script type="text/javascript" src="js/jquery-1.7.1.min.js"></script>
+        <!-- Donut Chart -->
+        <script type="text/javascript" src="js/jquery.donutchart.js"></script>
+        <!-- jQuery Mobile -->
+        <script src="js/jquery.mobile-1.3.2.min.js"></script>
+        <!-- Glyphicons -->
+    	<script type="text/javascript" async src="js/glyphicons/ga.js"></script>
+       <style>
+            body, html {
+            margin: 0;
+            padding: 0;
+            width: 100%;
+            height: 100%;            
+            background: #c63b40!important;
+            }
+			body, html {
+			overflow-x: hidden;
+			}
+            #layerslider {
+            position: absolute;
+            z-index: 1;
+            }
+            #page {
+            z-index: 2;
+            position: relative;
+            }
+            .logo {
+            text-align: center;
+            margin: auto;
+            padding: 30px 0 30px 0;
+            }
+            
+        </style>
+    </head>
+    <body>
+        <!-- LayerSlider markup should be placed after the <body> opening tag-->
+        <div id="layerslider" style="width: 100%; height: 100%;">
+            <div class="ls-slide" data-ls="slidedelay: 2000; transition2d: all;"> <img src="images/slider/layerslider/1.jpg" class="ls-bg" alt="Slide background"/> </div>
+            <div class="ls-slide" data-ls="slidedelay: 2000; transition2d: all;"> <img src="images/slider/layerslider/2.jpg" class="ls-bg" alt="Slide background"/> </div>
+            <div class="ls-slide" data-ls="slidedelay: 2000; transition2d: all;"> <img src="images/slider/layerslider/3.jpg" class="ls-bg" alt="Slide background"/> </div>
+        </div>
+        <!-- Page Contents Starts
+            ================================================== -->
+        <div data-role="page" id="page" data-theme="">
+            <!-- header Starts -->
+            <div class="logo"><img src="images/logo.png" width="190" height="90"> </div>
+            <!-- header Ends -->
+            <!-- Menu Starts -->
+            <div class="menu"> 
+              <!-- Row 1 Starts -->
+              <ul>
+                <li><a href="home.html" rel="external"><i class="fa fa-home fa-3x"></i><span>HOME</span></a></li>
+                <li><a href="about-us.html" rel="external"><i class="fa fa-lightbulb-o fa-3x"></i><span>ABOUT</span></a></li>
+                <li><a href="services.html" rel="external"><i class="fa fa-cog fa-3x"></i><span>SERVICES</span></a></li>
+              </ul>
+              <!-- Row 2 Starts -->
+              <ul>
+                <li><a href="products.html" rel="external"><i class="fa fa-suitcase fa-3x"></i><span>PRODUCTS</span></a></li>
+                <li><a href="gallery.html" rel="external"><i class="fa fa-video-camera fa-3x"></i><span>GALLERY</span></a></li>
+                <li><a href="1-columns-portfolio.html" rel="external"><i class="fa fa-picture-o fa-3x"></i><span>PORTFOLIO</span></a></li>
+              </ul>
+              <!-- Row 3 Starts -->
+              <ul>
+                <li><a href="blog.html" rel="external"><i class="fa fa-comments fa-3x"></i><span>BLOG</span></a></li>
+                <li><a href="typography-html.html" rel="external"><i class="fa fa-plus-circle fa-3x"></i><span>TYPO</span></a></li>
+                <li><a href="contact-us.html" rel="external"><i class="fa fa-envelope fa-3x"></i><span>CONTACT</span></a></li>
+              </ul>
+            </div>
+            <!-- Menu Ends -->
+            <div style="padding-bottom:10px"></div>
+        </div>
+        <!-- Page Contents Ends
+            ================================================== --> 
+        <!-- Javascript Files
+            ================================================== --> 
+        <!-- Retina Display -->
+        <script src="js/Retina/retina.js"></script>
+        <!-- LayerSlider stylesheet -->
+        <link rel="stylesheet" href="layerslider/css/layerslider.css" type="text/css">
+        <!-- External libraries: jQuery & GreenSock -->
+        <script src="layerslider/js/jquery.js" type="text/javascript"></script>
+        <script src="layerslider/js/greensock.js" type="text/javascript"></script>
+        <!-- LayerSlider script files -->
+        <script src="layerslider/js/layerslider.transitions.js" type="text/javascript"></script>
+        <script src="layerslider/js/layerslider.kreaturamedia.jquery.js" type="text/javascript"></script>
+        <!-- Initializing the slider --> 
+        <script>
+            jQuery("#layerslider").layerSlider({
+            	pauseOnHover: false,
+            	skinsPath: 'layerslider/skins/',
+            	skin: 'noskin',
+            	showCircleTimer: false
+            });
+        </script>
+    </body>
+</html>

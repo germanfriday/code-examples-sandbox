@@ -1,0 +1,17 @@
+function linkTo(ieWinUrl, w3Url) {
+    var isWin = (navigator.userAgent.indexOf("Win") != -1);
+    // invoke function from Recipe 5.3
+    var isIE5Min = getIEVersionNumber() >= 5;
+    var isW3 = (document.getElementById) ? true : false;
+    if (isWin && isIE5Min) {
+        location.href = ieWinUrl;
+        return false;
+    } else if (isW3) {
+        location.href = w3Url;
+        return false;
+    }
+    return true
+}
+É
+<a href="std/newProds.html" title="To New Products" 
+onclick="return linkTo('ieWin/newProds.html', 'w3/newProds.html')">New Products</a>

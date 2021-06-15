@@ -1,0 +1,108 @@
+<!-- dyi/bar.mml -->
+
+<!-- The entire contents of this file is Copyright © 2003, Jorge Nogueira Diogo Unipessoal, Lda/Blue Pacific Software, All Rights Reserved. -->
+
+<!-- This MML file will draw the data shapes that forms the chart. This file is loaded once for each data value -->
+
+
+<!--
+Turbine vars used in this file:
+
+_barX, _barY            top-left position of the data shape
+_barcolor               data shape color
+_barwidth               dimensions of the data shape
+_barheight0             height of the current data shape
+_barheight1             height of the next data shape
+_barTooltip             data shape text tooltip
+_barValue               data shape text
+_defaultFontHeight      default font height
+_barURL                 url to navigate when the data shape is clicked
+_barLabel               text label of the X axis
+-->
+
+
+
+
+<!-- draw the data shape in "rest" mode -->
+<BaseDepth depth="1000"/>
+<Shape pos="{_barX},{_barY}">
+  <FillColor side="right" color="{_barcolor}"/>
+  <LineStyle width="1" color="#000000"/>
+  <Rect size="{_barwidth},-{_barheight0}"/>
+</shape>
+
+
+<!-- use a button to draw the hit, over and down states -->
+<BaseDepth depth="3000"/>
+<button pos="{_barX},{_barY}">
+  <State type="hit">
+    <BaseDepth depth="0"/>
+    <Shape id="bar" pos="0,0">
+      <FillColor side="right" color="{_barcolor}"/>
+      <LineStyle width="1" color="#000000"/>
+      <Rect size="{_barwidth},-{_barheight0}"/>
+    </shape>
+  </State>
+
+  <State type="over,down">
+    <BaseDepth depth="0"/>
+    <Shape pos="0,0">
+      <LineStyle width="2" color="#800000ff"/>
+      <Rect size="{_barwidth},-{_barheight0}"/>
+    </shape>
+    
+    <BaseDepth depth="2000"/>
+    <!-- draw the text tooltip -->
+    <Text
+      background="color(#aaffff), border(#000000,1),space(3)"
+      flags="base"
+      size="{=_defaultFontHeight*0.75}"
+      color="#000000" 
+      style="normal"
+      Pos="4,{=-_barheight0-4}">{_barTooltip}</Text>
+
+    <!-- draw the text value -->
+    <Text
+      flags="base"
+      size="{=_defaultFontHeight*0.75}"
+      color="#000000"
+      align="center"
+      placepoint="center"
+      Pos="{=_barwidth/2},{=-_barheight0+_defaultFontHeight*0.75}">{_barValue}</Text>
+  
+  </State>
+
+  <!-- navigate to the url when this bar value is clicked -->
+  <if notEmpty="{_barURL}">
+    <Script event="press" type="source">
+    getUrl("{_barURL}");
+    </Script>
+  </if>
+
+  <!-- plays a sound on mouse over -->
+  <Audio
+          src="~/chart/bip.mp3"
+          event="RollOver"/>
+
+</button>
+
+
+
+<BaseDepth depth="2000"/>
+<!-- draw the text value -->
+<Text
+      flags="base"
+      size="{=_defaultFontHeight*0.75}"
+      color="#000000"
+      align="center"
+      placepoint="center"
+      Pos="{=_barwidth/2+_barX},{=-_barheight0+_defaultFontHeight*0.75+_barY}">{_barValue}</Text>
+
+<!-- draw the X axis text -->
+<Text
+  size="{_defaultFontHeight}"
+  flags="base"
+  color="#000000"
+  align="center"
+  placepoint="center"
+  Pos="{=_barwidth/2+_barX},{=_barY+_defaultFontHeight}">{_barLabel}</Text>

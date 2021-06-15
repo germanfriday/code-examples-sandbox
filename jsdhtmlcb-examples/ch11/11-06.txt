@@ -1,0 +1,16 @@
+<link id="basicStyle" rel="stylesheet" type="text/css" href="styles.normal.css" />
+
+function setSkin(evt) {
+    // equalize IE and W3C event models
+    evt = (evt) ? evt : ((window.event) ? window.event : null);
+    if (evt) {
+        var btn = (evt.srcElement) ? evt.srcElement : evt.target;
+        document.getElementById("basicStyle").href = btn.value;
+        setCookieValue("skin", escape(btn.value));
+    }
+}
+
+var skin = getCookieValue("skin");
+if (skin) {
+    document.getElementById("basicStyle").href = unescape(skin);
+}

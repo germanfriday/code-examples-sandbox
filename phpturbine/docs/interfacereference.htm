@@ -1,0 +1,2322 @@
+<HTML>
+<HEAD>
+<META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=iso-8859-1">
+<META NAME="GENERATOR" CONTENT="Mozilla/4.04 [en] (Win95; I) [Netscape]">
+<TITLE>PHP Interface Reference</TITLE>
+</HEAD>
+<BODY topmargin="0" leftmargin="0" rightmargin="0" marginwidth="0" marginheight="0" TEXT="#000000" BGCOLOR="#FFFFFF" LINK="#003366" VLINK="#FF9900" ALINK="#FF6600">
+<CENTER>
+  <table width="100%" border="0" cellspacing="0" cellpadding="0" align="center">
+    <tr bgcolor="#000033"> 
+      <td background="images/bar_left.gif" width="50%">&nbsp;</td>
+      <td> 
+        <table width="560" border="0" cellspacing="0" cellpadding="0">
+          <tr> 
+            <td width="334"><img src="images/bar_left.gif" width="334" height="28"></td>
+            <td><img src="images/bar_central.gif" width="110" height="28"></td>
+            <td><img src="images/bar_logo.gif" width="116" height="28"></td>
+          </tr>
+        </table>
+      </td>
+      <td background="images/1x1_azul_esc.gif" width="50%">&nbsp;</td>
+    </tr>
+    <tr bgcolor="#FFFFFF" height="4"> 
+      <td colspan="3"></td>
+    </tr>
+  </table>
+  <TABLE BORDER=0 COLS=2 WIDTH="600" cellpadding="0" cellspacing="0" >
+    <TR valign="top">
+      <TD COLSPAN="2" height="12"> 
+        <table border=0 cols=2 width="100%" cellpadding="0" cellspacing="0" >
+          <tr> 
+            <td width="443" height="25"><font face="Verdana, Arial, Helvetica, sans-serif" size="3"><a href="manual.htm">Table 
+              of Contents</a></font></td>
+            <td width="117" height="25"> 
+              <div align="center"><font face="Verdana, Arial, Helvetica, sans-serif" size="3"><a href="varreference.htm">Next 
+                Chapter </a> </font></div>
+            </td>
+          </tr>
+        </table>
+      </TD>
+    </TR>
+    <TR valign="top"> 
+      <TD COLSPAN="2"> 
+        <p align="left">&nbsp;</p>
+        <p align="left"><font face="Arial, Helvetica, sans-serif" size="6">7.2 
+          PHP Interface Reference</font><font size="2"><br>
+          &nbsp;<br>
+          <font face="Verdana, Arial, Helvetica, sans-serif">This section describes 
+          the commands available on the PHP interface to Turbine 7.</font></font></p>
+        <ul>
+          <li><font size="3" face="Arial, Helvetica, sans-serif"><a href="#initial">An 
+            Initial Script</a></font></li>
+          <li><font size="3" face="Arial, Helvetica, sans-serif"><a href="#alphabeticlist">Alphabetical 
+            List</a></font></li>
+          <li><font size="3" face="Arial, Helvetica, sans-serif"><a href="#commandlist">Commands</a></font></li>
+          <li><font size="3" face="Arial, Helvetica, sans-serif"><a href="#propertylist"> 
+            Properties</a></font></li>
+        </ul>
+        <p>&nbsp;</p>
+        <p>&nbsp;</p>
+        <p>&nbsp;</p>
+        <p><font size=+2 face="Arial,Helvetica"><font size="5"><a name="initial"></a>Initial 
+          Scripts</font></font></p>
+        <p><font face="Verdana, Arial, Helvetica, sans-serif" size="2">We suggest 
+          using this skeleton for starting your PHP scripts:</font> 
+        <table width="100%" border="0" cellspacing="12" cellpadding="0" bgcolor="#FFFFCC">
+          <tr> 
+            <td height="84"><p><font size="2" face="Courier New, Courier, mono"> 
+                &lt;?<br>
+                <font color="#009900"># create the turbine object:</font><br>
+                $turbine = new Turbine7();<br>
+                &nbsp;<br>
+                </font><font face="Courier New, Courier, mono" color="#009900" size="2"># 
+                assign a variable:</font><font face="Courier New, Courier, mono" size="2"><br>
+                $turbine-&gt;setVariable(&quot;name&quot;, &quot;some text&quot;);<br>
+                <font color="#009900">&nbsp;<br>
+                #</font><font face="Courier New, Courier, mono" color="#009900" size="2"> 
+                select a Flash .swf template to use:</font><br>
+                $turbine-&gt;load(&quot;template.swf&quot;);<br>
+                &nbsp;<br>
+                </font><font face="Courier New, Courier, mono" color="#009900" size="2"> 
+                # now generate the movie to the web browser</font><font face="Courier New, Courier, mono" size="2">:<br>
+                $turbine-&gt;generateFlash();<br>
+                </font><font face="Courier New, Courier, mono" color="#009900" size="2">#</font><font face="Courier New, Courier, mono" color="#009900" size="2"> 
+                alternatively we could generate a PDF document:<br>
+                # Turbine-&gt;generatePDF();</font><font face="Courier New, Courier, mono" size="2"><br>
+                &nbsp;<br>
+                %&gt;<br>
+                </font></p>
+              </td>
+          </tr>
+        </table>
+        <hr size="1" noshade>
+        <p><font face="Arial, Helvetica, sans-serif" size="4"> </font></p>
+        <p><font face="Arial, Helvetica, sans-serif" size="5"><a name="alphabeticlist" id="alphabeticlist"></a>Alphabetical 
+          List</font></p>
+        <table width="100%" border="0" cellpadding="6" cellspacing="0" bgcolor="#eeeeee">
+          <tr valign="top"> 
+            <td width="33%" height="259"> <ul>
+                <li><strong><font size="2" face="Verdana, Arial, Helvetica, sans-serif"><a href="#adddatasetrow">addDataSetRow</a></font></strong></li>
+                <li><strong><font size="2" face="Verdana, Arial, Helvetica, sans-serif"> 
+                  <a href="#adddatasetcolumn">addDataSetColumn</a></font></strong></li>
+                <li><strong><font size="2" face="Verdana, Arial, Helvetica, sans-serif"> 
+                  <a href="#adddatasetvalue">addDataSetValue</a></font></strong></li>
+                <li><strong><font size="2" face="Verdana, Arial, Helvetica, sans-serif"><a href="#basedirectory">baseDirectory</a></font></strong></li>
+                <li><strong><font size="2" face="Verdana, Arial, Helvetica, sans-serif"><a href="#bindirectory">binDirectory</a></font></strong></li>
+                <li><strong><font size="2" face="Verdana, Arial, Helvetica, sans-serif"> 
+                  <a href="#color">color</a></font></strong></li>
+                <li><strong><font size="2" face="Verdana, Arial, Helvetica, sans-serif"><a href="#compress">compress</a></font></strong></li>
+                <li><strong><font size="2" face="Verdana, Arial, Helvetica, sans-serif"> 
+                  <a href="#cache">cache</a></font></strong></li>
+                <li><strong><font size="2" face="Verdana, Arial, Helvetica, sans-serif"><a href="#cachemedia">cacheMedia</a></font></strong></li>
+                <li><strong><font size="2" face="Verdana, Arial, Helvetica, sans-serif"><a href="#create">create</a></font></strong></li>
+                <li><strong><font size="2" face="Verdana, Arial, Helvetica, sans-serif"><a href="#datasetfromstring">dataSetFromString</a></font></strong></li>
+                <li><strong><font size="2" face="Verdana, Arial, Helvetica, sans-serif"><a href="#debug">debug</a></font></strong></li>
+                <li><strong><font size="2" face="Verdana, Arial, Helvetica, sans-serif"><a href="#flashversion">flashVersion</a></font></strong></li>
+                <li><strong><font size="2" face="Verdana, Arial, Helvetica, sans-serif"><a href="#frame">frame</a></font></strong></li>
+                <li><strong><font size="2" face="Verdana, Arial, Helvetica, sans-serif"><a href="#framerate">frameRate</a></font></strong></li>
+                <li><strong><font size="2" face="Verdana, Arial, Helvetica, sans-serif"><a href="#generate">generate</a></font></strong></li>
+                <li><strong><font size="2" face="Verdana, Arial, Helvetica, sans-serif"><a href="#generateflash">generateFlash</a></font></strong><strong><font size="2" face="Verdana, Arial, Helvetica, sans-serif"><br>
+                  </font></strong></li>
+              </ul></td>
+            <td width="33%"><ul>
+                <li><strong><font size="2" face="Verdana, Arial, Helvetica, sans-serif"><a href="#generatehtmlfirst">generateHTMLFirst</a></font></strong></li>
+                <li><strong><font size="2" face="Verdana, Arial, Helvetica, sans-serif"><a href="#generatepdf">generatePDF</a></font></strong></li>
+                <li><strong><font size="2" face="Verdana, Arial, Helvetica, sans-serif"><a href="#generatetofile">generateToFile</a></font></strong></li>
+                <li><strong><font size="2" face="Verdana, Arial, Helvetica, sans-serif"><a href="#getdatasetcolumncount">getDataSetColumnCount</a></font></strong></li>
+                <li><strong><font size="2" face="Verdana, Arial, Helvetica, sans-serif"><a href="#getdatasetrowcount">getDataSetRowCount</a></font></strong></li>
+                <li><strong><font size="2" face="Verdana, Arial, Helvetica, sans-serif"><a href="#getdatasetvalue">getDataSetValue</a></font></strong></li>
+                <li><strong><font size="2" face="Verdana, Arial, Helvetica, sans-serif"><a href="#height">height</a></font></strong></li>
+                <li><strong><font size="2" face="Verdana, Arial, Helvetica, sans-serif"><a href="#httpget">HTTPGet</a></font></strong></li>
+                <li><strong><font size="2" face="Verdana, Arial, Helvetica, sans-serif"><a href="#ieoptimize">IEOptimize</a></font></strong></li>
+                <li><strong><font size="2" face="Verdana, Arial, Helvetica, sans-serif"><a href="#include">include</a></font></strong></li>
+                <li><strong><font size="2" face="Verdana, Arial, Helvetica, sans-serif"><a href="#info">info</a></font></strong></li>
+                <li><strong><font size="2" face="Verdana, Arial, Helvetica, sans-serif"><a href="#injectdata">injectData</a></font></strong></li>
+                <li><strong><font size="2" face="Verdana, Arial, Helvetica, sans-serif"><a href="#load">load</a></font></strong></li>
+                <li><strong><font size="2" face="Verdana, Arial, Helvetica, sans-serif"><a href="#loaddataset">loadDataSet</a></font></strong></li>
+                <li><strong><font size="2" face="Verdana, Arial, Helvetica, sans-serif"><a href="#loaddataset2">loadDataSet*</a></font></strong></li>
+                <li><strong><font size="2" face="Verdana, Arial, Helvetica, sans-serif"><a href="#loadvar">loadVar</a></font></strong></li>
+                <li><strong><font size="2" face="Verdana, Arial, Helvetica, sans-serif"><a href="#log">log</a></font></strong><strong><font size="2" face="Verdana, Arial, Helvetica, sans-serif"><br>
+                  </font></strong></li>
+              </ul></td>
+            <td width="33%"><ul>
+                <li><strong><font size="2" face="Verdana, Arial, Helvetica, sans-serif"><a href="#logto">logTo</a></font></strong><strong><font size="2" face="Verdana, Arial, Helvetica, sans-serif"></font></strong></li>
+                <li><strong><font size="2" face="Verdana, Arial, Helvetica, sans-serif"><a href="#makedataset">makeDataSet</a></font></strong></li>
+                <li><strong><font size="2" face="Verdana, Arial, Helvetica, sans-serif"><a href="#numframes">numFrames</a></font></strong></li>
+                <li><strong><font size="2" face="Verdana, Arial, Helvetica, sans-serif"><a href="#pdfpermissions">pdfPermissions</a></font></strong></li>
+                <li><strong><font size="2" face="Verdana, Arial, Helvetica, sans-serif"><a href="#pdfownerpassword">pdfOwnerPassword</a></font></strong></li>
+                <li><strong><font size="2" face="Verdana, Arial, Helvetica, sans-serif"><a href="#pdfuserpassword">pdfUserPassword</a></font></strong></li>
+                <li><strong><font size="2" face="Verdana, Arial, Helvetica, sans-serif"><a href="#pdfversion">pdfVersion</a></font></strong></li>
+                <li><strong><font size="2" face="Verdana, Arial, Helvetica, sans-serif"><a href="#protect">protect</a></font></strong></li>
+                <li><strong><font size="2" face="Verdana, Arial, Helvetica, sans-serif"><a href="#publishvar">publishVar</a></font></strong></li>
+                <li><strong><font size="2" face="Verdana, Arial, Helvetica, sans-serif"><a href="#publishdataset">publishDataSet</a></font></strong></li>
+                <li><strong><font size="2" face="Verdana, Arial, Helvetica, sans-serif"><a href="#reset">reset</a></font></strong></li>
+                <li><strong><font size="2" face="Verdana, Arial, Helvetica, sans-serif"><a href="#script">script</a></font></strong></li>
+                <li><strong><font size="2" face="Verdana, Arial, Helvetica, sans-serif"><a href="#servecached">serveCached</a></font></strong></li>
+                <li><strong><font size="2" face="Verdana, Arial, Helvetica, sans-serif"><a href="#showframe">showFrame</a></font></strong></li>
+                <li><strong><font size="2" face="Verdana, Arial, Helvetica, sans-serif"> 
+                  <a href="#variable">setVariable/setVar</a></font></strong></li>
+                <li><strong><font size="2" face="Verdana, Arial, Helvetica, sans-serif"><a href="#version">version</a></font></strong></li>
+                <li><strong><font size="2" face="Verdana, Arial, Helvetica, sans-serif"><a href="#width">width</a></font></strong></li>
+              </ul></td>
+          </tr>
+        </table>
+        <p>&nbsp;</p>
+        <hr size="1" noshade>
+        <p><font face="Arial, Helvetica, sans-serif" size="5"><a name="commandlist" id="commandlist"></a>Commands</font></p>
+        <table width="89%" border="0" cellpadding="6" cellspacing="0" bgcolor="#eeeeee">
+          <tr valign="top"> 
+            <td width="50%"> <ul>
+                <li><strong><font size="2" face="Verdana, Arial, Helvetica, sans-serif"><a href="#adddatasetrow">addDataSetRow</a></font></strong></li>
+                <li><strong><font size="2" face="Verdana, Arial, Helvetica, sans-serif"> 
+                  <a href="#adddatasetcolumn">addDataSetColumn</a></font></strong></li>
+                <li><strong><font size="2" face="Verdana, Arial, Helvetica, sans-serif"> 
+                  <a href="#adddatasetvalue">addDataSetValue</a></font></strong></li>
+                <li><strong><font size="2" face="Verdana, Arial, Helvetica, sans-serif"> 
+                  </font></strong><strong><font size="2" face="Verdana, Arial, Helvetica, sans-serif"><a href="#cache">cache</a></font></strong></li>
+                <li><strong><font size="2" face="Verdana, Arial, Helvetica, sans-serif"><a href="#cachemedia">cacheMedia</a></font></strong></li>
+                <li><strong><font size="2" face="Verdana, Arial, Helvetica, sans-serif"><a href="#create">create</a></font></strong></li>
+                <li><strong><font size="2" face="Verdana, Arial, Helvetica, sans-serif"><a href="#datasetfromstring">dataSetFromString</a></font></strong></li>
+                <li><strong><font size="2" face="Verdana, Arial, Helvetica, sans-serif"><a href="#generate">generate</a></font></strong></li>
+                <li><strong><font size="2" face="Verdana, Arial, Helvetica, sans-serif"><a href="#generateFlash">generateFlash</a></font></strong></li>
+                <li><strong><font size="2" face="Verdana, Arial, Helvetica, sans-serif"><a href="#generatehtmlfirst">generateHTMLFirst</a></font></strong></li>
+                <li><strong><font size="2" face="Verdana, Arial, Helvetica, sans-serif"><a href="#generatepdf">generatePDF</a></font></strong></li>
+                <li><strong><font size="2" face="Verdana, Arial, Helvetica, sans-serif"><a href="#generatetofile">generateToFile</a></font></strong></li>
+                <li><strong><font size="2" face="Verdana, Arial, Helvetica, sans-serif"><a href="#getdatasetcolumncount">getDataSetColumnCount</a></font></strong></li>
+                <li><strong><font size="2" face="Verdana, Arial, Helvetica, sans-serif"><a href="#getdatasetrowcount">getDataSetRowCount</a></font></strong></li>
+                <li><strong><font size="2" face="Verdana, Arial, Helvetica, sans-serif"><a href="#getdatasetvalue">getDataSetValue</a></font></strong></li>
+                <li><strong><font size="2" face="Verdana, Arial, Helvetica, sans-serif"><a href="#httpget">HTTPGet</a></font></strong><strong><font size="2" face="Verdana, Arial, Helvetica, sans-serif"><br>
+                  </font></strong></li>
+              </ul></td>
+            <td width="50%"><ul>
+                <li><strong><font size="2" face="Verdana, Arial, Helvetica, sans-serif"><a href="#ieoptimize">IEOptimize</a></font></strong></li>
+                <li><strong><font size="2" face="Verdana, Arial, Helvetica, sans-serif"><a href="#include">include</a></font></strong></li>
+                <li><strong><font size="2" face="Verdana, Arial, Helvetica, sans-serif"><a href="#injectdata">injectData</a></font></strong></li>
+                <li><strong><font size="2" face="Verdana, Arial, Helvetica, sans-serif"><a href="#load">load</a></font></strong></li>
+                <li><strong><font size="2" face="Verdana, Arial, Helvetica, sans-serif"><a href="#loaddataset">loadDataSet</a></font></strong></li>
+                <li><strong><font size="2" face="Verdana, Arial, Helvetica, sans-serif"><a href="#loaddataset2">loadDataSet*</a></font></strong></li>
+                <li><strong><font size="2" face="Verdana, Arial, Helvetica, sans-serif"> 
+                  <a href="#loadvar">loadVar</a></font></strong></li>
+                <li><strong><font size="2" face="Verdana, Arial, Helvetica, sans-serif"><a href="#makedataset">makeDataSet</a></font></strong></li>
+                <li><strong><font size="2" face="Verdana, Arial, Helvetica, sans-serif"><a href="#publishvar">publishVar</a></font></strong></li>
+                <li><strong><font size="2" face="Verdana, Arial, Helvetica, sans-serif"><a href="#publishdataset">publishDataSet</a></font></strong></li>
+                <li><strong><font size="2" face="Verdana, Arial, Helvetica, sans-serif"><a href="#reset">reset</a></font></strong></li>
+                <li><strong><font size="2" face="Verdana, Arial, Helvetica, sans-serif"><a href="#script">script</a></font></strong></li>
+                <li><strong><font size="2" face="Verdana, Arial, Helvetica, sans-serif"><a href="#servecached">serveCached</a></font></strong></li>
+                <li><strong><font size="2" face="Verdana, Arial, Helvetica, sans-serif"><a href="#variable">setVariable/setVar</a></font></strong></li>
+                <li><strong><font size="2" face="Verdana, Arial, Helvetica, sans-serif"><a href="#showframe">showFrame</a><br>
+                  </font></strong></li>
+              </ul></td>
+          </tr>
+        </table>
+        <p>&nbsp;</p>
+        <table width="100%" border="0" cellspacing="0" cellpadding="16" bgcolor="#F0F0F0">
+          <tr valign="top"> 
+            <td> 
+              <p><font face="Verdana, Arial, Helvetica, sans-serif" size="4"><b><a name="adddatasetrow" id="adddatasetrow"></a>addDataSetRow 
+                Command</b></font> </p>
+              <p><font face="Verdana, Arial, Helvetica, sans-serif" size="2"><b>Description</b></font> 
+              <blockquote> 
+                <p><font size="2" face="Verdana, Arial, Helvetica, sans-serif">Insert 
+                  a row into a DataSet created by the MakeDataSet command.</font></p>
+              </blockquote>
+              <p><font face="Verdana, Arial, Helvetica, sans-serif" size="2"><b>Syntax</b></font> 
+              <blockquote> 
+                <p><font face="Verdana, Arial, Helvetica, sans-serif" size="2">$turbine-&gt;addDataSetRow(&quot;dataSetRow&quot;);</font></p>
+                <p><font face="Verdana, Arial, Helvetica, sans-serif" size="2"><u>dataSetRow</u> 
+                  is a coma-separated list of values to be assigned to respective 
+                  DataSet columns.</font></p>
+              </blockquote>
+              <p><font face="Verdana, Arial, Helvetica, sans-serif" size="2"><b>Errors</b></font></p>
+              <blockquote> 
+                <p><font face="Verdana, Arial, Helvetica, sans-serif" size="2"> 
+                  </font><font face="Courier New, Courier, mono" size="2"><em>DataSetRow 
+                  parameter must be a comma-separated list of values</em></font><font face="Verdana, Arial, Helvetica, sans-serif" size="2"><br>
+                  The specified row must be a comma separated list of values.</font></p>
+              </blockquote>
+              <p><font face="Verdana, Arial, Helvetica, sans-serif" size="2"><b>Remarks</b></font></p>
+              <blockquote> 
+                <p><font size="2" face="Verdana, Arial, Helvetica, sans-serif">Use 
+                  this command to insert values into an existing DataSet.</font></p>
+              </blockquote>
+              <p>&nbsp;</p></td>
+          </tr>
+        </table>
+        <p>&nbsp;</p>
+        <table width="100%" border="0" cellspacing="0" cellpadding="16" bgcolor="#F0F0F0">
+          <tr valign="top"> 
+            <td height="448"> <p><font face="Verdana, Arial, Helvetica, sans-serif" size="4"><b><a name="adddatasetcolumn" id="adddatasetcolumn"></a>addDataSetColumn 
+                Command</b></font> </p>
+              <p><font face="Verdana, Arial, Helvetica, sans-serif" size="2"><b>Description</b></font> 
+              <blockquote> 
+                <p><font size="2" face="Verdana, Arial, Helvetica, sans-serif">Insert 
+                  a DataSet column starting at a specified row.</font></p>
+              </blockquote>
+              <p><font face="Verdana, Arial, Helvetica, sans-serif" size="2"><b>Syntax</b></font> 
+              <blockquote> 
+                <p><font face="Verdana, Arial, Helvetica, sans-serif" size="2">$turbine-&gt;addDataSetColumn(&quot;dataSetName&quot;, 
+                  &quot;columnName&quot;, startRowNumber, &quot;values&quot;);</font></p>
+                <p><font face="Verdana, Arial, Helvetica, sans-serif" size="2"><u>dataSetName</u> 
+                  is the name of the DataSet to define.<br>
+                  <u>columnName</u> is the name of an existing or new DataSet 
+                  column.<br>
+                  <u>startRowNumber</u> is the number of a new or existing DataSet 
+                  row where to start placing the column values.<br>
+                  <u>values</u> is a comma separated list of values to place on 
+                  successive rows.</font></p>
+              </blockquote>
+              <p><font face="Verdana, Arial, Helvetica, sans-serif" size="2"><b>Errors</b></font></p>
+              <blockquote> 
+                <p><font face="Courier New, Courier, mono" size="2"><em>Values 
+                  parameter must be a comma-separated list of values</em></font><font face="Verdana, Arial, Helvetica, sans-serif" size="2"><br>
+                  The specified values must be a comma separated list of values.</font></p>
+              </blockquote>
+              <p><font face="Verdana, Arial, Helvetica, sans-serif" size="2"><b>Remarks</b></font></p>
+              <blockquote> 
+                <p><font size="2" face="Verdana, Arial, Helvetica, sans-serif">Use 
+                  this command to insert columns into an existing DataSet.</font></p>
+              </blockquote>
+              <p>&nbsp;</p></td>
+          </tr>
+        </table>
+        <p>&nbsp;</p>
+        <table width="100%" border="0" cellspacing="0" cellpadding="16" bgcolor="#F0F0F0">
+          <tr valign="top"> 
+            <td> 
+              <p><font face="Verdana, Arial, Helvetica, sans-serif" size="4"><b><a name="adddatasetvalue" id="adddatasetvalue"></a>addDataSetValue 
+                Command</b></font> </p>
+              <p><font face="Verdana, Arial, Helvetica, sans-serif" size="2"><b>Description</b></font> 
+              <blockquote> 
+                <p><font size="2" face="Verdana, Arial, Helvetica, sans-serif">Insert 
+                  a DataSet entry on a specified column and row.</font></p>
+              </blockquote>
+              <p><font face="Verdana, Arial, Helvetica, sans-serif" size="2"><b>Syntax</b></font> 
+              <blockquote> 
+                <p><font face="Verdana, Arial, Helvetica, sans-serif" size="2">$turbine-&gt;addDataSetValue(&quot;dataSetName&quot;, 
+                  &quot;columnName&quot;, rowNumber, &quot;value&quot;);</font></p>
+                <p><font face="Verdana, Arial, Helvetica, sans-serif" size="2"><u>dataSetName</u> 
+                  is the name of the DataSet to define.<br>
+                  <u>columnName</u> is the name of an existing or new DataSet 
+                  column.<br>
+                  <u>RowNumber</u> is the number of a new or existing DataSet 
+                  row.<br>
+                  <u>value</u> is the value to be insert into the DataSet.</font></p>
+              </blockquote>
+              <p><font face="Verdana, Arial, Helvetica, sans-serif" size="2"><b>Errors</b></font></p>
+              <blockquote> 
+                <p><font face="Verdana, Arial, Helvetica, sans-serif" size="2"> 
+                  </font><font face="Courier New, Courier, mono" size="2"><em>Error 
+                  setting value</em></font><font face="Verdana, Arial, Helvetica, sans-serif" size="2"><br>
+                  An error occurred when setting the value. Check if the DataSet 
+                  already exists.</font></p>
+              </blockquote>
+              <p><font face="Verdana, Arial, Helvetica, sans-serif" size="2"><b>Remarks</b></font></p>
+              <blockquote> 
+                <p><font size="2" face="Verdana, Arial, Helvetica, sans-serif">Use 
+                  this command to insert a value into an existing DataSet.</font></p>
+              </blockquote>
+              <p>&nbsp;</p></td>
+          </tr>
+        </table>
+        <p>&nbsp;</p>
+        <table width="100%" border="0" cellspacing="0" cellpadding="16" bgcolor="#F0F0F0">
+          <tr valign="top"> 
+            <td> 
+              <p><font face="Verdana, Arial, Helvetica, sans-serif" size="4"><b><a name="cache" id="cache"></a>cache 
+                Command</b></font> </p>
+              <p><font face="Verdana, Arial, Helvetica, sans-serif" size="2"><b>Description</b></font> 
+              <blockquote> 
+                <p><font size="2" face="Verdana, Arial, Helvetica, sans-serif">Cache 
+                  or serve from cache the current media, uniquely identified by 
+                  the script URL (including query string) and media type.</font></p>
+              </blockquote>
+              <p><font face="Verdana, Arial, Helvetica, sans-serif" size="2"><b>Syntax</b></font> 
+              <blockquote> 
+                <p><font face="Verdana, Arial, Helvetica, sans-serif" size="2">$turbine-&gt;Cache(&quot;expires&quot; 
+                  [, &quot;mediaType&quot;]);</font></p>
+                <p><font face="Verdana, Arial, Helvetica, sans-serif" size="2"><u>expires</u> 
+                  is the expiration date for the media with the format YYYYMMDDHHMISS.<br>
+                  <u>mediaType</u> is the media format outputted by Turbine. Currently 
+                  &quot;flash&quot; for Macromedia Flash and &quot;pdf&quot; for 
+                  Adobe PDF are available. The default value is &quot;flash&quot; 
+                  if not provided.</font></p>
+              </blockquote>
+              <p><font face="Verdana, Arial, Helvetica, sans-serif" size="2"><b>Errors</b></font></p>
+              <blockquote> <font face="Courier New, Courier, mono" size="2"><em>Error 
+                serving media</em></font><font face="Verdana, Arial, Helvetica, sans-serif" size="2"><br>
+                An error occurred when serving the media.<br>
+                &nbsp;<br>
+                </font><font face="Courier New, Courier, mono" size="2"><em>The 
+                expires parameter has bad format<br>
+                </em></font><font face="Verdana, Arial, Helvetica, sans-serif" size="2">Check 
+                the expires parameter format. It should be YYYYMMDDHHMISS</font>.<font face="Courier New, Courier, mono" size="2"><em><br>
+                &nbsp;<br>
+                Error preparing to cache media<br>
+                </em></font><font face="Verdana, Arial, Helvetica, sans-serif" size="2">An 
+                error occurred when caching the media.</font></blockquote>
+              <p>&nbsp;</p>
+              </td>
+          </tr>
+        </table>
+        <p>&nbsp;</p>
+        <table width="100%" border="0" cellspacing="0" cellpadding="16" bgcolor="#F0F0F0">
+          <tr valign="top"> 
+            <td> 
+              <p><font face="Verdana, Arial, Helvetica, sans-serif" size="4"><b><a name="cachemedia" id="cachemedia"></a>cacheMedia 
+                Command</b></font> </p>
+              <p><font face="Verdana, Arial, Helvetica, sans-serif" size="2"><b>Description</b></font> 
+              <blockquote> 
+                <p><font size="2" face="Verdana, Arial, Helvetica, sans-serif">Add 
+                  the generated media to the cache, identified by the given reference.</font></p>
+              </blockquote>
+              <p><font face="Verdana, Arial, Helvetica, sans-serif" size="2"><b>Syntax</b></font> 
+              <blockquote> 
+                <p><font face="Verdana, Arial, Helvetica, sans-serif" size="2">$turbine-&gt;cacheMedia(&quot;reference&quot;, 
+                  &quot;expires&quot; [, &quot;mediaType&quot;]);</font></p>
+                <p><font face="Verdana, Arial, Helvetica, sans-serif" size="2"><u>reference</u> 
+                  is the unique id for the cached media.<u><br>
+                  expires</u> is the expiration date for the media with the format 
+                  YYYYMMDDHHMISS.<br>
+                  <u>mediaType</u> is the media format outputted by Turbine. Currently 
+                  &quot;flash&quot; for Macromedia Flash and &quot;pdf&quot; fo 
+                  Adobe PDF are available. The default value is &quot;flash&quot; 
+                  if not provided.</font></p>
+              </blockquote>
+              <p><font face="Verdana, Arial, Helvetica, sans-serif" size="2"><b>Errors</b></font></p>
+              <blockquote> 
+                <p><font face="Courier New, Courier, mono" size="2"><em>The expires 
+                  parameter has bad format<br>
+                  </em></font><font face="Verdana, Arial, Helvetica, sans-serif" size="2">Check 
+                  the expires parameter format. It should be YYYYMMDDHHMISS</font>.<font face="Courier New, Courier, mono" size="2"><em><br>
+                  &nbsp;<br>
+                  Error preparing to cache media<br>
+                  </em></font><font face="Verdana, Arial, Helvetica, sans-serif" size="2">An 
+                  error occurred when caching the media.</font></p>
+              </blockquote>
+              <p><font face="Verdana, Arial, Helvetica, sans-serif" size="2"><b>Remarks</b></font></p>
+              <blockquote> 
+                <p><font size="2" face="Verdana, Arial, Helvetica, sans-serif">The 
+                  old command CacheMovie can still be used, but we recommend that 
+                  you use the CacheMedia command instead.</font></p>
+              </blockquote>
+              <p>&nbsp;</p></td>
+          </tr>
+        </table>
+        <p>&nbsp;</p>
+        <table width="100%" border="0" cellspacing="0" cellpadding="16" bgcolor="#F0F0F0">
+          <tr valign="top"> 
+            <td> 
+              <p><font face="Verdana, Arial, Helvetica, sans-serif" size="4"><b><a name="create" id="create"></a>create 
+                Command</b></font> </p>
+              <p><font face="Verdana, Arial, Helvetica, sans-serif" size="2"><b>Description</b></font> 
+              <blockquote> 
+                <p><font size="2" face="Verdana, Arial, Helvetica, sans-serif">Creates 
+                  a media instance from the provided MML.</font></p>
+              </blockquote>
+              <p><font face="Verdana, Arial, Helvetica, sans-serif" size="2"><b>Syntax</b></font> 
+              <blockquote> 
+                <p><font face="Verdana, Arial, Helvetica, sans-serif" size="2">$turbine-&gt;create(&quot;mmlTags&quot; 
+                  [, &quot;instanceName&quot;]);</font></p>
+                <p><font face="Verdana, Arial, Helvetica, sans-serif" size="2"><u>mmlTags</u> 
+                  is a MML string to be interpreted and included into the media.<u><br>
+                  instanceName</u> is the name of the instance created inside 
+                  the media for later reference. By default, Turbine assumes an 
+                  unique name if no value is provided.</font></p>
+              </blockquote>
+              <p><font face="Verdana, Arial, Helvetica, sans-serif" size="2"><b>Errors</b></font></p>
+              <blockquote> 
+                <p><font face="Verdana, Arial, Helvetica, sans-serif" size="2"> 
+                  </font><font face="Courier New, Courier, mono" size="2"><em>Out 
+                  of memory<br>
+                  </em></font><font face="Verdana, Arial, Helvetica, sans-serif" size="2">Memory 
+                  allocation error. Is your system running out of virtual memory?</font></p>
+              </blockquote>
+              <p><font face="Verdana, Arial, Helvetica, sans-serif" size="2"><b>Remarks</b></font></p>
+              <blockquote> 
+                <p><font size="2" face="Verdana, Arial, Helvetica, sans-serif">There 
+                  are no restrictions about the MML provided to this command - 
+                  you can do everything possible in MML with this simple command.</font></p>
+              </blockquote>
+              <p>&nbsp;</p></td>
+          </tr>
+        </table>
+        <p>&nbsp;</p>
+        <table width="100%" border="0" cellspacing="0" cellpadding="16" bgcolor="#F0F0F0">
+          <tr valign="top"> 
+            <td> 
+              <p><font face="Verdana, Arial, Helvetica, sans-serif" size="4"><b><a name="datasetfromstring" id="datasetfromstring"></a>dataSetFromString 
+                Command</b></font> </p>
+              <p><font face="Verdana, Arial, Helvetica, sans-serif" size="2"><b>Description</b></font> 
+              <blockquote> 
+                <p><font size="2" face="Verdana, Arial, Helvetica, sans-serif">Create 
+                  a DataSet from a string formatted as a DataSet file or from 
+                  a well-formed XML string.</font></p>
+              </blockquote>
+              <p><font face="Verdana, Arial, Helvetica, sans-serif" size="2"><b>Syntax</b></font> 
+              <blockquote> 
+                <p><font face="Verdana, Arial, Helvetica, sans-serif" size="2">$turbine-&gt;dataSetFromString(&quot;string&quot;, 
+                  &quot;dataSetName&quot; [, &quot;rowTag&quot;, &quot;columnTags&quot;]);</font></p>
+                <p><font face="Verdana, Arial, Helvetica, sans-serif" size="2"><u>string</u> 
+                  is an well-formed XML string to be parsed into a Turbine DataSet 
+                  or is a string containing a DataSet definition, on the format 
+                  of a DataSet File.<u><br>
+                  dataSetName</u> is the name of the Turbine DataSet to create.<br>
+                  <u>rowTag</u> is the name of the XML tag to use to start a new 
+                  DataSet Row - it must be a non empty tag, with other tags inside, 
+                  to be used for the rows.<br>
+                  <u>columnTags</u> is a comma separated list of tags and/or tag 
+                  parameters to use (once parsing inside a rowTag tag) to create 
+                  DataSet columns. Check remarks to see variations on using this 
+                  parameter.</font></p>
+              </blockquote>
+              <p><font face="Verdana, Arial, Helvetica, sans-serif" size="2"><b>Errors</b></font></p>
+              <blockquote> 
+                <p><font face="Courier New, Courier, mono" size="2"><em>DataSet 
+                  string has bad format<br>
+                  </em></font><font size="2" face="Verdana, Arial, Helvetica, sans-serif">The 
+                  string is not well formatted. It must be formatted according 
+                  to a DataSet file.</font><font face="Courier New, Courier, mono" size="2"><em><br>
+                  &nbsp; <br>
+                  DataSet XML string has bad format<br>
+                  </em></font><font face="Verdana, Arial, Helvetica, sans-serif" size="2">The 
+                  string is not well formatted. It must be valid XML</font>.</p>
+              </blockquote>
+              <p><font face="Verdana, Arial, Helvetica, sans-serif" size="2"><b>Remarks</b></font></p>
+              <blockquote> 
+                <p><font size="2" face="Verdana, Arial, Helvetica, sans-serif">If 
+                  rowTag and columnTags parameters are defined then Turbine assumes 
+                  that the format os the string passed is XML formatted. It assumes 
+                  the format of DataSet file otherwise.</font></p>
+                <p><font size="2" face="Verdana, Arial, Helvetica, sans-serif">The 
+                  XMLDataSetFromString command is still valid although we recommend 
+                  that you use the DataSetFromString command instead.</font></p>
+                <p><font size="2" face="Verdana, Arial, Helvetica, sans-serif">The 
+                  columnTag parameter can be specified in a few different ways 
+                  to allow different parsing of the XML document:</font></p>
+                <table border="1" cellspacing="0" cellpadding="4">
+                  <tr valign="top" bgcolor="#000000"> 
+                    <td width="26%"><font color="#FFFFFF" size="2" face="Verdana, Arial, Helvetica, sans-serif"><b>columnTags</b></font></td>
+                    <td width="74%"><font color="#FFFFFF" size="2" face="Verdana, Arial, Helvetica, sans-serif"><b>Effect</b></font></td>
+                  </tr>
+                  <tr valign="top" bgcolor="#FFFFFF"> 
+                    <td width="27%"><font face="Verdana, Arial, Helvetica, sans-serif" size="2">&quot;&quot; 
+                      <i>(empty)</i></font></td>
+                    <td width="73%"><font face="Verdana, Arial, Helvetica, sans-serif" size="2">The 
+                      text immediately after the start of each rowTag will be 
+                      used for the only column in the DataSet, this column will 
+                      be named after the rowTag name</font></td>
+                  </tr>
+                  <tr valign="top" bgcolor="#FFFFFF"> 
+                    <td width="27%"><font face="Verdana, Arial, Helvetica, sans-serif" size="2">&quot;tag1, 
+                      tag2, tag3,..&quot;.</font></td>
+                    <td width="73%"><font face="Verdana, Arial, Helvetica, sans-serif" size="2">The 
+                      DataSet will feature the specified columns, composed by 
+                      the text immediately inside each of these tags, for each 
+                      rowTag</font></td>
+                  </tr>
+                  <tr valign="top" bgcolor="#FFFFFF"> 
+                    <td width="27%"><font face="Verdana, Arial, Helvetica, sans-serif" size="2">&quot;tag1#<i>attr1</i>, 
+                      tag2#<i>attr</i>2&quot;</font></td>
+                    <td width="73%"> <p><font face="Verdana, Arial, Helvetica, sans-serif" size="2">Each 
+                        tag marked with an hash will contribute with the text 
+                        of the <i>attr1</i> or <i>attr2</i> attribute inside the 
+                        respective tag, for example:<br>
+                        &lt;tag1 attr1=&quot;some&quot;/&gt; &lt;tag2 attr2=&quot;times&quot;/&gt;<br>
+                        would use the text &quot;some&quot; and &quot;times&quot; 
+                        for successive columns inside the created DataSet. The 
+                        created DataSet columns would be called &quot;tag1#attr2&quot; 
+                        and &quot;tag2#attr2&quot;</font></p></td>
+                  </tr>
+                  <tr valign="top" bgcolor="#FFFFFF"> 
+                    <td width="27%"><font face="Verdana, Arial, Helvetica, sans-serif" size="2">&quot;tag1#attr1=alias1, 
+                      tag2#attr2=alias2&quot;</font></td>
+                    <td width="73%"><font face="Verdana, Arial, Helvetica, sans-serif" size="2">Just 
+                      like the above, but the columns will be defined on the DataSet 
+                      with the column name specified in <i>alias1</i> and <i>alias2</i>. 
+                      This is important for some commands that depend on column 
+                      names like the AutoImage or AutoMovieClip</font></td>
+                  </tr>
+                </table>
+                <p><font size="2" face="Verdana, Arial, Helvetica, sans-serif">XML 
+                  entity references like &amp;amp; and &amp;gt; will be accordingly 
+                  expanded on the read values.</font></p>
+              </blockquote>
+              <p><font face="Verdana, Arial, Helvetica, sans-serif" size="2"><b>Equivalent 
+                MML</b></font></p>
+              <blockquote> 
+                <p><font size="2" face="Verdana, Arial, Helvetica, sans-serif">The 
+                  MML equivalent to this command is <a href="mmlreference.htm#dataset">&lt;DataSet&gt;</a></font></p>
+              </blockquote>
+              <p>&nbsp;</p></td>
+          </tr>
+        </table>
+        <p>&nbsp;</p>
+        <table width="100%" border="0" cellspacing="0" cellpadding="16" bgcolor="#F0F0F0">
+          <tr valign="top"> 
+            <td> 
+              <p><font face="Verdana, Arial, Helvetica, sans-serif" size="4"><b><a name="generate" id="generate"></a>generate 
+                Command</b></font> </p>
+              <p><font face="Verdana, Arial, Helvetica, sans-serif" size="2"><b>Description</b></font> 
+              <blockquote> 
+                <p><font size="2" face="Verdana, Arial, Helvetica, sans-serif">After 
+                  all the content has been defined, it's time to actually generate 
+                  the media and send it into the web browser.</font></p>
+              </blockquote>
+              <p><font face="Verdana, Arial, Helvetica, sans-serif" size="2"><b>Syntax</b></font> 
+              <blockquote> 
+                <p><font face="Verdana, Arial, Helvetica, sans-serif" size="2">$turbine-&gt;generate([&quot;mediaType&quot;]);</font></p>
+                <p><font face="Verdana, Arial, Helvetica, sans-serif" size="2"><u>mediaType</u> 
+                  is the media format outputted by Turbine. Currently &quot;flash&quot; 
+                  for Macromedia Flash and &quot;pdf&quot; for Adobe PDF are available. 
+                  The default value is &quot;flash&quot; if not provided.</font></p>
+              </blockquote>
+              <p><font face="Verdana, Arial, Helvetica, sans-serif" size="2"><b>Errors</b></font></p>
+              <blockquote> <font face="Courier New, Courier, mono" size="2"><em>Out 
+                of memory generating media<br>
+                </em></font><font face="Verdana, Arial, Helvetica, sans-serif" size="2">Memory 
+                allocation error while generating the file. Is your system running 
+                out of virtual memory?</font><br>
+                &nbsp; <br>
+                <font face="Courier New, Courier, mono" size="2"><em>Could not 
+                include debug window<br>
+                </em></font><font face="Verdana, Arial, Helvetica, sans-serif" size="2">The 
+                Turbine Window could not be found.<br>
+                &nbsp; <br>
+                </font><font face="Courier New, Courier, mono" size="2"><em>Error 
+                generating media</em></font><br>
+                <font face="Verdana, Arial, Helvetica, sans-serif" size="2">There 
+                was an error generating media.</font></blockquote>
+              <p>&nbsp;</p>
+              </td>
+          </tr>
+        </table>
+        <p>&nbsp;</p>
+        <table width="100%" border="0" cellspacing="0" cellpadding="16" bgcolor="#F0F0F0">
+          <tr valign="top"> 
+            <td> 
+              <p><font face="Verdana, Arial, Helvetica, sans-serif" size="4"><b><a name="generateflash" id="generateflash"></a>generateFlash 
+                Command</b></font> </p>
+              <p><font face="Verdana, Arial, Helvetica, sans-serif" size="2"><b>Description</b></font> 
+              <blockquote> 
+                <p><font size="2" face="Verdana, Arial, Helvetica, sans-serif">After 
+                  all the content has been defined, it's time to actually generate 
+                  the Flash movie and send it into the web browser.</font></p>
+              </blockquote>
+              <p><font face="Verdana, Arial, Helvetica, sans-serif" size="2"><b>Syntax</b></font> 
+              <blockquote> 
+                <p><font face="Verdana, Arial, Helvetica, sans-serif" size="2">$turbine-&gt;generateFlash();</font></p>
+              </blockquote>
+              <p><font face="Verdana, Arial, Helvetica, sans-serif" size="2"><b>Errors</b></font></p>
+              <blockquote> 
+                <p><font face="Courier New, Courier, mono" size="2"><em>Out of 
+                  memory generating Flash<br>
+                  </em></font><font face="Verdana, Arial, Helvetica, sans-serif" size="2">Memory 
+                  allocation error while generating the file. Is your system running 
+                  out of virtual memory?</font><br>
+                  &nbsp; <br>
+                  <font face="Courier New, Courier, mono" size="2"><em>Could not 
+                  include debug window<br>
+                  </em></font><font face="Verdana, Arial, Helvetica, sans-serif" size="2">The 
+                  Turbine Window could not be found.<br>
+                  &nbsp; <br>
+                  </font><font face="Courier New, Courier, mono" size="2"><em>Error 
+                  generating Flash</em></font><br>
+                  <font face="Verdana, Arial, Helvetica, sans-serif" size="2">There 
+                  was an error generating Flash.</font></p>
+              </blockquote>
+              <p><font face="Verdana, Arial, Helvetica, sans-serif" size="2"><b>Remarks</b></font></p>
+              <blockquote> 
+                <p><font size="2" face="Verdana, Arial, Helvetica, sans-serif">This 
+                  is a convenience command, equivalent of calling the command 
+                  generate with &quot;flash&quot; as its only argument.</font></p>
+              </blockquote>
+              <p>&nbsp;</p></td>
+          </tr>
+        </table>
+        <p>&nbsp;</p>
+        <table width="100%" border="0" cellspacing="0" cellpadding="16" bgcolor="#F0F0F0">
+          <tr valign="top"> 
+            <td height="448"> <p><font face="Verdana, Arial, Helvetica, sans-serif" size="4"><b><a name="generatehtmlfirst"></a>generateHTMLFirst 
+                Command</b></font> </p>
+              <p><font face="Verdana, Arial, Helvetica, sans-serif" size="2"><b>Description</b></font> 
+              <blockquote> 
+                <p><font face="Verdana, Arial, Helvetica, sans-serif" size="2">Generate 
+                  an HTML page with the HTML plug-in to embed the generated media. 
+                  This page will in turn load the generated media.</font></p>
+              </blockquote>
+              <p><font face="Verdana, Arial, Helvetica, sans-serif" size="2"><b>Syntax</b></font> 
+              <blockquote> 
+                <p><font face="Verdana, Arial, Helvetica, sans-serif" size="2">$turbine-&gt;generateHTMLFirst([&quot;pluginHTMLPage&quot;]);</font></p>
+                <p><font face="Verdana, Arial, Helvetica, sans-serif" size="2"><u>plugin_html_page</u> 
+                  is the path to an HTML page with the media plug-in. The default 
+                  value is the HTML file &quot;flashplugin.htm&quot; located on 
+                  the Turbine installation directory.<br>
+                  Optionally this argument can be interpreted as a media type, 
+                  and as such it can be &quot;pdf&quot; or &quot;flash&quot;. 
+                  In this case the default HTML page for the specified media will 
+                  be used.</font></p>
+              </blockquote>
+              <p><font face="Verdana, Arial, Helvetica, sans-serif" size="2"><b>Errors</b></font></p>
+              <blockquote> 
+                <p><font face="Courier New, Courier, mono" size="2"><em>Could 
+                  not open the HTML plugin page</em></font><font face="Verdana, Arial, Helvetica, sans-serif" size="2"><br>
+                  The specified HTML plug-in page could not be found.</font> </p>
+              </blockquote>
+              <p><font face="Verdana, Arial, Helvetica, sans-serif" size="2"><b>Remarks</b></font></p>
+              <blockquote> 
+                <p><font face="Verdana, Arial, Helvetica, sans-serif" size="2">The 
+                  GenerateHTMLFirst command detects if the request is the first 
+                  for this media and if so generates an HTML plug-in page that 
+                  in turn loads the requested media.<br>
+                  If an HTML plug-in page is not supplied then the default &quot;flashplugin.htm&quot; 
+                  file, on the Turbine installation directory is used instead.<br>
+                  The HTML plug-in page can use Turbine variables, as they will 
+                  be expanded accordingly. For a good example, please check the 
+                  supplied default &quot;flashplugin.htm&quot; file. <br>
+                  Please note that to use variables like {Media.Color} or {Media.Width}, 
+                  this command should only be issued <u>after</u> one or more 
+                  Turbine.Load commands are executed, or they will not be defined.</font></p>
+              </blockquote>
+              <p>&nbsp;</p></td>
+          </tr>
+        </table>
+        <p>&nbsp;</p>
+        <table width="100%" border="0" cellspacing="0" cellpadding="16" bgcolor="#F0F0F0">
+          <tr valign="top"> 
+            <td> 
+              <p><font face="Verdana, Arial, Helvetica, sans-serif" size="4"><b><a name="generatetofile" id="generatetofile"></a>generateToFile 
+                Command</b></font> </p>
+              <p><font face="Verdana, Arial, Helvetica, sans-serif" size="2"><b>Description</b></font> 
+              <blockquote> 
+                <p><font size="2" face="Verdana, Arial, Helvetica, sans-serif">Assemble 
+                  the Flash template and save the resulting media into a local 
+                  file.</font></p>
+              </blockquote>
+              <p><font face="Verdana, Arial, Helvetica, sans-serif" size="2"><b>Syntax</b></font> 
+              <blockquote> 
+                <p><font face="Verdana, Arial, Helvetica, sans-serif" size="2">$turbine-&gt;generateToFile(&quot;filename&quot; 
+                  [, &quot;mediaType&quot;]);</font></p>
+                <p><font face="Verdana, Arial, Helvetica, sans-serif" size="2"><u>filename</u> 
+                  is the relative or absolute location of the file to save<u>.<br>
+                  mediaType</u> is the media format outputted by Turbine. Currently 
+                  &quot;flash&quot; for Macromedia Flash and &quot;pdf&quot; for 
+                  Adobe PDF are available. The default value is &quot;flash&quot; 
+                  if not provided.</font></p>
+              </blockquote>
+              <p><font face="Verdana, Arial, Helvetica, sans-serif" size="2"><b>Errors</b></font></p>
+              <blockquote> <font face="Courier New, Courier, mono" size="2"><em>Out 
+                of memory generating media file<br>
+                </em></font><font face="Verdana, Arial, Helvetica, sans-serif" size="2">Memory 
+                allocation error while generating the file. Is your system running 
+                out of virtual memory?</font><br>
+                &nbsp; <br>
+                <font face="Courier New, Courier, mono" size="2"><em>Could not 
+                save file<br>
+                </em></font><font face="Verdana, Arial, Helvetica, sans-serif" size="2">Could 
+                not create or overwrite the destination file. Check the directory/file 
+                permissions, and if they're compatible with the running web server user 
+                account.<br>
+                &nbsp; <br>
+                </font><font face="Courier New, Courier, mono" size="2"><em>Error 
+                generating media to file</em></font><br>
+                <font face="Verdana, Arial, Helvetica, sans-serif" size="2">Could 
+                not create or overwrite the destination file. Check the directory/file 
+                permissions, and if they're compatible with the running web server user 
+                account.</font></blockquote>
+              <p>&nbsp;</p>
+              </td>
+          </tr>
+        </table>
+        <p>&nbsp;</p>
+        <table width="100%" border="0" cellspacing="0" cellpadding="16" bgcolor="#F0F0F0">
+          <tr valign="top"> 
+            <td> 
+              <p><font face="Verdana, Arial, Helvetica, sans-serif" size="4"><b><a name="generatepdf" id="generatepdf"></a>generatePDF 
+                Command</b></font> </p>
+              <p><font face="Verdana, Arial, Helvetica, sans-serif" size="2"><b>Description</b></font> 
+              <blockquote> 
+                <p><font size="2" face="Verdana, Arial, Helvetica, sans-serif">After 
+                  all the content has been defined, it's time to actually generate 
+                  the PDF document and send it into the web browser.</font></p>
+              </blockquote>
+              <p><font face="Verdana, Arial, Helvetica, sans-serif" size="2"><b>Syntax</b></font> 
+              <blockquote> 
+                <p><font face="Verdana, Arial, Helvetica, sans-serif" size="2">$turbine-&gt;generatePDF();</font></p>
+              </blockquote>
+              <p><font face="Verdana, Arial, Helvetica, sans-serif" size="2"><b>Errors</b></font></p>
+              <blockquote> 
+                <p><font face="Courier New, Courier, mono" size="2"><em>Out of 
+                  memory generating PDF<br>
+                  </em></font><font face="Verdana, Arial, Helvetica, sans-serif" size="2">Memory 
+                  allocation error while generating the file. Is your system running 
+                  out of virtual memory?</font><br>
+                  &nbsp; <br>
+                  <font face="Courier New, Courier, mono" size="2"><em>Could not 
+                  include debug window<br>
+                  </em></font><font face="Verdana, Arial, Helvetica, sans-serif" size="2">The 
+                  Turbine Window could not be found.<br>
+                  &nbsp; <br>
+                  </font><font face="Courier New, Courier, mono" size="2"><em>Error 
+                  generating PDF</em></font><br>
+                  <font face="Verdana, Arial, Helvetica, sans-serif" size="2">There 
+                  was an error generating PDF.</font></p>
+              </blockquote>
+              <p><font face="Verdana, Arial, Helvetica, sans-serif" size="2"><b>Remarks</b></font></p>
+              <blockquote> 
+                <p><font size="2" face="Verdana, Arial, Helvetica, sans-serif">This 
+                  is a convenience command, equivalent of calling the command 
+                  Generate with &quot;pdf&quot; as its only argument.</font></p>
+              </blockquote>
+              <p>&nbsp;</p></td>
+          </tr>
+        </table>
+        <p>&nbsp;</p>
+        <table width="100%" border="0" cellspacing="0" cellpadding="16" bgcolor="#F0F0F0">
+          <tr valign="top"> 
+            <td> 
+              <p><font face="Verdana, Arial, Helvetica, sans-serif" size="4"><b><a name="getdatasetcolumncount" id="getdatasetcolumncount"></a>getDataSetColumnCount 
+                Command</b></font> </p>
+              <p><font face="Verdana, Arial, Helvetica, sans-serif" size="2"><b>Description</b></font> 
+              <blockquote> 
+                <p><font size="2" face="Verdana, Arial, Helvetica, sans-serif">Gets 
+                  the number of columns associated with a given DataSet.</font></p>
+              </blockquote>
+              <p><font face="Verdana, Arial, Helvetica, sans-serif" size="2"><b>Syntax</b></font> 
+              <blockquote> 
+                <p><font face="Verdana, Arial, Helvetica, sans-serif" size="2">$turbine-&gt;getDataSetColumnCount(&quot;dataSetName&quot;);</font></p>
+                <p><font face="Verdana, Arial, Helvetica, sans-serif" size="2"><u>dataSetName</u> 
+                  is the name of the DataSet to get the number of columns.</font></p>
+              </blockquote>
+              <p><font face="Verdana, Arial, Helvetica, sans-serif" size="2"><b>Return 
+                Values/Errors</b></font></p>
+              <blockquote> 
+                <p><font face="Verdana, Arial, Helvetica, sans-serif" size="2">Returns 
+                  the number of columns of the DataSet.<br>
+                  &nbsp; <br>
+                  </font><font face="Courier New, Courier, mono" size="2"><em>DataSet 
+                  not found<br>
+                  </em></font><font face="Verdana, Arial, Helvetica, sans-serif" size="2">The 
+                  given DataSet was not found.</font></p>
+              </blockquote>
+              <p>&nbsp;</p>
+              </td>
+          </tr>
+        </table>
+        <p>&nbsp;</p>
+        <table width="100%" border="0" cellspacing="0" cellpadding="16" bgcolor="#F0F0F0">
+          <tr valign="top"> 
+            <td> 
+              <p><font face="Verdana, Arial, Helvetica, sans-serif" size="4"><b><a name="getdatasetrowcount" id="getdatasetrowcount"></a>getDataSetRowCount 
+                Command</b></font> </p>
+              <p><font face="Verdana, Arial, Helvetica, sans-serif" size="2"><b>Description</b></font> 
+              <blockquote> 
+                <p><font size="2" face="Verdana, Arial, Helvetica, sans-serif">Gets 
+                  the number of rows associated with a given DataSet.</font></p>
+              </blockquote>
+              <p><font face="Verdana, Arial, Helvetica, sans-serif" size="2"><b>Syntax</b></font> 
+              <blockquote> 
+                <p><font face="Verdana, Arial, Helvetica, sans-serif" size="2">$turbine-&gt;getDataSetRowCount(&quot;dataSetName&quot;);</font></p>
+                <p><font face="Verdana, Arial, Helvetica, sans-serif" size="2"><u>dataSetName</u> 
+                  is the name of the DataSet to get the number of rows.</font></p>
+              </blockquote>
+              <p><font face="Verdana, Arial, Helvetica, sans-serif" size="2"><b>Return 
+                Values/Errors</b></font></p>
+              <blockquote> 
+                <p><font face="Verdana, Arial, Helvetica, sans-serif" size="2">Returns 
+                  the number of rows of the DataSet.<br>
+                  &nbsp; <br>
+                  </font><font face="Courier New, Courier, mono" size="2"><em>DataSet 
+                  not found<br>
+                  </em></font><font face="Verdana, Arial, Helvetica, sans-serif" size="2">The 
+                  given DataSet was not found.</font></p>
+              </blockquote>
+              <p>&nbsp;</p>
+              </td>
+          </tr>
+        </table>
+        <p>&nbsp;&nbsp; </p>
+        <table width="100%" border="0" cellspacing="0" cellpadding="16" bgcolor="#F0F0F0">
+          <tr valign="top"> 
+            <td> <p><font face="Verdana, Arial, Helvetica, sans-serif" size="4"><b><a name="getdatasetvalue" id="getdatasetvalue"></a>getDataSetValue 
+                Command</b></font> </p>
+              <p><font face="Verdana, Arial, Helvetica, sans-serif" size="2"><b>Description</b></font> 
+              <blockquote> 
+                <p><font size="2" face="Verdana, Arial, Helvetica, sans-serif">Fetches 
+                  the value of a DataSet cell at the given column and row.</font></p>
+              </blockquote>
+              <p><font face="Verdana, Arial, Helvetica, sans-serif" size="2"><b>Syntax</b></font> 
+              <blockquote> 
+                <p><font face="Verdana, Arial, Helvetica, sans-serif" size="2">$turbine-&gt;getDataSetValue(&quot;dataSetName&quot;, 
+                  &quot;columnName&quot;, rowNumber);</font></p>
+                <p><font face="Verdana, Arial, Helvetica, sans-serif" size="2"><u>dataSetName</u> 
+                  is the name of the DataSet to get the number of rows.<br>
+                  <u>columnName</u> is the name of the DataSet column where the 
+                  value is located.<br>
+                  <u>rowNumber</u> is the row number for the value.</font></p>
+              </blockquote>
+              <p><font face="Verdana, Arial, Helvetica, sans-serif" size="2"><b>Return 
+                Values/Errors</b></font></p>
+              <blockquote> 
+                <p><font face="Verdana, Arial, Helvetica, sans-serif" size="2">Returns 
+                  the value at the specified DataSet cell.<br>
+                  &nbsp; <br>
+                  </font><font face="Courier New, Courier, mono" size="2"><em>Could 
+                  not retrieve DataSet value<br>
+                  </em></font><font face="Verdana, Arial, Helvetica, sans-serif" size="2">The 
+                  DataSet does not exist or the specified cell is not defined.</font></p>
+              </blockquote>
+              <p>&nbsp;</p></td>
+          </tr>
+        </table>
+        <p>&nbsp; </p>
+        <table width="100%" border="0" cellspacing="0" cellpadding="16" bgcolor="#F0F0F0">
+          <tr valign="top"> 
+            <td height="448"> <p><font face="Verdana, Arial, Helvetica, sans-serif" size="4"><b><a name="httpget" id="httpget"></a>HTTPGet 
+                Command</b></font> </p>
+              <p><font face="Verdana, Arial, Helvetica, sans-serif" size="2"><b>Description</b></font> 
+              <blockquote> 
+                <p><font size="2" face="Verdana, Arial, Helvetica, sans-serif">Fetch 
+                  an HTTP URL and returns the result formatted as a String.</font></p>
+              </blockquote>
+              <p><font face="Verdana, Arial, Helvetica, sans-serif" size="2"><b>Syntax</b></font> 
+              <blockquote> 
+                <p><font face="Verdana, Arial, Helvetica, sans-serif" size="2">$turbine-&gt;HTTPGet(&quot;httpUrl&quot;);</font></p>
+                <p><font face="Verdana, Arial, Helvetica, sans-serif" size="2"><u>httpUrl</u> 
+                  might be an absolute(normal) HTTP URL or a relative (to the 
+                  current script). Relative URLs are in the form http://./relative_location</font></p>
+              </blockquote>
+              <p><font face="Verdana, Arial, Helvetica, sans-serif" size="2"><b>Return 
+                Values/Errors</b></font></p>
+              <blockquote> <font face="Verdana, Arial, Helvetica, sans-serif" size="2">Returns 
+                the result of the get in String format.<br>
+                &nbsp; <br>
+                </font><font face="Courier New, Courier, mono" size="2"><em>Could 
+                not access http URL</em></font><font face="Verdana, Arial, Helvetica, sans-serif" size="2"><br>
+                The URL is not available</font>.<br>
+                &nbsp; <br>
+                <font face="Courier New, Courier, mono" size="2"><em>The http 
+                URL has a bad format</em></font><br>
+                <font face="Verdana, Arial, Helvetica, sans-serif" size="2">Check 
+                the syntax of your URL.</font> </blockquote>
+              <p><font face="Verdana, Arial, Helvetica, sans-serif" size="2"><b>Remarks</b></font></p>
+              <blockquote> 
+                <p><font size="2" face="Verdana, Arial, Helvetica, sans-serif">Useful 
+                  to fetch HTML pages or CGI results from other servers.</font></p>
+              </blockquote>
+              <p>&nbsp;</p></td>
+          </tr>
+        </table>
+        <p>&nbsp;</p>
+        <table width="100%" border="0" cellspacing="0" cellpadding="16" bgcolor="#F0F0F0">
+          <tr valign="top"> 
+            <td> <p><font face="Verdana, Arial, Helvetica, sans-serif" size="4"><b><a name="ieoptimize" id="ieoptimize"></a>IEOptimize 
+                Command</b></font> </p>
+              <p><font face="Verdana, Arial, Helvetica, sans-serif" size="2"><b>Description</b></font> 
+              <blockquote> 
+                <p><font size="2" face="Verdana, Arial, Helvetica, sans-serif">Avoid 
+                  Internet Explorer multiple request problem. </font></p>
+              </blockquote>
+              <p><font face="Verdana, Arial, Helvetica, sans-serif" size="2"><b>Syntax</b></font> 
+              <blockquote> 
+                <p><font face="Verdana, Arial, Helvetica, sans-serif" size="2">$turbine-&gt;IEOptimize();</font></p>
+              </blockquote>
+              <p><font face="Verdana, Arial, Helvetica, sans-serif" size="2"><b>Errors</b></font></p>
+              <blockquote> 
+                <p><font face="Verdana, Arial, Helvetica, sans-serif" size="2">No 
+                  errors are raised by this command.</font></p>
+              </blockquote>
+              <p><font face="Verdana, Arial, Helvetica, sans-serif" size="2"><b>Remarks</b></font></p>
+              <blockquote> 
+                <p><font size="2" face="Verdana, Arial, Helvetica, sans-serif">Must 
+                  not be used on the same script as the GenerateHTMLFirst command.</font></p>
+              </blockquote>
+              <p>&nbsp;</p></td>
+          </tr>
+        </table>
+        <p>&nbsp;&nbsp;</p>
+        <table width="100%" border="0" cellspacing="0" cellpadding="16" bgcolor="#F0F0F0">
+          <tr valign="top"> 
+            <td> <p><font face="Verdana, Arial, Helvetica, sans-serif" size="4"><b><a name="include" id="include"></a>include 
+                Command</b></font> </p>
+              <p><font face="Verdana, Arial, Helvetica, sans-serif" size="2"><b>Description</b></font> 
+              <blockquote> 
+                <p><font size="2" face="Verdana, Arial, Helvetica, sans-serif">Includes 
+                  a media file into Turbine. The media file can be a Macromedia 
+                  Flash file or a MML file.</font></p>
+              </blockquote>
+              <p><font face="Verdana, Arial, Helvetica, sans-serif" size="2"><b>Syntax</b></font> 
+              <blockquote> 
+                <p><font face="Verdana, Arial, Helvetica, sans-serif" size="2">$turbine-&gt;include(&quot;location&quot;);</font></p>
+                <p><font face="Verdana, Arial, Helvetica, sans-serif" size="2"><u>location</u> 
+                  is an absolute or relative filename or a URI pointing to the 
+                  file to include.</font></p>
+              </blockquote>
+              <p><font face="Verdana, Arial, Helvetica, sans-serif" size="2"><b>Errors</b></font></p>
+              <blockquote> 
+                <p><font face="Courier New, Courier, mono" size="2"><em>Could 
+                  not access media or template<br>
+                  </em></font><font face="Verdana, Arial, Helvetica, sans-serif" size="2">The 
+                  location specified could not be found.</font><br>
+                  &nbsp; <br>
+                  <font face="Courier New, Courier, mono" size="2"><em>Could not 
+                  load media or template<br>
+                  </em></font><font face="Verdana, Arial, Helvetica, sans-serif" size="2">The 
+                  file was found but it could not be read.</font></p>
+              </blockquote>
+              <p><font face="Verdana, Arial, Helvetica, sans-serif" size="2"><b>Remarks</b></font></p>
+              <blockquote> 
+                <p><font size="2" face="Verdana, Arial, Helvetica, sans-serif">This 
+                  command includes the media but does not place its elements. 
+                  This is useful for including libraries of components for later 
+                  instantiation.</font></p>
+              </blockquote>
+              <p><font face="Verdana, Arial, Helvetica, sans-serif" size="2"><b>Equivalent 
+                MML</b></font></p>
+              <blockquote> 
+                <p><font size="2" face="Verdana, Arial, Helvetica, sans-serif">The 
+                  MML equivalent to this command is <a href="mmlreference.htm#include">&lt;Include&gt;</a></font></p>
+              </blockquote>
+              <p>&nbsp;</p></td>
+          </tr>
+        </table>
+        <p>&nbsp; </p>
+        <table width="100%" border="0" cellspacing="0" cellpadding="16" bgcolor="#F0F0F0">
+          <tr valign="top"> 
+            <td> 
+              <p><font face="Verdana, Arial, Helvetica, sans-serif" size="4"><b><a name="injectdata" id="injectdata"></a>injectData 
+                Command</b></font> </p>
+              <p><font face="Verdana, Arial, Helvetica, sans-serif" size="2"><b>Description</b></font> 
+              <blockquote> 
+                <p><font size="2" face="Verdana, Arial, Helvetica, sans-serif">Injects 
+                  data into an instance of a Flash component.</font></p>
+              </blockquote>
+              <p><font face="Verdana, Arial, Helvetica, sans-serif" size="2"><b>Syntax</b></font> 
+              <blockquote> 
+                <p><font face="Verdana, Arial, Helvetica, sans-serif" size="2">$turbine-&gt;injectData(&quot;dataSetName&quot;, 
+                  &quot;instanceName&quot; [, &quot;id&quot;]);</font></p>
+                <p><font face="Verdana, Arial, Helvetica, sans-serif" size="2"><u>dataSetName</u> 
+                  is the Turbine DataSet to inject into the Flash component.<br>
+                  <u>instanceName</u> is the instance of the Flash component into 
+                  which to inject data.<br>
+                  <u>id</u> is the id of the Flash component. It may be necessary 
+                  if Turbine can't figure out the id by the instanceName argument.</font></p>
+              </blockquote>
+              <p><font face="Verdana, Arial, Helvetica, sans-serif" size="2"><b>Errors</b></font></p>
+              <blockquote> 
+                <p><font face="Courier New, Courier, mono" size="2"><em>Out of 
+                  memory<br>
+                  </em></font><font face="Verdana, Arial, Helvetica, sans-serif" size="2">Memory 
+                  allocation error. Is your system running out of virtual memory?</font></p>
+              </blockquote>
+              <p><font face="Verdana, Arial, Helvetica, sans-serif" size="2"><b>Equivalent 
+                MML</b></font></p>
+              <blockquote> 
+                <p><font size="2" face="Verdana, Arial, Helvetica, sans-serif">The 
+                  MML equivalent to this command is <a href="mmlreference.htm#injectdata">&lt;InjectData&gt;</a></font></p>
+              </blockquote>
+              <p>&nbsp;</p>
+              </td>
+          </tr>
+        </table>
+        <p>&nbsp;</p>
+        <table width="100%" border="0" cellspacing="0" cellpadding="16" bgcolor="#F0F0F0">
+          <tr valign="top"> 
+            <td> <p><font face="Verdana, Arial, Helvetica, sans-serif" size="4"><b><a name="load" id="load"></a>load 
+                Command</b></font> </p>
+              <p><font face="Verdana, Arial, Helvetica, sans-serif" size="2"><b>Description</b></font> 
+              <blockquote> 
+                <p><font size="2" face="Verdana, Arial, Helvetica, sans-serif">Loads 
+                  a media file into Turbine. The media file can be a Macromedia 
+                  Flash .swf file or an MML file.</font></p>
+              </blockquote>
+              <p><font face="Verdana, Arial, Helvetica, sans-serif" size="2"><b>Syntax</b></font> 
+              <blockquote> 
+                <p><font face="Verdana, Arial, Helvetica, sans-serif" size="2">$turbine-&gt;load(&quot;location&quot; 
+                  [, &quot;instanceName&quot;]);</font></p>
+                <p><font face="Verdana, Arial, Helvetica, sans-serif" size="2"><u>location</u> 
+                  is an absolute or relative filename or a URI pointing to the 
+                  file to load.<br>
+                  <u>instanceName</u> is the name of the instance created inside 
+                  the media for later reference. By default, Turbine assumes an 
+                  unique name if no value is provided. </font></p>
+              </blockquote>
+              <p><font face="Verdana, Arial, Helvetica, sans-serif" size="2"><b>Errors</b></font></p>
+              <blockquote> 
+                <p><font face="Courier New, Courier, mono" size="2"><em>Could 
+                  not access media or template<br>
+                  </em></font><font face="Verdana, Arial, Helvetica, sans-serif" size="2">The 
+                  location specified could not be found.</font><br>
+                  &nbsp; <br>
+                  <font face="Courier New, Courier, mono" size="2"><em>Could not 
+                  load media or template<br>
+                  </em></font><font face="Verdana, Arial, Helvetica, sans-serif" size="2">The 
+                  file was found but it could not be read.</font></p>
+              </blockquote>
+              <p><font face="Verdana, Arial, Helvetica, sans-serif" size="2"><b>Remarks</b></font></p>
+              <blockquote> 
+                <p><font size="2" face="Verdana, Arial, Helvetica, sans-serif">This 
+                  command loads and displays the external media - it should be 
+                  used to load a single template file - to load multiple external 
+                  files it's preferable to use an MML block with a series of MML 
+                  &lt;MovieClip&gt; tags, which avoids any confusions with the 
+                  relative depths at which the loaded media appears.</font></p>
+              </blockquote>
+              <p><font face="Verdana, Arial, Helvetica, sans-serif" size="2"><b>Equivalent 
+                MML</b></font></p>
+              <blockquote> 
+                <p><font size="2" face="Verdana, Arial, Helvetica, sans-serif">The 
+                  MML equivalent to a <a href="mmlreference.htm#movieclip">&lt;MovieClip&gt;</a> 
+                  command with the <em>src</em> parameter.</font></p>
+              </blockquote>
+              <p>&nbsp;</p></td>
+          </tr>
+        </table>
+        <p>&nbsp;</p>
+        <table width="100%" border="0" cellspacing="0" cellpadding="16" bgcolor="#F0F0F0">
+          <tr valign="top"> 
+            <td> 
+              <p><font face="Verdana, Arial, Helvetica, sans-serif" size="4"><b><a name="loaddataset" id="loaddataset"></a>loadDataSet 
+                Command</b></font> </p>
+              <p><font face="Verdana, Arial, Helvetica, sans-serif" size="2"><b>Description</b></font> 
+              <blockquote> 
+                <p><font size="2" face="Verdana, Arial, Helvetica, sans-serif">Load 
+                  a Turbine DataSet from a local file or HTTP location.</font></p>
+              </blockquote>
+              <p><font face="Verdana, Arial, Helvetica, sans-serif" size="2"><b>Syntax</b></font> 
+              <blockquote> 
+                <p><font face="Verdana, Arial, Helvetica, sans-serif" size="2">$turbine-&gt;loadDataSet(&quot;location&quot;, 
+                  &quot;dataSetName&quot; [, &quot;rowTag&quot;, &quot;columnTags&quot;]);</font></p>
+                <p><font face="Verdana, Arial, Helvetica, sans-serif" size="2"><u>location</u> 
+                  is the absolute or relative local path, or HTTP location of 
+                  the file.<u><br>
+                  dataSetName</u> is the name of the Turbine DataSet to create.<br>
+                  <u>rowTag</u> is the name of the XML tag to use to start a new 
+                  DataSet Row - it must be a non empty tag, with other tags inside, 
+                  to be used for the rows.<br>
+                  <u>columnTags</u> is a comma separated list of tags and/or tag 
+                  parameters to use (once parsing inside a rowTag tag) to create 
+                  DataSet columns. Check remarks to see variations on using this 
+                  parameter.</font></p>
+              </blockquote>
+              <p><font face="Verdana, Arial, Helvetica, sans-serif" size="2"><b>Errors</b></font></p>
+              <blockquote> 
+                <p><font face="Courier New, Courier, mono" size="2"><em>Could 
+                  not access DataSet file<br>
+                  </em></font><font size="2" face="Verdana, Arial, Helvetica, sans-serif">The 
+                  location specified for the DataSet file can not be reached.</font><font face="Courier New, Courier, mono" size="2"><em><br>
+                  &nbsp; <br>
+                  DataSet file has bad format</em></font><font face="Verdana, Arial, Helvetica, sans-serif" size="2"><br>
+                  Check the contents of your file to make sure they are in the 
+                  right format</font>.<br>
+                  &nbsp; <br>
+                  <font face="Courier New, Courier, mono" size="2"><em>Could not 
+                  access DataSet XML file<br>
+                  </em></font><font size="2" face="Verdana, Arial, Helvetica, sans-serif">The 
+                  location specified for the XML file can not be reached</font>.<br>
+                  &nbsp; <br>
+                  <font face="Courier New, Courier, mono" size="2"><em>DataSet 
+                  XML file has bad format<br>
+                  </em></font><font face="Verdana, Arial, Helvetica, sans-serif" size="2">Check 
+                  the contents of your file to make sure they are in the right 
+                  format</font>.</p>
+              </blockquote>
+              <p><font face="Verdana, Arial, Helvetica, sans-serif" size="2"><b>Remarks</b></font></p>
+              <blockquote> 
+                <p><font size="2" face="Verdana, Arial, Helvetica, sans-serif">If 
+                  rowTag and columnTags parameters are defined then Turbine assumes 
+                  that the the file is XML formatted. It assumes the format of 
+                  DataSet file otherwise.</font></p>
+                <p><font size="2" face="Verdana, Arial, Helvetica, sans-serif">The 
+                  LoadDataSetFile and LoadXMLDataSetFile commands are still valid 
+                  although we recommend that you use the LoadDataSet command instead.</font></p>
+                <p><font size="2" face="Verdana, Arial, Helvetica, sans-serif">The 
+                  columnTag parameter can be specified in a few different ways 
+                  to allow different parsing of the XML document:</font></p>
+                <table border="1" cellspacing="0" cellpadding="4">
+                  <tr valign="top" bgcolor="#000000"> 
+                    <td width="26%"><font color="#FFFFFF" size="2" face="Verdana, Arial, Helvetica, sans-serif"><b>columnTags</b></font></td>
+                    <td width="74%"><font color="#FFFFFF" size="2" face="Verdana, Arial, Helvetica, sans-serif"><b>Effect</b></font></td>
+                  </tr>
+                  <tr valign="top" bgcolor="#FFFFFF"> 
+                    <td width="27%"><font face="Verdana, Arial, Helvetica, sans-serif" size="2">&quot;&quot; 
+                      <i>(empty)</i></font></td>
+                    <td width="73%"><font face="Verdana, Arial, Helvetica, sans-serif" size="2">The 
+                      text immediately after the start of each rowTag will be 
+                      used for the only column in the DataSet, this column will 
+                      be named after the rowTag name</font></td>
+                  </tr>
+                  <tr valign="top" bgcolor="#FFFFFF"> 
+                    <td width="27%"><font face="Verdana, Arial, Helvetica, sans-serif" size="2">&quot;tag1, 
+                      tag2, tag3,..&quot;.</font></td>
+                    <td width="73%"><font face="Verdana, Arial, Helvetica, sans-serif" size="2">The 
+                      DataSet will feature the specified columns, composed by 
+                      the text immediately inside each of these tags, for each 
+                      rowTag</font></td>
+                  </tr>
+                  <tr valign="top" bgcolor="#FFFFFF"> 
+                    <td width="27%"><font face="Verdana, Arial, Helvetica, sans-serif" size="2">&quot;tag1#<i>attr1</i>, 
+                      tag2#<i>attr</i>2&quot;</font></td>
+                    <td width="73%"> <p><font face="Verdana, Arial, Helvetica, sans-serif" size="2">Each 
+                        tag marked with an hash will contribute with the text 
+                        of the <i>attr1</i> or <i>attr2</i> attribute inside the 
+                        respective tag, for example:<br>
+                        &lt;tag1 attr1=&quot;some&quot;/&gt; &lt;tag2 attr2=&quot;times&quot;/&gt;<br>
+                        would use the text &quot;some&quot; and &quot;times&quot; 
+                        for successive columns inside the created DataSet. The 
+                        created DataSet columns would be called &quot;tag1#attr2&quot; 
+                        and &quot;tag2#attr2&quot;</font></p></td>
+                  </tr>
+                  <tr valign="top" bgcolor="#FFFFFF"> 
+                    <td width="27%"><font face="Verdana, Arial, Helvetica, sans-serif" size="2">&quot;tag1#attr1=alias1, 
+                      tag2#attr2=alias2&quot;</font></td>
+                    <td width="73%"><font face="Verdana, Arial, Helvetica, sans-serif" size="2">Just 
+                      like the above, but the columns will be defined on the DataSet 
+                      with the column name specified in <i>alias1</i> and <i>alias2</i>. 
+                      This is important for some commands that depend on column 
+                      names like the AutoImage or AutoMovieClip</font></td>
+                  </tr>
+                </table>
+                <p><font size="2" face="Verdana, Arial, Helvetica, sans-serif">XML 
+                  entity references like &amp;amp; and &amp;gt; will be accordingly 
+                  expanded on the read values.</font></p>
+              </blockquote>
+              <p><font face="Verdana, Arial, Helvetica, sans-serif" size="2"><b>Equivalent 
+                MML</b></font></p>
+              <blockquote> 
+                <p><font size="2" face="Verdana, Arial, Helvetica, sans-serif">The 
+                  MML equivalent to this command is <a href="mmlreference.htm#dataset">&lt;DataSet&gt;</a></font></p>
+              </blockquote>
+              <p>&nbsp;</p></td>
+          </tr>
+        </table>
+        <p>&nbsp;</p>
+        <table width="100%" border="0" cellspacing="0" cellpadding="16" bgcolor="#F0F0F0">
+          <tr valign="top"> 
+            <td> <p><font face="Verdana, Arial, Helvetica, sans-serif" size="4"><b><a name="loaddataset2" id="loaddataset2"></a>loadDataSet<font color="#0000FF">*</font> 
+                Function</b></font> </p>
+              <p><font face="Verdana, Arial, Helvetica, sans-serif" size="2"><b>Description</b></font> 
+              <blockquote> 
+                <p><font face="Verdana, Arial, Helvetica, sans-serif" size="2">Import 
+                  the results of a database query into a Turbine DataSet. Available 
+                  on the libraries/dataset_import.php library script.</font></p>
+              </blockquote>
+              <p><font face="Verdana, Arial, Helvetica, sans-serif" size="2"><b>Syntax</b></font> 
+              <blockquote> 
+                <p><font face="Verdana, Arial, Helvetica, sans-serif" size="2">$turbine-&gt;loadDataSet<font color="#0000FF">*</font>($turbine, 
+                  $recordSet, &quot;dataSet&quot;);</font></p>
+                <p><font size="3" face="Courier New, Courier, mono" color="#0000FF">*</font><font size="2" face="Verdana, Arial, Helvetica, sans-serif"> 
+                  is the database type - MySQL, ODBC, depending on the functions 
+                  defined on dataset_import.php<br>
+                  <u>$recordSet</u> contains the results of a query<br>
+                  <u>dataSet</u> is the name of the Data Set to define, </font></p>
+              </blockquote>
+              <p><font face="Verdana, Arial, Helvetica, sans-serif" size="2"><b>Errors</b></font></p>
+              <blockquote> 
+                <p><font face="Verdana, Arial, Helvetica, sans-serif" size="2">Using 
+                  this this command can cause the usual PHP row fetching errors.</font></p>
+              </blockquote>
+              <p><font face="Verdana, Arial, Helvetica, sans-serif" size="2"><b>Remarks</b></font></p>
+              <blockquote> 
+                <p><font face="Verdana, Arial, Helvetica, sans-serif" size="2">Fields 
+                  with a NULL value will translate to empty Data Set cells.</font></p>
+              </blockquote>
+              <p>&nbsp;</p></td>
+          </tr>
+        </table>
+        <p>&nbsp;</p>
+        <table width="100%" border="0" cellspacing="0" cellpadding="16" bgcolor="#F0F0F0">
+          <tr valign="top"> 
+            <td height="448"> <p><font face="Verdana, Arial, Helvetica, sans-serif" size="4"><b><a name="loadvar" id="loadvar"></a>loadVar 
+                Command</b></font> </p>
+              <p><font face="Verdana, Arial, Helvetica, sans-serif" size="2"><b>Description</b></font> 
+              <blockquote> 
+                <p><font size="2" face="Verdana, Arial, Helvetica, sans-serif">Load 
+                  Turbine variables from a local file or HTTP location.</font></p>
+              </blockquote>
+              <p><font face="Verdana, Arial, Helvetica, sans-serif" size="2"><b>Syntax</b></font> 
+              <blockquote> 
+                <p><font face="Verdana, Arial, Helvetica, sans-serif" size="2">$turbine-&gt;loadVar(&quot;location&quot;);</font></p>
+                <p><font face="Verdana, Arial, Helvetica, sans-serif" size="2"><u>location</u> 
+                  is an absolute or relative filename or a URI pointing to the 
+                  Variables file to load.</font></p>
+              </blockquote>
+              <p><font face="Verdana, Arial, Helvetica, sans-serif" size="2"><b>Errors</b></font></p>
+              <blockquote> 
+                <p><font face="Courier New, Courier, mono" size="2"><em>Could 
+                  not access variables file<br>
+                  </em></font><font face="Verdana, Arial, Helvetica, sans-serif" size="2">The 
+                  location specified could not be found.</font><br>
+                  &nbsp; <br>
+                  <font face="Courier New, Courier, mono" size="2"><em>Variables 
+                  file has bad format<br>
+                  </em></font><font face="Verdana, Arial, Helvetica, sans-serif" size="2">The 
+                  file was found but it could not be read. Check the syntax of 
+                  your Variable file.</font></p>
+              </blockquote>
+              <p><font face="Verdana, Arial, Helvetica, sans-serif" size="2"><b>Remarks</b></font></p>
+              <blockquote> 
+                <p><font size="2" face="Verdana, Arial, Helvetica, sans-serif">The 
+                  old command LoadVariableFile can still be used, but we recommend 
+                  that you use the LoadVar instead.</font></p>
+              </blockquote>
+              <p><font face="Verdana, Arial, Helvetica, sans-serif" size="2"><b>Equivalent 
+                MML</b></font></p>
+              <blockquote> 
+                <p><font size="2" face="Verdana, Arial, Helvetica, sans-serif">The 
+                  MML equivalent to this command is <a href="mmlreference.htm#var">&lt;Var&gt;</a></font></p>
+              </blockquote>
+              <p>&nbsp;</p></td>
+          </tr>
+        </table>
+        <p>&nbsp;</p>
+        <table width="100%" border="0" cellspacing="0" cellpadding="16" bgcolor="#F0F0F0">
+          <tr valign="top"> 
+            <td height="448"> <p><font face="Verdana, Arial, Helvetica, sans-serif" size="4"><b><a name="makedataset" id="makedataset"></a>makeDataSet 
+                Command</b></font> </p>
+              <p><font face="Verdana, Arial, Helvetica, sans-serif" size="2"><b>Description</b></font> 
+              <blockquote> 
+                <p><font size="2" face="Verdana, Arial, Helvetica, sans-serif">Initialize 
+                  a DataSet with the supplied columns.</font></p>
+              </blockquote>
+              <p><font face="Verdana, Arial, Helvetica, sans-serif" size="2"><b>Syntax</b></font> 
+              <blockquote> 
+                <p><font face="Verdana, Arial, Helvetica, sans-serif" size="2">$turbine-&gt;makeDataSet(&quot;dataSetName&quot;, 
+                  &quot;columns&quot;);</font></p>
+                <p><font face="Verdana, Arial, Helvetica, sans-serif" size="2"><u>dataSet</u> 
+                  is the name of the DataSet to define.<br>
+                  <u>columns</u> is a coma separated list of column names the 
+                  DataSet will have.</font></p>
+              </blockquote>
+              <p><font face="Verdana, Arial, Helvetica, sans-serif" size="2"><b>Errors</b></font></p>
+              <blockquote> 
+                <p><font face="Courier New, Courier, mono" size="2"><em>DataSetRow 
+                  parameter must be comma-separated</em></font><font face="Verdana, Arial, Helvetica, sans-serif" size="2"><br>
+                  The specified row must be a comma separated list of values.</font></p>
+              </blockquote>
+              <p><font face="Verdana, Arial, Helvetica, sans-serif" size="2"><b>Equivalent 
+                MML</b></font></p>
+              <blockquote> 
+                <p><font size="2" face="Verdana, Arial, Helvetica, sans-serif">The 
+                  MML equivalent to this command is <a href="mmlreference.htm#dataset">&lt;DataSet&gt;</a></font></p>
+              </blockquote>
+              <p>&nbsp;</p></td>
+          </tr>
+        </table>
+        <p>&nbsp;</p>
+        <table width="100%" border="0" cellspacing="0" cellpadding="16" bgcolor="#F0F0F0">
+          <tr valign="top"> 
+            <td> 
+              <p><font face="Verdana, Arial, Helvetica, sans-serif" size="4"><b><a name="publishvar" id="publishvar"></a>publishVar 
+                Command</b></font> </p>
+              <p><font face="Verdana, Arial, Helvetica, sans-serif" size="2"><b>Description</b></font> 
+              <blockquote> 
+                <p><font size="2" face="Verdana, Arial, Helvetica, sans-serif">Publishes 
+                  Turbine variables to Flash Action Script (AS).</font></p>
+              </blockquote>
+              <p><font face="Verdana, Arial, Helvetica, sans-serif" size="2"><b>Syntax</b></font> 
+              <blockquote> 
+                <p><font face="Verdana, Arial, Helvetica, sans-serif" size="2">$turbine-&gt;publishVar(&quot;varNames&quot; 
+                  [, &quot;toFormat&quot;, &quot;arrayName&quot;, &quot;instanceName&quot;]);</font></p>
+                <p><font face="Verdana, Arial, Helvetica, sans-serif" size="2"><u>varNames</u> 
+                  is a comma separated string with the names of the variables 
+                  to publish into AS.<br>
+                  <u>toFormat</u> is the AS variable type where the variables 
+                  are going to be published.<br>
+                  </font><font face="Verdana, Arial, Helvetica, sans-serif" size="2"><u>arrayName</u> 
+                  is the name given to the AS array.<u><br>
+                  instanceName</u> is the name of the instance created inside 
+                  the media in where the AS variables will be defined. By default, 
+                  Turbine assumes an unique name if no value is provided.</font></p>
+              </blockquote>
+              <p><font face="Verdana, Arial, Helvetica, sans-serif" size="2"><b>Errors</b></font></p>
+              <blockquote> 
+                <p><font face="Courier New, Courier, mono" size="2"><em>Out of 
+                  memory publishing variables</em></font><font face="Verdana, Arial, Helvetica, sans-serif" size="2"><br>
+                  Memory allocation error. Is your system running out of virtual 
+                  memory?</font></p>
+                <p><font face="Courier New, Courier, mono" size="2"><em>varNames 
+                  argument has bad format</em></font><font face="Verdana, Arial, Helvetica, sans-serif" size="2"><br>
+                  Check the syntax of param varNames.</font></p>
+              </blockquote>
+              <p><font face="Verdana, Arial, Helvetica, sans-serif" size="2"><b>Remarks</b></font></p>
+              <blockquote> 
+                <p><font face="Verdana, Arial, Helvetica, sans-serif" size="2">The 
+                  default behavior for this command (when only the first param 
+                  is provided) is publishing to AS variables with the same name 
+                  as the Turbine variables.</font></p>
+                <p><font size="2" face="Verdana, Arial, Helvetica, sans-serif">Variable 
+                  names which contain the characters '.' or '$' will be translated 
+                  to '_'.</font></p>
+                <p><font size="2" face="Verdana, Arial, Helvetica, sans-serif">The 
+                  ToFormat param can have the following values:</font></p>
+                <table border="1" cellspacing="0" cellpadding="4">
+                  <tr valign="top" bgcolor="#000000"> 
+                    <td width="27%"><font color="#FFFFFF" size="2" face="Verdana, Arial, Helvetica, sans-serif"><b>toFormat</b></font></td>
+                    <td width="74%"><font color="#FFFFFF" size="2" face="Verdana, Arial, Helvetica, sans-serif"><b>Effect</b></font></td>
+                  </tr>
+                  <tr valign="top" bgcolor="#FFFFFF"> 
+                    <td width="27%"><font face="Verdana, Arial, Helvetica, sans-serif" size="2">&quot;array&quot;</font></td>
+                    <td width="74%"><font face="Verdana, Arial, Helvetica, sans-serif" size="2">the 
+                      variables are published to an AS array. The first variable 
+                      will be placed in the first position of the array, the second 
+                      in the second position and so on.</font></td>
+                  </tr>
+                  <tr valign="top" bgcolor="#FFFFFF"> 
+                    <td width="27%"><font face="Verdana, Arial, Helvetica, sans-serif" size="2">&quot;namedArray&quot;</font></td>
+                    <td width="74%"><font face="Verdana, Arial, Helvetica, sans-serif" size="2"> 
+                      the variables are published to an AS named array, using 
+                      the original variable names as String indexes</font></td>
+                  </tr>
+                  <tr valign="top" bgcolor="#FFFFFF"> 
+                    <td width="27%"><font face="Verdana, Arial, Helvetica, sans-serif" size="2">&quot;&quot; 
+                      (<em>empty</em>)</font></td>
+                    <td width="74%"> <p><font face="Verdana, Arial, Helvetica, sans-serif" size="2">empty 
+                        string, means the variables are published individually 
+                        and will use their original names as AS variables</font></p></td>
+                  </tr>
+                </table>
+                <p><font size="2" face="Verdana, Arial, Helvetica, sans-serif">This 
+                  command is only useful for Flash output.</font></p>
+              </blockquote>
+              <p><font face="Verdana, Arial, Helvetica, sans-serif" size="2"><b>Equivalent 
+                MML</b></font></p>
+              <blockquote> 
+                <p><font size="2" face="Verdana, Arial, Helvetica, sans-serif">The 
+                  MML equivalent to this command is <a href="mmlreference.htm#publishvar">&lt;PublishVar&gt;</a></font></p>
+              </blockquote>
+              <p>&nbsp;</p></td>
+          </tr>
+        </table>
+        <p>&nbsp;</p>
+        <table width="100%" border="0" cellspacing="0" cellpadding="16" bgcolor="#F0F0F0">
+          <tr valign="top"> 
+            <td> 
+              <p><font face="Verdana, Arial, Helvetica, sans-serif" size="4"><b><a name="publishdataset" id="publishdataset"></a>publishDataSet 
+                Command</b></font> </p>
+              <p><font face="Verdana, Arial, Helvetica, sans-serif" size="2"><b>Description</b></font> 
+              <blockquote> 
+                <p><font size="2" face="Verdana, Arial, Helvetica, sans-serif">Publishes 
+                  a Turbine DataSet to a Flash Action Script (AS) array or named 
+                  array.</font></p>
+              </blockquote>
+              <p><font face="Verdana, Arial, Helvetica, sans-serif" size="2"><b>Syntax</b></font> 
+              <blockquote> 
+                <p><font face="Verdana, Arial, Helvetica, sans-serif" size="2">$turbine-&gt;publishDataSet(&quot;dataSetName&quot; 
+                  [, &quot;toFormat&quot;, &quot;arrayName&quot;, &quot;instanceName&quot;]);</font></p>
+                <p><font face="Verdana, Arial, Helvetica, sans-serif" size="2"><u>dataSetName</u> 
+                  is the Turbine DataSet to publish into AS.<br>
+                  <u>toFormat</u> is the AS type where the DataSet is going to 
+                  be published.<br>
+                  </font><font face="Verdana, Arial, Helvetica, sans-serif" size="2"><u>arrayName</u> 
+                  is the name given to the AS array.<br>
+                  <u>instanceName</u> is the name of the instance created inside 
+                  the media in where the AS variables will be defined. By default, 
+                  Turbine assumes an unique name if no value is provided.</font></p>
+              </blockquote>
+              <p><font face="Verdana, Arial, Helvetica, sans-serif" size="2"><b>Errors</b></font></p>
+              <blockquote> 
+                <p><font face="Courier New, Courier, mono" size="2"><em>Out of 
+                  memory publishing DataSet</em></font><font face="Verdana, Arial, Helvetica, sans-serif" size="2"><br>
+                  Memory allocation error. Is your system running out of virtual 
+                  memory?</font></p>
+                <p><font face="Courier New, Courier, mono" size="2"><em>DataSet 
+                  not found</em></font><font face="Verdana, Arial, Helvetica, sans-serif" size="2"><br>
+                  The DataSet provided wasn't found.</font></p>
+                <p><font face="Courier New, Courier, mono" size="2"><em>Error 
+                  publishing DataSet</em></font><font face="Verdana, Arial, Helvetica, sans-serif" size="2"><br>
+                  There was a generic error when trying to publish.</font></p>
+              </blockquote>
+              <p><font face="Verdana, Arial, Helvetica, sans-serif" size="2"><b>Remarks</b></font></p>
+              <blockquote> 
+                <p><font face="Verdana, Arial, Helvetica, sans-serif" size="2">The 
+                  default behavior for this command (when only the first param 
+                  is provided) is publishing to individual AS variables.</font></p>
+                <p><font size="2" face="Verdana, Arial, Helvetica, sans-serif">The 
+                  ToFormat param can have the following values:</font></p>
+                <table border="1" cellspacing="0" cellpadding="4">
+                  <tr valign="top" bgcolor="#000000"> 
+                    <td width="27%"><font color="#FFFFFF" size="2" face="Verdana, Arial, Helvetica, sans-serif"><b>toFormat</b></font></td>
+                    <td width="74%"><font color="#FFFFFF" size="2" face="Verdana, Arial, Helvetica, sans-serif"><b>Effect</b></font></td>
+                  </tr>
+                  <tr valign="top" bgcolor="#FFFFFF"> 
+                    <td width="27%"><font face="Verdana, Arial, Helvetica, sans-serif" size="2">&quot;array&quot;</font></td>
+                    <td width="74%"><font face="Verdana, Arial, Helvetica, sans-serif" size="2">the 
+                      DataSet is published to an AS bi dimensional array, mapping 
+                      each row and column of the DataSet to the same row and column 
+                      of the array</font></td>
+                  </tr>
+                  <tr valign="top" bgcolor="#FFFFFF"> 
+                    <td width="27%"><font face="Verdana, Arial, Helvetica, sans-serif" size="2">&quot;namedArray&quot;</font></td>
+                    <td width="74%"><font face="Verdana, Arial, Helvetica, sans-serif" size="2"> 
+                      identical to the previous format, except that the column 
+                      names of the DataSet will be used as one index for the AS 
+                      named array</font></td>
+                  </tr>
+                  <tr valign="top" bgcolor="#FFFFFF"> 
+                    <td width="27%"><font face="Verdana, Arial, Helvetica, sans-serif" size="2">&quot;&quot; 
+                      (<em>empty</em>)</font></td>
+                    <td width="74%"> <p><font face="Verdana, Arial, Helvetica, sans-serif" size="2">empty 
+                        string, means the DataSet is published to individual AS 
+                        variables using the syntax 'dataSetName_ColumnName_RowNumber'</font></p></td>
+                  </tr>
+                </table>
+                <p><font size="2" face="Verdana, Arial, Helvetica, sans-serif">This 
+                  command is only useful for Flash output.</font></p>
+              </blockquote>
+              <p><font face="Verdana, Arial, Helvetica, sans-serif" size="2"><b>Equivalent 
+                MML</b></font></p>
+              <blockquote> 
+                <p><font size="2" face="Verdana, Arial, Helvetica, sans-serif">The 
+                  MML equivalent to this command is <a href="mmlreference.htm#publishdataset">&lt;PublishDataSet&gt;</a></font></p>
+              </blockquote>
+              <p>&nbsp;</p></td>
+          </tr>
+        </table>
+        <p>&nbsp;</p>
+        <table width="100%" border="0" cellspacing="0" cellpadding="16" bgcolor="#F0F0F0">
+          <tr valign="top"> 
+            <td> 
+              <p><font face="Verdana, Arial, Helvetica, sans-serif" size="4"><b><a name="reset" id="reset"></a>reset 
+                Command</b></font> </p>
+              <p><font face="Verdana, Arial, Helvetica, sans-serif" size="2"><b>Description</b></font> 
+              <blockquote> 
+                <p><font size="2" face="Verdana, Arial, Helvetica, sans-serif">Clears 
+                  the memory of Turbine which causes the associated media to also 
+                  be cleared. Usually this command is used when generating several 
+                  files to disk where you must clear the previous media before 
+                  starting the new one.</font></p>
+              </blockquote>
+              <p><font face="Verdana, Arial, Helvetica, sans-serif" size="2"><b>Syntax</b></font> 
+              <blockquote> 
+                <p><font face="Verdana, Arial, Helvetica, sans-serif" size="2">$turbine-&gt;reset();</font></p>
+              </blockquote>
+              <p><font face="Verdana, Arial, Helvetica, sans-serif" size="2"><b>Errors</b></font></p>
+              <blockquote> <font face="Verdana, Arial, Helvetica, sans-serif" size="2">No 
+                errors are raised by this command.</font></blockquote>
+              <p>&nbsp;</p>
+              </td>
+          </tr>
+        </table>
+        <p>&nbsp;</p>
+        <table width="100%" border="0" cellspacing="0" cellpadding="16" bgcolor="#F0F0F0">
+          <tr valign="top"> 
+            <td> 
+              <p><font face="Verdana, Arial, Helvetica, sans-serif" size="4"><b><a name="script" id="script"></a>script 
+                Command</b></font> </p>
+              <p><font face="Verdana, Arial, Helvetica, sans-serif" size="2"><b>Description</b></font> 
+              <blockquote> 
+                <p><font size="2" face="Verdana, Arial, Helvetica, sans-serif">Compiles 
+                  a Flash Action Script (ECMA-262 Script or JavaScript language) 
+                  block.</font></p>
+              </blockquote>
+              <p><font face="Verdana, Arial, Helvetica, sans-serif" size="2"><b>Syntax</b></font> 
+              <blockquote> 
+                <p><font face="Verdana, Arial, Helvetica, sans-serif" size="2">$turbine-&gt;script(&quot;script&quot;);</font></p>
+                <p><font face="Verdana, Arial, Helvetica, sans-serif" size="2"><u>script</u> 
+                  is the Flash AS to insert into Turbine.</font></p>
+              </blockquote>
+              <p><font face="Verdana, Arial, Helvetica, sans-serif" size="2"><b>Errors</b></font></p>
+              <blockquote> 
+                <p><font face="Verdana, Arial, Helvetica, sans-serif" size="2"> 
+                  </font><font face="Courier New, Courier, mono" size="2"><em>Out 
+                  of memory<br>
+                  </em></font><font face="Verdana, Arial, Helvetica, sans-serif" size="2">Memory 
+                  allocation error. Is your system running out of virtual memory?</font></p>
+                <p><font face="Courier New, Courier, mono" size="2"><em>Script 
+                  compilation error</em></font><font face="Verdana, Arial, Helvetica, sans-serif" size="2"><br>
+                  The script did not compile because it has syntactic errors.</font></p>
+              </blockquote>
+              <p><font face="Verdana, Arial, Helvetica, sans-serif" size="2"><b>Remarks</b></font></p>
+              <blockquote> 
+                <p><font size="2" face="Verdana, Arial, Helvetica, sans-serif">Accepts 
+                  scripts compatible with Flash MX scripting.</font></p>
+              </blockquote>
+              <p><font face="Verdana, Arial, Helvetica, sans-serif" size="2"><b>Equivalent 
+                MML</b></font></p>
+              <blockquote> 
+                <p><font size="2" face="Verdana, Arial, Helvetica, sans-serif">The 
+                  MML equivalent to this command is <a href="mmlreference.htm#script">&lt;Script&gt;</a></font></p>
+              </blockquote>
+              <p>&nbsp;</p></td>
+          </tr>
+        </table>
+        <p>&nbsp;</p>
+        <table width="100%" border="0" cellspacing="0" cellpadding="16" bgcolor="#F0F0F0">
+          <tr valign="top"> 
+            <td> 
+              <p><font face="Verdana, Arial, Helvetica, sans-serif" size="4"><b><a name="servecached" id="servecached"></a>serveCached 
+                Command</b></font> </p>
+              <p><font face="Verdana, Arial, Helvetica, sans-serif" size="2"><b>Description</b></font> 
+              <blockquote> 
+                <p><font size="2" face="Verdana, Arial, Helvetica, sans-serif">Serve 
+                  media cached with the given reference.</font></p>
+              </blockquote>
+              <p><font face="Verdana, Arial, Helvetica, sans-serif" size="2"><b>Syntax</b></font> 
+              <blockquote> 
+                <p><font face="Verdana, Arial, Helvetica, sans-serif" size="2">$turbine-&gt;serveCached(&quot;reference&quot; 
+                  [, &quot;mediaType&quot;]);</font></p>
+                <p><font face="Verdana, Arial, Helvetica, sans-serif" size="2"><u>reference</u> 
+                  is the unique id for the cached movie. The movie must have been 
+                  cached by the Turbine.CacheMovie command.<br>
+                  <u>mediaType</u> is the media format outputted by Turbine. Currently 
+                  &quot;flash&quot; for Macromedia Flash and &quot;pdf&quot; for 
+                  Adobe PDF are available. The default value is &quot;flash&quot; 
+                  if not provided.</font><u></u></p>
+              </blockquote>
+              <p><font face="Verdana, Arial, Helvetica, sans-serif" size="2"><b>Return 
+                Values/Errors</b></font></p>
+              <blockquote> <font face="Verdana, Arial, Helvetica, sans-serif" size="2">Returns 
+                true if the media was served from the cache, false if no valid 
+                media was found on the cache or if an error occurred.<br>
+                &nbsp; <br>
+                </font><font face="Courier New, Courier, mono" size="2"><em>Error 
+                serving media</em></font><font face="Verdana, Arial, Helvetica, sans-serif" size="2"><br>
+                An error occurred when serving the media</font><font face="Verdana, Arial, Helvetica, sans-serif" size="2">.</font></blockquote>
+              <p>&nbsp;</p>
+              </td>
+          </tr>
+        </table>
+        <p>&nbsp;</p>
+        <table width="100%" border="0" cellspacing="0" cellpadding="16" bgcolor="#eeeeee">
+          <tr valign="top"> 
+            <td> <p><font face="Verdana, Arial, Helvetica, sans-serif" size="4"><b><a name="variable" id="variable"></a>setVariable/setVar 
+                Command</b></font></p>
+              <p><font face="Verdana, Arial, Helvetica, sans-serif" size="2"><b>Description</b></font> 
+              <blockquote> 
+                <p><font face="Verdana, Arial, Helvetica, sans-serif" size="2">Sets/gets 
+                  a Turbine variable. </font></p>
+              </blockquote>
+              <p><font face="Verdana, Arial, Helvetica, sans-serif" size="2"><b>Syntax</b></font> 
+              <blockquote> 
+                <p><font face="Verdana, Arial, Helvetica, sans-serif" size="2">$turbine-&gt;setVariable(&quot;name&quot;, 
+                  value);<br>
+                  $turbine-&gt;setVar(&quot;name&quot;, value);</font></p>
+                <p><font face="Verdana, Arial, Helvetica, sans-serif" size="2"><u>name</u> 
+                  is the name of the Turbine variable to set/get.<br>
+                  <u>value</u> is the value to set.</font></p>
+              </blockquote>
+              <p><font face="Verdana, Arial, Helvetica, sans-serif" size="2"><b>Errors</b></font></p>
+              <blockquote> 
+                <p><font face="Courier New, Courier, mono" size="2"><em>Variable 
+                  name is too big<br>
+                  </em></font><font face="Verdana, Arial, Helvetica, sans-serif" size="2">The 
+                  variable name is too long. Use a shorter name.</font><font face="Courier New, Courier, mono" size="2"><em><br>
+                  &nbsp; <br>
+                  Could not set value</em></font><br>
+                  <font face="Verdana, Arial, Helvetica, sans-serif" size="2">An 
+                  error occurred when setting the value.</font></p>
+              </blockquote>
+              <p>&nbsp;</p>
+              </td>
+          </tr>
+        </table>
+        <p>&nbsp;</p>
+        <table width="100%" border="0" cellspacing="0" cellpadding="16" bgcolor="#F0F0F0">
+          <tr valign="top"> 
+            <td> <p><font face="Verdana, Arial, Helvetica, sans-serif" size="4"><b><a name="showframe" id="showframe"></a>showFrame 
+                Command</b></font> </p>
+              <p><font face="Verdana, Arial, Helvetica, sans-serif" size="2"><b>Description</b></font> 
+              <blockquote> 
+                <p><font size="2" face="Verdana, Arial, Helvetica, sans-serif">Causes 
+                  Turbine to display the current frame and start a new one.</font></p>
+              </blockquote>
+              <p><font face="Verdana, Arial, Helvetica, sans-serif" size="2"><b>Syntax</b></font> 
+              <blockquote> 
+                <p><font face="Verdana, Arial, Helvetica, sans-serif" size="2">$turbine-&gt;showFrame([&quot;numFrames&quot;]);</font></p>
+                <p><font face="Verdana, Arial, Helvetica, sans-serif" size="2"><u>numFrames</u> 
+                  is the number of frames to show, by default 1.</font></p>
+              </blockquote>
+              <p><font face="Verdana, Arial, Helvetica, sans-serif" size="2"><b>Errors</b></font></p>
+              <blockquote> <font face="Verdana, Arial, Helvetica, sans-serif" size="2"> 
+                No errors are raised by this command</font><em><font size="2" face="Courier New, Courier, mono">.</font></em></blockquote>
+              <p><font face="Verdana, Arial, Helvetica, sans-serif" size="2"><b>Remarks</b></font></p>
+              <blockquote> 
+                <p><font size="2" face="Verdana, Arial, Helvetica, sans-serif">Frames 
+                  are translated to PDF pages, so this command will add a new 
+                  page when outputting to PDF format.</font></p>
+              </blockquote>
+              <p>&nbsp;</p></td>
+          </tr>
+        </table>
+        <p>&nbsp;</p>
+        <hr size="1" noshade>
+        <p><font face="Arial, Helvetica, sans-serif" size="5"><a name="propertylist" id="propertylist"></a>Properties</font></p>
+        <p><font size="2" face="Verdana, Arial, Helvetica, sans-serif">The following 
+          functions get and set Turbine properties:</font></p>
+        <table width="40%" border="0" cellpadding="6" cellspacing="0" bgcolor="#eeeeee">
+          <tr valign="top"> 
+            <td width="100%"> <ul>
+                <li><strong><font size="2" face="Verdana, Arial, Helvetica, sans-serif"><a href="#basedirectory">baseDirectory</a></font></strong></li>
+                <li><strong><font size="2" face="Verdana, Arial, Helvetica, sans-serif"><a href="#bindirectory">binDirectory</a></font></strong></li>
+                <li><strong><font size="2" face="Verdana, Arial, Helvetica, sans-serif"><a href="#color">color</a></font></strong></li>
+                <li><strong><font size="2" face="Verdana, Arial, Helvetica, sans-serif"><a href="#compress">compress</a></font></strong></li>
+                <li><strong><font size="2" face="Verdana, Arial, Helvetica, sans-serif"> 
+                  </font></strong><strong><font size="2" face="Verdana, Arial, Helvetica, sans-serif"><a href="#debug">debug</a></font></strong></li>
+                <li><strong><font size="2" face="Verdana, Arial, Helvetica, sans-serif"><a href="#flashversion">flashVersion</a></font></strong></li>
+                <li><strong><font size="2" face="Verdana, Arial, Helvetica, sans-serif"><a href="#frame">frame</a></font></strong></li>
+                <li><strong><font size="2" face="Verdana, Arial, Helvetica, sans-serif"><a href="#framerate">frameRate</a></font></strong></li>
+                <li><strong><font size="2" face="Verdana, Arial, Helvetica, sans-serif"><a href="#height">height</a></font></strong></li>
+                <li><strong><font size="2" face="Verdana, Arial, Helvetica, sans-serif"><a href="#info">info</a></font></strong></li>
+                <li><strong><font size="2" face="Verdana, Arial, Helvetica, sans-serif"><a href="#log">log</a></font></strong></li>
+                <li><strong><font size="2" face="Verdana, Arial, Helvetica, sans-serif"><a href="#logto">logTo</a></font></strong></li>
+                <li><strong><font size="2" face="Verdana, Arial, Helvetica, sans-serif"><a href="#numframes">numFrames</a></font></strong></li>
+                <li><strong><font size="2" face="Verdana, Arial, Helvetica, sans-serif"><a href="#pdfownerpassword">pdfOwnerPassword</a></font></strong></li>
+                <li><strong><font size="2" face="Verdana, Arial, Helvetica, sans-serif"><a href="#pdfpermissions">pdfPermissions</a></font></strong></li>
+                <li><strong><font size="2" face="Verdana, Arial, Helvetica, sans-serif"><a href="#pdfuserpassword">pdfUserPassword</a></font></strong></li>
+                <li><strong><font size="2" face="Verdana, Arial, Helvetica, sans-serif"><a href="#pdfversion">pdfVersion</a></font></strong></li>
+                <li><strong><font size="2" face="Verdana, Arial, Helvetica, sans-serif"><a href="#protect">protect</a></font></strong></li>
+                <li><strong><font size="2" face="Verdana, Arial, Helvetica, sans-serif"><a href="#version">version</a></font></strong></li>
+                <li><strong><font size="2" face="Verdana, Arial, Helvetica, sans-serif"><a href="#width">width</a></font></strong><br>
+                </li>
+              </ul></td>
+          </tr>
+        </table>
+        <p>&nbsp;</p>
+        <p>&nbsp;</p>
+        <table width="100%" border="0" cellspacing="0" cellpadding="16" bgcolor="#eeeeee">
+          <tr valign="top"> 
+            <td> <p><font face="Verdana, Arial, Helvetica, sans-serif" size="4"><b><a name="basedirectory" id="basedirectory"></a>baseDirectory 
+                Property </b></font></p>
+              <p><font face="Verdana, Arial, Helvetica, sans-serif" size="2"><b>Description</b></font> 
+              <blockquote> 
+                <p><font face="Verdana, Arial, Helvetica, sans-serif" size="2">Gets 
+                  the baseDirectory which is the location of the PHP script, which 
+                  serves as a base for any relative file locations.</font></p>
+              </blockquote>
+              <p><font face="Verdana, Arial, Helvetica, sans-serif" size="2"><b>Syntax</b></font> 
+              <blockquote> 
+                <p><font face="Verdana, Arial, Helvetica, sans-serif" size="2">$baseDir 
+                  = $turbine-&gt;baseDirectory();</font></p>
+              </blockquote>
+              <p><font face="Verdana, Arial, Helvetica, sans-serif" size="2"><b>Errors</b></font></p>
+              <blockquote> 
+                <p><font face="Verdana, Arial, Helvetica, sans-serif" size="2">This 
+                  property raises no trappable errors.</font></p>
+              </blockquote>
+              <p>&nbsp;</p>
+              </td>
+          </tr>
+        </table>
+        <p>&nbsp;</p>
+        <table width="100%" border="0" cellspacing="0" cellpadding="16" bgcolor="#eeeeee">
+          <tr valign="top"> 
+            <td> <p><font face="Verdana, Arial, Helvetica, sans-serif" size="4"><b><a name="bindirectory" id="bindirectory"></a>binDirectory 
+                Property </b></font></p>
+              <p><font face="Verdana, Arial, Helvetica, sans-serif" size="2"><b>Description</b></font> 
+              <blockquote> 
+                <p><font face="Verdana, Arial, Helvetica, sans-serif" size="2">Gets 
+                  the binDirectory which is the directory where Turbine is installed 
+                  and where the configuration files are located.</font></p>
+              </blockquote>
+              <p><font face="Verdana, Arial, Helvetica, sans-serif" size="2"><b>Syntax</b></font> 
+              <blockquote> 
+                <p><font face="Verdana, Arial, Helvetica, sans-serif" size="2">$binDir 
+                  = $turbine-&gt;binDirectory();</font></p>
+              </blockquote>
+              <p><font face="Verdana, Arial, Helvetica, sans-serif" size="2"><b>Errors</b></font></p>
+              <blockquote> 
+                <p><font face="Verdana, Arial, Helvetica, sans-serif" size="2">This 
+                  property raises no trappable errors.</font></p>
+              </blockquote>
+              <p>&nbsp;</p>
+              </td>
+          </tr>
+        </table>
+        <p>&nbsp;</p>
+        <table width="100%" border="0" cellspacing="0" cellpadding="16" bgcolor="#eeeeee">
+          <tr valign="top"> 
+            <td> <p><font face="Verdana, Arial, Helvetica, sans-serif" size="4"><b><a name="color" id="color"></a>color 
+                Property </b></font></p>
+              <p><font face="Verdana, Arial, Helvetica, sans-serif" size="2"><b>Description</b></font> 
+              <blockquote> 
+                <p><font face="Verdana, Arial, Helvetica, sans-serif" size="2">Sets/gets 
+                  the current background color of the media.</font></p>
+              </blockquote>
+              <p><font face="Verdana, Arial, Helvetica, sans-serif" size="2"><b>Syntax</b></font> 
+              <blockquote> 
+                <p><font face="Verdana, Arial, Helvetica, sans-serif" size="2"> 
+                  $turbine-&gt;color(&quot;#RRGGBB&quot;);<br>
+                  $backgroundColor&nbsp;=&nbsp;$turbine-&gt;color(); </font></p>
+                <p><font face="Verdana, Arial, Helvetica, sans-serif" size="2"><u>color</u> 
+                  is a string representing the background color of the media with 
+                  the format #RRGGBB.</font></p>
+              </blockquote>
+              <p><font face="Verdana, Arial, Helvetica, sans-serif" size="2"><b>Errors</b></font></p>
+              <blockquote>
+                <p><font face="Courier New, Courier, mono" size="2"><em>Could 
+                  not set value</em></font><br>
+                  <font face="Verdana, Arial, Helvetica, sans-serif" size="2">An 
+                  error occurred when setting the value.</font></p>
+              </blockquote>
+              <p>&nbsp;</p>
+              </td>
+          </tr>
+        </table>
+        <p>&nbsp;</p>
+        <table width="100%" border="0" cellspacing="0" cellpadding="16" bgcolor="#eeeeee">
+          <tr valign="top"> 
+            <td> <p><font face="Verdana, Arial, Helvetica, sans-serif" size="4"><b><a name="compress" id="compress"></a>compress 
+                Property </b></font></p>
+              <p><font face="Verdana, Arial, Helvetica, sans-serif" size="2"><b>Description</b></font> 
+              <blockquote> 
+                <p><font face="Verdana, Arial, Helvetica, sans-serif" size="2">Sets/gets 
+                  the compression rate of the output media. </font></p>
+              </blockquote>
+              <p><font face="Verdana, Arial, Helvetica, sans-serif" size="2"><b>Syntax</b></font> 
+              <blockquote> 
+                <p><font face="Verdana, Arial, Helvetica, sans-serif" size="2">$turbine-&gt;compress($level);<br>
+                  $level = $turbine-&gt;compress();</font></p>
+                <p><font face="Verdana, Arial, Helvetica, sans-serif" size="2"><u>compress</u> 
+                  is the compress rate of the output media. A value of 0 means 
+                  that compression is switched off and a value of 9 means that 
+                  the media will be highly compressed.</font></p>
+              </blockquote>
+              <p><font face="Verdana, Arial, Helvetica, sans-serif" size="2"><b>Errors</b></font></p>
+              <blockquote>
+                <p><font face="Courier New, Courier, mono" size="2"><em>Could 
+                  not set value</em></font><br>
+                  <font face="Verdana, Arial, Helvetica, sans-serif" size="2">An 
+                  error occurred when setting the value.</font></p>
+              </blockquote>
+              <p>&nbsp;</p>
+              </td>
+          </tr>
+        </table>
+        <p>&nbsp;</p>
+        <table width="100%" border="0" cellspacing="0" cellpadding="16" bgcolor="#eeeeee">
+          <tr valign="top"> 
+            <td> <p><font face="Verdana, Arial, Helvetica, sans-serif" size="4"><b><a name="debug" id="debug"></a>debug 
+                Property </b></font></p>
+              <p><font face="Verdana, Arial, Helvetica, sans-serif" size="2"><b>Description</b></font> 
+              <blockquote> 
+                <p><font face="Verdana, Arial, Helvetica, sans-serif" size="2">Shows/hides 
+                  the Turbine Window for debugging and logging. </font></p>
+              </blockquote>
+              <p><font face="Verdana, Arial, Helvetica, sans-serif" size="2"><b>Syntax</b></font> 
+              <blockquote> 
+                <p><font face="Verdana, Arial, Helvetica, sans-serif" size="2">$turbine-&gt;debug($debugSetting);<br>
+                  $debugSetting = $turbine-&gt;debug();</font></p>
+                <p><font face="Verdana, Arial, Helvetica, sans-serif" size="2"><u>debug</u> 
+                  set to true means that the Turbine Window will be shown.</font></p>
+              </blockquote>
+              <p><font face="Verdana, Arial, Helvetica, sans-serif" size="2"><b>Errors</b></font></p>
+              <blockquote> 
+                <p><font face="Courier New, Courier, mono" size="2"><em>Could 
+                  not set value</em></font><br>
+                  <font face="Verdana, Arial, Helvetica, sans-serif" size="2">An 
+                  error occurred when setting the value.</font></p>
+              </blockquote>
+              <p>&nbsp;</p>
+              </td>
+          </tr>
+        </table>
+        <p>&nbsp;</p>
+        <table width="100%" border="0" cellspacing="0" cellpadding="16" bgcolor="#eeeeee">
+          <tr valign="top"> 
+            <td> <p><font face="Verdana, Arial, Helvetica, sans-serif" size="4"><b><a name="flashversion" id="flashversion"></a>flashVersion 
+                Property </b></font></p>
+              <p><font face="Verdana, Arial, Helvetica, sans-serif" size="2"><b>Description</b></font> 
+              <blockquote> 
+                <p><font face="Verdana, Arial, Helvetica, sans-serif" size="2">Sets/gets 
+                  the Flash version of the generated movie.</font></p>
+              </blockquote>
+              <p><font face="Verdana, Arial, Helvetica, sans-serif" size="2"><b>Syntax</b></font> 
+              <blockquote> 
+                <p><font face="Verdana, Arial, Helvetica, sans-serif" size="2">$turbine-&gt;flashVersion(&quot;version&quot;);<br>
+                  $version = $turbine-&gt;flashVersion();</font></p>
+                <p><font face="Verdana, Arial, Helvetica, sans-serif" size="2"><u>version</u> 
+                  is the numeric version of the output Flash.</font></p>
+              </blockquote>
+              <p><font face="Verdana, Arial, Helvetica, sans-serif" size="2"><b>Errors</b></font></p>
+              <blockquote> 
+                <p><font face="Courier New, Courier, mono" size="2"><em>Could 
+                  not set variable</em></font><br>
+                  <font face="Verdana, Arial, Helvetica, sans-serif" size="2">An 
+                  error occurred when setting the value.</font></p>
+              </blockquote>
+              <p><font face="Verdana, Arial, Helvetica, sans-serif" size="2"><b>Remarks</b></font></p>
+              <blockquote> 
+                <p><font face="Verdana, Arial, Helvetica, sans-serif" size="2">Useful 
+                  when one wishes to generate Flash with a specific version. For 
+                  instance, $turbine-&gt;flashVersion(&quot;6&quot;), makes Turbine 
+                  output Flash MX.</font></p>
+              </blockquote>
+              <p>&nbsp;</p></td>
+          </tr>
+        </table>
+        <p>&nbsp;</p>
+        <table width="100%" border="0" cellspacing="0" cellpadding="16" bgcolor="#eeeeee">
+          <tr valign="top"> 
+            <td> <p><font face="Verdana, Arial, Helvetica, sans-serif" size="4"><b><a name="frame" id="frame"></a>frame 
+                Property </b></font></p>
+              <p><font face="Verdana, Arial, Helvetica, sans-serif" size="2"><b>Description</b></font> 
+              <blockquote> 
+                <p><font face="Verdana, Arial, Helvetica, sans-serif" size="2">Gets 
+                  or sets the current Flash movie frame or PDF page.</font></p>
+              </blockquote>
+              <p><font face="Verdana, Arial, Helvetica, sans-serif" size="2"><b>Syntax</b></font> 
+              <blockquote> 
+                <p><font face="Verdana, Arial, Helvetica, sans-serif" size="2">$turbine-&gt;frame($frameNum);<br>
+                  $frameNum = $turbine-&gt;frame();</font></p>
+                <p><font face="Verdana, Arial, Helvetica, sans-serif" size="2"><u>frameNum</u> 
+                  is the zero-based current frame number.</font></p>
+              </blockquote>
+              <p><font face="Verdana, Arial, Helvetica, sans-serif" size="2"><b>Errors</b></font></p>
+              <blockquote> 
+                <p><font face="Verdana, Arial, Helvetica, sans-serif" size="2">This 
+                  property raises no trappable errors.</font></p>
+              </blockquote>
+              <p><font face="Verdana, Arial, Helvetica, sans-serif" size="2"><b>Remarks</b></font></p>
+              <blockquote> 
+                <p><font size="2" face="Verdana, Arial, Helvetica, sans-serif">Frames are 
+                  translated to PDF pages on PDF output.</font></p>
+              </blockquote>
+              <p>&nbsp;</p></td>
+          </tr>
+        </table>
+        <p>&nbsp;</p>
+        <table width="100%" border="0" cellspacing="0" cellpadding="16" bgcolor="#eeeeee">
+          <tr valign="top"> 
+            <td> <p><font face="Verdana, Arial, Helvetica, sans-serif" size="4"><b><a name="framerate" id="framerate"></a>frameRate 
+                Property </b></font></p>
+              <p><font face="Verdana, Arial, Helvetica, sans-serif" size="2"><b>Description</b></font> 
+              <blockquote> 
+                <p><font face="Verdana, Arial, Helvetica, sans-serif" size="2">Sets/gets 
+                  the movie framerate.</font></p>
+              </blockquote>
+              <p><font face="Verdana, Arial, Helvetica, sans-serif" size="2"><b>Syntax</b></font> 
+              <blockquote> 
+                <p><font face="Verdana, Arial, Helvetica, sans-serif" size="2">$turbine-&gt;frameRate($fps);</font><br>
+                  <font face="Verdana, Arial, Helvetica, sans-serif" size="2">$fps 
+                  = $turbine-&gt;frameRate();</font> </p>
+                <p><font face="Verdana, Arial, Helvetica, sans-serif" size="2"><u>fps</u> 
+                  is the frame rate of the generated media in frames per second.</font></p>
+              </blockquote>
+              <p><font face="Verdana, Arial, Helvetica, sans-serif" size="2"><b>Errors</b></font></p>
+              <blockquote> 
+                <p><font face="Courier New, Courier, mono" size="2"><em>Could 
+                  not set value</em></font><br>
+                  <font face="Verdana, Arial, Helvetica, sans-serif" size="2">An 
+                  error occurred when setting the value.</font></p>
+              </blockquote>
+              <p>&nbsp;</p>
+              </td>
+          </tr>
+        </table>
+        <p>&nbsp;</p>
+        <table width="100%" border="0" cellspacing="0" cellpadding="16" bgcolor="#eeeeee">
+          <tr valign="top"> 
+            <td> <p><font face="Verdana, Arial, Helvetica, sans-serif" size="4"><b><a name="height" id="height"></a>height 
+                Property </b></font></p>
+              <p><font face="Verdana, Arial, Helvetica, sans-serif" size="2"><b>Description</b></font> 
+              <blockquote> 
+                <p><font face="Verdana, Arial, Helvetica, sans-serif" size="2">Sets/gets 
+                  the native height of the media to be generated. </font></p>
+              </blockquote>
+              <p><font face="Verdana, Arial, Helvetica, sans-serif" size="2"><b>Syntax</b></font> 
+              <blockquote> 
+                <p><font face="Verdana, Arial, Helvetica, sans-serif" size="2">$turbine-&gt;height($mediaHeight);</font><br>
+                  <font face="Verdana, Arial, Helvetica, sans-serif" size="2">$mediaHeight 
+                  = $turbine-&gt;height();</font> </p>
+                <p><font face="Verdana, Arial, Helvetica, sans-serif" size="2"><u>mediaSize</u> 
+                  is the native height of the media.</font></p>
+              </blockquote>
+              <p><font face="Verdana, Arial, Helvetica, sans-serif" size="2"><b>Errors</b></font></p>
+              <blockquote> 
+                <p><font face="Courier New, Courier, mono" size="2"><em>Could 
+                  not set value</em></font><br>
+                  <font face="Verdana, Arial, Helvetica, sans-serif" size="2">An 
+                  error occurred when setting the value.</font></p>
+              </blockquote>
+              <p>&nbsp;</p>
+              </td>
+          </tr>
+        </table>
+        <p>&nbsp;</p>
+        <table width="100%" border="0" cellspacing="0" cellpadding="16" bgcolor="#F0F0F0">
+          <tr valign="top"> 
+            <td> 
+              <p><font face="Verdana, Arial, Helvetica, sans-serif" size="4"><b><a name="info" id="info"></a>info 
+                Property</b></font> </p>
+              <p><font face="Verdana, Arial, Helvetica, sans-serif" size="2"><b>Description</b></font> 
+              <blockquote> 
+                <p><font size="2" face="Verdana, Arial, Helvetica, sans-serif">Returns 
+                  a string formatted in HTML with general and configuration information 
+                  from Turbine.</font></p>
+              </blockquote>
+              <p><font face="Verdana, Arial, Helvetica, sans-serif" size="2"><b>Syntax</b></font> 
+              <blockquote> 
+                <p><font face="Verdana, Arial, Helvetica, sans-serif" size="2">$infoString 
+                  = $turbine-&gt;info();</font></p>
+              </blockquote>
+              <p><font face="Verdana, Arial, Helvetica, sans-serif" size="2"><b>Errors</b></font></p>
+              <blockquote> 
+                <p><font face="Verdana, Arial, Helvetica, sans-serif" size="2">No 
+                  errors are raised by this command.</font></p>
+              </blockquote>
+              <p><font face="Verdana, Arial, Helvetica, sans-serif" size="2"><b>Remarks</b></font></p>
+              <blockquote> 
+                <p><font size="2" face="Verdana, Arial, Helvetica, sans-serif">This 
+                  property is useful for debug purposes, to list the current Turbine 
+                  environment.</font></p>
+              </blockquote>
+              <p>&nbsp;</p></td>
+          </tr>
+        </table>
+        <p>&nbsp;</p>
+        <table width="100%" border="0" cellspacing="0" cellpadding="16" bgcolor="#eeeeee">
+          <tr valign="top"> 
+            <td> <p><font face="Verdana, Arial, Helvetica, sans-serif" size="4"><b><a name="log" id="log"></a>log 
+                Property </b></font></p>
+              <p><font face="Verdana, Arial, Helvetica, sans-serif" size="2"><b>Description</b></font> 
+              <blockquote> 
+                <p><font face="Verdana, Arial, Helvetica, sans-serif" size="2">Sets/gets 
+                  the log level of Turbine.</font></p>
+              </blockquote>
+              <p><font face="Verdana, Arial, Helvetica, sans-serif" size="2"><b>Syntax</b></font> 
+              <blockquote> 
+                <p><font face="Verdana, Arial, Helvetica, sans-serif" size="2">$turbine-&gt;log($logLevel);<br>
+                  $logLevel = $turbine-&gt;log();</font></p>
+                <p><font face="Verdana, Arial, Helvetica, sans-serif" size="2"><u>logLevel</u> 
+                  is a string that tells Turbine what to log:<br>
+                  &quot;errors&quot; - Turbine should only log errors<br>
+                  &quot;warnings&quot; - Turbine should only log warnings<br>
+                  &quot;info&quot; - Turbine should only log information<br>
+                  &quot;all&quot; - Turbine should log everything<br>
+                  &quot;&quot; - Turbine should log nothing<br>
+                  You could set a combination of any of the above separated by 
+                  commas. </font></p>
+              </blockquote>
+              <p><font face="Verdana, Arial, Helvetica, sans-serif" size="2"><b>Errors</b></font></p>
+              <blockquote> 
+                <p><font face="Courier New, Courier, mono" size="2"><em>Could 
+                  not set value</em></font><br>
+                  <font face="Verdana, Arial, Helvetica, sans-serif" size="2">An 
+                  error occurred when setting the value.</font></p>
+              </blockquote>
+              <p>&nbsp;</p>
+              </td>
+          </tr>
+        </table>
+        <p>&nbsp;</p>
+        <table width="100%" border="0" cellspacing="0" cellpadding="16" bgcolor="#eeeeee">
+          <tr valign="top"> 
+            <td> <p><font face="Verdana, Arial, Helvetica, sans-serif" size="4"><b><a name="logto" id="logto"></a>logTo 
+                Property </b></font></p>
+              <p><font face="Verdana, Arial, Helvetica, sans-serif" size="2"><b>Description</b></font> 
+              <blockquote> 
+                <p><font face="Verdana, Arial, Helvetica, sans-serif" size="2">Sets/gets 
+                  to where should Turbine make its log entries: to file or to 
+                  media or to both of them.</font></p>
+              </blockquote>
+              <p><font face="Verdana, Arial, Helvetica, sans-serif" size="2"><b>Syntax</b></font> 
+              <blockquote> 
+                <p><font face="Verdana, Arial, Helvetica, sans-serif" size="2">$turbine-&gt;logTo($logToLevel);<br>
+                  $logToLevel = $turbine-&gt;logTo();</font></p>
+                <p><font face="Verdana, Arial, Helvetica, sans-serif" size="2"><u>logToLevel</u> 
+                  is a string that tells Turbine where to log:<br>
+                  &quot;file&quot; - Turbine should log to a file<br>
+                  &quot;media&quot; - Turbine should log to media. If media is 
+                  Flash then the logs will be shown inside the Turbine Window<br>
+                  &quot;&quot; - Turbine should log to nowhere<br>
+                  You could set a combination of any of the above, separated by 
+                  commas. </font></p>
+              </blockquote>
+              <p><font face="Verdana, Arial, Helvetica, sans-serif" size="2"><b>Errors</b></font></p>
+              <blockquote> 
+                <p><font face="Courier New, Courier, mono" size="2"><em>Could 
+                  not set value</em></font><br>
+                  <font face="Verdana, Arial, Helvetica, sans-serif" size="2">An 
+                  error occurred when setting the value.</font></p>
+              </blockquote>
+              <p>&nbsp;</p>
+              </td>
+          </tr>
+        </table>
+        <p>&nbsp;</p>
+        <table width="100%" border="0" cellspacing="0" cellpadding="16" bgcolor="#eeeeee">
+          <tr valign="top"> 
+            <td> <p><font face="Verdana, Arial, Helvetica, sans-serif" size="4"><b><a name="numframes" id="numframes"></a>numFrames 
+                Property </b></font></p>
+              <p><font face="Verdana, Arial, Helvetica, sans-serif" size="2"><b>Description</b></font> 
+              <blockquote> 
+                <p><font face="Verdana, Arial, Helvetica, sans-serif" size="2">Gets 
+                  the total number of existing frames of the current media. </font></p>
+              </blockquote>
+              <p><font face="Verdana, Arial, Helvetica, sans-serif" size="2"><b>Syntax</b></font> 
+              <blockquote> 
+                <p><font face="Verdana, Arial, Helvetica, sans-serif" size="2">$totalFrames 
+                  = $turbine-&gt;numFrames();</font></p>
+                <p><font face="Verdana, Arial, Helvetica, sans-serif" size="2"><u>totalFrames</u> 
+                  is number of frames currently available.</font></p>
+              </blockquote>
+              <p><font face="Verdana, Arial, Helvetica, sans-serif" size="2"><b>Errors</b></font></p>
+              <blockquote> 
+                <p><font face="Verdana, Arial, Helvetica, sans-serif" size="2">This 
+                  property raises no trappable errors.</font></p>
+              </blockquote>
+              <p><font face="Verdana, Arial, Helvetica, sans-serif" size="2"><b>Remarks</b></font></p>
+              <blockquote> 
+                <p><font size="2" face="Verdana, Arial, Helvetica, sans-serif">Frames are 
+                  translated to PDF pages, so this property returns the total 
+                  number of pages when generating PDF format.</font></p>
+              </blockquote>
+              <p>&nbsp;</p></td>
+          </tr>
+        </table>
+        <p>&nbsp;</p>
+        <table width="100%" border="0" cellspacing="0" cellpadding="16" bgcolor="#eeeeee">
+          <tr valign="top"> 
+            <td> <p><font face="Verdana, Arial, Helvetica, sans-serif" size="4"><b><a name="pdfownerpassword" id="pdfownerpassword"></a>pdfOwnerPassword 
+                Property </b></font></p>
+              <p><font face="Verdana, Arial, Helvetica, sans-serif" size="2"><b>Description</b></font> 
+              <blockquote> 
+                <p><font face="Verdana, Arial, Helvetica, sans-serif" size="2">Gets/sets 
+                  the encryption password of a PDF document, causing it's contents 
+                  to be encrypted.</font></p>
+              </blockquote>
+              <p><font face="Verdana, Arial, Helvetica, sans-serif" size="2"><b>Syntax</b></font> 
+              <blockquote> 
+                <p><font face="Verdana, Arial, Helvetica, sans-serif" size="2">$turbine-&gt;pdfOwnerPassword($oPassword);<br>
+                  $oPassword = $turbine-&gt;pdfOwnerPassword();</font></p>
+                <p><font face="Verdana, Arial, Helvetica, sans-serif" size="2"><u>oPassword</u> 
+                  is the Owner password.</font></p>
+                
+              </blockquote>
+              <p><font face="Verdana, Arial, Helvetica, sans-serif" size="2"><b>Errors</b></font></p>
+              <blockquote> 
+                <p><font face="Courier New, Courier, mono" size="2"><em>Could 
+                  not set variable</em></font><br>
+                  <font face="Verdana, Arial, Helvetica, sans-serif" size="2">An 
+                  error occurred when setting the value.</font></p>
+              </blockquote>
+              <p>&nbsp;</p>
+              </td>
+          </tr>
+        </table>
+        <p>&nbsp;</p>
+        <table width="100%" border="0" cellspacing="0" cellpadding="16" bgcolor="#eeeeee">
+          <tr valign="top"> 
+            <td> <p><font face="Verdana, Arial, Helvetica, sans-serif" size="4"><b><a name="pdfpermissions" id="pdfpermissions"></a>pdfPermissions 
+                Property </b></font></p>
+              <p><font face="Verdana, Arial, Helvetica, sans-serif" size="2"><b>Description</b></font> 
+              <blockquote> 
+                <p><font face="Verdana, Arial, Helvetica, sans-serif" size="2">Gets/sets 
+                  the permissions of a PDF document. </font></p>
+              </blockquote>
+              <p><font face="Verdana, Arial, Helvetica, sans-serif" size="2"><b>Syntax</b></font> 
+              <blockquote> 
+                <p><font face="Verdana, Arial, Helvetica, sans-serif" size="2">$turbine-&gt;pdfPermissions($pdfPermissions);<br>
+                  $pdfPermissions = $turbine-&gt;pdfPermissions();</font></p>
+                <p><font face="Verdana, Arial, Helvetica, sans-serif" size="2"><u>pdfPermissions</u> 
+                  is a string that tells Turbine what permissions to give to a 
+                  PDF file:<br>
+                  &quot;noPrinting&quot; - the PDF user can't print the file<br>
+                  &quot;noChanging&quot; - the PDF user can't change the document<br>
+                  &quot;noContentCopying&quot; - the user can't copy the document 
+                  contents<br>
+                  &quot;noCommenting&quot; - the user can't comment the document<br>
+                  You could set a combination of any of the above, separated by 
+                  commas. </font></p>
+              </blockquote>
+              <p><font face="Verdana, Arial, Helvetica, sans-serif" size="2"><b>Errors</b></font></p>
+              <blockquote> 
+                <p><font face="Courier New, Courier, mono" size="2"><em>Could 
+                  not set variable</em></font><br>
+                  <font face="Verdana, Arial, Helvetica, sans-serif" size="2">An 
+                  error occurred when setting the value.</font></p>
+              </blockquote>
+              <p><font face="Verdana, Arial, Helvetica, sans-serif" size="2"><b>Remarks</b></font></p>
+              <blockquote> 
+                <p><font face="Verdana, Arial, Helvetica, sans-serif" size="2">This 
+                  property only has any effect if the PDF document is encrypted. 
+                  To encrypt a PDF document set the <a href="#pdfuserpassword">pdfUserPassword</a> 
+                  or the <a href="#pdfownerpassword">pdfOwnerPassword</a>.</font></p>
+              </blockquote>
+              <p>&nbsp;</p></td>
+          </tr>
+        </table>
+        <p>&nbsp;</p>
+        <table width="100%" border="0" cellspacing="0" cellpadding="16" bgcolor="#eeeeee">
+          <tr valign="top"> 
+            <td> <p><font face="Verdana, Arial, Helvetica, sans-serif" size="4"><b><a name="pdfownerpassword" id="pdfownerpassword"></a>pdfUserPassword 
+                Property </b></font></p>
+              <p><font face="Verdana, Arial, Helvetica, sans-serif" size="2"><b>Description</b></font> 
+              <blockquote> 
+                <p><font face="Verdana, Arial, Helvetica, sans-serif" size="2">Gets/sets 
+                  the open password of a PDF document causing it's contents to 
+                  be encrypted. The user must provide this password in order to 
+                  open it.</font></p>
+              </blockquote>
+              <p><font face="Verdana, Arial, Helvetica, sans-serif" size="2"><b>Syntax</b></font> 
+              <blockquote> 
+                <p><font face="Verdana, Arial, Helvetica, sans-serif" size="2">$turbine-&gt;pdfUserPassword($uPassword);<br>
+                  $uPassword = $turbine-&gt;pdfUserPassword();</font></p>
+                <p><font face="Verdana, Arial, Helvetica, sans-serif" size="2"><u>uPassword</u> 
+                  is the open password.</font></p>
+              </blockquote>
+              <p><font face="Verdana, Arial, Helvetica, sans-serif" size="2"><b>Errors</b></font></p>
+              <blockquote> 
+                <p><font face="Courier New, Courier, mono" size="2"><em>Could 
+                  not set variable</em></font><br>
+                  <font face="Verdana, Arial, Helvetica, sans-serif" size="2">An 
+                  error occurred when setting the value.</font></p>
+              </blockquote>
+              <p>&nbsp;</p>
+              </td>
+          </tr>
+        </table>
+        <p>&nbsp;</p>
+        <table width="100%" border="0" cellspacing="0" cellpadding="16" bgcolor="#eeeeee">
+          <tr valign="top"> 
+            <td> <p><font face="Verdana, Arial, Helvetica, sans-serif" size="4"><b><a name="pdfversion" id="pdfversion"></a>pdfVersion 
+                Property </b></font></p>
+              <p><font face="Verdana, Arial, Helvetica, sans-serif" size="2"><b>Description</b></font> 
+              <blockquote> 
+                <p><font face="Verdana, Arial, Helvetica, sans-serif" size="2">Gets/sets 
+                  the PDF version of the generated document.</font></p>
+              </blockquote>
+              <p><font face="Verdana, Arial, Helvetica, sans-serif" size="2"><b>Syntax</b></font> 
+              <blockquote> 
+                <p><font face="Verdana, Arial, Helvetica, sans-serif" size="2">$turbine-&gt;pdfVersion($version);<br>
+                  $version = $turbine-&gt;pdfVersion();</font></p>
+                <p><font face="Verdana, Arial, Helvetica, sans-serif" size="2"><u>version</u> 
+                  is the document version.</font></p>
+              </blockquote>
+              <p><font face="Verdana, Arial, Helvetica, sans-serif" size="2"><b>Errors</b></font></p>
+              <blockquote> 
+                <p><font face="Courier New, Courier, mono" size="2"><em>Could 
+                  not set variable</em></font><br>
+                  <font face="Verdana, Arial, Helvetica, sans-serif" size="2">An 
+                  error occurred when setting the value.</font></p>
+              </blockquote>
+              <p><font face="Verdana, Arial, Helvetica, sans-serif" size="2"><b>Remarks</b></font></p>
+              <blockquote> 
+                <p><font size="2" face="Verdana, Arial, Helvetica, sans-serif">Useful 
+                  when one wishes to generate a PDF document with a specific version. 
+                  For Acrobat PDF viewer 6, use 5, for Acrobat PDF viewer 5 use 
+                  4 and so on. Default is version 2, requiring Acrobat PDF viewer 
+                  3. </font></p>
+              </blockquote>
+              <p>&nbsp;</p></td>
+          </tr>
+        </table>
+        <p>&nbsp;</p>
+        <table width="100%" border="0" cellspacing="0" cellpadding="16" bgcolor="#eeeeee">
+          <tr valign="top"> 
+            <td> <p><font face="Verdana, Arial, Helvetica, sans-serif" size="4"><b><a name="protect" id="protect"></a>protect 
+                Property </b></font></p>
+              <p><font face="Verdana, Arial, Helvetica, sans-serif" size="2"><b>Description</b></font> 
+              <blockquote> 
+                <p><font face="Verdana, Arial, Helvetica, sans-serif" size="2">Sets/gets 
+                  the flag that tells if the media is protected from editing or 
+                  importing. </font></p>
+              </blockquote>
+              <p><font face="Verdana, Arial, Helvetica, sans-serif" size="2"><b>Syntax</b></font> 
+              <blockquote> 
+                <p><font face="Verdana, Arial, Helvetica, sans-serif" size="2">$turbine-&gt;protect($protectBool);<br>
+                  $protectBool = $turbine-&gt;protect();</font></p>
+                <p><font face="Verdana, Arial, Helvetica, sans-serif" size="2"><u>protectBool</u> 
+                  is true if the current media should be protected from editing 
+                  and importing.</font></p>
+              </blockquote>
+              <p><font face="Verdana, Arial, Helvetica, sans-serif" size="2"><b>Errors</b></font></p>
+              <blockquote> 
+                <p><font face="Courier New, Courier, mono" size="2"><em>Could 
+                  not set value</em></font><br>
+                  <font face="Verdana, Arial, Helvetica, sans-serif" size="2">An 
+                  error occurred when setting the value.</font></p>
+              </blockquote>
+              <p><font face="Verdana, Arial, Helvetica, sans-serif" size="2"><b>Remarks</b></font></p>
+              <blockquote> 
+                <p><font face="Verdana, Arial, Helvetica, sans-serif" size="2"> 
+                  Applicable to Flash output only. To give permissions or to encrypt 
+                  a PDF document see <a href="#pdfuserpassword">pdfUserPassword</a>, 
+                  <a href="#pdfownerpassword">pdfOwnerPassword</a> and <a href="#pdfpermissions">pdfPermissions</a> 
+                  Properties.</font></p>
+              </blockquote>
+              <p>&nbsp;</p></td>
+          </tr>
+        </table>
+        <p>&nbsp;</p>
+        <table width="100%" border="0" cellspacing="0" cellpadding="16" bgcolor="#eeeeee">
+          <tr valign="top"> 
+            <td> <p><font face="Verdana, Arial, Helvetica, sans-serif" size="4"><b><a name="version" id="version"></a>version 
+                Property </b></font></p>
+              <p><font face="Verdana, Arial, Helvetica, sans-serif" size="2"><b>Description</b></font> 
+              <blockquote> 
+                <p><font face="Verdana, Arial, Helvetica, sans-serif" size="2">Returns 
+                  Turbine version information.</font></p>
+              </blockquote>
+              <p><font face="Verdana, Arial, Helvetica, sans-serif" size="2"><b>Syntax</b></font> 
+              <blockquote> 
+                <p><font face="Verdana, Arial, Helvetica, sans-serif" size="2">$turbine-&gt;version();</font></p>
+              </blockquote>
+              <p><font face="Verdana, Arial, Helvetica, sans-serif" size="2"><b>Errors</b></font></p>
+              <blockquote> 
+                <p><font face="Verdana, Arial, Helvetica, sans-serif" size="2">This 
+                  property raises no trappable errors.</font></p>
+              </blockquote>
+              <p><font face="Verdana, Arial, Helvetica, sans-serif" size="2"><b>Remarks</b></font></p>
+              <blockquote> 
+                <p><font size="2" face="Verdana, Arial, Helvetica, sans-serif">This 
+                  property is useful for debug purposes, to know if your configurations 
+                  match the expectations.</font></p>
+              </blockquote>
+              <p>&nbsp;</p></td>
+          </tr>
+        </table>
+        <p>&nbsp;</p>
+        <table width="100%" border="0" cellspacing="0" cellpadding="16" bgcolor="#eeeeee">
+          <tr valign="top"> 
+            <td> <p><font face="Verdana, Arial, Helvetica, sans-serif" size="4"><b><a name="width" id="width"></a>width 
+                Property </b></font></p>
+              <p><font face="Verdana, Arial, Helvetica, sans-serif" size="2"><b>Description</b></font> 
+              <blockquote> 
+                <p><font face="Verdana, Arial, Helvetica, sans-serif" size="2">Sets/gets 
+                  the native width of the media to be generated.</font></p>
+              </blockquote>
+              <p><font face="Verdana, Arial, Helvetica, sans-serif" size="2"><b>Syntax</b></font> 
+              <blockquote> 
+                <p><font face="Verdana, Arial, Helvetica, sans-serif" size="2">$turbine-&gt;width($mediaWidth);<br>
+                  $mediaWidth = $turbine-&gt;width();</font></p>
+                <p><font face="Verdana, Arial, Helvetica, sans-serif" size="2"><u>mediaWidth</u> 
+                  is the native width of the media.</font></p>
+              </blockquote>
+              <p><font face="Verdana, Arial, Helvetica, sans-serif" size="2"><b>Errors</b></font></p>
+              <blockquote> 
+                <p><font face="Courier New, Courier, mono" size="2"><em>Could 
+                  not set variable</em></font><br>
+                  <font face="Verdana, Arial, Helvetica, sans-serif" size="2">An 
+                  error occurred when setting the variable.</font></p>
+              </blockquote>
+              <p>&nbsp;</p>
+              </td>
+          </tr>
+        </table>
+        <p>&nbsp;</p></TD>
+    </TR>
+    <TR valign="top"> 
+      <TD COLSPAN="2" height="6"> 
+        <table border=0 cols=2 width="100%" cellpadding="0" cellspacing="0" >
+          <tr> 
+            <td width="443" height="25"><font face="Verdana, Arial, Helvetica, sans-serif" size="3"><a href="manual.htm">Table 
+              of Contents</a></font></td>
+            <td width="117" height="25"> 
+              <div align="center"><font face="Verdana, Arial, Helvetica, sans-serif" size="3"><a href="varreference.htm">Next 
+                Chapter </a> </font></div>
+            </td>
+          </tr>
+        </table>
+      </TD>
+    </TR>
+  </TABLE>
+</CENTER>
+<CENTER>
+  <p> <font face="Verdana, Arial, Helvetica, sans-serif" size="1"><i>&nbsp;<br>
+    </i></font><font face="Verdana, Arial, Helvetica, sans-serif" size="1"><i>Flash 
+    and Macromedia Flash are trademarks of Macromedia, Inc.</i></font>
+</CENTER>
+</BODY>
+</HTML>

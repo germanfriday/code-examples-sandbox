@@ -1,0 +1,15 @@
+MANIFEST
+zope.tales/__init__.py
+zope.tales/DEPENDENCIES.cfg
+zope.tales/engine.py
+zope.tales/expressions.py
+zope.tales/interfaces.py
+zope.tales/pythonexpr.py
+zope.tales/tales.py
+zope.tales/tests/__init__.py
+zope.tales/tests/simpleexpr.py
+zope.tales/tests/test_expressions.py
+zope.tales/tests/test_tales.py
+zope.tales/tests/test_traverser.py
+setup.py
+setup.cfg

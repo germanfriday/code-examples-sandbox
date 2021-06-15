@@ -1,0 +1,89 @@
+function checkDate(fld) {
+    var mo, day, yr;
+    var entry = fld.value;
+    var re = /\b\d{1,2}[\/-]\d{1,2}[\/-]\d{4}\b/;
+    if (re.test(entry)) {
+        var delimChar = (entry.indexOf("/") != -1) ? "/" : "-";
+        var delim1 = entry.indexOf(delimChar);
+        var delim2 = entry.lastIndexOf(delimChar);
+        mo = parseInt(entry.substring(0, delim1), 10);
+        day = parseInt(entry.substring(delim1+1, delim2), 10);
+        yr = parseInt(entry.substring(delim2+1), 10);
+        var testDate = new Date(yr, mo-1, day);
+        alert(testDate)
+        if (testDate.getDate() == day) {
+            if (testDate.getMonth() + 1 == mo) {
+                if (testDate.getFullYear() == yr) {
+                    return true;
+                } else {
+                    alert("There is a problem with the year entry.");
+                }
+            } else {
+                alert("There is a problem with the month entry.");
+            }
+        } else {
+            alert("There is a problem with the date entry.");
+        }
+    } else {
+        alert("Incorrect date format. Enter as mm/dd/yyyy.");
+    }
+    return false;
+}
+
+function validateDate(fld) {
+    if (!checkDate(fld)) {
+        // focus if validation fails
+        fld.focus();
+        fld.select();
+    }
+}
+
+----------
+
+function checkDate(fld) {
+    var mo, day, yr;
+    var entry = fld.value;
+    var reLong = /\b\d{1,2}[\/-]\d{1,2}[\/-]\d{4}\b/;
+    var reShort = /\b\d{1,2}[\/-]\d{1,2}[\/-]\d{2}\b/;
+    var valid = (reLong.test(entry)) || (reShort.test(entry));
+    if (valid) {
+        var delimChar = (entry.indexOf("/") != -1) ? "/" : "-";
+        var delim1 = entry.indexOf(delimChar);
+        var delim2 = entry.lastIndexOf(delimChar);
+        mo = parseInt(entry.substring(0, delim1), 10);
+        day = parseInt(entry.substring(delim1+1, delim2), 10);
+        yr = parseInt(entry.substring(delim2+1), 10);
+        // handle two-digit year
+        if (yr < 100) {
+            var today = new Date();
+            // get current century floor (e.g., 2000)
+            var currCent = parseInt(today.getFullYear() / 100) * 100;
+            // two digits up to this year + 15 expands to current century
+            var threshold = (today.getFullYear() + 15) - currCent;
+            if (yr > threshold) {
+                yr += currCent - 100;
+            } else {
+                yr += currCent;
+            }
+        }
+        var testDate = new Date(yr, mo-1, day);
+        if (testDate.getDate() == day) {
+            if (testDate.getMonth() + 1 == mo) {
+                if (testDate.getFullYear() == yr) {
+                    // fill field with database-friendly format
+                    fld.value = mo + "/" + day + "/" + yr;
+                    return true;
+                } else {
+                    alert("There is a problem with the year entry.");
+                }
+            } else {
+                alert("There is a problem with the month entry.");
+            }
+        } else {
+            alert("There is a problem with the date entry.");
+        }
+    } else {
+        alert("Incorrect date format. Enter as mm/dd/yyyy.");
+    }
+    return false;
+}

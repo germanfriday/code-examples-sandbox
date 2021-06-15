@@ -1,0 +1,991 @@
+<title name="Grit"> is a flexible kickstarter Newsletter template with grid in mind.</title>
+
+<!-- Hotmail ignores some valid styling, so we have to add this -->
+<style type="text/css">
+
+/* iPad Text Smoother */
+div, p, a, li, td { -webkit-text-size-adjust:none; }
+
+/* This is the color to change the links #f17366; */
+
+.ReadMsgBody
+{width: 100%; background-color: #ffffff;}
+.ExternalClass
+{width: 100%; background-color: #ffffff;}
+body
+{width: 100%; background-color: #ffffff; margin:0; padding:0; -webkit-font-smoothing: antialiased;}
+html
+{width: 100%; }
+
+.columnTableScale img			{width: 100%!important; height: auto!important; padding: 5px; border: 1px solid #e0e0e0;}
+.imageScale1 img				{width: 100%!important; height: auto!important; padding: 5px; border: 1px solid #e0e0e0;}
+.imageScale2 img				{width: 100%!important; height: auto!important; padding: 5px; border: 1px solid #e0e0e0;}
+.smallImageScale2 img			{width: 100%!important; height: auto!important; padding: 5px; border: 1px solid #e0e0e0;}
+.smallImageScale img			{width: 100%!important; height: auto!important; padding: 5px; border: 1px solid #e0e0e0;}
+.headerTable img				{width: 100%!important; height: auto!important; padding: 5px; border: 1px solid #e0e0e0; background-color: #ffffff;}
+
+
+@media only screen and (max-width: 640px) 
+		   {
+		body{width:auto!important;}
+		
+		
+		table[class=scaleForMobile]		{width: 100%!important; padding-left: 30px!important; padding-right: 30px!important;}
+		table[class=scaleForMobile2]	{width: 100%!important; padding-left: 15px!important; padding-right: 0px!important;}
+		table[class=fullWidth]			{width: 100%!important;}
+		table[class=mobileCenter]		{width: 100%!important; text-align: center!important; }
+		td[class=mobileCenter]			{width: 440px !important; text-align: center!important; }
+		span[class=eraseForMobile]		{width: 0; display:none !important;}
+		td[class=eraseForMobile]		{width: 0; display:none !important;}
+		table[class=eraseForMobile]		{width: 0; display:none !important;}
+		img[class=headerScale]			{width: 100%!important;}
+		table[class=headerTable]		{width: 100%!important;}
+		.headerTable img				{width: 100%!important; height: auto!important;}
+		td[class=headerBG]				{width: 100%!important; height: 130px!important; background-image: url(http://www.stampready.net/themeforest/templates/grit/src/images/header_bg.jpg); background-size: 100% 95%; background-repeat: repeat-x;}
+		img[class=shadowScale]			{width: 100%!important;}
+		table[class=imageScale1]		{width: 46%!important; margin-right: 15px;}
+		table[class=imageScale2]		{width: 46%!important; margin-left: 15px;}
+		img[class=imageScale]			{width: 100%!important;}
+		table[class=smallImageScale]	{width: 30%!important; margin-right: 20px;}
+		table[class=smallImageScale2]	{width: 30%!important; margin-right: 0px;}
+		table[class=columnTableScale]	{width: 175px!important;}
+		.columnTableScale img			{width: 100%!important; height: auto!important;}
+		img[class=columnImageScale]		{width: 175px!important; margin-left: 0px!important;}
+		table[class=columnScale]		{width: 58%!important; padding-left: 20px!important; padding-right: 10px!important;}
+		td[class=columnScale]			{width: 58%!important; padding-left: 10px!important; padding-right: 10px!important;}
+		
+		table[class=columnScale2]		{width: 56%!important; padding-left: 0px!important; padding-right: 10px!important; text-align: left!important;}	
+		table[class=numberScale]		{width: 79%!important;}	
+		table[class=FooterScale1]		{width: 30%!important; text-align: left!important; margin-bottom: 40px!important; padding-left: 0px!important; margin-right: 0px!important;}
+		table[class=FooterScale2]		{width: 30%!important; text-align: left!important; margin-bottom: 40px!important; margin-left: 20px; margin-right: 20px!important;}
+		table[class=FooterScale3]		{width: 30%!important; text-align: left!important; margin-bottom: 40px!important;}
+		td[class=pad1]					{height: 30px!important;}
+		
+		td[class=navTd]					{width: 33%!important; text-align: center!important;}
+		
+		}		
+		
+		
+@media only screen and (max-width: 479px) 
+		   {
+		body{width:auto!important;}
+		
+		table[class=scaleForMobile]		{width: 100%!important; padding-left: 30px!important; padding-right: 30px!important; }
+		table[class=scaleForMobile2]	{width: 100%!important; padding-left: 15px!important; padding-right: 15px!important; }
+		table[class=fullWidth]			{width: 100%!important;}
+		table[class=mobileCenter]		{width: 100%!important; text-align: center!important; }
+		td[class=mobileCenter]			{width: 280px!important; text-align: center!important; }
+		span[class=eraseForMobile]		{width: 0; display:none !important;}
+		td[class=eraseForMobile]		{width: 0; display:none !important;}
+		table[class=eraseForMobile]		{width: 0; display:none !important;}
+		td[class=headerBG] 				{width: 100%!important; height: 110px!important; background-color: #ffffff; background-image: url(http://www.stampready.net/themeforest/templates/grit/src/images/header_bg.jpg); background-size: 100% 95%; background-repeat: repeat-x;}
+		table[class=imageScale1]		{width: 100%!important; margin-right: 0px!important;}
+		table[class=imageScale2]		{width: 100%!important; margin-left: 0px!important;}
+		img[class=imageScale]			{width: 100%!important;}
+		table[class=smallImageScale]	{width: 100%!important; margin-right: 0px!important;}
+		table[class=smallImageScale2]	{width: 100%!important; margin-right: 0px!important;}
+		
+		img[class=columnImageScale]		{width: 100%!important; height: auto!important; margin-left: 0px!important; margin-right: 0px!important; margin-bottom: 0px!important; text-align: center!important;}
+		table[class=columnScale]		{width: 100%!important; text-align: center!important; padding: 0px!important; padding-top: 10px!important;}
+		table[class=columnTableScale]	{width: 100%!important;}
+		.columnTableScale img			{width: 100%!important; height: auto!important;}
+		td[class=columnScale]			{width: 100%!important; padding: 0px!important;}
+		table[class=columnScale2]		{width: 100%!important; padding: 0px!important; margin-top: 10px!important;}
+		table[class=numberScale]		{width: 100%!important; margin-top: 15px!important;}
+		table[class=FooterScale1]		{width: 46%!important; text-align: left!important; margin-bottom: 40px!important; padding-left: 0px!important; margin-right: 0px!important;}
+		table[class=FooterScale2]		{width: 46%!important; text-align: right!important; margin-bottom: 40px!important; margin-left: 0px;}
+		table[class=FooterScale3]		{width: 100%!important; text-align: center!important; margin-bottom: 40px!important;}
+		td[class=FooterScale3]			{width: 100%!important; text-align: center!important; margin-bottom: 40px!important;}
+		td[class=pad1]					{height: 30px!important;}
+			
+		td[class=navTd]					{width: 33%!important; text-align: center!important;}
+		
+		}
+
+
+</style>
+
+<!-- Wrapper 1 (Nav) -->
+<table name="1" align="center" border="0" cellpadding="0" cellspacing="0" width="100%">
+	<tbody><tr>
+		<td bgcolor="#ffffff" valign="top" width="100%">
+		
+			<!-- Nav Mobile Wrapper -->
+			<table class="scaleForMobile" align="center" border="0" cellpadding="0" cellspacing="0" width="590">
+				<tbody><tr>
+					<td bgcolor="ffffff" width="100%">
+					
+						<!-- Space -->
+						<table align="center" border="0" cellpadding="0" cellspacing="0" width="100%">
+							<tbody><tr>
+								<td height="10">&nbsp;									
+								</td>
+							</tr>
+						</tbody></table>
+						
+						<!-- Start Nav -->
+						<table class="mobileCenter" align="center" border="0" cellpadding="0" cellspacing="0" width="100%">
+							<tbody><tr>
+								<td valign="middle" width="100%">
+									
+									<!-- Logo -->
+									<table class="mobileCenter" align="left" border="0" cellpadding="0" cellspacing="0" width="290">
+										<tbody><tr>
+											<td style="text-align: left;" class="mobileCenter" height="60" valign="middle" width="100%">
+												<a href="#"><img src="http://www.stampready.net/themeforest/templates/grit/src/images/logo.jpg" alt="" border="0"></a>
+											</td>
+										</tr>
+									</tbody></table>
+									
+									<!-- Nav --> 
+									<table style="text-align: right;" class="mobileCenter" align="right" border="0" cellpadding="0" cellspacing="0" width="260">	
+										<tbody><tr>
+											<td style="font-size: 12px; color: #2f2f36; font-weight: bold; text-align: right; font-family: Helvetica, Arial, sans-serif; line-height: 20px; vertical-align: middle;" class="navTd" height="60" valign="middle" width="33%">
+												<a href="#" style="text-decoration: none; color: #2f2f36;">Awards<span style="color: #f17366; font-size: 20px;" class="colorResult">.</span></a>
+											</td>
+											<td style="font-size: 12px; color: #2f2f36; font-weight: bold; text-align: right; font-family: Helvetica, Arial, sans-serif; line-height: 20px; vertical-align: middle;" class="navTd" valign="middle" width="33%">
+												<a href="#" style="text-decoration: none; color: #2f2f36;">Press<span style="color: #f17366; font-size: 20px;" class="colorResult">.</span></a>
+											</td>
+											<td style="font-size: 12px; color: #2f2f36; font-weight: bold; text-align: right; font-family: Helvetica, Arial, sans-serif; line-height: 20px; vertical-align: middle;" class="navTd" valign="middle" width="33%">
+												<a href="#" style="text-decoration: none; color: #2f2f36;">Media<span style="color: #f17366; font-size: 20px;" class="colorResult">.</span></a>
+											</td>
+										</tr>
+									</tbody></table>
+																	
+								</td>
+							</tr>
+						</tbody></table><!-- End Nav -->
+					
+						<!-- Space -->
+						<table align="center" border="0" cellpadding="0" cellspacing="0" width="100%">
+							<tbody><tr>
+								<td height="20">&nbsp;									
+								</td>
+							</tr>
+						</tbody></table>
+						
+					</td>
+				</tr>
+			</tbody></table><!-- End Nav Mobile Wrapper -->
+			
+		</td>
+	</tr>
+</tbody></table><!-- End Wrapper 1 -->
+
+<!-- Wrapper 2 (Header) -->
+<table name="2" align="center" border="0" cellpadding="0" cellspacing="0" width="100%">
+	<tbody><tr>
+		<td bgcolor="#ffffff" valign="top" width="100%">		
+					
+			<!-- Header Mobile Wrapper -->
+			<table class="fullWidth" align="center" border="0" cellpadding="0" cellspacing="0" width="100%">
+				<tbody><tr>
+					<td class="headerBG" style="background-image: url(http://www.stampready.net/themeforest/templates/grit/src/images/header_bg.jpg); background-repeat: repeat-x;" height="" valign="top" width="100%">
+					
+						<!-- Start Header + Text -->
+						<table class="scaleForMobile" align="center" border="0" cellpadding="0" cellspacing="0" width="590">
+							<tbody><tr>
+								<td height="29" width="590">									
+								</td>
+							</tr>
+							<tr>
+								<td bgcolor="#ffffff" width="590">
+									<!-- Header -->
+									<table class="headerTable" align="center" border="0" cellpadding="0" cellspacing="0" width="590">
+										<tbody><tr>
+											<td width="100%">
+												<a href="#"><img class="headerScale" src="http://www.stampready.net/themeforest/templates/grit/src/images/header.jpg" alt="" style="display: block;" border="0"></a>										
+											</td>
+										</tr>
+									</tbody></table>
+															
+								</td>
+							</tr>
+							<tr>
+								<td style="line-height: 1px;" width="100%">
+									<img src="http://www.stampready.net/themeforest/templates/grit/src/images/shadow.jpg" alt="" style="display: block;" class="shadowScale" border="0">
+								</td>
+							</tr>
+						</tbody></table>
+						
+					</td>
+				</tr>
+			</tbody></table><!-- End Header Mobile Wrapper -->
+			
+			<!-- Text Under The Header -->
+			<table class="scaleForMobile" align="center" border="0" cellpadding="0" cellspacing="0" width="590">
+				<tbody><tr>
+					<td height="12" width="590">									
+					</td>
+				</tr>
+				<tr>
+					<td style="font-size: 22px; color: #2f2f36; text-align: center; font-weight: bold; font-family: Helvetica, Arial, sans-serif; line-height: 30px;" width="590">
+						We think with &nbsp;<img src="http://www.stampready.net/themeforest/templates/grit/src/images/cloud_icon.png" alt="" style="background-color: #f17366;" class="bgColorResult" border="0">&nbsp; in mind.								
+					</td>
+				</tr>
+				<tr>
+					<td height="10" width="590">									
+					</td>
+				</tr>
+				<tr>
+					<td style="font-size: 14px; color: #696a78; text-align: center; font-weight: normal; font-family: Helvetica, Arial, sans-serif; line-height: 26px;" width="590">
+						Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Integer posuere erat a ante venenatis dapibus.
+													
+					</td>
+				</tr>
+			</tbody></table><!-- End Text Under The Header -->
+			
+			<!-- Space -->
+			<table class="mobileCenter" align="center" border="0" cellpadding="0" cellspacing="0" width="100%">
+				<tbody><tr>
+					<td height="15" width="100%">									
+					</td>
+				</tr>
+			</tbody></table>
+		
+		</td>
+	</tr>
+</tbody></table><!-- End Wrapper 2 -->
+
+<!-- Wrapper 3 (2 Columns) -->
+<table name="3" align="center" border="0" cellpadding="0" cellspacing="0" width="100%">
+	<tbody><tr>
+		<td bgcolor="#ffffff" valign="top" width="100%">
+		
+			<!-- Space -->
+			<table class="mobileCenter" align="center" border="0" cellpadding="0" cellspacing="0" width="100%">
+				<tbody><tr>
+					<td height="15" width="100%">									
+					</td>
+				</tr>
+			</tbody></table>		
+			
+			<!-- 2 columns Images -->
+			<table class="scaleForMobile" align="center" border="0" cellpadding="0" cellspacing="0" width="590">
+				<tbody><tr>
+					<td width="100%">
+					
+						<!-- Column 1 -->
+						<table style="border-collapse:collapse; mso-table-lspace:0pt; mso-table-rspace:0pt;" class="imageScale1" align="left" border="0" cellpadding="0" cellspacing="0" width="280">
+							<tbody><tr>
+								<td bgcolor="#ffffff" valign="top" width="100%">
+									<a href="#"><img src="http://www.stampready.net/themeforest/templates/grit/src/images/image_1.jpg" alt="" class="imageScale" style="display: block;" border="0"></a>									
+								</td>
+							</tr>
+							<tr>
+								<td height="10" width="100%"></td>
+							</tr>
+							<tr>
+								<td style="font-size: 16px; color: #2f2f36; text-align: left; font-weight: bold; font-family: Helvetica, Arial, sans-serif; line-height: 24px;" width="100%"><a href="#" style="text-decoration: none; color: #2f2f36;">Grid Column One.</a></td>
+							</tr>
+							<tr>
+								<td height="5" width="100%"></td>
+							</tr>
+							<tr>
+								<td style="font-size: 14px; color: #696a78; text-align: left; font-weight: normal; font-family: Helvetica, Arial, sans-serif; line-height: 24px;" width="100%">Donec ullamcorper nulla non metus auctor fringilla. Aenean eu leo quam. <a href="#" style="text-decoration: none; color: #f17366; font-weight: bold;" class="colorResult">Pellentesque</a> ornare sem lacinia quam venenatis vestibulum.</td>
+							</tr>
+							<tr>
+								<td class="pad1" height="0" width="100%"></td>
+							</tr>
+						</tbody></table>
+						
+						<!-- Padding + (Outlook) -->
+						<table class="eraseForMobile" style="border-collapse:collapse; mso-table-lspace:0pt; mso-table-rspace:0pt;" align="left" border="0" cellpadding="0" cellspacing="0" width="1">
+							<tbody><tr>
+								<td style="font-size: 0;line-height: 0;border-collapse: collapse;" height="20" width="100%">								
+								</td>
+							</tr>
+						</tbody></table>
+						
+						<!-- Column 2 -->
+						<table style="border-collapse:collapse; mso-table-lspace:0pt; mso-table-rspace:0pt;" class="imageScale2" align="right" border="0" cellpadding="0" cellspacing="0" width="280">
+							<tbody><tr>
+								<td bgcolor="#ffffff" valign="top" width="100%">
+									<a href="#"><img src="http://www.stampready.net/themeforest/templates/grit/src/images/image_2.jpg" alt="" class="imageScale" style="display: block;" border="0"></a>								
+								</td>
+							</tr>
+							<tr>
+								<td height="10" width="100%"></td>
+							</tr>
+							<tr>
+								<td style="font-size: 16px; color: #2f2f36; text-align: left; font-weight: bold; font-family: Helvetica, Arial, sans-serif; line-height: 24px;" width="100%"><a href="#" style="text-decoration: none; color: #2f2f36;">Grid Column Two.</a></td>
+							</tr>
+							<tr>
+								<td height="5" width="100%"></td>
+							</tr>
+							<tr>
+								<td style="font-size: 14px; color: #696a78; text-align: left; font-weight: normal; font-family: Helvetica, Arial, sans-serif; line-height: 24px;" width="100%">Donec ullamcorper nulla non metus auctor fringilla. Aenean eu leo quam. <a href="#" style="text-decoration: none; color: #f17366; font-weight: bold;" class="colorResult">Pellentesque</a> ornare sem lacinia quam venenatis vestibulum.</td>
+							</tr>
+						</tbody></table>
+					
+														
+					</td>
+				</tr>
+			</tbody></table><!-- End 2 columns Images -->
+			
+			<!-- Space -->
+			<table class="mobileCenter" align="center" border="0" cellpadding="0" cellspacing="0" width="100%">
+				<tbody><tr>
+					<td height="15" width="100%">									
+					</td>
+				</tr>
+			</tbody></table>
+			
+		</td>
+	</tr>
+</tbody></table><!-- End Wrapper 3 -->
+
+<!-- Wrapper 4 (3 Columns) -->
+<table name="4" align="center" border="0" cellpadding="0" cellspacing="0" width="100%">
+	<tbody><tr>
+		<td bgcolor="#ffffff" valign="top" width="100%">
+		
+			<!-- Space -->
+			<table class="mobileCenter" align="center" border="0" cellpadding="0" cellspacing="0" width="100%">
+				<tbody><tr>
+					<td height="15" width="100%">									
+					</td>
+				</tr>
+			</tbody></table>
+			
+			<!-- 3 columns Images -->
+			<table class="scaleForMobile" align="center" border="0" cellpadding="0" cellspacing="0" width="590">
+				<tbody><tr>
+					<td width="100%">
+					
+						<!-- Column 1 -->
+						<table class="smallImageScale" align="left" border="0" cellpadding="0" cellspacing="0" width="176">
+							<tbody><tr>
+								<td style="" bgcolor="#ffffff" valign="top" width="100%">
+									<a href="#"><img src="http://www.stampready.net/themeforest/templates/grit/src/images/small_image_1.jpg" alt="" class="imageScale" style="display: block;" border="0"></a>									
+								</td>
+							</tr>
+							<tr>
+								<td height="10" width="100%"></td>
+							</tr>
+							<tr>
+								<td style="font-size: 16px; color: #2f2f36; text-align: left; font-weight: bold; font-family: Helvetica, Arial, sans-serif; line-height: 24px;" width="100%"><a href="#" style="text-decoration: none; color: #2f2f36;">Your Tasks Managed.</a></td>
+							</tr>
+							<tr>
+								<td height="5" width="100%"></td>
+							</tr>
+							<tr>
+								<td style="font-size: 14px; color: #696a78; text-align: left; font-weight: normal; font-family: Helvetica, Arial, sans-serif; line-height: 24px;" width="100%">Donec ullamcorper nulla non metus auctor fringilla. Aenean eu leo quam. <a href="#" style="text-decoration: none; color: #f17366; font-weight: bold;" class="colorResult">Pellentesque</a> ornare sem lacinia quam venenatis vestibulum.</td>
+							</tr>
+							<tr>
+								<td class="pad1" height="0" width="100%"></td>
+							</tr>
+						</tbody></table>
+						
+						<!-- Padding + (Outlook) -->
+						<table class="eraseForMobile" style="font-size: 0;line-height: 0;border-collapse: collapse;" align="left" border="0" cellpadding="0" cellspacing="0" width="0">
+							<tbody><tr>
+								<td style="font-size: 0;line-height: 0;border-collapse: collapse;" height="2" width="0"><p style="padding-left: 25px;">&nbsp;</p>								
+								</td>
+							</tr>
+						</tbody></table>
+						
+						<!-- Column 2 -->
+						<table class="smallImageScale" align="left" border="0" cellpadding="0" cellspacing="0" width="176">
+							<tbody><tr>
+								<td style="" bgcolor="#ffffff" valign="top" width="100%">
+									<a href="#"><img src="http://www.stampready.net/themeforest/templates/grit/src/images/small_image_2.jpg" alt="" class="imageScale" style="display: block;" border="0"></a>								
+								</td>
+							</tr>
+							<tr>
+								<td height="10" width="100%"></td>
+							</tr>
+							<tr>
+								<td style="font-size: 16px; color: #2f2f36; text-align: left; font-weight: bold; font-family: Helvetica, Arial, sans-serif; line-height: 24px;" width="100%"><a href="#" style="text-decoration: none; color: #2f2f36;">Swipe To Delete</a></td>
+							</tr>
+							<tr>
+								<td height="5" width="100%"></td>
+							</tr>
+							<tr>
+								<td style="font-size: 14px; color: #696a78; text-align: left; font-weight: normal; font-family: Helvetica, Arial, sans-serif; line-height: 24px;" width="100%">Donec ullamcorper <a href="#" style="text-decoration: none; color: #f17366; font-weight: bold;" class="colorResult">nulla</a> non metus auctor fringilla. Aenean eu leo quam. Pellentesque ornare sem lacinia quam venenatis vestibulum.</td>
+							</tr>
+							<tr>
+								<td class="pad1" height="0" width="100%"></td>
+							</tr>
+						</tbody></table>
+						
+						<!-- Padding + (Outlook) -->
+						<table class="eraseForMobile" style="font-size: 0;line-height: 0;border-collapse: collapse;" align="left" border="0" cellpadding="0" cellspacing="0" width="0">
+							<tbody><tr>
+								<td style="font-size: 0;line-height: 0;border-collapse: collapse;" height="2" width="0"><p style="padding-left: 25px;">&nbsp;</p>								
+								</td>
+							</tr>
+						</tbody></table>
+						
+						<!-- Column 3 -->
+						<table class="smallImageScale2" align="left" border="0" cellpadding="0" cellspacing="0" width="176">
+							<tbody><tr>
+								<td bgcolor="#ffffff" valign="top" width="100%">
+									<a href="#"><img src="http://www.stampready.net/themeforest/templates/grit/src/images/small_image_3.jpg" alt="" class="imageScale" style="display: block;" border="0"></a>								
+								</td>
+							</tr>
+							<tr>
+								<td height="10" width="100%"></td>
+							</tr>
+							<tr>
+								<td style="font-size: 16px; color: #2f2f36; text-align: left; font-weight: bold; font-family: Helvetica, Arial, sans-serif; line-height: 24px;" width="100%"><a href="#" style="text-decoration: none; color: #2f2f36;">Swipe Down To Add.</a></td>
+							</tr>
+							<tr>
+								<td height="5" width="100%"></td>
+							</tr>
+							<tr>
+								<td style="font-size: 14px; color: #696a78; text-align: left; font-weight: normal; font-family: Helvetica, Arial, sans-serif; line-height: 24px;" width="100%">Donec ullamcorper nulla non metus auctor fringilla. Aenean eu leo quam. Pellentesque ornare sem lacinia quam <a href="#" style="text-decoration: none; color: #f17366; font-weight: bold;" class="colorResult">venenatis</a> vestibulum.</td>
+							</tr>
+						</tbody></table>
+					
+														
+					</td>
+				</tr>
+			</tbody></table><!-- End 2 columns Images -->
+			
+			<!-- Space -->
+			<table class="mobileCenter" align="center" border="0" cellpadding="0" cellspacing="0" width="100%">
+				<tbody><tr>
+					<td height="15" width="100%">									
+					</td>
+				</tr>
+			</tbody></table>
+			
+		</td>
+	</tr>
+</tbody></table><!-- End Wrapper 4 -->
+
+<!-- Wrapper 5 (Big Image Right, Text Left) -->
+<table name="5" align="center" border="0" cellpadding="0" cellspacing="0" width="100%">
+	<tbody><tr>
+		<td bgcolor="#ffffff" valign="top" width="100%">
+		
+			<!-- Space -->
+			<table class="mobileCenter" align="center" border="0" cellpadding="0" cellspacing="0" width="100%">
+				<tbody><tr>
+					<td height="15" width="100%">									
+					</td>
+				</tr>
+			</tbody></table>		
+			
+			<!-- Image 1 Start Wrapper -->
+			<table class="scaleForMobile2" align="center" border="0" cellpadding="0" cellspacing="0" width="100%">
+				<tbody><tr>
+					<td bgcolor="ffffff" width="100%">
+						
+						<!-- Image Left, Text Right -->
+						<table class="scaleForMobile2" align="center" border="0" cellpadding="0" cellspacing="0" width="590">
+							<tbody><tr>
+								<td width="100%">
+								
+									<!-- Image 3 Width= 269px -->
+									<table class="columnTableScale" align="left" border="0" cellpadding="0" cellspacing="0" width="280">
+										<tbody><tr>
+											<td style="" bgcolor="#ffffff" valign="top" width="100%">
+												<a href="#"><img src="http://www.stampready.net/themeforest/templates/grit/src/images/image_3.jpg" alt="" class="columnImageScale" style="display: block;" border="0"></a>								
+											</td>
+										</tr>
+									</tbody></table>
+									
+									<!-- Padding + (Outlook) -->
+									<table class="eraseForMobile" style="font-size: 0;line-height: 0;border-collapse: collapse;" align="left" border="0" cellpadding="0" cellspacing="0" width="0">
+										<tbody><tr>
+											<td style="font-size: 0;line-height: 0;border-collapse: collapse;" height="30" width="0">
+												<p style="padding-left: 28px;">
+													&nbsp;
+												</p>
+											</td>
+										</tr>
+									</tbody></table>
+									
+									<!-- Headline -->
+									<table class="columnScale" align="left" border="0" cellpadding="0" cellspacing="0" width="280">
+										<tbody><tr>
+											<td style="font-size: 16px; color: #2f2f36; text-align: left; font-weight: bold; font-family: Helvetica, Arial, sans-serif; line-height: 24px;" width="100%"><a href="#" style="text-decoration: none; color: #2f2f36;">Grid Column One.</a>
+											</td>
+										</tr>
+										<tr>
+											<td height="5" width="100%"></td>
+										</tr>
+										<tr>
+											<td style="font-size: 14px; color: #696a78; text-align: left; font-weight: normal; font-family: Helvetica, Arial, sans-serif; line-height: 24px;" width="100%">Donec ullamcorper nulla non metus auctor fringilla. Aenean eu leo quam. Pellentesque ornare sem lacinia quam <a href="#" style="text-decoration: none; color: #f17366; font-weight: bold;" class="colorResult">venenatis</a> vestibulum.
+											</td>
+										</tr>
+									</tbody></table>
+									
+								</td>
+							</tr>
+						</tbody></table><!-- End Image Left, text Right -->
+										
+					</td>
+				</tr>
+			</tbody></table><!-- End Wrapper -->
+			
+			<!-- Space -->
+			<table class="mobileCenter" align="center" border="0" cellpadding="0" cellspacing="0" width="100%">
+				<tbody><tr>
+					<td height="15" width="100%">									
+					</td>
+				</tr>
+			</tbody></table>
+			
+		</td>
+	</tr>
+</tbody></table><!-- End Wrapper 5 -->
+
+<!-- Wrapper 6 (Big Image Left, Text Right) -->
+<table name="6" align="center" border="0" cellpadding="0" cellspacing="0" width="100%">
+	<tbody><tr>
+		<td bgcolor="#ffffff" valign="top" width="100%">	
+		
+			<!-- Space -->
+			<table class="mobileCenter" align="center" border="0" cellpadding="0" cellspacing="0" width="100%">
+				<tbody><tr>
+					<td height="15" width="100%">									
+					</td>
+				</tr>
+			</tbody></table>	
+			
+			<!-- Image 2 Mobile Wrapper -->
+			<table class="scaleForMobile" align="center" border="0" cellpadding="0" cellspacing="0" width="590">
+				<tbody><tr>
+					<td width="100%">
+					
+						<!-- Image 2 Width= 269px -->
+						<table class="columnTableScale" align="right" border="0" cellpadding="0" cellspacing="0" width="280">
+							<tbody><tr>
+								<td style="" bgcolor="#ffffff" valign="top" width="100%">
+									<a href="#"><img src="http://www.stampready.net/themeforest/templates/grit/src/images/image_4.jpg" alt="" class="columnImageScale" style="display: block;" border="0"></a>								
+								</td>
+							</tr>
+						</tbody></table>
+						
+						<!-- Padding + (Outlook) -->
+						<table class="eraseForMobile" style="font-size: 0;line-height: 0;border-collapse: collapse;" align="right" border="0" cellpadding="0" cellspacing="0" width="0">
+							<tbody><tr>
+								<td style="font-size: 0;line-height: 0;border-collapse: collapse;" height="1" width="0">
+									<p style="padding-left: 28px;">
+										&nbsp;
+									</p>
+								</td>
+							</tr>
+						</tbody></table>
+						
+						<!-- Headline -->
+						<table class="columnScale2" align="left" border="0" cellpadding="0" cellspacing="0" width="280">
+							<tbody><tr>
+								<td style="font-size: 16px; color: #2f2f36; text-align: left; font-weight: bold; font-family: Helvetica, Arial, sans-serif; line-height: 24px;" width="100%"><a href="#" style="text-decoration: none; color: #2f2f36;">Grid Column Two.</a>
+								</td>
+							</tr>
+							<tr>
+								<td height="5" width="100%"></td>
+							</tr>
+							<tr>
+								<td style="font-size: 14px; color: #696a78; text-align: left; font-weight: normal; font-family: Helvetica, Arial, sans-serif; line-height: 24px;" width="100%">Donec ullamcorper nulla non metus auctor fringilla. Aenean eu leo quam. <a href="#" style="text-decoration: none; color: #f17366; font-weight: bold;" class="colorResult">Pellentesque</a> ornare sem lacinia quam venenatis vestibulum.
+								</td>
+							</tr>
+						</tbody></table>
+														
+					</td>
+				</tr>
+			</tbody></table>
+			
+			<!-- Space -->
+			<table class="mobileCenter" align="center" border="0" cellpadding="0" cellspacing="0" width="100%">
+				<tbody><tr>
+					<td height="15" width="100%">									
+					</td>
+				</tr>
+			</tbody></table>
+			
+		</td>
+	</tr>
+</tbody></table><!-- End Wrapper 6 -->
+
+<!-- Wrapper 7 (Image left, Text Right) -->
+<table name="7" align="center" border="0" cellpadding="0" cellspacing="0" width="100%">
+	<tbody><tr>
+		<td bgcolor="#ffffff" valign="top" width="100%">
+		
+			<!-- Space -->
+			<table class="mobileCenter" align="center" border="0" cellpadding="0" cellspacing="0" width="100%">
+				<tbody><tr>
+					<td height="15" width="100%">									
+					</td>
+				</tr>
+			</tbody></table>
+			
+			<!-- Start Wrapper -->
+			<table class="scaleForMobile2" align="center" border="0" cellpadding="0" cellspacing="0" width="100%">
+				<tbody><tr>
+					<td bgcolor="ffffff" width="100%">
+						
+						<!-- Image Left, Text Right -->
+						<table class="scaleForMobile2" align="center" border="0" cellpadding="0" cellspacing="0" width="590">
+							<tbody><tr>
+								<td width="100%">
+								
+									<!-- Small Image 4 Width= 175px -->
+									<table class="columnTableScale" align="left" border="0" cellpadding="0" cellspacing="0" width="176">
+										<tbody><tr>
+											<td style="" bgcolor="#ffffff" valign="top" width="100%">
+												<a href="#"><img src="http://www.stampready.net/themeforest/templates/grit/src/images/small_image_4.jpg" alt="" class="columnImageScale" style="display: block;" border="0"></a>								
+											</td>
+										</tr>
+									</tbody></table>
+									
+									<!-- Padding + (Outlook) -->
+									<table class="eraseForMobile" style="font-size: 0;line-height: 0;border-collapse: collapse;" align="left" border="0" cellpadding="0" cellspacing="0" width="1">
+										<tbody><tr>
+											<td style="font-size: 0;line-height: 0;border-collapse: collapse;" height="30" width="0">
+												<p style="padding-left: 26px;">
+													&nbsp;
+												</p>
+											</td>
+										</tr>
+									</tbody></table>
+									
+									<!-- Headline -->
+									<table class="columnScale" align="left" border="0" cellpadding="0" cellspacing="0" width="382">
+										<tbody><tr>
+											<td style="font-size: 16px; color: #2f2f36; text-align: left; font-weight: bold; font-family: Helvetica, Arial, sans-serif; line-height: 24px;" width="100%"><a href="#" style="text-decoration: none; color: #2f2f36;">Grid Column Three.</a>
+											</td>
+										</tr>
+										<tr>
+											<td height="5" width="100%"></td>
+										</tr>
+										<tr>
+											<td style="font-size: 14px; color: #696a78; text-align: left; font-weight: normal; font-family: Helvetica, Arial, sans-serif; line-height: 24px;" width="100%">Donec ullamcorper nulla non metus auctor fringilla. Aenean eu leo quam. Pellentesque ornare sem lacinia quam <a href="#" style="text-decoration: none; color: #f17366; font-weight: bold;" class="colorResult">venenatis</a> vestibulum.
+											</td>
+										</tr>
+									</tbody></table>
+									
+								</td>
+							</tr>
+						</tbody></table><!-- End Image Left, text Right -->
+										
+					</td>
+				</tr>
+			</tbody></table><!-- End Wrapper -->
+			
+			<!-- Space -->
+			<table class="mobileCenter" align="center" border="0" cellpadding="0" cellspacing="0" width="100%">
+				<tbody><tr>
+					<td height="15" width="100%">									
+					</td>
+				</tr>
+			</tbody></table>
+
+		</td>
+	</tr>
+</tbody></table><!-- End Wrapper 7 -->
+
+<!-- Wrapper 8 (Image Right, Text Left) -->
+<table name="8" align="center" border="0" cellpadding="0" cellspacing="0" width="100%">
+	<tbody><tr>
+		<td bgcolor="#ffffff" valign="top" width="100%">
+		
+			<!-- Space -->
+			<table class="mobileCenter" align="center" border="0" cellpadding="0" cellspacing="0" width="100%">
+				<tbody><tr>
+					<td height="15" width="100%">									
+					</td>
+				</tr>
+			</tbody></table>
+		
+			<!-- Mobile Wrapper -->
+			<table class="scaleForMobile" align="center" border="0" cellpadding="0" cellspacing="0" width="590">
+				<tbody><tr>
+					<td width="100%">
+					
+						<!-- Small Image 5 Width= 175px -->
+						<table class="columnTableScale" align="right" border="0" cellpadding="0" cellspacing="0" width="176">
+							<tbody><tr>
+								<td style="" bgcolor="#ffffff" valign="top" width="100%">
+									<a href="#"><img src="http://www.stampready.net/themeforest/templates/grit/src/images/small_image_5.jpg" alt="" class="columnImageScale" style="display: block;" border="0"></a>								
+								</td>
+							</tr>
+						</tbody></table>
+						
+						<!-- Padding + (Outlook) -->
+						<table class="eraseForMobile" style="font-size: 0;line-height: 0;border-collapse: collapse;" align="right" border="0" cellpadding="0" cellspacing="0" width="1">
+							<tbody><tr>
+								<td style="font-size: 0;line-height: 0;border-collapse: collapse;" height="1" width="0">
+									<p style="padding-left: 28px;">
+										&nbsp;
+									</p>
+								</td>
+							</tr>
+						</tbody></table>
+						
+						<!-- Headline -->
+						<table class="columnScale2" align="left" border="0" cellpadding="0" cellspacing="0" width="382">
+							<tbody><tr>
+								<td style="font-size: 16px; color: #2f2f36; text-align: left; font-weight: bold; font-family: Helvetica, Arial, sans-serif; line-height: 24px;" width="100%"><a href="#" style="text-decoration: none; color: #2f2f36;">Grid Column Four.</a>
+								</td>
+							</tr>
+							<tr>
+								<td height="5" width="100%"></td>
+							</tr>
+							<tr>
+								<td style="font-size: 14px; color: #696a78; text-align: left; font-weight: normal; font-family: Helvetica, Arial, sans-serif; line-height: 24px;" width="100%">Donec ullamcorper nulla non metus auctor fringilla. Aenean eu leo quam. <a href="#" style="text-decoration: none; color: #f17366; font-weight: bold;" class="colorResult">Pellentesque</a> ornare sem lacinia quam venenatis vestibulum.
+								</td>
+							</tr>
+						</tbody></table>
+														
+					</td>
+				</tr>
+			</tbody></table>
+			
+			<!-- Space -->
+			<table class="mobileCenter" align="center" border="0" cellpadding="0" cellspacing="0" width="100%">
+				<tbody><tr>
+					<td height="15" width="100%">									
+					</td>
+				</tr>
+			</tbody></table>
+			
+		</td>
+	</tr>
+</tbody></table><!-- End Wrapper 8 -->
+
+<!-- Wrapper 9 (Number, Text Content) -->
+<table name="9" align="center" border="0" cellpadding="0" cellspacing="0" width="100%">
+	<tbody><tr>
+		<td bgcolor="#ffffff" valign="top" width="100%">
+		
+			<!-- Space -->
+			<table class="mobileCenter" align="center" border="0" cellpadding="0" cellspacing="0" width="100%">
+				<tbody><tr>
+					<td height="15" width="100%">									
+					</td>
+				</tr>
+			</tbody></table>
+			
+			<!-- Grid Column Text -->
+			<table class="scaleForMobile" align="center" border="0" cellpadding="0" cellspacing="0" width="590">
+				<tbody><tr>
+					<td width="100%">
+					
+						<!-- Number -->
+						<table align="left" border="0" cellpadding="0" cellspacing="0" width="">
+							<tbody><tr>
+								<td style="font-size: 24px; color: #f1f1f1; font-weight: bold; text-align: center; font-family: Helvetica, Arial, sans-serif; line-height: 20px; vertical-align: middle; border-radius: 6px; padding-left: 15px; padding-right: 15px;" bgcolor="#2b2e3b" height="50" width="100%">
+									05									
+								</td>
+							</tr>
+						</tbody></table>
+						
+						<!-- Padding + (Outlook) -->
+						<table style="font-size: 0;line-height: 0;border-collapse: collapse;" align="left" border="0" cellpadding="0" cellspacing="0" width="1">
+							<tbody><tr>
+								<td style="font-size: 0;line-height: 0;border-collapse: collapse;" height="1" width="1">
+									<p style="padding-left: 20px;">
+										&nbsp;
+									</p>
+								</td>
+							</tr>
+						</tbody></table>
+						
+						<!-- Headline -->
+						<table class="numberScale" align="left" border="0" cellpadding="0" cellspacing="0" width="480">
+							<tbody><tr>
+								<td style="font-size: 16px; color: #2f2f36; text-align: left; font-weight: bold; font-family: Helvetica, Arial, sans-serif; line-height: 24px;" width="100%"><a href="#" style="text-decoration: none; color: #2f2f36;">Grid Column Five.</a>
+								</td>
+							</tr>
+							<tr>
+								<td height="5" width="100%"></td>
+							</tr>
+							<tr>
+								<td style="font-size: 14px; color: #696a78; text-align: left; font-weight: normal; font-family: Helvetica, Arial, sans-serif; line-height: 24px;" width="100%">Vestibulum id ligula porta felis euismod semper. Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit. Cras mattis consectetur purus sit amet fermentum. Aenean lacinia bibendum nulla sed consectetur.
+								</td>
+							</tr>
+						</tbody></table>
+						
+										
+					</td>
+				</tr>
+			</tbody></table><!-- End Text Column -->
+			
+			<!-- Space -->
+			<table class="mobileCenter" align="center" border="0" cellpadding="0" cellspacing="0" width="100%">
+				<tbody><tr>
+					<td height="15" width="100%">									
+					</td>
+				</tr>
+			</tbody></table>
+			
+		</td>
+	</tr>
+</tbody></table><!-- End Wrapper 9 -->
+
+<!-- Wrapper 10 (Footer) -->
+<table name="a" align="center" border="0" cellpadding="0" cellspacing="0" width="100%">
+	<tbody><tr>
+		<td bgcolor="#ffffff" valign="top" width="100%">
+		
+			<!-- Space -->
+			<table class="mobileCenter" align="center" border="0" cellpadding="0" cellspacing="0" width="100%">
+				<tbody><tr>
+					<td height="15" width="100%">									
+					</td>
+				</tr>
+			</tbody></table>
+			
+			<!-- Start 4 Columns -->
+			<table class="fullWidth" align="center" border="0" cellpadding="0" cellspacing="0" width="100%">
+				<tbody><tr>
+					<td bgcolor="#2b2e3b" width="100%">
+					
+						<table class="scaleForMobile" align="center" border="0" cellpadding="0" cellspacing="0" width="590">
+							<tbody><tr>
+								<td height="30">
+								</td>
+							</tr>
+						</tbody></table>
+						
+						<!-- Mobile Wrapper -->
+						<table class="scaleForMobile" align="center" bgcolor="#2b2e3b" border="0" cellpadding="0" cellspacing="0" width="590">
+						<tbody><tr>
+							<td valign="top">
+							
+								<!-- Column 1 -->
+								<table class="FooterScale1" style="text-align: left;" align="left" border="0" cellpadding="0" cellspacing="0" width="175">
+									<tbody><tr>
+										<td style="font-size: 16px; color: #f1f1f1; font-weight: normal; font-family: Helvetica, Arial, sans-serif; line-height: 26px; vertical-align: top;" valign="top">
+											<a href="#" style="text-decoration: none; color: #f1f1f1; font-weight: bold;">
+												Account Info
+											</a>
+											<br>
+										</td>
+									</tr>
+									<tr>
+										<td height="8" width="100%">
+										</td>
+									</tr>	
+									<tr>
+										<td style="font-size: 12px; color: #c0c0c0; font-weight: normal; font-family: Helvetica, Arial, sans-serif; line-height: 26px; vertical-align: top;" valign="top">	
+											<a href="#" style="text-decoration: none; color: #c0c0c0; wont-weight: normal;">
+												Login
+											</a>
+											<br>
+											<a href="#" style="text-decoration: none; color: #c0c0c0; wont-weight: normal;">
+												Register
+											</a>
+											<br>
+											<a href="#" style="text-decoration: none; color: #c0c0c0; wont-weight: normal;">
+												Unsubscribe
+											</a>
+										</td>
+									</tr>
+								</tbody></table>
+								
+								<!-- Padding + (Outlook) -->
+								<table class="eraseForMobile" style="font-size: 0;line-height: 0;border-collapse: collapse;" align="left" border="0" cellpadding="0" cellspacing="0" width="1">
+								
+								<tbody><tr>
+									<td style="font-size: 0;line-height: 0;border-collapse: collapse;" height="1" width="1">
+										<p style="padding-right: 30px;">
+											&nbsp;
+										</p>
+									</td>
+								</tr>
+								
+								</tbody></table>
+								
+								<!-- Column 2 -->
+								<table class="FooterScale2" style="text-align: left;" align="left" border="0" cellpadding="0" cellspacing="0" width="195">
+									<tbody><tr>
+										<td style="font-size: 16px; color: #f1f1f1; font-weight: normal; font-family: Helvetica, Arial, sans-serif; line-height: 26px; vertical-align: top;" valign="top">
+											<a href="#" style="text-decoration: none; color: #f1f1f1; font-weight: bold;">
+												Our Products
+											</a>
+											<br>
+										</td>
+									</tr>
+									<tr>
+										<td height="8" width="100%">
+										</td>
+									</tr>	
+									<tr>
+										<td style="font-size: 12px; color: #c0c0c0; font-weight: normal; font-family: Helvetica, Arial, sans-serif; line-height: 26px; vertical-align: top;" valign="top">	
+											<a href="#" style="text-decoration: none; color: #c0c0c0; wont-weight: normal;">
+												StampReady
+											</a>
+											<br>
+											<a href="#" style="text-decoration: none; color: #c0c0c0; wont-weight: normal;">
+												E-mail Templates
+											</a>
+											<br>
+										</td>
+									</tr>
+								</tbody></table>
+								
+								<!-- Padding + (Outlook) -->
+								<table class="eraseForMobile" style="font-size: 0;line-height: 0;border-collapse: collapse;" align="left" border="0" cellpadding="0" cellspacing="0" width="1">
+								
+								<tbody><tr>
+									<td style="font-size: 0;line-height: 0;border-collapse: collapse;" height="10" width="1">
+										<p style="padding-left: 30px;">
+											&nbsp;
+										</p>
+									</td>
+								</tr>
+								
+								</tbody></table>
+								
+								<!-- Column 3 -->
+								<table class="FooterScale3" style="text-align: left;" align="left" border="0" cellpadding="0" cellspacing="0" width="155">
+									<tbody><tr>
+										<td style="font-size: 16px; color: #f1f1f1; font-weight: normal; font-family: Helvetica, Arial, sans-serif; line-height: 26px; vertical-align: top;" valign="top">
+											<a href="#" style="text-decoration: none; color: #f1f1f1; font-weight: bold;">
+												Social Corner
+											</a>
+											<br>
+										</td>
+									</tr>
+									<tr>
+										<td height="8" width="100%">
+										</td>
+									</tr>	
+									<tr>
+										<td style="font-size: 12px; color: #c0c0c0; font-weight: normal; font-family: Helvetica, Arial, sans-serif; line-height: 26px; vertical-align: top;" valign="top">	
+											<a href="#" style="text-decoration: none; color: #c0c0c0; wont-weight: normal;">
+												Twitter
+											</a>
+											<br>
+											<a href="#" style="text-decoration: none; color: #c0c0c0; wont-weight: normal;">
+												Facebook
+											</a>
+											<br>
+											<a href="#" style="text-decoration: none; color: #c0c0c0; wont-weight: normal;">
+												Google Plus
+											</a>
+										</td>
+									</tr>
+								</tbody></table>
+								
+							</td>
+						</tr>
+						
+						</tbody></table>
+						<!-- End Mobile Wrapper -->
+						
+						<!-- Space -->
+						<table class="scaleForMobile" align="center" border="0" cellpadding="0" cellspacing="0" width="580">
+							<tbody><tr>
+								<td style="font-size: 1px; color: #363636; line-height: 1px;" height="40">
+									&nbsp;
+								</td>
+							</tr>
+						</tbody></table>
+						
+					</td>
+				</tr>
+			</tbody></table><!-- End 4 Columns -->
+		
+		</td>
+	</tr>
+</tbody></table><!-- End Wrapper 10 -->
+
+	

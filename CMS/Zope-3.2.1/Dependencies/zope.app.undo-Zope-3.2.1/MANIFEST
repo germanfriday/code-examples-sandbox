@@ -1,0 +1,16 @@
+MANIFEST
+zope.app.undo/__init__.py
+zope.app.undo/browser.py
+zope.app.undo/configure.zcml
+zope.app.undo/interfaces.py
+zope.app.undo/SETUP.cfg
+zope.app.undo/undo-configure.zcml
+zope.app.undo/undo_all.pt
+zope.app.undo/undo_macros.pt
+zope.app.undo/undo_more.pt
+zope.app.undo/tests/__init__.py
+zope.app.undo/tests/test_prefix.py
+zope.app.undo/tests/test_undoview.py
+zope.app.undo/tests/test_zodbundomanager.py
+setup.py
+setup.cfg

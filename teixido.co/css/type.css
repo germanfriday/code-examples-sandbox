@@ -1,0 +1,1657 @@
+/* - - - - - - - - - - - - - - - - - - - - -
+
+Título		: TEIXIDO
+Autor		: Oscar Sánchez
+URL 		: teixido.co
+
+Creado 		: September 28, 2010
+Modificado	: September 28, 2010
+
+- - - - - - - - - - - - - - - - - - - - - */
+
+
+
+body {
+	color: #39444a;
+	line-height: 150%;
+
+}
+
+@import url("font-face.css");
+
+
+h1, h2, h3 {
+	font-weight:normal;
+}
+
+#studio_page p + p.indent {
+   text-indent:1.5em; }
+
+#agencia_page p + p.indent {
+   text-indent:1.5em; }
+
+/* 290px
+---------------------------------------- */
+@media only screen and (min-width: 290px) {
+
+	#header h1 { 
+		font-family: 'TrumpGothicEastMedium',Helvetica,Arial,"Trebuchet MS",Tahoma,Arial,sans-serif;
+		font-size: 64px; 
+		letter-spacing: 2.8px;
+		line-height: 100%;
+		
+		}
+	
+	#header p {
+		font-family: "pill-gothic-600mg-1","pill-gothic-600mg-2",sans-serif;
+		font-size: 13px;
+		letter-spacing: 0.3px;
+		margin-bottom:20px;
+		}
+	
+	#studio_page #header h1 {
+		font-family: 'TrumpGothicEastMedium', Helvetica, Arial, "Trebuchet MS", Tahoma, Arial, sans-serif;
+		font-size: 53px;
+		line-height: 100%;
+		letter-spacing: 2.4px;
+		}
+
+	#studio_page #header p {
+		font-family: "pill-gothic-600mg-1","pill-gothic-600mg-2",sans-serif;
+		font-size: 13px;
+		margin-bottom:20px;
+		}
+	
+	#work_page #header h1 {
+		font-family: 'TrumpGothicEastMedium', Helvetica, Arial, "Trebuchet MS", Tahoma, Arial, sans-serif;
+		font-size: 46px;
+		line-height: 100%;
+		letter-spacing: 2px;
+	}
+
+	#work_page #header p {
+		font-family: "pill-gothic-600mg-1","pill-gothic-600mg-2",sans-serif;
+		font-size: 13.6px;
+		margin-bottom:20px;
+	}	
+		
+	#inicio_page #header h1 {
+		font-family: 'TrumpGothicEastMedium', Helvetica, Arial, "Trebuchet MS", Tahoma, Arial, sans-serif;
+		font-size: 59px;
+		line-height: 100%;
+		letter-spacing: 2.6px;
+	}
+	#inicio_page #header p {
+		font-family: "pill-gothic-600mg-1","pill-gothic-600mg-2",sans-serif;
+		font-size: 13.6px;
+		margin-bottom:20px;
+	}
+	
+	
+	#agencia_page #header h1 {
+		font-family: 'TrumpGothicEastMedium', Helvetica, Arial, "Trebuchet MS", Tahoma, Arial, sans-serif;
+		font-size: 46px;
+		line-height: 100%;
+		letter-spacing:1.9px;
+	}
+	
+	#agencia_page #header p {
+		font-family: "pill-gothic-600mg-1","pill-gothic-600mg-2",sans-serif;
+		font-size: 13.6px;
+		margin-bottom:20px;
+	}
+		
+	#nav li {
+		font-family: 'TrumpGothicEastRegular', Helvetica, Arial, "Trebuchet MS", Tahoma, Arial, sans-serif;
+		font-size: 16px; 
+		letter-spacing: 1.3px; 
+		float: left;
+			}
+	#nav ul li a {
+		text-decoration: none;
+		color: #39444a;
+		}
+
+	#nav ul li a:active {
+ 		text-decoration: none;
+		color: #ffffff;
+			}
+	
+	
+			
+	
+			/*Texto intro y Happy clients*/
+	.s1 h1 {
+		font-family: 'TrumpGothicEastMedium', Helvetica, Arial, "Trebuchet MS", Tahoma, Arial, sans-serif;
+		font-size: 20px; 
+		letter-spacing: 1px; 
+		text-transform: uppercase;
+		}
+	.s1 h2 {
+		font-family: 'TrumpGothicEastRegular', Helvetica, Arial, "Trebuchet MS", Tahoma, Arial, sans-serif;
+		font-size: 23px; 
+		margin-top:46px;
+		letter-spacing: 0.3px;
+		}
+
+	.s1 span {
+			font-family: 'TrumpGothicEastMedium', Helvetica, Arial, "Trebuchet MS", Tahoma, Arial, sans-serif;
+			font-size: 18px; 
+			margin-top:46px;
+			text-transform: uppercase;
+			letter-spacing: 2px;
+		}
+	
+		
+	.s1 p {
+		font-family: "republic-web-1","republic-web-2",serif;
+		font-size: 12px; 
+		letter-spacing: 0.3px;
+			}
+			
+	.s2 em {
+		font-family: "pill-gothic-600mg-1","pill-gothic-600mg-2",sans-serif;
+		font-style: italic;
+		font-size: 14px; 
+		letter-spacing: 0.3px;
+		line-height: 30px;
+			}
+			
+	.s1 p span.smallcaps {
+		font-family: "republic-web-1","republic-web-2",serif;
+		text-transform: uppercase;
+		font-size: 11px; 
+		letter-spacing: 0.3px;
+		
+		}	
+		
+		#invitation {
+					font-family: "republic-web-1","republic-web-2",serif;
+			margin-top: 20px;
+/*			margin-bottom: 0px;*/
+				font-size: 12px; 
+		}	
+
+		#invitation p span  {
+			font-family: "republic-web-1","republic-web-2",serif;
+
+		}
+
+		#invitation p span a  {
+				font-family: "republic-web-1","republic-web-2",serif;
+			color: #39444a;
+			font-size: 12px; 
+			text-decoration: none;
+			text-transform: none;
+			letter-spacing: normal;
+		}
+				
+				/*Texto reducido para Procesos de Producción y Clientes*/
+	.s2 h1 {
+		font-family: 'TrumpGothicEastMedium', Helvetica, Arial, "Trebuchet MS", Tahoma, Arial, sans-serif;
+		font-size: 18px; 
+			letter-spacing: 1px; 
+			}
+						
+	.s2 h2 {
+		font-family: 'TrumpGothicEastRegular', Helvetica, Arial, "Trebuchet MS", Tahoma, Arial, sans-serif;
+		font-size: 24px;
+		text-transform: uppercase;
+		letter-spacing: 2px;
+			}
+			
+	.s2 h3 {
+		font-family: "republic-web-1","republic-web-2",serif;
+		font-size: 14px; 
+		font-weight: bold;
+			}
+
+	.s2 p {
+		font-family: "pill-gothic-600mg-1","pill-gothic-600mg-2",sans-serif;
+		font-size: 12px; 
+		letter-spacing: 0.3px;
+		line-height: 160%;
+			}
+			
+			.s2 em {
+				font-family: "pill-gothic-600mg-1","pill-gothic-600mg-2",sans-serif;
+				font-style: italic;
+				font-size: 14px; 
+				letter-spacing: 0.3px;
+				line-height: 30px;
+			}
+			
+	.s2 ul li {
+		font-family: "pill-gothic-600mg-1","pill-gothic-600mg-2",sans-serif;
+			font-size: 12px; 
+			letter-spacing: 0.3px;
+			text-transform: uppercase;
+		}
+
+			/*Texto blanco para fondo amarillo*/
+
+	.s3 h1 {
+		font-family: 'TrumpGothicEastRegular', Helvetica, Arial, "Trebuchet MS", Tahoma, Arial, sans-serif;
+		font-size: 42px;
+		line-height: 100%;
+		margin-top: 10px;
+		}
+	.s3  h1 .request {
+		font-family: 'TrumpGothicEastRegular', Helvetica, Arial, "Trebuchet MS", Tahoma, Arial, sans-serif;
+		font-size: 42px;
+		line-height: 100%;
+		margin-top: 10px;
+		letter-spacing: 3px;
+		}
+
+	.s3 q {
+		font-family: "republic-web-1","republic-web-2",serif;
+		font-size: 20px;
+		letter-spacing: 0.3px; 
+		}
+		
+	.s3 .testimonial_text q span.smallcaps {
+		font-family: "republic-web-1","republic-web-2",serif;
+		text-transform: uppercase;
+		font-size: 16px;
+		letter-spacing: 0.3px;
+		font-style: normal;
+		}	
+
+	p.cite {
+		font-family: "republic-web-1","republic-web-2",serif;
+		font-style: normal;	
+		font-size: 15px; /* 16px / 16 = 1.625*/	
+		}
+
+
+	p.cite span.smallcaps {
+			font-family: "republic-web-1","republic-web-2",serif;
+			text-transform: uppercase;
+			font-size: 11px;
+			letter-spacing: 0.3px; 
+			}
+				
+
+	footer h2 {
+		font-family: 'TrumpGothicEastRegular', Helvetica, Arial, "Trebuchet MS", Tahoma, Arial, sans-serif;
+		font-size: 24px;
+		font-weight: normal;
+		letter-spacing: 3px;
+		margin-right: 20px;
+		margin-bottom: 10px;
+		}
+
+	footer nav li, footer nav li span, footer p {
+		font-family: "republic-web-1","republic-web-2",serif;
+		font-size: 12px; 
+		letter-spacing: normal;
+		}	
+
+	footer #browser li a {
+		font-family: "pill-gothic-600mg-1","pill-gothic-600mg-2",sans-serif;
+		padding-left: 14px;
+		background: url('../gfx/backs/back_footer_li_arrow.png') no-repeat 0px -11px;
+	color: #39444a;
+		}
+
+	footer #connect li a {
+		padding-left: 14px;
+		background: url('../gfx/backs/back_footer_li_arrow.png') no-repeat 0px -11px;
+			color: #39444a;
+		}
+
+	#copy {
+			font-family: "republic-web-1","republic-web-2",serif;
+		text-align: center;
+		margin-top: 20px;
+		font-size: 12px;
+		height: 100px;
+		}
+
+	#copy .strike {
+		width: 45px;
+		height: 10px;
+		padding-top: 10px;
+		float: left;
+		background:  url('../gfx/backs/back_copy_line.png') repeat-x left center;			
+		}
+	#copy .copyright {
+		width: 200px;
+		float:left;
+		text-align: center;
+		}
+		
+
+		#copy .copyright  span.smallcaps {
+			font-family: "republic-web-1","republic-web-2",serif;
+			text-transform: uppercase;
+				font-size: 10px; 
+			letter-spacing: 0.3px; 
+			}		
+		
+		.s4 h1 {	
+			font-family: 'TrumpGothicEastMedium', Helvetica, Arial, "Trebuchet MS", Tahoma, Arial, sans-serif;
+			font-size: 18px;
+				text-transform: uppercase;
+				letter-spacing: 2px;
+				}		
+			
+		.s4 h2 {
+			font-family:"pill-gothic-600mg-1","pill-gothic-600mg-2",sans-serif;
+			font-size: 13px; 
+	/*		text-transform: uppercase;*/
+			letter-spacing: 0.3px;
+			}
+			
+	.s4 h2 a {
+		text-decoration: none;
+		color: #39444a;	
+		}		
+
+	.s4 h3 {
+		font-family:"pill-gothic-600mg-1","pill-gothic-600mg-2",sans-serif;
+		font-size: 11px; 
+		letter-spacing: normal;
+		font-weight: bold;
+		margin-top: 18px;
+				}
+
+	.s4 p {
+		font-family:"pill-gothic-600mg-1","pill-gothic-600mg-2",sans-serif;
+		font-size: 12px; 
+		letter-spacing: normal;
+		line-height: 160%;
+	}
+	
+	.s4 em {
+		font-family:"pill-gothic-600mg-1","pill-gothic-600mg-2",sans-serif;
+		font-size: 12px; 
+		letter-spacing: normal;
+		line-height: 160%;
+		font-style: oblique ;
+	}
+
+	.s4 span.smallcaps {
+		font-family:"pill-gothic-600mg-1","pill-gothic-600mg-2",sans-serif;
+		font-size: 11px; 
+		letter-spacing: normal;
+		line-height: 160%;
+		text-transform: uppercase;
+	}
+	
+
+	
+			
+	footer p, footer nav { margin-top:8px;}
+	footer nav li, footer p {
+		font-family:"pill-gothic-600mg-1","pill-gothic-600mg-2",sans-serif;
+		font-size:12px;
+		letter-spacing:normal;
+		line-height:160%;
+			}
+
+	footer #browser li a {
+		font-family: "pill-gothic-600mg-1","pill-gothic-600mg-2",sans-serif;
+		color: #39444a;
+		text-decoration: none;
+		padding-left: 14px;
+		background: url('../gfx/backs/back_footer_li_arrow.png') no-repeat 0px 1px;
+		}
+
+	footer #connect li a {
+		color: #39444a;
+		text-decoration: none;
+		padding-left: 14px;
+		background: url('../gfx/backs/back_footer_li_arrow.png') no-repeat 0px 1px;
+		}
+
+	footer #browser li a:hover {
+		color: #fff;
+		text-decoration: none;
+		padding-left: 14px;
+		background: url('../gfx/backs/back_footer_li_arrow.png') no-repeat 0px -18px;
+		}
+
+	footer #connect li a:hover {
+		color: #fff;
+		text-decoration: none;
+		padding-left: 14px;
+		background: url('../gfx/backs/back_footer_li_arrow.png') no-repeat 0px -18px;
+		}
+		
+	
+			
+		/* margenes verticales
+---------------------------------------- */
+	.s1 h1 	{ margin:10px 0 10px 0;}
+	.s1 p 	{ margin-bottom:10px;}
+	.s1 h2 	{ margin-top:44px;}
+	#clients{ margin: 20px 0;}
+
+/****************  STUDIO PAGE  ********************/
+	#main_about 	{ margin-bottom: 15px;}
+	#history 		{ margin-bottom: 15px;}
+	#office_slider  { margin-top: 15px;	}
+	#services 		{ margin-top: 15px;}
+	#infography_2 div {	margin-top: 10px; }
+	#profiles {margin-top: 20px;}
+	.avatar   {margin-top: 20px;}
+	.avatar h2  {margin-bottom: 10px;}
+	.avatar img 	{ margin-bottom: 10px;}
+		.avatar .like {margin-top: 10px;}
+	#what_to_expect {margin-bottom: 20px;}
+}
+
+
+/* 544px
+---------------------------------------- */
+
+@media only screen and (min-width: 544px) {
+
+	#header h1 { 
+		font-family: 'TrumpGothicEastMedium',Helvetica,Arial,"Trebuchet MS",Tahoma,Arial,sans-serif;
+		font-size: 119px;
+		letter-spacing: 5.5px;
+		line-height: 100%;
+		}
+
+	#header p {
+		font-family: "pill-gothic-600mg-1","pill-gothic-600mg-2",sans-serif;
+		font-size: 13.8px;
+		margin-bottom:30px;
+	}
+
+	#studio_page #header h1 {
+		font-family: 'TrumpGothicEastMedium', Helvetica, Arial, "Trebuchet MS", Tahoma, Arial, sans-serif;
+		font-size: 100px;
+		line-height: 100%;
+		letter-spacing: 4.6px;
+		}
+
+	#studio_page #header p {
+		font-family: "pill-gothic-600mg-1","pill-gothic-600mg-2",sans-serif;
+		font-size: 13.6px;
+		margin-bottom:30px;
+	}
+	
+	#work_page #header h1 {
+		font-family: 'TrumpGothicEastMedium', Helvetica, Arial, "Trebuchet MS", Tahoma, Arial, sans-serif;
+		font-size: 87px;
+		line-height: 100%;
+		letter-spacing: 4px;
+		}
+
+	#work_page #header p {
+		font-family: "pill-gothic-600mg-1","pill-gothic-600mg-2",sans-serif;
+		font-size: 14px;
+		margin-bottom:30px;
+	}	
+	
+	#inicio_page #header h1 {
+		font-family: 'TrumpGothicEastMedium', Helvetica, Arial, "Trebuchet MS", Tahoma, Arial, sans-serif;
+		font-size: 112px;
+		line-height: 100%;
+		letter-spacing: 5.5px;
+	}
+	
+	#inicio_page #header p {
+		font-family: "pill-gothic-600mg-1","pill-gothic-600mg-2",sans-serif;
+		font-style:normal;
+		font-weight: 400;
+		font-size: 15px;
+		line-height: 160%;
+		margin-bottom: 30px;
+		padding: 0px;
+	}
+	
+	#agencia_page #header h1 {
+		font-family: 'TrumpGothicEastMedium', Helvetica, Arial, "Trebuchet MS", Tahoma, Arial, sans-serif;
+		font-size: 87px;
+		line-height: 100%;
+		letter-spacing: 3.9px;
+	}
+	
+	#agencia_page #header p {
+		font-family: "pill-gothic-600mg-1","pill-gothic-600mg-2",sans-serif;
+		font-style:normal;
+		font-weight: 400;
+		font-size: 15px;
+		line-height: 160%;
+		margin-bottom: 30px;
+		padding: 0px;
+	}
+
+	#nav li {
+		font-family: 'TrumpGothicEastRegular', Helvetica, Arial, "Trebuchet MS", Tahoma, Arial, sans-serif;
+		font-size: 22px;
+		font-weight: normal;
+		letter-spacing: 1.8px;
+		float: left;
+		font-weight: normal;
+	}
+
+	#nav ul li a {
+		text-decoration: none;
+		color: #39444a;
+	}
+
+	#nav ul li a:active {
+		text-decoration: none;
+		color: #ffffff;
+	}
+
+		/*Texto intro y Happy clients*/
+	.s1 h1 {
+		font-family: 'TrumpGothicEastMedium', Helvetica, Arial, "Trebuchet MS", Tahoma, Arial, sans-serif;
+		font-size: 34px;
+		margin:25px 0 15px 0;
+		letter-spacing: 2px; 
+				text-transform: uppercase;
+		}
+	.s1 h2 {
+		font-family: 'TrumpGothicEastRegular', Helvetica, Arial, "Trebuchet MS", Tahoma, Arial, sans-serif;
+		font-size: 30px; 
+		margin-top:46px;
+		letter-spacing: 1.6px;
+		}
+
+	.s1 span {
+		font-family: 'TrumpGothicEastMedium', Helvetica, Arial, "Trebuchet MS", Tahoma, Arial, sans-serif;
+		font-size: 18px; 
+		margin-top:46px;
+		text-transform: uppercase;
+		letter-spacing: 2px;
+		}
+
+	.s1 p {
+		font-family: "republic-web-1","republic-web-2",serif;
+		font-size: 13px; 
+		letter-spacing: 0.3px;
+		}
+		
+		
+		.s1 p span.smallcaps {
+			font-family: "republic-web-1","republic-web-2",serif;
+			text-transform: uppercase;
+			font-size: 11px;
+			letter-spacing: 0.3px;
+
+			}
+			
+			#invitation {
+						font-family: "republic-web-1","republic-web-2",serif;
+							margin-top: 20px;
+						font-size: 14px; 
+			}	
+
+			#invitation p span  {
+				font-family: "republic-web-1","republic-web-2",serif;
+
+			}
+
+			#invitation p span a  {
+					font-family: "republic-web-1","republic-web-2",serif;
+				color: #39444a;
+				font-size: 13px; 
+				text-decoration: none;
+				text-transform: none;
+				letter-spacing: normal;
+			}
+				
+			/*Texto reducido para Procesos de Producción y Clientes*/
+	.s2 h1 {
+		font-family: 'TrumpGothicEastMedium', Helvetica, Arial, "Trebuchet MS", Tahoma, Arial, sans-serif;
+		font-size: 26px; 
+	letter-spacing: 1px; 
+		}
+		
+		.s2 h2 {
+			font-family: 'TrumpGothicEastRegular', Helvetica, Arial, "Trebuchet MS", Tahoma, Arial, sans-serif;
+			font-size: 24px;
+			text-transform: uppercase;
+		letter-spacing: 2px;
+				}	
+
+	.s2 p {
+		font-family: "pill-gothic-600mg-1","pill-gothic-600mg-2",sans-serif;
+		font-size: 13px; 
+		letter-spacing: 0.3px;
+		line-height: 160%;
+
+		}
+		
+		.s2 em {
+			font-family: "pill-gothic-600mg-1","pill-gothic-600mg-2",sans-serif;
+			font-style: italic;
+			font-size: 14px; 
+			letter-spacing: 0.3px;
+			line-height: 30px;
+		}
+		
+	.s2 ul li {
+		font-family: "pill-gothic-600mg-1","pill-gothic-600mg-2",sans-serif;
+		font-size: 12px; 
+		letter-spacing: 0.3px;
+		text-transform: uppercase;
+		}
+
+		/*Texto blanco para fondo amarillo*/
+	.s3 q {
+		font-family: "republic-web-1","republic-web-2",serif;
+		font-size: 20px;
+		letter-spacing: 0.3px; 
+		}
+		
+	.s3 .testimonial_text q span.smallcaps {
+		font-family: "republic-web-1","republic-web-2",serif;
+		text-transform: uppercase;
+		font-size: 16px;
+		letter-spacing: 0.3px;
+		font-style: normal;
+		}		
+
+	.s3 h1 {
+		font-family: 'TrumpGothicEastMedium', Helvetica, Arial, "Trebuchet MS", Tahoma, Arial, sans-serif;
+		font-size: 42px;
+		line-height: 100%;
+		margin-top: 10px;
+		letter-spacing: 0.3px;
+		}
+
+	p.cite {
+		font-family: "republic-web-1","republic-web-2",serif;
+		font-style: normal;	
+		font-size: 15px; /* 16px / 16 = 1.625*/	
+		}
+		
+	p.cite span.smallcaps {
+		font-family: "republic-web-1","republic-web-2",serif;
+		text-transform: uppercase;
+		font-size: 11px; 
+		letter-spacing: 0.3px; 
+		}		
+	
+		.s4 h1 {	
+			font-family: 'TrumpGothicEastMedium', Helvetica, Arial, "Trebuchet MS", Tahoma, Arial, sans-serif;
+			font-size: 18px;
+				text-transform: uppercase;
+				letter-spacing: 2px;
+				}	
+			
+		.s4 h2 {
+			font-family:"pill-gothic-600mg-1","pill-gothic-600mg-2",sans-serif;
+			font-size: 13px; 
+	/*		text-transform: uppercase;*/
+			letter-spacing: 0.3px;
+			}
+		
+	.s4 h2 a {
+		text-decoration: none;
+		color: #39444a;	
+		}
+
+	.s4 h3 {
+		font-family:"pill-gothic-600mg-1","pill-gothic-600mg-2",sans-serif;
+		font-size: 11px; 
+		letter-spacing: normal;
+		font-weight: bold;
+		margin-top: 18px;
+				}
+
+	.s4 p {
+		font-family:"pill-gothic-600mg-1","pill-gothic-600mg-2",sans-serif;
+		font-size: 12px; 
+		letter-spacing: normal;
+		line-height: 160%;
+			}
+	
+			.s4 em {
+				font-family:"pill-gothic-600mg-1","pill-gothic-600mg-2",sans-serif;
+				font-size: 12px; 
+				letter-spacing: normal;
+				line-height: 160%;
+				font-style: oblique ;
+			}
+
+			.s4 span.smallcaps {
+				font-family:"pill-gothic-600mg-1","pill-gothic-600mg-2",sans-serif;
+				font-size: 11px; 
+				letter-spacing: normal;
+				line-height: 160%;
+				text-transform: uppercase;
+			}		
+			
+			
+	footer h2 {
+		font-family: 'TrumpGothicEastRegular', Helvetica, Arial, "Trebuchet MS", Tahoma, Arial, sans-serif;
+		font-size: 24px;
+		font-weight: normal;
+		letter-spacing: 3px;
+		margin-right: 20px;
+		margin-bottom: 5px;
+		
+		
+		}
+
+	footer p, footer nav { margin-top:8px;}
+	footer nav li, footer p {
+		font-family:"pill-gothic-600mg-1","pill-gothic-600mg-2",sans-serif;
+		font-size:12px;
+		letter-spacing:normal;
+		line-height:160%;
+		}
+
+	footer #browser li a {
+		font-family: "pill-gothic-600mg-1","pill-gothic-600mg-2",sans-serif;
+		color: #39444a;
+		text-decoration: none;
+		padding-left: 14px;
+		background: url('../gfx/backs/back_footer_li_arrow.png') no-repeat 0px 1px;
+	}
+
+	footer #connect li a {
+		color: #39444a;
+		text-decoration: none;
+		padding-left: 14px;
+		background: url('../gfx/backs/back_footer_li_arrow.png') no-repeat 0px 1px;
+	}
+
+	footer #browser li a:hover {
+		color: #fff;
+		text-decoration: none;
+		padding-left: 14px;
+		background: url('../gfx/backs/back_footer_li_arrow.png') no-repeat 0px -18px;
+	}
+
+	footer #connect li a:hover {
+		color: #fff;
+		text-decoration: none;
+		padding-left: 14px;
+		background: url('../gfx/backs/back_footer_li_arrow.png') no-repeat 0px -18px;
+	}
+	
+	footer #timeline .date {
+		background: url('../gfx/backs/back_twitter.png') no-repeat 0px 3px;
+		padding-left: 30px;
+	}
+	
+	#copy {
+			font-family: "republic-web-1","republic-web-2",serif;
+		text-align: center;
+		margin-top: 20px;
+		font-size: 12px;
+		height: 100px;
+	}
+
+	#copy .strike {
+		width: 42px;
+		height: 10px;
+		padding-top: 10px;
+		float: left;
+		background:  url('../gfx/backs/back_copy_line.png') repeat-x left center;			
+	}
+	#copy .copyright {
+		width: 460px;
+		float:left;
+		text-align: center;
+	}
+	
+	#copy {
+			font-family: "republic-web-1","republic-web-2",serif;
+		text-align: center;
+		margin-top: 20px;
+		font-size: 12px;
+		height: 100px;
+		}
+		
+
+		#copy .copyright  span.smallcaps {
+			font-family: "republic-web-1","republic-web-2",serif;
+			text-transform: uppercase;
+			font-size: 10px; 
+			letter-spacing: 0.3px; 
+			}
+
+	/* margenes verticales
+	---------------------------------------- */
+	.s1 h1 	{ margin:15px 0 6px; line-height:45px;}
+	.s1 p 	{ margin-bottom:20px;}
+	.s1 h2 	{ margin-top:44px;}
+	#clients{ margin: 20px 0;}
+	
+	/****************  STUDIO PAGE  ********************/
+	#main_about 	{ margin-bottom: 37px;}
+	#history 		{ margin-bottom: 15px;}
+	#office_slider  { margin-top: 15px;	}
+	#services 		{ margin-top: 25px;}
+	#infography_2 div {	margin-top: 10px; }
+	#profiles {margin-top: 40px;}
+	.avatar   {margin-top: 20px;}
+	.avatar h2  {margin-bottom: 10px;}
+	.avatar .like {margin-top: 10px;}	
+	.avatar img 	{ margin-bottom: 10px;}	
+	#what_to_expect {margin-bottom: 0px;}	
+}
+
+/* 960px
+---------------------------------------- */
+@media only screen and (min-width: 960px) {
+
+	#header h1 { 
+		font-family: 'TrumpGothicEastMedium',Helvetica,Arial,"Trebuchet MS",Tahoma,Arial,sans-serif;
+		font-size: 121px;
+		letter-spacing: 5.6px;
+		line-height: 100%;
+		}
+		
+	#header p {
+		font-family: "pill-gothic-600mg-1","pill-gothic-600mg-2",sans-serif;
+		font-size: 14.4px;
+		margin-bottom:30px;
+		}
+
+	#studio_page #header h1 {
+		font-family: 'TrumpGothicEastMedium', Helvetica, Arial, "Trebuchet MS", Tahoma, Arial, sans-serif;
+		font-size: 104px;
+		line-height: 100%;
+		letter-spacing: 4.8px;
+		}
+
+	#studio_page #header p {
+		font-family: "pill-gothic-600mg-1","pill-gothic-600mg-2",sans-serif;
+		font-size: 14px;
+		margin-bottom:30px;
+	}
+	
+	#work_page #header h1 {
+		font-family: 'TrumpGothicEastMedium', Helvetica, Arial, "Trebuchet MS", Tahoma, Arial, sans-serif;
+		font-size: 90px;
+		line-height: 100%;
+		letter-spacing: 4.1px;
+		}
+
+	#work_page #header p {
+		font-family: "pill-gothic-600mg-1","pill-gothic-600mg-2",sans-serif;
+		font-size: 14px;
+		margin-bottom:30px;
+	}
+	
+	
+	#inicio_page #header h1 {
+		font-family: 'TrumpGothicEastMedium', Helvetica, Arial, "Trebuchet MS", Tahoma, Arial, sans-serif;
+		font-size: 118px;
+		line-height: 100%;
+		letter-spacing: 5.4px;
+	}
+	
+	#inicio_page #header p {
+		font-family: "pill-gothic-600mg-1","pill-gothic-600mg-2",sans-serif;
+		font-style:normal;
+		font-weight: 400;
+		font-size: 15px;
+		line-height: 160%;
+		margin-bottom: 30px;
+		padding: 0px;
+	}
+	
+	#agencia_page #header h1 {
+		font-family: 'TrumpGothicEastMedium', Helvetica, Arial, "Trebuchet MS", Tahoma, Arial, sans-serif;
+		font-size: 90px;
+		line-height: 100%;
+		letter-spacing: 4.1px;
+	}
+	
+	#agencia_page #header p {
+		font-family: "pill-gothic-600mg-1","pill-gothic-600mg-2",sans-serif;
+		font-style:normal;
+		font-weight: 400;
+		font-size: 15px;
+		line-height: 160%;
+		margin-bottom: 30px;
+		padding: 0px;
+	}
+
+
+	#nav li {
+		font-family: 'TrumpGothicEastRegular', Helvetica, Arial, "Trebuchet MS", Tahoma, Arial, sans-serif;
+		font-size:21px; 
+		letter-spacing: 2.4px; 
+		float: left;
+		margin-right: 17px;
+		font-weight: normal;
+		}
+
+
+	#nav ul li a {
+		text-decoration: none;
+		color: #39444a;
+	}
+
+	#nav ul li a:active {
+		text-decoration: none;
+		color: #ffffff;
+	}
+
+	#clients{
+		margin-top:40px;
+	}
+	#call_to_action{
+		margin:10px 0;
+	}
+
+
+	/*Texto intro y Happy clients*/
+		.s1 h1 {
+		font-family: 'TrumpGothicEastMedium', Helvetica, Arial, "Trebuchet MS", Tahoma, Arial, sans-serif;
+		font-size: 34px;
+		margin:25px 0 15px 0;
+		letter-spacing: 3px; 
+				text-transform: uppercase;
+	}
+		.s1 h2 {
+		font-family: 'TrumpGothicEastRegular', Helvetica, Arial, "Trebuchet MS", Tahoma, Arial, sans-serif;
+		font-size: 30px;
+		margin-top:46px;
+		letter-spacing: 1.6px;
+	}
+
+	.s1 span {
+		font-family: 'TrumpGothicEastMedium', Helvetica, Arial, "Trebuchet MS", Tahoma, Arial, sans-serif;
+		font-size: 18px; 
+		margin-top:46px;
+		text-transform: uppercase;
+		letter-spacing: 2px;
+	}
+
+	.s1 p {
+		font-family: "republic-web-1","republic-web-2",serif;
+		font-size: 14px; 
+		letter-spacing: 0.3px;
+	}
+	
+	.s1 p span.smallcaps {
+		font-family: "republic-web-1","republic-web-2",serif;
+		text-transform: uppercase;
+		font-size: 11px;
+		letter-spacing: 0.3px;
+		
+		}	
+		
+		#invitation {
+					font-family: "republic-web-1","republic-web-2",serif;
+			margin-top: 20px;
+					font-size: 14px; 
+		}	
+
+		#invitation p span  {
+			font-family: "republic-web-1","republic-web-2",serif;
+
+		}
+
+		#invitation p span a  {
+				font-family: "republic-web-1","republic-web-2",serif;
+			color: #39444a;
+			font-size: 14px; 
+			text-decoration: none;
+			text-transform: none;
+			letter-spacing: normal;
+		}		
+		
+		/*Texto reducido para Procesos de Producción y Clientes*/
+	.s2 h1 {
+		font-family: 'TrumpGothicEastMedium', Helvetica, Arial, "Trebuchet MS", Tahoma, Arial, sans-serif;
+		font-size: 30px; 
+		letter-spacing: 2px; 
+	}
+
+	.s2 h2 {
+		font-family: 'TrumpGothicEastRegular', Helvetica, Arial, "Trebuchet MS", Tahoma, Arial, sans-serif;
+		font-size: 24px;
+		text-transform: uppercase;
+	letter-spacing: 2px;
+			}
+
+	.s2 p {
+		font-family: "pill-gothic-600mg-1","pill-gothic-600mg-2",sans-serif;
+		font-size: 14px; 
+		letter-spacing: 0.3px;
+		line-height: 160%;
+	}
+	
+	
+	.s2 em {
+		font-family: "pill-gothic-600mg-1","pill-gothic-600mg-2",sans-serif;
+		font-style: italic;
+		font-size: 14px; 
+		letter-spacing: 0.3px;
+		line-height: 30px;
+	}
+	.s2 ul li {
+		font-family: "pill-gothic-600mg-1","pill-gothic-600mg-2",sans-serif;
+		font-size: 12px; 
+		letter-spacing: 0.3px;
+		text-transform: uppercase;
+	}
+
+	/*Texto blanco para fondo amarillo*/
+	.s3 q {
+		font-family: "republic-web-1","republic-web-2",serif;
+		font-size: 20px;
+		letter-spacing: 0.3px;
+	}
+	
+	.s3 .testimonial_text q span.smallcaps {
+		font-family: "republic-web-1","republic-web-2",serif;
+		text-transform: uppercase;
+		font-size: 16px;
+		letter-spacing: 0.3px;
+		font-style: normal;
+		
+		}
+
+	.s3 h1 {
+		font-family: 'TrumpGothicEastMedium', Helvetica, Arial, "Trebuchet MS", Tahoma, Arial, sans-serif;
+		font-size: 42px;
+		line-height: 100%;
+		margin-top: 10px;
+		letter-spacing: 0.03px; 
+	}
+
+	
+	p.cite {
+		font-family: "republic-web-1","republic-web-2",serif;
+		font-style: normal;	
+		font-size: 15px;
+		}
+
+	p.cite span.smallcaps {
+		font-family: "republic-web-1","republic-web-2",serif;
+		text-transform: uppercase;
+		font-size: 11px;
+		letter-spacing: 0.3px; 
+		}
+	
+	.s4 h1 {	
+		font-family: 'TrumpGothicEastMedium', Helvetica, Arial, "Trebuchet MS", Tahoma, Arial, sans-serif;
+		font-size: 18px;
+			text-transform: uppercase;
+			letter-spacing: 2px;
+			}
+
+		.s4 h2 {
+			font-family:"pill-gothic-600mg-1","pill-gothic-600mg-2",sans-serif;
+			font-size: 13px; 
+	/*		text-transform: uppercase;*/
+			letter-spacing: 0.3px;
+			}
+		
+	.s4 h2 a {
+		text-decoration: none;
+		color: #39444a;	
+		}	
+			
+	.s4 h3 {
+		font-family:"pill-gothic-600mg-1","pill-gothic-600mg-2",sans-serif;
+		font-size: 11px; 
+		letter-spacing: normal;
+		font-weight: bold;
+		margin-top: 18px;
+				}
+				
+	.s4 p {
+		font-family:"pill-gothic-600mg-1","pill-gothic-600mg-2",sans-serif;
+		font-size: 12px; 
+		letter-spacing: normal;
+		line-height: 160%;
+		}
+		
+		.s4 em {
+			font-family:"pill-gothic-600mg-1","pill-gothic-600mg-2",sans-serif;
+			font-size: 12px; 
+			letter-spacing: normal;
+			line-height: 160%;
+			font-style: oblique ;
+		}
+
+		.s4 span.smallcaps {
+			font-family:"pill-gothic-600mg-1","pill-gothic-600mg-2",sans-serif;
+			font-size: 11px; 
+			letter-spacing: normal;
+			line-height: 160%;
+			text-transform: uppercase;
+		}		
+
+	footer h2 {
+		font-family: 'TrumpGothicEastRegular', Helvetica, Arial, "Trebuchet MS", Tahoma, Arial, sans-serif;
+		font-size: 24px;
+		letter-spacing: 3px;
+		margin-right: 17px;
+		font-weight: normal;
+		margin-bottom: 10px;
+		
+	}
+	footer p, footer nav { margin-top:8px;}
+	footer nav li, footer p {
+		font-family:"pill-gothic-600mg-1","pill-gothic-600mg-2",sans-serif;
+		font-size:12px;
+		letter-spacing:normal;
+		line-height:160%;
+	}
+	
+	footer #browser li a {
+		font-family: "pill-gothic-600mg-1","pill-gothic-600mg-2",sans-serif;
+		color: #39444a;
+		text-decoration: none;
+		padding-left: 14px;
+		background: url('../gfx/backs/back_footer_li_arrow.png') no-repeat 0px 1px;
+	}
+	
+	footer #connect li a {
+		color: #39444a;
+		text-decoration: none;
+		padding-left: 14px;
+		background: url('../gfx/backs/back_footer_li_arrow.png') no-repeat 0px 1px;
+	}
+	
+	footer #browser li a:hover {
+		color: #fff;
+		text-decoration: none;
+		padding-left: 14px;
+		background: url('../gfx/backs/back_footer_li_arrow.png') no-repeat 0px -18px;
+	}
+	
+	footer #connect li a:hover {
+		color: #fff;
+		text-decoration: none;
+		padding-left: 14px;
+		background: url('../gfx/backs/back_footer_li_arrow.png') no-repeat 0px -18px;
+	}
+	
+	footer #timeline .date {
+		background: url('../gfx/backs/back_twitter.png') no-repeat 0px 3px;
+		padding-left: 30px;
+	}
+
+	#copy {
+		font-family: "republic-web-1","republic-web-2",serif;
+		text-align: center;
+		margin-top: 40px;
+		font-size: 14px;
+		height: 100px;
+	}
+
+	#copy .strike {
+		width: 195px;
+		height: 10px;
+		padding-top: 10px;
+		float: left;
+		background:  url('../gfx/backs/back_copy_line.png') repeat-x left center;			
+	}
+	#copy .copyright {
+		width: 570px;
+		float:left;
+		text-align: center;
+	}
+	
+		#copy .copyright  span.smallcaps {
+			font-family: "republic-web-1","republic-web-2",serif;
+			text-transform: uppercase;
+			font-size: 12px; 
+			letter-spacing: 0.3px; 
+			}
+
+		
+		
+	/* margenes verticales
+	---------------------------------------- */
+	
+	.s1 h1 	{ margin:15px 0 6px; line-height:45px;}
+	.s1 p 	{ margin-bottom:20px;}
+	.s1 h2 	{ margin-top:40px;}
+	#clients{ margin: 20px 0;}
+	
+	/****************  STUDIO PAGE  ********************/
+
+	#main_about 	{ margin-bottom: 37px;}
+	#history 		{ margin-bottom: 15px;}
+	#office_slider  { margin-top: 15px;	}
+	#services 		{ margin-top: 25px;}
+	#infography_2 div {	margin-top: 10px; }
+	#profiles {margin-top: 40px;}
+	.avatar   {margin-top: 20px;}
+	.avatar h2  {margin-bottom: 10px;}
+	.avatar .like {margin-top: 10px;}	
+	.avatar img 	{ margin-bottom: 10px;}	
+		#what_to_expect {margin-bottom: 0px;}
+		
+}
+
+
+/* 1200px
+---------------------------------------- */
+@media only screen and (min-width: 1200px) {
+
+	#header h1 {
+		font-family: 'TrumpGothicEastMedium', Helvetica, Arial, "Trebuchet MS", Tahoma, Arial, sans-serif;
+		font-size: 152px;
+		line-height: 100%;
+		letter-spacing: 7px;
+		font-weight: normal;
+	}
+
+	#header p {
+		font-family: "pill-gothic-600mg-1","pill-gothic-600mg-2",sans-serif;
+		font-style:normal;
+		font-weight: 400;
+		font-size: 18px;
+		line-height: 160%;
+		margin-bottom: 30px;
+		padding: 0px;
+	}
+
+	#studio_page #header h1 {
+		font-family: 'TrumpGothicEastMedium', Helvetica, Arial, "Trebuchet MS", Tahoma, Arial, sans-serif;
+		font-size: 130px;
+		line-height: 100%;
+		letter-spacing: 6px;
+	}
+	
+	#studio_page #header p {
+		font-family: "pill-gothic-600mg-1","pill-gothic-600mg-2",sans-serif;
+		font-style:normal;
+		font-weight: 400;
+		font-size: 17px;
+		line-height: 160%;
+		margin-bottom: 30px;
+		padding: 0px;
+	}
+	
+	#work_page #header h1 {
+		font-family: 'TrumpGothicEastMedium', Helvetica, Arial, "Trebuchet MS", Tahoma, Arial, sans-serif;
+		font-size: 112px;
+		line-height: 100%;
+		letter-spacing: 5.1px;
+	}
+	
+	#work_page #header p {
+		font-family: "pill-gothic-600mg-1","pill-gothic-600mg-2",sans-serif;
+		font-style:normal;
+		font-weight: 400;
+		font-size: 17px;
+		line-height: 160%;
+		margin-bottom: 30px;
+		padding: 0px;
+	}	
+	
+	
+	#inicio_page #header h1 {
+		font-family: 'TrumpGothicEastMedium', Helvetica, Arial, "Trebuchet MS", Tahoma, Arial, sans-serif;
+		font-size: 146px;
+		line-height: 100%;
+		letter-spacing: 6.7px;
+	}
+	
+	#inicio_page #header p {
+		font-family: "pill-gothic-600mg-1","pill-gothic-600mg-2",sans-serif;
+		font-style:normal;
+		font-weight: 400;
+		font-size: 17px;
+		line-height: 160%;
+		margin-bottom: 30px;
+		padding: 0px;
+	}
+	
+	#agencia_page #header h1 {
+		font-family: 'TrumpGothicEastMedium', Helvetica, Arial, "Trebuchet MS", Tahoma, Arial, sans-serif;
+		font-size: 113px;
+		line-height: 100%;
+		letter-spacing: 5.1px;
+	}
+	
+	#agencia_page #header p {
+		font-family: "pill-gothic-600mg-1","pill-gothic-600mg-2",sans-serif;
+		font-style:normal;
+		font-weight: 400;
+		font-size: 17px;
+		line-height: 160%;
+		margin-bottom: 30px;
+		padding: 0px;
+	}	
+	
+	#nav li {
+		font-family: 'TrumpGothicEastRegular', Helvetica, Arial, "Trebuchet MS", Tahoma, Arial, sans-serif;
+		font-size: 27px;
+		font-weight: normal;
+		letter-spacing: 3px;
+		float: left;
+		margin-right: 20px;
+	}
+	
+	#nav ul li a {
+		text-decoration: none;
+		color: #39444a;
+	}
+
+	#nav ul li a:active {
+		text-decoration: none;
+		color: #ffffff;
+	}
+
+	#clients{
+		margin-top:40px;
+	}
+	#call_to_action{
+		margin:10px 0;
+	}
+	
+	/*Texto intro y Happy clients*/
+	.s1 h1 {
+		font-family: 'TrumpGothicEastMedium', Helvetica, Arial, "Trebuchet MS", Tahoma, Arial, sans-serif;
+		font-size: 40px;
+		margin:10px 0 15px 0;
+		letter-spacing: 4px; 
+		text-transform: uppercase;
+
+	}
+	.s1 h2 {
+		font-family: 'TrumpGothicEastRegular', Helvetica, Arial, "Trebuchet MS", Tahoma, Arial, sans-serif;
+		font-size: 30px;
+		margin-top:46px;
+		letter-spacing: 3px;
+	}
+	
+	.s1 span {
+		font-family: 'TrumpGothicEastMedium', Helvetica, Arial, "Trebuchet MS", Tahoma, Arial, sans-serif;
+		font-size: 18px; 
+		margin-top:46px;
+		text-transform: uppercase;
+		letter-spacing: 2px;
+	}
+	
+	
+	
+	.s1 p {
+		font-family: "republic-web-1","republic-web-2",serif;
+		font-size: 14px; 
+		letter-spacing: 0.3px; 
+	
+	}
+	
+	.s1 p span.smallcaps {
+		font-family: "republic-web-1","republic-web-2",serif;
+		text-transform: uppercase;
+		font-size: 11px;
+		letter-spacing: 0.3px;
+		
+		}	
+		
+	#invitation {
+				font-family: "republic-web-1","republic-web-2",serif;
+		margin-top: 20px;
+				font-size: 14px; 
+	}	
+	
+	#invitation p span  {
+		font-family: "republic-web-1","republic-web-2",serif;
+
+	}
+	
+	#invitation p span a  {
+		font-family: "republic-web-1","republic-web-2",serif;
+		color: #39444a;
+		font-size: 14px; 
+		text-decoration: none;
+		text-transform: none;
+		letter-spacing: normal;
+	}
+	
+		/*Texto reducido para Procesos de Producción y Clientes*/
+	.s2 h1 {
+		font-family: 'TrumpGothicEastMedium', Helvetica, Arial, "Trebuchet MS", Tahoma, Arial, sans-serif;
+		font-size: 33px; 
+		letter-spacing: 2px; 
+	}
+
+	.s2 h2 {
+		font-family: 'TrumpGothicEastRegular', Helvetica, Arial, "Trebuchet MS", Tahoma, Arial, sans-serif;
+		font-size: 24px;
+		text-transform: uppercase;
+		letter-spacing: 2px;
+			}
+
+	.s2 p {
+		font-family: "pill-gothic-600mg-1","pill-gothic-600mg-2",sans-serif;
+		font-size: 14px; 
+		letter-spacing: 0.3px;
+		line-height: 160%;
+
+	}
+	
+	.s2 em {
+		font-family: "pill-gothic-600mg-1","pill-gothic-600mg-2",sans-serif;
+		font-style: italic;
+		font-size: 14px; 
+		letter-spacing: 0.3px;
+		line-height: 30px;
+	}
+	
+	.s2 h3 {
+		font-family: "republic-web-1","republic-web-2",serif;
+		font-size: 12px; 
+		font-variant: small-caps;
+		letter-spacing: 1px;
+		font-weight: normal;
+		margin: 0px;
+		padding: 0px;
+		line-height: 100%;
+	}
+	
+	.s2 ul li {
+		font-family: "pill-gothic-600mg-1","pill-gothic-600mg-2",sans-serif;
+		font-size: 12px; 
+		letter-spacing: 0.3px;
+		text-transform: uppercase;
+	}
+
+	/*Texto blanco para fondo amarillo*/
+			
+	.s3 h1 {
+		font-family: 'TrumpGothicEastMedium', Helvetica, Arial, "Trebuchet MS", Tahoma, Arial, sans-serif;
+		font-size: 42px;
+		line-height: 100%;
+		margin-top: 10px;
+		letter-spacing: 0.03px; 
+	
+	}
+	
+	.s3 q {
+		font-family: "republic-web-1","republic-web-2",serif;
+		font-size: 20px;
+		letter-spacing: 0.3px;
+	}
+	
+	.s3 .testimonial_text q span.smallcaps {
+		font-family: "republic-web-1","republic-web-2",serif;
+		text-transform: uppercase;
+		font-size: 16px;
+		letter-spacing: 0.3px;
+		font-style: normal;
+		
+		}
+	
+	p.cite {
+		font-family: "republic-web-1","republic-web-2",serif;
+		font-style: normal;	
+		font-size: 15px;
+		}
+		
+	p.cite span.smallcaps {
+		font-family: "republic-web-1","republic-web-2",serif;
+		text-transform: uppercase;
+		font-size: 12px;
+		letter-spacing: 0.3px; 
+			}		
+		
+	.s4 h1 {	
+		font-family: 'TrumpGothicEastMedium', Helvetica, Arial, "Trebuchet MS", Tahoma, Arial, sans-serif;
+		font-size: 18px;
+		text-transform: uppercase;
+		letter-spacing: 3px;
+				}		
+		
+	.s4 h2 {
+		font-family:"pill-gothic-600mg-1","pill-gothic-600mg-2",sans-serif;
+		font-size: 13px; 
+/*		text-transform: uppercase;*/
+		letter-spacing: 0.3px;
+		}
+
+	.s4 h2 a {
+		text-decoration: none;
+		color: #39444a;	
+		}
+						
+	.s4 h3 {
+		font-family:"pill-gothic-600mg-1","pill-gothic-600mg-2",sans-serif;
+		font-size: 11px; 
+		letter-spacing: normal;
+		font-weight: bold;
+		margin-top: 18px;
+			}
+				
+	.s4 p {
+		font-family:"pill-gothic-600mg-1","pill-gothic-600mg-2",sans-serif;
+		font-size: 12px; 
+		letter-spacing: normal;
+		line-height: 160%;
+	}
+	
+	.s4 em {
+		font-family:"pill-gothic-600mg-1","pill-gothic-600mg-2",sans-serif;
+		font-size: 12px; 
+		letter-spacing: normal;
+		line-height: 160%;
+		font-style: oblique ;
+	}
+
+	.s4 span.smallcaps {
+		font-family:"pill-gothic-600mg-1","pill-gothic-600mg-2",sans-serif;
+		font-size: 12px; 
+		letter-spacing: normal;
+		line-height: 160%;
+		text-transform: uppercase;
+	}
+		
+	footer h2 {
+		font-family: 'TrumpGothicEastRegular', Helvetica, Arial, "Trebuchet MS", Tahoma, Arial, sans-serif;
+		font-size: 26px;
+		font-weight: normal;
+		letter-spacing: 3px;
+		margin-right: 20px;
+		margin-bottom: 10px;
+	}
+	
+	footer nav li, footer p {
+		font-family: "pill-gothic-600mg-1","pill-gothic-600mg-2",sans-serif;
+		font-size: 12px; 
+		letter-spacing: normal;
+		line-height: 175%;
+	}	
+	
+	footer ul {
+		margin: 0;
+		padding: 0;
+		list-style: none;
+	} 
+	
+	footer #browser li a {
+		font-family: "pill-gothic-600mg-1","pill-gothic-600mg-2",sans-serif;
+		color: #39444a;
+		text-decoration: none;
+		padding-left: 14px;
+		background: url('../gfx/backs/back_footer_li_arrow.png') no-repeat 0px 1px;
+	}
+	
+	footer #connect li a {
+		color: #39444a;
+		text-decoration: none;
+		padding-left: 14px;
+		background: url('../gfx/backs/back_footer_li_arrow.png') no-repeat 0px 1px;
+	}
+	
+	footer #browser li a:hover {
+		color: #fff;
+		text-decoration: none;
+		padding-left: 14px;
+		background: url('../gfx/backs/back_footer_li_arrow.png') no-repeat 0px -18px;
+	}
+	
+	footer #connect li a:hover {
+		color: #fff;
+		text-decoration: none;
+		padding-left: 14px;
+		background: url('../gfx/backs/back_footer_li_arrow.png') no-repeat 0px -18px;
+	}
+	
+	footer #timeline .date {
+		background: url('../gfx/backs/back_twitter.png') no-repeat 0px 3px;
+		padding-left: 30px;
+	}
+	
+	#copy {
+		font-family: "republic-web-1","republic-web-2",serif;
+		text-align: center;
+		margin-top: 40px;
+		font-size: 14px;
+		height: 100px;
+	}
+
+	#copy .strike {
+		width: 315px;
+		height: 10px;
+		padding-top: 10px;
+		float: left;
+		background:  url('../gfx/backs/back_copy_line.png') repeat-x left center;			
+	}
+	#copy .copyright {
+		width: 570px;
+		float:left;
+		text-align: center;
+	}
+	
+		#copy .copyright  span.smallcaps {
+			font-family: "republic-web-1","republic-web-2",serif;
+			text-transform: uppercase;
+			font-size: 12px; 
+			letter-spacing: 0.3px; 
+			}
+	
+	/* margenes verticales
+	---------------------------------------- */
+	
+	.s1 h1 	{ margin:10px 0 10px;}
+	.s1 p 	{ margin-bottom:15px;}
+	.s1 h2 	{ margin-top:40px;}
+	#clients{ margin: 40px 0px 10px 0px;}
+	
+	/****************  STUDIO PAGE  ********************/
+
+	#main_about 	{ margin-bottom: 37px;}
+	#history 		{ margin-bottom: 15px;}
+	#office_slider  { margin-top: 15px;	}
+	#services 		{ margin-top: 25px;}
+	#infography_2 div {	margin-top: 10px; }
+	#profiles {margin-top: 40px;}
+	.avatar   {margin-top: 20px;}
+	.avatar h2  {margin-bottom: 10px;}
+	.avatar .like {margin-top: 10px;}
+	.avatar img 	{ margin-bottom: 10px;}
+		#what_to_expect {margin-bottom: 0px;}
+
+}
+
+
+
+
+/* Localized */

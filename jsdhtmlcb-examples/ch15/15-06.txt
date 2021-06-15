@@ -1,0 +1,21 @@
+function dayPart() {
+    var oneDate = new Date();
+    var theHour = oneDate.getHours();
+    if (theHour < 12) {
+        return "morning";
+    } else if (theHour < 18) {
+        return "afternoon";
+    } else {
+        return "evening";
+    }
+}
+
+...
+
+<script language="JavaScript" type="text/javascript">
+<!--
+document.write("Good " + dayPart() + " and welcome")
+//-->
+</script>
+<noscript>Welcome</noscript>
+ to GiantCo.

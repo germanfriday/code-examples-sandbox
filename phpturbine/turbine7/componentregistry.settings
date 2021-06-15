@@ -1,0 +1,1659 @@
+<registry version="7.11" date="20040921">
+
+  <component name="3D Flyout Lite" id="3D Flyout Lite">
+    <parameter type="NUMBER" name="Count" variable="a" defaultValue="10"/>
+    <parameter type="NUMBER" name="Speed" variable="b" defaultValue="50"/>
+    <parameter type="NUMBER" name="View" variable="n" defaultValue="75"/>
+  </component>
+
+  <component name="Camera Graph" id="Camera Graph">
+    <parameter type="COLOR" name="Graph Color" variable="g_color" defaultValue="#FF6600"/>
+    <parameter type="NUMBER" name="Graph Thikness" variable="g_stroke" defaultValue="0.5"/>
+    <parameter type="NUMBER" name="Graph Alpha" variable="g_alpha" defaultValue="100"/>
+    <parameter type="NUMBER" name="Zoom Factor" variable="zoom" defaultValue="2"/>
+    <parameter type="NUMBER" name="X Interval" variable="x_interval" defaultValue="1"/>
+    <parameter type="NUMBER" name="Time Factor" variable="TimeFactor" defaultValue="20"/>
+
+    <parameter type="NUMBER" name="Graph Limit x1" variable="x1" defaultValue="5"/>
+    <parameter type="NUMBER" name="Graph Limit y1" variable="y1" defaultValue="0"/>
+    <parameter type="NUMBER" name="Graph Limit x2" variable="x2" defaultValue="525"/>
+    <parameter type="NUMBER" name="Graph Limit y2" variable="y2" defaultValue="400"/>
+
+    <parameter type="BOOLEAN" name="Preview Video" variable="v_show" defaultValue="true"/>
+    <parameter type="NUMBER" name="Video Alpha" variable="v_alpha" defaultValue="40"/>
+    <parameter type="NUMBER" name="Min. Sensitivity" variable="v_min" defaultValue="30"/>
+  </component>
+
+  <component name="Microphone Graph" id="Microphone Graph">
+    <parameter type="COLOR" name="Graph Color" variable="g_color" defaultValue="#33CC33"/>
+	  <parameter type="NUMBER" name="Graph Thikness" variable="g_stroke" defaultValue="0.5"/>
+    <parameter type="NUMBER" name="Graph Alpha" variable="g_alpha" defaultValue="100"/>
+    <parameter type="NUMBER" name="Zoom Factor" variable="zoom" defaultValue="2"/>
+    <parameter type="NUMBER" name="X Interval" variable="x_interval" defaultValue="1"/>
+    <parameter type="NUMBER" name="Time Factor" variable="TimeFactor" defaultValue="20"/>
+
+    <parameter type="NUMBER" name="Graph Limit x1" variable="x1" defaultValue="5"/>
+    <parameter type="NUMBER" name="Graph Limit y1" variable="y1" defaultValue="0"/>
+    <parameter type="NUMBER" name="Graph Limit x2" variable="x2" defaultValue="525"/>
+    <parameter type="NUMBER" name="Graph Limit y2" variable="y2" defaultValue="400"/>
+  </component>
+
+  <component name="RealTimeOutput" id="FRealTimeOutputSymbol">
+    <parameter type="BOOLEAN" name="Log When Hidden" variable="logWhenHidden_param" defaultValue="true"/>
+  </component>
+
+  <component name="Calendar" id="calendar">
+    <parameter type="NUMBER" name="Day Size" variable="dsize" defaultValue="18"/>
+    <parameter type="NUMBER" name="Space Between Days" variable="dspace" defaultValue="2"/>
+    <parameter type="COLOR" name="Main Color" variable="mcolor" defaultValue="#EEEEEE"/>
+    <parameter type="COLOR" name="Border Color" variable="bcolor" defaultValue="#333333"/>
+    <parameter type="FONT" name="Font Name" variable="fname" defaultValue="Verdana"/>
+    <parameter type="NUMBER" name="Font Size" variable="fsize" defaultValue="10"/>
+  </component>
+
+  <component name="ColorBox" id="colorbox">
+    <parameter type="STRING" name="ChangeHandler" variable="changeHandler" defaultValue=""/>
+	  <parameter type="BOOLEAN" name="visibleWhenLoad" variable="visibleWhenLoad" defaultValue="false"/>
+  </component>
+
+  <component name="ColorPicker" id="ColorPickerSymbol">
+    <parameter type="STRING" name="ChangeHandler" variable="changeHandler" defaultValue=""/>
+	  <parameter type="COLOR" name="Default Color" variable="defaultColor" defaultValue="#000000"/>
+  </component>
+
+  <component name="DDTree" id="DDTreeSymbol">
+    <parameter type="LIST" name="Selection Mode" variable="selectStyle" defaultValue="single">
+      <value>single</value>
+      <value>multiple</value>
+    </parameter>
+    <parameter type="LIST" name="Node Expand Trigger" variable="expandNodeTrigger" defaultValue="press">
+      <value>press</value>
+      <value>release</value>
+    </parameter>
+    <parameter type="STRING" name="Change Handler" variable="changeHandler" defaultValue=""/>
+  </component>
+
+  <component name="DDTrashSymbol" id="trashSymbol">
+    <parameter type="STRING" name="target clip" variable="_targetInstanceName" defaultValue="Default"/>
+  </component>
+
+  <component name="FBevel" id="FBevelSymbol">
+    <parameter type="LIST" name="Bevel Type" variable="_bevelType" defaultValue="small">
+      <value>small</value>
+      <value>normal</value>
+      <value>double</value>
+    </parameter>
+    <parameter type="BOOLEAN" name="Inverted" variable="_inverted" defaultValue="false"/>
+    <parameter type="COLOR" name="Base Color" variable="_baseColor" defaultValue="#D4D0C8"/>
+    <parameter type="COLOR" name="Highlight Color" variable="_highlight" defaultValue="#F8F7F5"/>
+    <parameter type="COLOR" name="Shadow Color" variable="_shadow" defaultValue="#000000"/>
+    <parameter type="COLOR" name="3D Highlight" variable="_highlight3D" defaultValue="#EEECEA"/>
+    <parameter type="COLOR" name="3D Shadow" variable="_shadow3D" defaultValue="#808080"/>
+    <parameter type="COLOR" name="Ribbon Color" variable="_ribbonColor" defaultValue="#C2BCB1"/>
+    <parameter type="NUMBER" name="Ribbon Width" variable="_ribbonWidth" defaultValue="2"/>
+    <parameter type="NUMBER" name="Base Alpha" variable="_baseAlpha" defaultValue="100"/>
+    <parameter type="NUMBER" name="Line Alpha" variable="_lineAlpha" defaultValue="100"/>
+    <parameter type="NUMBER" name="Ribbon Alpha" variable="_ribbonAlpha" defaultValue="100"/>
+    <parameter type="BOOLEAN" name="Register Skins" variable="_registeredColors" defaultValue="false"/>
+    <parameter type="BOOLEAN" name="Set FUI Base Color" variable="_setFUIColor" defaultValue="false"/>
+    <parameter type="COLOR" name="FUI Base Color" variable="_FUIBaseColor" defaultValue="#99CC00"/>
+  </component>
+
+  <component name="FDataHandler" id="FDataComponent">
+    <parameter type="ARRAY" name="Label" variable="label" defaultValue="[]"/>
+    <parameter type="ARRAY" name="Data" variable="data" defaultValue="[]"/>
+    <parameter type="STRING" name="Click Handler" variable="clickHandler" defaultValue=""/>
+    <parameter type="NUMBER" name="Entrys per Page" variable="EntrysPerPage" defaultValue="2"/>
+    <parameter type="NUMBER" name="Template Height" variable="TextHeight" defaultValue="90"/>
+    <parameter type="BOOLEAN" name="Show Page Buttons" variable="displayPages" defaultValue="true"/>
+    <parameter type="BOOLEAN" name="Show Buttons" variable="displayButtons" defaultValue="true"/>
+    <parameter type="BOOLEAN" name="Animated" variable="animated" defaultValue="false"/>
+  </component>
+
+  <component name="BarChart" id="FBarChartSymbol">
+    <parameter type="OBJECT" name="Layout Options" variable="LayoutOptions" defaultValue="{ChartTitle: 'Bar Chart: Sample Data',XAxisTitle: 'Category (X) Axis', YAxisTitle: 'Value (Y) Axis', Margin: 10, XLabelMaxHeight: 120}"/>
+    <parameter type="OBJECT" name="Chart Event Handlers" variable="ChartEventHandlers" defaultValue="{Press: '', Release: '', RollOver: '', RollOut: ''}"/>
+    <parameter type="ARRAY" name="Category Labels" variable="categoryLabels" defaultValue="['A', 'B', 'C', 'D', 'E']"/>
+    <parameter type="ARRAY" name="Data Values" variable="dataValues" defaultValue="[58,25,50,34,80]"/>
+  </component>
+
+  <component name="LineChart" id="FLineChartSymbol">
+    <parameter type="OBJECT" name="Layout Options" variable="LayoutOptions" defaultValue="{ChartTitle: 'Line Chart: Sample Data',XAxisTitle: 'Category (X) Axis', YAxisTitle: 'Value (Y) Axis', Margin: 10, XLabelMaxHeight: 120}"/>
+    <parameter type="OBJECT" name="Chart Event Handlers" variable="ChartEventHandlers" defaultValue="{Press: '', Release: '', RollOver: '', RollOut: ''}"/>
+    <parameter type="ARRAY" name="Category Labels" variable="categoryLabels" defaultValue="['A', 'B', 'C', 'D', 'E']"/>
+    <parameter type="ARRAY" name="Data Values" variable="dataValues" defaultValue="[58,25,50,34,80]"/>
+  </component>
+
+  <component name="PieChart" id="FPieChartSymbol">
+    <parameter type="OBJECT" name="Layout Options" variable="LayoutOptions" defaultValue="{ChartTitle: 'Pie Chart: Sample Data', Margin: 10, ShowLegend: true}"/>
+    <parameter type="OBJECT" name="Chart Event Handlers" variable="ChartEventHandlers" defaultValue="{Press: '', Release: '', RollOver: '', RollOut: ''}"/>
+    <parameter type="ARRAY" name="Category Labels" variable="categoryLabels" defaultValue="['A', 'B', 'C', 'D', 'E']"/>
+    <parameter type="ARRAY" name="Data Values" variable="dataValues" defaultValue="[58,25,50,34,80]"/>
+    <parameter type="ARRAY" name="Pie Colors" variable="pieColors" defaultValue="['#ff0000','#00ff00','#0000ff','#ffff00','#00ffff']"/>
+  </component>
+
+
+
+  <!-- START -->
+  <!-- Flash UI Components Set 2 -->
+  <component name="Flash Calendar" id="FCalendarSymbol">
+    <parameter type="LIST" name="Selection Type" variable="selectionType" defaultValue="multiple">
+      <value>multiple</value>
+      <value>range</value>
+      <value>single</value>
+    </parameter>      
+    <parameter type="STRING" name="Change Handler" variable="changeHandler" defaultValue=""/>
+    <parameter type="ARRAY" name="Months" variable="monthNames" defaultValue="['January','February','March','April','May','June','July','August','September','October','November','December']"/>
+    <parameter type="ARRAY" name="Days of Week" variable="dayOfWeekNames" defaultValue="'Wednesday','Thursday','Friday','Saturday','Sunday','Monday','Tuesday'"/>
+    <parameter type="NUMBER" name="First Day of Week" variable="firstDayOfWeek" defaultValue="0"/>
+  </component>
+
+  <component name="DraggablePane" id="FDraggablePaneSymbol">
+    <parameter type="STRING" name="Pane Title" variable="paneTitle" defaultValue=""/>
+    <parameter type="STRING" name="Scroll Content" variable="scrollContent" defaultValue=""/>
+    <parameter type="BOOLEAN" name="Has Close Box" variable="hasCloseBox" defaultValue="true"/>
+    <parameter type="BOOLEAN" name="Is Scrolling" variable="isScrolling" defaultValue="true"/>
+    <parameter type="BOOLEAN" name="Resizable" variable="resizable" defaultValue="true"/>
+    <parameter type="BOOLEAN" name="Has Shader" variable="hasShader" defaultValue="true"/>
+    <parameter type="NUMBER" name="Titlebar Height" variable="titleBarHeight" defaultValue="20"/>
+  </component>
+
+  <component name="IconButton" id="FIconButtonSymbol">
+    <parameter type="STRING" name="Icon" variable="icon" defaultValue=""/>
+    <parameter type="STRING" name="Label" variable="label" defaultValue="IconButton"/>
+    <parameter type="LIST" name="Label Placement" variable="arrange" defaultValue="right">
+      <value>left</value>
+      <value>right</value>
+      <value>top</value>
+	    <value>bottom</value>
+    </parameter>
+	  <parameter type="BOOLEAN" name="Toggle" variable="toggle" defaultValue="false"/>
+    <parameter type="BOOLEAN" name="Initial Value" variable="value" defaultValue="false"/>
+    <parameter type="STRING" name="Background" variable="background" defaultValue=""/>
+    <parameter type="STRING" name="Change Handler" variable="changeHandler" defaultValue=""/>
+  </component>
+
+  <component name="MessageBox" id="FMessageBoxSymbol">
+    <parameter type="STRING" name="Title" variable="title" defaultValue="Title"/>
+    <parameter type="STRING" name="Message" variable="message" defaultValue="Message"/>
+    <parameter type="LIST" name="Icon" variable="icon" defaultValue="none">
+      <value>none</value>
+      <value>question</value>
+      <value>info</value>
+      <value>warning</value>
+      <value>error</value>
+    </parameter>
+    <parameter type="ARRAY" name="Buttons" variable="buttons" defaultValue="['OK']"/>
+    <parameter type="STRING" name="Close Handler" variable="closeHandler" defaultValue=""/>
+    <parameter type="NUMBER" name="Button Width" variable="buttonWidth" defaultValue="100"/>
+    <parameter type="NUMBER" name="Titlebar Height" variable="titlebarHeight" defaultValue="20"/>
+    <parameter type="BOOLEAN" name="Visible" variable="_visible" defaultValue="true"/>
+  </component>
+
+  <component name="ProgressBar" id="FProgressBarSymbol">
+    <parameter type="BOOLEAN" name="Display Graphics" variable="displayBar" defaultValue="true"/>
+    <parameter type="BOOLEAN" name="Display Text" variable="kBTally" defaultValue="true"/>
+    <parameter type="STRING" name="Change Handler" variable="changeHandler" defaultValue=""/>
+  </component>
+
+  <component name="PushButton" id="FPushButtonSymbol">
+    <parameter type="STRING" name="Label" variable="label" defaultValue=""/>
+	  <parameter type="STRING" name="Click Handler" variable="clickHandler" defaultValue=""/>
+  </component>
+
+  <component name="ScrollBar" id="FScrollBarSymbol">
+    <parameter type="STRING" name="Target TextField" variable="_targetInstanceName" defaultValue=""/>
+	  <parameter type="BOOLEAN" name="Horizontal" variable="horizontal" defaultValue="false"/>
+  </component>
+
+  <component name="ScrollPane" id="FScrollPaneSymbol">
+    <parameter type="STRING" name="Scroll Content" variable="scrollContent" defaultValue=""/>
+	  <parameter type="LIST" name="Horizontal Scroll" variable="hscroll" defaultValue="auto">
+	    <value>auto</value>
+      <value>true</value>
+      <value>false</value>
+    </parameter>
+	  <parameter type="LIST" name="Vertical Scroll" variable="vscroll" defaultValue="auto">
+	    <value>auto</value>
+      <value>true</value>
+      <value>false</value>
+    </parameter>
+	  <parameter type="BOOLEAN" name="Drag Content" variable="dragContent" defaultValue="false"/>
+  </component>
+
+  <component name="SplitView" id="FSplitterSymbol">
+    <parameter type="STRING" name="Top / Left Content" variable="tlContentParam" defaultValue=""/>
+    <parameter type="STRING" name="Bottom / Right Content" variable="brContentParam" defaultValue=""/>
+    <parameter type="LIST" name="Orientation" variable="orientation" defaultValue="vertical">
+	    <value>vertical</value>
+      <value>horizontal</value>
+    </parameter>
+	  <parameter type="LIST" name="T / L Content Behavior" variable="tlContentBehave" defaultValue="stick_to_bar">
+	    <value>stick_to_bar</value>
+      <value>stick_to_plane</value>
+	    <value>resize</value>
+    </parameter>
+	  <parameter type="LIST" name="B / R Content Behavior" variable="brContentBehave" defaultValue="stick_to_bar">
+	    <value>stick_to_bar</value>
+      <value>stick_to_plane</value>
+	    <value>resize</value>
+    </parameter>
+  </component>
+
+  <component name="Ticker" id="FTickerSymbol">
+    <parameter type="LIST" name="Orientation" variable="orientation" defaultValue="vertical">
+	    <value>vertical</value>
+      <value>horizontal</value>
+    </parameter>
+	  <parameter type="LIST" name="Scroll Direction" variable="direction" defaultValue="incremental">
+	    <value>incremental</value>
+      <value>decremental</value>
+    </parameter>
+    <parameter type="NUMBER" name="Speed" variable="speed" defaultValue="12"/>
+    <parameter type="NUMBER" name="Smoothness" variable="smoothness" defaultValue="1"/>
+    <parameter type="NUMBER" name="Spacing" variable="spacing" defaultValue="5"/>
+  	<parameter type="BOOLEAN" name="Stop On Focus" variable="stopOnFocus" defaultValue="true"/>
+    <parameter type="LIST" name="Scroll Location" variable="scrollLocation" defaultValue="bottom">
+	  <value>none</value>
+      <value>top</value>
+      <value>bottom</value>
+      <value>left</value>
+      <value>right</value>
+    </parameter>
+    <parameter type="NUMBER" name="Frame Width" variable="frameWidth" defaultValue="1"/>
+    <parameter type="COLOR" name="Frame Color" variable="frameColor" defaultValue="#000000"/>
+    <parameter type="COLOR" name="Highlight Color" variable="highlightColor" defaultValue="#ffff00"/>
+    <parameter type="STRING" name="Data Provider" variable="dataProvider" defaultValue=""/>
+    <parameter type="ARRAY" name="DataArray" variable="dataArray" defaultValue="[]"/>
+    <parameter type="STRING" name="Header Text" variable="headerText" defaultValue=""/>
+    <parameter type="LIST" name="Header Location" variable="headerLocation" defaultValue="top">
+	    <value>none</value>
+      <value>top</value>
+      <value>bottom</value>
+      <value>left</value>
+      <value>right</value>
+    </parameter>
+    <parameter type="NUMBER" name="Header Width" variable="headerWidth" defaultValue="0"/>
+    <parameter type="NUMBER" name="Header Height" variable="headerHeight" defaultValue="0"/>
+    <parameter type="NUMBER" name="Data Width" variable="dataWidth" defaultValue="0"/>
+    <parameter type="NUMBER" name="Data Height" variable="dataHeight" defaultValue="0"/>
+  </component>
+
+  <component name="Tree" id="FTreeSymbol">
+    <parameter type="LIST" name="Selection Mode" variable="selectStyle" defaultValue="single">
+	    <value>single</value>
+      <value>multiple</value>
+    </parameter>
+	  <parameter type="LIST" name="Node Expand Trigger" variable="expandNodeTrigger" defaultValue="press">
+	    <value>press</value>
+      <value>release</value>
+    </parameter>
+	  <parameter type="STRING" name="Change Handler" variable="changeHandler" defaultValue=""/>
+  </component>
+
+  <!-- Flash UI Components Set 2 -->
+  <!-- END -->
+
+
+
+  <!-- START -->
+  <!-- Flash UI Components -->
+  <component name="CheckBox" id="FCheckboxSymbol">
+    <parameter type="STRING" name="Label" variable="label" defaultValue="Check Box"/>
+    <parameter type="BOOLEAN" name="Initial Value" variable="initialValue" defaultValue="false"/>
+    <parameter type="LIST" name="Label Placement" variable="labelPlacement" defaultValue="right">
+	    <value>left</value>
+      <value>right</value>
+    </parameter>
+	  <parameter type="STRING" name="Change Handler" variable="changeHandler" defaultValue=""/>
+  </component>
+
+  <component name="ComboBox" id="FComboboxSymbol">
+    <parameter type="BOOLEAN" name="Editable" variable="editable" defaultValue="false"/>
+    <parameter type="ARRAY" name="Labels" variable="labels" defaultValue="[]"/>
+    <parameter type="ARRAY" name="Data" variable="data" defaultValue="[]"/>
+    <parameter type="NUMBER" name="Row Count" variable="rowCount" defaultValue="8"/>
+    <parameter type="STRING" name="Change Handler" variable="changeHandler" defaultValue=""/>
+  </component>
+
+  <component name="ListBox" id="FListBoxSymbol">
+    <parameter type="ARRAY" name="Labels" variable="labels" defaultValue="['label 1', 'label 2']"/>
+    <parameter type="ARRAY" name="Data" variable="data" defaultValue="['data 1', 'data 2']"/>
+    <parameter type="BOOLEAN" name="Select Multiple" variable="selectMultiple" defaultValue="false"/>
+    <parameter type="STRING" name="Change Handler" variable="changeHandler" defaultValue=""/>
+  </component>
+
+  <component name="RadioButton" id="FRadioButtonSymbol">
+    <parameter type="STRING" name="Label" variable="label" defaultValue="Radio Button"/>
+    <parameter type="BOOLEAN" name="Initial State" variable="initialState" defaultValue="false"/>
+    <parameter type="STRING" name="Group Name" variable="groupName" defaultValue="radioGroup"/>
+    <parameter type="STRING" name="Data" variable="data" defaultValue=""/>
+    <parameter type="LIST" name="Label Placement" variable="labelPlacement" defaultValue="right">
+	    <value>left</value>
+      <value>right</value>
+    </parameter>
+    <parameter type="STRING" name="Change Handler" variable="changeHandler" defaultValue=""/>
+  </component>
+
+  <!-- Flash UI Components -->
+  <!-- END -->
+
+
+
+  <component name="DataGrid" id="FDataGridSymbol">
+  </component>
+
+  <component name="FPS Controller" id="FFPSControllerSymbol">
+    <parameter type="STRING" name="Target Instance Name" variable="_targetInstanceName" defaultValue=""/>
+    <parameter type="NUMBER" name="fps" variable="fps" defaultValue="12"/>
+	  <parameter type="LIST" name="playMode" variable="playMode" defaultValue="Forward">
+	    <value>Forward</value>
+      <value>Reverse</value>
+      <value>PingPong</value>
+      <value>Random</value>
+    </parameter>
+	  <parameter type="LIST" name="initialDirection" variable="initialDirection" defaultValue="Forward">
+	    <value>Forward</value>
+      <value>Reverse</value>
+    </parameter>
+  </component>
+
+  <component name="freddyDataGrid" id="freddyDataGrid">
+    <parameter type="NUMBER" name="Records Per Page" variable="limit" defaultValue="10"/>
+    <parameter type="ARRAY" name="Column Labels" variable="cLabels" defaultValue="[]"/>
+    <parameter type="ARRAY" name="Column Widths" variable="cWidths" defaultValue="[]"/>
+    <parameter type="NUMBER" name="Initial Width" variable="width" defaultValue="400"/>
+    <parameter type="NUMBER" name="Border Size" variable="borderSize" defaultValue="2"/>
+    <parameter type="COLOR" name="Border Color" variable="borderColor" defaultValue="#000000"/>
+    <parameter type="COLOR" name="Header BG Color" variable="hBGColor" defaultValue="#666666"/>
+    <parameter type="COLOR" name="Header Text Color" variable="hTextColor" defaultValue="#FFFFFF"/>
+    <parameter type="NUMBER" name="Header Text Size" variable="hTextSize" defaultValue="12"/>
+    <parameter type="COLOR" name="Cell BG Color" variable="cBGColor" defaultValue="#CCCCCC"/>
+    <parameter type="COLOR" name="Cell Text Color" variable="cTextColor" defaultValue="#000000"/>
+    <parameter type="NUMBER" name="Cell Text Size" variable="cTextSize" defaultValue="10"/>
+    <parameter type="COLOR" name="Cell Highlight Text Color" variable="cHTextColor" defaultValue="#FFFFFF"/>
+    <parameter type="COLOR" name="Row Highlight BG Color" variable="rHBGColor" defaultValue="#0099FF"/>
+    <parameter type="COLOR" name="Row Highlight Text Color" variable="rHTextColor" defaultValue="#000000"/>
+    <parameter type="COLOR" name="Cell Highlight BG Color" variable="cHBGColor" defaultValue="#993300"/>
+    <parameter type="BOOLEAN" name="Show In ScrollPane" variable="inPane" defaultValue="true"/>
+    <parameter type="STRING" name="Click Handler" variable="clickHandler" defaultValue=""/>
+  </component>
+
+  <component name="FTable" id="FTable">
+    <parameter type="NUMBER" name="Rows" variable="rows" defaultValue="1"/>
+    <parameter type="ARRAY" name="Cells Size" variable="cells_size" defaultValue="[10]"/>
+    <parameter type="LIST" name="Cell Type" variable="cell_type" defaultValue="dynamic">
+	    <value>dynamic</value>
+      <value>input</value>
+    </parameter>
+    <parameter type="BOOLEAN" name="BG Enable" variable="bg_enable" defaultValue="true"/>
+    <parameter type="COLOR" name="BGColors" variable="bg_colors" defaultValue="#FFFFFF"/>
+    <parameter type="BOOLEAN" name="Border Enable" variable="border_enable" defaultValue="true"/>
+    <parameter type="COLOR" name="Border Color" variable="border_color" defaultValue="#000000"/>
+    <parameter type="FONT" name="Font Name" variable="font_name" defaultValue="Arial Cyr*"/>
+    <parameter type="NUMBER" name="Font Size" variable="font_size" defaultValue="12"/>
+    <parameter type="COLOR" name="Font Color" variable="font_color" defaultValue="#000000"/>
+    <parameter type="LIST" name="Align Text" variable="align_text" defaultValue="center">
+      <value>center</value>
+      <value>left</value>
+      <value>right</value>
+    </parameter>
+
+	  <injectScript>
+      <PublishDataSet dataset="{_dataset}" Array="__ftable"/>
+      <script>{_instance}.setDataArray(__ftable);</script>
+    </injectScript>
+  </component>
+
+  <component name="GroundTextEdit" id="FTextEdit">
+    <parameter type="STRING" name="_targetInstanceName" variable="_targetInstanceName" defaultValue="defaultValue"/>
+    <parameter type="COLOR" name="urlColor" variable="urlColor" defaultValue="#0000FF"/>
+    <parameter type="STRING" name="defaultTarget" variable="defaultTarget" defaultValue="_blank"/>
+  </component>
+
+  <component name="Hierarchical Menu" id="HFHierMenuSymbol">
+    <parameter type="LIST" name="Horizontal / Vertical" variable="menuType" defaultValue="Horizontal">
+      <value>Horizontal</value>
+      <value>Vertical</value>
+    </parameter>
+    <parameter type="BOOLEAN" name="Create Horizontal Bar" variable="createHorizBar" defaultValue="true"/>
+    <parameter type="NUMBER" name="Horizontal Bar Ending X" variable="horizBarX" defaultValue="550"/>
+    <parameter type="LIST" name="Show Childs" variable="menuShowChild" defaultValue="onPress">
+      <value>onPress</value>
+      <value>onRollOver</value>
+    </parameter>
+    <parameter type="LIST" name="Menu Population" variable="xmlPopType" defaultValue="External File">
+      <value>External File</value>
+      <value>String</value>
+    </parameter>
+    <parameter type="STRING" name="XML File Name" variable="xmlFileName" defaultValue="data.xml"/>
+    <parameter type="STRING" name="XML String" variable="xmlStr" defaultValue="defaultValue"/>
+    
+    <parameter type="BOOLEAN" name="Gradient Background" variable="isGradient" defaultValue="false"/>
+    <parameter type="NUMBER" name="Gradient Rotation degrees" variable="gradientRotation" defaultValue="45"/>
+
+    <parameter type="COLOR" name="Primary UP Color" variable="g_up_firstColor" defaultValue="#000000"/>
+    <parameter type="COLOR" name="Secondary UP Color" variable="g_up_secondColor" defaultValue="#000000"/>
+    <parameter type="COLOR" name="Primary OVER Color" variable="g_over_firstColor" defaultValue="#000000"/>
+    <parameter type="COLOR" name="Secondary OVER Color" variable="g_over_secondColor" defaultValue="#000000"/>
+    <parameter type="COLOR" name="Primary DOWN Color" variable="g_down_firstColor" defaultValue="#000000"/>
+    <parameter type="COLOR" name="Secondary DOWN Color" variable="g_down_secondColor" defaultValue="#000000"/>
+
+    <parameter type="COLOR" name="Up Background Color" variable="upBGColor" defaultValue="#D6DFE9"/>
+    <parameter type="COLOR" name="Over Background Color" variable="overBGColor" defaultValue="#8DA0BC"/>
+    <parameter type="COLOR" name="Down Background Color" variable="downBGColor" defaultValue="#375164"/>
+    <parameter type="COLOR" name="Up text Color" variable="upFontColor" defaultValue="#000000"/>
+    <parameter type="COLOR" name="Over Text Color" variable="overFontColor" defaultValue="#000000"/>
+    <parameter type="COLOR" name="Down Text Color" variable="downFontColor" defaultValue="#FFFFFF"/>
+    <parameter type="COLOR" name="Disabled text Color" variable="disabledTextColor" defaultValue="#8800ff"/>
+    <parameter type="FONT" name="Text Font" variable="txtFont" defaultValue="Tahoma"/>
+    <parameter type="NUMBER" name="text Size" variable="txtSize" defaultValue="9"/>
+    <parameter type="BOOLEAN" name="Embed Fonts" variable="embedMyFonts" defaultValue="false"/>
+    <parameter type="NUMBER" name="Item Text X-position Offset" variable="itemTextXOffset" defaultValue="20"/>
+    <parameter type="BOOLEAN" name="Seperate Line" variable="sepLine" defaultValue="false"/>
+    <parameter type="COLOR" name="Seperate Line Color" variable="sepLineColor" defaultValue="#CCCCCC"/>
+    <parameter type="NUMBER" name="Seperate Line Size" variable="sepLineSize" defaultValue="0"/>
+    <parameter type="BOOLEAN" name="Border" variable="borderState" defaultValue="true"/>
+    <parameter type="COLOR" name="Border Color" variable="borderColor" defaultValue="#666666"/>
+    <parameter type="NUMBER" name="Border Size" variable="borderSize" defaultValue="0"/>
+    <parameter type="BOOLEAN" name="Border Emboss" variable="borderEmboss" defaultValue="false"/>
+    <parameter type="LIST" name="Emboss Direction" variable="embossDir" defaultValue="Out">
+      <value>In</value>
+      <value>Out</value>
+    </parameter>
+    <parameter type="COLOR" name="Title Background Color" variable="titleBGColor" defaultValue="#000000"/>
+    <parameter type="COLOR" name="Title Font Color" variable="titleTxtColor" defaultValue="#FFFFFF"/>
+    <parameter type="NUMBER" name="Menu Width" variable="menuWidth" defaultValue="150"/>
+    <parameter type="NUMBER" name="Menu Item Height" variable="menuItemHeight" defaultValue="20"/>
+    <parameter type="String" name="Change Handler" variable="changeHandler" defaultValue=""/>
+    <parameter type="NUMBER" name="X Spacing" variable="menuXSpace" defaultValue="0"/>
+    <parameter type="NUMBER" name="Y Spacing" variable="menuYSpace" defaultValue="0"/>
+    <parameter type="BOOLEAN" name="Shadow" variable="shadowAppear" defaultValue="true"/>
+    <parameter type="NUMBER" name="Shadow Offset" variable="shadowOffset" defaultValue="4"/>
+    <parameter type="NUMBER" name="Limit X" variable="limitX" defaultValue="550"/>
+    <parameter type="NUMBER" name="Limit Y" variable="limitY" defaultValue="400"/>
+    <parameter type="BOOLEAN" name="fade" variable="menuFade" defaultValue="false"/>
+    
+    <parameter type="NUMBER" name="Fade Rate" variable="fadeRate" defaultValue="25"/>
+    <parameter type="BOOLEAN" name="Autosize Menu Width" variable="autoSizeWidth" defaultValue="true"/>
+    <parameter type="BOOLEAN" name="Collapse Children" variable="collapseTimeBool" defaultValue="true"/>
+    <parameter type="NUMBER" name="Collapse Time ms" variable="collapseTime" defaultValue="1500"/>
+    <parameter type="COLOR" name="Block Seperation Lines Color" variable="blockLineColor" defaultValue="#E8E8E8"/>
+    <parameter type="BOOLEAN" name="Menu Slide" variable="menuSlide" defaultValue="false"/>
+    <parameter type="NUMBER" name="Menu Slide Time" variable="menuSlideTime" defaultValue="7"/>
+    <parameter type="BOOLEAN" name="Apply Sound" variable="applySound" defaultValue=true""/>
+    <parameter type="STRING" name="Rollover Sound" variable="rollOverSnd" defaultValue="rollOverSnd"/>
+    <parameter type="STRING" name="Press Sound" variable="pressSnd" defaultValue="pressSnd"/>
+  </component>
+
+  <component name="MCursor" id="MCursor">
+    <parameter type="STRING" name="Mouse Cursor" variable="Cursor" defaultValue="mouse"/>
+    <parameter type="STRING" name="Mouse Clicked" variable="mClick" defaultValue=""/>
+    <parameter type="BOOLEAN" name="Drop Shadow" variable="dShadow" defaultValue="false"/>
+    <parameter type="NUMBER" name="Drop Shadow Depth" variable="dsDepth" defaultValue="0"/>
+    <parameter type="COLOR" name="Drop Shadow Color" variable="dsColor" defaultValue="#666666"/>
+    <parameter type="NUMBER" name="Drop Shadow Alpha" variable="dsAlpha" defaultValue="50"/>
+  </component>
+
+  <component name="Vertical Slider" id="VSliderControl">
+    <parameter type="NUMBER" name="Max Value" variable="vMax" defaultValue="100"/>
+    <parameter type="NUMBER" name="Min Value" variable="vMin" defaultValue="0"/>
+    <parameter type="NUMBER" name="Default Value" variable="vDef" defaultValue="0"/>
+    <parameter type="BOOLEAN" name="Round the Value" variable="bRound" defaultValue="false"/>
+  </component>
+
+  <component name="Horizontal Slider" id="HSliderControl">
+    <parameter type="NUMBER" name="Max Value" variable="vMax" defaultValue="100"/>
+    <parameter type="NUMBER" name="Min Value" variable="vMin" defaultValue="0"/>
+    <parameter type="NUMBER" name="Default Value" variable="vDef" defaultValue="0"/>
+    <parameter type="BOOLEAN" name="Round the Value" variable="bRound" defaultValue="false"/>
+  </component>
+
+  <component name="Text Editor Component" id="FTextEditor">
+    <parameter type="STRING" name="Title" variable="titleUpdateParameter" defaultValue="JoshDura.com Text Editor"/>
+    <parameter type="STRING" name="Background Image" variable="backgroundUpdateParamenter" defaultValue="attachDefault.swf"/>
+    <parameter type="NUMBER" name="Background Image Alpha" variable="alphaUpdateParameter" defaultValue="100"/>
+    <parameter type="BOOLEAN" name="Background Image Visible" variable="backgroundVisibleUpdateParameter" defaultValue="false"/>
+    <parameter type="BOOLEAN" name="Visible" variable="visibleParameter" defaultValue="true"/>
+  </component>
+
+  <component name="FTextFlowComponent" id="FTextFlowSymbol">
+    <parameter type="STRING" name="Text" variable="component_Text" defaultValue=""/>
+    <parameter type="BOOLEAN" name="Background" variable="component_Background" defaultValue="false"/>
+    <parameter type="COLOR" name="Border" variable="component_BorderColor" defaultValue="#000000"/>
+    <parameter type="NUMBER" name="BorderWidth" variable="component_BorderWidth" defaultValue="2"/>
+    <parameter type="COLOR" name="Face Color" variable="component_FaceColor" defaultValue="#FFFFFF"/>
+    <parameter type="FONT" name="Font Name" variable="component_FontName" defaultValue="Arial"/>
+    <parameter type="COLOR" name="Font Color" variable="component_FontColor" defaultValue="#000000"/>
+    <parameter type="NUMBER" name="Font Size" variable="component_FontSize" defaultValue="12"/>
+    <parameter type="BOOLEAN" name="Embed Fonts" variable="component_embedFonts" defaultValue="false"/>
+    <parameter type="STRING" name="Next Component" variable="component_Next" defaultValue=""/>
+  </component>
+
+  <component name="netTrek_ToolTip" id="netTrek_ToolTip">
+    <parameter type="STRING" name="toolTippText" variable="toolTippText" defaultValue="2 make a new line use slash n"/>
+    <parameter type="COLOR" name="toolTippTextColor" variable="toolTippTextColor" defaultValue="#333333"/>
+    <parameter type="LIST" name="toolTippTextAlign" variable="toolTippTextAlign" defaultValue="center">
+      <value>left</value>
+      <value>center</value>
+      <value>right</value>
+    </parameter>
+    <parameter type="FONT" name="toolTippTextFont" variable="toolTippTextFont" defaultValue="_sans"/>
+    <parameter type="NUMBER" name="toolTippTextSize" variable="toolTippTextSize" defaultValue="9"/>
+    <parameter type="BOOLEAN" name="toolTippTextEmbedFont" variable="toolTippTextEmbedFont" defaultValue="false"/>
+    <parameter type="BOOLEAN" name="toolTippTextBold" variable="toolTippTextBold" defaultValue="false"/>
+    <parameter type="BOOLEAN" name="toolTippTextItalic" variable="toolTippTextItalic" defaultValue="false"/>
+    <parameter type="BOOLEAN" name="toolTippTextUnderline" variable="toolTippTextUnderline" defaultValue="false"/>
+    <parameter type="COLOR" name="toolTippFillColor" variable="toolTippFillColor" defaultValue="#FFFF99"/>
+    <parameter type="NUMBER" name="toolTippFillColorAlpha" variable="toolTippFillColorAlpha" defaultValue="100"/>
+    <parameter type="NUMBER" name="toolTippLineThickness" variable="toolTippLineThickness" defaultValue="0"/>
+    <parameter type="COLOR" name="toolTippLineColor" variable="toolTippLineColor" defaultValue="#000000"/>
+    <parameter type="NUMBER" name="toolTippLineColorAlpha" variable="toolTippLineColorAlpha" defaultValue="100"/>
+    <parameter type="LIST" name="vertical_fit" variable="vertical_fit" defaultValue="right">
+      <value>auto</value>
+      <value>left</value>
+      <value>center</value>
+      <value>right</value>
+    </parameter>
+    <parameter type="LIST" name="horizontal_fit" variable="horizontal_fit" defaultValue="bottom">
+      <value>auto</value>
+      <value>top</value>
+      <value>middle</value>
+      <value>bottom</value>
+    </parameter>
+    <parameter type="NUMBER" name="distance" variable="distance" defaultValue="2"/>
+    <parameter type="STRING" name="_targetInstanceName" variable="_targetInstanceName" defaultValue="defaultValue"/>
+    <parameter type="BOOLEAN" name="showHand" variable="showHand" defaultValue="false"/>
+  </component>
+
+  <component name="WACK" id="WACK">
+    <parameter type="BOOLEAN" name="AutoResize" variable="autoResize" defaultValue="true"/>
+    <parameter type="BOOLEAN" name="Draggable" variable="draggable" defaultValue="true"/>
+    <parameter type="BOOLEAN" name="Resizeable" variable="resizeable" defaultValue="true"/>
+    <parameter type="BOOLEAN" name="CloseButton" variable="closeButton" defaultValue="true"/>
+    <parameter type="BOOLEAN" name="MinimizeButton" variable="minimizeButton" defaultValue="true"/>
+    <parameter type="BOOLEAN" name="MaximizeButton" variable="maximizeButton" defaultValue="true"/>
+    <parameter type="COLOR" name="HighlightColor" variable="highlightColor" defaultValue="#DDDDDD"/>
+    <parameter type="COLOR" name="ShadowColor" variable="shadowColor" defaultValue="#999999"/>
+    <parameter type="COLOR" name="BorderColor" variable="borderColor" defaultValue="#BBBBBB"/>
+    <parameter type="COLOR" name="BackgroundColor" variable="backgroundColor" defaultValue="#FFFFFF"/>
+    <parameter type="COLOR" name="TitleColor" variable="titleColor" defaultValue="#E8E8E8"/>
+    <parameter type="COLOR" name="TitleFontColor" variable="titleFontColor" defaultValue="#000000"/>
+    <parameter type="NUMBER" name="BorderWidth" variable="borderWidth" defaultValue="2"/>
+    <parameter type="NUMBER" name="TitleFontSize" variable="titleFontSize" defaultValue="12"/>
+    <parameter type="NUMBER" name="TitleHeight" variable="titleHeight" defaultValue="20"/>
+    <parameter type="STRING" name="Title Text" variable="titleText" defaultValue="Title"/>
+    <parameter type="LIST" name="TitleAligb" variable="titleAlign" defaultValue="center">
+      <value>left</value>
+      <value>right</value>
+      <value>center</value>
+    </parameter>
+    <parameter type="FONT" name="TitleFont" variable="titleFont" defaultValue="Arial"/>
+  </component>
+
+  <component name="Week View" id="FWeekViewSymbol">
+    <parameter type="FONT" name="Font" variable="textFont" defaultValue=""/>
+    <parameter type="STRING" name="Font Size" variable="fontSize" defaultValue=""/>
+    <parameter type="COLOR" name="Face Color" variable="faceColor" defaultValue=""/>
+    <parameter type="COLOR" name="Pane Color" variable="paneColor" defaultValue=""/>
+    <parameter type="ARRAY" name="Month Array" variable="monthArray" defaultValue="['January','February','March','April','May','June','July','August','September','October','November','December']"/>
+    <parameter type="ARRAY" name="Day Array" variable="dayArray" defaultValue="['Mon','Tue','Wed','Thu','Fri','Sat','Sun']"/>
+    <parameter type="STRING" name="Change Handler" variable="changeHandler" defaultValue=""/>
+    <parameter type="BOOLEAN" name="Enabled" variable="enabled" defaultValue="true"/>
+  </component>
+
+  <component name="Accordion Pane" id="FAccordionPaneSymbol">
+    <parameter type="BOOLEAN" name="Enabled" variable="enabled" defaultValue="true"/>
+    <parameter type="ARRAY" name="Section Names" variable="sectionNames" defaultValue="[]"/>
+    <parameter type="ARRAY" name="Section IDs" variable="sectionIds" defaultValue="[]"/>
+    <parameter type="NUMBER" name="Selected Index" variable="selectedIndex" defaultValue=""/>
+    <parameter type="NUMBER" name="Transition Time" variable="transitionTime" defaultValue=""/>
+    <parameter type="BOOLEAN" name="Show Content" variable="showContent" defaultValue="true"/>
+  </component>
+
+  <component name="Slider" id="FSliderSymbol">
+    <parameter type="NUMBER" name="Minimum" variable="minValue" defaultValue="0"/>
+    <parameter type="NUMBER" name="Maximum" variable="maxValue" defaultValue="100"/>
+    <parameter type="NUMBER" name="Value" variable="value" defaultValue="0"/>
+    <parameter type="BOOLEAN" name="Horizontal" variable="horizontal" defaultValue="true"/>
+    <parameter type="BOOLEAN" name="Enabled" variable="enabled" defaultValue="true"/>
+    <parameter type="STRING" name="Change Handler" variable="changeHandler" defaultValue=""/>
+    <parameter type="LIST" name="Thumb Symbol" variable="thumbSymbol" defaultValue="fsl_squareThumb">
+      <value>fsl_squareThumb</value>
+      <value>fsl_pointerThumb</value>
+      <value>fsl_diamondThumb</value>
+    </parameter>
+    <parameter type="LIST" name="Tick Style" variable="tickStyle" defaultValue="top">
+      <value>bottom</value>
+      <value>top</value>
+      <value>both</value>
+      <value>none</value>
+    </parameter>
+    <parameter type="BOOLEAN" name="Snap to Ticks" variable="tickSnapping" defaultValue="true"/>
+    <parameter type="NUMBER" name="Tick Frequency" variable="tickFrequency" defaultValue=""/>
+    <parameter type="COLOR" name="Fill Color" variable="fillColor" defaultValue="#EEEEEE"/>
+  </component>
+
+  <component name="Tab View" id="FTabViewSymbol">
+    <parameter type="ARRAY" name="Tabs" variable="tab_tbv" defaultValue="[]"/>
+    <parameter type="ARRAY" name="Data" variable="data" defaultValue="[]"/>
+    <parameter type="NUMBER" name="Selected Index" variable="selectedIndex" defaultValue="0"/>
+    <parameter type="STRING" name="Change Handler" variable="changeHandler" defaultValue=""/>
+    <parameter type="FONT" name="Font" variable="textFont" defaultValue=""/>
+    <parameter type="COLOR" name="Label Color" variable="labelColor" defaultValue="#111111"/>
+    <parameter type="COLOR" name="Face Color" variable="faceColor" defaultValue="#000000"/>
+    <parameter type="COLOR" name="Active Face Color" variable="activeFaceColor" defaultValue="#AAAAAA"/>
+    <parameter type="BOOLEAN" name="Enabled" variable="enabled" defaultValue="true"/>
+  </component>
+
+  <component name="TextField" id="FTextFieldSymbol">
+    <parameter type="LIST" name="Type" variable="_type" defaultValue="Input">
+      <value>Input</value>
+      <value>Dynamic</value>
+    </parameter>
+    <parameter type="STRING" name="text" variable="_text" defaultValue=""/>
+    <parameter type="FONT" name="Font" variable="font" defaultValue="_sans"/>
+    <parameter type="NUMBER" name="Font Size" variable="fontSize" defaultValue="10"/>
+    <parameter type="COLOR" name="Text Color" variable="_textColor" defaultValue="#000000"/>
+    <parameter type="BOOLEAN" name="Border" variable="_border" defaultValue="true"/>
+    <parameter type="LIST" name="Border Type" variable="_borderType" defaultValue="bevel">
+      <value>normal</value>
+      <value>bevel</value>
+    </parameter>
+    <parameter type="BOOLEAN" name="Background" variable="_background" defaultValue="false"/>
+    <parameter type="COLOR" name="Border Color" variable="_borderColor" defaultValue="#000000"/>
+    <parameter type="COLOR" name="Bevel Color" variable="_bevelColor" defaultValue="#AAAAAA"/>
+    <parameter type="COLOR" name="Background Color" variable="_backgroundColor" defaultValue="#777777"/>
+    <parameter type="LIST" name="ScrollBar" variable="scrollLocation" defaultValue="none">
+      <value>none</value>
+      <value>vertical</value>
+      <value>horizontal</value>
+      <value>both</value>
+    </parameter>
+    <parameter type="BOOLEAN" name="Multiline" variable="_multiline" defaultValue="false"/>
+    <parameter type="BOOLEAN" name="Password" variable="_password" defaultValue="false"/>
+    <parameter type="BOOLEAN" name="Word Wrap" variable="_wordWrap" defaultValue="false"/>
+    <parameter type="LIST" name="Icon" variable="fieldIcon" defaultValue="ftf_errorIcon">
+      <value>ftf_errorIcon</value>
+      <value>ftf_infoIcon</value>
+      <value>ftf_questionIcon</value>
+      <value>ftf_warningIcon</value>
+    </parameter>
+    <parameter type="BOOLEAN" name="Show Icon" variable="showFieldIcon" defaultValue="false"/>
+    <parameter type="BOOLEAN" name="Enabled" variable="enabled" defaultValue="true"/>
+  </component>
+
+
+  <!-- BEGIN GhostWire Studios Component Sets 1,2,3,4 -->
+  <component name="GWButton" id="GWButton">
+     <parameter type="STRING" name="Icon" variable="icon" defaultvalue=""/>
+     <parameter type="STRING" name="Label" variable="label" defaultValue="Button"/>
+     <parameter type="LIST" name="Label Align" variable="labelAlign" defaultvalue="center">
+        <value>center</value>
+        <value>left</value>
+        <value>right</value>
+     </parameter>
+     <parameter type="NUMBER" name="Label OffsetX" variable="padx" defaultvalue="3"/>
+     <parameter type="BOOLEAN" name="fitLabel" variable="fitLabel" defaultvalue="true"/>
+     <parameter type="FONT" name="Font" variable="font" defaultvalue="Tahoma"/>
+     <parameter type="NUMBER" name="Font Size" variable="fontsize" defaultvalue="11"/>
+     <parameter type="COLOR" name="Font Color" variable="fontcolor" defaultvalue="#000000"/>
+     <parameter type="COLOR" name="Font Color (Over)" variable="fontcolor_over" defaultvalue="#000000"/>
+     <parameter type="COLOR" name="Font Color (Down)" variable="fontcolor_down" defaultvalue="#000000"/>
+     <parameter type="COLOR" name="Disabled Color" variable="disabledColor" defaultvalue="#b0b0b0"/>
+     <parameter type="COLOR" name="Disabled Shadow" variable="disabledShadow" defaultvalue="#ffffff"/>
+     <parameter type="BOOLEAN" name="isDraggable" variable="isDraggable" defaultvalue="false"/>
+     <parameter type="BOOLEAN" name="isEnabled" variable="enabled" defaultvalue="true"/>
+     <parameter type="BOOLEAN" name="isToggleMode" variable="isToggleMode" defaultvalue="false"/>
+     <parameter type="STRING" name="Data" variable="data" defaultvalue=""/>
+     <parameter type="STRING" name="Group Name" variable="groupName" defaultvalue=""/>
+     <parameter type="BOOLEAN" name="useEmbedFonts" variable="useEmbedFonts" defaultvalue="false"/>
+     <parameter type="COLOR" name="Face Color" variable="face" defaultvalue="#d4d0c8"/>
+     <parameter type="COLOR" name="Highlight Color" variable="highlight" defaultvalue="#d4d0c8"/>
+     <parameter type="COLOR" name="Highlight3D Color" variable="highlight3D" defaultvalue="#ffffff"/>
+     <parameter type="COLOR" name="Shadow Color" variable="shadow" defaultvalue="#808080"/>
+     <parameter type="COLOR" name="DarkShadow Color" variable="darkshadow" defaultvalue="#404040"/>
+     <parameter type="COLOR" name="Face Color (Down)" variable="face_down" defaultvalue="#d4d0c8"/>
+     <parameter type="COLOR" name="Highlight Color (Down)" variable="highlight_down" defaultvalue="#808080"/>
+     <parameter type="COLOR" name="Highlight3D Color (Down)" variable="highlight3D_down" defaultvalue="#404040"/>
+     <parameter type="COLOR" name="Shadow Color (Down)" variable="shadow_down" defaultvalue="#d4d0c8"/>
+     <parameter type="COLOR" name="DarkShadow Color (Down)" variable="darkshadow_down" defaultvalue="#d4d0c8"/>
+     <parameter type="COLOR" name="Face Color (Over)" variable="face_over" defaultvalue="#d4d0c8"/>
+     <parameter type="COLOR" name="Highlight Color (Over)" variable="highlight_over" defaultvalue="#808080"/>
+     <parameter type="COLOR" name="Highlight3D Color (Over)" variable="highlight3D_over" defaultvalue="#404040"/>
+     <parameter type="COLOR" name="Shadow Color (Over)" variable="shadow_over" defaultvalue="#d4d0c8"/>
+     <parameter type="COLOR" name="DarkShadow Color (Over)" variable="darkshadow_over" defaultvalue="#d4d0c8"/>
+     <parameter type="COLOR" name="Face Color (Off)" variable="face_off" defaultvalue="#d4d0c8"/>
+     <parameter type="COLOR" name="Highlight Color (Off)" variable="highlight_off" defaultvalue="#808080"/>
+     <parameter type="COLOR" name="Highlight3D Color (Off)" variable="highlight3D_off" defaultvalue="#404040"/>
+     <parameter type="COLOR" name="Shadow Color (Off)" variable="shadow_off" defaultvalue="#d4d0c8"/>
+     <parameter type="COLOR" name="DarkShadow Color (Off)" variable="darkshadow_off" defaultvalue="#d4d0c8"/>
+  </component>
+  
+  <component name="GWButtonXP" id="GWButtonXP">
+     <parameter type="STRING" name="Icon" variable="icon" defaultvalue=""/>
+     <parameter type="STRING" name="Label" variable="label" defaultValue="Button"/>
+     <parameter type="LIST" name="Label Align" variable="labelAlign" defaultvalue="center">
+        <value>center</value>
+        <value>left</value>
+        <value>right</value>
+     </parameter>
+     <parameter type="NUMBER" name="Label OffsetX" variable="padx" defaultvalue="3"/>
+     <parameter type="BOOLEAN" name="fitLabel" variable="fitLabel" defaultvalue="true"/>
+     <parameter type="FONT" name="Font" variable="font" defaultvalue="Tahoma"/>
+     <parameter type="NUMBER" name="Font Size" variable="fontsize" defaultvalue="11"/>
+     <parameter type="COLOR" name="Font Color" variable="fontcolor" defaultvalue="#000000"/>
+     <parameter type="COLOR" name="Font Color (Over)" variable="fontcolor_over" defaultvalue="#000000"/>
+     <parameter type="COLOR" name="Font Color (Down)" variable="fontcolor_down" defaultvalue="#000000"/>
+     <parameter type="COLOR" name="Disabled Color" variable="disabledColor" defaultvalue="#b0b0b0"/>
+     <parameter type="COLOR" name="Disabled Shadow" variable="disabledShadow" defaultvalue="#ffffff"/>
+     <parameter type="BOOLEAN" name="isDraggable" variable="isDraggable" defaultvalue="false"/>
+     <parameter type="BOOLEAN" name="isEnabled" variable="enabled" defaultvalue="true"/>
+     <parameter type="BOOLEAN" name="isToggleMode" variable="isToggleMode" defaultvalue="false"/>
+     <parameter type="STRING" name="Data" variable="data" defaultvalue=""/>
+     <parameter type="STRING" name="Group Name" variable="groupName" defaultvalue=""/>
+     <parameter type="BOOLEAN" name="useEmbedFonts" variable="useEmbedFonts" defaultvalue="false"/>
+  </component>
+
+  <component name="GWButtonXPBlue" id="GWButtonXPBlue">
+     <parameter type="STRING" name="Icon" variable="icon" defaultvalue=""/>
+     <parameter type="STRING" name="Label" variable="label" defaultValue="Button"/>
+     <parameter type="LIST" name="Label Align" variable="labelAlign" defaultvalue="center">
+        <value>center</value>
+        <value>left</value>
+        <value>right</value>
+     </parameter>
+     <parameter type="NUMBER" name="Label OffsetX" variable="padx" defaultvalue="3"/>
+     <parameter type="BOOLEAN" name="fitLabel" variable="fitLabel" defaultvalue="true"/>
+     <parameter type="FONT" name="Font" variable="font" defaultvalue="Tahoma"/>
+     <parameter type="NUMBER" name="Font Size" variable="fontsize" defaultvalue="11"/>
+     <parameter type="COLOR" name="Font Color" variable="fontcolor" defaultvalue="#000000"/>
+     <parameter type="COLOR" name="Font Color (Over)" variable="fontcolor_over" defaultvalue="#000000"/>
+     <parameter type="COLOR" name="Font Color (Down)" variable="fontcolor_down" defaultvalue="#000000"/>
+     <parameter type="COLOR" name="Disabled Color" variable="disabledColor" defaultvalue="#b0b0b0"/>
+     <parameter type="COLOR" name="Disabled Shadow" variable="disabledShadow" defaultvalue="#ffffff"/>
+     <parameter type="BOOLEAN" name="isDraggable" variable="isDraggable" defaultvalue="false"/>
+     <parameter type="BOOLEAN" name="isEnabled" variable="enabled" defaultvalue="true"/>
+     <parameter type="BOOLEAN" name="isToggleMode" variable="isToggleMode" defaultvalue="false"/>
+     <parameter type="STRING" name="Data" variable="data" defaultvalue=""/>
+     <parameter type="STRING" name="Group Name" variable="groupName" defaultvalue=""/>
+     <parameter type="BOOLEAN" name="useEmbedFonts" variable="useEmbedFonts" defaultvalue="false"/>
+  </component> 
+  
+  <component name="GWCheckBox" id="GWCheckBoxLabel">
+    <parameter type="STRING" name="Data" variable="data" defaultValue=""/>
+    <parameter type="BOOLEAN" name="isChecked?" variable="checked" defaultValue="false"/>
+    <parameter type="STRING" name="Label" variable="label" defaultValue="CheckBox"/>
+    <parameter type="LIST" name="Label Placement" variable="labelpos" defaultValue="right">
+      <value>left</value>
+      <value>right</value>
+    </parameter>
+    <parameter type="NUMBER" name="Label Placement Buffer" variable="buffer" defaultValue="2"/>
+    <parameter type="FONT" name="Label Font" variable="font" defaultValue="Tahoma"/>
+    <parameter type="COLOR" name="Label FontColor" variable="fontcolor" defaultValue="#000000"/>
+    <parameter type="COLOR" name="Label FontColor (Off)" variable="fontcolor_off" defaultValue="#808080"/>
+    <parameter type="COLOR" name="Label FontColor (Shadow)" variable="fontcolor_shadow" defaultValue="#ffffff"/>
+    <parameter type="NUMBER" name="Label FontSize" variable="fontsize" defaultValue="11"/>
+    <parameter type="BOOLEAN" name="useEmbedFonts" variable="useEmbedFonts" defaultvalue="false"/>
+  </component>
+  
+  <component name="GWCheckBoxMac" id="GWCheckBoxLabelMac">
+    <parameter type="STRING" name="Data" variable="data" defaultValue=""/>
+    <parameter type="BOOLEAN" name="isChecked?" variable="checked" defaultValue="false"/>
+    <parameter type="STRING" name="Label" variable="label" defaultValue="CheckBox"/>
+    <parameter type="LIST" name="Label Placement" variable="labelpos" defaultValue="right">
+      <value>left</value>
+      <value>right</value>
+    </parameter>
+    <parameter type="NUMBER" name="Label Placement Buffer" variable="buffer" defaultValue="2"/>
+    <parameter type="FONT" name="Label Font" variable="font" defaultValue="Tahoma"/>
+    <parameter type="COLOR" name="Label FontColor" variable="fontcolor" defaultValue="#000000"/>
+    <parameter type="COLOR" name="Label FontColor (Off)" variable="fontcolor_off" defaultValue="#808080"/>
+    <parameter type="COLOR" name="Label FontColor (Shadow)" variable="fontcolor_shadow" defaultValue="#ffffff"/>
+    <parameter type="NUMBER" name="Label FontSize" variable="fontsize" defaultValue="11"/>
+    <parameter type="BOOLEAN" name="useEmbedFonts" variable="useEmbedFonts" defaultvalue="false"/>
+  </component>
+
+  <component name="GWCheckBoxXP" id="GWCheckBoxLabelXP">
+    <parameter type="STRING" name="Data" variable="data" defaultValue=""/>
+    <parameter type="BOOLEAN" name="isChecked?" variable="checked" defaultValue="false"/>
+    <parameter type="STRING" name="Label" variable="label" defaultValue="CheckBox"/>
+    <parameter type="LIST" name="Label Placement" variable="labelpos" defaultValue="right">
+      <value>left</value>
+      <value>right</value>
+    </parameter>
+    <parameter type="NUMBER" name="Label Placement Buffer" variable="buffer" defaultValue="2"/>
+    <parameter type="FONT" name="Label Font" variable="font" defaultValue="Tahoma"/>
+    <parameter type="COLOR" name="Label FontColor" variable="fontcolor" defaultValue="#000000"/>
+    <parameter type="COLOR" name="Label FontColor (Off)" variable="fontcolor_off" defaultValue="#808080"/>
+    <parameter type="COLOR" name="Label FontColor (Shadow)" variable="fontcolor_shadow" defaultValue="#ffffff"/>
+    <parameter type="NUMBER" name="Label FontSize" variable="fontsize" defaultValue="11"/>
+    <parameter type="BOOLEAN" name="useEmbedFonts" variable="useEmbedFonts" defaultvalue="false"/>
+  </component>
+  
+  <component name="GWRadioButton" id="GWRadioButtonLabel">
+    <parameter type="STRING" name="Group Name" variable="groupName" defaultValue="radioGroup"/>
+    <parameter type="STRING" name="Data" variable="data" defaultValue=""/>
+    <parameter type="BOOLEAN" name="isChecked?" variable="checked" defaultValue="false"/>
+    <parameter type="STRING" name="Label" variable="label" defaultValue="CheckBox"/>
+    <parameter type="LIST" name="Label Placement" variable="labelpos" defaultValue="right">
+      <value>left</value>
+      <value>right</value>
+    </parameter>
+    <parameter type="NUMBER" name="Label Placement Buffer" variable="buffer" defaultValue="2"/>
+    <parameter type="FONT" name="Label Font" variable="font" defaultValue="Tahoma"/>
+    <parameter type="COLOR" name="Label FontColor" variable="fontcolor" defaultValue="#000000"/>
+    <parameter type="COLOR" name="Label FontColor (Off)" variable="fontcolor_off" defaultValue="#808080"/>
+    <parameter type="COLOR" name="Label FontColor (Shadow)" variable="fontcolor_shadow" defaultValue="#ffffff"/>
+    <parameter type="NUMBER" name="Label FontSize" variable="fontsize" defaultValue="11"/>
+    <parameter type="BOOLEAN" name="useEmbedFonts" variable="useEmbedFonts" defaultvalue="false"/>
+  </component>
+  
+  <component name="GWRadioButtonMac" id="GWRadioButtonLabelMac">
+    <parameter type="STRING" name="Group Name" variable="groupName" defaultValue="radioGroup"/>
+    <parameter type="STRING" name="Data" variable="data" defaultValue=""/>
+    <parameter type="BOOLEAN" name="isChecked?" variable="checked" defaultValue="false"/>
+    <parameter type="STRING" name="Label" variable="label" defaultValue="CheckBox"/>
+    <parameter type="LIST" name="Label Placement" variable="labelpos" defaultValue="right">
+      <value>left</value>
+      <value>right</value>
+    </parameter>
+    <parameter type="NUMBER" name="Label Placement Buffer" variable="buffer" defaultValue="2"/>
+    <parameter type="FONT" name="Label Font" variable="font" defaultValue="Tahoma"/>
+    <parameter type="COLOR" name="Label FontColor" variable="fontcolor" defaultValue="#000000"/>
+    <parameter type="COLOR" name="Label FontColor (Off)" variable="fontcolor_off" defaultValue="#808080"/>
+    <parameter type="COLOR" name="Label FontColor (Shadow)" variable="fontcolor_shadow" defaultValue="#ffffff"/>
+    <parameter type="NUMBER" name="Label FontSize" variable="fontsize" defaultValue="11"/>
+    <parameter type="BOOLEAN" name="useEmbedFonts" variable="useEmbedFonts" defaultvalue="false"/>
+  </component>
+  
+  <component name="GWRadioButtonXP" id="GWRadioButtonLabelXP">
+    <parameter type="STRING" name="Group Name" variable="groupName" defaultValue="radioGroup"/>
+    <parameter type="STRING" name="Data" variable="data" defaultValue=""/>
+    <parameter type="BOOLEAN" name="isChecked?" variable="checked" defaultValue="false"/>
+    <parameter type="STRING" name="Label" variable="label" defaultValue="CheckBox"/>
+    <parameter type="LIST" name="Label Placement" variable="labelpos" defaultValue="right">
+      <value>left</value>
+      <value>right</value>
+    </parameter>
+    <parameter type="NUMBER" name="Label Placement Buffer" variable="buffer" defaultValue="2"/>
+    <parameter type="FONT" name="Label Font" variable="font" defaultValue="Tahoma"/>
+    <parameter type="COLOR" name="Label FontColor" variable="fontcolor" defaultValue="#000000"/>
+    <parameter type="COLOR" name="Label FontColor (Off)" variable="fontcolor_off" defaultValue="#808080"/>
+    <parameter type="COLOR" name="Label FontColor (Shadow)" variable="fontcolor_shadow" defaultValue="#ffffff"/>
+    <parameter type="NUMBER" name="Label FontSize" variable="fontsize" defaultValue="11"/>
+    <parameter type="BOOLEAN" name="useEmbedFonts" variable="useEmbedFonts" defaultvalue="false"/>
+  </component>
+
+  <component name="GWComboBox" id="GWComboBox">
+    <parameter type="ARRAY" name="Labels" variable="labels" defaultValue="[]"/>
+    <parameter type="ARRAY" name="Data" variable="Data" defaultValue="[]"/>
+    <parameter type="ARRAY" name="Icons" variable="icons" defaultValue="[]"/>
+    <parameter type="NUMBER" name="Initial Selected Index" variable="idx" defaultValue=""/>
+    <parameter type="FONT" name="Font" variable="font" defaultValue="Tahoma"/>
+    <parameter type="NUMBER" name="Font Size" variable="fontsize" defaultValue="11"/>
+    <parameter type="NUMBER" name="Row Height" variable="rowHeight" defaultValue="18"/>
+    <parameter type="NUMBER" name="Row Count" variable="rowCount" defaultValue="8"/>
+    <parameter type="BOOLEAN" name="Use EdgeScroll?" variable="useEdgeScroll" defaultValue="true"/>
+    <parameter type="LISTE" name="List Position" variable="listPos" defaultValue="bottom">
+       <value>bottom</value>
+       <value>center</value>
+       <value>top</value> 
+    </parameter>
+    <parameter type="COLOR" name="List Border" variable="listborder" defaultValue="#404040"/>
+    <parameter type="COLOR" name="Box Face Color" variable="face" defaultValue="#ffffff"/>
+    <parameter type="COLOR" name="Box Highlight Color" variable="highlight" defaultValue="#404040"/>
+    <parameter type="COLOR" name="Box Highlight3D" variable="highlight3D" defaultValue="#808080"/>
+    <parameter type="COLOR" name="Box Shadow Color" variable="shadow" defaultValue="#d4d0c8"/>
+    <parameter type="COLOR" name="Box DarkShadow" variable="darkshadow" defaultValue="#ffffff"/>
+    <parameter type="COLOR" name="Font Color (On)" variable="fontcolor_on" defaultValue="#ffffff"/>
+    <parameter type="COLOR" name="Font Color (Off)" variable="fontcolor_off" defaultValue="#000000"/>
+    <parameter type="COLOR" name="Item Color (On)" variable="itemcolor_on" defaultValue="#0a246a"/>
+    <parameter type="COLOR" name="ItemColor (Off)" variable="itemcolor_off" defaultValue="#ffffff"/>
+    <parameter type="COLOR" name="ScrollBar Face Color" variable="sb_face" defaultValue="#d4d0c8"/>
+    <parameter type="COLOR" name="ScrollBar Highlight Color" variable="sb_highlight" defaultValue="#ffffff"/>
+    <parameter type="COLOR" name="ScrollBar Highlight3D Color" variable="sb_highlight3D" defaultValue="#d4d0c8"/>
+    <parameter type="COLOR" name="ScrollBar Shadow Color" variable="sb_shadow" defaultValue="#808080"/>
+    <parameter type="COLOR" name="ScrollBar DarkShadow Color" variable="sb_darkshadow" defaultValue="#404040"/>
+    <parameter type="COLOR" name="ScrollBar Face Color (Down)" variable="sb_face_down" defaultValue="#d4d0c8"/>
+    <parameter type="COLOR" name="ScrollBar Highlight Color (Down)" variable="sb_highlight_down" defaultValue="#d4d0c8"/>
+    <parameter type="COLOR" name="ScrollBar Highlight3D Color (Down)" variable="sb_highlight3D_down" defaultValue="#808080"/>
+    <parameter type="COLOR" name="ScrollBar Shadow Color (Down)" variable="sb_shadow_down" defaultValue="#d4d0c8"/>
+    <parameter type="COLOR" name="ScrollBar DarkShadow Color (Down)" variable="sb_darkshadow_down" defaultValue="#808080"/>
+    <parameter type="COLOR" name="ScrollBar Face Color (Off)" variable="sb_face_off" defaultValue="#d4d0c8"/>
+    <parameter type="COLOR" name="ScrollBar Highlight Color (Off)" variable="sb_highlight_off" defaultValue="#ffffff"/>
+    <parameter type="COLOR" name="ScrollBar Highlight3D Color (Off)" variable="sb_highlight3D_off" defaultValue="#d4d0c8"/>
+    <parameter type="COLOR" name="ScrollBar Shadow Color (Off)" variable="sb_shadow_off" defaultValue="#808080"/>
+    <parameter type="COLOR" name="ScrollBar DarkShadow Color (Off)" variable="sb_darkshadow_off" defaultValue="#404040"/>
+    <parameter type="COLOR" name="ScrollBar Arrow" variable="sb_arrow" defaultValue="#000000"/>
+    <parameter type="COLOR" name="ScrollBar Arrow (Down)" variable="sb_arrow_down" defaultValue="#000000"/>
+    <parameter type="COLOR" name="ScrollBar Arrow (Off)" variable="sb_arrow_off" defaultValue="#808080"/>
+    <parameter type="COLOR" name="ScrollBar Track" variable="sb_track" defaultValue="#ececec"/>
+    <parameter type="BOOLEAN" name="useEmbedFonts" variable="useEmbedFonts" defaultvalue="false"/>
+  </component>
+
+  <component name="GWComboBoxSilver" id="GWComboBoxSilver">
+    <parameter type="ARRAY" name="Labels" variable="labels" defaultValue="[]"/>
+    <parameter type="ARRAY" name="Data" variable="Data" defaultValue="[]"/>
+    <parameter type="ARRAY" name="Icons" variable="icons" defaultValue="[]"/>
+    <parameter type="NUMBER" name="Initial Selected Index" variable="idx" defaultValue=""/>
+    <parameter type="FONT" name="Font" variable="font" defaultValue="Tahoma"/>
+    <parameter type="NUMBER" name="Font Size" variable="fontsize" defaultValue="11"/>
+    <parameter type="NUMBER" name="Row Height" variable="rowHeight" defaultValue="18"/>
+    <parameter type="NUMBER" name="Row Count" variable="rowCount" defaultValue="8"/>
+    <parameter type="BOOLEAN" name="Use EdgeScroll?" variable="useEdgeScroll" defaultValue="true"/>
+    <parameter type="LISTE" name="List Position" variable="listPos" defaultValue="bottom">
+       <value>bottom</value>
+       <value>center</value>
+       <value>top</value> 
+    </parameter>
+    <parameter type="COLOR" name="List Border" variable="listborder" defaultValue="#404040"/>
+    <parameter type="COLOR" name="Box Face Color" variable="face" defaultValue="#ffffff"/>
+    <parameter type="COLOR" name="Box Highlight Color" variable="highlight" defaultValue="#404040"/>
+    <parameter type="COLOR" name="Box Highlight3D" variable="highlight3D" defaultValue="#808080"/>
+    <parameter type="COLOR" name="Box Shadow Color" variable="shadow" defaultValue="#d4d0c8"/>
+    <parameter type="COLOR" name="Box DarkShadow" variable="darkshadow" defaultValue="#ffffff"/>
+    <parameter type="COLOR" name="Font Color (On)" variable="fontcolor_on" defaultValue="#ffffff"/>
+    <parameter type="COLOR" name="Font Color (Off)" variable="fontcolor_off" defaultValue="#000000"/>
+    <parameter type="COLOR" name="Item Color (On)" variable="itemcolor_on" defaultValue="#0a246a"/>
+    <parameter type="COLOR" name="Item Color (Off)" variable="itemcolor_off" defaultValue="#ffffff"/>
+    <parameter type="BOOLEAN" name="useEmbedFonts" variable="useEmbedFonts" defaultvalue="false"/>
+  </component>
+
+  <component name="GWListBox" id="GWListBox">
+    <parameter type="ARRAY" name="Labels" variable="labels" defaultValue="[]"/>
+    <parameter type="ARRAY" name="Data" variable="Data" defaultValue="[]"/>
+    <parameter type="ARRAY" name="Icons" variable="icons" defaultValue="[]"/>
+    <parameter type="BOOLEAN" name="Select Multiple" variable="selectMultiple" defaultValue="false"/>
+    <parameter type="FONT" name="Font" variable="font" defaultValue="Tahoma"/>
+    <parameter type="NUMBER" name="Font Size" variable="fontsize" defaultValue="11"/>
+    <parameter type="NUMBER" name="Row Height" variable="rowHeight" defaultValue="18"/>
+    <parameter type="BOOLEAN" name="Check Focus" variable="checkFocus" defaultValue="false"/>
+    <parameter type="COLOR" name="Font Color (On)" variable="fontcolor_on" defaultValue="#ffffff"/>
+    <parameter type="COLOR" name="Font Color (Off)" variable="fontcolor_off" defaultValue="#000000"/>
+    <parameter type="COLOR" name="Font Color (Out)" variable="fontcolor_out" defaultValue="#000000"/>
+    <parameter type="COLOR" name="Item Color (On)" variable="itemcolor_on" defaultValue="#0a246a"/>
+    <parameter type="COLOR" name="Item Color (Off)" variable="itemcolor_off" defaultValue="#ffffff"/>
+    <parameter type="COLOR" name="Item Color (Out)" variable="itemcolor_out" defaultValue="#d6d3ce"/>
+    <parameter type="COLOR" name="Frame Face Color" variable="face" defaultValue="#ffffff"/>
+    <parameter type="COLOR" name="Frame Highlight Color" variable="highlight" defaultValue="#404040"/>
+    <parameter type="COLOR" name="Frame Highlight3D Color" variable="highlight3D" defaultValue="#808080"/>
+    <parameter type="COLOR" name="Frame Shadow Color" variable="shadow" defaultValue="#d4d0c8"/>
+    <parameter type="COLOR" name="Frame DarkShadow Color" variable="darkshadow" defaultValue="#ffffff"/>
+    <parameter type="COLOR" name="ScrollBar Face Color" variable="sb_face" defaultValue="#d4d0c8"/>
+    <parameter type="COLOR" name="ScrollBar Highlight Color" variable="sb_highlight" defaultValue="#ffffff"/>
+    <parameter type="COLOR" name="ScrollBar Highlight3D Color" variable="sb_highlight3D" defaultValue="#d4d0c8"/>
+    <parameter type="COLOR" name="ScrollBar Shadow Color" variable="sb_shadow" defaultValue="#808080"/>
+    <parameter type="COLOR" name="ScrollBar DarkShadow Color" variable="sb_darkshadow" defaultValue="#404040"/>
+    <parameter type="COLOR" name="ScrollBar Face Color (Down)" variable="sb_face_down" defaultValue="#d4d0c8"/>
+    <parameter type="COLOR" name="ScrollBar Highlight Color (Down)" variable="sb_highlight_down" defaultValue="#d4d0c8"/>
+    <parameter type="COLOR" name="ScrollBar Highlight3D Color (Down)" variable="sb_highlight3D_down" defaultValue="#808080"/>
+    <parameter type="COLOR" name="ScrollBar Shadow Color (Down)" variable="sb_shadow_down" defaultValue="#d4d0c8"/>
+    <parameter type="COLOR" name="ScrollBar DarkShadow Color (Down)" variable="sb_darkshadow_down" defaultValue="#808080"/>
+    <parameter type="COLOR" name="ScrollBar Face Color (Off)" variable="sb_face_off" defaultValue="#d4d0c8"/>
+    <parameter type="COLOR" name="ScrollBar Highlight Color (Off)" variable="sb_highlight_off" defaultValue="#ffffff"/>
+    <parameter type="COLOR" name="ScrollBar Highlight3D Color (Off)" variable="sb_highlight3D_off" defaultValue="#d4d0c8"/>
+    <parameter type="COLOR" name="ScrollBar Shadow Color (Off)" variable="sb_shadow_off" defaultValue="#808080"/>
+    <parameter type="COLOR" name="ScrollBar DarkShadow Color (Off)" variable="sb_darkshadow_off" defaultValue="#404040"/>
+    <parameter type="COLOR" name="ScrollBar Arrow" variable="sb_arrow" defaultValue="#000000"/>
+    <parameter type="COLOR" name="ScrollBar Arrow (Down)" variable="sb_arrow_down" defaultValue="#000000"/>
+    <parameter type="COLOR" name="ScrollBar Arrow (Off)" variable="sb_arrow_off" defaultValue="#808080"/>
+    <parameter type="COLOR" name="ScrollBar Track" variable="sb_track" defaultValue="#ececec"/>
+    <parameter type="NUMBER" name="Padding" variable="pad" defaultValue="2"/>
+    <parameter type="BOOLEAN" name="useEmbedFonts" variable="useEmbedFonts" defaultValue="false"/>
+  </component>
+
+  <component name="GWListBoxSilver" id="GWListBoxSilver">
+    <parameter type="ARRAY" name="Labels" variable="labels" defaultValue="[]"/>
+    <parameter type="ARRAY" name="Data" variable="Data" defaultValue="[]"/>
+    <parameter type="ARRAY" name="Icons" variable="icons" defaultValue="[]"/>
+    <parameter type="BOOLEAN" name="Select Multiple" variable="selectMultiple" defaultValue="false"/>
+    <parameter type="FONT" name="Font" variable="font" defaultValue="Tahoma"/>
+    <parameter type="NUMBER" name="Font Size" variable="fontsize" defaultValue="11"/>
+    <parameter type="NUMBER" name="Row Height" variable="rowHeight" defaultValue="18"/>
+    <parameter type="BOOLEAN" name="Check Focus" variable="checkFocus" defaultValue="false"/>
+    <parameter type="COLOR" name="Font Color (On)" variable="fontcolor_on" defaultValue="#ffffff"/>
+    <parameter type="COLOR" name="Font Color (Off)" variable="fontcolor_off" defaultValue="#000000"/>
+    <parameter type="COLOR" name="Font Color (Out)" variable="fontcolor_out" defaultValue="#000000"/>
+    <parameter type="COLOR" name="Item Color (On)" variable="itemcolor_on" defaultValue="#0a246a"/>
+    <parameter type="COLOR" name="Item Color (Off)" variable="itemcolor_off" defaultValue="#ffffff"/>
+    <parameter type="COLOR" name="Item Color (Out)" variable="itemcolor_out" defaultValue="#d6d3ce"/>
+    <parameter type="COLOR" name="Frame Face Color" variable="face" defaultValue="#ffffff"/>
+    <parameter type="COLOR" name="Frame Highlight Color" variable="highlight" defaultValue="#404040"/>
+    <parameter type="COLOR" name="Frame Highlight3D Color" variable="highlight3D" defaultValue="#808080"/>
+    <parameter type="COLOR" name="Frame Shadow Color" variable="shadow" defaultValue="#d4d0c8"/>
+    <parameter type="COLOR" name="Frame DarkShadow Color" variable="darkshadow" defaultValue="#ffffff"/>
+    <parameter type="NUMBER" name="Padding" variable="pad" defaultValue="2"/>
+    <parameter type="BOOLEAN" name="useEmbedFonts" variable="useEmbedFonts" defaultValue="false"/>
+  </component>
+  
+  <component name="GWPanel" id="GWPanel">
+     <parameter type="COLOR" name="Face Color" variable="face" defaultValue="#d4d0c8"/>
+     <parameter type="COLOR" name="Highlight Color" variable="highlight" defaultValue="#d4d0c8"/>
+     <parameter type="COLOR" name="Highlight3D Color" variable="highlight3D" defaultValue="#ffffff"/>
+     <parameter type="COLOR" name="Shadow Color" variable="shadow" defaultValue="#808080"/>
+     <parameter type="COLOR" name="Dark Shadow Color" variable="darkshadow" defaultValue="#404040"/>
+  </component>
+
+  <component name="GWScrollPane" id="GWScrollPane">
+     <parameter type="STRING" name="Scroll Content" variable="scrollContent" defaultValue=""/>
+     <parameter type="LISTE" name="Horizontal Scroll" variable="hScroll" defaultValue="auto">
+        <value>auto</value>
+        <value>true</value>
+        <value>false</value>  
+     </parameter>
+     <parameter type="LISTE" name="Vertical Scroll" variable="vScroll" defaultValue="auto">
+        <value>auto</value>
+        <value>true</value>
+        <value>false</value>  
+     </parameter>
+     <parameter type="LISTE" name="Drag Content" variable="dragContent" defaultValue="onKey">
+        <value>onKey</value>
+        <value>true</value>
+        <value>false</value>  
+     </parameter>
+     <parameter type="NUMBER" name="Small Scroll Value" variable="smallScroll" defaultValue="5"/>
+     <parameter type="NUMBER" name="Large Scroll Value" variable="largeScroll" defaultValue="30"/>
+     <parameter type="COLOR" name="Frame Face Color" variable="face" defaultValue="#ffffff"/>
+     <parameter type="COLOR" name="Frame Highlight Color" variable="highlight" defaultValue="#404040"/>
+     <parameter type="COLOR" name="Frame Highlight3D Color" variable="highlight3D" defaultValue="#808080"/>
+     <parameter type="COLOR" name="Frame Shadow Color" variable="shadow" defaultValue="#d4d0c8"/>
+     <parameter type="COLOR" name="Frame DarkShadow Color" variable="darkshadow" defaultValue="#ffffff"/>
+     <parameter type="COLOR" name="ScrollBar Face Color" variable="sb_face" defaultValue="#d4d0c8"/>
+     <parameter type="COLOR" name="ScrollBar Highlight Color" variable="sb_highlight" defaultValue="#ffffff"/>
+     <parameter type="COLOR" name="ScrollBar Highlight3D Color" variable="sb_highlight3D" defaultValue="#d4d0c8"/>
+     <parameter type="COLOR" name="ScrollBar Shadow Color" variable="sb_shadow" defaultValue="#808080"/>
+     <parameter type="COLOR" name="ScrollBar DarkShadow Color" variable="sb_darkshadow" defaultValue="#404040"/>
+     <parameter type="COLOR" name="ScrollBar Face Color (Down)" variable="sb_face_down" defaultValue="#d4d0c8"/>
+     <parameter type="COLOR" name="ScrollBar Highlight Color (Down)" variable="sb_highlight_down" defaultValue="#d4d0c8"/>
+     <parameter type="COLOR" name="ScrollBar Highlight3D Color (Down)" variable="sb_highlight3D_down" defaultValue="#808080"/>
+     <parameter type="COLOR" name="ScrollBar Shadow Color (Down)" variable="sb_shadow_down" defaultValue="#d4d0c8"/>
+     <parameter type="COLOR" name="ScrollBar DarkShadow Color (Down)" variable="sb_darkshadow_down" defaultValue="#808080"/>
+     <parameter type="COLOR" name="ScrollBar Face Color (Off)" variable="sb_face_off" defaultValue="#d4d0c8"/>
+     <parameter type="COLOR" name="ScrollBar Highlight Color (Off)" variable="sb_highlight_off" defaultValue="#ffffff"/>
+     <parameter type="COLOR" name="ScrollBar Highlight3D Color (Off)" variable="sb_highlight3D_off" defaultValue="#d4d0c8"/>
+     <parameter type="COLOR" name="ScrollBar Shadow Color (Off)" variable="sb_shadow_off" defaultValue="#808080"/>
+     <parameter type="COLOR" name="ScrollBar DarkShadow Color (Off)" variable="sb_darkshadow_off" defaultValue="#404040"/>
+     <parameter type="COLOR" name="ScrollBar Arrow" variable="sb_arrow" defaultValue="#000000"/>
+     <parameter type="COLOR" name="ScrollBar Arrow (Off)" variable="sb_arrow_down" defaultValue="#000000"/>
+     <parameter type="COLOR" name="ScrollBar Arrow (Off)" variable="sb_arrow_off" defaultValue="#808080"/>
+     <parameter type="COLOR" name="ScrollBar Track" variable="sb_track" defaultValue="#ececec"/>
+     <parameter type="NUMBER" name="Padding" variable="pad" defaultValue="2"/>
+  </component>
+
+  <component name="GWScrollPaneSilver" id="GWScrollPaneSilver">
+     <parameter type="STRING" name="Scroll Content" variable="scrollContent" defaultValue=""/>
+     <parameter type="LISTE" name="Horizontal Scroll" variable="hScroll" defaultValue="auto">
+        <value>auto</value>
+        <value>true</value>
+        <value>false</value>  
+     </parameter>
+     <parameter type="LISTE" name="Vertical Scroll" variable="vScroll" defaultValue="auto">
+        <value>auto</value>
+        <value>true</value>
+        <value>false</value>  
+     </parameter>
+     <parameter type="LISTE" name="Drag Content" variable="dragContent" defaultValue="onKey">
+        <value>onKey</value>
+        <value>true</value>
+        <value>false</value>  
+     </parameter>
+     <parameter type="NUMBER" name="Small Scroll Value" variable="smallScroll" defaultValue="5"/>
+     <parameter type="NUMBER" name="Large Scroll Value" variable="largeScroll" defaultValue="30"/>
+     <parameter type="COLOR" name="Frame Face Color" variable="face" defaultValue="#ffffff"/>
+     <parameter type="COLOR" name="Frame Highlight Color" variable="highlight" defaultValue="#404040"/>
+     <parameter type="COLOR" name="Frame Highlight3D Color" variable="highlight3D" defaultValue="#808080"/>
+     <parameter type="COLOR" name="Frame Shadow Color" variable="shadow" defaultValue="#d4d0c8"/>
+     <parameter type="COLOR" name="Frame DarkShadow Color" variable="darkshadow" defaultValue="#ffffff"/>
+     <parameter type="NUMBER" name="Padding" variable="pad" defaultValue="2"/>
+  </component>
+
+  <component name="GWDialogBoxWin" id="GWDialogBoxWin">
+     <parameter type="FONT" name="Title Color" variable="font" defaultValue="Tahoma"/>
+     <parameter type="NUMBER" name="Title Font Size" variable="fontsize" defaultValue="11"/>
+     <parameter type="COLOR" name="Title Font Color" variable="fontcolor" defaultValue="#ffffff"/>
+     <parameter type="FONT" name="Message Color" variable="mfont" defaultValue="Tahoma"/>
+     <parameter type="NUMBER" name="Message Font Size" variable="mfontsize" defaultValue="11"/>
+     <parameter type="COLOR" name="Message Font Color" variable="mfontcolor" defaultValue="#000000"/>
+     <parameter type="STRING" name="OK Button Label" variable="okLabel" defaultValue="OK"/>
+     <parameter type="STRING" name="Cancel Button Label" variable="cancelLabel" defaultValue="Cancel"/>
+     <parameter type="COLOR" name="Disabled Background Color" variable="bgcolor" defaultValue="#ffffff"/>
+     <parameter type="NUMBER" name="Disabled Background Alpha" variable="bgAlpha" defaultValue="50"/>
+     <parameter type="COLOR" name="Frame Face Color" variable="face" defaultValue="#d4d0c8"/>
+     <parameter type="COLOR" name="Frame Highlight Color" variable="highlight" defaultValue="#d4d0c8"/>
+     <parameter type="COLOR" name="Frame Highlight3D Color" variable="highlight3D" defaultValue="#ffffff"/>
+     <parameter type="COLOR" name="Frame Shadow Color" variable="shadow" defaultValue="#808080"/>
+     <parameter type="COLOR" name="Frame DarkShadow Color" variable="darkshadow" defaultValue="#404040"/>
+     <parameter type="COLOR" name="StatusBar Face Color" variable="sface" defaultValue="#d4d0c8"/>
+     <parameter type="COLOR" name="StatusBar Highlight Color" variable="shighlight" defaultValue="#d4d0c8"/>
+     <parameter type="COLOR" name="Statusbar Highlight3D Color" variable="shighlight3D" defaultValue="#808080"/>
+     <parameter type="COLOR" name="StatusBar Shadow Color" variable="sshadow" defaultValue="#d4d0c8"/>
+     <parameter type="COLOR" name="StatusBar DarkShadow Color" variable="sdarkshadow" defaultValue="#ffffff"/>
+     <parameter type="COLOR" name="Anchor Face Color" variable="aface" defaultValue="#d4d0c8"/>
+     <parameter type="COLOR" name="Anchor Highlight Color" variable="ahighlight" defaultValue="#ffffff"/>
+     <parameter type="COLOR" name="Anchor Shadow Color" variable="ashadow" defaultValue="#808080"/>
+     <parameter type="COLOR" name="TitleBar Left Color" variable="activeLeftColor" defaultValue="#0a246a"/>
+     <parameter type="COLOR" name="TitleBar Right Color" variable="activeRightColor" defaultValue="#a6caf0"/>
+     <parameter type="COLOR" name="TitleBar Inactive Left Color" variable="inactiveLeftColor" defaultValue="#808080"/>
+     <parameter type="COLOR" name="TitleBar Inactive Right Color" variable="inactiveRightColor" defaultValue="#c0c0c0"/>
+  </component>
+
+  <component name="GWDialogBoxXP" id="GWDialogBoxXP">
+     <parameter type="FONT" name="Title Color" variable="font" defaultValue="Trebuchet MS"/>
+     <parameter type="NUMBER" name="Title Font Size" variable="fontsize" defaultValue="12"/>
+     <parameter type="COLOR" name="Title Font Color" variable="fontcolor" defaultValue="#ffffff"/>
+     <parameter type="FONT" name="Message Color" variable="mfont" defaultValue="Tahoma"/>
+     <parameter type="NUMBER" name="Message Font Size" variable="mfontsize" defaultValue="11"/>
+     <parameter type="COLOR" name="Message Font Color" variable="mfontcolor" defaultValue="#000000"/>
+     <parameter type="STRING" name="OK Button Label" variable="okLabel" defaultValue="OK"/>
+     <parameter type="STRING" name="Cancel Button Label" variable="cancelLabel" defaultValue="Cancel"/>
+     <parameter type="COLOR" name="Disabled Background Color" variable="bgcolor" defaultValue="#ffffff"/>
+     <parameter type="NUMBER" name="Disabled Background Alpha" variable="bgAlpha" defaultValue="50"/>
+  </component>
+
+  <component name="GWWindowWin" id="GWWindowWin">
+     <parameter type="STRING" name="Content" variable="contentPath" defaultValue=""/>
+     <parameter type="NUMBER" name="ContentBuffer" variable="contentBuffer" defaultValue="0"/>
+     <parameter type="STRING" name="Title" variable="title" defaultValue="Title"/>
+     <parameter type="STRING" name="Title Icon" variable="titleIcon" defaultValue=""/>
+     <parameter type="FONT" name="Title Font" variable="font" defaultValue="Tahoma"/>
+     <parameter type="NUMBER" name="Title Font Size" variable="fontsize" defaultValue="11"/>
+     <parameter type="COLOR" name="Title Font Color" variable="fontcolor" defaultValue="#ffffff"/>
+     <parameter type="FONT" name="Status Font" variable="sfont" defaultValue="Tahoma"/>
+     <parameter type="NUMBER" name="Status Font Size" variable="sfontsize" defaultValue="11"/>
+     <parameter type="COLOR" name="Status Font Color" variable="sfontcolor" defaultValue="#000000"/>
+     <parameter type="STRING" name="Status Loading Message" variable="loadMsg" defaultValue="Loading"/>
+     <parameter type="STRING" name="Status Done Message" variable="doneMsg" defaultValue="Done"/>
+     <parameter type="BOOLEAN" name="Allow Maximize" variable="allowMaximize" defaultValue="true"/>
+     <parameter type="BOOLEAN" name="Allow Minimize" variable="allowMinimize" defaultValue="true"/>
+     <parameter type="BOOLEAN" name="Allow Resize" variable="allowResize" defaultValue="true"/>
+     <parameter type="BOOLEAN" name="Exit on Close" variable="exitOnClose" defaultValue="true"/>
+     <parameter type="BOOLEAN" name="Show Close Button" variable="showClose" defaultValue="true"/>
+     <parameter type="BOOLEAN" name="Show StatusBar" variable="showStatusBar" defaultValue="true"/>
+     <parameter type="BOOLEAN" name="Show TitleBar" variable="showTitleBar" defaultValue="true"/>
+     <parameter type="NUMBER" name="Maximum Width" variable="maxWidth" defaultValue="0"/>
+     <parameter type="NUMBER" name="Maximum Height" variable="maxHeight" defaultValue="0"/>
+     <parameter type="NUMBER" name="Minimum Width" variable="minWidth" defaultValue="100"/>
+     <parameter type="NUMBER" name="Minimum Height" variable="minHeight" defaultValue="100"/>
+     <parameter type="NUMBER" name="MinimizeTo X" variable="minX" defaultValue="0"/>
+     <parameter type="NUMBER" name="MinimizeTo Y" variable="minY" defaultValue="Stage.height"/>
+     <parameter type="NUMBER" name="Resize Speed" variable="resizeSpeed" defaultValue="3"/>
+     <parameter type="COLOR" name="Frame Face Color" variable="face" defaultValue="#d4d0c8"/>
+     <parameter type="COLOR" name="Frame Highlight Color" variable="highlight" defaultValue="#d4d0c8"/>
+     <parameter type="COLOR" name="Frame Highlight3D Color" variable="highlight3D" defaultValue="#ffffff"/>
+     <parameter type="COLOR" name="Frame Shadow Color" variable="shadow" defaultValue="#808080"/>
+     <parameter type="COLOR" name="Frame DarkShadow Color" variable="darkShadow" defaultValue="#404040"/>
+     <parameter type="COLOR" name="StatusBar Face Color" variable="sface" defaultValue="#d4d0c8"/>
+     <parameter type="COLOR" name="StatusBar Highlight Color" variable="shighlight" defaultValue="#d4d0c8"/>
+     <parameter type="COLOR" name="StatusBar Highlight3D Color" variable="shighlight3D" defaultValue="#808080"/>
+     <parameter type="COLOR" name="StatusBar Shadow Color" variable="sshadow" defaultValue="#d4d0c8"/>
+     <parameter type="COLOR" name="StatusBar DarkShadow Color" variable="sdarkshadow" defaultValue="#ffffff"/>
+     <parameter type="COLOR" name="Anchor Face Color" variable="aface" defaultValue="#d4d0c8"/> 
+     <parameter type="COLOR" name="Anchor Highlight Color" variable="ahighlight" defaultValue="#ffffff"/>
+     <parameter type="COLOR" name="Anchor Shadow Color" variable="ashadow" defaultValue="#808080"/>
+     <parameter type="COLOR" name="TitleBar Left Color" variable="activeLeftColor" defaultValue="#0a246a"/>
+     <parameter type="COLOR" name="TitleBar Right Color" variable="activeRightColor" defaultValue="#a6caf0"/>
+     <parameter type="COLOR" name="TitleBar Left Color (Inactive)" variable="inactiveLeftColor" defaultValue="#808080"/>
+     <parameter type="COLOR" name="TitleBar Right Color (Inactive)" variable="inactiveRightColor" defaultValue="#c0c0c0"/>
+  </component>
+
+  <component name="GWWindowXP" id="GWWindowXP">
+     <parameter type="STRING" name="Content" variable="contentPath" defaultValue=""/>
+     <parameter type="NUMBER" name="ContentBuffer" variable="contentBuffer" defaultValue="0"/>
+     <parameter type="STRING" name="Title" variable="title" defaultValue="Title"/>
+     <parameter type="STRING" name="Title Icon" variable="titleIcon" defaultValue=""/>
+     <parameter type="FONT" name="Title Font" variable="font" defaultValue="Trebuchet MS"/>
+     <parameter type="NUMBER" name="Title Font Size" variable="fontsize" defaultValue="12"/>
+     <parameter type="COLOR" name="Title Font Color" variable="fontcolor" defaultValue="#ffffff"/>
+     <parameter type="FONT" name="Status Font" variable="sfont" defaultValue="Tahoma"/>
+     <parameter type="NUMBER" name="Status Font Size" variable="sfontsize" defaultValue="11"/>
+     <parameter type="COLOR" name="Status Font Color" variable="sfontcolor" defaultValue="#000000"/>
+     <parameter type="STRING" name="Status Loading Message" variable="loadMsg" defaultValue="Loading"/>
+     <parameter type="STRING" name="Status Done Message" variable="doneMsg" defaultValue="Done"/>
+     <parameter type="BOOLEAN" name="Allow Maximize" variable="allowMaximize" defaultValue="true"/>
+     <parameter type="BOOLEAN" name="Allow Minimize" variable="allowMinimize" defaultValue="true"/>
+     <parameter type="BOOLEAN" name="Allow Resize" variable="allowResize" defaultValue="true"/>
+     <parameter type="BOOLEAN" name="Exit on Close" variable="exitOnClose" defaultValue="true"/>
+     <parameter type="BOOLEAN" name="Show Close Button" variable="showClose" defaultValue="true"/>
+     <parameter type="BOOLEAN" name="Show StatusBar" variable="showStatusBar" defaultValue="true"/>
+     <parameter type="BOOLEAN" name="Show TitleBar" variable="showTitleBar" defaultValue="true"/>
+     <parameter type="NUMBER" name="Maximum Width" variable="maxWidth" defaultValue="0"/>
+     <parameter type="NUMBER" name="Maximum Height" variable="maxHeight" defaultValue="0"/>
+     <parameter type="NUMBER" name="Minimum Width" variable="minWidth" defaultValue="100"/>
+     <parameter type="NUMBER" name="Minimum Height" variable="minHeight" defaultValue="100"/>
+     <parameter type="NUMBER" name="MinimizeTo X" variable="minX" defaultValue="0"/>
+     <parameter type="NUMBER" name="MinimizeTo Y" variable="minY" defaultValue="Stage.height"/>
+     <parameter type="NUMBER" name="Resize Speed" variable="resizeSpeed" defaultValue="3"/>
+  </component>
+ 
+  <component name="GWInputField" id="GWInputField">
+     <parameter type="BOOLEAN" name="isEnabled" variable="enabled" defaultValue="true"/>
+     <parameter type="BOOLEAN" name="isMultiline?" variable="multiline" defaultValue="false"/>
+     <parameter type="BOOLEAN" name="isPassword?" variable="password" defaultValue="false"/>
+     <parameter type="BOOLEAN" name="useWordWrap?" variable="wordwrap" defaultValue="false"/>
+     <parameter type="NUMBER" name="MaxChars" variable="maxChars" defaultValue="0"/>
+     <parameter type="STRING" name="Initial Value (Text)" variable="value" defaultValue=""/>
+     <parameter type="NUMBER" name="Padding" variable="pad" defaultValue="1"/>
+     <parameter type="FONT" name="Font" variable="font" defaultValue="Tahoma"/>
+     <parameter type="NUMBER" name="FontSize" variable="fontsize" defaultValue="11"/>
+     <parameter type="COLOR" name="FontColor" variable="fontcolor" defaultValue="#000000"/>
+     <parameter type="COLOR" name="FontColor (Invalid)" variable="fontcolor_invalid" defaultValue="#ff0000"/>
+     <parameter type="COLOR" name="Face" variable="face" defaultValue="#ffffff"/>
+     <parameter type="COLOR" name="Highlight" variable="highlight" defaultValue="#404040"/>
+     <parameter type="COLOR" name="Highlight3D" variable="highlight3D" defaultValue="#808080"/>
+     <parameter type="COLOR" name="Shadow" variable="shadow" defaultValue="#d4d0c8"/>
+     <parameter type="COLOR" name="DarkShadow" variable="darkshadow" defaultValue="#ffffff"/>
+     <parameter type="COLOR" name="Face (Focus)" variable="face_focus" defaultValue="#ffffff"/>
+     <parameter type="COLOR" name="Highlight (Focus)" variable="highlight_focus" defaultValue="#404040"/>
+     <parameter type="COLOR" name="Highlight3D (Focus)" variable="highlight3D_focus" defaultValue="#808080"/>
+     <parameter type="COLOR" name="Shadow (Focus)" variable="shadow_focus" defaultValue="#d4d0c8"/>
+     <parameter type="COLOR" name="DarkShadow (Focus)" variable="darkshadow_focus" defaultValue="#ffffff"/>
+     <parameter type="COLOR" name="Face (Invalid)" variable="face_invalid" defaultValue="#ffffff"/>
+     <parameter type="COLOR" name="Highlight (Invalid)" variable="Highlight_invalid" defaultValue="#404040"/>
+     <parameter type="COLOR" name="Highlight3D (Invalid)" variable="Highlight3D_invalid" defaultValue="#808080"/>
+     <parameter type="COLOR" name="Shadow (Invalid)" variable="shadow_invalid" defaultValue="#d4d0c8"/>
+     <parameter type="COLOR" name="DarkShadow (Invalid)" variable="darkshadow_invalid" defaultValue="#ffffff"/>
+     <parameter type="BOOLEAN" name="useEmbedFonts" variable="useEmbedFonts" defaultValue="false"/>
+  </component>
+
+  <component name="GWNumericBox" id="GWNumericBox">
+     <parameter type="NUMBER" name="Initial Value" variable="value" defaultValue="0"/>
+     <parameter type="STRING" name="Prefix" variable="prefix" defaultValue=""/>
+     <parameter type="STRING" name="Suffix" variable="suffix" defaultValue=""/>
+     <parameter type="NUMBER" name="Maximum Value" variable="maxValue" defaultValue="100"/>
+     <parameter type="NUMBER" name="Minimum Value" variable="minValue" defaultValue="0"/>
+     <parameter type="BOOLEAN" name="Integer Only?" variable="isInteger" defaultValue="true"/>
+     <parameter type="FONT" name="Font" variable="font" defaultValue="Tahoma"/>
+     <parameter type="NUMBER" name="Font Size" variable="fontsize" defaultValue="11"/>
+     <parameter type="NUMBER" name="Padding" variable="pad" defaultValue="2"/>
+     <parameter type="NUMBER" name="MaxChars" variable="maxChars" defaultValue="5"/>
+     <parameter type="STRING" name="Restrict" variable="restrict" defaultValue="-0-9."/>
+     <parameter type="COLOR" name="Font Color" variable="fontcolor" defaultValue="#000000"/>
+     <parameter type="COLOR" n <parameter type="COLOR" name="Box DarkShadow Color" variable="darkshadow" defaultValue="#ffffff"/>ame="Box Face Color" variable="face" defaultValue="#ffffff"/>
+     <parameter type="COLOR" name="Box Highlight Color" variable="highlight" defaultValue="#404040"/>
+     <parameter type="COLOR" name="Box Highlight3D" variable="highlight3D" defaultValue="#808080"/>
+     <parameter type="COLOR" name="Box Shadow Color" variable="shadow" defaultValue="#d4d0c8"/>
+     <parameter type="COLOR" name="Box DarkShadow Color" variable="darkshadow" defaultValue="#ffffff"/>
+     <parameter type="COLOR" name="Button Face Color" variable="btn_face" defaultValue="#d4d0c8"/>
+     <parameter type="COLOR" name="Button Highlight Color" variable="btn_highlight" defaultValue="#ffffff"/>
+     <parameter type="COLOR" name="Button Shadow Color" variable="btn_shadow" defaultValue="#808080"/>
+     <parameter type="STRING" name="Slider SymbolID" variable="sliderSymbolID" defaultValue="GWSlider"/>
+     <parameter type="NUMBER" name="Slider AttachMovie Depth" variable="sliderDepth" defaultValue="15000"/>
+     <parameter type="COLOR" name="Track Highlight Color" variable="track_highlight" defaultValue="#404040"/>
+     <parameter type="COLOR" name="Track Highlight3D Color" variable="track_highlight3D" defaultValue="#808080"/>
+     <parameter type="COLOR" name="Track Shadow Color" variable="track_shadow" defaultValue="#d4d0c8"/>
+     <parameter type="COLOR" name="Track DarkShadow Color" variable="track_darkshadow" defaultValue="#ffffff"/>
+     <parameter type="COLOR" name="Thumb Face Color" variable="thumb_face" defaultValue="#d4d0c8"/>
+     <parameter type="COLOR" name="Thumb Highlight Color" variable="thumb_highlight" defaultValue="#ffffff"/>
+     <parameter type="COLOR" name="Thumb Shadow Color" variable="thumb_shadow" defaultValue="#808080"/>
+     <parameter type="COLOR" name="Thumb DarkShadow Color" variable="thumb_darkshadow" defaultValue="#000000"/>
+     <parameter type="COLOR" name="Arrow Color" variable="arrow" defaultValue="#000000"/>
+     <parameter type="COLOR" name="useEmbedFonts" variable="useEmbedFonts" defaultValue="false"/>
+  </component>
+
+  <component name="GWTextArea" id="GWTextArea">
+     <parameter type="STRING" name="Initial Text" variable="initText" defaultValue=""/>
+     <parameter type="STRING" name="External Text File" variable="loadFile" defaultValue=""/>
+     <parameter type="STRING" name="Loading Message" variable="loadMsg" defaultValue="Loading,please wait..."/>
+     <parameter type="STRING" name="Load ErrorMessage" variable="errorMsg" defaultValue="Error encountered while loading file !"/>
+     <parameter type="NUMBER" name="MaxChars" variable="maxChars" defaultValue="0"/>
+     <parameter type="BOOLEAN" name="Editable?" variable="editable" defaultValue="true"/>
+     <parameter type="BOOLEAN" name="Selectable?" variable="selectable" defaultValue="true"/>
+     <parameter type="BOOLEAN" name="useHTML?" variable="html" defaultValue="true"/>
+     <parameter type="BOOLEAN" name="useWordWrap?" variable="wordWrap" defaultValue="true"/>
+     <parameter type="BOOLEAN" name="showFrame?" variable="showFrame" defaultValue="true"/>
+     <parameter type="FONT" name="Font" variable="font" defaultValue="Tahoma"/>
+     <parameter type="NUMBER" name="FontSize" variable="fontsize" defaultValue="11"/>
+     <parameter type="COLOR" name="Font Color" variable="fontcolor" defaultValue="#000000"/>
+     <parameter type="BOOLEAN" name="EmbedFonts?" variable="embedFonts" defaultValue="false"/>
+     <parameter type="BOOLEAN" name="Horizontal Scroll" variable="hScroll" defaultValue="false"/>
+     <parameter type="BOOLEAN" name="Vertical Scroll" variable="vScroll" defaultValue="true"/>
+     <parameter type="NUMBER" name="Small Scroll Value" variable="smallScroll" defaultValue="1"/>
+     <parameter type="NUMBER" name="Large Scroll Value" variable="largeScroll" defaultValue="5"/>
+     <parameter type="COLOR" name="Frame Face Color" variable="face" defaultValue="#ffffff"/>
+     <parameter type="COLOR" name="Frame Highlight Color" variable="highlight" defaultValue="#404040"/>
+     <parameter type="COLOR" name="Frame Highlight3D Color" variable="highlight3D" defaultValue="#808080"/>
+     <parameter type="COLOR" name="Frame Shadow Color" variable="shadow" defaultValue="#d4d0c8"/>
+     <parameter type="COLOR" name="Frame darkShadow Color" variable="darkshadow" defaultValue="#ffffff"/>
+     <parameter type="COLOR" name="ScrollBar Face Color" variable="sb_face" defaultValue="#d4d0c8"/>
+     <parameter type="COLOR" name="ScrollBar Highlight Color" variable="sb_highlight" defaultValue="#ffffff"/>
+     <parameter type="COLOR" name="ScrollBar Highlight3D Color" variable="sb_highlight3D" defaultValue="#d4d0c8"/>
+     <parameter type="COLOR" name="ScrollBar Shadow Color" variable="sb_shadow" defaultValue="#808080"/>
+     <parameter type="COLOR" name="ScrollBar darkShadow Color" variable="sb_darkshadow" defaultValue="#404040"/>
+     <parameter type="COLOR" name="ScrollBar Face Color (Down)" variable="sb_face_down" defaultValue="#d4d0c8"/>
+     <parameter type="COLOR" name="ScrollBar Highlight Color (Down)" variable="sb_highlight_down" defaultValue="#d4d0c8"/>
+     <parameter type="COLOR" name="ScrollBar Highlight3D Color (Down)" variable="sb_highlight3D_down" defaultValue="#808080"/>
+     <parameter type="COLOR" name="ScrollBar Shadow Color (Down)" variable="sb_shadow_down" defaultValue="#d4d0c8"/>
+     <parameter type="COLOR" name="ScrollBar darkShadow Color (Down)" variable="sb_darkshadow_down" defaultValue="#808080"/>
+     <parameter type="COLOR" name="ScrollBar Face Color (Off)" variable="sb_face_off" defaultValue="#d4d0c8"/>
+     <parameter type="COLOR" name="ScrollBar Highlight Color (Off)" variable="sb_highlight_off" defaultValue="#ffffff"/>
+     <parameter type="COLOR" name="ScrollBar Highlight3D Color (Off)" variable="sb_highlight3D_off" defaultValue="#d4d0c8"/>
+     <parameter type="COLOR" name="ScrollBar Shadow Color (Off)" variable="sb_shadow_off" defaultValue="#808080"/>
+     <parameter type="COLOR" name="ScrollBar darkShadow Color (Off)" variable="sb_darkshadow_off" defaultValue="#404040"/>
+     <parameter type="COLOR" name="ScrollBar Arrow" variable="sb_arrow" defaultValue="#000000"/>
+     <parameter type="COLOR" name="ScrollBar Arrow (Down)" variable="sb_arrow_down" defaultValue="#000000"/>
+     <parameter type="COLOR" name="ScrollBar Arrow (Off)" variable="sb_arrow_off" defaultValue="#808080"/>
+     <parameter type="COLOR" name="ScrollBar Track" variable="sb_track" defaultValue="#ececec"/>
+     <parameter type="NUMBER" name="Padding" variable="pad" defaultValue="2"/>
+     <parameter type="BOOLEAN" name="useEmbedFonts" variable="useEmbedFonts" defaultValue="false"/>
+  </component>
+
+  <component name="GWSlider" id="GWSlider">
+      <parameter type="NUMBER" name="Initial Value" variable="value" defaultValue="0"/>
+      <parameter type="NUMBER" name="Maximum Value" variable="maxValue" defaultValue="100"/>
+      <parameter type="NUMBER" name="Minimum Value" variable="minValue" defaultValue="0"/>
+      <parameter type="BOOLEAN" name="Integers Only?" variable="isInteger" defaultValue="true"/>
+      <parameter type="BOOLEAN" name="Snap To Ticks?" variable="useSnap" defaultValue="true"/>
+      <parameter type="NUMBER" name="Ticks" variable="ticks" defaultValue="0"/>
+      <parameter type="BOOLEAN" name="isHorizontal?" variable="horizontal" defaultValue="false"/>
+      <parameter type="BOOLEAN" name="isEnabled?" variable="enabled" defaultValue="true"/>
+      <parameter type="BOOLEAN" name="UseHandCursor?" variable="handCursor" defaultValue="false"/>
+      <parameter type="BOOLEAN" name="showFrame?" variable="showFrame" defaultValue="true"/>
+      <parameter type="COLOR" name="Frame Face Color" variable="face" defaultValue="#d4d0c8"/>
+      <parameter type="COLOR" name="Frame Highlight Color" variable="highlight" defaultValue="#ffffff"/>
+      <parameter type="COLOR" name="Frame Shadow Color" variable="shadow" defaultValue="#808080"/>
+      <parameter type="COLOR" name="Track Highlight Color" variable="track_highlight" defaultValue="#404040"/>
+      <parameter type="COLOR" name="Track Highlight3D Color" variable="track_highlight3D" defaultValue="#808080"/>
+      <parameter type="COLOR" name="Track Shadow Color" variable="track_shadow" defaultValue="#d4d0c8"/>
+      <parameter type="COLOR" name="Track DrakShadow Color" variable="track_darkshadow" defaultValue="#ffffff"/>
+      <parameter type="COLOR" name="Thumb Face" variable="thumb_face" defaultValue="#d4d0c8"/>
+      <parameter type="COLOR" name="Thumb Highlight" variable="thumb_highlight" defaultValue="#ffffff"/>
+      <parameter type="COLOR" name="Thumb Shadow" variable="thumb_Shadow" defaultValue="#808080"/>
+      <parameter type="COLOR" name="Thumb DarkShadow" variable="thumb_darkshadow" defaultValue="#000000"/>
+      <parameter type="STRING" name="" variable="_targetInstanceName" defaultValue=""/>
+  </component>
+
+  <component name="GWSliderBar" id="GWSliderBar">
+      <parameter type="NUMBER" name="Initial Value" variable="value" defaultValue="0"/>
+      <parameter type="NUMBER" name="Maximum Value" variable="maxValue" defaultValue="100"/>
+      <parameter type="NUMBER" name="Minimum Value" variable="minValue" defaultValue="0"/>
+      <parameter type="BOOLEAN" name="Integers Only?" variable="isInteger" defaultValue="true"/>
+      <parameter type="BOOLEAN" name="Snap To Ticks?" variable="useSnap" defaultValue="true"/>
+      <parameter type="NUMBER" name="Ticks" variable="ticks" defaultValue="0"/>
+      <parameter type="BOOLEAN" name="isHorizontal?" variable="horizontal" defaultValue="false"/>
+      <parameter type="BOOLEAN" name="isEnabled?" variable="enabled" defaultValue="true"/>
+      <parameter type="BOOLEAN" name="UseHandCursor?" variable="handCursor" defaultValue="false"/>
+      <parameter type="STRING" name="" variable="_targetInstanceName" defaultValue=""/>
+  </component>
+
+  <component name="GWSliderLine" id="GWSliderLine">
+      <parameter type="NUMBER" name="Initial Value" variable="value" defaultValue="0"/>
+      <parameter type="NUMBER" name="Maximum Value" variable="maxValue" defaultValue="100"/>
+      <parameter type="NUMBER" name="Minimum Value" variable="minValue" defaultValue="0"/>
+      <parameter type="BOOLEAN" name="Integers Only?" variable="isInteger" defaultValue="true"/>
+      <parameter type="BOOLEAN" name="Snap To Ticks?" variable="useSnap" defaultValue="true"/>
+      <parameter type="NUMBER" name="Ticks" variable="ticks" defaultValue="0"/>
+      <parameter type="BOOLEAN" name="isHorizontal?" variable="horizontal" defaultValue="false"/>
+      <parameter type="BOOLEAN" name="isEnabled?" variable="enabled" defaultValue="true"/>
+      <parameter type="BOOLEAN" name="UseHandCursor?" variable="handCursor" defaultValue="false"/>
+      <parameter type="STRING" name="" variable="_targetInstanceName" defaultValue=""/>
+  </component>
+
+  <component name="GWSliderWMP" id="GWSliderWMP">
+      <parameter type="NUMBER" name="Initial Value" variable="value" defaultValue="0"/>
+      <parameter type="NUMBER" name="Maximum Value" variable="maxValue" defaultValue="100"/>
+      <parameter type="NUMBER" name="Minimum Value" variable="minValue" defaultValue="0"/>
+      <parameter type="BOOLEAN" name="Integers Only?" variable="isInteger" defaultValue="true"/>
+      <parameter type="BOOLEAN" name="Snap To Ticks?" variable="useSnap" defaultValue="true"/>
+      <parameter type="NUMBER" name="Ticks" variable="ticks" defaultValue="0"/>
+      <parameter type="BOOLEAN" name="isHorizontal?" variable="horizontal" defaultValue="false"/>
+      <parameter type="BOOLEAN" name="isEnabled?" variable="enabled" defaultValue="true"/>
+      <parameter type="BOOLEAN" name="UseHandCursor?" variable="handCursor" defaultValue="false"/>
+      <parameter type="BOOLEAN" name="showFrame?" variable="showFrame" defaultValue="true"/>
+      <parameter type="STRING" name="" variable="_targetInstanceName" defaultValue=""/>
+  </component>
+
+  <component name="GWTabViewBottom" id="GWTabViewBottom">
+     <parameter type="ARRAY" name="Labels" variable="labels" defaultValue="['Tab1','Tab2','Tab3']"/>
+     <parameter type="ARRAY" name="Data" variable="Data" defaultValue="[]"/>
+     <parameter type="ARRAY" name="Icons" variable="icons" defaultValue="[]"/>
+     <parameter type="ARRAY" name="Load types" variable="types" defaultValue="[]"/>
+     <parameter type="FONT" name="Label Font" variable="labelFont" defaultValue="Tahoma"/>
+     <parameter type="NUMBER" name="Label Size" variable="labelSize" defaultValue="11"/>
+     <parameter type="NUMBER" name="Inactive Brightness" variable="brightness" defaultValue="-10"/>
+     <parameter type="NUMBER" name="Active TabOverlap" variable="overlap" defaultValue="4"/>
+     <parameter type="NUMBER" name="TabOverlap X" variable="overlapx" defaultValue="0"/>
+     <parameter type="NUMBER" name="TabOverlap Y" variable="overlapy" defaultValue="2"/>
+     <parameter type="NUMBER" name="Content Buffer X" variable="cpadx" defaultValue="10"/>
+     <parameter type="NUMBER" name="Content Buffer Y" variable="cpady" defaultValue="10"/>
+     <parameter type="BOOLEAN" name="useEmbedFonts" variable="useEmbedFonts" defaultValue="false"/>
+  </component>
+
+  <component name="GWTabViewBottomGreen" id="GWTabViewBottomGreen">
+     <parameter type="ARRAY" name="Labels" variable="labels" defaultValue="['Tab1','Tab2','Tab3']"/>
+     <parameter type="ARRAY" name="Data" variable="Data" defaultValue="[]"/>
+     <parameter type="ARRAY" name="Icons" variable="icons" defaultValue="[]"/>
+     <parameter type="ARRAY" name="Load types" variable="types" defaultValue="[]"/>
+     <parameter type="FONT" name="Label Font" variable="labelFont" defaultValue="Tahoma"/>
+     <parameter type="NUMBER" name="Label Size" variable="labelSize" defaultValue="11"/>
+     <parameter type="NUMBER" name="Inactive Brightness" variable="brightness" defaultValue="-10"/>
+     <parameter type="NUMBER" name="Active TabOverlap" variable="overlap" defaultValue="4"/>
+     <parameter type="NUMBER" name="TabOverlap X" variable="overlapx" defaultValue="0"/>
+     <parameter type="NUMBER" name="TabOverlap Y" variable="overlapy" defaultValue="1"/>
+     <parameter type="NUMBER" name="Content Buffer X" variable="cpadx" defaultValue="10"/>
+     <parameter type="NUMBER" name="Content Buffer Y" variable="cpady" defaultValue="10"/>
+     <parameter type="BOOLEAN" name="useEmbedFonts" variable="useEmbedFonts" defaultValue="false"/>
+  </component>
+  
+  <component name="GWTabViewTop" id="GWTabViewTop">
+     <parameter type="ARRAY" name="Labels" variable="labels" defaultValue="['Tab1','Tab2','Tab3']"/>
+     <parameter type="ARRAY" name="Data" variable="Data" defaultValue="[]"/>
+     <parameter type="ARRAY" name="Icons" variable="icons" defaultValue="[]"/>
+     <parameter type="ARRAY" name="Load types" variable="types" defaultValue="[]"/>
+     <parameter type="FONT" name="Label Font" variable="labelFont" defaultValue="Tahoma"/>
+     <parameter type="NUMBER" name="Label Size" variable="labelSize" defaultValue="11"/>
+     <parameter type="NUMBER" name="Inactive Brightness" variable="brightness" defaultValue="-10"/>
+     <parameter type="NUMBER" name="Active TabOverlap" variable="overlap" defaultValue="4"/>
+     <parameter type="NUMBER" name="TabOverlap X" variable="overlapx" defaultValue="0"/>
+     <parameter type="NUMBER" name="TabOverlap Y" variable="overlapy" defaultValue="1"/>
+     <parameter type="NUMBER" name="Content Buffer X" variable="cpadx" defaultValue="10"/>
+     <parameter type="NUMBER" name="Content Buffer Y" variable="cpady" defaultValue="10"/>
+     <parameter type="BOOLEAN" name="useEmbedFonts" variable="useEmbedFonts" defaultValue="false"/>
+  </component>
+
+  <component name="GWTabViewTopGreen" id="GWTabViewTopGreen">
+     <parameter type="ARRAY" name="Labels" variable="labels" defaultValue="['Tab1','Tab2','Tab3']"/>
+     <parameter type="ARRAY" name="Data" variable="Data" defaultValue="[]"/>
+     <parameter type="ARRAY" name="Icons" variable="icons" defaultValue="[]"/>
+     <parameter type="ARRAY" name="Load types" variable="types" defaultValue="[]"/>
+     <parameter type="FONT" name="Label Font" variable="labelFont" defaultValue="Tahoma"/>
+     <parameter type="NUMBER" name="Label Size" variable="labelSize" defaultValue="11"/>
+     <parameter type="NUMBER" name="Inactive Brightness" variable="brightness" defaultValue="-10"/>
+     <parameter type="NUMBER" name="Active TabOverlap" variable="overlap" defaultValue="4"/>
+     <parameter type="NUMBER" name="TabOverlap X" variable="overlapx" defaultValue="0"/>
+     <parameter type="NUMBER" name="TabOverlap Y" variable="overlapy" defaultValue="1"/>
+     <parameter type="NUMBER" name="Content Buffer X" variable="cpadx" defaultValue="10"/>
+     <parameter type="NUMBER" name="Content Buffer Y" variable="cpady" defaultValue="10"/>
+     <parameter type="BOOLEAN" name="useEmbedFonts" variable="useEmbedFonts" defaultValue="false"/>
+  </component>
+
+  <component name="GWCollapsibleMenu" id="GWCollapsibleMenu">
+     <parameter type="LISTE" name="Mode" variable="mode" defaultValue="Collapsible">
+        <value>Collapsible</value>
+        <value>Accordion</value>
+     </parameter>
+     <parameter type="NUMBER" name="Start Index" variable="startindex" defaultValue="0"/>
+     <parameter type="LISTE" name="Action" variable="action" defaultValue="Event">
+        <value>Event</value>
+        <value>GetURL</value>
+        <value>GotoAndPlay</value>
+        <value>GotoAndStop</value>  
+     </parameter>
+     <parameter type="ARRAY" name="Labels" variable="labels" defaultValue="['@parent','child','child','@parent','child','child','@parent','child','child']"/>
+     <parameter type="ARRAY" name="Data" variable="data" defaultValue="[]"/>
+     <parameter type="ARRAY" name="Icons" variable="icons" defaultValue="[]"/>
+     <parameter type="NUMBER" name="Row Height" variable="rowHeight" defaultValue="20"/>
+     <parameter type="FONT" name="Font" variable="font" defaultValue="Tahoma"/>
+     <parameter type="NUMBER" name="Font Size" variable="fontsize" defaultValue="11"/>
+     <parameter type="COLOR" name="Font Color (Parent)" variable="fontcolor" defaultValue="#ffffff"/> 
+     <parameter type="COLOR" name="Font Color (Parent Over)" variable="fontcolor_on" defaultValue="#d4d0c8"/>
+     <parameter type="COLOR" name="Font Color (Child)" variable="fontcolor_out" defaultValue="#000000"/>
+     <parameter type="COLOR" name="Font Color (Child Over)" variable="fontcolor_over" defaultValue="#d4d0c8"/>
+     <parameter type="COLOR" name="Font Color (Child Down)" variable="fontcolor_down" defaultValue="#808080"/>
+     <parameter type="COLOR" name="Item Color (Down)" variable="itemcolor_down" defaultValue="#d4d0c8"/>
+     <parameter type="COLOR" name="Item Color (Out)" variable="itemcolor_off" defaultValue="#d4d0c8"/>
+     <parameter type="COLOR" name="Item Color (Over)" variable="itemcolor_on" defaultValue="#999999"/>
+     <parameter type="NUMBER" name="Item Opacity" variable="alpha" defaultValue="100"/>
+     <parameter type="STRING" name="Child Background" variable="childBackGround" defaultValue=""/>
+     <parameter type="STRING" name="Child Background (Down)" variable="childBackGroundDown" defaultValue=""/>
+     <parameter type="STRING" name="Child Background (Over)" variable="childBackGroundOver" defaultValue=""/>
+     <parameter type="NUMBER" name="Child labels Indent" variable="padx" defaultValue="5"/>
+     <parameter type="BOOLEAN" name="Resize To Fit?" variable="resizeToFit" defaultValue="false"/>
+     <parameter type="NUMBER" name="Padding" variable="pad" defaultValue="0"/>
+     <parameter type="BOOLEAN" name="useEmbedFonts" variable="useEmbedFonts" defaultValue="false"/>
+  </component>
+
+  <component name="GWCollapsibleMenuBlue" id="GWCollapsibleMenuBlue">
+     <parameter type="LISTE" name="Mode" variable="mode" defaultValue="Collapsible">
+        <value>Collapsible</value>
+        <value>Accordion</value>
+     </parameter>
+     <parameter type="NUMBER" name="Start Index" variable="startindex" defaultValue="0"/>
+     <parameter type="LISTE" name="Action" variable="action" defaultValue="Event">
+        <value>Event</value>
+        <value>GetURL</value>
+        <value>GotoAndPlay</value>
+        <value>GotoAndStop</value>  
+     </parameter>
+     <parameter type="ARRAY" name="Labels" variable="labels" defaultValue="['@parent','child','child','@parent','child','child','@parent','child','child']"/>
+     <parameter type="ARRAY" name="Data" variable="data" defaultValue="[]"/>
+     <parameter type="ARRAY" name="Icons" variable="icons" defaultValue="[]"/>
+     <parameter type="NUMBER" name="Row Height" variable="rowHeight" defaultValue="20"/>
+     <parameter type="FONT" name="Font" variable="font" defaultValue="Tahoma"/>
+     <parameter type="NUMBER" name="Font Size" variable="fontsize" defaultValue="11"/>
+     <parameter type="COLOR" name="Font Color (Parent)" variable="fontcolor" defaultValue="#ffffff"/> 
+     <parameter type="COLOR" name="Font Color (Parent Over)" variable="fontcolor_on" defaultValue="#d4d0c8"/>
+     <parameter type="COLOR" name="Font Color (Child)" variable="fontcolor_out" defaultValue="#000000"/>
+     <parameter type="COLOR" name="Font Color (Child Over)" variable="fontcolor_over" defaultValue="#d4d0c8"/>
+     <parameter type="COLOR" name="Font Color (Child Down)" variable="fontcolor_down" defaultValue="#808080"/>
+     <parameter type="COLOR" name="Item Color (Down)" variable="itemcolor_down" defaultValue="#d4d0c8"/>
+     <parameter type="COLOR" name="Item Color (Out)" variable="itemcolor_off" defaultValue="#d4d0c8"/>
+     <parameter type="COLOR" name="Item Color (Over)" variable="itemcolor_on" defaultValue="#999999"/>
+     <parameter type="NUMBER" name="Item Opacity" variable="alpha" defaultValue="100"/>
+     <parameter type="STRING" name="Child Background" variable="childBackGround" defaultValue=""/>
+     <parameter type="STRING" name="Child Background (Down)" variable="childBackGroundDown" defaultValue=""/>
+     <parameter type="STRING" name="Child Background (Over)" variable="childBackGroundOver" defaultValue=""/>
+     <parameter type="NUMBER" name="Child labels Indent" variable="padx" defaultValue="5"/>
+     <parameter type="BOOLEAN" name="Resize To Fit?" variable="resizeToFit" defaultValue="false"/>
+     <parameter type="NUMBER" name="Padding" variable="pad" defaultValue="0"/>
+     <parameter type="BOOLEAN" name="useEmbedFonts" variable="useEmbedFonts" defaultValue="false"/>
+  </component>
+
+  <component name="GWCollapsiblePane" id="GWCollapsiblePane">
+     <parameter type="LISTE" name="Mode" variable="mode" defaultValue="Collapsible">
+        <value>Collapsible</value>
+        <value>Accordion</value>
+     </parameter>
+     <parameter type="NUMBER" name="Start Index" variable="startindex" defaultValue="0"/>
+     <parameter type="LISTE" name="Action" variable="action" defaultValue="Event">
+        <value>Event</value>
+        <value>GetURL</value>
+        <value>GotoAndPlay</value>
+        <value>GotoAndStop</value>  
+     </parameter>
+     <parameter type="ARRAY" name="Labels" variable="labels" defaultValue="['Pane One','Pane Two','Pane Three']"/>
+     <parameter type="ARRAY" name="Data" variable="data" defaultValue="[]"/>
+     <parameter type="FONT" name="Font" variable="font" defaultValue="Tahoma"/>
+     <parameter type="NUMBER" name="Font Size" variable="fontsize" defaultValue="11"/>
+     <parameter type="COLOR" name="Font Color" variable="fontcolor" defaultValue="#ffffff"/> 
+     <parameter type="COLOR" name="Font Color (Over)" variable="fontcolor_on" defaultValue="#d4d0c8"/>
+     <parameter type="COLOR" name="Text Color" variable="textcolor" defaultValue="#000000"/>
+     <parameter type="BOOLEAN" name="Resize To Fit?" variable="resizeToFit" defaultValue="true"/>
+     <parameter type="NUMBER" name="Padding" variable="pad" defaultValue="0"/>
+     <parameter type="BOOLEAN" name="useEmbedFonts" variable="useEmbedFonts" defaultValue="false"/>
+  </component>
+
+  <component name="GWCollapsiblePaneBlue" id="GWCollapsiblePaneBlue">
+      <parameter type="LISTE" name="Mode" variable="mode" defaultValue="Collapsible">
+        <value>Collapsible</value>
+        <value>Accordion</value>
+     </parameter>
+     <parameter type="NUMBER" name="Start Index" variable="startindex" defaultValue="0"/>
+     <parameter type="LISTE" name="Action" variable="action" defaultValue="Event">
+        <value>Event</value>
+        <value>GetURL</value>
+        <value>GotoAndPlay</value>
+        <value>GotoAndStop</value>  
+     </parameter>
+     <parameter type="ARRAY" name="Labels" variable="labels" defaultValue="['Pane One','Pane Two','Pane Three']"/>
+     <parameter type="ARRAY" name="Data" variable="data" defaultValue="[]"/>
+     <parameter type="FONT" name="Font" variable="font" defaultValue="Tahoma"/>
+     <parameter type="NUMBER" name="Font Size" variable="fontsize" defaultValue="11"/>
+     <parameter type="COLOR" name="Font Color" variable="fontcolor" defaultValue="#000000"/> 
+     <parameter type="COLOR" name="Font Color (Over)" variable="fontcolor_on" defaultValue="#ffffff"/>
+     <parameter type="COLOR" name="Text Color" variable="textcolor" defaultValue="#000000"/>
+     <parameter type="BOOLEAN" name="Resize To Fit?" variable="resizeToFit" defaultValue="true"/>
+     <parameter type="NUMBER" name="Padding" variable="pad" defaultValue="0"/>
+     <parameter type="BOOLEAN" name="useEmbedFonts" variable="useEmbedFonts" defaultValue="false"/>
+  </component>
+
+  <component name="GWMenuBarBlue" id="GWMenuBarBlue">
+    <parameter type="ARRAY" name="Labels" variable="labels" defaultValue="['@Parent1','Child1', 'Child2', '@Parent2','Child1','@Parent3','Child1']"/>
+    <parameter type="ARRAY" name="Data" variable="Data" defaultValue="[]"/>
+    <parameter type="ARRAY" name="Icons" variable="icons" defaultValue="[]"/>
+    <parameter type="LISTE" name="Action" variable="action" defaultValue="Event">
+        <value>Event</value>
+        <value>GetURL</value>
+        <value>GotoAndPlay</value>
+        <value>GotoAndStop</value>  
+     </parameter>
+    <parameter type="NUMBER" name="Corner Padding" variable="pad" defaultValue="10"/>
+    <parameter type="NUMBER" name="Item Spacing" variable="itemSpacing" defaultValue="10"/>
+    <parameter type="FONT" name="Font" variable="font" defaultValue="Tahoma"/>
+    <parameter type="NUMBER" name="Font Size" variable="fontsize" defaultValue="11"/>
+    <parameter type="COLOR" name="Font Color" variable="fontcolor" defaultValue="#000000"/>
+    <parameter type="COLOR" name="Font Color (Over)" variable="fontcolor_over" defaultValue="#000000"/>
+    <parameter type="COLOR" name="Font Color (Down)" variable="fontcolor_down" defaultValue="#000000"/>
+    <parameter type="NUMBER" name="Row Height" variable="rowHeight" defaultValue="25"/>
+    <parameter type="NUMBER" name="Submenu RowHeight" variable="subRowHeight" defaultValue="25"/>
+    <parameter type="COLOR" name="SubMenu Font Color" variable="subfontcolor" defaultValue="#000000"/>
+    <parameter type="COLOR" name="SubMenu Font Color (Over)" variable="subfontcolor_over" defaultValue="#000000"/>
+    <parameter type="COLOR" name="SubMenu Font Color (Down)" variable="subfontcolor_down" defaultValue="#000000"/>
+    <parameter type="NUMBER" name="Hide Delay" variable="hideDelay" defaultValue="100"/>
+    <parameter type="NUMBER" name="Show Delay" variable="showDelay" defaultValue="100"/>
+    <parameter type="LISTE" name="Submenu Direction" variable="direction" defaultValue="down">
+       <value>down</value>
+       <value>up</value>
+    </parameter>
+    <parameter type="BOOLEAN" name="Align Right" variable="alignRight" defaultValue="false"/>
+    <parameter type="BOOLEAN" name="Keep Menu Over State" variable="keepMenuOver" defaultValue="true"/>
+    <parameter type="BOOLEAN" name="useEmbedFonts" variable="useEmbedFonts" defaultValue="false"/>
+  </component>
+
+  <component name="GWMenuBarSilver" id="GWMenuBarSilver">
+    <parameter type="ARRAY" name="Labels" variable="labels" defaultValue="['@Parent1','Child1','@Parent2','Child1','@Parent3','Child1']"/>
+    <parameter type="ARRAY" name="Data" variable="Data" defaultValue="[]"/>
+    <parameter type="ARRAY" name="Icons" variable="icons" defaultValue="[]"/>
+    <parameter type="LISTE" name="Action" variable="action" defaultValue="Event">
+        <value>Event</value>
+        <value>GetURL</value>
+        <value>GotoAndPlay</value>
+        <value>GotoAndStop</value>  
+     </parameter>
+    <parameter type="NUMBER" name="Corner Padding" variable="pad" defaultValue="10"/>
+    <parameter type="NUMBER" name="Item Spacing" variable="itemSpacing" defaultValue="10"/>
+    <parameter type="FONT" name="Font" variable="font" defaultValue="Tahoma"/>
+    <parameter type="NUMBER" name="Font Size" variable="fontsize" defaultValue="11"/>
+    <parameter type="COLOR" name="Font Color" variable="fontcolor" defaultValue="#000000"/>
+    <parameter type="COLOR" name="Font Color (Over)" variable="fontcolor_over" defaultValue="#000000"/>
+    <parameter type="COLOR" name="Font Color (Down)" variable="fontcolor_down" defaultValue="#000000"/>
+    <parameter type="NUMBER" name="Row Height" variable="rowHeight" defaultValue="25"/>
+    <parameter type="NUMBER" name="Submenu RowHeight" variable="subRowHeight" defaultValue="25"/>
+    <parameter type="COLOR" name="SubMenu Font Color" variable="subfontcolor" defaultValue="#000000"/>
+    <parameter type="COLOR" name="SubMenu Font Color (Over)" variable="subfontcolor_over" defaultValue="#000000"/>
+    <parameter type="COLOR" name="SubMenu Font Color (Down)" variable="subfontcolor_down" defaultValue="#000000"/>
+    <parameter type="NUMBER" name="Hide Delay" variable="hideDelay" defaultValue="100"/>
+    <parameter type="NUMBER" name="Show Delay" variable="showDelay" defaultValue="100"/>
+    <parameter type="LISTE" name="Submenu Direction" variable="direction" defaultValue="down">
+       <value>down</value>
+       <value>up</value>
+    </parameter>
+    <parameter type="BOOLEAN" name="Align Right" variable="alignRight" defaultValue="false"/>
+    <parameter type="BOOLEAN" name="Keep Menu Over State" variable="keepMenuOver" defaultValue="true"/>
+    <parameter type="BOOLEAN" name="useEmbedFonts" variable="useEmbedFonts" defaultValue="false"/> 
+  </component>
+  <!-- END GhostWire Studios Component Sets 1,2,3,4 -->
+
+
+
+</registry>

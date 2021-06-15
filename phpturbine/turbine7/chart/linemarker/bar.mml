@@ -1,0 +1,92 @@
+<Shape pos="0,0">
+  <LineStyle width="1" color="{_barcolor}"/>
+  <moveTo pos="{_barX},{=_barY-_barheight0}"/>
+  <lineTo path="{=_barX+_barWidth},{=_barY-_barheight1}"/>
+</shape>
+
+<BaseDepth depth="5000"/>
+<button pos="{_barX},{_barY}">
+  <State type="hit">
+    <Shape pos="0,0">
+      <FillColor side="left" color="{_barcolor}"/>
+      <Circle center="0,{=-_barheight0}" radius="{=_barWidth/2}"/>
+    </shape>
+    <Shape pos="0,0">
+      <FillColor side="left" color="{_barcolor}"/>
+      <Circle center="0,{=-_barheight0}" radius="4"/>
+    </shape>
+  </State>
+
+  <State type="over, down">
+    <Shape alpha="10" pos="0,0">
+      <FillColor side="left" color="{_barcolor}"/>
+      <Circle center="0,{=-_barheight0}" radius="{=_barWidth*2}"/>
+    </shape>
+    <Shape alpha="50" pos="0,0">
+      <FillColor side="left" color="{_barcolor}"/>
+      <Circle center="0,{=-_barheight0}" radius="{=_barWidth/2}"/>
+    </shape>
+    <Shape alpha="100" pos="0,0">
+      <FillColor side="left" color="#000000"/>
+      <Circle center="0,{=-_barheight0}" radius="4"/>
+    </shape>
+
+    <Text
+      flags="base"
+      size="{=_defaultFontHeight*0.75}"
+      color="#000000"
+      _align="left"
+      _width="{=_barwidth-10}"
+      pos="10,{=-_barheight0+_defaultFontHeight*0.75/2}">{_barValue}</Text>
+
+    <Text
+      background="color(#aaffff), border(#000000,1),space(3)"
+      flags="base"
+      size="{=_defaultFontHeight*0.75}"
+      color="#000000" 
+      align="center"
+      placepoint="center"
+      Pos="0,{=-_barheight0-4-_barWidth/2}">{_barTooltip}</Text>
+
+  </State>
+
+  <if notEmpty="{_barURL}">
+    <Script event="press" type="source">
+    getUrl("{_barURL}");
+    </Script>
+  </if>
+
+  <Audio
+          src="~/chart/bip.mp3"
+          event="RollOver"/>
+
+</button>
+
+
+
+<BaseDepth depth="2000"/>
+<Shape alpha="1" pos="0,0">
+  <FillColor side="left" color="{_barcolor}"/>
+  <Circle center="{_barX},{=_barY-_barheight0}" radius="{=_barWidth/2}"/>
+</shape>
+<Shape pos="0,0">
+  <FillColor side="left" color="{_barcolor}"/>
+  <Circle center="{_barX},{=_barY-_barheight0}" radius="4"/>
+</shape>
+    
+
+<Text
+  flags="base"
+  size="{=_defaultFontHeight*0.75}"
+  color="{_barcolor}"
+  _align="left"
+  _width="{=_barwidth-10}"
+  pos="{=_barX+10},{=_barY-_barheight0+_defaultFontHeight*0.75/2}">{_barValue}</Text>
+
+<Text
+  size="{_defaultFontHeight}"
+  flags="base"
+  color="#000000"
+  _align="center"
+  _width="{=_barwidth-10}"
+  pos="{=_barX},{=_barY+_defaultFontHeight}">{_barLabel}</Text>

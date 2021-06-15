@@ -1,0 +1,26 @@
+ADVO File Transmission
+
+We have had difficulty uploading files to ADVO in the past. As we create a lot of Pulte postcards that get handled by them, something needed to change. To make this situation better for us (our files get to them intact) and for ADVO (they don't have to keep calling us) I've granted them access to our FTP system. We will post files for ADVO to download from now on.
+
+In ADVO's instruction sheet, it is stated that they require a "sit.hqx" file. I found that to be untrue. On one occasion when our file had gone over corrupted, I sent it the second time simply stuffed, ".sit", and was successful.
+
+The procedure for posting files for ADVO will be similar to that of other files we post. After the ISO process has been finalized, you can upload the final file, via Fetch, to their dedicated directory on our server:
+
+http://www.sfdesign.com/client_area_FTP/advo/"FILE-NAME-GOE-SHERE"
+
+Once the file has been posted and tested you can email
+
+Jackie Tolson
+Milwaukee Advo
+GP Assistant
+414-325-2659 
+jatolson@advo.com
+
+with the link and simple instructions about the job.
+
+I have provided ADVO with a username and password:
+
+username: sfusers
+password: advo1340
+
+I would be happy to handle this process for you, and in my absence Angela will do it. Either way this should curb the "corrupt file" problem we have been having with ADVO. 

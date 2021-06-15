@@ -1,0 +1,216 @@
+<!doctype html public "-//w3c//dtd html 4.0 transitional//en">
+<html>
+<head>
+   <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+   <meta name="GENERATOR" content="Mozilla/4.51 [en] (Win95; I) [Netscape]">
+   <title>Scripting Sample</title>
+</head>
+<BODY topmargin="0" leftmargin="0" rightmargin="0" marginwidth="0" marginheight="0" TEXT="#000000" BGCOLOR="#FFFFFF" LINK="#003366" VLINK="#FF9900" ALINK="#FF6600">
+<center>
+  <table width="100%" border="0" cellspacing="0" cellpadding="0" align="center">
+    <tr bgcolor="#000033"> 
+      <td background="../common/bar_left.gif" width="50%">&nbsp;</td>
+      <td> 
+        <table width="560" border="0" cellspacing="0" cellpadding="0">
+          <tr> 
+            <td width="334"><img src="../common/bar_left.gif" width="334" height="28"></td>
+            <td><img src="../common/bar_central.gif" width="110" height="28"></td>
+            <td><img src="../common/bar_logo.gif" width="116" height="28"></td>
+          </tr>
+        </table>
+      </td>
+      <td background="../common/1x1_azul_esc.gif" width="50%">&nbsp;</td>
+    </tr>
+    <tr bgcolor="#FFFFFF" height="4"> 
+      <td colspan="3"></td>
+    </tr>
+  </table>
+  <table width="560" border="0" cellspacing="0" cellpadding="0">
+    <tr valign="top"> 
+      <td height="39"> 
+        <table width="599" border="0" cellspacing="0" cellpadding="0">
+          <tr> 
+            <td width="443" height="25"><font face="Verdana, Arial, Helvetica, sans-serif" size="3"><a href="../default.htm">Samples 
+              Menu</a></font></td>
+            <td width="156" height="25"> 
+              <div align="center"><font face="Verdana, Arial, Helvetica, sans-serif" size="3"><a href="../turbinewindow/default.htm">Next 
+                Sample</a> </font></div>
+            </td>
+          </tr>
+        </table>
+      </td>
+    </tr>
+    <tr valign="top"> 
+      <td height="769"> 
+        <p align="center"><font face="Arial" size="6">Scripting<font size="1"><b><br>
+          (Flash MX)<br>
+          &nbsp; </b></font></font></p>
+
+        <div> 
+          <p>&nbsp; 
+          <p><font face="Verdana, Arial, Helvetica, sans-serif" size="2"> Turbine 
+            includes an on-the-fly Action Script compiler allowing for powerful 
+            scripting capabilities. Scripting can be used to control other MML 
+            tags. For example, the following script sets the value of a text field:<br>
+            &nbsp;<br>
+            <OBJECT classid="clsid:D27CDB6E-AE6D-11cf-96B8-444553540000" 
+        codebase="http://active.macromedia.com/flash2/cabs/swflash.cab#version=5,0,0,0"
+        ID="sw" WIDTH="600" HEIGHT="200">
+              <PARAM NAME="movie" VALUE="script.php?num=1">
+              <PARAM NAME="quality" VALUE="best">
+              <PARAM NAME="bgcolor" VALUE="#ffffff">
+              <EMBED src="script.php?num=1" 
+         quality="best" bgcolor="#ffffff" 
+         WIDTH="600" HEIGHT="200"	swLiveConnect="false"
+         TYPE="application/x-shockwave-flash" 
+         PLUGINSPAGE="http://www.macromedia.com/shockwave/download/index.cgi?P1_Prod_Version=ShockwaveFlash"> 
+              </EMBED> </OBJECT>
+            <br>
+            The Flash movie above was created from the following MML:</font></p>
+          <table width="90%" border="1" cellpadding="0" cellspacing="0" bordercolor="#999999">
+            <tr> 
+              <td><table width="100%" border="0" cellpadding="16" cellspacing="0" bgcolor="#eeeef4">
+                  <tr> 
+                    <td valign="top"> <div align="left"> 
+                        <p> <font size="2" face="Courier New, Courier, mono">&lt;TextField 
+                          instance=&quot;field&quot; size=&quot;300,100&quot; 
+                          flags=&quot;multiline,border,wrap&quot;&gt;The next 
+                          values are added by the script:<br>
+                          &lt;/TextField&gt;</font></p>
+                        <p> <font size="2" face="Courier New, Courier, mono">&lt;Script&gt;<br>
+                          &nbsp;&nbsp;for(i=1; i&lt;=3; i++){<br>
+                          &nbsp;&nbsp;&nbsp;&nbsp;field.text = field.text + i 
+                          + &quot;\n&quot;;<br>
+                          &nbsp;&nbsp;}</font><br>
+                          <font size="2" face="Courier New, Courier, mono">&lt;/Script&gt;<br>
+                          &nbsp;</font> </p>
+                        </div></td>
+                  </tr>
+                </table></td>
+            </tr>
+          </table>
+          <p>&nbsp;</p>
+        </div>
+<hr size="1" noshade> 
+
+
+
+
+
+<div> 
+          <p><font size="5" face="Verdana, Arial, Helvetica, sans-serif">Controlling MML 
+            Elements</font>
+          <p><font face="Verdana, Arial, Helvetica, sans-serif" size="2"> Turbine 
+            scripting supports all the object-oriented capabilities available 
+            in Flash MX. The following example uses an onEnterFrame handler to 
+            rotate an image created by an &lt;Image> tag:</font></p>
+          <p><font face="Verdana, Arial, Helvetica, sans-serif" size="2"> 
+            <OBJECT classid="clsid:D27CDB6E-AE6D-11cf-96B8-444553540000" 
+        codebase="http://active.macromedia.com/flash2/cabs/swflash.cab#version=5,0,0,0"
+        ID="sw" WIDTH="600" HEIGHT="200">
+              <PARAM NAME="movie" VALUE="script.php?num=2">
+              <PARAM NAME="quality" VALUE="best">
+              <PARAM NAME="bgcolor" VALUE="#ffffff">
+              <EMBED src="script.php?num=2" 
+         quality="best" bgcolor="#ffffff" 
+         WIDTH="600" HEIGHT="200"	swLiveConnect="false"
+         TYPE="application/x-shockwave-flash" 
+         PLUGINSPAGE="http://www.macromedia.com/shockwave/download/index.cgi?P1_Prod_Version=ShockwaveFlash"> 
+              </EMBED> </OBJECT>
+            <br>
+            The Flash movie above was created from the following MML tags:</font></p>
+          <table width="90%" border="1" cellpadding="0" cellspacing="0" bordercolor="#999999">
+            <tr> 
+              <td><table width="100%" border="0" cellpadding="16" cellspacing="0" bgcolor="#eeeef4">
+                  <tr> 
+                    <td valign="top"> <div align="left"> 
+                        <p> <font size="2" face="Courier New, Courier, mono">&lt;Image 
+                          instance=&quot;image&quot; src=&quot;../common/flower.gif&quot;<br>
+                          pos=&quot;300,100&quot; size=&quot;120,80&quot;/&gt;</font></p>
+                        <p> <font size="2" face="Courier New, Courier, mono">&lt;Script&gt;<br>
+                          &nbsp;&nbsp;onEnterFrame = function(){<br>
+                          &nbsp;&nbsp;&nbsp;&nbsp;image._rotation+=2;<br>
+                          &nbsp;&nbsp;}<br>
+                          &lt;/Script&gt;<br>
+                          &nbsp; </font></p>
+                        </div></td>
+                  </tr>
+                </table></td>
+            </tr>
+          </table>
+          <p>&nbsp;</p>
+        </div>
+<hr size="1" noshade> 
+
+
+
+
+<div> 
+          <p><font size="5" face="Verdana, Arial, Helvetica, sans-serif">Turbine 
+            Window Debugging</font>
+          <p><font face="Verdana, Arial, Helvetica, sans-serif" size="2"> Turbine 
+            scripting can work with the Turbine window, to provide a handy trace-like 
+            functionality that works on all situations:</font></p>
+          <p><font face="Verdana, Arial, Helvetica, sans-serif" size="2"> 
+            <OBJECT classid="clsid:D27CDB6E-AE6D-11cf-96B8-444553540000" 
+        codebase="http://active.macromedia.com/flash2/cabs/swflash.cab#version=5,0,0,0"
+        ID="sw" WIDTH="600" HEIGHT="300">
+              <PARAM NAME="movie" VALUE="scriptdebug.php?num=3">
+              <PARAM NAME="quality" VALUE="best">
+              <PARAM NAME="bgcolor" VALUE="#ffffff">
+              <EMBED src="scriptdebug.php?num=3" 
+         quality="best" bgcolor="#ffffff" 
+         WIDTH="600" HEIGHT="300"	swLiveConnect="false"
+         TYPE="application/x-shockwave-flash" 
+         PLUGINSPAGE="http://www.macromedia.com/shockwave/download/index.cgi?P1_Prod_Version=ShockwaveFlash"> 
+              </EMBED> </OBJECT>
+            <br>
+            The Flash movie above was created from the following MML:</font></p>
+          <table width="90%" border="1" cellpadding="0" cellspacing="0" bordercolor="#999999">
+            <tr> 
+              <td><table width="100%" border="0" cellpadding="16" cellspacing="0" bgcolor="#eeeef4">
+                  <tr> 
+                    <td valign="top"> <div align="left"> 
+                        <p> <font size="2" face="Courier New, Courier, mono">&lt;Script&gt;<br>
+                          &nbsp;&nbsp;turbineDebug(&quot;This text was logged 
+                          from a script block.&quot;);</font></p>
+                        <p><font size="2" face="Courier New, Courier, mono"> &nbsp;&nbsp;var 
+                          now = new Date();<br>
+                          &nbsp;&nbsp;turbineDebug(&quot;Current time is &quot; 
+                          + now.toString());</font></p>
+                        <p><font size="2" face="Courier New, Courier, mono"> &nbsp;&nbsp;turbineDebug(&quot;Flash 
+                          Player version is: &quot; + getVersion());</font></p>
+                        <p> <font size="2" face="Courier New, Courier, mono">&lt;/Script&gt;<br>
+                          &nbsp; </font><font face="Courier New, Courier, mono" size="2"> 
+                          </font></p>
+                        </div></td>
+                  </tr>
+                </table></td>
+            </tr>
+          </table>
+          <p>&nbsp;&nbsp;<br>
+            &nbsp; </p>
+        </div>
+</td>
+    </tr>
+    <tr valign="bottom"> 
+      <td height="64"> 
+        <hr width="100%" size="1" noshade>
+        <table width="600" border="0" cellspacing="0" cellpadding="0">
+          <tr> 
+            <td width="443" height="25"><font face="Verdana, Arial, Helvetica, sans-serif" size="3"><a href="../default.htm">Samples 
+              Menu</a></font></td>
+            <td width="157" height="25"> 
+              <div align="center"><font face="Verdana, Arial, Helvetica, sans-serif" size="3"><a href="../turbinewindow/default.htm">Next 
+                Sample</a> </font></div>
+            </td>
+          </tr>
+        </table>
+        <div align="center"><font face="Arial, Helvetica, sans-serif" size="1"><i>&nbsp;<br>
+          Flash is a trademark of Macromedia, Inc.</i></font> </div>
+      </td>
+    </tr>
+  </table>
+          </center>
+</body>
+</html>

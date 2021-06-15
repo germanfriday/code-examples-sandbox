@@ -1,0 +1,33 @@
+// create a frame element node
+var newIframe = document.createElement("iframe");
+newIframe.setAttribute("id","newIframe");
+// insert it into the document to give it context;
+// set a tiny size, or display:none if you don't want to see it
+document.body.appendChild(newIframe);
+
+// get the browser-appropriate document context for content creation
+if (navigator.appName == "Microsoft Internet Explorer") {
+    var doc = newIframe.contentWindow.document;
+} else {
+    doc = document; 
+}
+
+// create a form node within suitable document context
+var newForm = doc.createElement("form")
+newForm.setAttribute("id","sendform");
+// create an input element node in the same context
+var newField = doc.createElement("input");
+newField.setAttribute("id","alldata");
+newField.setAttribute("type","text");
+// insert the field into the form
+newForm.appendChild(newField);
+// create and insert more form controls here
+...
+// insert the form into the iframe via delay
+setTimeout("finishIframe()", 0);
+
+
+// complete content insertion
+function finishIframe() {
+    newIframe.contentWindow.document.body.appendChild(newform);
+}

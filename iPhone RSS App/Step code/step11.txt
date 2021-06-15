@@ -1,0 +1,1 @@
+// in RSSXMLParser.h //@interface RSSXMLParser : NSObject {	NSXMLParser *theXMLParser;	NSMutableString * theCurrentString;}-(void) parseRSSFeed;@end

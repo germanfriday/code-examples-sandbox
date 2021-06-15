@@ -1,0 +1,56 @@
+function getDaysBeforeNextXmas() {
+    var oneMinute = 60 * 1000;
+    var oneHour = oneMinute * 60;
+    var oneDay = oneHour * 24;
+    var today = new Date();
+    var nextXmas = new Date();
+    nextXmas.setMonth(11);
+    nextXmas.setDate(25);
+    if (today.getMonth() == 11 && today.getDate() > 25) {
+        nextXmas.setFullYear(nextXmas.getFullYear() + 1);
+    }
+    var diff = nextXmas.getTime() - today.getTime();
+    diff = Math.floor(diff/oneDay);
+    return diff;
+}
+
+...
+
+<p>Only 
+<script type="text/javascript">document.write(getDaysBeforeNextXmas())</script>
+shopping days until Christmas.</p>
+
+----------
+
+function getDaysBefore(year, month, date) {
+    var oneMinute = 60 * 1000;
+    var oneHour = oneMinute * 60;
+    var oneDay = oneHour * 24;
+    var today = new Date();
+    var targetDate = new Date();
+    targetDate.setYear(year);
+    targetDate.setMonth(month);
+    targetDate.setDate(date);
+    alert(targetDate);
+    var diff = targetDate.getTime() - today.getTime();
+    diff = Math.floor(diff/oneDay);
+    return diff;
+}
+
+----------
+
+function getDaysArt() {
+    var output = "";
+    var dayCount = getDaysBeforeNextXmas() + "";
+    for (var i = 0; i < dayCount.length; i++) {
+        output += "<img src='digits/" + dayCount.charAt(i) + ".jpg'";
+        output += "height='120' width='60' alt='" + dayCount.charAt(i) + "' />";
+    }
+    return output;
+}
+
+...
+
+<p>Only 
+<script type="text/javascript">document.write(getDaysArt())</script>
+shopping days until Christmas.</p>

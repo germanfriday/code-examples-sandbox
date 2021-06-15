@@ -1,0 +1,55 @@
+function setImage(imgName, type) {
+    if (document.images) {
+        if (type == "hilite") {
+            document.images[imgName].src = imagesHilite[imgName].src;
+            return true;
+        } else if (type == "normal") {
+            document.images[imgName].src = imagesNormal[imgName].src;
+            return true;
+        }
+    }
+    return false;
+}
+
+----------
+
+<a href="products.html" onmouseover="return setImage('products', 'hilite')"
+    onmouseout="return setImage('products', 'normal')"><img name="products" 
+    height="20" width="50" border="0" src="img/prodNormal.jpg" alt="Products"></a>
+
+----------
+
+<img name="products" height="20" width="50" src="img/prodNormal.jpg" alt="Products" 
+    onmouseover="return setImage(this.name, 'hilite')"
+    onmouseout="return setImage(this.name, 'normal')"
+    onclick="location.href='products.html'">
+
+----------
+
+// generic swappable image changer
+function setImage(evt) {
+    if (document.images) {
+        // equalize W3C and IE event objects
+        evt = (evt) ? evt : ((window.event) ? window.event : null);
+        if (evt) {
+            // equalize W3C and IE event property
+            var elem = (evt.target) ? evt.target : 
+                       ((evt.srcElement) ? evt.srcElement : null);
+            // filter out older browsers (elem==null) and unswappable elements
+            if (elem && elem.className == "swappable") {
+               // let event type govern state
+                switch (evt.type) {
+                    case "mouseover":
+                        elem.src = imagesHilite[elem.id].src;
+                        break;
+                    case "mouseout":
+                        elem.src = imagesNormal[elem.id].src;
+                        break;
+                }
+            }
+        }
+    }
+}
+// top-level event handlers grab bubbled events
+document.onmouseover=setImage;
+document.onmouseout=setImage;

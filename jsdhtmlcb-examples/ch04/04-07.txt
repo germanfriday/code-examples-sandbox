@@ -1,0 +1,50 @@
+function doNothing() {return true;}
+window.onerror = doNothing;
+
+
+----------
+
+<script type="text/javascript" language="JavaScript1.5">
+function myFunc() {
+    try {
+        // statement(s) that could throw an error if various conditions aren't right
+    }
+    catch(e) {
+        // statements that handle the exception (error object passed to e variable)
+    }
+}
+</script>
+
+----------
+
+try {
+    window.onmouseover = trackPosition;
+}
+catch(e) {
+    var msg = (e.message) ? e.message : e.description;
+    if (/trackPosition/.exec(msg) && /defined/.exec(msg)) {
+        // trackPosition function does not exist within page scope
+    }
+}
+
+----------
+
+function processNumber(inputField) {
+    try {
+        var inpVal = parseInt(inputField.value, 10);
+        if (isNaN(inpVal)) {
+            var msg = "Please enter a number only.";
+            var err = new Error(msg);
+            if (!err.message) {
+                err.message = msg;
+            }
+            throw err;
+        }
+        // it's safe to process number here
+    }
+    catch (e) {
+        alert(e.message);
+        inputField.focus();
+        inputField.select();
+    }
+}

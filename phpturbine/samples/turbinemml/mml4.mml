@@ -1,0 +1,11 @@
+<Text>Move the mouse over here</Text>
+
+<Image src="../common/flower.gif"
+       instance="flower"/>
+
+<Script>
+  onEnterFrame = function (){
+    flower._x=_xmouse;
+    flower._y=_ymouse;
+  }
+</Script>

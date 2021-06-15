@@ -1,0 +1,56 @@
+# This is the Turbine 7 global system settings file, loaded when the Turbine engine starts.
+# Make sure to fully restart Turbine's host for any changes to take effect.
+# Boolean values can be specified as Yes, True or 1 / No, False or 0.
+
+
+# The default logging level, a combination of errors, warnings and info. Default is to log errors and warnings:
+System.Log=errors, warnings
+
+# Log message destination, a combination of media and/or file. Default is to both file and media:
+System.LogTo=media, file
+
+# The default value applied to Media.Debug. Default is No:
+System.Debug=No
+
+# The default value applied to Media.Protect. Default is No:
+System.Protect=No
+
+# The default value applied to Media.Compress. Default is No:
+System.Compress=No
+
+# The default <AutoLayout> type, either horizontal, vertical or off. Default is off:
+System.AutoLayout="off"
+
+# Whether Flash text fields with MML commands must be enclosed in <mml>...</mml> to be recognized. Default is No:
+System.MMLTagRequired=No
+
+# Boolean value that specifies whether unknown MML tags raise warnings. Defaults to Yes:
+System.MMLWarnUnknownTags=Yes
+
+# Optimize Internet Explorer excess multiple requests. Default is Yes:
+System.IEOptimization=Yes
+
+# Avoid optimizing for browsers pretending to be Internet Explorer, but that do not behave as IE. Separate entries with the | character:
+System.IEOptimizationAvoid=Opera|OmniWeb|WebTV|Konqueror|iCab
+
+# The default mapping font faces. Far East users might prefer to use other font faces - for example MS Gothic, MS Mincho or Arial Unicode MS:
+#System.FontMapSans=
+#System.FontMapSerif=
+#System.FontMapTypewriter=
+
+
+# A number of global default settings for text attributes. Usually not globally specified:
+#System.FontName=Arial
+#System.FontStyle=bold,italic
+#System.FontSize=320
+#System.FontColor=#ff000000
+#System.FontCharSet
+
+# A number of global default settings for image attributes. Usually not globally specified:
+#System.ImageEncodeFlags    -> 1=JPEG, 2=ZLIB, 3=smaller of JPEG/ZLIB, 0=native.
+#System.ImageEncodeQuality  -> Encoding quality between 0-100%. Can also be 255 for native.
+#System.ImageSmooth         -> Global smoothness level between 0-1000%.
+#System.ImageResampleMethod -> Raw resize      = 0
+#                              Average resize  = 1
+#                              Bilinear resize = 2
+#                              Bicubic resize  = 3

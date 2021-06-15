@@ -1,0 +1,12 @@
+MANIFEST
+zope.app.debugskin/__init__.py
+zope.app.debugskin/configure.zcml
+zope.app.debugskin/debugskin-configure.zcml
+zope.app.debugskin/error_debug.pt
+zope.app.debugskin/exceptions.py
+zope.app.debugskin/ftests.py
+zope.app.debugskin/SETUP.cfg
+zope.app.debugskin/tests.py
+zope.app.debugskin/unauthorized.pt
+setup.py
+setup.cfg

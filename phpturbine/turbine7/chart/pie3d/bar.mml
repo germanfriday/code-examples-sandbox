@@ -1,0 +1,245 @@
+<Origin pos="{=_frameWidth/2},{=_frameHeight/2}"/>
+
+<BaseDepth depth="0"/>
+<shape pos="0,0">
+  <LineStyle width="1" color="#000000"/>
+  <FillColor side="right" color="{_barcolor}"/>
+  <slice   
+    center="0,0"
+    startAngle="{=360*_currentSumValue/_sumValues}"
+    endAngle="{=360*_nextSumValue/_sumValues}"
+    radius="{=_frameWidth/2},{=_frameHeight/2}"/>
+</shape>
+
+
+<if test="{=((360*_currentSumValue/_sumValues) >= 0) && ((360*_currentSumValue/_sumValues) <= 180) || ((360*_nextSumValue/_sumValues) >= 0) && ((360*_nextSumValue/_sumValues) <= 180)}">
+  <if test="{=(360*_nextSumValue/_sumValues) > 180}">
+    <shape pos="0,0">
+      <LineStyle width="1" color="#000000"/>
+      <FillColor side="right" color="{_barcolor}"/>
+      <MoveTo pos="{=cos((360*_currentSumValue/_sumValues)*Math.PI/180)*(_frameWidth/2)},{=sin((360*_currentSumValue/_sumValues)*Math.PI/180)*(_frameHeight/2)+_threeDDepth}"/>
+
+      <ArcTo 
+        center="0,{_threeDDepth}"
+        startAngle="{=360*_currentSumValue/_sumValues}"
+        endAngle="180"
+        radius="{=_frameWidth/2},{=_frameHeight/2}"/>
+      <lineTo path="{=cos(180*Math.PI/180)*(_frameWidth/2)},{=sin(180*Math.PI/180)*(_frameHeight/2)}"/>
+
+      <ArcTo 
+        center="0,0"
+        startAngle="180"
+        endAngle="{=360*_currentSumValue/_sumValues}"
+        radius="{=_frameWidth/2},{=_frameHeight/2}"/>
+      <LineTo path="{=cos((360*_currentSumValue/_sumValues)*Math.PI/180)*(_frameWidth/2)},{=sin((360*_currentSumValue/_sumValues)*Math.PI/180)*(_frameHeight/2)+_threeDDepth}"/>
+
+    </shape>
+  <else/>
+    <shape pos="0,0">
+      <LineStyle width="1" color="#000000"/>
+      <FillColor side="right" color="{_barcolor}"/>
+
+      <MoveTo pos="{=cos((360*_currentSumValue/_sumValues)*Math.PI/180)*(_frameWidth/2)},{=sin((360*_currentSumValue/_sumValues)*Math.PI/180)*(_frameHeight/2)+_threeDDepth}"/>
+
+      <ArcTo 
+        center="0,{_threeDDepth}"
+        startAngle="{=360*_currentSumValue/_sumValues}"
+        endAngle="{=360*_nextSumValue/_sumValues}"
+        radius="{=_frameWidth/2},{=_frameHeight/2}"/>
+      <lineTo path="{=cos((360*_nextSumValue/_sumValues)*Math.PI/180)*(_frameWidth/2)},{=sin((360*_nextSumValue/_sumValues)*Math.PI/180)*(_frameHeight/2)}"/>
+
+      <ArcTo 
+        center="0,0"
+        startAngle="{=360*_nextSumValue/_sumValues}"
+        endAngle="{=360*_currentSumValue/_sumValues}"
+        radius="{=_frameWidth/2},{=_frameHeight/2}"/>
+      <LineTo path="{=cos((360*_currentSumValue/_sumValues)*Math.PI/180)*(_frameWidth/2)},{=sin((360*_currentSumValue/_sumValues)*Math.PI/180)*(_frameHeight/2)+_threeDDepth}"/>
+
+    </shape>
+  </if>
+</if>
+
+<BaseDepth depth="1000"/>
+<Text
+  flags="base"
+  size="{=_defaultFontHeight*0.75}"
+  color="#000000"
+  align="center"
+  placepoint="center"
+  pos="{=cos((360*((_nextSumValue+_currentSumValue)/2)/_sumValues)*Math.PI/180)*(_frameWidth/2/1.5)},{=sin((360*((_nextSumValue+_currentSumValue)/2)/_sumValues)*Math.PI/180)*(_frameHeight/2/1.5)}">{_currentPercentageValue}%</Text>
+
+<Text
+  flags="base"
+  size="{=_defaultFontHeight*0.75}"
+  color="#000000"
+  align="center"
+  placepoint="center"
+  pos="{=cos((360*((_nextSumValue+_currentSumValue)/2)/_sumValues)*Math.PI/180)*(_frameWidth/2*1.15)},{=sin((360*((_nextSumValue+_currentSumValue)/2)/_sumValues)*Math.PI/180)*(_frameHeight/2*1.15)}">{_barLabel}</Text>
+
+
+
+
+
+<BaseDepth depth="2000"/>
+<button pos="0,0">
+  <State type="hit">
+    <BaseDepth depth="0"/>
+    <shape pos="0,0">
+      <FillColor side="right" color="{_barcolor}"/>
+      <LineStyle width="1" color="#000000"/>
+      <slice   
+        center="0,0"
+        startAngle="{=360*_currentSumValue/_sumValues}"
+        endAngle="{=360*_nextSumValue/_sumValues}"
+        radius="{=_frameWidth/2},{=_frameHeight/2}"/>
+    </shape>
+
+    <if test="{=((360*_currentSumValue/_sumValues) >= 0) && ((360*_currentSumValue/_sumValues) <= 180) || ((360*_nextSumValue/_sumValues) >= 0) && ((360*_nextSumValue/_sumValues) <= 180)}">
+      <if test="{=(360*_nextSumValue/_sumValues) > 180}">
+        <shape pos="0,0">
+          <LineStyle width="1" color="#000000"/>
+          <FillColor side="right" color="{_barcolor}"/>
+          <MoveTo pos="{=cos((360*_currentSumValue/_sumValues)*Math.PI/180)*(_frameWidth/2)},{=sin((360*_currentSumValue/_sumValues)*Math.PI/180)*(_frameHeight/2)+_threeDDepth}"/>
+
+          <ArcTo 
+            center="0,{_threeDDepth}"
+            startAngle="{=360*_currentSumValue/_sumValues}"
+            endAngle="180"
+            radius="{=_frameWidth/2},{=_frameHeight/2}"/>
+          <lineTo path="{=cos(180*Math.PI/180)*(_frameWidth/2)},{=sin(180*Math.PI/180)*(_frameHeight/2)}"/>
+
+          <ArcTo 
+            center="0,0"
+            startAngle="180"
+            endAngle="{=360*_currentSumValue/_sumValues}"
+            radius="{=_frameWidth/2},{=_frameHeight/2}"/>
+          <LineTo path="{=cos((360*_currentSumValue/_sumValues)*Math.PI/180)*(_frameWidth/2)},{=sin((360*_currentSumValue/_sumValues)*Math.PI/180)*(_frameHeight/2)+_threeDDepth}"/>
+
+        </shape>
+      <else/>
+        <shape pos="0,0">
+          <LineStyle width="1" color="#000000"/>
+          <FillColor side="right" color="{_barcolor}"/>
+
+          <MoveTo pos="{=cos((360*_currentSumValue/_sumValues)*Math.PI/180)*(_frameWidth/2)},{=sin((360*_currentSumValue/_sumValues)*Math.PI/180)*(_frameHeight/2)+_threeDDepth}"/>
+
+          <ArcTo 
+            center="0,{_threeDDepth}"
+            startAngle="{=360*_currentSumValue/_sumValues}"
+            endAngle="{=360*_nextSumValue/_sumValues}"
+            radius="{=_frameWidth/2},{=_frameHeight/2}"/>
+          <lineTo path="{=cos((360*_nextSumValue/_sumValues)*Math.PI/180)*(_frameWidth/2)},{=sin((360*_nextSumValue/_sumValues)*Math.PI/180)*(_frameHeight/2)}"/>
+
+          <ArcTo 
+            center="0,0"
+            startAngle="{=360*_nextSumValue/_sumValues}"
+            endAngle="{=360*_currentSumValue/_sumValues}"
+            radius="{=_frameWidth/2},{=_frameHeight/2}"/>
+          <LineTo path="{=cos((360*_currentSumValue/_sumValues)*Math.PI/180)*(_frameWidth/2)},{=sin((360*_currentSumValue/_sumValues)*Math.PI/180)*(_frameHeight/2)+_threeDDepth}"/>
+
+        </shape>
+      </if>
+    </if>
+
+  </State>
+
+  <State type="over,down">
+    <BaseDepth depth="0"/>
+    <shape pos="0,0">
+      <LineStyle width="2" color="#ffffff"/>
+      <slice   
+        center="0,0"
+        startAngle="{=360*_currentSumValue/_sumValues}"
+        endAngle="{=360*_nextSumValue/_sumValues}"
+        radius="{=_frameWidth/2},{=_frameHeight/2}"/>
+    </shape>
+
+    <if test="{=((360*_currentSumValue/_sumValues) >= 0) && ((360*_currentSumValue/_sumValues) <= 180) || ((360*_nextSumValue/_sumValues) >= 0) && ((360*_nextSumValue/_sumValues) <= 180)}">
+      <if test="{=(360*_nextSumValue/_sumValues) > 180}">
+        <shape pos="0,0">
+          <LineStyle width="2" color="#ffffff"/>
+          <Arc 
+            center="0,{_threeDDepth}"
+            startAngle="{=360*_currentSumValue/_sumValues}"
+            endAngle="180"
+            radius="{=_frameWidth/2},{=_frameHeight/2}"/>
+          <Arc 
+            center="0,0"
+            startAngle="{=360*_currentSumValue/_sumValues}"
+            endAngle="180"
+            radius="{=_frameWidth/2},{=_frameHeight/2}"/>
+          <moveTo pos="{=cos((360*_currentSumValue/_sumValues)*Math.PI/180)*(_frameWidth/2)},{=sin((360*_currentSumValue/_sumValues)*Math.PI/180)*(_frameHeight/2)}"/>
+          <lineTo path="{=cos((360*_currentSumValue/_sumValues)*Math.PI/180)*(_frameWidth/2)},{=sin((360*_currentSumValue/_sumValues)*Math.PI/180)*(_frameHeight/2)+_threeDDepth}"/>
+          <moveTo pos="{=cos(180*Math.PI/180)*(_frameWidth/2)},{=sin(180*Math.PI/180)*(_frameHeight/2)}"/>
+          <lineTo path="{=cos(180*Math.PI/180)*(_frameWidth/2)},{=sin(180*Math.PI/180)*(_frameHeight/2)+_threeDDepth}"/>
+        </shape>
+      <else/>
+        <shape pos="0,0">
+          <LineStyle width="2" color="#ffffff"/>
+          <Arc 
+            center="0,{_threeDDepth}"
+            startAngle="{=360*_currentSumValue/_sumValues}"
+            endAngle="{=360*_nextSumValue/_sumValues}"
+            radius="{=_frameWidth/2},{=_frameHeight/2}"/>
+          <Arc 
+            center="0,0"
+            startAngle="{=360*_currentSumValue/_sumValues}"
+            endAngle="{=360*_nextSumValue/_sumValues}"
+            radius="{=_frameWidth/2},{=_frameHeight/2}"/>
+          <moveTo pos="{=cos((360*_currentSumValue/_sumValues)*Math.PI/180)*(_frameWidth/2)},{=sin((360*_currentSumValue/_sumValues)*Math.PI/180)*(_frameHeight/2)}"/>
+          <lineTo path="{=cos((360*_currentSumValue/_sumValues)*Math.PI/180)*(_frameWidth/2)},{=sin((360*_currentSumValue/_sumValues)*Math.PI/180)*(_frameHeight/2)+_threeDDepth}"/>
+          <moveTo pos="{=cos((360*_nextSumValue/_sumValues)*Math.PI/180)*(_frameWidth/2)},{=sin((360*_nextSumValue/_sumValues)*Math.PI/180)*(_frameHeight/2)}"/>
+          <lineTo path="{=cos((360*_nextSumValue/_sumValues)*Math.PI/180)*(_frameWidth/2)},{=sin((360*_nextSumValue/_sumValues)*Math.PI/180)*(_frameHeight/2)+_threeDDepth}"/>
+        </shape>
+      </if>
+    </if>
+
+    <BaseDepth depth="1000"/>
+    <Text
+      flags="base"
+      size="{=_defaultFontHeight*0.75}"
+      color="#000000"
+      align="center"
+      placepoint="center"
+      pos="{=cos((360*((_nextSumValue+_currentSumValue)/2)/_sumValues)*Math.PI/180)*(_frameWidth/2/1.5)},{=sin((360*((_nextSumValue+_currentSumValue)/2)/_sumValues)*Math.PI/180)*(_frameHeight/2/1.5)}">{_currentPercentageValue}%</Text>
+    <Text
+      flags="base"
+      size="{=_defaultFontHeight*0.75}"
+      color="#000000"
+      align="center"
+      placepoint="center"
+      pos="{=cos((360*((_nextSumValue+_currentSumValue)/2)/_sumValues)*Math.PI/180)*(_frameWidth/2*1.15)},{=sin((360*((_nextSumValue+_currentSumValue)/2)/_sumValues)*Math.PI/180)*(_frameHeight/2*1.15)}">{_barLabel}</Text>
+
+    <BaseDepth depth="2000"/>
+    <Text
+      background="color(#aaffff), border(#000000,1),space(3)"
+      flags="base"
+      color="#000000"
+      size="{_defaultFontHeight}"
+      align="center"
+      placepoint="center"
+      pos="{=cos((360*((_nextSumValue+_currentSumValue)/2)/_sumValues)*Math.PI/180)*(_frameWidth/2*1.45)},{=sin((360*((_nextSumValue+_currentSumValue)/2)/_sumValues)*Math.PI/180)*(_frameHeight/2*1.45)}">{_barTooltip}</Text>
+
+    <BaseDepth depth="2000"/>
+    <Text
+      background="color(#aaffff), border(#000000,1),space(3)"
+      flags="base"
+      color="#000000"
+	    size="{_defaultFontHeight}"
+      align="center"
+      placepoint="center"
+      pos="{=cos((360*((_nextSumValue+_currentSumValue)/2)/_sumValues)*Math.PI/180)*(_frameWidth/2*0.30)},{=sin((360*((_nextSumValue+_currentSumValue)/2)/_sumValues)*Math.PI/180)*(_frameHeight/2*0.30)}">{_barValue}</Text>
+
+
+  </State>
+
+  <if notEmpty="{_barURL}">
+    <Script event="press" type="source">
+    getUrl("{_barURL}");
+    </Script>
+  </if>
+
+  <Audio src="~/chart/bip.mp3"
+         event="RollOver"/>
+
+</button>

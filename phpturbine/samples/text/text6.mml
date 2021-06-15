@@ -1,0 +1,10 @@
+<Text>
+  <font size="15">
+    <p spacing="-1">This text has spacing set to -1.</p><br/>
+    <p spacing="3">This text has spacing set to +3 pixels.</p><br/>
+    <p>The next text is displayed with a &lt;pre> tag, which causes space characters to be respected:</p>
+    <pre>Some text, spaces                     and then text again.</pre><br/>
+    <p><font color="#FF00FF">T</font><font color="#FF00CC">h</font><font color="#FF0099">i</font><font color="#FF0066">s</font> <font color="#FF0033">t</font><font color="#FF0000">e</font><font color="#FF3300">x</font><font color="#FF6600">t</font> <font color="#FF9900">i</font><font color="#FFCC00">s</font> <font color="#FFFF00">r</font><font color="#CCFF00">a</font><font color="#99FF00">i</font><font color="#66FF00">n</font><font color="#33FF00">b</font><font color="#00FF00">o</font><font color="#00FF33">w</font> <font color="#00FF66">c</font><font color="#00FF99">o</font><font color="#00FFCC">l</font><font color="#00FFFF">o</font><font color="#00CCFF">r</font><font color="#0099FF">e</font><font color="#0066FF">d</font>
+    </p><br/>
+  </font>
+</Text>

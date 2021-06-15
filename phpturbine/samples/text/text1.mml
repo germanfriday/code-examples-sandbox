@@ -1,0 +1,6 @@
+<Text>
+  <font size="30">
+    This is text in regular style, <b>this in bold and <i>this in bold italic.</i></b>
+  </font>
+</Text>
+

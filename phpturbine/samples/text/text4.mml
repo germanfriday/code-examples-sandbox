@@ -1,0 +1,10 @@
+<Text bounds="0,0,600,85;400,85,600,150;0,150,600,200">
+  <font size="17">
+    <p align="justify">Here we have lots and lots and lots and still lots and lots and lots of justified text. Still, text continues and continues and continues to make its way on and on across the available space. Sooner or later, surely text will at some point terminate, which is certainly a change from the current state of things! Well, and here we have lots and lots and lots and still lots and lots and lots of justified text. Still, text continues...</p>
+  </font>
+</Text>
+
+<Shape pos="0,90">
+  <FillColor color="#eeeeee"/>
+  <Rect size="390,60"/>
+</Shape>

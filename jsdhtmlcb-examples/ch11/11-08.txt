@@ -1,0 +1,23 @@
+<style type="text/css">
+.unhilited {background-color:white}
+.hilited {background-color:yellow; text-decoration:underline}
+</style>
+É
+<script type="text/javascript">
+function setHilite(evt) {
+    evt = (evt) ? evt : ((window.event) ? window.event : null);
+    if (evt) {
+        var elem = (evt.srcElement) ? evt.srcElement : evt.target;
+        elem.className = "hilited";
+    }
+}
+function setUnHilite(evt) {
+    evt = (evt) ? evt : ((window.event) ? window.event : null);
+    if (evt) {
+        var elem = (evt.srcElement) ? evt.srcElement : evt.target;
+        elem.className = "unhilited";
+    }
+}
+...
+<span class="unhilited" onmouseover="setHilite(event)" 
+    onmouseout="setUnHilite(event)">Some potentially hot spot text.</span>

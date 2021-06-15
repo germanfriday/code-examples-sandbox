@@ -1,0 +1,125 @@
+html, body, ul, ol, li, p, blockquote, q,
+h1, h2, h3, h4, h5, h6,
+form, fieldset, a, div, img{
+	margin: 0; padding: 0; border: 0;
+}
+html {
+	font-size: 70%;
+	line-height: 150%;	
+	color: #FFF;
+	background-color: inherit;
+	height: 100%;
+}
+body {
+	background-color: #999;
+	font-family: Arial, Helvetica, sans-serif;
+	color: #FFF;
+	font-size: 100%;
+	height: 100%;
+	background-image: url(../images/bg.png);
+	background-repeat: repeat-x;
+	background-position: top;
+}
+.H1 {
+	font-size: 200%;
+	font-weight: bold;
+	margin: 0 0 -10px 0;
+	color: #FFF;
+	background-color: inherit;
+}
+.H2 {
+	font-size: 125%;
+	font-weight: bold;
+	color: #FFF;
+	background-color: inherit;
+}
+#MainContent {
+	margin: 10px auto 0 auto;
+	width: 730px;
+	background-color: #FFF;
+	padding: 10px;
+	border-bottom: solid 3px #333;
+	border-right: solid 3px #333;
+}
+#Header {
+	position: relative;
+	margin-bottom: 10px;
+	width: 730px;
+	height: 250px;
+	background-color: #333;
+}
+#Ribbon {
+	position: absolute;
+	left: -15px;
+	top: -15px;
+}
+#NavBar {
+	position: relative;
+	width: 730px;
+	background-color: #333;
+}
+#NavBar ul {
+	margin: 0 0 0 2px;
+	padding: 0;
+	list-style: none;
+}
+#NavBar li {
+	font-size: 125%;
+	font-weight: bold;
+	display: inline;
+}
+#NavBar li a:link, #NavBar li a:visited {
+	padding: 5px 10px 5px 10px;
+	text-decoration: none;
+	color: #F60;
+	line-height: 30px;
+}
+#NavBar li a:hover, #NavBar li a:active {
+	color: #FFF;
+	background: #F60;
+}
+#Content {
+	position: relative;
+	margin: 10px 0 0 0;
+	width: 450px;
+	height: 100%;
+	background-color: #333;
+}
+#Content p {
+	padding: 10px;
+}
+#SideBar {
+	position: relative;
+	margin: 10px 0 0 10px;
+	width: 270px;
+	float: right;
+}
+#SideBarUpper {
+	position: relative;
+	width: 250px;
+	background-color: #333;
+	padding: 10px;
+}
+#SideBarLower {
+	position: relative;
+	margin: 10px 0 0 0;
+	width: 250px;
+	background-color: #F60;
+	padding: 10px;
+}
+#Footer {
+	position: relative;
+	margin: 10px 0 0 0;
+	width: 730px;
+	background-color: #333;
+}
+#Footer p {
+	font-size: 90%;	
+	margin: 0 0 0 10px;
+	vertical-align: middle;
+}
+.clear {
+	clear: both;
+	height: 1px;
+	overflow: hidden;
+}

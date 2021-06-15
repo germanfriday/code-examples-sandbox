@@ -1,0 +1,487 @@
+<HTML>
+<HEAD>
+<META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=iso-8859-1">
+<META NAME="GENERATOR" CONTENT="Mozilla/4.04 [en] (Win95; I) [Netscape]">
+<TITLE>Introducing Turbine 7</TITLE>
+</HEAD>
+<BODY topmargin="0" leftmargin="0" rightmargin="0" marginwidth="0" marginheight="0" TEXT="#000000" BGCOLOR="#FFFFFF" LINK="#003366" VLINK="#FF9900" ALINK="#FF6600">
+<CENTER>
+  <table width="100%" border="0" cellspacing="0" cellpadding="0" align="center">
+    <tr bgcolor="#000033"> 
+      <td background="images/bar_left.gif" width="50%">&nbsp;</td>
+      <td> 
+        <table width="560" border="0" cellspacing="0" cellpadding="0">
+          <tr> 
+            <td width="334"><img src="images/bar_left.gif" width="334" height="28"></td>
+            <td><img src="images/bar_central.gif" width="110" height="28"></td>
+            <td><img src="images/bar_logo.gif" width="116" height="28"></td>
+          </tr>
+        </table>
+      </td>
+      <td background="images/1x1_azul_esc.gif" width="50%">&nbsp;</td>
+    </tr>
+    <tr bgcolor="#FFFFFF" height="4"> 
+      <td colspan="3"></td>
+    </tr>
+  </table>
+  <TABLE BORDER=0 COLS=2 WIDTH="560" cellpadding="0" cellspacing="0" >
+    <TR valign="top">
+      <TD COLSPAN="2" height="12"> 
+        <table border=0 cols=2 width="100%" cellpadding="0" cellspacing="0" >
+          <tr> 
+            <td width="443" height="25"><font face="Verdana, Arial, Helvetica, sans-serif" size="3"><a href="manual.htm">Table 
+              of Contents</a></font></td>
+            <td width="117" height="25"> 
+              <div align="center"><font face="Verdana, Arial, Helvetica, sans-serif" size="3"><a href="vardataset.htm">Next 
+                Chapter </a> </font></div>
+            </td>
+          </tr>
+        </table>
+      </TD>
+    </TR>
+    <TR valign="top"> 
+      <TD COLSPAN="2" height="2"> <p align="left">&nbsp;</p>
+        <p align="left"><font face="Arial, Helvetica, sans-serif" size="6">1. 
+          Introducing Turbine 7</font></p>
+        <p align="left"><font size="2" face="Verdana, Arial, Helvetica, sans-serif">This 
+          chapter introduces the main ideas behind Turbine 7 and how it works, 
+          and provides some common usage scenarios.</font></p>
+        <ul>
+          <li><font size="3" face="Arial, Helvetica, sans-serif" align="left"><a href="#whatis">What 
+            is PHP Turbine?</a></font></li>
+          <li><font size="3" face="Arial, Helvetica, sans-serif" align="left"><a href="#how">How 
+            does PHP Turbine Work?</a></font></li>
+          <li><font size="3" face="Arial, Helvetica, sans-serif" align="left"><a href="#simpleexample">A 
+            Simple Example</a></font></li>
+          <li><font size="3" face="Arial, Helvetica, sans-serif"><a href="#outputformats">Output 
+            Formats</a></font></li>
+          <li><font size="3" face="Arial, Helvetica, sans-serif" align="left"><a href="#templates">Templates</a></font></li>
+          <li><font size="3" face="Arial, Helvetica, sans-serif" align="left"><a href="#dataintegration">Data 
+            and Media Integration</a></font></li>
+          <li><font size="3" face="Arial, Helvetica, sans-serif"><a href="#components">Building 
+            User Interfaces with Flash Components</a></font></li>
+          <li><font size="3" face="Arial, Helvetica, sans-serif"><a href="#turbinewindow">Turbine 
+            Window</a></font></li>
+        </ul>
+        <p>&nbsp;</p>
+        <p>&nbsp;</p>
+        <p><font size="2" face="Verdana, Arial, Helvetica, sans-serif">&nbsp;<br>
+          <font size="5"><br>
+          <font face="Arial, Helvetica, sans-serif"><a name="whatis"></a>What 
+          is PHP Turbine? </font></font></font></p>
+        <p><font size="2" face="Verdana, Arial, Helvetica, sans-serif">PHP Turbine 
+          7 generates Flash rich media and Adobe PDF documents from PHP scripts. 
+          Turbine allows you to generate media with content obtained from a variety 
+          of sources like image, video, XML documents, databases, other Flash 
+          movies, plain text files, etc.</font></p>
+        <p><font size="2" face="Verdana, Arial, Helvetica, sans-serif">Turbine 
+          is an integrator of dynamic content into rich media, allowing a clean 
+          separation between Presentation from Content. With PHP Turbine 7 you 
+          can build whole new rich media applications - fully live content multimedia 
+          sites! <br>
+          Turbine is based on a sophisticated media-independent architecture that 
+          allows output to media formats like Flash, PDF, SVG and image formats<font color="#00287C" size="1">*</font>. 
+          </font></p>
+        <p><font size="2" face="Verdana, Arial, Helvetica, sans-serif">Turbine 
+          can be seen as in this diagram:</font></p>
+        <p align="center"><font size="2" face="Verdana, Arial, Helvetica, sans-serif"><img src="images/diagram.gif" width="520" height="340"></font></p>
+        <p><font size="2" face="Verdana, Arial, Helvetica, sans-serif">PHP Turbine 
+          7 includes the following capabilities:</font></p>
+        <ul>
+          <li><font size="2" face="Verdana, Arial, Helvetica, sans-serif">Includes 
+            a PHP scripting Interface</font></li>
+          <li><font face="Verdana, Arial, Helvetica, sans-serif" size="2"> Easy 
+            to use Turbine Media Markup Language that can express all the rich 
+            media capabilities: text, images, shapes, movie clips, buttons, scripting, 
+            video and audio</font></li>
+          <li><font size="2" face="Verdana, Arial, Helvetica, sans-serif">Full 
+            Flash MX support with extensive component integration</font></li>
+          <li><font size="2" face="Verdana, Arial, Helvetica, sans-serif">Can 
+            dynamically generate Flash movies - the Turbine architecture also 
+            allows generation to other media types, like SVG or image (not included)</font></li>
+          <li><font size="2" face="Verdana, Arial, Helvetica, sans-serif">Can 
+            dynamically generate Adobe PDF documents</font></li>
+          <li><font size="2" face="Verdana, Arial, Helvetica, sans-serif">Extensive 
+            data integration capabilities - from XML, database RecordSets to plain 
+            old text files, local or remote</font></li>
+          <li><font size="2" face="Verdana, Arial, Helvetica, sans-serif">Dynamic 
+            Chart generation for Flash and PDF - chart types can be customized 
+            and new types created</font></li>
+          <li><font size="2" face="Verdana, Arial, Helvetica, sans-serif">Sophisticated 
+            text capabilities like text flow areas coupled with HTML-like formatting</font></li>
+          <li><font face="Verdana, Arial, Helvetica, sans-serif" size="2">Includes 
+            images from a variety of formats, from local or remote locations</font></li>
+          <li><font size="2" face="Verdana, Arial, Helvetica, sans-serif">Integrates 
+            video from AVI, QuickTime, FLV and Animated GIFs in Flash movies</font></li>
+          <li><font size="2" face="Verdana, Arial, Helvetica, sans-serif">Integrates 
+            MP3, WAV and FLV audio for streaming or event sound generation in 
+            Flash movies</font></li>
+          <li><font size="2" face="Verdana, Arial, Helvetica, sans-serif">Includes 
+            on-the-fly Action Script (ECMA-262 Script or JavaScript) compiler 
+            for Flash movies</font></li>
+          <li><font face="Verdana, Arial, Helvetica, sans-serif" size="2"> Can 
+            generate media to local files - allowing for batch automation</font></li>
+          <li><font face="Verdana, Arial, Helvetica, sans-serif" size="2">Auto-generation 
+            of the HTML media plug-in page</font></li>
+          <li><font face="Verdana, Arial, Helvetica, sans-serif" size="2"> Server 
+            output media caching</font></li>
+          <li><font face="Verdana, Arial, Helvetica, sans-serif" size="2">Show 
+            template errors immediately on the generated media - allowing for 
+            easier and faster development cycles</font></li>
+          <li><font face="Verdana, Arial, Helvetica, sans-serif" size="2">Optimizes 
+            generated media sizes</font></li>
+          <li><font size="2" face="Verdana, Arial, Helvetica, sans-serif">Encrypts 
+            PDF documents allowing permissions to be specified</font></li>
+          <li><font size="2" face="Verdana, Arial, Helvetica, sans-serif">Embeds 
+            fonts used in the PDF document</font></li>
+        </ul>
+        <p><font face="Verdana, Arial, Helvetica, sans-serif" size="2"><font color="#00287C" size="1">*</font><font size="1" face="Verdana, Arial, Helvetica, sans-serif">&nbsp;SVG 
+          and image output to be available later on the Turbine product line as 
+          separate plug-ins. The PDF plug-in is already available.</font></font></p>
+        <p></p>
+        <p><font size="5" face="Arial, Helvetica, sans-serif"><a name="how"></a>How 
+          does PHP Turbine Work?</font></p>
+        <p><font size="2" face="Verdana, Arial, Helvetica, sans-serif">Turbine 
+          works at the server-side, where data can be more flexibly accessed and 
+          integrated on media templates. The following steps are usually involved 
+          when using Turbine: </font></p>
+        <blockquote> 
+          <p><font size="2" face="Verdana, Arial, Helvetica, sans-serif">1) A 
+            web browser user requests a PHP script where Turbine runs<br>
+            2) The web server runs the PHP script which will create a Turbine 
+            object<br>
+            3) The PHP script and/or Turbine access databases, text, image, video 
+            or audio content from any available data sources, either local or 
+            remote HTTP locations<br>
+            4) The fetched content is integrated in Flash or XML media template</font><font size="2" face="Verdana, Arial, Helvetica, sans-serif">s<br>
+            5) A Flash movie is generated and sent to the web browser. Alternatively 
+            a PDF document is generated and sent to the web browser.</font></p>
+        </blockquote>
+        <p><font size="2" face="Verdana, Arial, Helvetica, sans-serif">Turbine's 
+          approach represents a performance advantage because the PHP script that 
+          does the content access also generates the media, avoiding multiple 
+          server accesses, and thus improving web server response times. <br>
+          Since Turbine runs on the server-side, data access is much easier and 
+          faster, content integration with a variety of media types and formats, 
+          most of which are not supported by Flash, are possible and straightforward.</font></p>
+        <p>&nbsp;</p>
+        <p><font size="5" face="Arial, Helvetica, sans-serif"> <a name="simpleexample"></a>A 
+          Simple Example</font></p>
+        <p><font size="2" face="Verdana, Arial, Helvetica, sans-serif"><br>
+          Let's see a basic example - we'll create a Flash movie that will serve 
+          as our template, into which we'll insert a message with the current 
+          date. First we'll create the Flash .swf movie - open the Flash Editor 
+          and get a new, blank movie (File &gt; New). Somewhere on your movie 
+          insert a Text Block (static or dynamic) like this: </font></p>
+        <blockquote> 
+          <p><font size="3" face="Courier New, Courier, mono">Current Time is: 
+            {text}</font></p>
+        </blockquote>
+        <p><font size="2" face="Verdana, Arial, Helvetica, sans-serif">After this, 
+          save the movie for example with the name time.fla (File &gt; Save) and 
+          then Publish into a .swf file (File &gt; Publish) - it will be saved 
+          as time.swf - copy this file (or save it directly) into a directory 
+          where PHP scripts can be executed.<br>
+          <br>
+          Then, on the chosen directory we create a file named time.php and edit 
+          it with any text editor, to include this script:</font></p>
+        <table width="550" border="0" cellspacing="12" cellpadding="0" bgcolor="#FFFFCC">
+          <tr> 
+            <td valign="top"><font size="2" face="Courier New, Courier, mono">&lt;?<br>
+              <font color="#009900"># create the turbine object:</font><br>
+              $turbine = new Turbine7(); </font>
+              <p><font color="#009900" size="2" face="Courier New, Courier, mono"># 
+                assign a variable:</font><font size="2" face="Courier New, Courier, mono"><br>
+                $turbine-&gt;setVariable(&quot;text&quot;, date(&quot;M d Y H:i:s&quot;, 
+                time()) );</font></p>
+              <p><font color="#009900" size="2" face="Courier New, Courier, mono"># 
+                select the Flash .swf template to use:</font><font size="2" face="Courier New, Courier, mono"><br>
+                $turbine-&gt;load(&quot;time.swf&quot;);</font></p>
+              <p><font color="#009900" size="2" face="Courier New, Courier, mono"># 
+                now generate the movie to the web browser:</font><font size="2" face="Courier New, Courier, mono"><br>
+                $turbine-&gt;generateFlash();<br>
+                </font><font face="Courier New, Courier, mono" color="#009900" size="2">#</font><font face="Courier New, Courier, mono" color="#009900" size="2"> 
+                we could alternatively generate a PDF document:<br>
+                # turbine-&gt;generatePDF();</font></p>
+              <p><font size="2" face="Courier New, Courier, mono">?&gt;</font></p>
+              </td>
+          </tr>
+        </table>
+        <p><font size="2" face="Verdana, Arial, Helvetica, sans-serif">Be careful 
+          to have the starting &lt;? as the first characters on your PHP file 
+          - no spaces, new-lines or other characters should be insert before this 
+          or between these blocks. The final ?&gt; must also be the last characters 
+          on your script, so that no more characters are included.</font></p>
+        <p><font size="2" face="Verdana, Arial, Helvetica, sans-serif"> Now request 
+          the time.php script through your web browser and you will get a Flash 
+          movie with the time information obtained in the PHP script integrated 
+          into the Flash .swf template - a Flash movie such as this will appear:</font></p>
+        <p> 
+          <object classid="clsid:D27CDB6E-AE6D-11cf-96B8-444553540000" codebase="http://download.macromedia.com/pub/shockwave/cabs/flash/swflash.cab#version=6,0,29,0" width="536" height="189">
+            <param name="movie" value="images/time-output.swf">
+            <param name="quality" value="high">
+            <embed src="images/time-output.swf" quality="high" pluginspage="http://www.macromedia.com/go/getflashplayer" type="application/x-shockwave-flash" width="536" height="189"></embed></object>
+        </p>
+        <p><font size="2" face="Verdana, Arial, Helvetica, sans-serif"> We could 
+          also use a template file written in an XML language named Turbine Media 
+          Markup Language (MML for short), which we'll see later. </font></p>
+        <p><font size="2" face="Verdana, Arial, Helvetica, sans-serif">We could 
+          also generate a PDF document based on the same code - the only difference 
+          would be the generatePDF command instead of the generateFlash command.</font></p>
+        <p><font size="2" face="Verdana, Arial, Helvetica, sans-serif">This simple 
+          example integrates text into Flash templates - imagine what can be done 
+          with images, audio and video, Flash components, database content...</font></p>
+        <p><font size="2" face="Verdana, Arial, Helvetica, sans-serif"><br>
+          <br>
+          </font><font size="5" face="Arial, Helvetica, sans-serif"><a name="outputformats" id="outputformats"></a>Output 
+          Formats </font></p>
+        <p><font size="2" face="Verdana, Arial, Helvetica, sans-serif"><br>
+          Turbine is multi-media and multi-format: It generates Rich Media Flash, 
+          PDF and other formats from common XML, image, video and audio sources. 
+          Turbine can &quot;mix&quot; text, image, audio and video, outputting 
+          the result to the most appropriate and convenient media format. For 
+          instance, when dealing with video, audio and animation, the most convenient 
+          output media would be Flash, but when the emphasis is readability and 
+          security, then the preferred output format would be PDF.</font></p>
+        <p><font size="2" face="Verdana, Arial, Helvetica, sans-serif">The next 
+          list describes which features are specific and available for each output 
+          format supported by Turbine:</font></p>
+        <p><strong><font size="2" face="Verdana, Arial, Helvetica, sans-serif">Macromedia 
+          Flash format :</font></strong></p>
+        <ul>
+          <li><font size="2" face="Verdana, Arial, Helvetica, sans-serif">Supports 
+            audio, video, images, text and shapes</font></li>
+          <li><font size="2" face="Verdana, Arial, Helvetica, sans-serif">Supports 
+            sophisticated transparencies and gradients</font></li>
+          <li><font size="2" face="Verdana, Arial, Helvetica, sans-serif">Supports 
+            multimedia interactivity</font></li>
+          <li><font size="2" face="Verdana, Arial, Helvetica, sans-serif">Supports 
+            client side scripting</font></li>
+          <li><font size="2" face="Verdana, Arial, Helvetica, sans-serif">Supports 
+            compressed images, audio and video, as well as a global file compression</font></li>
+          <li><font size="2" face="Verdana, Arial, Helvetica, sans-serif">Supports 
+            content streaming</font></li>
+          <li><font size="2" face="Verdana, Arial, Helvetica, sans-serif">Doesn't 
+            support encryption and document permissions</font></li>
+        </ul>
+        <p><strong><font size="2" face="Verdana, Arial, Helvetica, sans-serif">Adobe 
+          PDF format:</font></strong></p>
+        <ul>
+          <li><font size="2" face="Verdana, Arial, Helvetica, sans-serif">Supports 
+            text with font embedding and subsetting</font></li>
+          <li><font size="2" face="Verdana, Arial, Helvetica, sans-serif">Supports 
+            images and shapes</font></li>
+          <li><font size="2" face="Verdana, Arial, Helvetica, sans-serif">Supports 
+            compressed images, as well as a global file compression</font></li>
+          <li><font size="2" face="Verdana, Arial, Helvetica, sans-serif">Supports 
+            encryption and document permissions</font></li>
+          <li><font size="2" face="Verdana, Arial, Helvetica, sans-serif">Doesn't 
+            support transparency and gradients</font></li>
+          <li><font size="2" face="Verdana, Arial, Helvetica, sans-serif">Doesn't 
+            support audio and video</font></li>
+          <li><font size="2" face="Verdana, Arial, Helvetica, sans-serif">Doesn't 
+            support client side scripting</font></li>
+        </ul>
+        <p><font size="2" face="Verdana, Arial, Helvetica, sans-serif">In general, 
+          text-based, printable content is more suited for PDF, while Flash is 
+          better suited for interactive multi-media content.</font></p>
+        <p><font size="2" face="Verdana, Arial, Helvetica, sans-serif">&nbsp;</font><font size="2" face="Verdana, Arial, Helvetica, sans-serif"><br>
+          <font size="5" face="Arial, Helvetica, sans-serif"><a name="templates"></a>Templates</font></font></p>
+        <p><font size="2" face="Verdana, Arial, Helvetica, sans-serif">Turbine 
+          can use two types of templates where text, audio and visual media can 
+          be integrated:</font></p>
+        <ul>
+          <li><font size="2" face="Verdana, Arial, Helvetica, sans-serif">Common 
+            Flash .swf movies generated by the Macromedia Flash authoring tool 
+            or any other third party .swf authoring tools like Adobe's Live Motion 
+            or Swish (although for Flash components, the Macromedia authoring 
+            tool must be used). <br>
+            By using visual editors one can enter the Turbine variables or commands 
+            in the exact place and instant, simplifying content integration with 
+            Flash rich media capabilities.</font></li>
+          <li><font size="2" face="Verdana, Arial, Helvetica, sans-serif">XML 
+            templates can be used on situations where the flexibility and format-independence 
+            provided by XML is preferable. Templates can be specified in the powerful 
+            Turbine Media Markup Language (TMML or MML for short). Although on 
+            this case visual media authoring is not available, one can take advantage 
+            of all the benefits associated with XML.</font></li>
+        </ul>
+        <p><font size="2" face="Verdana, Arial, Helvetica, sans-serif">On some 
+          scenarios using visual templates is clearly advisable, for example if 
+          the content is to be integrated on complex movies, with several scenes, 
+          transitions or animation. On other scenarios, the simplicity and openness 
+          of XML documents can be preferred.<br>
+          And there are also scenarios where a mix of Flash and MML would be even 
+          better - in fact this is also supported - MML commands can be issued 
+          inside Flash .swf templates in a dynamic or input Text Fields - when 
+          the Flash template is loaded, these MML commands will be executed in 
+          the middle of the Flash .swf template. As we'll see, MML tags are pervasive 
+          and can be used in a number of different places, inside the Turbine 
+          engine.</font> </p>
+        <p>&nbsp;</p>
+        <p><font size="5" face="Arial, Helvetica, sans-serif"><a name="dataintegration"></a>Data 
+          and Media Integration</font></p>
+        <p><font size="2" face="Verdana, Arial, Helvetica, sans-serif"> Turbine 
+          includes advanced data and media (image, audio, video) integration capabilities. 
+          Data can be integrated into templates from the following sources:</font></p>
+        <ul>
+          <li><font size="2" face="Verdana, Arial, Helvetica, sans-serif">Database 
+            data sources like MySQL or ODBC RecordSets</font></li>
+          <li><font size="2" face="Verdana, Arial, Helvetica, sans-serif">Text 
+            Files from local or remote HTTP locations</font></li>
+          <li><font size="2" face="Verdana, Arial, Helvetica, sans-serif">Variable=value 
+            formatted text files from local or remote HTTP locations</font></li>
+          <li><font size="2" face="Verdana, Arial, Helvetica, sans-serif">XML 
+            files, local or remote</font></li>
+          <li><font size="2" face="Verdana, Arial, Helvetica, sans-serif">Any 
+            data available to PHP scripting</font></li>
+        </ul>
+        <p><font size="2" face="Verdana, Arial, Helvetica, sans-serif">The following 
+          types of media can be loaded:</font></p>
+        <ul>
+          <li><font size="2" face="Verdana, Arial, Helvetica, sans-serif">Images 
+            in PNG, GIF, BMP, TIF and JPEG formats, from local files or remote 
+            HTTP locations</font></li>
+          <li><font size="2" face="Verdana, Arial, Helvetica, sans-serif">Audio 
+            in MP3, WAV or FLV formats, local and remote</font></li>
+          <li><font size="2" face="Verdana, Arial, Helvetica, sans-serif">Video 
+            in AVI, QuickTime MOV, FLV and Animated GIF formats, local or remote</font></li>
+        </ul>
+        <p><font size="2" face="Verdana, Arial, Helvetica, sans-serif">All these 
+          different data and media types can be combined and composed together, 
+          to create rich media experiences.</font></p>
+        <p>&nbsp;</p>
+        <p><font size="5" face="Arial, Helvetica, sans-serif"><a name="components"></a>Building 
+          User Interfaces with Flash Components</font></p>
+        <p><font size="2" face="Verdana, Arial, Helvetica, sans-serif">Flash MX 
+          introduced Flash components - reusable elements that simplify user interface 
+          development in Flash media. Turbine 7 includes powerful component support 
+          - components can be included and displayed where appropriated (either 
+          in a Flash editor or on MML) and filled with any data accessible to 
+          your script.</font></p>
+        <p><font size="2" face="Verdana, Arial, Helvetica, sans-serif">For example 
+          - let's see how to display and fill a list box - on the Flash editor, 
+          create an empty Flash movie and drag'n'drop a ListBox component, from 
+          the Components panel (Flash UI Components area). Set its instance name 
+          to (for example) &quot;list&quot;. Then Save, for example as listbox.fla 
+          and then Publish to listbox.swf. Next, create an PHP script with this 
+          content, on the same directory :</font></p>
+        <table width="550" border="0" cellspacing="12" cellpadding="0" bgcolor="#FFFFCC">
+          <tr> 
+            <td valign="top"> <p><font face="Courier New, Courier, mono" size="2"> 
+                &lt;?<br>
+                <font color="#009900"># create the turbine object:</font><br>
+                $turbine = new Turbine7();</font></p>
+              <p><font color="#009900" size="2" face="Courier New, Courier, mono"># 
+                create a DataSet with some values:</font><font size="2" face="Courier New, Courier, mono"><br>
+                $turbine-&gt;makeDataSet(&quot;listValues&quot;, &quot;value&quot;);<br>
+                $turbine-&gt;addDataSetRow(&quot;Red&quot;);<br>
+                $turbine-&gt;addDataSetRow(&quot;Green&quot;);<br>
+                $turbine-&gt;addDataSetRow(&quot;Blue&quot;);<br>
+                $turbine-&gt;addDataSetRow(&quot;Crimson&quot;);<br>
+                $turbine-&gt;addDataSetRow(&quot;Fuchsia&quot;);<br>
+                $turbine-&gt;addDataSetRow(&quot;Cyan&quot;);<br>
+                $turbine-&gt;addDataSetRow(&quot;Black&quot;);<br>
+                $turbine-&gt;addDataSetRow(&quot;White&quot;);</font></p>
+              <p><font color="#009900" size="2" face="Courier New, Courier, mono"># 
+                select the Flash .swf template to use:</font><font size="2" face="Courier New, Courier, mono"><br>
+                $turbine-&gt;load(&quot;listbox.swf&quot;);</font></p>
+              <p><font color="#009900" size="2" face="Courier New, Courier, mono"># 
+                pass the listValues DataSet into the component:</font><font size="2" face="Courier New, Courier, mono"><br>
+                $turbine-&gt;injectData(&quot;listValues&quot;, &quot;list&quot;);</font></p>
+              <p><font color="#009900" size="2" face="Courier New, Courier, mono"># 
+                now generate the movie to the web browser:</font><font size="2" face="Courier New, Courier, mono"><br>
+                $turbine-&gt;generateFlash();</font></p>
+              <p><font size="2" face="Courier New, Courier, mono">?&gt;</font></p></td>
+          </tr>
+        </table>
+        <p><font size="2" face="Verdana, Arial, Helvetica, sans-serif">After requesting 
+          this script in a browser, we get a ListBox component, filled with the 
+          values created on the script:</font></p>
+        <p><font size="2" face="Verdana, Arial, Helvetica, sans-serif"> 
+          <object classid="clsid:D27CDB6E-AE6D-11cf-96B8-444553540000" codebase="http://download.macromedia.com/pub/shockwave/cabs/flash/swflash.cab#version=6,0,29,0" width="550" height="200">
+            <param name="movie" value="images/listbox-output.swf">
+            <param name="quality" value="high">
+            <param name="SCALE" value="exactfit">
+            <embed src="images/listbox-output.swf" width="550" height="200" quality="high" pluginspage="http://www.macromedia.com/go/getflashplayer" type="application/x-shockwave-flash" scale="exactfit"></embed></object>
+          </font></p>
+        <p><font size="2" face="Verdana, Arial, Helvetica, sans-serif">This way, 
+          presentation and data can be cleanly kept separated - presentation on 
+          the Flash .swf template (for which we could also have used a MML template), 
+          while data is handled by the PHP script (we could have fetched data 
+          from many other sources - database queries, XML, files, other HTTP queries).</font></p>
+        <p><font size="2" face="Verdana, Arial, Helvetica, sans-serif">Please 
+          note that Flash components are not rendered nor work when exporting 
+          to Adobe PDF.</font></p>
+        <p>&nbsp;</p>
+        <p><font size="5" face="Arial, Helvetica, sans-serif"> <a name="turbinewindow"></a>The 
+          Turbine Window</font></p>
+        <p><font size="2" face="Verdana, Arial, Helvetica, sans-serif"> As a fact 
+          of life, during the development process, errors inevitably occur - Turbine 
+          communicates errors in two ways:</font></p>
+        <ul>
+          <li><font size="2" face="Verdana, Arial, Helvetica, sans-serif">PHP 
+            Scripting errors are displayed on the normal PHP way, in an HTML page 
+            that the web server sends to the browser.</font></li>
+          <li><font size="2" face="Verdana, Arial, Helvetica, sans-serif">Template 
+            errors on Flash or MML files are displayed right in the generated 
+            Flash movie, inside the Turbine Window - which is a window that appears 
+            on the generated movies with error and warning messages related with 
+            template problems. When generating to PDF, these errors and warning 
+            messages will appear in red on the top of the page. All the tag errors 
+            are listed with the offending line number, for easier and faster problem 
+            detection.<br>
+            Besides displaying errors, the Turbine Window can also be used as 
+            a Trace window and a mini-debugger (for variable watching). The Turbine 
+            window looks like this:</font><br>
+            <object classid="clsid:D27CDB6E-AE6D-11cf-96B8-444553540000" codebase="http://download.macromedia.com/pub/shockwave/cabs/flash/swflash.cab#version=6,0,29,0" width="550" height="400">
+              <param name="movie" value="images/log-output.swf">
+              <param name="quality" value="high">
+              <param name="SCALE" value="exactfit">
+              <embed src="images/log-output.swf" width="550" height="400" quality="high" pluginspage="http://www.macromedia.com/go/getflashplayer" type="application/x-shockwave-flash" scale="exactfit"></embed></object>
+            <font size="2" face="Verdana, Arial, Helvetica, sans-serif">The Turbine 
+            Window is transparent and appears above the generated movie. In Flash 
+            6+ movies, the last window location is automatically recorded and 
+            reused. You can see this in action on the above Flash movie: move 
+            the window and refresh the page, it will appear where you left it.<br>
+            The button immediately to the right of the window title allows you 
+            to display the contents of the last selected variable or object - 
+            for example type _root in the Turbine Window, then select the word 
+            _root with the cursor and click on that button - it will display the 
+            variables and objects available inside the _root object.</font></li>
+        </ul>
+        <div>
+          <div> 
+            <p><font size="2" face="Verdana, Arial, Helvetica, sans-serif">The 
+              source for the Turbine Window is included inside the installation 
+              directory, on the debug.fla file, to be customized in any desired 
+              way. For PDF output, the simple debug.mml file is used instead to 
+              display error text.<br>
+              &nbsp;</font></p>
+          </div>
+        </div>
+        <div></div>
+        </TD>
+    </TR>
+    <TR valign="top"> 
+      <TD COLSPAN="2" height="6"> 
+        <table border=0 cols=2 width="100%" cellpadding="0" cellspacing="0" >
+          <tr> 
+            <td width="443" height="25"><font face="Verdana, Arial, Helvetica, sans-serif" size="3"><a href="manual.htm">Table 
+              of Contents</a></font></td>
+            <td width="117" height="25"> 
+              <div align="center"><font face="Verdana, Arial, Helvetica, sans-serif" size="3"><a href="vardataset.htm">Next 
+                Chapter </a> </font></div>
+            </td>
+          </tr>
+        </table>
+      </TD>
+    </TR>
+  </TABLE>
+</CENTER>
+<CENTER>
+  <p> <font face="Verdana, Arial, Helvetica, sans-serif" size="1"><i>&nbsp;<br>
+    Flash and Macromedia Flash are trademarks of Macromedia, Inc.</i></font>
+</CENTER>
+</BODY>
+</HTML>

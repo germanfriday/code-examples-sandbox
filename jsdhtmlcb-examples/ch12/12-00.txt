@@ -1,0 +1,20 @@
+function myFunction(elemID) {
+    var elem = (document.getElementById) ? document.getElementById("elemID") : 
+               ((document.all) ? document.all("elemID") : null);
+    if (elem) {
+        // process element here
+    }
+}
+
+----------
+
+function myEventFunction(evt) {
+    evt = (evt) ? evt : ((window.event) ? window.event : null);
+    if (evt) {
+        var elem = (evt.target) ? evt.target : 
+                   ((evt.srcElement) ? evt.srcElement : null);
+        if (elem) {
+            // process element here
+        }
+    }
+}

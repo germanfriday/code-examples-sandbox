@@ -1,0 +1,59 @@
+// Center a positionable element whose name is passed as 
+// a parameter in the current window/frame, and show it
+function centerOnWindow(elemID) {
+    // 'obj' is the positionable object
+    var obj = getRawObject(elemID);
+    // window scroll factors
+    var scrollX = 0, scrollY = 0;
+    if (document.body && typeof document.body.scrollTop != "undefined") {
+        scrollX += document.body.scrollLeft;
+        scrollY += document.body.scrollTop;
+        if (document.body.parentNode && 
+            typeof document.body.parentNode.scrollTop != "undefined") {
+            scrollX += document.body.parentNode.scrollLeft;
+            scrollY += document.body.parentNode.scrollTop;
+        }
+    } else if (typeof window.pageXOffset != "undefined") {
+        scrollX += window.pageXOffset;
+        scrollY += window.pageYOffset;
+    }
+    var x = Math.round((getInsideWindowWidth()/2) Ð 
+        (getObjectWidth(obj)/2)) + scrollX;
+    var y = Math.round((getInsideWindowHeight()/2) Ð 
+        (getObjectHeight(obj)/2)) + scrollY;
+    shiftTo(obj, x, y);
+    show(obj);
+}
+
+
+// Return the available content height space in browser window
+function getInsideWindowHeight() {
+    if (window.innerHeight) {
+        return window.innerHeight;
+    } else if (isIE6CSS) {
+        // measure the html element's clientHeight
+        return document.body.parentElement.clientHeight;
+    } else if (document.body && document.body.clientHeight) {
+        return document.body.clientHeight;
+    }
+    return 0;
+}
+
+----------
+
+// Special handling for CSS-P redraw bug in Navigator 4
+function handleResize() {
+    if (isNN4) {
+        // causes extra redraw, but must do it to get banner object color drawn
+        location.reload();
+    } else {
+        centerOnWindow("banner");
+    }
+}
+// Keep centered during scroll
+function handleScroll() {
+    centerOnWindow("banner");
+}
+
+window.onresize = handleResize;
+window.onscroll = handleScroll;

@@ -1,0 +1,11 @@
+MANIFEST
+zope.proxy/__init__.py
+zope.proxy/_zope_proxy_proxy.c
+zope.proxy/DEPENDENCIES.cfg
+zope.proxy/interfaces.py
+zope.proxy/proxy.h
+zope.proxy/SETUP.cfg
+zope.proxy/tests/__init__.py
+zope.proxy/tests/test_proxy.py
+setup.py
+setup.cfg

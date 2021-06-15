@@ -1,0 +1,19 @@
+// convert XML data into JavaScript array of JavaScript objects
+function XML2JS(xmlDoc, containerTag) {
+    var output = new Array();
+    var rawData = xmlDoc.getElementsByTagName(containerTag)[0];
+    var i, j, oneRecord, oneObject;
+    for (i = 0; i < rawData.childNodes.length; i++) {
+        if (rawData.childNodes[i].nodeType == 1) {
+            oneRecord = rawData.childNodes[i];
+            oneObject = output[output.length] = new Object();
+            for (j = 0; j < oneRecord.childNodes.length; j++) {
+                if (oneRecord.childNodes[j].nodeType == 1) {
+                    oneObject[oneRecord.childNodes[j].tagName] = 
+                        oneRecord.childNodes[j].firstChild.nodeValue;    
+                }
+            }
+        }
+    }
+    return output;
+}

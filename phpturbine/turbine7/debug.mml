@@ -1,0 +1,1 @@
+<Text color="#ff0000" fontSize="12" style="bold" width="{= media.width / 20 * 0.75 }"><pre>{&__turbineLogText}</pre></Text>

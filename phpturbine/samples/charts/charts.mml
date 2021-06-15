@@ -1,0 +1,336 @@
+<Media size="595, 842">
+
+<autolayout type="off"/>
+
+
+<var>
+scale=0.47
+boundx=500
+boundy=250
+chartposx=40
+chartposy=60
+textsize=14
+</var>
+
+<shape id="frame" flags="define">
+  <LineStyle width="2" color="000000"/>
+  <FillColor side="left" color="ccdee3"/>  <!--3366cc-->
+  <Rect pos="0,0" size="570,320"/>
+</shape>
+
+
+
+<frame>
+<movieclip scale="{scale}" pos="15,50">
+<text fontSize="26">Chart Type: Area</text>
+<place id="frame" pos="0,30"/>
+<DefaultText size="{textsize}"/>
+<Chart      
+            pos="{chartposx},{chartposy}"
+            bounds="{boundx},{boundy}"
+
+            Type="Area" 
+            DataSet="Transactions"
+            LabelColumn="date"
+            ValueColumn="amount"
+            ColorColumn="color"
+            YMarks="7"
+            YMin="0"
+            YMax="600"
+            threeDDepth="{threeDDepth}"
+            threeDAngle="{threeDAngle}"
+/>
+</movieclip>
+
+<movieclip scale="{scale}" pos="310,50">
+<text fontSize="26">Chart Type: Area3D</text>
+<place id="frame" pos="0,30"/>
+<DefaultText size="{textsize}"/>
+<Chart      
+            pos="{chartposx},{chartposy}"
+            bounds="{boundx},{boundy}"
+
+            Type="Area3D" 
+            DataSet="Transactions"
+            LabelColumn="date"
+            ValueColumn="amount"
+            ColorColumn="color"
+            YMarks="7"
+            YMin="0"
+            YMax="600"
+            threeDDepth="{threeDDepth}"
+            threeDAngle="{threeDAngle}"
+/>
+</movieclip>
+
+<movieclip scale="{scale}" pos="15,250">
+<text fontSize="26">Chart Type: Pie</text>
+<place id="frame" pos="0,30"/>
+<DefaultText size="{=textsize+4}"/>
+<Chart      
+            pos="{chartposx},{chartposy}"
+            bounds="{boundx},{boundy}"
+
+            Type="Pie" 
+            DataSet="Transactions"
+            LabelColumn="date"
+            ValueColumn="amount"
+            ColorColumn="color"
+            YMarks="7"
+            YMin="0"
+            YMax="600"
+            threeDDepth="{threeDDepth}"
+            threeDAngle="{threeDAngle}"
+/>
+</movieclip>
+
+<movieclip scale="{scale}" pos="310,250">
+<text fontSize="26">Chart Type: Pie3D</text>
+<place id="frame" pos="0,30"/>
+<DefaultText size="{=textsize+4}"/>
+<Chart      
+            pos="{chartposx},{chartposy}"
+            bounds="{boundx},{boundy}"
+
+            Type="Pie3D" 
+            DataSet="Transactions"
+            LabelColumn="date"
+            ValueColumn="amount"
+            ColorColumn="color"
+            YMarks="7"
+            YMin="0"
+            YMax="600"
+            threeDDepth="{threeDDepth}"
+            threeDAngle="{threeDAngle}"
+/>
+</movieclip>
+
+
+<movieclip scale="{scale}" pos="15,450">
+<text fontSize="26">Chart Type: Column</text>
+<place id="frame" pos="0,30"/>
+<DefaultText size="{textsize}"/>
+<Chart      
+            pos="{chartposx},{chartposy}"
+            bounds="{boundx},{boundy}"
+
+            Type="Column" 
+            DataSet="Transactions"
+            LabelColumn="date"
+            ValueColumn="amount"
+            ColorColumn="color"
+            YMarks="7"
+            YMin="0"
+            YMax="600"
+            threeDDepth="{threeDDepth}"
+            threeDAngle="{threeDAngle}"
+/>
+</movieclip>
+
+<movieclip scale="{scale}" pos="310,450">
+<text fontSize="26">Chart Type: Column3D</text>
+<place id="frame" pos="0,30"/>
+<DefaultText size="{textsize}"/>
+<Chart      
+            pos="{chartposx},{chartposy}"
+            bounds="{boundx},{boundy}"
+
+            Type="Column3D" 
+            DataSet="Transactions"
+            LabelColumn="date"
+            ValueColumn="amount"
+            ColorColumn="color"
+            YMarks="7"
+            YMin="0"
+            YMax="600"
+            threeDDepth="{threeDDepth}"
+            threeDAngle="{threeDAngle}"
+/>
+</movieclip>
+
+
+<movieclip scale="{scale}" pos="15,650">
+<text fontSize="26">Chart Type: CoolColumn</text>
+<place id="frame" pos="0,30"/>
+<DefaultText size="{textsize}"/>
+<Chart      
+            pos="{chartposx},{chartposy}"
+            bounds="{boundx},{boundy}"
+
+            Type="CoolColumn" 
+            DataSet="Transactions"
+            LabelColumn="date"
+            ValueColumn="amount"
+            ColorColumn="color"
+            YMarks="7"
+            YMin="0"
+            YMax="600"
+            threeDDepth="{threeDDepth}"
+            threeDAngle="{threeDAngle}"
+/>
+</movieclip>
+
+<movieclip scale="{scale}" pos="310,650">
+<text fontSize="26">Chart Type: Glass</text>
+<place id="frame" pos="0,30"/>
+<DefaultText size="{textsize}"/>
+<Chart      
+            pos="{chartposx},{chartposy}"
+            bounds="{boundx},{boundy}"
+
+            Type="Glass" 
+            DataSet="Transactions"
+            LabelColumn="date"
+            ValueColumn="amount"
+            ColorColumn="color"
+            YMarks="7"
+            YMin="0"
+            YMax="600"
+            threeDDepth="{threeDDepth}"
+            threeDAngle="{threeDAngle}"
+/>
+</movieclip>
+
+
+
+</frame>
+
+<frame>
+<Remove/>
+
+
+<movieclip scale="{scale}" pos="15,50">
+<text fontSize="26">Chart Type: Line</text>
+<place id="frame" pos="0,30"/>
+<DefaultText size="{textsize}"/>
+<Chart      
+            pos="{chartposx},{chartposy}"
+            bounds="{boundx},{boundy}"
+
+            Type="Line" 
+            DataSet="Transactions"
+            LabelColumn="date"
+            ValueColumn="amount"
+            ColorColumn="color"
+            YMarks="7"
+            YMin="0"
+            YMax="600"
+            threeDDepth="{threeDDepth}"
+            threeDAngle="{threeDAngle}"
+/>
+</movieclip>
+
+<movieclip scale="{scale}" pos="310,50">
+<text fontSize="26">Chart Type: Line3D</text>
+<place id="frame" pos="0,30"/>
+<DefaultText size="{textsize}"/>
+<Chart      
+            pos="{chartposx},{chartposy}"
+            bounds="{boundx},{boundy}"
+
+            Type="Line3D" 
+            DataSet="Transactions"
+            LabelColumn="date"
+            ValueColumn="amount"
+            ColorColumn="color"
+            YMarks="7"
+            YMin="0"
+            YMax="600"
+            threeDDepth="{threeDDepth}"
+            threeDAngle="{threeDAngle}"
+/>
+</movieclip>
+
+
+<movieclip scale="{scale}" pos="15,250">
+<text fontSize="26">Chart Type: Plain</text>
+<place id="frame" pos="0,30"/>
+<DefaultText size="{textsize}"/>
+<Chart      
+            pos="{chartposx},{chartposy}"
+            bounds="{boundx},{boundy}"
+
+            Type="Plain" 
+            DataSet="Transactions"
+            LabelColumn="date"
+            ValueColumn="amount"
+            ColorColumn="color"
+            YMarks="7"
+            YMin="0"
+            YMax="600"
+            threeDDepth="{threeDDepth}"
+            threeDAngle="{threeDAngle}"
+/>
+</movieclip>
+
+<movieclip scale="{scale}" pos="310,250">
+<text fontSize="26">Chart Type: Stick</text>
+<place id="frame" pos="0,30"/>
+<DefaultText size="{textsize}"/>
+<Chart      
+            pos="{chartposx},{chartposy}"
+            bounds="{boundx},{boundy}"
+
+            Type="Stick" 
+            DataSet="Transactions"
+            LabelColumn="date"
+            ValueColumn="amount"
+            ColorColumn="color"
+            YMarks="7"
+            YMin="0"
+            YMax="600"
+            threeDDepth="{threeDDepth}"
+            threeDAngle="{threeDAngle}"
+/>
+</movieclip>
+
+<movieclip scale="{scale}" pos="15,450">
+<text fontSize="26">Chart Type: Triangle</text>
+<place id="frame" pos="0,30"/>
+<DefaultText size="{textsize}"/>
+<Chart      
+            pos="{chartposx},{chartposy}"
+            bounds="{boundx},{boundy}"
+
+            Type="Triangle" 
+            DataSet="Transactions"
+            LabelColumn="date"
+            ValueColumn="amount"
+            ColorColumn="color"
+            YMarks="7"
+            YMin="0"
+            YMax="600"
+            threeDDepth="{threeDDepth}"
+            threeDAngle="{threeDAngle}"
+/>
+</movieclip>
+
+<movieclip scale="{scale}" pos="310,450">
+<text fontSize="26">Chart Type: Triangle3D</text>
+<place id="frame" pos="0,30"/>
+<DefaultText size="{textsize}"/>
+<Chart      
+            pos="{chartposx},{chartposy}"
+            bounds="{boundx},{boundy}"
+
+            Type="Triangle3D" 
+            DataSet="Transactions"
+            LabelColumn="date"
+            ValueColumn="amount"
+            ColorColumn="color"
+            YMarks="7"
+            YMin="0"
+            YMax="600"
+            threeDDepth="{threeDDepth}"
+            threeDAngle="{threeDAngle}"
+/>
+</movieclip>
+
+
+
+
+
+</frame>
+
+</media>
+

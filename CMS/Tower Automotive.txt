@@ -1,0 +1,35 @@
+Tower Automotive Design and Build Time Estimate
+
+1. Check for availability of Zope and Python already established in a testing environment.
+
+Setup and Learning time for Python/Zope
+
+If available to use: 3-4 hrs
+
+If SFD must configure: 6-8 hrs
+
+
+2. Plan/Design and Create MySQL database: 4 hrs
+
+
+3. Design two looks (Home page, Second level & Third level each): 8 hrs
+
+
+4. Build Flash Intro: 8-10 hrs
+
+
+5. Build One Complete Overall Page Template in PHP: 4-5 hrs
+
+
+6. Build 3-4 page working prototype: 6-8 hrs
+
+
+7. Time per page to add content: 2-2.5 hrs X 47 pages: 94-117.5 hrs
+
+
+8. Testing all along and at delivery: 5-6 hrs
+
+
+
+TOTAL FOR PROJECT: 150-166.5 hrs
+

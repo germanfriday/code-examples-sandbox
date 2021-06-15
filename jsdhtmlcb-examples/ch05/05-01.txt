@@ -1,0 +1,5 @@
+var isNav = (navigator.appName == "Netscape");
+
+var isIE = (navigator.appName == "Microsoft Internet Explorer");
+
+var isOpera = (navigator.userAgent.indexOf("Opera") != -1);

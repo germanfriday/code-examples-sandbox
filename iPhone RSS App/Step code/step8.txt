@@ -1,0 +1,11 @@
+// in RootViewController.m //
+
+- (void)viewDidLoad {
+    [super viewDidLoad];
+	
+	// set the inherited title by referencing self
+	self.title = @"RSS Reader";
+
+    // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
+    // self.navigationItem.rightBarButtonItem = self.editButtonItem;
+}

@@ -1,0 +1,224 @@
+<html>
+<head>
+
+
+
+
+<!-- Beginning of JavaScript for checking required fields and for checking that certain fields contain only digits. -->
+
+<script type="text/javascript" language="JavaScript">
+<!-- Copyright 2003 Bontrager Connection, LLC
+// Code obtained from http://WillMaster.com/
+//
+// Each required form field can be checked with JavaScript. Here are 
+//    the function names for the different kinds of checks:
+//
+//       1. WithoutContent() -- check if the text, textarea, password, 
+//              or file fields has no content.
+//       2. NoneWithContent() -- check if none of the set of text, 
+//              textarea, password, or file fields have content. 
+//              (Set: More than one with the same field name.)
+//
+//       3. NoneWithCheck() -- check if none of the set of radio buttons 
+//              or checkboxes are checked. (Set: More than one with the 
+//              same field name.)
+//       4. WithoutCheck() -- check if the single radio button or checkbox 
+//              is unchecked.
+//
+//       5. WithoutSelectionValue() -- check if selected drop-down list or 
+//              select box entries have no value.
+//
+//
+// The format for using the above functions is
+//             if(       WithoutContent([FORMFIELDVALUE])) [ERRORMESSAGE]
+//             if(      NoneWithContent([FORMFIELD])     ) [ERRORMESSAGE]
+//             if(        NoneWithCheck([FORMFIELD])     ) [ERRORMESSAGE]
+//             if(         WithoutCheck([FORMFIELD])     ) [ERRORMESSAGE]
+//             if(WithoutSelectionValue([FORMFIELD])     ) [ERRORMESSAGE]
+//
+// The if(...) part and the error message part may be on separate lines, like
+//             if(WithoutContent([FORMFIELDVALUE]))
+//                [ERRORMESSAGE]
+//             if(NoneWithContent([FORMFIELD]))
+//                [ERRORMESSAGE]
+//             if(NoneWithCheck([FORMFIELD]))
+//                [ERRORMESSAGE]
+//             if(WithoutCheck([FORMFIELD]))
+//                [ERRORMESSAGE]
+//             if(WithoutSelectionValue([FORMFIELD]))
+//                [ERRORMESSAGE]
+//
+//
+//      FORMFIELD -- The format for specifying a "form field" is 
+//                         document.[FORMNAME].[FIELDNAME]
+// FORMFIELDVALUE -- The format for specifying a "form field value" is 
+//                         document.[FORMNAME].[FIELDNAME].value
+//   ERRORMESSAGE -- The format for specifying an "error message" is
+//                         { errormessage += "\n\n[MESSAGE]"; }
+//                   If the message itself contains quotation marks, 
+//                      they must be preceded with a back slash. 
+//                      Example: \"
+//
+//
+//      FORMNAME -- The name assigned to the form in the <FORM... tag. 
+//     FIELDNAME -- The field name being checked.
+// 
+//
+// For use with this JavaScript, the only non-alphanumeric character a 
+//    fieldname may have is the underscore. Replace any hyphens, colons, 
+//    spaces, or other non-alphanumeric characters in your field names 
+//    with an underscore character.
+//
+//
+// Put field checks into the function CheckRequiredFields(), in the order 
+//    you want the fields checked.
+//
+
+
+function CheckRequiredFields() {
+var errormessage = new String();
+// Put field checks below this point.
+
+if(NoneWithCheck(document.exampleform.radioOne))
+	{ errormessage += "\n\nPlease click one radio button of the set of three."; }
+if(WithoutCheck(document.exampleform.radioLoner))
+	{ errormessage += "\n\nThe \"Loner\" radio button must be clicked."; }
+if(NoneWithCheck(document.exampleform.checkOne))
+	{ errormessage += "\n\nPlease check one or more check boxes of the set of three."; }
+if(WithoutCheck(document.exampleform.checkLoner))
+	{ errormessage += "\n\nThe \"Loner\" check box must be checked."; }
+if(WithoutContent(document.exampleform.sometext.value))
+	{ errormessage += "\n\nPlease type something in the \"Some text\" text field."; }
+if(NoneWithContent(document.exampleform.oneOrTheOther))
+	{ errormessage += "\n\nSomething must be typed in one or both of the set of form text fields."; }
+if(WithoutContent(document.exampleform.areaName.value))
+	{ errormessage += "\n\nSomething must be typed in the textarea box."; }
+if(WithoutContent(document.exampleform.FileGet.value))
+	{ errormessage += "\n\nA file name must be provided for uploading."; }
+if(WithoutSelectionValue(document.exampleform.dropname))
+	{ errormessage += "\n\nPlease select something from the dropdown list."; }
+
+// Put field checks above this point.
+if(errormessage.length > 2) {
+	alert('NOTE:' + errormessage);
+	return false;
+	}
+return true;
+} // end of function CheckRequiredFields()
+
+
+function WithoutContent(ss) {
+if(ss.length > 0) { return false; }
+return true;
+}
+
+function NoneWithContent(ss) {
+for(var i = 0; i < ss.length; i++) {
+	if(ss[i].value.length > 0) { return false; }
+	}
+return true;
+}
+
+function NoneWithCheck(ss) {
+for(var i = 0; i < ss.length; i++) {
+	if(ss[i].checked) { return false; }
+	}
+return true;
+}
+
+function WithoutCheck(ss) {
+if(ss.checked) { return false; }
+return true;
+}
+
+function WithoutSelectionValue(ss) {
+for(var i = 0; i < ss.length; i++) {
+	if(ss[i].selected) {
+		if(ss[i].value.length) { return false; }
+		}
+	}
+return true;
+}
+
+//-->
+</script>
+
+
+
+
+
+
+</head>
+
+<body bgcolor="#FFFFFF">
+<div align="center">
+
+
+
+
+       
+<!--
+1. The form must have a name specified in the <FORM.. tag. This example has name="exampleform"
+2. The <FORM.. tag must also have the attribute: onSubmit="return CheckRequiredFields()"
+3. You provide the correct method="..." and action="..." FORM tag attributes.
+-->
+<form name="exampleform" onSubmit="return CheckRequiredFields()">
+
+<table border="1" cellpadding="9" cellspacing="0"><tr><td>
+
+<input type="radio" name="radioOne" value="one">One<br>
+<input type="radio" name="radioOne" value="two">Two<br>
+<input type="radio" name="radioOne" value="three">Three
+<hr width="33%">
+<input type="radio" name="radioLoner" value="RRRR">Loner :)
+
+</td><td>
+
+<input type="checkbox" name="checkOne" value="one">checkOne one<br>
+<input type="checkbox" name="checkOne" value="two">checkOne two<br>
+<input type="checkbox" name="checkOne" value="three">checkOne three
+<hr width="33%">
+<input type="checkbox" name="checkLoner" value="CCCC">Loner :)
+
+</td></tr><tr><td>
+
+Some text:<br>
+<input type="text" name="sometext">
+<hr width="33%">
+Some text in either or both:<br>
+<input type="text" name="oneOrTheOther"><br>
+<input type="text" name="oneOrTheOther">
+
+</td><td>
+
+Type something:<br>
+<textarea cols="22" rows="5" name="areaName"></textarea>
+
+</td></tr><tr><td>
+
+<input type="file" name="FileGet" size="22">
+
+</td><td>
+
+<select name="dropname">
+<option value="">-- Select --</option>
+<option value="one">one</option>
+<option value="two">two</option>
+<option value="three">three</option>
+</select>
+
+</td></tr><tr><td colspan="2" align="center">
+
+<input type="submit">
+
+</td></tr></table>
+
+</form>
+
+
+<a href="RequiredFieldsCheck.zip">Get Source Code</a>
+
+
+</div>
+</body>
+</html>
